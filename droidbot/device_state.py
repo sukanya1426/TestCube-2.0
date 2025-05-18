@@ -431,7 +431,8 @@ class DeviceState(object):
                 # view = self.views[view_id]
                 # response = chat.send_message(view["text"])
                 # text = input_list[response.text.strip()]
-                new_event = SetTextEvent(view=self.views[view_id], text='')
+                from .custom_input_event import CustomSetTextEvent
+                new_event = CustomSetTextEvent(view=self.views[view_id], text='')
                 # print(self.views[view_id])
                 possible_events.append(new_event)
                 touch_exclude_view_ids.add(view_id)
@@ -440,7 +441,8 @@ class DeviceState(object):
 
         for view_id in enabled_view_ids:
             if self.__safe_dict_get(self.views[view_id], 'clickable') and "Button" in self.views[view_id]['class']:
-                possible_events.append(TouchEvent(view=self.views[view_id]))
+                from .custom_input_event import CustomTouchEvent
+                possible_events.append(CustomTouchEvent(view=self.views[view_id]))
                 touch_exclude_view_ids.add(view_id)
                 touch_exclude_view_ids.union(self.get_all_children(self.views[view_id]))
 
@@ -453,7 +455,7 @@ class DeviceState(object):
 
         for view_id in enabled_view_ids:
             if self.__safe_dict_get(self.views[view_id], 'checkable') and "EditText" not in self.views[view_id]['class']:
-                possible_events.append(TouchEvent(view=self.views[view_id]))
+                possible_events.append(CustomTouchEvent(view=self.views[view_id]))
                 touch_exclude_view_ids.add(view_id)
                 touch_exclude_view_ids.union(self.get_all_children(self.views[view_id]))
 
@@ -467,7 +469,7 @@ class DeviceState(object):
             children = self.__safe_dict_get(self.views[view_id], 'children')
             if children and len(children) > 0:
                 continue
-            possible_events.append(TouchEvent(view=self.views[view_id]))
+            possible_events.append(CustomTouchEvent(view=self.views[view_id]))
 
         # For old Android navigation bars
         # possible_events.append(KeyEvent(name="MENU"))

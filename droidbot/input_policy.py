@@ -411,14 +411,6 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
                     # Start the app
                     self.__event_trace += EVENT_FLAG_START_APP
                     self.logger.info("Trying to start the app...")
-                    async def start_app():
-                        from .SocketClient import SocketClient
-                        await SocketClient.connect()
-                        SocketClient.send_message("restart", self.__restart_count)
-                        self.__restart_count += 1
-                    
-                    import asyncio
-                    asyncio.run(start_app())
                     return IntentEvent(intent=start_app_intent)
 
         elif current_state.get_app_activity_depth(self.app) > 0:
