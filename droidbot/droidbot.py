@@ -5,8 +5,6 @@
 import logging
 import os
 import sys
-import pkg_resources
-import shutil
 from threading import Timer
 
 from .device import Device
@@ -44,7 +42,11 @@ class DroidBot(object):
                  master=None,
                  humanoid=None,
                  ignore_ad=False,
-                 replay_output=None):
+                 replay_output=None,
+                 readme_path=None,
+                 features_path=None,
+                 credential_path=None,
+                 guide_features_path=None):
         """
         initiate droidbot with configurations
         :return:
@@ -58,13 +60,8 @@ class DroidBot(object):
         if output_dir is not None:
             if not os.path.isdir(output_dir):
                 os.makedirs(output_dir)
-            html_index_path = pkg_resources.resource_filename("droidbot", "resources/index.html")
-            stylesheets_path = pkg_resources.resource_filename("droidbot", "resources/stylesheets")
-            target_stylesheets_dir = os.path.join(output_dir, "stylesheets")
-            if os.path.exists(target_stylesheets_dir):
-                shutil.rmtree(target_stylesheets_dir)
-            shutil.copy(html_index_path, output_dir)
-            shutil.copytree(stylesheets_path, target_stylesheets_dir)
+            from .output_layout import hidden_root
+            hidden_root(output_dir)
 
         self.timeout = timeout
         self.timer = None
@@ -80,6 +77,10 @@ class DroidBot(object):
         self.humanoid = humanoid
         self.ignore_ad = ignore_ad
         self.replay_output = replay_output
+        self.readme_path = readme_path
+        self.features_path = features_path
+        self.credential_path = credential_path
+        self.guide_features_path = guide_features_path
 
         self.enabled = True
 
@@ -143,7 +144,30 @@ class DroidBot(object):
             self.device.connect()
 
             from .GeminiAI import GeminiAi
-            GeminiAi.generate_random_input()
+            GeminiAi.set_context(
+                readme_path=self.readme_path,
+                credential_path=self.credential_path,
+                app_name=self.app.app_name if self.app else None,
+            )
+            if self.output_dir and self.readme_path:
+                from .output_layout import hidden_file
+                features_out = hidden_file(self.output_dir, "features_from_readme.json")
+                try:
+                    from .feature_eval.feature_extractor import FeatureExtractor
+                    FeatureExtractor().extract(
+                        readme_path=self.readme_path,
+                        app_name=self.app.app_name if self.app else None,
+                        output_path=features_out,
+                        allow_numbered_spec=False,
+                    )
+                    self.logger.info("Inferred live features from README: %s" % features_out)
+                    if self.features_path:
+                        self.logger.info(
+                            "Not using %s to guide exploration (coverage gold list only)."
+                            % self.features_path
+                        )
+                except Exception as exc:
+                    self.logger.warning("Could not prepare feature list: %s" % exc)
 
             if not self.enabled:
                 return

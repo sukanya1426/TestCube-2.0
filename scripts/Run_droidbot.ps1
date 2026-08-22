@@ -1,0 +1,11 @@
+python start.py `
+  -d emulator-5556 `
+  -a "apks/spotube.apk" `
+  -o "output/spotube" `
+  -timeout 0 `
+  -interval 2 `
+  -count 10000000 `
+  -keep_app `
+  -keep_env `
+  -grant_perm `
+  -is_emulator

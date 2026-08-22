@@ -4,7 +4,7 @@ import os
 
 setup(
     name='droidbot',
-    packages=find_packages(include=['droidbot', 'droidbot.adapter']),
+    packages=find_packages(include=['droidbot', 'droidbot.*']),
     # this must be the same as the name above
     version='1.0.2b4',
     description='A lightweight UI-guided test input generator for Android.',
@@ -32,9 +32,12 @@ setup(
         # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python',
     ],
+    # Must use droidbot.start (package module), not top-level start —
+    # otherwise `droidbot` fails with: ModuleNotFoundError: No module named 'start'
     entry_points={
         'console_scripts': [
-            'droidbot=start:main',
+            'droidbot=droidbot.start:main',
+            'evaluate-features=droidbot.feature_eval.cli:main',
         ],
     },
     package_data={

@@ -1,0 +1,358 @@
+{
+  "app": "Spotube",
+  "source": "manual_exploration",
+  "url": "https://github.com/krtirtho/spotube",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Anonymous / Guest Login",
+      "description": "Launch the app and continue as a guest from the Getting Started screen.",
+      "actions": [
+        "Tap Skip this nonsense or Continue as Guest on the Getting Started / login screen"
+      ],
+      "keywords": ["skip", "guest", "getting started", "continue as guest"],
+      "nav_hints": ["skip this nonsense", "skip", "continue as guest", "guest"]
+    },
+    {
+      "id": "F002",
+      "name": "Spotify Login",
+      "description": "Log in with Spotify from Getting Started, enter credentials, and grant OAuth permission.",
+      "actions": [
+        "Tap Log in with Spotify",
+        "Enter Spotify email or username",
+        "Enter password",
+        "Tap Log In",
+        "Grant OAuth permission"
+      ],
+      "keywords": ["spotify", "login", "log in", "oauth", "email", "password"],
+      "nav_hints": ["log in with spotify", "login", "sign in"]
+    },
+    {
+      "id": "F003",
+      "name": "Search for Music",
+      "description": "Search for a track, artist, album, or playlist and open a result.",
+      "actions": [
+        "Tap the Search icon or tab in the sidebar or bottom nav",
+        "Tap the search field",
+        "Type a query (track, artist, album, or playlist name)",
+        "Tap a result-type tab: All, Tracks, Albums, Artists, or Playlists",
+        "Tap a result to open it"
+      ],
+      "keywords": ["search", "query", "tracks", "albums", "artists", "playlists"],
+      "nav_hints": ["search"]
+    },
+    {
+      "id": "F004",
+      "name": "Play a Track",
+      "description": "Start playback of a track from Search, Album, Playlist, or Home so the BottomPlayer appears.",
+      "actions": [
+        "Navigate to a track via Search, Album, Playlist, or Home",
+        "Tap the track row or the Play button on the track tile"
+      ],
+      "keywords": ["play", "track", "song", "bottomplayer"],
+      "nav_hints": ["search", "home", "play"]
+    },
+    {
+      "id": "F005",
+      "name": "Full-Screen Player",
+      "description": "Open the full-screen PlayerView from the BottomPlayer bar.",
+      "actions": [
+        "Tap the BottomPlayer bar or swipe up",
+        "Confirm PlayerView shows artwork and controls"
+      ],
+      "keywords": ["player", "bottomplayer", "now playing", "artwork"],
+      "nav_hints": ["player", "now playing"]
+    },
+    {
+      "id": "F006",
+      "name": "Playback Controls",
+      "description": "Play, pause, skip tracks, and seek from BottomPlayer or PlayerView.",
+      "actions": [
+        "Tap Play or Pause",
+        "Tap Next or Previous to skip tracks",
+        "Drag the progress slider to seek"
+      ],
+      "keywords": ["pause", "play", "next", "previous", "skip", "seek", "slider"],
+      "nav_hints": ["player", "pause", "next"]
+    },
+    {
+      "id": "F007",
+      "name": "Shuffle / Repeat Toggle",
+      "description": "Toggle shuffle and cycle repeat modes on the full PlayerView.",
+      "actions": [
+        "Open full PlayerView",
+        "Tap the Shuffle icon to toggle shuffle",
+        "Tap the Repeat or Loop icon to cycle off, repeat-all, repeat-one"
+      ],
+      "keywords": ["shuffle", "repeat", "loop"],
+      "nav_hints": ["player", "shuffle", "repeat"]
+    },
+    {
+      "id": "F008",
+      "name": "View and Manage Queue",
+      "description": "Open the queue from PlayerView, filter it, reorder tracks, and jump to the current track.",
+      "actions": [
+        "Open full PlayerView",
+        "Tap the Queue icon",
+        "Tap search and type to filter the queue",
+        "Long-press and drag a track to reorder",
+        "Tap jump to current to scroll to the now-playing track"
+      ],
+      "keywords": ["queue", "reorder", "now playing"],
+      "nav_hints": ["queue", "player"]
+    },
+    {
+      "id": "F009",
+      "name": "Add Track to Queue / Play Next",
+      "description": "Add a track to the end of the queue or insert it to play next.",
+      "actions": [
+        "Long-press a track or tap the options icon",
+        "Tap Add to Queue or Play Next"
+      ],
+      "keywords": ["queue", "play next", "long-press", "options"],
+      "nav_hints": ["search", "add to queue", "play next"]
+    },
+    {
+      "id": "F010",
+      "name": "Download Track for Offline Playback",
+      "description": "Download a track from the context menu or PlayerActions.",
+      "actions": [
+        "Long-press a track or tap Download in PlayerActions",
+        "Tap Download"
+      ],
+      "keywords": ["download", "offline", "long-press"],
+      "nav_hints": ["download", "player"]
+    },
+    {
+      "id": "F011",
+      "name": "View and Manage Downloads",
+      "description": "Open Library Downloads and cancel or remove a download.",
+      "actions": [
+        "Go to Library",
+        "Tap the Downloads tab",
+        "Tap a download to cancel or remove it"
+      ],
+      "keywords": ["library", "downloads", "cancel"],
+      "nav_hints": ["library", "downloads"]
+    },
+    {
+      "id": "F012",
+      "name": "Add Track to Favorites",
+      "description": "Like a track with the Heart icon so it appears in Liked Songs.",
+      "actions": [
+        "Tap the Heart icon on a track tile or in PlayerActions"
+      ],
+      "keywords": ["heart", "like", "favorite", "liked"],
+      "nav_hints": ["heart", "like", "player"]
+    },
+    {
+      "id": "F013",
+      "name": "Add Track to a Playlist",
+      "description": "Add a track to an existing playlist or create a new one from the track menu.",
+      "actions": [
+        "Long-press a track or tap the track options menu",
+        "Tap Add to Playlist",
+        "Select an existing playlist or tap Create New Playlist, enter a name, and tap Create"
+      ],
+      "keywords": ["playlist", "add to playlist", "long-press"],
+      "nav_hints": ["add to playlist", "playlist"]
+    },
+    {
+      "id": "F014",
+      "name": "Create a New Playlist",
+      "description": "Create a playlist from the Library screen.",
+      "actions": [
+        "Go to Library",
+        "Tap Create Playlist or the plus button",
+        "Enter a playlist name",
+        "Tap Create or Save"
+      ],
+      "keywords": ["library", "create playlist", "plus"],
+      "nav_hints": ["library", "create playlist"]
+    },
+    {
+      "id": "F015",
+      "name": "Remove Track from Playlist",
+      "description": "Remove a track from an opened playlist.",
+      "actions": [
+        "Open a playlist",
+        "Long-press the track or tap options on the row",
+        "Tap Remove from Playlist",
+        "Confirm removal if prompted"
+      ],
+      "keywords": ["playlist", "remove", "long-press"],
+      "nav_hints": ["library", "playlist", "remove"]
+    },
+    {
+      "id": "F016",
+      "name": "Delete a Playlist",
+      "description": "Delete a playlist from its page options menu.",
+      "actions": [
+        "Open the playlist page",
+        "Tap the playlist options menu",
+        "Tap Delete",
+        "Confirm in the deletion dialog"
+      ],
+      "keywords": ["playlist", "delete"],
+      "nav_hints": ["library", "playlist", "delete"]
+    },
+    {
+      "id": "F017",
+      "name": "Start Radio from a Track",
+      "description": "Start a radio queue of similar tracks from a track context menu.",
+      "actions": [
+        "Long-press a track or tap the track options menu",
+        "Tap Start Radio"
+      ],
+      "keywords": ["radio", "similar", "long-press"],
+      "nav_hints": ["start radio", "radio"]
+    },
+    {
+      "id": "F018",
+      "name": "View Album",
+      "description": "Open an album page and play the album or an individual track.",
+      "actions": [
+        "Tap an album cover or name from Search, Home, or Artist page",
+        "Tap Play for the whole album or tap an individual track"
+      ],
+      "keywords": ["album", "tracklist", "play"],
+      "nav_hints": ["album", "search"]
+    },
+    {
+      "id": "F019",
+      "name": "View Artist Page",
+      "description": "Open an artist page, follow, play a top track, and browse related artists.",
+      "actions": [
+        "Tap an artist name or avatar",
+        "Tap Follow",
+        "Tap a top track to play it",
+        "Tap an album in the horizontal list",
+        "Tap a related artist"
+      ],
+      "keywords": ["artist", "follow", "related", "biography"],
+      "nav_hints": ["artist", "search"]
+    },
+    {
+      "id": "F020",
+      "name": "View Time-Synced Lyrics",
+      "description": "Open synced lyrics in PlayerView, seek by line, adjust delay/zoom, or switch to plain lyrics.",
+      "actions": [
+        "Open full PlayerView while a track is playing",
+        "Tap the Lyrics icon or tab",
+        "Tap a lyric line to seek",
+        "Use zoom or delay controls if shown",
+        "Tap Plain Lyrics if available"
+      ],
+      "keywords": ["lyrics", "synced", "plain lyrics"],
+      "nav_hints": ["lyrics", "player"]
+    },
+    {
+      "id": "F021",
+      "name": "Set Sleep Timer",
+      "description": "Start a sleep timer from PlayerActions.",
+      "actions": [
+        "Open full PlayerView",
+        "Tap the Sleep Timer icon",
+        "Select a duration from the sheet"
+      ],
+      "keywords": ["sleep", "timer"],
+      "nav_hints": ["sleep", "player"]
+    },
+    {
+      "id": "F022",
+      "name": "View Track Details / Share",
+      "description": "Open track details, share, or Song.link from the track context menu.",
+      "actions": [
+        "Long-press a track or open the options menu",
+        "Tap Track Details, Share, or Song.link"
+      ],
+      "keywords": ["details", "share", "song.link", "long-press"],
+      "nav_hints": ["track details", "share"]
+    },
+    {
+      "id": "F023",
+      "name": "Blacklist a Track or Artist",
+      "description": "Blacklist a track so it is hidden or skipped in future playback.",
+      "actions": [
+        "Long-press a track",
+        "Tap Blacklist",
+        "Confirm"
+      ],
+      "keywords": ["blacklist", "long-press"],
+      "nav_hints": ["blacklist"]
+    },
+    {
+      "id": "F024",
+      "name": "Change Audio Source",
+      "description": "Pick an alternative audio source for the playing track.",
+      "actions": [
+        "Open PlayerActions while a track is playing",
+        "Tap Alternative Sources",
+        "Select a different source"
+      ],
+      "keywords": ["source", "youtube", "alternative", "piped"],
+      "nav_hints": ["alternative sources", "player"]
+    },
+    {
+      "id": "F025",
+      "name": "Play Local Files",
+      "description": "Add a local folder of audio files from Settings Local Library or Library Local Files.",
+      "actions": [
+        "Go to Settings then Local Library, or Library then Local Files",
+        "Tap Add Folder and grant storage permission if asked",
+        "Select a folder containing audio files"
+      ],
+      "keywords": ["local", "folder", "files", "settings"],
+      "nav_hints": ["settings", "local library", "local files", "add folder"]
+    },
+    {
+      "id": "F026",
+      "name": "Connect to Spotify Connect Device",
+      "description": "Connect playback to a Spotify Connect device from Home.",
+      "actions": [
+        "On Home, tap Connect Device",
+        "Select a device from the list",
+        "Confirm the connect dialog"
+      ],
+      "keywords": ["connect", "device", "spotify connect"],
+      "nav_hints": ["home", "connect device"]
+    },
+    {
+      "id": "F027",
+      "name": "Add a Custom Plugin",
+      "description": "Install a metadata or audio-source plugin from Settings.",
+      "actions": [
+        "Open Settings then Plugins or Metadata Sources",
+        "Tap Add Plugin",
+        "Enter or select the plugin source",
+        "Tap Install"
+      ],
+      "keywords": ["plugin", "metadata", "install"],
+      "nav_hints": ["settings", "plugins", "install a metadata provider", "add plugin"]
+    },
+    {
+      "id": "F028",
+      "name": "Change App Settings",
+      "description": "Change appearance, audio, language, or download settings.",
+      "actions": [
+        "Tap Settings in the sidebar",
+        "Select a settings category such as Appearance, Audio, Language, or Downloads",
+        "Toggle a switch or select a dropdown option"
+      ],
+      "keywords": ["settings", "theme", "language", "audio", "quality"],
+      "nav_hints": ["settings"]
+    },
+    {
+      "id": "F029",
+      "name": "View Logs / About",
+      "description": "Open About for version/licenses and Logs for diagnostics.",
+      "actions": [
+        "Go to Settings then About",
+        "View app version and licenses",
+        "Go to Settings then Logs"
+      ],
+      "keywords": ["about", "logs", "version", "licenses"],
+      "nav_hints": ["settings", "about", "logs"]
+    }
+  ]
+}

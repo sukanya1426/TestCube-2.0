@@ -1,0 +1,126 @@
+{
+  "app": "Spotube",
+  "source": "manual_exploration_addendum",
+  "note": "Features found by using the app that are not in the guide list. Used to measure undocumented discovery.",
+  "features": [
+    {
+      "id": "A001",
+      "name": "Browse Home listening stats",
+      "description": "Open Home and inspect listening time / streamed songs cards.",
+      "actions": [
+        "Go to Home",
+        "View the listening stats cards"
+      ],
+      "keywords": [
+        "home",
+        "stats",
+        "listened"
+      ],
+      "nav_hints": [
+        "home"
+      ]
+    },
+    {
+      "id": "A002",
+      "name": "Dismiss contribute or donate interstitial",
+      "description": "Close a contribute/donate prompt without opening a browser.",
+      "actions": [
+        "When a donate or contribute sheet appears, tap Close, Skip, or the X"
+      ],
+      "keywords": [
+        "donate",
+        "contribute",
+        "close"
+      ],
+      "nav_hints": [
+        "close"
+      ]
+    },
+    {
+      "id": "A003",
+      "name": "Open the equalizer",
+      "description": "Open the audio equalizer from player or audio settings.",
+      "actions": [
+        "Open Settings or the player",
+        "Tap Equalizer"
+      ],
+      "keywords": [
+        "equalizer",
+        "audio"
+      ],
+      "nav_hints": [
+        "settings",
+        "equalizer"
+      ]
+    },
+    {
+      "id": "A004",
+      "name": "View Liked Tracks",
+      "description": "Open Liked Songs / liked tracks from Library.",
+      "actions": [
+        "Go to Library",
+        "Open Liked tracks"
+      ],
+      "keywords": [
+        "liked",
+        "library",
+        "heart"
+      ],
+      "nav_hints": [
+        "library",
+        "liked"
+      ]
+    },
+    {
+      "id": "A005",
+      "name": "Change playback speed",
+      "description": "Adjust playback speed from player actions.",
+      "actions": [
+        "Open the full player",
+        "Open playback speed",
+        "Select a speed"
+      ],
+      "keywords": [
+        "speed",
+        "player"
+      ],
+      "nav_hints": [
+        "player"
+      ]
+    },
+    {
+      "id": "A006",
+      "name": "Toggle Discord presence",
+      "description": "Enable or disable Discord rich presence from settings.",
+      "actions": [
+        "Open Settings",
+        "Find Discord presence",
+        "Toggle it"
+      ],
+      "keywords": [
+        "discord",
+        "presence"
+      ],
+      "nav_hints": [
+        "settings"
+      ]
+    },
+    {
+      "id": "A007",
+      "name": "Change Piped or Invidious instance",
+      "description": "Pick a different Piped/Invidious instance for audio sources.",
+      "actions": [
+        "Open Settings then audio sources",
+        "Change the instance URL"
+      ],
+      "keywords": [
+        "piped",
+        "invidious",
+        "instance"
+      ],
+      "nav_hints": [
+        "settings"
+      ]
+    }
+  ]
+}

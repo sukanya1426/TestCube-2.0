@@ -69,13 +69,9 @@ class DroidBotAppConn(Adapter):
         if DROIDBOT_APP_PACKAGE in device.adb.get_installed_apps():
             self.logger.debug("DroidBot app was already installed.")
         else:
-            # install droidbot app
             try:
-                import pkg_resources
-                droidbot_app_path = pkg_resources.resource_filename("droidbot", "resources/droidbotApp.apk")
-                install_cmd = ["install", droidbot_app_path]
-                self.device.adb.run_cmd(install_cmd)
-                self.logger.debug("DroidBot app installed.")
+                from .droidbot_ime import install_droidbot_app
+                install_droidbot_app(device, self.logger)
             except Exception:
                 self.logger.warning("Failed to install DroidBotApp.")
                 traceback.print_exc()

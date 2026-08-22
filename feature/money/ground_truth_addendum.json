@@ -1,0 +1,115 @@
+{
+  "app": "Money Manager Ex",
+  "source": "manual_exploration_addendum",
+  "note": "Features found by using the app that are not in the guide list. Used to measure undocumented discovery.",
+  "features": [
+    {
+      "id": "A001",
+      "name": "Split a transaction",
+      "description": "Split a transaction amount across categories.",
+      "actions": [
+        "Open a transaction",
+        "Tap Split",
+        "Enter split amounts",
+        "Save"
+      ],
+      "keywords": [
+        "split",
+        "transaction"
+      ],
+      "nav_hints": [
+        "transaction"
+      ]
+    },
+    {
+      "id": "A002",
+      "name": "Attach a picture to a transaction",
+      "description": "Add a receipt photo to a transaction.",
+      "actions": [
+        "Open a transaction",
+        "Tap attachment or camera",
+        "Pick or capture an image",
+        "Save"
+      ],
+      "keywords": [
+        "attachment",
+        "receipt",
+        "photo"
+      ],
+      "nav_hints": [
+        "transaction"
+      ]
+    },
+    {
+      "id": "A003",
+      "name": "Hide an account from Home",
+      "description": "Hide an account so it no longer appears on the home dashboard.",
+      "actions": [
+        "Open Accounts",
+        "Edit an account",
+        "Toggle visibility or hide",
+        "Save"
+      ],
+      "keywords": [
+        "hide",
+        "account",
+        "home"
+      ],
+      "nav_hints": [
+        "accounts"
+      ]
+    },
+    {
+      "id": "A004",
+      "name": "Backup the database",
+      "description": "Create a backup copy of the current .mmb database.",
+      "actions": [
+        "Open Settings or the menu",
+        "Tap Backup",
+        "Confirm the backup location"
+      ],
+      "keywords": [
+        "backup",
+        "database"
+      ],
+      "nav_hints": [
+        "settings",
+        "backup"
+      ]
+    },
+    {
+      "id": "A005",
+      "name": "View the cash-flow calendar",
+      "description": "Open a calendar view of transactions.",
+      "actions": [
+        "Open the menu",
+        "Tap Calendar or Cash flow",
+        "Browse a day"
+      ],
+      "keywords": [
+        "calendar",
+        "cash flow"
+      ],
+      "nav_hints": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "A006",
+      "name": "Reconcile a transaction",
+      "description": "Mark a transaction as reconciled/R status.",
+      "actions": [
+        "Open a transaction",
+        "Set status to Reconciled",
+        "Save"
+      ],
+      "keywords": [
+        "reconcile",
+        "status"
+      ],
+      "nav_hints": [
+        "transaction"
+      ]
+    }
+  ]
+}

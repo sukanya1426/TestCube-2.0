@@ -156,7 +156,13 @@ class Device(object):
             adapter_enabled = self.adapters[adapter]
             if not adapter_enabled:
                 continue
-            adapter.connect()
+            try:
+                adapter.connect()
+            except Exception as exc:
+                self.logger.warning(
+                    "%s failed to connect (%s); continuing without it."
+                    % (adapter.__class__.__name__, exc)
+                )
 
         self.get_sdk_version()
         self.get_release_version()
@@ -178,13 +184,17 @@ class Device(object):
             adapter_enabled = self.adapters[adapter]
             if not adapter_enabled:
                 continue
-            adapter.disconnect()
+            try:
+                adapter.disconnect()
+            except Exception as exc:
+                self.logger.warning("%s disconnect failed: %s" % (adapter.__class__.__name__, exc))
 
         if self.output_dir is not None:
-            temp_dir = os.path.join(self.output_dir, "temp")
+            from .output_layout import hidden_subdir
+            temp_dir = hidden_subdir(self.output_dir, "temp") or os.path.join(self.output_dir, "temp")
             if os.path.exists(temp_dir):
                 import shutil
-                shutil.rmtree(temp_dir)
+                shutil.rmtree(temp_dir, ignore_errors=True)
 
     def tear_down(self):
         for adapter in self.adapters:
@@ -647,7 +657,10 @@ class Device(object):
                 line = line.decode()
             dumpsys_lines.append(line)
         if self.output_dir is not None:
-            package_info_file_name = "%s/dumpsys_package_%s.txt" % (self.output_dir, app.get_package_name())
+            from .output_layout import hidden_file
+            package_info_file_name = hidden_file(
+                self.output_dir, "dumpsys_package_%s.txt" % app.get_package_name()
+            ) or ("%s/dumpsys_package_%s.txt" % (self.output_dir, app.get_package_name()))
             package_info_file = open(package_info_file_name, "w")
             package_info_file.writelines(dumpsys_lines)
             package_info_file.close()
@@ -786,7 +799,8 @@ class Device(object):
 
         from datetime import datetime
         tag = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-        local_image_dir = os.path.join(self.output_dir, "temp")
+        from .output_layout import hidden_subdir
+        local_image_dir = hidden_subdir(self.output_dir, "temp") or os.path.join(self.output_dir, "temp")
         if not os.path.exists(local_image_dir):
             os.makedirs(local_image_dir)
 

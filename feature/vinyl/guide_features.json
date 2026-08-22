@@ -1,0 +1,18 @@
+{
+  "app": "Vinyl Music Player",
+  "source": "guide",
+  "url": "https://f-droid.org/en/packages/com.poupa.vinylmusicplayer/",
+  "package": "com.poupa.vinylmusicplayer",
+  "note": "Short human exploration hints.",
+  "features": [
+    {"id": "F001", "name": "Get started", "description": "Finish intro and allow music permissions.", "actions": ["Tap Get Started", "Allow permissions"], "keywords": ["get started", "permission"], "nav_hints": ["get started", "allow"], "source": "guide"},
+    {"id": "F002", "name": "Play a song", "description": "Tap a song in the library so it starts playing.", "actions": ["Tap a song"], "keywords": ["play", "song"], "nav_hints": ["songs"], "source": "guide"},
+    {"id": "F003", "name": "Now playing", "description": "Open the full player from the bottom mini-player.", "actions": ["Tap the bottom playing card"], "keywords": ["now playing", "mini player"], "nav_hints": ["playing"], "source": "guide"},
+    {"id": "F004", "name": "Pause", "description": "Pause the current song from the player.", "actions": ["Open the player", "Tap pause"], "keywords": ["pause"], "nav_hints": ["pause"], "source": "guide"},
+    {"id": "F005", "name": "Next", "description": "Skip to the next song.", "actions": ["Open the player", "Tap next"], "keywords": ["next"], "nav_hints": ["next"], "source": "guide"},
+    {"id": "F006", "name": "Previous", "description": "Go back to the previous song.", "actions": ["Open the player", "Tap previous"], "keywords": ["previous"], "nav_hints": ["previous"], "source": "guide"},
+    {"id": "F007", "name": "Search", "description": "Search the library.", "actions": ["Open search", "Type a query"], "keywords": ["search"], "nav_hints": ["search"], "source": "guide"},
+    {"id": "F008", "name": "Rescan", "description": "Rescan the music library from the side menu.", "actions": ["Open the menu", "Tap Rescan"], "keywords": ["rescan", "scan"], "nav_hints": ["menu", "rescan"], "source": "guide"},
+    {"id": "F009", "name": "Shuffle all", "description": "Shuffle the whole library from the overflow menu.", "actions": ["Open the 3-dot menu", "Tap Shuffle"], "keywords": ["shuffle"], "nav_hints": ["shuffle"], "source": "guide"}
+  ]
+}

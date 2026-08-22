@@ -1,3 +1,4 @@
+#TestCube-2.0/droidbot/input_manager.py
 import json
 import logging
 import subprocess
@@ -10,6 +11,7 @@ from .input_policy import UtgBasedInputPolicy, UtgNaiveSearchPolicy, UtgGreedySe
                          POLICY_NAIVE_DFS, POLICY_GREEDY_DFS, \
                          POLICY_NAIVE_BFS, POLICY_GREEDY_BFS, \
                          POLICY_REPLAY, POLICY_MEMORY_GUIDED, POLICY_LLM_GUIDED, \
+                         POLICY_FEATURE_GUIDED, \
                          POLICY_MANUAL, POLICY_MONKEY, POLICY_NONE
 
 DEFAULT_POLICY = POLICY_GREEDY_DFS
@@ -78,6 +80,15 @@ class InputManager(object):
         elif self.policy_name == POLICY_LLM_GUIDED:
             from .input_policy3 import LLM_Guided_Policy
             input_policy = LLM_Guided_Policy(device, app, self.random_input)
+        elif self.policy_name == POLICY_FEATURE_GUIDED:
+            from droidbot.feature_tester.config import get_config
+            cfg = get_config()
+            if cfg.replay_path:
+                from droidbot.feature_tester.replay import ReplayPolicy
+                input_policy = ReplayPolicy(device, app, self.random_input, cfg.replay_path)
+            else:
+                from .feature_tester.policy import FeatureGuidedPolicy
+                input_policy = FeatureGuidedPolicy(device, app, self.random_input)
         elif self.policy_name == POLICY_REPLAY:
             input_policy = UtgReplayPolicy(device, app, self.replay_output)
         elif self.policy_name == POLICY_MANUAL:

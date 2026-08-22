@@ -1,0 +1,179 @@
+{
+  "app": "Vinyl Music Player",
+  "source": "manual_exploration",
+  "url": "https://f-droid.org/en/packages/com.poupa.vinylmusicplayer/",
+  "package": "com.poupa.vinylmusicplayer",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Get Started",
+      "description": "Complete first-run setup by tapping Get Started and allowing storage or media permissions.",
+      "actions": [
+        "Tap Get Started on the first-run screen",
+        "Allow storage, music, or media permissions if a system dialog appears"
+      ],
+      "keywords": [
+        "get started",
+        "started",
+        "permission",
+        "allow",
+        "onboarding"
+      ],
+      "nav_hints": [
+        "get started",
+        "allow",
+        "while using the app"
+      ]
+    },
+    {
+      "id": "F002",
+      "name": "Play song",
+      "description": "Start playback by tapping a song in the library list.",
+      "actions": [
+        "Tap a song in the library or song list so it starts playing"
+      ],
+      "keywords": [
+        "play",
+        "song",
+        "track",
+        "library"
+      ],
+      "nav_hints": [
+        "songs",
+        "library"
+      ]
+    },
+    {
+      "id": "F003",
+      "name": "Open Currently Playing",
+      "description": "Open the now-playing screen from the bottom playing card.",
+      "actions": [
+        "Tap the bottom playing card (mini player) to open the currently playing screen"
+      ],
+      "keywords": [
+        "currently playing",
+        "now playing",
+        "player",
+        "mini player",
+        "bottom"
+      ],
+      "nav_hints": [
+        "now playing",
+        "playing"
+      ]
+    },
+    {
+      "id": "F004",
+      "name": "Pause Song",
+      "description": "Open the now-playing screen from the bottom card and pause playback.",
+      "actions": [
+        "Tap the bottom playing card to open the currently playing screen",
+        "Tap the Pause button"
+      ],
+      "keywords": [
+        "pause",
+        "play pause",
+        "now playing"
+      ],
+      "nav_hints": [
+        "pause",
+        "now playing"
+      ]
+    },
+    {
+      "id": "F005",
+      "name": "Next song",
+      "description": "Open the now-playing screen from the bottom card and skip to the next track.",
+      "actions": [
+        "Tap the bottom playing card to open the currently playing screen",
+        "Tap the Next button"
+      ],
+      "keywords": [
+        "next",
+        "skip",
+        "now playing"
+      ],
+      "nav_hints": [
+        "next",
+        "skip"
+      ]
+    },
+    {
+      "id": "F006",
+      "name": "Previous song",
+      "description": "Open the now-playing screen from the bottom card and go to the previous track.",
+      "actions": [
+        "Tap the bottom playing card to open the currently playing screen",
+        "Tap the Previous button"
+      ],
+      "keywords": [
+        "previous",
+        "prev",
+        "now playing"
+      ],
+      "nav_hints": [
+        "previous",
+        "prev"
+      ]
+    },
+    {
+      "id": "F007",
+      "name": "Search",
+      "description": "Open search and type a query to find music in the library.",
+      "actions": [
+        "Tap Search",
+        "Tap the search field",
+        "Type a search query"
+      ],
+      "keywords": [
+        "search",
+        "query",
+        "find"
+      ],
+      "nav_hints": [
+        "search"
+      ]
+    },
+    {
+      "id": "F008",
+      "name": "Rescan library",
+      "description": "Open the navigation drawer and rescan the music library from the confirmation dialog.",
+      "actions": [
+        "Tap the hamburger menu on the left to open the navigation drawer",
+        "Tap Rescan or Scan",
+        "Tap Rescan on the confirmation dialog"
+      ],
+      "keywords": [
+        "rescan",
+        "scan",
+        "library",
+        "drawer",
+        "hamburger"
+      ],
+      "nav_hints": [
+        "menu",
+        "rescan",
+        "scan"
+      ]
+    },
+    {
+      "id": "F009",
+      "name": "Shuffle All",
+      "description": "Open the overflow menu and start shuffle-all playback.",
+      "actions": [
+        "Tap the 3-dot overflow menu on the right",
+        "Tap Shuffle or Shuffle all"
+      ],
+      "keywords": [
+        "shuffle",
+        "shuffle all",
+        "overflow",
+        "more"
+      ],
+      "nav_hints": [
+        "more options",
+        "shuffle"
+      ]
+    }
+  ]
+}

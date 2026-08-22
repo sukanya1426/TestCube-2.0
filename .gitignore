@@ -1,12 +1,36 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Python template
-# Byte-compiled / optimized / DLL files
+# --- secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+google_api_key*
+credentials.json
+service-account*.json
+
+# --- APKs and Android packages ---
+# Keep the apks/ folder via .gitkeep; binaries stay local.
+*.apk
+*.apks
+*.aab
+*.xapk
+*.apk.bak
+!apks/.gitkeep
+
+# --- run artifacts (large; regenerate with droidbot) ---
+output/
+output_dir
+outputDir*
+droidbot_output
+**/feature_test/session.json.bak
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Distribution / packaging
 .Python
+.venv/
+venv/
 env/
 build/
 develop-eggs/
@@ -22,18 +46,9 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 htmlcov/
 .tox/
 .coverage
@@ -43,24 +58,27 @@ nosetests.xml
 coverage.xml
 *,cover
 
-# Translations
-*.mo
-*.pot
+# --- installers / packaging noise ---
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Django stuff:
+# --- logs and backups ---
 *.log
-
-# Sphinx documentation
+*.txt.bak
 docs/_build/
 
-# PyBuilder
-target/
-.idea
-droidbot_output
-_site
-Gemfile.lock
+# --- OS / IDE ---
 .DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- local scratch ---
 documents
 temp
-venv
-output_dir
+_site
+Gemfile.lock
+target/

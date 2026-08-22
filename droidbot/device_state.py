@@ -172,7 +172,10 @@ class DeviceState(object):
                 if self.device.output_dir is None:
                     return
                 else:
-                    output_dir = os.path.join(self.device.output_dir, "states")
+                    from .output_layout import hidden_subdir
+                    output_dir = hidden_subdir(self.device.output_dir, "states")
+                    if output_dir is None:
+                        output_dir = os.path.join(self.device.output_dir, "states")
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             dest_state_json_path = "%s/state_%s.json" % (output_dir, self.tag)
@@ -198,7 +201,10 @@ class DeviceState(object):
                 if self.device.output_dir is None:
                     return
                 else:
-                    output_dir = os.path.join(self.device.output_dir, "views")
+                    from .output_layout import hidden_subdir
+                    output_dir = hidden_subdir(self.device.output_dir, "views")
+                    if output_dir is None:
+                        output_dir = os.path.join(self.device.output_dir, "views")
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             view_str = view_dict['view_str']
@@ -242,11 +248,17 @@ class DeviceState(object):
         view_text = DeviceState.__safe_dict_get(view_dict, 'text', "None")
         if view_text is None or len(view_text) > 50:
             view_text = "None"
+        view_desc = DeviceState.__safe_dict_get(view_dict, 'content_description', "None")
+        if view_desc is None:
+            view_desc = "None"
+        elif len(view_desc) > 80:
+            view_desc = view_desc[:80]
 
-        signature = "[class]%s[resource_id]%s[text]%s[%s,%s,%s]" % \
+        signature = "[class]%s[resource_id]%s[text]%s[desc]%s[%s,%s,%s]" % \
                     (DeviceState.__safe_dict_get(view_dict, 'class', "None"),
                      DeviceState.__safe_dict_get(view_dict, 'resource_id', "None"),
                      view_text,
+                     view_desc,
                      DeviceState.__key_if_true(view_dict, 'enabled'),
                      DeviceState.__key_if_true(view_dict, 'checked'),
                      DeviceState.__key_if_true(view_dict, 'selected'))
@@ -411,6 +423,7 @@ class DeviceState(object):
         """
         if self.possible_events:
             return [] + self.possible_events
+        from .custom_input_event import CustomSetTextEvent, CustomTouchEvent
         possible_events = []
         enabled_view_ids = []
         touch_exclude_view_ids = set()
@@ -425,26 +438,18 @@ class DeviceState(object):
         # enabled_view_ids.reverse()
 
         for view_id in enabled_view_ids:
-            if self.__safe_dict_get(self.views[view_id], 'editable') and "EditText" in self.views[view_id]['class']:
-                # input_list = GeminiAi.getInputDict()
-                # chat = GeminiAi.get_chat()
-                # view = self.views[view_id]
-                # response = chat.send_message(view["text"])
-                # text = input_list[response.text.strip()]
-                from .custom_input_event import CustomSetTextEvent
-                new_event = CustomSetTextEvent(view=self.views[view_id], text='')
-                # print(self.views[view_id])
+            view = self.views[view_id]
+            if self.__safe_dict_get(view, 'editable'):
+                new_event = CustomSetTextEvent(view=view, text='')
                 possible_events.append(new_event)
                 touch_exclude_view_ids.add(view_id)
-                # TODO figure out what event can be sent to editable views
-                pass
 
         for view_id in enabled_view_ids:
-            if self.__safe_dict_get(self.views[view_id], 'clickable') and "Button" in self.views[view_id]['class']:
-                from .custom_input_event import CustomTouchEvent
-                possible_events.append(CustomTouchEvent(view=self.views[view_id]))
+            view = self.views[view_id]
+            if self.__safe_dict_get(view, 'clickable'):
+                possible_events.append(CustomTouchEvent(view=view))
                 touch_exclude_view_ids.add(view_id)
-                touch_exclude_view_ids.union(self.get_all_children(self.views[view_id]))
+                touch_exclude_view_ids.union(self.get_all_children(view))
 
         for view_id in enabled_view_ids:
             if self.__safe_dict_get(self.views[view_id], 'scrollable'):
@@ -454,14 +459,10 @@ class DeviceState(object):
                 possible_events.append(ScrollEvent(view=self.views[view_id], direction="right"))
 
         for view_id in enabled_view_ids:
-            if self.__safe_dict_get(self.views[view_id], 'checkable') and "EditText" not in self.views[view_id]['class']:
+            if self.__safe_dict_get(self.views[view_id], 'checkable'):
                 possible_events.append(CustomTouchEvent(view=self.views[view_id]))
                 touch_exclude_view_ids.add(view_id)
                 touch_exclude_view_ids.union(self.get_all_children(self.views[view_id]))
-
-        # for view_id in enabled_view_ids:
-        #     if self.__safe_dict_get(self.views[view_id], 'long_clickable'):
-        #         possible_events.append(LongTouchEvent(view=self.views[view_id]))
 
         for view_id in enabled_view_ids:
             if view_id in touch_exclude_view_ids:

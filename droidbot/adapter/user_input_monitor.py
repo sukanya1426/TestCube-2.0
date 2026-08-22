@@ -25,7 +25,10 @@ class UserInputMonitor(Adapter):
         if device.output_dir is None:
             self.out_file = None
         else:
-            self.out_file = "%s/user_input.txt" % device.output_dir
+            from droidbot.output_layout import hidden_file
+            self.out_file = hidden_file(device.output_dir, "user_input.txt") or (
+                "%s/user_input.txt" % device.output_dir
+            )
 
     def connect(self):
         self.process = subprocess.Popen(["adb", "-s", self.device.serial, "shell", "getevent", "-lt"],

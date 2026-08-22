@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import logging
+import os
 import time
 
 from .adapter import Adapter
@@ -14,6 +15,36 @@ class DroidBotImeException(Exception):
     Exception in telnet connection
     """
     pass
+
+
+def helper_apk_path():
+    here = os.path.dirname(os.path.abspath(__file__))
+    local = os.path.normpath(os.path.join(here, "..", "resources", "droidbotApp.apk"))
+    if os.path.isfile(local):
+        return local
+    try:
+        import pkg_resources
+        path = pkg_resources.resource_filename("droidbot", "resources/droidbotApp.apk")
+        if os.path.isfile(path):
+            return path
+    except Exception:
+        pass
+    return local
+
+
+def install_droidbot_app(device, logger=None):
+    log = logger or logging.getLogger("DroidBotIme")
+    apk = helper_apk_path()
+    if not os.path.isfile(apk):
+        log.warning("DroidBot helper APK not found: %s" % apk)
+        return False
+    try:
+        device.adb.run_cmd(["install", "-r", "-t", "-g", apk], check=False)
+        log.debug("DroidBot app installed from %s" % apk)
+        return True
+    except Exception as exc:
+        log.warning("Failed to install DroidBotApp: %s" % exc)
+        return False
 
 
 class DroidBotIme(Adapter):
@@ -35,31 +66,46 @@ class DroidBotIme(Adapter):
 
     def set_up(self):
         device = self.device
-        if DROIDBOT_APP_PACKAGE in device.adb.get_installed_apps():
+        try:
+            installed = DROIDBOT_APP_PACKAGE in (device.adb.get_installed_apps() or [])
+        except Exception:
+            installed = False
+        if installed:
             self.logger.debug("DroidBot app was already installed.")
-        else:
-            # install droidbot app
-            try:
-                import pkg_resources
-                droidbot_app_path = pkg_resources.resource_filename("droidbot", "resources/droidbotApp.apk")
-                install_cmd = ["install", droidbot_app_path]
-                self.device.adb.run_cmd(install_cmd)
-                self.logger.debug("DroidBot app installed.")
-            except Exception as e:
-                self.logger.warning(e)
-                self.logger.warning("Failed to install DroidBotApp.")
+            return
+        install_droidbot_app(device, self.logger)
 
     def tear_down(self):
-        self.device.uninstall_app(DROIDBOT_APP_PACKAGE)
+        try:
+            self.device.uninstall_app(DROIDBOT_APP_PACKAGE)
+        except Exception as exc:
+            self.logger.warning("Could not uninstall DroidBot app: %s" % exc)
+
+    def _ime_shell(self, *parts):
+        return self.device.adb.shell(list(parts), check=False)
 
     def connect(self):
-        r_enable = self.device.adb.shell("ime enable %s" % IME_SERVICE)
-        if "now enabled" in r_enable or "already enabled" in r_enable:
-            r_set = self.device.adb.shell("ime set %s" % IME_SERVICE)
-            if f"{IME_SERVICE} selected" in r_set:
-                self.connected = True
-                return
-        self.logger.warning("Failed to connect DroidBotIME!")
+        """Enable DroidBotIME when the helper app is present. Never abort the run."""
+        try:
+            self.set_up()
+            output = self._ime_shell("ime", "enable", IME_SERVICE)
+            if "Unknown input method" in output or "cannot be enabled" in output:
+                install_droidbot_app(self.device, self.logger)
+                output = self._ime_shell("ime", "enable", IME_SERVICE)
+            if "now enabled" in output or "already enabled" in output:
+                r_set = self._ime_shell("ime", "set", IME_SERVICE)
+                if IME_SERVICE in r_set or "selected" in r_set.lower():
+                    self.connected = True
+                    return
+            self.logger.warning(
+                "DroidBotIME is not available on this emulator (%s). "
+                "Continuing with adb input text."
+                % ((output or "").strip().splitlines()[-1] if output else "not installed")
+            )
+            self.connected = False
+        except Exception as exc:
+            self.logger.warning("DroidBotIME unavailable (%s); using adb input text." % exc)
+            self.connected = False
 
     def check_connectivity(self):
         """
@@ -73,12 +119,14 @@ class DroidBotIme(Adapter):
         disconnect telnet
         """
         self.connected = False
-        r_disable = self.device.adb.shell("ime disable %s" % IME_SERVICE)
-        if "now disabled" in r_disable:
-            self.connected = False
-            print("[CONNECTION] %s is disconnected" % self.__class__.__name__)
-            return
-        self.logger.warning("Failed to disconnect DroidBotIME!")
+        try:
+            r_disable = self._ime_shell("ime", "disable", IME_SERVICE)
+            if "now disabled" in (r_disable or ""):
+                print("[CONNECTION] %s is disconnected" % self.__class__.__name__)
+                return
+        except Exception as exc:
+            self.logger.debug("ime disable: %s" % exc)
+        print("[CONNECTION] %s is disconnected" % self.__class__.__name__)
 
     def input_text(self, text, mode=0):
         """
@@ -88,7 +136,7 @@ class DroidBotIme(Adapter):
         """
         text_nospace = text.replace(' ', '--')
         input_cmd = 'am broadcast -a DROIDBOT_INPUT_TEXT --es text %s --ei mode %d' % (text_nospace, mode)
-        self.device.adb.shell(str(input_cmd))
+        self.device.adb.shell(str(input_cmd), check=False)
 
 
 if __name__ == "__main__":

@@ -26,7 +26,10 @@ class Logcat(Adapter):
         if device.output_dir is None:
             self.out_file = None
         else:
-            self.out_file = "%s/logcat.txt" % device.output_dir
+            from droidbot.output_layout import hidden_file
+            self.out_file = hidden_file(device.output_dir, "logcat.txt") or (
+                "%s/logcat.txt" % device.output_dir
+            )
 
     def connect(self):
         self.device.adb.run_cmd("logcat -c")

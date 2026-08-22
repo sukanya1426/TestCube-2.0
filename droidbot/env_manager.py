@@ -283,7 +283,11 @@ class AppEnvManager(object):
 
         self.logger.debug("Finish deploying environment")
         if self.device.output_dir is not None:
-            out_file = open(os.path.join(self.device.output_dir, "droidbot_env.json"), "w")
+            from droidbot.output_layout import hidden_file
+            env_path = hidden_file(self.device.output_dir, "droidbot_env.json") or os.path.join(
+                self.device.output_dir, "droidbot_env.json"
+            )
+            out_file = open(env_path, "w")
             self.dump(out_file)
             out_file.close()
             self.logger.debug("Environment settings saved to droidbot_env.json")

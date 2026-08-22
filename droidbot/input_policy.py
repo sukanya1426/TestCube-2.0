@@ -4,7 +4,7 @@ import logging
 import random
 from abc import abstractmethod
 
-from .input_event import InputEvent, KeyEvent, IntentEvent, TouchEvent, ManualEvent, SetTextEvent, KillAppEvent
+from .input_event import InputEvent, KeyEvent, IntentEvent, TouchEvent, ManualEvent, SetTextEvent, KillAppEvent, ScrollEvent
 from .utg import UTG
 
 # Max number of restarts
@@ -34,6 +34,55 @@ POLICY_MONKEY = "monkey"
 POLICY_NONE = "none"
 POLICY_MEMORY_GUIDED = "memory_guided"  # implemented in input_policy2
 POLICY_LLM_GUIDED = "llm_guided"  # implemented in input_policy3
+POLICY_FEATURE_GUIDED = "feature_guided"
+
+PERMISSION_ACTIVITIES = (
+    "permissioncontroller",
+    "grantpermissions",
+    "packageinstaller",
+    "requestignorebattery",
+    "requestpermission",
+)
+
+PERMISSION_CONFIRM_LABELS = (
+    "while using the app",
+    "allow all",
+    "allow",
+    "only this time",
+    "always",
+    "ok",
+    "accept",
+    "continue",
+    "yes",
+    "got it",
+    "i agree",
+    "agree",
+)
+
+PERMISSION_DENY_LABELS = (
+    "don't allow",
+    "dont allow",
+    "don’t allow",
+    "deny",
+    "don't send",
+    "cancel",
+    "no thanks",
+    "reject",
+)
+
+# Flutter onboarding / popups often merge the CTA into contentDescription.
+CTA_LABELS = (
+    "let's get started",
+    "lets get started",
+    "get started",
+    "start now",
+    "continue",
+    "next",
+    "got it",
+    "i agree",
+    "accept",
+    "skip this nonsense",
+)
 
 
 class InputInterruptedException(Exception):
@@ -381,6 +430,23 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
         if current_state.state_str in self.__missed_states:
             self.__missed_states.remove(current_state.state_str)
 
+        possible_events = current_state.get_possible_input()
+        dialog_event = self._pick_permission_or_dialog_event(current_state, possible_events)
+        if dialog_event is not None:
+            self.logger.info("Granting permission / dismissing system dialog.")
+            self.__event_trace += EVENT_FLAG_EXPLORE
+            self.already_explored.add(dialog_event)
+            return dialog_event
+
+        cta_event = self._pick_cta_event(possible_events)
+        if cta_event is not None:
+            self.logger.info("Tapping onboarding/popup CTA: %s" % _view_label(cta_event.view))
+            self.__event_trace += EVENT_FLAG_EXPLORE
+            self.already_explored.add(cta_event)
+            return cta_event
+
+        possible_events = self._prioritize_events(possible_events)
+
         if current_state.get_app_activity_depth(self.app) < 0:
             # If the app is not in the activity stack
             start_app_intent = self.app.get_start_intent()
@@ -430,9 +496,6 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
         else:
             # If the app is in foreground
             self.__num_steps_outside = 0
-
-        # Get all possible input events
-        possible_events = current_state.get_possible_input()
 
         if self.random_input:
             random.shuffle(possible_events)
@@ -540,6 +603,87 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
         self.__nav_target = None
         self.__nav_num_steps = -1
         return None
+
+    def _pick_permission_or_dialog_event(self, state, possible_events):
+        """Tap Allow on permission dialogs. Never tap the title or Don't allow."""
+        from .permission_dialog import make_allow_event, is_permission_screen
+        allow_event = make_allow_event(state)
+        if allow_event is not None:
+            return allow_event
+        if not is_permission_screen(state):
+            return None
+        activity = ""
+        if state and state.foreground_activity:
+            activity = state.foreground_activity.lower()
+        is_system_dialog = any(token in activity for token in PERMISSION_ACTIVITIES)
+        for event in possible_events:
+            view = getattr(event, "view", None)
+            if not view:
+                continue
+            label_parts = [
+                view.get("text"),
+                view.get("content_description"),
+                view.get("resource_id"),
+            ]
+            label = " ".join(str(part) for part in label_parts if part).lower()
+            label = label.replace("’", "'").replace("‘", "'")
+            if not label:
+                continue
+            if any(deny in label for deny in PERMISSION_DENY_LABELS):
+                continue
+            if "don't allow" in label or "dont allow" in label:
+                continue
+            resource_id = (view.get("resource_id") or "").lower()
+            if "permission_allow" in resource_id:
+                return event
+            text = (view.get("text") or "").strip().lower().replace("’", "'")
+            if text in ("allow", "allow all", "while using the app", "only this time") and view.get("clickable"):
+                return event
+            if is_system_dialog and text == "allow":
+                return event
+        return None
+
+    def _pick_cta_event(self, possible_events):
+        """Prefer Get Started / Continue over unlabeled Flutter containers."""
+        current_state = self.current_state
+        for phrase in CTA_LABELS:
+            for event in possible_events:
+                view = getattr(event, "view", None)
+                if not view:
+                    continue
+                if event in self.already_explored:
+                    continue
+                if current_state and self.utg.is_event_explored(event, current_state):
+                    continue
+                label = _view_label(view)
+                if phrase in label:
+                    return event
+        return None
+
+    def _prioritize_events(self, possible_events):
+        def rank(event):
+            if isinstance(event, ScrollEvent):
+                return 80
+            view = getattr(event, "view", None)
+            if not view:
+                return 60
+            label = _view_label(view)
+            if label.strip():
+                return 10
+            bounds = view.get("bounds") or [[0, 0], [0, 0]]
+            area = abs(bounds[1][0] - bounds[0][0]) * abs(bounds[1][1] - bounds[0][1])
+            if area > 800 * 800:
+                return 90
+            return 40
+        return sorted(possible_events, key=rank)
+
+
+def _view_label(view):
+    if not view:
+        return ""
+    parts = [view.get("text"), view.get("content_description"), view.get("resource_id")]
+    raw = " ".join(str(part) for part in parts if part)
+    return raw.lower().replace("’", "'").replace("‘", "'")
 
 class UtgReplayPolicy(InputPolicy):
     """

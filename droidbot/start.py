@@ -1,4 +1,5 @@
 # helper file of droidbot
+#cubetest-2.0/droidbot/start.py
 # it parses command arguments and send the options to droidbot
 import argparse
 from . import input_manager
@@ -18,7 +19,14 @@ def parse_args():
     parser.add_argument("-d", action="store", dest="device_serial", required=False,
                         help="The serial number of target device (use `adb devices` to find)")
     parser.add_argument("-a", action="store", dest="apk_path", required=True,
-                        help="The file path to target APK")
+                        help="Target APK. Path, apks/<stem>.apk, or just the stem (e.g. spotube).")
+    parser.add_argument("-readme", action="store", dest="readme_path",
+                        help="Application README/specification. Default: feature/<stem>/README.md")
+    parser.add_argument("-credential", action="store", dest="credential_path",
+                        help="Field values (email, password, …). Default: feature/<stem>/credential.txt")
+    parser.add_argument("-features", action="store", dest="features_path",
+                        help="Live feature JSON override (ignored when feature/<stem>/guide_features.json exists).\n"
+                             "Gold lists (ground_truth.json) are evaluation-only and do not drive taps.")
     parser.add_argument("-o", action="store", dest="output_dir",
                         help="directory of output")
     # parser.add_argument("-env", action="store", dest="env_policy",
@@ -27,15 +35,16 @@ def parse_args():
     #                          "dummy\tadd some fake contacts, SMS log, call log; \n"
     #                          "static\tset environment based on static analysis result; \n"
     #                          "<file>\tget environment policy from a json file.\n")
-    parser.add_argument("-policy", action="store", dest="input_policy", default=input_manager.DEFAULT_POLICY,
+    parser.add_argument("-policy", action="store", dest="input_policy", default=None,
                         help='Policy to use for test input generation. '
-                             'Default: %s.\nSupported policies:\n' % input_manager.DEFAULT_POLICY +
+                             'Default: feature_guided when a README is present, otherwise %s.\nSupported policies:\n' % input_manager.DEFAULT_POLICY +
                              '  \"%s\" -- No event will be sent, user should interact manually with device; \n'
                              '  \"%s\" -- Use "adb shell monkey" to send events; \n'
                              '  \"%s\" -- Explore UI using a naive depth-first strategy;\n'
                              '  \"%s\" -- Explore UI using a greedy depth-first strategy;\n'
                              '  \"%s\" -- Explore UI using a naive breadth-first strategy;\n'
                              '  \"%s\" -- Explore UI using a greedy breadth-first strategy;\n'
+                             '  \"%s\" -- Test README features one by one using UI state and screenshots;\n'
                              %
                              (
                                  input_policy.POLICY_NONE,
@@ -44,6 +53,7 @@ def parse_args():
                                  input_policy.POLICY_GREEDY_DFS,
                                  input_policy.POLICY_NAIVE_BFS,
                                  input_policy.POLICY_GREEDY_BFS,
+                                 input_policy.POLICY_FEATURE_GUIDED,
                              ))
 
     # for distributed DroidBot
@@ -89,6 +99,18 @@ def parse_args():
                         help="Ignore Ad views by checking resource_id.")
     parser.add_argument("-replay_output", action="store", dest="replay_output",
                         help="The droidbot output directory being replayed.")
+    parser.add_argument("-llm", action="store", dest="llm_backend", default="auto",
+                        choices=["auto", "local", "gemini"],
+                        help="LLM backend. auto (default) uses the local Ollama VLM when it is running,\n"
+                             "otherwise Gemini. local forces Ollama. gemini forces the cloud API.")
+    parser.add_argument("-ollama-host", action="store", dest="ollama_host",
+                        default=None,
+                        help="Ollama HTTP endpoint. Default: http://127.0.0.1:11434")
+    parser.add_argument("-ollama-model", action="store", dest="ollama_model",
+                        default=None,
+                        help="Ollama vision model. Default: qwen2.5vl:7b")
+    from .feature_tester.config import add_cli_flags
+    add_cli_flags(parser)
     options = parser.parse_args()
     # print options
     return options
@@ -100,10 +122,36 @@ def main():
     it starts a droidbot according to the arguments given in cmd line
     """
     opts = parse_args()
-    import os
-    if not os.path.exists(opts.apk_path):
-        print("APK does not exist.")
+    from .feature_tester.specs import apply_run_paths
+    if not apply_run_paths(opts):
+        print("APK does not exist: %s" % opts.apk_path)
+        print("Place the file at apks/<name>.apk or pass a full path to -a.")
         return
+    from .feature_tester.config import FeatureTesterConfig, set_config
+    set_config(FeatureTesterConfig.from_options(opts))
+    if getattr(opts, "replay_path", None):
+        opts.input_policy = input_policy.POLICY_FEATURE_GUIDED
+        print("Replaying test case: %s" % opts.replay_path)
+    if opts.readme_path:
+        print("Using application README: %s" % opts.readme_path)
+    if getattr(opts, "credential_path", None):
+        print("Using credentials: %s" % opts.credential_path)
+    if opts.output_dir:
+        print("Writing output to %s" % opts.output_dir)
+    if not opts.input_policy:
+        if opts.readme_path or opts.features_path:
+            opts.input_policy = input_policy.POLICY_FEATURE_GUIDED
+        else:
+            opts.input_policy = input_manager.DEFAULT_POLICY
+    if opts.input_policy == input_policy.POLICY_FEATURE_GUIDED:
+        opts.grant_perm = True
+    from .GeminiAI import GeminiAi
+    GeminiAi.set_backend(
+        backend=opts.llm_backend,
+        ollama_host=opts.ollama_host,
+        ollama_model=opts.ollama_model,
+        warmup=opts.llm_backend in ("auto", "local"),
+    )
     if not opts.output_dir and opts.cv_mode:
         print("To run in CV mode, you need to specify an output dir (using -o option).")
 
@@ -165,7 +213,11 @@ def main():
             master=opts.master,
             humanoid=opts.humanoid,
             ignore_ad=opts.ignore_ad,
-            replay_output=opts.replay_output)
+            replay_output=opts.replay_output,
+            readme_path=opts.readme_path,
+            features_path=opts.features_path,
+            credential_path=getattr(opts, "credential_path", None),
+            guide_features_path=getattr(opts, "guide_features_path", None))
         droidbot.start()
     return
 

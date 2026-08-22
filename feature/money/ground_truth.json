@@ -1,0 +1,728 @@
+{
+  "app": "Money Manager Ex",
+  "platform": "Android",
+  "source": "manual_exploration",
+  "url": "https://github.com/moneymanagerex/android-money-manager-ex/",
+  "description": "Open-source personal finance / budgeting app.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a New Database",
+      "description": "Create a new Money Manager Ex database during first-time setup.",
+      "actions": [
+        "Launch the app and dismiss the welcome screen if shown",
+        "Tap Create Database",
+        "Enter a database file name with the .mmb extension",
+        "Tap Next or Save",
+        "Leave the password blank or enter a password to encrypt the database",
+        "Tap Next",
+        "On the DB Setup screen, tap Create New Account"
+      ],
+      "keywords": [
+        "database",
+        "create database",
+        "mmb",
+        "password",
+        "setup"
+      ],
+      "nav_hints": [
+        "create database",
+        "database",
+        "next",
+        "save"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create First/New Account",
+      "description": "Create a financial account with a name, type, currency, opening balance, and date.",
+      "actions": [
+        "Tap Add Account (+)",
+        "Enter an Account Name",
+        "Select an Account Type",
+        "Select Currency",
+        "Enter Initial Balance",
+        "Set Opening Date",
+        "Optionally toggle Set as Default",
+        "Tap Save or OK"
+      ],
+      "keywords": [
+        "account",
+        "add account",
+        "cash",
+        "checking",
+        "savings",
+        "currency"
+      ],
+      "nav_hints": [
+        "accounts",
+        "add account",
+        "plus",
+        "save"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Add a Transaction",
+      "description": "Create a withdrawal, deposit, or transfer transaction with transaction details.",
+      "actions": [
+        "Tap Add Transaction (+)",
+        "Set the Date",
+        "Select Status",
+        "Select Type: Withdrawal, Deposit, or Transfer",
+        "Enter Amount",
+        "Select or create a Payee",
+        "Select or create a Category",
+        "Optionally enter Transaction Number and Note",
+        "Tap Ok to save"
+      ],
+      "keywords": [
+        "transaction",
+        "withdrawal",
+        "deposit",
+        "transfer",
+        "payee",
+        "category"
+      ],
+      "nav_hints": [
+        "add transaction",
+        "transaction",
+        "payee",
+        "category",
+        "ok"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Edit / Delete / Modify a Transaction",
+      "description": "Modify or remove a transaction from an account's transaction list.",
+      "actions": [
+        "Navigate to the account's transaction list",
+        "Long-press the desired transaction",
+        "Select Edit, Delete, Void, or another available action"
+      ],
+      "keywords": [
+        "transaction",
+        "edit",
+        "delete",
+        "void",
+        "long-press"
+      ],
+      "nav_hints": [
+        "transaction",
+        "edit",
+        "delete",
+        "void"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Filter Transactions by Date Range",
+      "description": "Filter an account's transaction list to a selected date range.",
+      "actions": [
+        "Open an account's transaction list",
+        "Tap the date-range filter control",
+        "Select the start date",
+        "Select the end date",
+        "View the updated filtered transaction list"
+      ],
+      "keywords": [
+        "transaction",
+        "filter",
+        "date range",
+        "start date",
+        "end date"
+      ],
+      "nav_hints": [
+        "transaction list",
+        "date range",
+        "filter"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Search/Sort Transactions",
+      "description": "Search transactions by keyword or sort them by a selected field.",
+      "actions": [
+        "Open an account's transaction list",
+        "Tap the Search icon and type a keyword",
+        "Or tap Sort and select a field"
+      ],
+      "keywords": [
+        "transaction",
+        "search",
+        "sort",
+        "keyword"
+      ],
+      "nav_hints": [
+        "search",
+        "sort",
+        "transaction list"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Mark Account as Favorite",
+      "description": "Mark an account as a favorite using the star icon.",
+      "actions": [
+        "Open the account's transaction list",
+        "Tap the Favorite star icon in the toolbar"
+      ],
+      "keywords": [
+        "account",
+        "favorite",
+        "star"
+      ],
+      "nav_hints": [
+        "favorite",
+        "star",
+        "account"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Manage Accounts",
+      "description": "Add new accounts or edit existing account information.",
+      "actions": [
+        "Navigate to the Accounts tab",
+        "Tap Add (+) to create a new account",
+        "Tap an existing account to view its transactions",
+        "Long-press an account and tap Edit to modify it"
+      ],
+      "keywords": [
+        "accounts",
+        "add",
+        "edit",
+        "account management"
+      ],
+      "nav_hints": [
+        "accounts",
+        "add",
+        "edit"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Set Up a Budget",
+      "description": "Create a budget for a selected year and optionally a month.",
+      "actions": [
+        "Navigate to Budget",
+        "Tap +",
+        "Enter Year",
+        "Optionally enter Month",
+        "Tap Save",
+        "Tap the new budget to open it"
+      ],
+      "keywords": [
+        "budget",
+        "add budget",
+        "year",
+        "month"
+      ],
+      "nav_hints": [
+        "budget",
+        "add budget",
+        "plus",
+        "save"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set/Edit a Category Budget Amount",
+      "description": "Set or edit the frequency and amount for a category within a budget.",
+      "actions": [
+        "Open a budget",
+        "Long-press a category",
+        "Tap Edit",
+        "Enter Frequency",
+        "Enter Amount",
+        "Tap Save"
+      ],
+      "keywords": [
+        "budget",
+        "category",
+        "frequency",
+        "amount",
+        "edit"
+      ],
+      "nav_hints": [
+        "budget",
+        "category",
+        "edit",
+        "save"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "View Budget Details / Transactions",
+      "description": "View transactions associated with a category in a budget.",
+      "actions": [
+        "Open a budget",
+        "Long-press a category row",
+        "Tap View Transactions",
+        "View the filtered transaction list"
+      ],
+      "keywords": [
+        "budget",
+        "transactions",
+        "category",
+        "details"
+      ],
+      "nav_hints": [
+        "budget",
+        "view transactions",
+        "category"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Delete a Budget",
+      "description": "Delete a budget from the budget list without affecting transactions.",
+      "actions": [
+        "Long-press the budget name",
+        "Tap Delete",
+        "Confirm deletion"
+      ],
+      "keywords": [
+        "budget",
+        "delete",
+        "confirm"
+      ],
+      "nav_hints": [
+        "budget",
+        "delete"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Configure Budget View Options",
+      "description": "Configure budget display and calculation options and select visible columns.",
+      "actions": [
+        "Open a budget's category list",
+        "Tap the gear/settings icon",
+        "Toggle Reload scheduled transactions",
+        "Toggle Show simple budget view",
+        "Toggle Use financial year",
+        "Tap Select visible columns",
+        "Select or deselect Frequency, Amount, Estimate, Actual, Available, and Forecast Remain"
+      ],
+      "keywords": [
+        "budget",
+        "settings",
+        "columns",
+        "financial year",
+        "forecast"
+      ],
+      "nav_hints": [
+        "budget",
+        "gear",
+        "settings",
+        "visible columns"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Create a Recurring/Scheduled Transaction",
+      "description": "Create a transaction that recurs on a configured schedule.",
+      "actions": [
+        "Add a transaction",
+        "Enable the Recurring option",
+        "Set Recurrence Type: Manual, Prompt, or Automatic",
+        "Set the Repeat Interval",
+        "Tap Save"
+      ],
+      "keywords": [
+        "recurring",
+        "scheduled",
+        "transaction",
+        "repeat",
+        "automatic"
+      ],
+      "nav_hints": [
+        "add transaction",
+        "recurring",
+        "repeat",
+        "save"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Respond to a Recurring Transaction Prompt",
+      "description": "Respond to a prompt when a scheduled recurring transaction becomes due.",
+      "actions": [
+        "Tap the recurring transaction notification",
+        "Tap Skip or Enter"
+      ],
+      "keywords": [
+        "recurring",
+        "notification",
+        "prompt",
+        "skip",
+        "enter"
+      ],
+      "nav_hints": [
+        "notification",
+        "recurring",
+        "skip",
+        "enter"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Manage Payees",
+      "description": "Create, select, edit, or delete transaction payees.",
+      "actions": [
+        "Open the Payee field while adding or editing a transaction, or navigate to Payees",
+        "Tap an existing payee to select it",
+        "Tap + to add a new payee",
+        "Enter the payee name",
+        "Tap Save",
+        "Long-press a payee to Edit or Delete"
+      ],
+      "keywords": [
+        "payee",
+        "add payee",
+        "edit",
+        "delete"
+      ],
+      "nav_hints": [
+        "payee",
+        "payees",
+        "plus",
+        "save"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Manage Categories",
+      "description": "Create, nest, edit, or delete transaction categories and subcategories.",
+      "actions": [
+        "Open the Category field while adding or editing a transaction, or navigate to Categories",
+        "Tap + to add a new category",
+        "Enter the category name",
+        "Optionally select a parent category to nest it",
+        "Tap Save",
+        "Long-press a category to Edit or Delete"
+      ],
+      "keywords": [
+        "category",
+        "subcategory",
+        "nested",
+        "parent category",
+        "edit",
+        "delete"
+      ],
+      "nav_hints": [
+        "category",
+        "categories",
+        "plus",
+        "parent",
+        "save"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "View a Built-In Report",
+      "description": "Open built-in financial reports and optionally configure their period, sorting, filtering, or chart view.",
+      "actions": [
+        "Navigate to Reports",
+        "Tap a report type",
+        "Optionally select period, sort order, or account filter",
+        "For Summary of Accounts, optionally toggle chart view"
+      ],
+      "keywords": [
+        "reports",
+        "payee",
+        "category",
+        "cash-flow",
+        "summary",
+        "income",
+        "expenses"
+      ],
+      "nav_hints": [
+        "reports",
+        "payee",
+        "category",
+        "cash-flow",
+        "summary"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Run a General Report",
+      "description": "Run a previously loaded SQL or HTML general report.",
+      "actions": [
+        "Navigate to Reports",
+        "Open General Reports",
+        "Select a previously loaded SQL or HTML report",
+        "Tap the report to run or view it"
+      ],
+      "keywords": [
+        "reports",
+        "general reports",
+        "sql",
+        "html"
+      ],
+      "nav_hints": [
+        "reports",
+        "general reports",
+        "sql",
+        "html"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Track Stock/Mutual Fund Investments",
+      "description": "Add and track stocks or mutual fund holdings in an investment account.",
+      "actions": [
+        "Open an Investment-type account",
+        "Tap Add Stock (+)",
+        "Enter Symbol",
+        "Enter Share Number",
+        "Enter Share Price",
+        "Tap Save"
+      ],
+      "keywords": [
+        "investment",
+        "stock",
+        "mutual fund",
+        "shares",
+        "price"
+      ],
+      "nav_hints": [
+        "investment",
+        "add stock",
+        "stock",
+        "save"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Add a Stock Transaction",
+      "description": "Record a stock transaction such as buying or selling shares.",
+      "actions": [
+        "Open a stock within the investment account",
+        "Tap the stock's options menu",
+        "Tap Add Stock Transaction",
+        "Enter shares, price, and date",
+        "Tap Save"
+      ],
+      "keywords": [
+        "stock",
+        "investment",
+        "buy",
+        "sell",
+        "shares",
+        "price"
+      ],
+      "nav_hints": [
+        "stock",
+        "options",
+        "add stock transaction",
+        "save"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Track Fixed Assets",
+      "description": "Create and track fixed assets with their type, value, and date.",
+      "actions": [
+        "Go to Assets",
+        "Tap Add (+)",
+        "Enter Asset Name",
+        "Select Asset Type",
+        "Enter Value",
+        "Set Date",
+        "Tap Save"
+      ],
+      "keywords": [
+        "assets",
+        "fixed assets",
+        "value",
+        "asset type"
+      ],
+      "nav_hints": [
+        "assets",
+        "add",
+        "asset",
+        "save"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Manage Currencies & Exchange Rates",
+      "description": "Add currencies and configure their exchange rates relative to the base currency.",
+      "actions": [
+        "Open the navigation Drawer",
+        "Navigate to Entities then Currency",
+        "Tap +",
+        "Add a currency",
+        "Set its exchange rate relative to the Base Currency",
+        "Tap Save"
+      ],
+      "keywords": [
+        "currency",
+        "exchange rate",
+        "base currency",
+        "entities"
+      ],
+      "nav_hints": [
+        "drawer",
+        "entities",
+        "currency",
+        "exchange rate",
+        "save"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Set Up Data Sync",
+      "description": "Open a Money Manager Ex database stored with a supported cloud provider and enable offline availability when supported.",
+      "actions": [
+        "On the create or open screen, tap Open Database",
+        "Use the system file picker to navigate to a cloud provider",
+        "Select the .mmb database file",
+        "Enable Offline availability in the cloud app if supported"
+      ],
+      "keywords": [
+        "sync",
+        "cloud",
+        "database",
+        "mmb",
+        "offline",
+        "Google Drive",
+        "OneDrive",
+        "NextCloud"
+      ],
+      "nav_hints": [
+        "open database",
+        "file picker",
+        "cloud",
+        "offline"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Set/Change Database Password",
+      "description": "Set or change the password used to protect the database.",
+      "actions": [
+        "Navigate to Settings",
+        "Open Security",
+        "Tap Set Password or Change Password",
+        "Enter the new password",
+        "Confirm the password",
+        "Tap Save"
+      ],
+      "keywords": [
+        "password",
+        "security",
+        "database",
+        "change password"
+      ],
+      "nav_hints": [
+        "settings",
+        "security",
+        "password",
+        "save"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Enable Fingerprint/Biometric Lock",
+      "description": "Enable fingerprint or biometric unlocking for the app.",
+      "actions": [
+        "Navigate to Settings",
+        "Open Security",
+        "Toggle Fingerprint Unlock on",
+        "Confirm with the device biometric prompt"
+      ],
+      "keywords": [
+        "fingerprint",
+        "biometric",
+        "security",
+        "unlock",
+        "lock"
+      ],
+      "nav_hints": [
+        "settings",
+        "security",
+        "fingerprint",
+        "biometric"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Import/Export via QIF or CSV",
+      "description": "Import financial data from QIF or CSV files or export data to a selected destination.",
+      "actions": [
+        "Navigate to Settings or the account options menu",
+        "Tap Import and select a .qif or .csv file using the file picker",
+        "Or tap Export",
+        "Choose an export destination"
+      ],
+      "keywords": [
+        "import",
+        "export",
+        "qif",
+        "csv",
+        "file picker"
+      ],
+      "nav_hints": [
+        "settings",
+        "import",
+        "export",
+        "qif",
+        "csv"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Configure App Settings",
+      "description": "Configure general application behavior such as financial year, recurring transactions, and theme.",
+      "actions": [
+        "Navigate to Settings",
+        "Toggle settings for desired behaviors",
+        "Configure options such as financial year start, automatic recurring transactions, or theme"
+      ],
+      "keywords": [
+        "settings",
+        "financial year",
+        "recurring",
+        "theme",
+        "appearance"
+      ],
+      "nav_hints": [
+        "settings",
+        "theme",
+        "financial year",
+        "recurring"
+      ]
+    }
+  ],
+  "id_scheme": "GT### \u2014 independent of live README extraction IDs (F###)",
+  "reconciled_against": "output/money/features_from_readme.json",
+  "note": "Hand-authored capability list (28 features). The live README extraction produced 3 differently named features that previously reused F001\u2013F003. Evaluator matches by name/description similarity; IDs are not a join key.",
+  "live_readme_alignment": [
+    {
+      "live_id": "F001",
+      "live_name": "Complete first-run setup",
+      "gt_id": "GT001",
+      "gt_name": "Create a New Database",
+      "note": "Related first-launch capability; not an ID match."
+    },
+    {
+      "live_id": "F002",
+      "live_name": "Open MoneyManagerEx Desktop database",
+      "gt_id": null,
+      "gt_name": null,
+      "note": "No dedicated GT feature for opening a desktop .mmb; closest is GT001 (create/open during setup)."
+    },
+    {
+      "live_id": "F003",
+      "live_name": "Import transactions via .qif files",
+      "gt_id": "GT027",
+      "gt_name": "Import/Export via QIF or CSV",
+      "note": "Name-similar to Import/Export via QIF or CSV."
+    }
+  ]
+}

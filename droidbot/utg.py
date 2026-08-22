@@ -133,7 +133,10 @@ class UTG(object):
             table += "</table>"
             return table
 
-        utg_file_path = os.path.join(self.device.output_dir, "utg.js")
+        from .output_layout import hidden_file
+        utg_file_path = hidden_file(self.device.output_dir, "utg.js") or os.path.join(
+            self.device.output_dir, "utg.js"
+        )
         utg_file = open(utg_file_path, "w")
         utg_nodes = []
         utg_edges = []

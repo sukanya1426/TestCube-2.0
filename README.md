@@ -1,6 +1,6 @@
 ![DroidBot UTG](droidbot/resources/dummy_documents/droidbot_utg.png)
 
-# DroidBot
+# TestCube 2.0
 
 ## News
 
@@ -83,3 +83,172 @@ A sample evaluation report can be found [here](http://honeynet.github.io/droidbo
 - [DroidBot Blog Posts](http://honeynet.github.io/droidbot/)
 - [droidbotApp Source Code](https://github.com/ylimit/droidbotApp)
 - [How to contact the author](http://ylimit.github.io)
+
+
+
+## TestCube 2.0 layout
+
+Keep inputs sorted by app. Generated runs go under `output/` (gitignored). Helper CLIs live in `scripts/`. For a full description of inputs, outputs, and how feature coverage is computed, see [docs/PROJECT.md](docs/PROJECT.md).
+
+```
+apks/<stem>.apk                 # the app binary
+feature/<stem>/README.md        # app README or numbered GUI list
+feature/<stem>/guide_features.json  # human-authored live exploration list (preferred)
+feature/<stem>/ground_truth.json    # offline scoring list (may match the guide)
+feature/<stem>/ground_truth_addendum.json  # 5–10 extra features not in the guide
+feature/<stem>/credential.txt   # values to type (email, password, …)
+feature/<stem>/notes.txt        # optional extra notes (same folder only)
+scripts/                        # setup_local_vlm.sh, extract_features.py, …
+output/<stem>/                  # pass this as -o
+```
+
+The APK **stem** is the file name without `.apk`. Example: `apks/spotube.apk` uses `feature/spotube/`.
+
+### Full run: Spotube + Money (live test, then metrics)
+
+Use a **new** `-o` folder each time. Reusing a finished folder resumes the old journal instead of starting over.
+
+**Terminal 1 — emulator**
+
+```bash
+cd ~/Library/Android/sdk/emulator
+./emulator -avd Pixel_5
+```
+
+Wait until the home screen is up.
+
+**Terminal 2 — tester + metrics**
+
+```bash
+cd /Users/mahdiya/TestCube-2.0
+source .venv/bin/activate
+
+# device must show "device", not "offline"
+adb devices
+
+# optional local VLM (otherwise Gemini is used)
+brew services start ollama
+python -m droidbot.local_vlm --check
+python -m droidbot.local_vlm --warmup
+
+# --- live feature-guided runs (these take a long time) ---
+droidbot -a apks/spotube.apk -o output/spotube -is_emulator
+droidbot -a apks/money.apk   -o output/money   -is_emulator
+droidbot -a apks/vinyl.apk   -o output/vinyl   -is_emulator
+
+# --- offline coverage vs ground truth (VLM/Gemini judge; does not re-drive the device) ---
+python scripts/evaluate_features.py \
+  --results output/spotube \
+  --features feature/spotube/ground_truth.json
+
+python scripts/evaluate_features.py \
+  --results output/money \
+  --features feature/money/ground_truth.json
+
+python scripts/evaluate_features.py \
+  --results output/vinyl \
+  --features feature/vinyl/ground_truth.json
+
+# --- paper table across both apps ---
+python scripts/aggregate_metrics.py \
+  output/spotube output/money \
+  --ground-truth feature/spotube/ground_truth.json \
+  --ground-truth feature/money/ground_truth.json \
+  --out output/metrics
+```
+
+Where to read the results:
+
+| What | Path |
+| --- | --- |
+| Online coverage (self-report) | `output/<run>/feature_test/report.md` and `report.json` |
+| Action log | `output/<run>/feature_test/log.md` |
+| Replayable test cases | `output/<run>/feature_test/test_cases/*.json` |
+| Offline coverage + confusion table | `output/<run>/feature_coverage/report.json` |
+| UTG / screenshots | `output/<run>/index.html`, `states/`, `events/` |
+| Aggregated paper table | `output/metrics/metrics.md` and `metrics.json` |
+| Text fields to label by hand | `output/metrics/*_text_inputs.tsv` |
+
+Optional after a covered feature: replay a saved test case (no LLM):
+
+```bash
+droidbot -a apks/spotube.apk -o output/spotube-replay \
+  --replay output/spotube/feature_test/test_cases/F003.json \
+  -is_emulator
+```
+
+Ablation (turn mechanisms off for a comparison run):
+
+```bash
+droidbot -a apks/spotube.apk -o output/spotube-nosf \
+  --disable shared_flow,hybrid_discovery -is_emulator
+```
+
+`-a spotube` also works (resolved under `apks/`). Live steps are inferred from `feature/<stem>/README.md`. Gold lists (`ground_truth.json`) only count coverage after the run. Progress is written to `output/<run>/feature_test/`.
+
+### Add a new APK
+
+1. Copy the binary to `apks/<stem>.apk` (pick a short stem, e.g. `newpipe`).
+2. Create `feature/<stem>/` and add:
+   - `README.md` — the app README (what the tester may infer from). Put the detailed GUI gold list in `ground_truth.json`, not here.
+   - `credential.txt` — `email:`, `pwd:`, `search_query:`, and any other field values the app needs.
+3. Run:
+
+```bash
+droidbot -a apks/<stem>.apk -o output/<stem> -is_emulator
+```
+
+Overrides if you need them: `-readme path`, `-credential path`. Do **not** pass a gold `features.json` / `ground_truth.json` to live `droidbot` to steer taps — those files are for `evaluate_features.py` only.
+
+### Optional flags
+
+- `-features path/to/ground_truth.json` evaluation-only (coverage counting). Live steps are always inferred from the README.
+- `-policy dfs_greedy` for random UI exploration
+- `-llm auto|local|gemini` (`auto` prefers the local VLM)
+- `-ollama-model qwen2.5vl:7b` / `-ollama-host http://127.0.0.1:11434`
+- `GEMINI_MIN_INTERVAL=25` to space cloud LLM calls so you stay under quota
+
+Helper scripts (from repo root):
+
+```bash
+python scripts/extract_features.py --readme feature/spotube/README.md --out /tmp/features.json
+python scripts/evaluate_features.py --results output/spotube --features feature/spotube/ground_truth.json
+python scripts/aggregate_metrics.py output/spotube output/money --out output/metrics
+bash scripts/setup_local_vlm.sh
+```
+
+### Local VLM (Ollama, Apple Silicon)
+
+The tester uses a local vision model for screenshots when Ollama is running, and falls back to Gemini otherwise.
+
+```bash
+bash scripts/setup_local_vlm.sh
+python -m droidbot.local_vlm --check
+python -m droidbot.local_vlm --warmup
+```
+
+Then run as usual. Force the local model with `-llm local`.
+
+**Start the local VLM**
+
+```bash
+brew services start ollama
+# first time only:
+bash scripts/setup_local_vlm.sh
+python -m droidbot.local_vlm --check
+python -m droidbot.local_vlm --warmup
+```
+
+If `brew services` is not used:
+
+```bash
+ollama serve
+```
+
+**Stop the local VLM**
+
+```bash
+brew services stop ollama
+```
+
+Or if you started it with `ollama serve`, press Ctrl+C in that terminal (or `killall ollama`).
