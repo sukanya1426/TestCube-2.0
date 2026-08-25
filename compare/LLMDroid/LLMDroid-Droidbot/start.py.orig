@@ -79,10 +79,6 @@ def parse_args():
                         help="Record method trace for each event. can be \"full\" or a sampling rate.")
     parser.add_argument("-grant_perm", action="store_true", dest="grant_perm",
                         help="Grant all permissions while installing. Useful for Android 6.0+.")
-    parser.add_argument("-code_coverage", action="store", dest="code_coverage",
-                        default="androlog", choices=["time", "androlog", "jacoco"],
-                        help="real-time code coverage monitoring method. "
-                             "'time' disables it (needed for non-instrumented APKs).")
     parser.add_argument("-is_emulator", action="store_true", dest="is_emulator",
                         help="Declare the target device to be an emulator, which would be treated specially by DroidBot.")
     parser.add_argument("-accessibility_auto", action="store_true", dest="enable_accessibility_hard",
@@ -169,8 +165,7 @@ def main():
             master=opts.master,
             humanoid=opts.humanoid,
             ignore_ad=opts.ignore_ad,
-            replay_output=opts.replay_output,
-            code_coverage=opts.code_coverage)
+            replay_output=opts.replay_output)
         droidbot.start()
     return
 

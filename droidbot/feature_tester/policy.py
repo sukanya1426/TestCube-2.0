@@ -91,6 +91,9 @@ MAX_OUTSIDE_STEPS = 6
 MAX_FILE_PICKER_STEPS = 8
 MAX_RESTARTS = 5
 MIN_STEPS_BEFORE_ABSENT = 16
+MAX_CONSECUTIVE_ERRORS = 5
+MAX_SWITCH_DEPTH = 5
+MAX_SWITCH_RESTART_TRIES = 3
 
 FILE_PICKER_MARKERS = (
     "documentsui",
@@ -207,6 +210,18 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._unresolved_fields = set()
         self._input_manager = None
         self._recent_coords = []
+        self._run_started = None
+        self._consecutive_errors = 0
+        # Lifetime restart counter. Unlike _restarts it is never reset, so a
+        # launch/crash cycle cannot keep clearing its own cap.
+        self._restart_attempts = 0
+        self._switch_restart_tries = 0
+        # Per-feature-attempt caches, reset in _begin_feature.
+        self._widget_taps = {}
+        self._vlm_calls_this_feature = 0
+        self._steps_since_step_progress = 0
+        self._decision_cache = {}
+        self._per_feature_budget = None
 
     def start(self, input_manager):
         """Do not KillApp first — that dismisses the permission dialog with HOME."""
@@ -216,10 +231,19 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         try:
             self._ensure_ready()
             self._grant_permissions()
-            while input_manager.enabled and self.action_count < input_manager.event_count:
+            self._run_started = time.time()
+            budget = min(input_manager.event_count, self.cfg.max_run_events)
+            while input_manager.enabled and self.action_count < budget:
+                elapsed = time.time() - self._run_started
+                if elapsed >= self.cfg.max_run_seconds:
+                    # Record before finalizing: _finish_run writes the report.
+                    self._set_stop_reason("budget_time")
+                    self._finish_run("Wall-clock budget reached.")
+                    break
                 try:
                     event = self.generate_event()
                     input_manager.add_event(event)
+                    self._consecutive_errors = 0
                 except KeyboardInterrupt:
                     interrupted = True
                     self.logger.info("Keyboard interrupt; writing coverage report.")
@@ -228,11 +252,23 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                     self.logger.warning("stop sending events: %s" % exc)
                     break
                 except Exception as exc:
+                    # The counter must advance here too, otherwise a call that
+                    # raises every time spins forever against a frozen budget.
                     self.logger.warning("exception during sending events: %s" % exc)
                     import traceback
                     traceback.print_exc()
+                    self._consecutive_errors += 1
+                    if self._consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
+                        self._set_stop_reason("repeated_errors")
+                        self._finish_run("Aborting after repeated event-generation errors.")
+                        self.action_count += 1
+                        break
+                    self.action_count += 1
                     continue
                 self.action_count += 1
+            else:
+                if self.action_count >= budget:
+                    self._set_stop_reason("budget_events")
         finally:
             if self.journal and not self._finished:
                 if self._input_manager and self.action_count >= getattr(self._input_manager, "event_count", 0):
@@ -279,10 +315,11 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 return switched
 
         if self.journal.all_done() and not self._hybrid_still_pending():
+            self._set_stop_reason("all_features_done")
             self._finish_run("All features processed.")
             raise InputInterruptedException("Feature testing complete.")
 
-        if self._current and self._feature_steps >= MAX_STEPS_PER_FEATURE:
+        if self._current and self._feature_steps >= self._step_budget():
             self._drop_current(
                 STATUS_PARTIAL if self._current.get("completed_actions") else STATUS_DROPPED,
                 "Hit the per-feature step limit.",
@@ -330,9 +367,9 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 return self._start_app_event("Launcher is in front; starting the app.")
             self._outside_steps += 1
             self.logger.info("Left the app (%s). Returning." % activity)
-            if self._outside_steps <= 4:
+            if self._outside_steps <= MAX_OUTSIDE_STEPS - 2:
                 return KeyEvent(name="BACK")
-            if self._outside_steps <= 7:
+            if self._outside_steps <= MAX_OUTSIDE_STEPS + 1:
                 return KeyEvent(name="HOME")
             return IntentEvent(intent=self.app.get_start_intent())
         if outside is None:
@@ -370,6 +407,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                     if started is not None:
                         return started
             if self._current is None:
+                self._set_stop_reason("all_features_done")
                 self._finish_run("All features processed.")
                 raise InputInterruptedException("Feature testing complete.")
         self._maybe_complete_arrival_steps(state, possible)
@@ -561,6 +599,16 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         )
 
     def _begin_feature(self, feature):
+        # Retry passes re-queue blocked features; without a cap the same
+        # feature can be re-entered indefinitely.
+        if int(feature.get("attempts") or 0) >= self.cfg.max_feature_attempts:
+            self.journal.finish_feature(
+                feature,
+                STATUS_PARTIAL if feature.get("completed_actions") else STATUS_DROPPED,
+                "Exceeded attempt budget.",
+            )
+            self._current = None
+            return False
         self._current = feature
         self._feature_steps = 0
         self._no_progress = 0
@@ -581,9 +629,15 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._pending_fill = None
         self._unresolved_fields = set()
         self._recent_coords = []
+        self._widget_taps = {}
+        self._vlm_calls_this_feature = 0
+        self._steps_since_step_progress = 0
+        self._decision_cache = {}
+        self._switch_depth = 0
         feature["attempts"] = int(feature.get("attempts") or 0) + 1
         self.journal.start_feature(feature)
         self.logger.info("Testing feature %s: %s" % (feature["id"], feature["name"]))
+        return True
 
     def _apply_decision(self, decision, possible, state):
         kind = (decision.decision or "act").replace("-", "_")
@@ -739,6 +793,21 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         )
 
     def _emit(self, event, reason, matched="", source="rule", text=""):
+        # Typing an empty string is a wasted step: it neither advances a
+        # typing step nor changes the screen. Fill it or drop the event.
+        if isinstance(event, SetTextEvent) and not (getattr(event, "text", "") or "").strip():
+            filled = ""
+            try:
+                remaining = (self._current or {}).get("remaining_actions") or []
+                filled = self.advisor.fill_text(
+                    getattr(event, "view", None), remaining, feature=self._current
+                ) or ""
+            except Exception:
+                filled = ""
+            if filled.strip():
+                event.text = filled
+            else:
+                return KeyEvent(name="BACK")
         self._feature_steps += 1
         activity = ""
         if self.current_state:
@@ -750,6 +819,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             widget_key = self._widget_try_key(event)
             if widget_key:
                 self._tried_widgets.add(widget_key)
+                # State-free tally. _tap_counts is keyed by (state, view) and
+                # therefore blind to a stepper/date widget that mutates the
+                # state hash on every tap.
+                self._widget_taps[widget_key] = self._widget_taps.get(widget_key, 0) + 1
         if self._current:
             step = {
                 "decision": "act",
@@ -831,7 +904,11 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
 
     def _note_progress(self, state):
         state_str = state.state_str if state else None
-        if state_str and state_str == self._last_state_str:
+        # A revisit is not progress. Comparing only against the immediately
+        # previous state let an A-B-A-B cycle, and any widget that mutates the
+        # state hash on every tap, reset this counter forever.
+        revisited = bool(state_str) and state_str in self._feature_seen_states
+        if state_str and (state_str == self._last_state_str or revisited):
             self._no_progress += 1
         else:
             self._no_progress = 0
@@ -841,7 +918,13 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._seen_run_states.add(state_str)
         if self._current and self._no_progress >= MAX_NO_PROGRESS:
             if not self._current.get("remaining_actions"):
-                self._drop_current(STATUS_COVERED, "No remaining steps; screen stopped changing.")
+                # Being stuck is not evidence the capability was exercised.
+                # Full credit here inflated the online number against traces
+                # the offline judge scored at zero.
+                self._drop_current(
+                    STATUS_PARTIAL if self._current.get("completed_actions") else STATUS_DROPPED,
+                    "No progress; screen stopped changing.",
+                )
             else:
                 self._mark_blocked_or_drop("Stuck on the same screen.")
 
@@ -849,6 +932,8 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         depth = state.get_app_activity_depth(self.app)
         if depth == 0:
             self._restarts = 0
+            # The app came up, so preceding starts were not a failing loop.
+            self._restart_attempts = 0
             self._sent_home = False
             self._outside_steps = 0
             return None
@@ -857,6 +942,16 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         return self._start_app_event("App is not in the foreground; starting it.")
 
     def _start_app_event(self, reason):
+        # Counts CONSECUTIVE starts that never reached the foreground. Cleared
+        # in _maybe_start_app once the app is actually up, so the one
+        # deliberate restart per feature switch does not accumulate toward the
+        # cap -- a 9-feature app would otherwise trip it by design.
+        self._restart_attempts = getattr(self, "_restart_attempts", 0) + 1
+        _cfg = getattr(self, "cfg", None) or get_config()
+        if self._restart_attempts > _cfg.max_restart_attempts:
+            self._set_stop_reason("restart_loop")
+            self._finish_run("App could not be kept running.")
+            raise InputInterruptedException("App could not be kept running.")
         if self._last_event_trace.endswith(EVENT_FLAG_START_APP) and not self._feature_switch_restart:
             self._restarts += 1
         self._last_event_trace += EVENT_FLAG_START_APP
@@ -903,6 +998,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if self._hybrid_still_pending():
                 self._await_dialog = False
                 return IntentEvent(intent=self.app.get_start_intent())
+            self._set_stop_reason("all_features_done")
             self._finish_run("All features processed.")
             raise InputInterruptedException("Feature testing complete.")
         started = self._start_or_restart_next(nxt)
@@ -931,12 +1027,28 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         phase = getattr(self, "_restart_phase", None) or "stop"
         if phase == "stop":
             self._restart_phase = "start"
+            self._switch_restart_tries = 0
             return self._start_app_event("Restart before next feature.")
         depth = -1
         try:
             depth = state.get_app_activity_depth(self.app) if state is not None else -1
         except Exception:
             depth = -1
+        self._switch_restart_tries += 1
+        # Give up rather than re-issuing start intents forever: during a
+        # feature-switch restart the MAX_RESTARTS guard is suppressed.
+        if depth != 0 and self._switch_restart_tries > MAX_SWITCH_RESTART_TRIES:
+            nxt = self._pending_next_feature
+            self._pending_next_feature = None
+            self._restart_between_features = False
+            self._feature_switch_restart = False
+            self._restart_phase = None
+            self._switch_restart_tries = 0
+            if nxt is not None:
+                self.journal.finish_feature(
+                    nxt, STATUS_DROPPED, "Could not restart the app for this feature."
+                )
+            return None
         if depth == 0:
             nxt = self._pending_next_feature
             self._pending_next_feature = None
@@ -944,6 +1056,8 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._feature_switch_restart = False
             self._restart_phase = None
             self._restarts = 0
+            self._restart_attempts = 0
+            self._switch_restart_tries = 0
             if nxt is not None and self._current is None:
                 self._begin_feature(nxt)
             return None
@@ -970,10 +1084,18 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             discovered = self._maybe_hybrid_discovery(possible, state)
             if discovered is not None:
                 return discovered
+            self._set_stop_reason("all_features_done")
             self._finish_run("All features processed.")
             raise InputInterruptedException("Feature testing complete.")
         depth = getattr(self, "_switch_depth", 0) + 1
         self._switch_depth = depth
+        # The depth was tracked but never enforced; a long run of
+        # auto-satisfied features could recurse into RecursionError.
+        if depth > MAX_SWITCH_DEPTH:
+            self._switch_depth = 0
+            self._set_stop_reason("switch_loop")
+            self._finish_run("Feature switching did not converge.")
+            raise InputInterruptedException("Feature switching did not converge.")
         started = self._start_or_restart_next(nxt)
         if started is not None:
             return started
@@ -1106,13 +1228,29 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
     def _skip_satisfied_feature(self, state, events):
         if not self._current:
             return False
+        # These skip rules assert a precondition is already satisfied. That
+        # justifies ending the feature, but only counts as full coverage when
+        # the feature has no unexecuted steps left -- otherwise it is partial
+        # work the offline judge will (correctly) refuse to call covered.
         if self._seen_hub and self._is_home_only_feature():
-            self._drop_current(STATUS_COVERED, "Already on the home screen.")
+            self._drop_current(
+                self._skip_status(), "Already on the home screen."
+            )
             return True
         if self._onboarding_already_done(state, events):
-            self._drop_current(STATUS_COVERED, "Onboarding already finished; main screen is visible.")
+            self._drop_current(
+                self._skip_status(),
+                "Onboarding already finished; main screen is visible.",
+            )
             return True
         return False
+
+    def _skip_status(self):
+        """COVERED only when nothing is left to do; otherwise PARTIAL."""
+        current = self._current or {}
+        if current.get("remaining_actions"):
+            return STATUS_PARTIAL if current.get("completed_actions") else STATUS_DROPPED
+        return STATUS_COVERED
 
     def _onboarding_already_done(self, state, events):
         if not (self._is_setup_feature() or self._feature_wants_guest_skip()):
@@ -1454,6 +1592,12 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 continue
             if self._tap_counts.get(key, 0) >= 2 and not self._is_back(event):
                 continue
+            widget_key = self._widget_try_key(event)
+            widget_taps = getattr(self, "_widget_taps", None) or {}
+            if widget_key and widget_taps and not self._is_back(event):
+                cfg = getattr(self, "cfg", None) or get_config()
+                if widget_taps.get(widget_key, 0) >= cfg.max_widget_taps:
+                    continue
             kept.append(event)
         if kept:
             return kept
@@ -1555,6 +1699,33 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 return event
         return None
 
+    def _has_content_rows(self, possible, state):
+        """True when the screen offers real, tappable list content.
+
+        Generic: counts labelled tappables that are not chrome (nav tabs,
+        toolbar buttons, empty-state copy). No app-specific strings.
+        """
+        chrome = (
+            "search", "settings", "about", "more options", "navigate up",
+            "menu", "back", "home", "songs", "albums", "artists", "genres",
+            "playlists", "folders", "library",
+        )
+        rows = 0
+        for event in possible or []:
+            view = getattr(event, "view", None) or {}
+            label = (_view_text(view.get("text")) or "").strip()
+            if not label or len(label) < 3:
+                continue
+            low = label.lower()
+            if low in chrome or _looks_like_empty_label(low):
+                continue
+            if not (view.get("clickable") or view.get("long_clickable")):
+                continue
+            rows += 1
+            if rows >= 2:
+                return True
+        return False
+
     def _recover_dead_end(self, possible, state):
         blob = self._screen_blob(state, possible)
         if _looks_like_loading_label(blob):
@@ -1563,7 +1734,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             return None
         remaining = " ".join((self._current or {}).get("remaining_actions") or []).lower()
         error = any(token in blob for token in ERROR_TOKENS) and not _looks_like_loading_label(blob)
-        empty = _looks_like_empty_label(blob)
+        # A "0 Songs" stats tile can sit on a screen whose list is full. Only
+        # believe the empty-label signal when there is no real content to act
+        # on, otherwise the tester detours to search past a populated library.
+        empty = _looks_like_empty_label(blob) and not self._has_content_rows(possible, state)
         intent = _player_step_intent(self._current, (self._current or {}).get("remaining_actions") or [])
         if error:
             for phrase in ("close", "dismiss", "retry", "ok", "got it"):
@@ -1944,7 +2118,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         if not self.cfg.enabled("stagnation") or not self._current:
             return None
         state_str = getattr(state, "state_str", "") or ""
-        is_new = bool(state_str) and state_str != getattr(self, "_stagnation_last", None)
+        # Novel means new to this feature attempt, not merely different from
+        # the previous state -- otherwise a churning state hash keeps novelty
+        # pinned at 1.0 and stagnation never fires.
+        is_new = bool(state_str) and state_str not in self._feature_seen_states
         self._stagnation_last = state_str or self._stagnation_last
         self._novelty_window.append(1 if is_new else 0)
         self._remaining_window.append(len(self._current.get("remaining_actions") or []))
@@ -1992,9 +2169,15 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         return None
 
     def _hybrid_still_pending(self):
+        cfg = getattr(self, "cfg", None)
+        if not cfg:
+            return False
+        # Never let discovery hold a run open past its budget: features it
+        # adds now could not be attempted anyway.
+        if self.action_count >= 0.9 * cfg.max_run_events:
+            return False
         return bool(
-            getattr(self, "cfg", None)
-            and self.cfg.enabled("hybrid_discovery")
+            cfg.enabled("hybrid_discovery")
             and not self._discovery_done
             and self._seen_hub
             and self._first_pass_complete
@@ -2237,6 +2420,31 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if self.journal:
                 self.journal._append_log(empty)
 
+    def _step_budget(self):
+        """Steps one feature attempt may spend.
+
+        Fair share of the run budget, so early features cannot starve later
+        ones. money-2 reached only 22 of 28 features because two features
+        consumed 53 of 88 minutes against a per-feature cap that never fired.
+        Recomputed from what is left, so unspent steps flow to hard features.
+        """
+        cap = self.cfg.max_steps_per_feature
+        if not self.journal:
+            return cap
+        pending = [
+            item for item in self.journal.features()
+            if item.get("status") in (None, "pending", "in_progress", "blocked")
+        ]
+        remaining_features = max(1, len(pending))
+        remaining_events = max(0, self.cfg.max_run_events - self.action_count)
+        return max(8, min(cap, remaining_events // remaining_features))
+
+    def _set_stop_reason(self, reason):
+        """Record why the run ended so a truncated run is never compared
+        against one that finished naturally."""
+        if self.journal is not None:
+            self.journal.session.setdefault("stop_reason", reason)
+
     def _finish_run(self, reason):
         if self._finished:
             return
@@ -2246,12 +2454,28 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
     def _finalize_journal(self, run_discovery=True):
         if self._finished:
             return
+        # Discovery at finalize can only add features that will never be
+        # attempted; they inflate the denominator and depress coverage, and
+        # the call itself is expensive (money-fix1 spent 37 minutes here,
+        # after exploration had finished, for zero usable features).
+        budget_left = 0
+        pending_left = 0
+        if getattr(self, "cfg", None):
+            budget_left = self.cfg.max_run_events - getattr(self, "action_count", 0)
+        if self.journal:
+            pending_left = len([
+                item for item in self.journal.features()
+                if not item.get("attempts") and not item.get("steps")
+            ])
         if (
             run_discovery
             and not self._discovery_done
             and getattr(self, "cfg", None)
             and self.cfg.enabled("hybrid_discovery")
             and self._seen_hub
+            and budget_left >= 0.15 * self.cfg.max_run_events
+            # Pointless while the existing list still has untested features.
+            and pending_left == 0
         ):
             try:
                 self._commit_discovery("run-finished")
@@ -2355,6 +2579,20 @@ def _load_feature_payload(output_dir, readme_path, features_path, app_name,
             print("Live exploration driven by guide list: %s (%d features)" % (
                 live_path, len(live.get("features") or []),
             ))
+            # A one-step guide entry is satisfied by a single tap, so the
+            # feature ends long before the capability is exercised. Deepen it
+            # from the guide entry plus the README -- never from the gold list.
+            try:
+                from droidbot.feature_tester.granularity import enrich_thin_features
+                readme_blob = ""
+                if readme_path and os.path.isfile(readme_path):
+                    with open(readme_path, "r", encoding="utf-8") as handle:
+                        readme_blob = handle.read()
+                live = enrich_thin_features(
+                    live, app_name=app_name, readme_text=readme_blob
+                )
+            except Exception as exc:
+                print("Guide enrichment skipped: %s" % exc)
     if live is None and features_path and os.path.isfile(features_path):
         if is_eval_only_feature_list(features_path):
             print(

@@ -313,8 +313,30 @@ class FeatureJournal(object):
         self._append_log("Wrote final report: %s" % self.report_md_path)
         return report
 
+    def _scored_features(self):
+        """Features the run actually had a chance to test.
+
+        An LLM-discovered feature that was never attempted is a proposal, not
+        a tested capability; counting it only dilutes the denominator.
+        Guide/README features always count, attempted or not.
+        """
+        kept = []
+        for item in self.features():
+            if (
+                item.get("source") == "action_inferred"
+                and not item.get("attempts")
+                and not item.get("steps")
+            ):
+                continue
+            kept.append(item)
+        return kept or self.features()
+
     def _build_report(self, counts):
-        total = len(self.features())
+        scored = self._scored_features()
+        total = len(scored)
+        counts = {}
+        for item in scored:
+            counts[item.get("status")] = counts.get(item.get("status"), 0) + 1
         covered = counts.get(STATUS_COVERED, 0)
         return {
             "app": self.session.get("app"),
@@ -327,7 +349,8 @@ class FeatureJournal(object):
             "not_present": counts.get(STATUS_NOT_PRESENT, 0),
             "blocked": counts.get(STATUS_BLOCKED, 0),
             "coverage": (float(covered) / total) if total else 0.0,
-            "weighted_coverage": _weighted_coverage(self.features()),
+            "weighted_coverage": _weighted_coverage(scored),
+            "unscored_discovered": len(self.features()) - total,
             "feature_source": self.session.get("feature_source"),
             "guide_vs_readme": self.session.get("guide_vs_readme"),
             "guide_features_path": self.session.get("guide_features_path"),
@@ -536,9 +559,11 @@ class FeatureJournal(object):
             "- Partial: %s" % report.get("partial"),
             "- Dropped (blocked / stuck): %s" % report.get("dropped"),
             "- Not present in the app: %s" % report.get("not_present"),
-            "- Coverage: %.0f%% (fully covered / total)" % (100.0 * (report.get("coverage") or 0.0)),
-            "- Weighted coverage: %.0f%% (mean completion ratio, includes partials)"
+            "- Weighted coverage: %.0f%% (mean completion ratio; the headline number)"
             % (100.0 * (report.get("weighted_coverage") or 0.0)),
+            "- Coverage: %.0f%% (features with every guide step matched)"
+            % (100.0 * (report.get("coverage") or 0.0)),
+            "- Stop reason: %s" % (self.session.get("stop_reason") or "not recorded"),
         ]
         gt_source = report.get("ground_truth_source")
         if gt_source == "same_as_guide_list":
@@ -821,7 +846,7 @@ def _match_remaining_action(remaining, matched, event_str="", event_type=""):
     if not matched:
         return None
     needle = matched.strip().lower()
-    if not needle or len(needle) < 4:
+    if not needle or len(needle) < 2:
         return None
     if "expected step" in needle or needle in ("empty", "or empty", "none"):
         return None
@@ -829,6 +854,24 @@ def _match_remaining_action(remaining, matched, event_str="", event_type=""):
         return None
     needle_tokens = _action_tokens(needle)
     if not needle_tokens:
+        # Every token was a stopword ("Tap OK" -> {}). Fall back to normalized
+        # containment so short confirm steps are not permanently unmatchable.
+        bare = re.sub(r"[^a-z0-9]+", " ", needle).strip()
+        if not bare:
+            return None
+        for action in remaining:
+            hay = action.strip().lower()
+            hay_bare = re.sub(r"[^a-z0-9]+", " ", hay).strip()
+            if bare and (bare == hay_bare or bare in hay_bare):
+                event_l = ("%s %s" % (event_str or "", event_type or "")).lower()
+                if not _event_compatible_with_step(
+                    hay,
+                    "set_text" in event_l or "settext" in event_l,
+                    "scroll" in event_l,
+                    "bottom navigation" in event_l or "nav tab" in event_l,
+                ):
+                    continue
+                return action
         return None
     event_l = ("%s %s" % (event_str or "", event_type or "")).lower()
     is_set_text = "set_text" in event_l or "settext" in event_l
@@ -842,11 +885,26 @@ def _match_remaining_action(remaining, matched, event_str="", event_type=""):
             return action
         hay_tokens = _action_tokens(hay)
         overlap = needle_tokens & hay_tokens
-        if len(overlap) >= 2 or (len(needle_tokens) == 1 and needle_tokens <= hay_tokens):
+        if not overlap:
+            continue
+        # Containment, not Jaccard: a short needle ("Tap Save") should still
+        # match a long gold step that contains it. A flat "two shared tokens"
+        # cutoff made short steps effectively unmatchable and held the live
+        # match rate at ~5%.
+        ratio = len(overlap) / float(min(len(needle_tokens), len(hay_tokens)))
+        if ratio >= _step_match_threshold():
             if not _event_compatible_with_step(hay, is_set_text, is_scroll, is_nav_tab):
                 continue
             return action
     return None
+
+
+def _step_match_threshold():
+    try:
+        from .config import get_config
+        return float(get_config().step_match_threshold)
+    except Exception:
+        return 0.5
 
 
 def _event_compatible_with_step(step, is_set_text, is_scroll, is_nav_tab):
@@ -874,11 +932,13 @@ def _followup_submit_step(remaining, event_str, event_type):
 
 
 def _action_tokens(text):
+    # "button"/"icon" were dropped from the stop set: they are weak but not
+    # noise, and removing them emptied short steps such as "Tap Save button".
     stop = {
         "the", "a", "an", "to", "for", "or", "and", "of", "on", "in", "if",
-        "shown", "button", "icon", "tap", "the", "step",
+        "shown", "tap", "step",
     }
-    return {word for word in re.findall(r"[a-z0-9]{3,}", text or "") if word not in stop}
+    return {word for word in re.findall(r"[a-z0-9]{2,}", text or "") if word not in stop}
 
 
 def _is_file_related_matched(matched, remaining):

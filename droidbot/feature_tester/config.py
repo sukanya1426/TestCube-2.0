@@ -36,6 +36,26 @@ class FeatureTesterConfig(object):
         self.stagnation_novelty = 0.2
         self.discovery_budget = 12
         self.progress_stall_steps = 10
+        # Run-level budgets. Without these a run with no -count/-timeout can
+        # only stop when the policy raises InputInterruptedException, because
+        # droidbot defaults to event_count=1e8 / timeout=-1.
+        self.max_run_events = 600
+        # A 28-feature app needs more than 45 min even after the model-call
+        # cuts; too small a budget silently starves the tail of the list.
+        self.max_run_seconds = 5400
+        self.max_steps_per_feature = 60
+        self.max_feature_attempts = 2
+        self.max_restart_attempts = 8
+        # A widget tapped this many times inside one feature attempt stops
+        # being offered. Keyed on widget signature, not (state, view), so it
+        # still fires when a stepper mutates the state hash on every tap.
+        self.max_widget_taps = 6
+        # Vision calls are the dominant cost per feature; cap them and only
+        # escalate once remaining-step progress has genuinely stalled.
+        self.max_vlm_calls_per_feature = 8
+        self.vlm_stall_steps = 2
+        # Step matching: containment ratio rather than a raw token-count cutoff.
+        self.step_match_threshold = 0.5
         self.replay_path = None
         self.ground_truth_path = None
         self.guide_features_path = None
@@ -64,6 +84,25 @@ class FeatureTesterConfig(object):
             cfg.disable(part.strip() for part in disable.split(",") if part.strip())
             if getattr(opts, "max_backtracks", None) is not None:
                 cfg.max_backtracks = int(opts.max_backtracks)
+            for name in (
+                "max_run_events", "max_run_seconds", "max_steps_per_feature",
+                "max_feature_attempts", "max_restart_attempts",
+                "max_widget_taps", "max_vlm_calls_per_feature",
+            ):
+                value = getattr(opts, name, None)
+                if value is not None:
+                    setattr(cfg, name, int(value))
+        for name in (
+            "max_run_events", "max_run_seconds", "max_steps_per_feature",
+            "max_feature_attempts", "max_restart_attempts",
+            "max_widget_taps", "max_vlm_calls_per_feature",
+        ):
+            raw = os.environ.get("TESTCUBE_%s" % name.upper())
+            if raw:
+                try:
+                    setattr(cfg, name, int(raw))
+                except ValueError:
+                    pass
         return cfg
 
 

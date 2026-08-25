@@ -800,5 +800,113 @@ class GuideListAndInputTests(unittest.TestCase):
         self.assertEqual(chosen.view["resource_id"], "mini_player_title")
 
 
+class StepperLoopTests(unittest.TestCase):
+    """A widget that mutates the state hash on every tap must still be capped.
+
+    Regression: a date stepper was tapped 68 times in one run. Every tap
+    produced a different state_str, so the adjacent-compare loop detectors
+    never fired. The ceiling is keyed on widget signature, not (state, view).
+    """
+
+    def _policy(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy._banned_actions = set()
+        policy._tap_counts = {}
+        policy._widget_taps = {}
+        policy._looks_like_hub = lambda events, state=None: False
+        policy._back_would_leave_app = lambda state: False
+        return policy
+
+    def test_widget_ceiling_survives_a_churning_state_hash(self):
+        from droidbot.feature_tester.config import get_config
+        policy = self._policy()
+        stepper = _event("", resource_id="app:id/nextDayButton")
+        back = KeyEvent(name="BACK")
+        key = FeatureGuidedPolicy._widget_try_key(policy, stepper)
+        policy._widget_taps = {key: get_config().max_widget_taps}
+        # Each tap lands on a brand-new state, as the real stepper did.
+        state = SimpleNamespace(state_str="state-never-seen-before")
+        kept = FeatureGuidedPolicy._filter_banned(policy, [stepper, back], state)
+        self.assertFalse(
+            any(getattr(e, "view", None) and "nextDayButton" in str(e.view.get("resource_id"))
+                for e in kept),
+            "a widget past its tap ceiling must not be offered again",
+        )
+
+    def test_widget_below_ceiling_is_still_offered(self):
+        policy = self._policy()
+        stepper = _event("", resource_id="app:id/nextDayButton")
+        state = SimpleNamespace(state_str="s1")
+        key = FeatureGuidedPolicy._widget_try_key(policy, stepper)
+        policy._widget_taps = {key: 1}
+        kept = FeatureGuidedPolicy._filter_banned(policy, [stepper], state)
+        self.assertEqual(len(kept), 1)
+
+
+class PopulatedListTests(unittest.TestCase):
+    """A "0 Songs" stats tile must not mark a populated screen as empty.
+
+    Regression: Vinyl's home screen shows "This month - 0 Songs" next to a
+    full song list. The empty-label token matched the whole screen, so the
+    tester detoured into search instead of tapping a song, and "Play a song"
+    was dropped without ever touching the library.
+    """
+
+    def _policy(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy._current = {}
+        return policy
+
+    def _row(self, text):
+        event = _event(text)
+        event.view["clickable"] = True
+        return event
+
+    def test_song_rows_beat_a_zero_count_tile(self):
+        policy = self._policy()
+        events = [
+            self._row("This month  -  0 Songs"),
+            self._row("TestCube Track One"),
+            self._row("TestCube Track Three"),
+        ]
+        self.assertTrue(
+            FeatureGuidedPolicy._has_content_rows(policy, events, None),
+            "a screen with real song rows is not empty",
+        )
+
+    def test_genuinely_empty_screen_reports_no_content(self):
+        policy = self._policy()
+        events = [self._row("No results"), self._row("0 Songs")]
+        self.assertFalse(
+            FeatureGuidedPolicy._has_content_rows(policy, events, None)
+        )
+
+
+class RevisitProgressTests(unittest.TestCase):
+    def _policy(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy._no_progress = 0
+        policy._last_state_str = None
+        policy._feature_seen_states = set()
+        policy._seen_run_states = set()
+        policy._current = None
+        return policy
+
+    def test_revisiting_a_state_is_not_progress(self):
+        policy = self._policy()
+        for name in ("a", "b", "a", "b"):
+            FeatureGuidedPolicy._note_progress(policy, SimpleNamespace(state_str=name))
+        self.assertGreater(
+            policy._no_progress, 0,
+            "an A-B-A-B cycle must register as lack of progress",
+        )
+
+    def test_genuinely_new_states_reset_progress(self):
+        policy = self._policy()
+        for name in ("a", "b", "c", "d"):
+            FeatureGuidedPolicy._note_progress(policy, SimpleNamespace(state_str=name))
+        self.assertEqual(policy._no_progress, 0)
+
+
 if __name__ == "__main__":
     unittest.main()

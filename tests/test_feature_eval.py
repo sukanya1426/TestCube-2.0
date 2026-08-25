@@ -534,5 +534,67 @@ class VlmCoverageJudgeTests(unittest.TestCase):
         self.assertEqual(result.matcher, "vlm")
 
 
+class EvidenceSelectionTest(unittest.TestCase):
+    """Evidence handed to the LLM judge must come from the whole trace.
+
+    Regression: keywords were substring-matched against a blob containing
+    "android.widget.*", so the stopword "and" matched every action. The
+    filter selected the entire trace and then kept the FIRST max_actions
+    entries -- app startup -- so real evidence later in a long run was
+    never shown to the judge and every feature scored 0.
+    """
+
+    def _long_trace(self, relevant_index=300, total=400):
+        from droidbot.feature_eval.llm_matcher import LLMMatcher  # noqa: F401
+        actions = []
+        for i in range(total):
+            if i == relevant_index:
+                actions.append(action(
+                    "touch", view_text="Shuffle all",
+                    resource_id="app:id/title",
+                    view_class="android.widget.TextView",
+                ))
+            else:
+                actions.append(action(
+                    "touch", resource_id="app:id/player_repeat_button",
+                    view_class="android.widget.ImageButton",
+                ))
+        return make_trace(actions)
+
+    def _shuffle_feature(self):
+        return Feature(
+            id="F009", name="Shuffle All",
+            description="Start shuffled playback from the overflow menu.",
+            actions=["Tap the three dot overflow menu", "Tap Shuffle all"],
+        )
+
+    def test_stopwords_do_not_match_android_widget_classes(self):
+        from droidbot.feature_eval.llm_matcher import (
+            _informative_keywords, _keyword_hits, _tokens,
+        )
+        keywords = _informative_keywords(self._shuffle_feature())
+        self.assertNotIn("and", keywords)
+        noise = _tokens("touch app:id/player_repeat_button android.widget.ImageButton")
+        self.assertEqual(_keyword_hits(noise, keywords), 0)
+        real = _tokens("touch Shuffle all app:id/title android.widget.TextView")
+        self.assertGreater(_keyword_hits(real, keywords), 0)
+
+    def test_relevant_action_late_in_trace_is_selected(self):
+        from droidbot.feature_eval.llm_matcher import LLMMatcher
+        trace = self._long_trace(relevant_index=300, total=400)
+        selected = LLMMatcher()._select_actions(self._shuffle_feature(), trace)
+        self.assertTrue(
+            any(a.view_text == "Shuffle all" for a in selected),
+            "evidence at index 300 must reach the judge, not be truncated away",
+        )
+
+    def test_selection_stays_chronological(self):
+        from droidbot.feature_eval.llm_matcher import LLMMatcher
+        trace = self._long_trace()
+        selected = LLMMatcher()._select_actions(self._shuffle_feature(), trace)
+        indexes = [a.index for a in selected]
+        self.assertEqual(indexes, sorted(indexes))
+
+
 if __name__ == "__main__":
     unittest.main()

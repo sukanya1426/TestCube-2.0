@@ -22,6 +22,26 @@ STOPWORDS = {
 HEURISTIC_TRUST = 0.55
 MAX_CATALOG = 36
 
+# Literal placeholders from the JSON skeletons the prompts show the model.
+# A model that echoes the schema instead of filling it would otherwise have
+# the placeholder stored verbatim as the decision's reason.
+PROMPT_PLACEHOLDERS = (
+    "why this action advances the remaining step",
+    "what you tapped in the screenshot",
+    "value if typing",
+    "expected step",
+)
+
+
+def _strip_placeholder(text):
+    blob = " ".join((text or "").lower().split())
+    if not blob:
+        return ""
+    for placeholder in PROMPT_PLACEHOLDERS:
+        if placeholder in blob:
+            return ""
+    return text
+
 TYPING_WORDS = ("enter", "type", "input", "query")
 TYPING_FIELD_WORDS = ("name", "password", "email", "amount", "search")
 
@@ -98,6 +118,63 @@ class FeatureAdvisor(object):
         self._llm_failures = 0
         self.logger = logging.getLogger("TestCube.advisor")
         self.journal = None
+        # Vision inference dominates wall-clock cost. Budget it per feature so
+        # one hard feature cannot consume the whole run, and remember which
+        # feature the tally belongs to so it resets on a feature switch.
+        self._vlm_budget_feature = None
+        self._vlm_calls = 0
+
+    def _vlm_budget_left(self, feature):
+        from .config import get_config
+        fid = (feature or {}).get("id")
+        if fid != self._vlm_budget_feature:
+            self._vlm_budget_feature = fid
+            self._vlm_calls = 0
+        return self._vlm_calls < get_config().max_vlm_calls_per_feature
+
+    def _note_vlm_call(self):
+        self._vlm_calls += 1
+
+    def _afford_enabled(self):
+        from .config import get_config
+        return get_config().enabled("afford_search")
+
+    def _cheap_structural_pick(self, feature, events, remaining, allow_affordance=True):
+        """A model-free next move: navigate by label, else a FAB/plus/overflow.
+
+        Reuses the existing navigate() and mechanisms.find_affordance_event
+        rather than adding new selection logic. navigate() only answers on a
+        real hint/destination match (score >= 4), so it is safe to try first
+        on every low-confidence decision; the blind affordance guess is kept
+        for the case where the heuristic found nothing at all.
+        """
+        nav = self.navigate(feature, events)
+        if nav is not None:
+            return nav
+        if not allow_affordance:
+            return None
+        try:
+            from .mechanisms import find_affordance_event
+            found = find_affordance_event(events)
+        except Exception:
+            found = None
+        if not found:
+            return None
+        event, tier = found if isinstance(found, tuple) else (found, "afford")
+        if event is None:
+            return None
+        try:
+            index = events.index(event)
+        except ValueError:
+            return None
+        return AdvisorDecision(
+            decision="act",
+            action_index=index,
+            reason="Structural affordance (%s) before spending a model call." % tier,
+            matched_step="",
+            confidence=0.45,
+            source="heuristic",
+        )
 
     def decide(self, feature, state, events, outside_kind=None, stuck=False,
                no_progress=0, screenshot_path=None):
@@ -146,6 +223,9 @@ class FeatureAdvisor(object):
                 self._cache[cache_key] = heuristic
                 return heuristic
         force_visual, signal = needs_visual_ground(feature, events)
+        if force_visual and not self._vlm_budget_left(feature):
+            force_visual = False
+            self.logger.info("VLM budget spent for this feature; staying on the cheap path.")
         if force_visual:
             line = (
                 "low_signal_screen state=%s unlabeled=%s/%s nav=%s dest_missing=%s "
@@ -163,6 +243,7 @@ class FeatureAdvisor(object):
             if self.journal:
                 self.journal._append_log(line)
                 dump_low_signal_state(self.journal, state, signal)
+            self._note_vlm_call()
             visual = self._visual_ground(
                 feature, state, events, remaining, heuristic,
                 screenshot_path=screenshot_path, signal=signal,
@@ -188,6 +269,34 @@ class FeatureAdvisor(object):
             self._cache[cache_key] = decision
             return decision
 
+        # When the heuristic scored nothing at all, a structural affordance
+        # (FAB / plus / overflow / scroll) is usually the right next move and
+        # costs no model round-trip. money-2 took the 30-40s model path on 136
+        # of 138 decisions with heuristic confidence pinned at 0.00-0.06.
+        # Escalate to the model only once cheap navigation has nothing to
+        # offer. money-fix1 spent 59 model calls at confidences of 0.25 and
+        # 0.50 -- below the trust threshold but not zero -- and those calls
+        # dominated wall-clock time, starving 11 of 28 features of any attempt.
+        if (
+            heuristic.confidence < HEURISTIC_TRUST
+            and remaining
+            and not stuck
+            and not force_visual
+            and self._afford_enabled()
+        ):
+            cheap = self._cheap_structural_pick(
+                feature, events, remaining,
+                allow_affordance=heuristic.confidence <= 0.0,
+            )
+            if cheap is not None:
+                self._cache[cache_key] = cheap
+                return cheap
+
+        if not self._vlm_budget_left(feature):
+            decision = heuristic
+            self._cache[cache_key] = decision
+            return decision
+        self._note_vlm_call()
         llm = self._ask_llm(
             feature, state, events, remaining, heuristic,
             stuck=stuck, screenshot_path=screenshot_path,
@@ -679,7 +788,7 @@ class FeatureAdvisor(object):
                         action_index=index,
                         text=text,
                         matched_step=remaining[0],
-                        reason=parsed.get("reason") or "Type into the visible field.",
+                        reason=_strip_placeholder(parsed.get("reason")) or "Type into the visible field.",
                         confidence=0.8,
                         source="visual_ground",
                         used_screenshot=True,
@@ -697,7 +806,7 @@ class FeatureAdvisor(object):
             action_index=heuristic.action_index,
             text=text,
             matched_step=matched,
-            reason=parsed.get("reason") or "Screenshot tap for unlabeled widgets.",
+            reason=_strip_placeholder(parsed.get("reason")) or "Screenshot tap for unlabeled widgets.",
             confidence=0.8,
             source="visual_ground",
             tap_x=point[0],
@@ -902,7 +1011,7 @@ class FeatureAdvisor(object):
             action_index=action_id,
             text=text,
             matched_step=matched,
-            reason=parsed.get("reason") or "LLM action choice",
+            reason=_strip_placeholder(parsed.get("reason")) or "LLM action choice",
             confidence=0.75,
             source="llm",
             tap_x=point[0] if point else None,

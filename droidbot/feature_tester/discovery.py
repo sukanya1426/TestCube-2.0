@@ -79,4 +79,17 @@ def infer_missing_features(observed_labels, existing_features, app_name=""):
         })
     if not added:
         logger.info("Hybrid discovery proposed 0 candidate features.")
+    # Bound what an over-generous model can inject: every extra feature
+    # dilutes the coverage denominator and competes for the run budget.
+    try:
+        from .config import get_config
+        budget = int(get_config().discovery_budget)
+    except Exception:
+        budget = 12
+    if budget > 0 and len(added) > budget:
+        logger.info(
+            "Hybrid discovery capped at %d features (discarded %d)."
+            % (budget, len(added) - budget)
+        )
+        added = added[:budget]
     return added

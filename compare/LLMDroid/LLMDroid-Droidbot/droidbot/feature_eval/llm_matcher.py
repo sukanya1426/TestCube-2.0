@@ -12,7 +12,7 @@ from .models import STATUS_COVERED, STATUS_NOT_COVERED, STATUS_PARTIAL
 
 
 class LLMMatcher(object):
-    def __init__(self, enabled=True, max_actions=40, max_screenshots=0,
+    def __init__(self, enabled=True, max_actions=80, max_screenshots=0,
                  journal_features=None, exploration_bank=None):
         self.enabled = enabled
         self.max_actions = max_actions
@@ -47,7 +47,11 @@ class LLMMatcher(object):
         """Score many features in a few LLM calls instead of one call each."""
         if not self.enabled or not features:
             return []
-        chunk_size = 7
+        # A 7B local model degenerates on large batches: it returns one
+        # boilerplate "not_covered / no relevant actions" object per feature
+        # regardless of the evidence. At 3 or fewer it reasons per feature.
+        # Override with TESTCUBE_JUDGE_BATCH if a bigger model can take more.
+        chunk_size = max(1, int(os.environ.get("TESTCUBE_JUDGE_BATCH", "3")))
         verdicts = []
         for start in range(0, len(features), chunk_size):
             chunk = features[start:start + chunk_size]
@@ -325,17 +329,25 @@ class LLMMatcher(object):
 
     def _select_actions(self, feature, trace):
         actions = list(trace.actions or [])
-        keywords = _feature_keywords(feature)
-        selected = []
-        for action in actions:
-            blob = action.token_blob().lower()
+        keywords = _informative_keywords(feature)
+        # Rank by how well each action matches the feature, then keep the best
+        # max_actions and restore chronological order. Previously this kept the
+        # FIRST max_actions matches, so on a long trace the judge only ever saw
+        # app startup and scored real coverage as 0.
+        scored = []
+        for index, action in enumerate(actions):
+            blob_tokens = _tokens(action.token_blob())
+            hits = _keyword_hits(blob_tokens, keywords)
             if action.text_input:
-                selected.append(action)
-                continue
-            if any(word in blob for word in keywords):
-                selected.append(action)
-        if selected:
-            return selected[: self.max_actions]
+                # Typed input is strong evidence; always outrank plain taps.
+                hits += 2
+            if hits:
+                scored.append((hits, index, action))
+        if scored:
+            scored.sort(key=lambda item: (-item[0], item[1]))
+            best = scored[: self.max_actions]
+            best.sort(key=lambda item: item[1])
+            return [action for _, _, action in best]
         if len(actions) <= self.max_actions:
             return actions
         head = actions[: self.max_actions // 2]
@@ -415,6 +427,35 @@ def _closest_journal_feature(feature, journal_features):
 
 def _tokens(text):
     return set(re.findall(r"[a-z0-9]+", (text or "").lower()))
+
+
+# Words that carry no evidence about which feature an action exercised.
+# Without this, a keyword like "and" matches every action, because every
+# action's blob contains "android.widget.*". That made the keyword filter
+# select the whole trace, which was then truncated to the first
+# max_actions entries -- i.e. app startup -- hiding the real evidence.
+_KEYWORD_STOPWORDS = frozenset("""
+and the all for from with tap open more your into out any own now new
+this that then than there here when where which what who how why
+app screen page view item list line entry button icon menu bar
+select choose press click show display see get set use via
+""".split())
+
+
+def _informative_keywords(feature):
+    """Feature keywords minus stopwords, for evidence selection."""
+    return {
+        word for word in _feature_keywords(feature)
+        if word not in _KEYWORD_STOPWORDS and len(word) > 2
+    }
+
+
+def _keyword_hits(blob_tokens, keywords):
+    """Count keyword matches on whole tokens (never substrings).
+
+    Substring matching is what let "and" match "android.widget.Button".
+    """
+    return len(blob_tokens & keywords)
 
 
 def _short(name):

@@ -16,6 +16,9 @@ DEFAULT_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434").rstrip("/
 DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5vl:7b")
 DEFAULT_KEEP_ALIVE = os.environ.get("OLLAMA_KEEP_ALIVE", "-1")
 DEFAULT_NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "8192"))
+# Decisions come back as one small JSON object; anything longer is the model
+# rambling, and it is paid for in wall-clock time on every step.
+DEFAULT_NUM_PREDICT = int(os.environ.get("OLLAMA_NUM_PREDICT_DEFAULT", "256"))
 DEFAULT_TEMPERATURE = float(os.environ.get("OLLAMA_TEMPERATURE", "0.2"))
 
 
@@ -84,12 +87,14 @@ class LocalVLM(object):
                 "num_ctx": DEFAULT_NUM_CTX,
             },
         }
-        num_predict = os.environ.get("OLLAMA_NUM_PREDICT")
-        if num_predict:
-            try:
-                payload["options"]["num_predict"] = int(num_predict)
-            except ValueError:
-                pass
+        # Cap generation length. Callers here want a short JSON object; with
+        # no ceiling the model can ramble for a minute per decision, which
+        # dominated wall-clock time (46-60s per call on money-fix1).
+        num_predict = os.environ.get("OLLAMA_NUM_PREDICT") or DEFAULT_NUM_PREDICT
+        try:
+            payload["options"]["num_predict"] = int(num_predict)
+        except (TypeError, ValueError):
+            pass
         if not images:
             payload["messages"][0].pop("images", None)
         data = cls._post("/api/chat", payload, timeout=timeout)
