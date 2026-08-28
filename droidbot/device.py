@@ -638,8 +638,26 @@ class Device(object):
             if self.grant_perm and self.get_sdk_version() >= 23:
                 install_cmd.append("-g")
             install_cmd.append(app.app_path)
-            install_p = subprocess.Popen(install_cmd, stdout=subprocess.PIPE)
+            install_p = subprocess.Popen(install_cmd, stdout=subprocess.PIPE,
+                                         stderr=subprocess.STDOUT)
+            # adb exiting is not the same as the package being visible, so keep
+            # polling briefly after it returns. The bound matters: a rejected
+            # install (bad signature, no matching ABI, no space) leaves the
+            # package absent forever, and without this the loop spins on
+            # "Please wait while installing the app..." until the run is killed.
+            settle_deadline = None
             while self.connected and package_name not in self.adb.get_installed_apps():
+                if install_p.poll() is not None:
+                    if settle_deadline is None:
+                        settle_deadline = time.time() + 10
+                    elif time.time() > settle_deadline:
+                        output = install_p.stdout.read()
+                        if not isinstance(output, str):
+                            output = output.decode("utf-8", "replace")
+                        raise RuntimeError(
+                            "Failed to install %s (adb exit %s):\n%s"
+                            % (app.app_path, install_p.returncode, output.strip())
+                        )
                 print("Please wait while installing the app...")
                 time.sleep(2)
             if not self.connected:

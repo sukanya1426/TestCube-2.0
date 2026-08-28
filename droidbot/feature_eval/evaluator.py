@@ -10,6 +10,17 @@ from .report import ReportGenerator
 from .trace_loader import TraceLoader
 
 
+def _count_actions(results_dir):
+    """Number of events the run issued, or None when unknown."""
+    events_dir = os.path.join(results_dir, "events")
+    if not os.path.isdir(events_dir):
+        return None
+    try:
+        return len([f for f in os.listdir(events_dir) if f.endswith(".json")])
+    except OSError:
+        return None
+
+
 def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
                               output_dir=None, use_llm=True, journal_features=None,
                               min_confidence=None, matcher_mode=None):
@@ -91,6 +102,9 @@ def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
     )
     report.matcher_min_confidence = float(min_confidence)
     report.matcher_mode = matcher_mode
+    # Actions the tool issued to reach this coverage. Both tools write one
+    # JSON per event, so this is comparable across TestCube and LLMDroid.
+    report.total_actions = _count_actions(results_dir)
     _attach_confusion(report, loaded["features"], results_dir, journal_features)
     try:
         from droidbot.feature_tester.guide import classify_ground_truth_source

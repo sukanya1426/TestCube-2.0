@@ -37,6 +37,11 @@ class ReportGenerator(object):
             "",
             "Application: %s" % report.application,
             "",
+            "Total Actions    : %s" % (
+                getattr(report, "total_actions", None)
+                if getattr(report, "total_actions", None) is not None else "n/a"
+            ),
+            "",
             "Total Features   : %d" % report.total_features,
             "Covered Features : %d" % report.covered_features,
             "Partial          : %d" % report.partial_features,

@@ -1,0 +1,359 @@
+{
+  "app": "NewPipe",
+  "source": "manual_ground_truth",
+  "url": "https://f-droid.org/en/packages/org.schabi.newpipe/",
+  "package": "org.schabi.newpipe",
+  "note": "Independent labelled set for offline evaluation. Written from the app's own UI labels and drawer contents, not from guide_features.json. Scope is limited to features reachable on NewPipe 0.27.0: its YouTube extractor fails on the Trending kiosk and on stream resolution ('Could not parse website'), so video-playback and Trending features are deliberately excluded.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "View the newest uploads feed",
+      "description": "Land on the main page and read the What's New feed of recent uploads.",
+      "actions": [
+        "Launch the app and land on the main page",
+        "Select the What's New tab",
+        "Wait for the feed of recent uploads to render",
+        "Scroll the feed to reveal further items"
+      ],
+      "keywords": [
+        "what's new",
+        "whats new",
+        "feed",
+        "recent"
+      ],
+      "nav_hints": [
+        "what's new",
+        "main page"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Look up content by keyword",
+      "description": "Use the search bar to find videos matching a typed query.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "Type a search term into the input field",
+        "Submit the query with the keyboard action",
+        "Wait for the result list to appear",
+        "Scroll the results"
+      ],
+      "keywords": [
+        "search",
+        "query",
+        "find"
+      ],
+      "nav_hints": [
+        "search"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Narrow results by content type",
+      "description": "Restrict search output to videos, channels or playlists using the result filter.",
+      "actions": [
+        "Perform a search so results are shown",
+        "Open the filter control on the results screen",
+        "Choose a content type such as videos, channels or playlists",
+        "Confirm the filter and observe the narrowed list"
+      ],
+      "keywords": [
+        "filter",
+        "content type",
+        "videos",
+        "channels",
+        "playlists"
+      ],
+      "nav_hints": [
+        "filter",
+        "all"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Re-run a previous search",
+      "description": "Reuse a stored search suggestion from search history.",
+      "actions": [
+        "Open the search screen",
+        "Observe the previous queries listed as suggestions",
+        "Tap one of the stored queries",
+        "Wait for its results to load"
+      ],
+      "keywords": [
+        "search history",
+        "suggestion",
+        "previous"
+      ],
+      "nav_hints": [
+        "search"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Review saved downloads",
+      "description": "Open the downloads screen and inspect stored or in-progress items.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Downloads",
+        "Review the list of downloads",
+        "Open the menu on a download entry"
+      ],
+      "keywords": [
+        "downloads",
+        "saved",
+        "mission"
+      ],
+      "nav_hints": [
+        "downloads"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Review followed channels",
+      "description": "Open the subscriptions feed listing followed channels.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Subscriptions",
+        "Wait for the subscription feed to load",
+        "Scroll the followed channels"
+      ],
+      "keywords": [
+        "subscriptions",
+        "following",
+        "feed"
+      ],
+      "nav_hints": [
+        "subscriptions"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Open saved playlists",
+      "description": "Browse the bookmarked playlists stored on the device.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Bookmarked Playlists",
+        "Review the stored playlists",
+        "Open one playlist to see its items"
+      ],
+      "keywords": [
+        "bookmarked playlists",
+        "playlist",
+        "saved"
+      ],
+      "nav_hints": [
+        "bookmarked playlists"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Review what was watched",
+      "description": "Open watch history and inspect or clear previously played items.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select History",
+        "Review the watched entries",
+        "Open the history menu to clear or delete an entry"
+      ],
+      "keywords": [
+        "history",
+        "watched",
+        "clear"
+      ],
+      "nav_hints": [
+        "history"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Adjust the app's look",
+      "description": "Change the theme or appearance preferences.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Appearance section",
+        "Choose a different theme",
+        "Return and observe the applied theme"
+      ],
+      "keywords": [
+        "appearance",
+        "theme",
+        "dark",
+        "light"
+      ],
+      "nav_hints": [
+        "settings",
+        "appearance"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Tune playback quality",
+      "description": "Change a video or audio preference in settings.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Video and audio section",
+        "Change a resolution or audio format preference",
+        "Return to the settings list"
+      ],
+      "keywords": [
+        "video",
+        "audio",
+        "quality",
+        "resolution",
+        "format"
+      ],
+      "nav_hints": [
+        "settings",
+        "video and audio"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Configure download behaviour",
+      "description": "Change where or how downloaded files are stored.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Downloads section",
+        "Change a download path or naming preference"
+      ],
+      "keywords": [
+        "downloads",
+        "storage",
+        "folder",
+        "path"
+      ],
+      "nav_hints": [
+        "settings",
+        "downloads"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Read the app information",
+      "description": "Open the About screen with version and licence details.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select About",
+        "Read the version and project information",
+        "Switch between the About and Licences tabs"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licence",
+        "version"
+      ],
+      "nav_hints": [
+        "about"
+      ]
+    },
+    {
+      "name": "Adjust content preferences",
+      "description": "Change a content preference such as the default kiosk or content language.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Content section",
+        "Change the default kiosk or content language",
+        "Return to the settings list"
+      ],
+      "keywords": [
+        "content",
+        "language",
+        "kiosk",
+        "default"
+      ],
+      "nav_hints": [
+        "settings",
+        "content"
+      ],
+      "id": "GT013"
+    },
+    {
+      "name": "Manage stored history data",
+      "description": "Open history and cache settings and clear stored data.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the History and cache section",
+        "Choose an option to clear cached or stored data",
+        "Confirm the action"
+      ],
+      "keywords": [
+        "history",
+        "cache",
+        "clear",
+        "stored"
+      ],
+      "nav_hints": [
+        "settings",
+        "history and cache"
+      ],
+      "id": "GT014"
+    },
+    {
+      "name": "Control notification behaviour",
+      "description": "Review and change the app's notification preferences.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Notifications section",
+        "Toggle a notification preference"
+      ],
+      "keywords": [
+        "notification",
+        "alert",
+        "toggle"
+      ],
+      "nav_hints": [
+        "settings",
+        "notifications"
+      ],
+      "id": "GT015"
+    },
+    {
+      "name": "Export or import app data",
+      "description": "Open backup and restore options for the local database.",
+      "actions": [
+        "Open the navigation drawer",
+        "Select Settings",
+        "Open the Backup and restore section",
+        "Review the export and import options"
+      ],
+      "keywords": [
+        "backup",
+        "restore",
+        "export",
+        "import",
+        "database"
+      ],
+      "nav_hints": [
+        "settings",
+        "backup"
+      ],
+      "id": "GT016"
+    },
+    {
+      "name": "Reset a typed query",
+      "description": "Clear the text currently entered in the search field.",
+      "actions": [
+        "Open the search screen",
+        "Type a search term",
+        "Tap the clear control in the field",
+        "Observe the field is emptied"
+      ],
+      "keywords": [
+        "clear",
+        "reset",
+        "search field"
+      ],
+      "nav_hints": [
+        "search",
+        "clear"
+      ],
+      "id": "GT017"
+    }
+  ]
+}

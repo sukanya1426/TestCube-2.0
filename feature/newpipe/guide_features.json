@@ -1,0 +1,340 @@
+{
+  "app": "NewPipe",
+  "source": "guide",
+  "url": "https://f-droid.org/en/packages/org.schabi.newpipe/",
+  "package": "org.schabi.newpipe",
+  "note": "Short human exploration hints. Labels verified against the running app. Video-detail and Trending features are excluded: NewPipe 0.27.0's YouTube extractor fails on those endpoints ('Could not parse website').",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Browse What's New",
+      "description": "Open the What's New tab on the main page.",
+      "actions": [
+        "Tap the What's New tab"
+      ],
+      "keywords": [
+        "what's new",
+        "whats new",
+        "new"
+      ],
+      "nav_hints": [
+        "what's new"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F002",
+      "name": "Search",
+      "description": "Search for a video by typing a query.",
+      "actions": [
+        "Tap Search",
+        "Type a query",
+        "Submit the search"
+      ],
+      "keywords": [
+        "search"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F003",
+      "name": "Filter search results",
+      "description": "Change the search filter to videos, channels or playlists.",
+      "actions": [
+        "Run a search",
+        "Open the filter menu",
+        "Pick a filter"
+      ],
+      "keywords": [
+        "filter",
+        "videos",
+        "channels",
+        "playlists"
+      ],
+      "nav_hints": [
+        "filter",
+        "all"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F004",
+      "name": "Downloads list",
+      "description": "Open Downloads from the navigation drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap Downloads"
+      ],
+      "keywords": [
+        "downloads"
+      ],
+      "nav_hints": [
+        "downloads"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F005",
+      "name": "Subscriptions tab",
+      "description": "Open the Subscriptions tab from the drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap Subscriptions"
+      ],
+      "keywords": [
+        "subscriptions"
+      ],
+      "nav_hints": [
+        "subscriptions"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F006",
+      "name": "Bookmarked playlists",
+      "description": "Open Bookmarked Playlists from the drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap Bookmarked Playlists"
+      ],
+      "keywords": [
+        "bookmark",
+        "playlist"
+      ],
+      "nav_hints": [
+        "bookmarked playlists"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F007",
+      "name": "Watch history",
+      "description": "Open History from the navigation drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap History"
+      ],
+      "keywords": [
+        "history",
+        "watch history"
+      ],
+      "nav_hints": [
+        "history"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F008",
+      "name": "Open settings",
+      "description": "Open Settings from the navigation drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap Settings"
+      ],
+      "keywords": [
+        "settings"
+      ],
+      "nav_hints": [
+        "settings"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F009",
+      "name": "Change appearance",
+      "description": "Change the theme in Appearance settings.",
+      "actions": [
+        "Open Settings",
+        "Tap Appearance",
+        "Pick a theme"
+      ],
+      "keywords": [
+        "appearance",
+        "theme",
+        "dark"
+      ],
+      "nav_hints": [
+        "appearance",
+        "theme"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F010",
+      "name": "Video and audio settings",
+      "description": "Change a video or audio quality preference.",
+      "actions": [
+        "Open Settings",
+        "Tap Video and audio",
+        "Change a preference"
+      ],
+      "keywords": [
+        "video",
+        "audio",
+        "quality",
+        "resolution"
+      ],
+      "nav_hints": [
+        "video and audio"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "F011",
+      "name": "About NewPipe",
+      "description": "Open About & FAQ from the navigation drawer.",
+      "actions": [
+        "Open the drawer",
+        "Tap About"
+      ],
+      "keywords": [
+        "about",
+        "faq"
+      ],
+      "nav_hints": [
+        "about"
+      ],
+      "source": "guide"
+    },
+    {
+      "name": "Content settings",
+      "description": "Change a content preference such as default kiosk or language.",
+      "actions": [
+        "Open Settings",
+        "Tap Content",
+        "Change a preference"
+      ],
+      "keywords": [
+        "content",
+        "language",
+        "kiosk"
+      ],
+      "nav_hints": [
+        "settings",
+        "content"
+      ],
+      "source": "guide",
+      "id": "F012"
+    },
+    {
+      "name": "Download settings",
+      "description": "Change the download folder or naming preferences.",
+      "actions": [
+        "Open Settings",
+        "Tap Download",
+        "Change a preference"
+      ],
+      "keywords": [
+        "download",
+        "folder",
+        "path"
+      ],
+      "nav_hints": [
+        "settings",
+        "download"
+      ],
+      "source": "guide",
+      "id": "F013"
+    },
+    {
+      "name": "History and cache settings",
+      "description": "Open history and cache settings and clear stored data.",
+      "actions": [
+        "Open Settings",
+        "Tap History and cache",
+        "Clear a cache or history entry"
+      ],
+      "keywords": [
+        "history",
+        "cache",
+        "clear"
+      ],
+      "nav_hints": [
+        "settings",
+        "history and cache"
+      ],
+      "source": "guide",
+      "id": "F014"
+    },
+    {
+      "name": "Notification settings",
+      "description": "Open the notification preferences.",
+      "actions": [
+        "Open Settings",
+        "Tap Notifications",
+        "Toggle a notification preference"
+      ],
+      "keywords": [
+        "notifications",
+        "notify"
+      ],
+      "nav_hints": [
+        "settings",
+        "notifications"
+      ],
+      "source": "guide",
+      "id": "F015"
+    },
+    {
+      "name": "Backup and restore",
+      "description": "Open backup and restore settings for the local database.",
+      "actions": [
+        "Open Settings",
+        "Tap Backup and restore"
+      ],
+      "keywords": [
+        "backup",
+        "restore",
+        "export",
+        "import"
+      ],
+      "nav_hints": [
+        "settings",
+        "backup"
+      ],
+      "source": "guide",
+      "id": "F016"
+    },
+    {
+      "name": "Search suggestion reuse",
+      "description": "Re-run a stored query from the search suggestions.",
+      "actions": [
+        "Open Search",
+        "Observe previous queries",
+        "Tap a stored query"
+      ],
+      "keywords": [
+        "suggestion",
+        "recent",
+        "search history"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "source": "guide",
+      "id": "F017"
+    },
+    {
+      "name": "Clear a search",
+      "description": "Clear the text in the search field.",
+      "actions": [
+        "Open Search",
+        "Type a query",
+        "Tap the clear button"
+      ],
+      "keywords": [
+        "clear",
+        "search"
+      ],
+      "nav_hints": [
+        "search",
+        "clear"
+      ],
+      "source": "guide",
+      "id": "F018"
+    }
+  ]
+}

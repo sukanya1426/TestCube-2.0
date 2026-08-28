@@ -56,6 +56,17 @@ class FeatureTesterConfig(object):
         self.vlm_stall_steps = 2
         # Step matching: containment ratio rather than a raw token-count cutoff.
         self.step_match_threshold = 0.5
+        # Runtime code coverage (observer only — never feeds back into
+        # exploration or termination, so the number stays a measurement).
+        self.code_coverage = "none"
+        self.coverage_tag = None
+        self.coverage_total_methods = None
+        self.coverage_interval = 10
+        # Restart the app between features. It isolates features from each
+        # other, but each switch costs a stop+start pair that re-runs already
+        # covered startup code — on a 28-feature app that was 21% of all
+        # actions. Turn off to spend the budget on exploration instead.
+        self.restart_between_features = True
         self.replay_path = None
         self.ground_truth_path = None
         self.guide_features_path = None
@@ -80,6 +91,17 @@ class FeatureTesterConfig(object):
             cfg.ground_truth_path = getattr(opts, "ground_truth_path", None)
             cfg.guide_features_path = getattr(opts, "guide_features_path", None)
             cfg.context_module_path = getattr(opts, "context_module_path", None)
+            value = getattr(opts, "no_restart_between_features", None)
+            if value:
+                cfg.restart_between_features = False
+            for name in ("code_coverage", "coverage_tag"):
+                value = getattr(opts, name, None)
+                if value is not None:
+                    setattr(cfg, name, value)
+            for name in ("coverage_total_methods", "coverage_interval"):
+                value = getattr(opts, name, None)
+                if value is not None:
+                    setattr(cfg, name, int(value))
             disable = getattr(opts, "disable_mechanisms", None) or ""
             cfg.disable(part.strip() for part in disable.split(",") if part.strip())
             if getattr(opts, "max_backtracks", None) is not None:
@@ -140,6 +162,39 @@ def add_cli_flags(parser):
         dest="disable_mechanisms",
         default="",
         help="Comma-separated mechanisms to disable for ablation: %s." % ",".join(MECHANISMS),
+    )
+    parser.add_argument(
+        "--code-coverage",
+        dest="code_coverage",
+        choices=["none", "androlog"],
+        default=None,
+        help="Runtime code coverage method. 'androlog' needs an AndroLog-instrumented APK (default: none).",
+    )
+    parser.add_argument(
+        "--coverage-tag",
+        dest="coverage_tag",
+        default=None,
+        help="Logcat tag used when the APK was instrumented (e.g. PIPE_SUPER_LOG).",
+    )
+    parser.add_argument(
+        "--coverage-total-methods",
+        dest="coverage_total_methods",
+        type=int,
+        default=None,
+        help="Denominator for coverage. Read from the APK's probes when omitted.",
+    )
+    parser.add_argument(
+        "--coverage-interval",
+        dest="coverage_interval",
+        type=int,
+        default=None,
+        help="Sample coverage every N actions (default: 10).",
+    )
+    parser.add_argument(
+        "--no-restart-between-features",
+        dest="no_restart_between_features",
+        action="store_true",
+        help="Do not stop/start the app between features (saves ~2 actions per switch).",
     )
     parser.add_argument(
         "--max-backtracks",

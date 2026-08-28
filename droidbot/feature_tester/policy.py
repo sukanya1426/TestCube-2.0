@@ -1010,7 +1010,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
     def _start_or_restart_next(self, nxt):
         if nxt is None:
             return None
-        if getattr(self, "_features_finished", 0) > 0:
+        if (
+            getattr(self, "_features_finished", 0) > 0
+            and getattr(getattr(self, "cfg", None), "restart_between_features", True)
+        ):
             self._pending_next_feature = nxt
             self._restart_between_features = True
             self._feature_switch_restart = True
