@@ -62,6 +62,7 @@ class FeatureTesterConfig(object):
         self.coverage_tag = None
         self.coverage_total_methods = None
         self.coverage_interval = 10
+        self.jacoco_config = None
         # Restart the app between features. It isolates features from each
         # other, but each switch costs a stop+start pair that re-runs already
         # covered startup code — on a 28-feature app that was 21% of all
@@ -102,6 +103,9 @@ class FeatureTesterConfig(object):
                 value = getattr(opts, name, None)
                 if value is not None:
                     setattr(cfg, name, int(value))
+            value = getattr(opts, "jacoco_config", None)
+            if value is not None:
+                cfg.jacoco_config = value
             disable = getattr(opts, "disable_mechanisms", None) or ""
             cfg.disable(part.strip() for part in disable.split(",") if part.strip())
             if getattr(opts, "max_backtracks", None) is not None:
@@ -166,9 +170,10 @@ def add_cli_flags(parser):
     parser.add_argument(
         "--code-coverage",
         dest="code_coverage",
-        choices=["none", "androlog"],
+        choices=["none", "androlog", "jacoco"],
         default=None,
-        help="Runtime code coverage method. 'androlog' needs an AndroLog-instrumented APK (default: none).",
+        help="Runtime code coverage. 'androlog' = AndroLog logcat probes; "
+             "'jacoco' = JaCoCo .ec + jacoco.config.json (see jococo_test/).",
     )
     parser.add_argument(
         "--coverage-tag",
@@ -189,6 +194,13 @@ def add_cli_flags(parser):
         type=int,
         default=None,
         help="Sample coverage every N actions (default: 10).",
+    )
+    parser.add_argument(
+        "--jacoco-config",
+        dest="jacoco_config",
+        default=None,
+        help="Path to jococo.config.json from jococo_test/scripts/instrument_apk.py "
+             "(required when --code-coverage jacoco).",
     )
     parser.add_argument(
         "--no-restart-between-features",

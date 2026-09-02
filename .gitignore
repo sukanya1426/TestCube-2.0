@@ -19,6 +19,8 @@ service-account*.json
 
 # --- run artifacts (large; regenerate with droidbot) ---
 output/
+jococo_test/output/*/
+!jococo_test/output/.gitkeep
 output_dir
 outputDir*
 droidbot_output

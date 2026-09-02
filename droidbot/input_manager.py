@@ -120,6 +120,28 @@ class InputManager(object):
             return
         try:
             from .coverage import make_monitor
+
+            output_dir = getattr(self.device, "output_dir", None) or getattr(
+                self.app, "output_dir", None
+            )
+            udid = getattr(self.device, "serial", None)
+
+            if method == "jacoco":
+                jacoco_config = getattr(cfg, "jacoco_config", None)
+                if not jacoco_config:
+                    self.logger.warning(
+                        "Coverage disabled: --jacoco-config is required for --code-coverage jacoco"
+                    )
+                    return
+                monitor = make_monitor(
+                    method, output_dir,
+                    jacoco_config=jacoco_config,
+                    udid=udid,
+                )
+                self.coverage_monitor = monitor
+                self.logger.info("Code coverage monitor started (jacoco, config=%s)", jacoco_config)
+                return
+
             from .coverage.androlog_monitor import total_methods_from_apk
 
             total = getattr(cfg, "coverage_total_methods", None)
@@ -138,16 +160,13 @@ class InputManager(object):
             if not tag:
                 self.logger.warning("Coverage disabled: --coverage-tag is required.")
                 return
-            output_dir = getattr(self.device, "output_dir", None) or getattr(
-                self.app, "output_dir", None
-            )
             # Manifest-declared activities are the activity-coverage
             # denominator, matching how LLMDroid reports it.
             activities = getattr(self.app, "activities", None) or []
             monitor = make_monitor(
                 method, output_dir, tag=tag, total_methods=total,
                 activities=activities,
-                udid=getattr(self.device, "serial", None),
+                udid=udid,
             )
             monitor.start()
             self.coverage_monitor = monitor
