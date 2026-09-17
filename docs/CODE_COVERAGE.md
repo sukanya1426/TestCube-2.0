@@ -43,14 +43,11 @@ sleep 12 && adb logcat -d | grep -c "VerifyError\|FATAL EXCEPTION"   # must be 0
 
 ```bash
 adb logcat -G 64M                        # AndroLog floods the default buffer
-TESTCUBE_MAX_RUN_EVENTS=400 TESTCUBE_MAX_RUN_SECONDS=3600 \
 python start.py -a apks/instrumented/<app>.apk -o output/<app> \
   -is_emulator -policy feature_guided \
   --code-coverage androlog --coverage-tag <APP>_SUPER_LOG \
-  -keep_app -keep_env -grant_perm
+  -keep_env -grant_perm
 ```
-
-Run budgets are **environment variables**, not flags.
 
 **3. Run LLMDroid** on the same APK (needs `config.json.<app>` with `Tag` and
 `TotalMethod`; see below):
@@ -58,6 +55,9 @@ Run budgets are **environment variables**, not flags.
 ```bash
 python scripts/run_llmdroid.py --app <app>
 ```
+
+Both commands stop after **one hour** and write their reports; nothing else has
+to be passed. See [The one-hour budget](#the-one-hour-budget) to change it.
 
 **4. Compare:**
 
@@ -81,6 +81,44 @@ python scripts/compare_coverage.py \
 instead of inside `compare/LLMDroid/LLMDroid-Droidbot/output/`, where it is easy to lose.
 It also swaps in the right `config.json` and restores the old one afterwards.
 
+## The one-hour budget
+
+A run used to end when the explorer decided it had finished, which makes a batch
+of APKs take an unpredictable amount of time — and makes the two tools
+incomparable, because whichever keeps going longer wins on coverage by default.
+Both tools now stop after a fixed hour of wall clock and save their reports.
+
+| | TestCube | LLMDroid |
+| --- | --- | --- |
+| Budget | `--max-run-seconds 3600` | `--timeout 3600` |
+| Also settable as | `TESTCUBE_MAX_RUN_SECONDS` | — |
+| Hard-stop grace | `--run-grace-seconds 300` | — (fixed at 300) |
+| Disable | `--max-run-seconds 0` | `-timeout -1` |
+
+An explicit flag beats an exported `TESTCUBE_*` variable. **Change the budget on
+both sides or the comparison is void** — `compare_coverage.py` cannot detect an
+unequal time budget the way it detects mismatched tags and denominators.
+
+The hour is now the **only** budget that binds. The action caps
+(`--max-run-events`, `--count`) are backstops set high enough that they do not
+fire; TestCube paces itself against whichever of the two is further along, so
+features late in the list are not starved when the clock is what runs out.
+
+How it stops, in two layers:
+
+1. **Soft deadline** at 3600s, checked at the top of the policy loop and again
+   in `InputManager.add_event` — the chokepoint every policy routes through, so
+   `dfs_greedy` is cut off on the same terms as `feature_guided`. The run
+   unwinds normally and every report is written. Overrun is one action, the
+   ~40s observed on money.
+2. **Hard stop** at 3600 + 300s, from a watchdog thread, for a model call that
+   never returns or an adb command that hangs. It writes what it can and exits
+   `3`, so one wedged app cannot stall an overnight batch. Seeing exit 3 means
+   that run's reports are partial.
+
+`stop_reason` in the feature report says which fired: `budget_time` for the soft
+deadline, `budget_time_hard` for the watchdog.
+
 ## Useful flags
 
 - `--coverage-interval N` — sample every N actions (default 10).
@@ -95,7 +133,8 @@ It also swaps in the right `config.json` and restores the old one afterwards.
   Only the increment above that reflects exploration.
 - **Check saturation, not just totals.** `compare_coverage.py` reports how far
   into each run the coverage flattened. A run that plateaued early was not cut
-  short by its budget, so an unequal budget did not distort the result.
+  short by its budget — which matters more now that every run is truncated at
+  one hour rather than allowed to finish.
 - **Compare actions, not only percentages.** The table's `Actions` column is the
   effort each tool spent to get there.
 - **Average ≥3 seeds.** Both tools are stochastic.

@@ -1,0 +1,298 @@
+{
+  "app": "Material Files",
+  "source": "guide",
+  "url": "Official Material Files repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-42 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse local storage",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "open the navigation drawer (hamburger icon or left-edge swipe)"
+      ],
+      "keywords": [
+        "browse",
+        "local",
+        "storage",
+        "navigation"
+      ],
+      "nav_hints": [
+        "browse",
+        "local",
+        "storage"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Copy files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy icon in the contextual toolbar"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Delete items",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete icon"
+      ],
+      "keywords": [
+        "delete",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Sort the file list",
+      "description": "Tap the overflow menu (three dots)",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort by\""
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "sort by",
+        "directories first",
+        "sort"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Show",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Show hidden files\""
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Create an archive",
+      "description": "Long-press the item(s) to include",
+      "actions": [
+        "Long-press the item(s) to include",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "create",
+        "archive",
+        "long-press",
+        "include"
+      ],
+      "nav_hints": [
+        "compress",
+        "add to archive",
+        "create"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Copy the path of",
+      "description": "Long-press the item",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "copy",
+        "path",
+        "file",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy path",
+        "copy",
+        "path"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "View an image",
+      "description": "Tap an image file",
+      "actions": [
+        "Tap an image file",
+        "the image viewer opens"
+      ],
+      "keywords": [
+        "image",
+        "built-in",
+        "viewer",
+        "file"
+      ],
+      "nav_hints": [
+        "image",
+        "built-in",
+        "viewer"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Bookmark a directory",
+      "description": "Navigate to the folder",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "bookmark",
+        "directory",
+        "navigate",
+        "folder"
+      ],
+      "nav_hints": [
+        "add bookmark",
+        "bookmark",
+        "directory"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Connect",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Add server\"/the \"+\" beside the network section"
+      ],
+      "keywords": [
+        "connect",
+        "ftp",
+        "ftps",
+        "server"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "ftp"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Connect",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap \"Add server\""
+      ],
+      "keywords": [
+        "connect",
+        "webdav",
+        "server",
+        "drawer"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "webdav"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Configure the FTP server",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the FTP server section"
+      ],
+      "keywords": [
+        "configure",
+        "ftp",
+        "server",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "ftp",
+        "server"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Change the theme",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"/Theme"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Configure the standard directories",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Standard directories\""
+      ],
+      "keywords": [
+        "configure",
+        "standard",
+        "directories",
+        "shown"
+      ],
+      "nav_hints": [
+        "standard directories",
+        "configure",
+        "standard"
+      ],
+      "source": "guide"
+    }
+  ]
+}

@@ -1,0 +1,1322 @@
+{
+  "app": "Open Camera",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Open Camera help pages (opencamera.org.uk) and in-app settings",
+  "description": "Hand-verified capability inventory for Open Camera (net.sourceforge.opencamera), version 1.56.2.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Take a photo",
+      "description": "Take a photo as documented for Open Camera.",
+      "actions": [
+        "Open the app",
+        "grant the camera and storage permissions",
+        "frame the shot on the preview",
+        "tap the shutter button (or press a volume key if configured)"
+      ],
+      "keywords": [
+        "take",
+        "photo",
+        "grant",
+        "camera",
+        "storage",
+        "permissions"
+      ],
+      "nav_hints": [
+        "take",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Record a video",
+      "description": "Record a video as documented for Open Camera.",
+      "actions": [
+        "Open the app",
+        "tap the photo/video mode toggle to switch to video",
+        "tap the record button",
+        "tap it again to stop; tap the pause control to pause and resume where supported"
+      ],
+      "keywords": [
+        "record",
+        "video",
+        "photo",
+        "mode",
+        "toggle",
+        "switch"
+      ],
+      "nav_hints": [
+        "record",
+        "video"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Switch between the front and rear cameras",
+      "description": "Switch between the front and rear cameras as documented for Open Camera.",
+      "actions": [
+        "Tap the camera-switch icon on the preview overlay",
+        "the preview changes to the other lens; on multi-camera devices, tap repeatedly to cycle through the available cameras"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "front",
+        "rear",
+        "cameras",
+        "camera-switch"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "front",
+        "rear"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Zoom in and out",
+      "description": "Zoom in and out as documented for Open Camera.",
+      "actions": [
+        "Pinch on the preview with two fingers, or drag the on-screen zoom slider, or use the volume keys if they are configured for zoom"
+      ],
+      "keywords": [
+        "zoom",
+        "out",
+        "pinch",
+        "preview",
+        "two",
+        "fingers"
+      ],
+      "nav_hints": [
+        "zoom",
+        "out"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Focus by tapping",
+      "description": "Focus by tapping as documented for Open Camera.",
+      "actions": [
+        "Tap the point on the preview you want in focus",
+        "the focus box appears and the camera focuses there; enable \"touch to capture\" in Settings to also take the shot"
+      ],
+      "keywords": [
+        "focus",
+        "tapping",
+        "point",
+        "preview",
+        "want",
+        "box"
+      ],
+      "nav_hints": [
+        "touch to capture",
+        "focus",
+        "tapping"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Change the focus mode",
+      "description": "Change the focus mode as documented for Open Camera.",
+      "actions": [
+        "Tap the settings/popup icon on the preview",
+        "tap the focus entry",
+        "choose the mode (continuous picture, continuous video, auto, macro, infinity, fixed or manual)",
+        "for manual, drag the distance slider"
+      ],
+      "keywords": [
+        "change",
+        "focus",
+        "mode",
+        "settings",
+        "popup",
+        "preview"
+      ],
+      "nav_hints": [
+        "change",
+        "focus",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Set the flash mode",
+      "description": "Set the flash mode as documented for Open Camera.",
+      "actions": [
+        "Tap the flash icon on the preview",
+        "choose Off, Auto, On, Torch or Red-eye reduction"
+      ],
+      "keywords": [
+        "flash",
+        "mode",
+        "preview",
+        "off",
+        "auto",
+        "torch"
+      ],
+      "nav_hints": [
+        "flash",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Use the front screen flash for selfies",
+      "description": "Use the front screen flash for selfies as documented for Open Camera.",
+      "actions": [
+        "Switch to the front camera",
+        "tap the flash icon",
+        "choose the front screen flash option; the screen flashes white when the shot is taken"
+      ],
+      "keywords": [
+        "front",
+        "flash",
+        "selfies",
+        "switch",
+        "camera"
+      ],
+      "nav_hints": [
+        "front",
+        "flash",
+        "selfies"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Set exposure compensation",
+      "description": "Set exposure compensation as documented for Open Camera.",
+      "actions": [
+        "Tap the exposure (+/-) icon on the preview",
+        "drag the exposure compensation slider",
+        "tap outside to close"
+      ],
+      "keywords": [
+        "exposure",
+        "compensation",
+        "preview",
+        "drag",
+        "slider"
+      ],
+      "nav_hints": [
+        "exposure",
+        "compensation"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set the ISO and shutter speed manually",
+      "description": "Set the ISO and shutter speed manually as documented for Open Camera.",
+      "actions": [
+        "Open Settings and enable the Camera2 API",
+        "tap the exposure icon",
+        "switch the ISO from Auto to a manual value",
+        "drag the ISO slider",
+        "drag the shutter speed/exposure time slider",
+        "tap outside to apply"
+      ],
+      "keywords": [
+        "iso",
+        "shutter",
+        "speed",
+        "manually",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "iso",
+        "shutter",
+        "speed",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Set the white balance",
+      "description": "Set the white balance as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the white balance entry",
+        "choose a preset (auto, daylight, cloudy, incandescent, fluorescent, shade or twilight) or select manual and drag the colour temperature slider"
+      ],
+      "keywords": [
+        "white",
+        "balance",
+        "popup",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "white",
+        "balance"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Choose a scene mode",
+      "description": "Choose a scene mode as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the scene mode entry",
+        "choose the mode (for example auto, portrait, landscape, night, sports, fireworks or snow)"
+      ],
+      "keywords": [
+        "scene",
+        "mode",
+        "popup",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "scene",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Apply a colour effect",
+      "description": "Apply a colour effect as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the colour effect entry",
+        "select the effect (for example mono, negative, sepia, solarise, posterise or aqua)"
+      ],
+      "keywords": [
+        "apply",
+        "colour",
+        "effect",
+        "popup",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "apply",
+        "colour",
+        "effect"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Set the photo resolution",
+      "description": "Set the photo resolution as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the resolution entry",
+        "select the megapixel/aspect option for the current camera"
+      ],
+      "keywords": [
+        "photo",
+        "resolution",
+        "popup",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "photo",
+        "resolution"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Set the image quality and format",
+      "description": "Set the image quality and format as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Photo settings\"",
+        "set the JPEG quality slider and choose the image format (JPEG, WebP or PNG)",
+        "return"
+      ],
+      "keywords": [
+        "image",
+        "quality",
+        "format",
+        "settings",
+        "photo"
+      ],
+      "nav_hints": [
+        "photo settings",
+        "image",
+        "quality",
+        "format"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Capture RAW (DNG) files",
+      "description": "Capture RAW (DNG) files as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "enable the Camera2 API",
+        "open Photo settings",
+        "enable RAW capture",
+        "choose whether to save RAW only or RAW plus JPEG",
+        "return and take the shot"
+      ],
+      "keywords": [
+        "capture",
+        "raw",
+        "dng",
+        "files",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "capture",
+        "raw",
+        "dng",
+        "files"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Use the self-timer",
+      "description": "Use the self-timer as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the timer entry",
+        "choose the delay (for example 3, 5 or 10 seconds)",
+        "tap the shutter; the countdown runs before the shot is taken"
+      ],
+      "keywords": [
+        "self-timer",
+        "popup",
+        "settings",
+        "timer",
+        "entry"
+      ],
+      "nav_hints": [
+        "self-timer"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Take a repeated series of photos (auto-repeat)",
+      "description": "Take a repeated series of photos (auto-repeat) as documented for Open Camera.",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the repeat/burst entry",
+        "choose the number of photos and the interval between them",
+        "tap the shutter"
+      ],
+      "keywords": [
+        "take",
+        "repeated",
+        "series",
+        "photos",
+        "auto-repeat",
+        "popup"
+      ],
+      "nav_hints": [
+        "take",
+        "repeated",
+        "series",
+        "photos"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Take an HDR photo",
+      "description": "Take an HDR photo as documented for Open Camera.",
+      "actions": [
+        "Tap the photo mode selector in the popup settings",
+        "choose HDR",
+        "hold the phone steady",
+        "tap the shutter; the exposures are merged automatically"
+      ],
+      "keywords": [
+        "take",
+        "hdr",
+        "photo",
+        "mode",
+        "selector",
+        "popup"
+      ],
+      "nav_hints": [
+        "take",
+        "hdr",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Take a DRO (dynamic range optimised) photo",
+      "description": "Take a DRO (dynamic range optimised) photo as documented for Open Camera.",
+      "actions": [
+        "Open the photo mode selector",
+        "choose DRO",
+        "tap the shutter; a single exposure is tone-mapped for a wider dynamic range"
+      ],
+      "keywords": [
+        "take",
+        "dro",
+        "dynamic",
+        "range",
+        "optimised",
+        "photo"
+      ],
+      "nav_hints": [
+        "take",
+        "dro",
+        "dynamic",
+        "range"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Take an exposure bracketing series",
+      "description": "Take an exposure bracketing series as documented for Open Camera.",
+      "actions": [
+        "Open the photo mode selector",
+        "choose Exposure bracketing",
+        "set the number of images and the stops between them in Settings",
+        "tap the shutter"
+      ],
+      "keywords": [
+        "take",
+        "exposure",
+        "bracketing",
+        "series",
+        "photo",
+        "mode"
+      ],
+      "nav_hints": [
+        "take",
+        "exposure",
+        "bracketing",
+        "series"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Take a noise-reduction (low light) photo",
+      "description": "Take a noise-reduction (low light) photo as documented for Open Camera.",
+      "actions": [
+        "Open the photo mode selector",
+        "choose NR/Noise reduction",
+        "hold the device steady",
+        "tap the shutter; several frames are combined"
+      ],
+      "keywords": [
+        "take",
+        "noise-reduction",
+        "low",
+        "light",
+        "photo",
+        "mode"
+      ],
+      "nav_hints": [
+        "take",
+        "noise-reduction",
+        "low",
+        "light"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Capture a panorama",
+      "description": "Capture a panorama as documented for Open Camera.",
+      "actions": [
+        "Open the photo mode selector",
+        "choose Panorama",
+        "tap the shutter",
+        "pan slowly following the on-screen guide until enough frames are captured",
+        "the panorama is stitched and saved"
+      ],
+      "keywords": [
+        "capture",
+        "panorama",
+        "photo",
+        "mode",
+        "selector"
+      ],
+      "nav_hints": [
+        "capture",
+        "panorama"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Enable face detection",
+      "description": "Enable face detection as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Camera preview\"/Photo settings",
+        "enable face detection",
+        "detected faces are outlined on the preview and used for focus and exposure"
+      ],
+      "keywords": [
+        "enable",
+        "face",
+        "detection",
+        "settings",
+        "camera",
+        "preview"
+      ],
+      "nav_hints": [
+        "camera preview",
+        "enable",
+        "face",
+        "detection"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Enable auto-level (auto-stabilise)",
+      "description": "Enable auto-level (auto-stabilise) as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Photo settings",
+        "enable the auto-level/auto-stabilise option; photos are rotated and cropped so the horizon is level"
+      ],
+      "keywords": [
+        "enable",
+        "auto-level",
+        "auto-stabilise",
+        "settings",
+        "photo"
+      ],
+      "nav_hints": [
+        "enable",
+        "auto-level",
+        "auto-stabilise"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Show composition guides and crop guides",
+      "description": "Show composition guides and crop guides as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Camera preview\"",
+        "tap the grid entry and choose the guide (for example rule of thirds, golden ratio, crosshair, or a 4:3/16:9 crop guide)"
+      ],
+      "keywords": [
+        "show",
+        "composition",
+        "guides",
+        "crop",
+        "settings",
+        "camera"
+      ],
+      "nav_hints": [
+        "camera preview",
+        "show",
+        "composition",
+        "guides"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Show the histogram, zebra stripes and focus peaking",
+      "description": "Show the histogram, zebra stripes and focus peaking as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Camera preview (on-screen GUI)",
+        "enable the histogram, the zebra-stripe overexposure warning and the focus-peaking overlay as required"
+      ],
+      "keywords": [
+        "show",
+        "histogram",
+        "zebra",
+        "stripes",
+        "focus",
+        "peaking"
+      ],
+      "nav_hints": [
+        "show",
+        "histogram",
+        "zebra",
+        "stripes"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Show the angle, level, battery and free-memory indicators",
+      "description": "Show the angle, level, battery and free-memory indicators as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"On screen GUI\"",
+        "toggle the individual on-screen indicators (angle, geo-direction, ISO, free memory, remaining time, battery, time)",
+        "return to the preview"
+      ],
+      "keywords": [
+        "show",
+        "angle",
+        "level",
+        "battery",
+        "free-memory",
+        "indicators"
+      ],
+      "nav_hints": [
+        "on screen gui",
+        "show",
+        "angle",
+        "level"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Enable geotagging of photos and videos",
+      "description": "Enable geotagging of photos and videos as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Location settings\"",
+        "enable \"Store location data\"",
+        "grant the location permission",
+        "wait for the GPS fix indicator on the preview before shooting"
+      ],
+      "keywords": [
+        "enable",
+        "geotagging",
+        "photos",
+        "videos",
+        "settings",
+        "location"
+      ],
+      "nav_hints": [
+        "location settings",
+        "store location data",
+        "enable",
+        "geotagging"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Store the compass direction with photos",
+      "description": "Store the compass direction with photos as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Location settings",
+        "enable the geo-direction option; the bearing is written into the image metadata"
+      ],
+      "keywords": [
+        "store",
+        "compass",
+        "direction",
+        "photos",
+        "settings",
+        "location"
+      ],
+      "nav_hints": [
+        "store",
+        "compass",
+        "direction",
+        "photos"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Stamp the date, time and location on photos",
+      "description": "Stamp the date, time and location on photos as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Photo stamp\"/stamp settings",
+        "enable the photo stamp",
+        "choose whether to include the date, time, location and a custom text",
+        "set the font size, colour and alignment"
+      ],
+      "keywords": [
+        "stamp",
+        "date",
+        "time",
+        "location",
+        "photos",
+        "settings"
+      ],
+      "nav_hints": [
+        "photo stamp",
+        "stamp",
+        "date",
+        "time"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Add a custom text stamp",
+      "description": "Add a custom text stamp as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "stamp settings",
+        "tap the custom text entry",
+        "type the text (for example a copyright line)",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "custom",
+        "text",
+        "stamp",
+        "settings"
+      ],
+      "nav_hints": [
+        "add",
+        "custom",
+        "text",
+        "stamp"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Set the video resolution and frame rate",
+      "description": "Set the video resolution and frame rate as documented for Open Camera.",
+      "actions": [
+        "Switch to video mode",
+        "tap the popup settings icon",
+        "tap the video resolution entry and choose the size",
+        "tap the frame rate entry and choose the fps"
+      ],
+      "keywords": [
+        "video",
+        "resolution",
+        "frame",
+        "rate",
+        "switch",
+        "mode"
+      ],
+      "nav_hints": [
+        "video",
+        "resolution",
+        "frame",
+        "rate"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Record slow-motion or high-speed video",
+      "description": "Record slow-motion or high-speed video as documented for Open Camera.",
+      "actions": [
+        "Switch to video mode",
+        "open the popup settings",
+        "select a high frame rate mode supported by the device",
+        "set the slow-motion playback factor",
+        "record"
+      ],
+      "keywords": [
+        "record",
+        "slow-motion",
+        "high-speed",
+        "video",
+        "switch",
+        "mode"
+      ],
+      "nav_hints": [
+        "record",
+        "slow-motion",
+        "high-speed",
+        "video"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Record a time-lapse video",
+      "description": "Record a time-lapse video as documented for Open Camera.",
+      "actions": [
+        "Switch to video mode",
+        "open the popup settings",
+        "tap the time-lapse/capture rate entry",
+        "choose the interval factor",
+        "record"
+      ],
+      "keywords": [
+        "record",
+        "time-lapse",
+        "video",
+        "switch",
+        "mode",
+        "popup"
+      ],
+      "nav_hints": [
+        "record",
+        "time-lapse",
+        "video"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Set the video bitrate",
+      "description": "Set the video bitrate as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Video settings\"",
+        "tap the bitrate entry",
+        "choose a preset or enter a custom value"
+      ],
+      "keywords": [
+        "video",
+        "bitrate",
+        "settings"
+      ],
+      "nav_hints": [
+        "video settings",
+        "video",
+        "bitrate"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Limit the video duration or file size",
+      "description": "Limit the video duration or file size as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Video settings",
+        "set the maximum duration and the maximum file size",
+        "choose whether recording restarts automatically when the limit is reached"
+      ],
+      "keywords": [
+        "limit",
+        "video",
+        "duration",
+        "file",
+        "size",
+        "settings"
+      ],
+      "nav_hints": [
+        "limit",
+        "video",
+        "duration",
+        "file"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Enable video stabilisation",
+      "description": "Enable video stabilisation as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Video settings",
+        "enable the video stabilisation option (device support required)",
+        "return and record"
+      ],
+      "keywords": [
+        "enable",
+        "video",
+        "stabilisation",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "video",
+        "stabilisation"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Choose the audio source and control audio recording",
+      "description": "Choose the audio source and control audio recording as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Video settings",
+        "tap the audio source entry (for example default, microphone, camcorder, voice recognition or unprocessed)",
+        "or disable audio recording entirely"
+      ],
+      "keywords": [
+        "audio",
+        "source",
+        "control",
+        "recording",
+        "settings",
+        "video"
+      ],
+      "nav_hints": [
+        "audio",
+        "source",
+        "control",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Record GPS/time subtitles for videos",
+      "description": "Record GPS/time subtitles for videos as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Video settings",
+        "enable the subtitle option",
+        "choose what is recorded (GPS coordinates and/or the timestamp); an .SRT file is written alongside the video"
+      ],
+      "keywords": [
+        "record",
+        "gps",
+        "time",
+        "subtitles",
+        "videos",
+        "settings"
+      ],
+      "nav_hints": [
+        "record",
+        "gps",
+        "time",
+        "subtitles"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Use voice control to take a photo",
+      "description": "Use voice control to take a photo as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "enable voice control",
+        "grant the microphone permission",
+        "tap the voice control icon on the preview to arm it",
+        "say the trigger word (\"cheese\") to take the shot"
+      ],
+      "keywords": [
+        "voice",
+        "control",
+        "take",
+        "photo",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "cheese",
+        "voice",
+        "control",
+        "take"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Use audio (noise) triggering",
+      "description": "Use audio (noise) triggering as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "enable the audio trigger",
+        "choose the loud-noise mode and the sensitivity",
+        "arm it from the preview",
+        "make the noise to trigger the shutter"
+      ],
+      "keywords": [
+        "audio",
+        "noise",
+        "triggering",
+        "settings",
+        "enable",
+        "trigger"
+      ],
+      "nav_hints": [
+        "audio",
+        "noise",
+        "triggering"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Use a Bluetooth LE remote control",
+      "description": "Use a Bluetooth LE remote control as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Remote control\"",
+        "enable it",
+        "scan for and pair the supported Bluetooth LE remote",
+        "use the remote button to trigger the shutter or start recording"
+      ],
+      "keywords": [
+        "bluetooth",
+        "remote",
+        "control",
+        "settings"
+      ],
+      "nav_hints": [
+        "remote control",
+        "bluetooth",
+        "remote",
+        "control"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Configure the volume key behaviour",
+      "description": "Configure the volume key behaviour as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"More camera controls\"",
+        "tap the volume keys entry",
+        "choose the action (take photo, zoom, change exposure, change focus, adjust volume or do nothing)"
+      ],
+      "keywords": [
+        "configure",
+        "volume",
+        "key",
+        "behaviour",
+        "settings",
+        "more"
+      ],
+      "nav_hints": [
+        "more camera controls",
+        "configure",
+        "volume",
+        "key"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Enable touch-to-capture",
+      "description": "Enable touch-to-capture as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "More camera controls",
+        "enable \"Touch to capture\"; tapping anywhere on the preview then takes the photo"
+      ],
+      "keywords": [
+        "enable",
+        "touch-to-capture",
+        "settings",
+        "more",
+        "camera",
+        "controls"
+      ],
+      "nav_hints": [
+        "touch to capture",
+        "enable",
+        "touch-to-capture"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Lock the screen orientation",
+      "description": "Lock the screen orientation as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Camera preview",
+        "tap the lock orientation entry",
+        "choose portrait, landscape or none",
+        "return"
+      ],
+      "keywords": [
+        "lock",
+        "orientation",
+        "settings",
+        "camera",
+        "preview"
+      ],
+      "nav_hints": [
+        "lock",
+        "orientation"
+      ]
+    },
+    {
+      "id": "GT047",
+      "name": "Use immersive (full screen) mode",
+      "description": "Use immersive (full screen) mode as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Camera preview",
+        "tap the immersive mode entry",
+        "choose which controls are hidden (for example hide the GUI or hide everything)",
+        "return"
+      ],
+      "keywords": [
+        "immersive",
+        "full",
+        "mode",
+        "settings",
+        "camera",
+        "preview"
+      ],
+      "nav_hints": [
+        "immersive",
+        "full",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT048",
+      "name": "Set the photo and video save location",
+      "description": "Set the photo and video save location as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"More camera controls\"/Save location",
+        "tap the save folder entry",
+        "choose the folder (or enable the Storage Access Framework and pick a tree with the system picker)",
+        "confirm"
+      ],
+      "keywords": [
+        "photo",
+        "video",
+        "save",
+        "location",
+        "settings",
+        "more"
+      ],
+      "nav_hints": [
+        "more camera controls",
+        "photo",
+        "video",
+        "save"
+      ]
+    },
+    {
+      "id": "GT049",
+      "name": "Use the Storage Access Framework for saving",
+      "description": "Use the Storage Access Framework for saving as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "enable \"Use Storage Access Framework\"",
+        "tap the save folder entry",
+        "select the destination folder with the Android picker",
+        "grant persistent access"
+      ],
+      "keywords": [
+        "storage",
+        "access",
+        "framework",
+        "saving",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "storage",
+        "access",
+        "framework",
+        "saving"
+      ]
+    },
+    {
+      "id": "GT050",
+      "name": "Open the last photo in the gallery",
+      "description": "Open the last photo in the gallery as documented for Open Camera.",
+      "actions": [
+        "Tap the thumbnail in the corner of the preview",
+        "the last captured photo or video opens in the gallery app"
+      ],
+      "keywords": [
+        "last",
+        "photo",
+        "gallery",
+        "thumbnail",
+        "corner",
+        "preview"
+      ],
+      "nav_hints": [
+        "last",
+        "photo",
+        "gallery"
+      ]
+    },
+    {
+      "id": "GT051",
+      "name": "Pause the preview after taking a photo",
+      "description": "Pause the preview after taking a photo as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "Photo settings",
+        "enable \"Pause after taking photo\"; the captured image is shown with share, delete and info options before returning to the preview"
+      ],
+      "keywords": [
+        "pause",
+        "preview",
+        "after",
+        "taking",
+        "photo",
+        "settings"
+      ],
+      "nav_hints": [
+        "pause",
+        "preview",
+        "after",
+        "taking"
+      ]
+    },
+    {
+      "id": "GT052",
+      "name": "Enable or disable the shutter sound",
+      "description": "Enable or disable the shutter sound as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"More camera controls\"",
+        "toggle the shutter sound option (where local regulations allow it)"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "shutter",
+        "sound",
+        "settings",
+        "more"
+      ],
+      "nav_hints": [
+        "more camera controls",
+        "enable",
+        "disable",
+        "shutter"
+      ]
+    },
+    {
+      "id": "GT053",
+      "name": "Enable the Camera2 API",
+      "description": "Enable the Camera2 API as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "\"Camera API\"",
+        "select Camera2",
+        "confirm the restart prompt; manual controls, RAW and high-speed modes become available on supported devices"
+      ],
+      "keywords": [
+        "enable",
+        "camera2",
+        "api",
+        "settings",
+        "camera"
+      ],
+      "nav_hints": [
+        "camera api",
+        "enable",
+        "camera2",
+        "api"
+      ]
+    },
+    {
+      "id": "GT054",
+      "name": "Reset all settings to the defaults",
+      "description": "Reset all settings to the defaults as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "scroll to the reset entry",
+        "tap \"Reset settings\"",
+        "confirm"
+      ],
+      "keywords": [
+        "reset",
+        "all",
+        "settings",
+        "defaults",
+        "scroll",
+        "entry"
+      ],
+      "nav_hints": [
+        "reset settings",
+        "reset",
+        "all",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT055",
+      "name": "Read the built-in help and about information",
+      "description": "Read the built-in help and about information as documented for Open Camera.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"/\"Online help\"",
+        "read the version and device capability report or open the online help pages. ## **Category: Additional applications**"
+      ],
+      "keywords": [
+        "read",
+        "built-in",
+        "help",
+        "about",
+        "information",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "online help",
+        "read",
+        "built-in"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

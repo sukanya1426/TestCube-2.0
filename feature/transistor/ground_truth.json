@@ -1,0 +1,545 @@
+{
+  "app": "Transistor",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Transistor repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Transistor (org.y20k.transistor), version 4.3.8.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Add a station by searching the radio-browser directory",
+      "description": "Add a station by searching the radio-browser directory as documented for Transistor.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" icon in the top bar",
+        "tap the search option",
+        "type the station name",
+        "tap a result from the radio-browser.info list",
+        "confirm to add it to the collection"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "searching",
+        "radio-browser",
+        "directory",
+        "top"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "searching",
+        "radio-browser"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Add a station from an M3U or PLS playlist address",
+      "description": "Add a station from an M3U or PLS playlist address as documented for Transistor.",
+      "actions": [
+        "Tap the \"+\" icon in the top bar",
+        "paste the playlist file address (.m3u or .pls) into the input field",
+        "tap the add/confirm button; the station name and image are read from the playlist"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "m3u",
+        "pls",
+        "playlist",
+        "address"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "m3u",
+        "pls"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Add a station from a raw stream address",
+      "description": "Add a station from a raw stream address as documented for Transistor.",
+      "actions": [
+        "Tap the \"+\" icon",
+        "paste the direct stream URL (MP3, AAC or Ogg/Opus)",
+        "tap the add button; note that stations added this way cannot use the update feature"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "raw",
+        "stream",
+        "address",
+        "paste"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "raw",
+        "stream"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Add a station by opening a stream file in the browser",
+      "description": "Add a station by opening a stream file in the browser as documented for Transistor.",
+      "actions": [
+        "In a web browser tap a .m3u or .pls link",
+        "choose Transistor in the \"Open with\" chooser (or set it as the default handler for those file types)",
+        "confirm the import"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "opening",
+        "stream",
+        "file",
+        "browser"
+      ],
+      "nav_hints": [
+        "open with",
+        "add",
+        "station",
+        "opening"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Play a station",
+      "description": "Play a station as documented for Transistor.",
+      "actions": [
+        "Open the station list",
+        "tap the station (or its play button)",
+        "the stream starts and the player sheet appears at the bottom"
+      ],
+      "keywords": [
+        "play",
+        "station"
+      ],
+      "nav_hints": [
+        "play",
+        "station"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Stop playback",
+      "description": "Stop playback as documented for Transistor.",
+      "actions": [
+        "Tap the stop button in the player sheet or in the notification, or disconnect the headphones according to the configured behaviour"
+      ],
+      "keywords": [
+        "stop",
+        "playback",
+        "player",
+        "sheet",
+        "notification",
+        "disconnect"
+      ],
+      "nav_hints": [
+        "stop",
+        "playback"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "View the now-playing metadata",
+      "description": "View the now-playing metadata as documented for Transistor.",
+      "actions": [
+        "Start a station",
+        "expand the player sheet",
+        "read the station name and the currently reported track title where the stream provides it"
+      ],
+      "keywords": [
+        "now-playing",
+        "metadata",
+        "start",
+        "station",
+        "expand",
+        "player"
+      ],
+      "nav_hints": [
+        "now-playing",
+        "metadata"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Delete a station",
+      "description": "Delete a station as documented for Transistor.",
+      "actions": [
+        "Open the station list",
+        "swipe the station row sideways",
+        "the station is removed from the collection"
+      ],
+      "keywords": [
+        "delete",
+        "station",
+        "swipe",
+        "row",
+        "sideways"
+      ],
+      "nav_hints": [
+        "delete",
+        "station"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Enable station editing",
+      "description": "Enable station editing as documented for Transistor.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Edit stations\" option on",
+        "return to the station list"
+      ],
+      "keywords": [
+        "enable",
+        "station",
+        "editing",
+        "settings",
+        "toggle",
+        "edit"
+      ],
+      "nav_hints": [
+        "edit stations",
+        "enable",
+        "station",
+        "editing"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Rename a station",
+      "description": "Rename a station as documented for Transistor.",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station in the list",
+        "tap the rename/edit name option",
+        "enter the new name",
+        "confirm"
+      ],
+      "keywords": [
+        "rename",
+        "station",
+        "editing",
+        "enabled",
+        "hold"
+      ],
+      "nav_hints": [
+        "rename",
+        "station"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Change a station's image",
+      "description": "Change a station's image as documented for Transistor.",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station",
+        "tap the image option",
+        "pick an image from the device",
+        "confirm; the custom icon replaces the default one"
+      ],
+      "keywords": [
+        "change",
+        "station's",
+        "image",
+        "editing",
+        "enabled",
+        "hold"
+      ],
+      "nav_hints": [
+        "change",
+        "station's",
+        "image"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Change a station's stream address",
+      "description": "Change a station's stream address as documented for Transistor.",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station",
+        "tap the stream URI/edit option",
+        "enter the new address",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "station's",
+        "stream",
+        "address",
+        "editing",
+        "enabled"
+      ],
+      "nav_hints": [
+        "change",
+        "station's",
+        "stream",
+        "address"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Update station information from the source",
+      "description": "Update station information from the source as documented for Transistor.",
+      "actions": [
+        "Open the overflow/settings menu",
+        "tap the \"Update station information\" action",
+        "Transistor re-reads the playlist source to refresh the stream address, name and image (this does not work for stations added by raw stream address)"
+      ],
+      "keywords": [
+        "update",
+        "station",
+        "information",
+        "source",
+        "overflow",
+        "settings"
+      ],
+      "nav_hints": [
+        "update station information",
+        "update",
+        "station",
+        "information"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Reorder stations in the list",
+      "description": "Reorder stations in the list as documented for Transistor.",
+      "actions": [
+        "Open the station list",
+        "tap and hold a station",
+        "drag it to the required position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "stations",
+        "station",
+        "hold"
+      ],
+      "nav_hints": [
+        "reorder",
+        "stations"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Set a sleep timer",
+      "description": "Set a sleep timer as documented for Transistor.",
+      "actions": [
+        "Start playback",
+        "open the player sheet",
+        "tap the sleep timer icon",
+        "the timer starts counting down",
+        "tap it again to cancel or extend it"
+      ],
+      "keywords": [
+        "sleep",
+        "timer",
+        "start",
+        "playback",
+        "player",
+        "sheet"
+      ],
+      "nav_hints": [
+        "sleep",
+        "timer"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Control playback from the notification",
+      "description": "Control playback from the notification as documented for Transistor.",
+      "actions": [
+        "Start a station",
+        "pull down the notification shade",
+        "use the play/stop control shown in the media notification"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "notification",
+        "start",
+        "station",
+        "pull"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Add a home screen shortcut for a station",
+      "description": "Add a home screen shortcut for a station as documented for Transistor.",
+      "actions": [
+        "Open the station list",
+        "tap and hold the station",
+        "tap the \"Add shortcut\"/place on home screen action",
+        "confirm; tapping the shortcut starts that station directly"
+      ],
+      "keywords": [
+        "add",
+        "home",
+        "shortcut",
+        "station",
+        "hold"
+      ],
+      "nav_hints": [
+        "add shortcut",
+        "add",
+        "home",
+        "shortcut"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Import stations by copying M3U files into the collection folder",
+      "description": "Import stations by copying M3U files into the collection folder as documented for Transistor.",
+      "actions": [
+        "Connect the device to a computer (or use a file manager)",
+        "place the .m3u files into /Android/data/org.y20k.transistor/files/Collection",
+        "reopen the app; the stations appear in the list"
+      ],
+      "keywords": [
+        "import",
+        "stations",
+        "copying",
+        "m3u",
+        "files",
+        "collection"
+      ],
+      "nav_hints": [
+        "import",
+        "stations",
+        "copying",
+        "m3u"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Back up and restore the station collection",
+      "description": "Back up and restore the station collection as documented for Transistor.",
+      "actions": [
+        "Copy the Collection folder from /Android/data/org.y20k.transistor/files/ to a safe location; restore it by copying the folder back before opening the app. On devices with Android auto-backup enabled the collection is backed up with the account automatically"
+      ],
+      "keywords": [
+        "back",
+        "restore",
+        "station",
+        "collection",
+        "copy",
+        "folder"
+      ],
+      "nav_hints": [
+        "back",
+        "restore",
+        "station",
+        "collection"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Choose the playback behaviour on Bluetooth/headphone disconnect",
+      "description": "Choose the playback behaviour on Bluetooth/headphone disconnect as documented for Transistor.",
+      "actions": [
+        "Open Settings",
+        "find the playback behaviour options",
+        "set whether playback stops when the audio device is disconnected",
+        "return"
+      ],
+      "keywords": [
+        "playback",
+        "behaviour",
+        "bluetooth",
+        "headphone",
+        "disconnect",
+        "settings"
+      ],
+      "nav_hints": [
+        "playback",
+        "behaviour",
+        "bluetooth",
+        "headphone"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for Transistor.",
+      "actions": [
+        "Open Settings",
+        "tap the theme/appearance entry",
+        "choose light, dark or the system default",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "appearance",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Delete all stations (reset the collection)",
+      "description": "Delete all stations (reset the collection) as documented for Transistor.",
+      "actions": [
+        "Open Settings",
+        "find the collection/clear action",
+        "confirm; all stations are removed from the list"
+      ],
+      "keywords": [
+        "delete",
+        "all",
+        "stations",
+        "reset",
+        "collection",
+        "settings"
+      ],
+      "nav_hints": [
+        "delete",
+        "all",
+        "stations",
+        "reset"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "View the about screen and licence information",
+      "description": "View the about screen and licence information as documented for Transistor.",
+      "actions": [
+        "Open Settings",
+        "scroll to the About section",
+        "read the app version, the radio-browser.info attribution and the MIT licence information. ## **Category: Security and utility**"
+      ],
+      "keywords": [
+        "about",
+        "licence",
+        "information",
+        "settings",
+        "scroll",
+        "section"
+      ],
+      "nav_hints": [
+        "about",
+        "licence",
+        "information"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

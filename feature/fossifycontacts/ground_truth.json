@@ -1,0 +1,918 @@
+{
+  "app": "Fossify Contacts",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Contacts (org.fossify.contacts), version 1.6.0.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a contact",
+      "description": "Create a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "choose the storage account (device or a synced account)",
+        "enter the first name, middle name and surname",
+        "add the phone number",
+        "tap the save (tick) icon"
+      ],
+      "keywords": [
+        "create",
+        "contact",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Add a photo to a contact",
+      "description": "Add a photo to a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the photo placeholder at the top",
+        "choose \"Take photo\" or \"Choose photo\"",
+        "crop the image",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "photo",
+        "contact",
+        "editor",
+        "placeholder",
+        "top"
+      ],
+      "nav_hints": [
+        "take photo",
+        "choose photo",
+        "add",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Add multiple phone numbers with types",
+      "description": "Add multiple phone numbers with types as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the phone section",
+        "enter the number",
+        "tap the type selector and choose Mobile, Home, Work, Main, Fax, Pager or a custom label",
+        "repeat for further numbers",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "multiple",
+        "phone",
+        "numbers",
+        "types",
+        "contact"
+      ],
+      "nav_hints": [
+        "add",
+        "multiple",
+        "phone",
+        "numbers"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Add email addresses",
+      "description": "Add email addresses as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the email section",
+        "enter the address",
+        "pick the type",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "email",
+        "addresses",
+        "contact",
+        "editor",
+        "beside"
+      ],
+      "nav_hints": [
+        "add",
+        "email",
+        "addresses"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add postal addresses",
+      "description": "Add postal addresses as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the address section",
+        "enter the address",
+        "pick the type",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "postal",
+        "addresses",
+        "contact",
+        "editor",
+        "beside"
+      ],
+      "nav_hints": [
+        "add",
+        "postal",
+        "addresses"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Add important dates (birthday and anniversary)",
+      "description": "Add important dates (birthday and anniversary) as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the events section",
+        "pick the date",
+        "select Birthday or Anniversary",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "important",
+        "dates",
+        "birthday",
+        "anniversary",
+        "contact"
+      ],
+      "nav_hints": [
+        "add",
+        "important",
+        "dates",
+        "birthday"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Add the organisation and job title",
+      "description": "Add the organisation and job title as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "scroll to the organisation section",
+        "enter the company name and the job title",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "organisation",
+        "job",
+        "title",
+        "contact",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "organisation",
+        "job",
+        "title"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Add websites and instant messaging handles",
+      "description": "Add websites and instant messaging handles as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the website or IM section",
+        "enter the value",
+        "pick the type",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "websites",
+        "instant",
+        "messaging",
+        "handles",
+        "contact"
+      ],
+      "nav_hints": [
+        "add",
+        "websites",
+        "instant",
+        "messaging"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Add notes to a contact",
+      "description": "Add notes to a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "scroll to the notes field",
+        "type the text",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "notes",
+        "contact",
+        "editor",
+        "scroll",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "notes",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set a custom ringtone for a contact",
+      "description": "Set a custom ringtone for a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact editor",
+        "tap the ringtone row",
+        "select the tone from the picker",
+        "tap save"
+      ],
+      "keywords": [
+        "custom",
+        "ringtone",
+        "contact",
+        "editor",
+        "row"
+      ],
+      "nav_hints": [
+        "custom",
+        "ringtone",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Edit a contact",
+      "description": "Edit a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the edit (pencil) icon",
+        "change the fields",
+        "tap the save icon"
+      ],
+      "keywords": [
+        "edit",
+        "contact",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Delete a contact",
+      "description": "Delete a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the overflow menu (three dots)",
+        "tap Delete",
+        "confirm; or long-press the contact in the list and tap the delete icon"
+      ],
+      "keywords": [
+        "delete",
+        "contact",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "delete",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Mark a contact as a favourite",
+      "description": "Mark a contact as a favourite as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the star icon in the toolbar; or long-press the contact in the list",
+        "tap \"Add to favourites\". Favourites appear in the Favourites tab"
+      ],
+      "keywords": [
+        "mark",
+        "contact",
+        "favourite",
+        "star",
+        "toolbar",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add to favourites",
+        "mark",
+        "contact",
+        "favourite"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Remove a contact from favourites",
+      "description": "Remove a contact from favourites as documented for Fossify Contacts.",
+      "actions": [
+        "Open the Favourites tab",
+        "long-press the contact",
+        "tap \"Remove from favourites\"",
+        "confirm"
+      ],
+      "keywords": [
+        "remove",
+        "contact",
+        "favourites",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "remove from favourites",
+        "remove",
+        "contact",
+        "favourites"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Call a contact",
+      "description": "Call a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the phone number (or the call icon beside it); the dialler is opened with the number"
+      ],
+      "keywords": [
+        "call",
+        "contact",
+        "phone",
+        "number",
+        "beside",
+        "dialler"
+      ],
+      "nav_hints": [
+        "call",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Send an SMS to a contact",
+      "description": "Send an SMS to a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the message icon beside the phone number",
+        "the messaging app opens with the recipient filled in"
+      ],
+      "keywords": [
+        "send",
+        "sms",
+        "contact",
+        "message",
+        "beside",
+        "phone"
+      ],
+      "nav_hints": [
+        "send",
+        "sms",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Send an email to a contact",
+      "description": "Send an email to a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the email address",
+        "select the mail app",
+        "compose and send"
+      ],
+      "keywords": [
+        "send",
+        "email",
+        "contact",
+        "address"
+      ],
+      "nav_hints": [
+        "send",
+        "email",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Create a contact group",
+      "description": "Create a contact group as documented for Fossify Contacts.",
+      "actions": [
+        "Open the Groups tab",
+        "tap the \"+\" button",
+        "enter the group name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "contact",
+        "group",
+        "groups",
+        "tab"
+      ],
+      "nav_hints": [
+        "create",
+        "contact",
+        "group"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Add contacts to a group",
+      "description": "Add contacts to a group as documented for Fossify Contacts.",
+      "actions": [
+        "Open the Groups tab",
+        "tap the group",
+        "tap the \"+\"/add-members action",
+        "tick the contacts",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "contacts",
+        "group",
+        "groups",
+        "tab"
+      ],
+      "nav_hints": [
+        "add",
+        "contacts",
+        "group"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Rename or delete a group",
+      "description": "Rename or delete a group as documented for Fossify Contacts.",
+      "actions": [
+        "Open the Groups tab",
+        "long-press the group",
+        "tap Rename and enter the new name, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "rename",
+        "delete",
+        "group",
+        "groups",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "rename",
+        "delete",
+        "group"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Send a message or email to a whole group",
+      "description": "Send a message or email to a whole group as documented for Fossify Contacts.",
+      "actions": [
+        "Open the Groups tab",
+        "tap the group",
+        "tap the overflow menu",
+        "tap \"Send SMS to group\"/\"Send email to group\"",
+        "confirm the recipients"
+      ],
+      "keywords": [
+        "send",
+        "message",
+        "email",
+        "whole",
+        "group",
+        "groups"
+      ],
+      "nav_hints": [
+        "send",
+        "message",
+        "email",
+        "whole"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Search contacts",
+      "description": "Search contacts as documented for Fossify Contacts.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the name, number or email fragment",
+        "tap a matching contact"
+      ],
+      "keywords": [
+        "search",
+        "contacts",
+        "toolbar",
+        "name",
+        "number",
+        "email"
+      ],
+      "nav_hints": [
+        "search",
+        "contacts"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Sort the contact list",
+      "description": "Sort the contact list as documented for Fossify Contacts.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Sort by\"",
+        "choose first name, middle name, surname or date created",
+        "choose ascending or descending",
+        "tap OK"
+      ],
+      "keywords": [
+        "sort",
+        "contact",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Filter which contact sources are shown",
+      "description": "Filter which contact sources are shown as documented for Fossify Contacts.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Filter contacts by source\"/\"Manage shown contact fields\"",
+        "tick the accounts to display",
+        "tap OK"
+      ],
+      "keywords": [
+        "filter",
+        "which",
+        "contact",
+        "sources",
+        "shown",
+        "overflow"
+      ],
+      "nav_hints": [
+        "filter",
+        "which",
+        "contact",
+        "sources"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Choose which fields are visible in the contact detail",
+      "description": "Choose which fields are visible in the contact detail as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap \"Manage shown contact fields\"",
+        "tick the fields (for example prefix, phone numbers, emails, addresses, IM, events, notes, organisation, groups, websites)",
+        "tap OK"
+      ],
+      "keywords": [
+        "which",
+        "fields",
+        "visible",
+        "contact",
+        "detail",
+        "settings"
+      ],
+      "nav_hints": [
+        "which",
+        "fields",
+        "visible",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Show only contacts with phone numbers",
+      "description": "Show only contacts with phone numbers as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Show only contacts with phone numbers\" option"
+      ],
+      "keywords": [
+        "show",
+        "only",
+        "contacts",
+        "phone",
+        "numbers",
+        "settings"
+      ],
+      "nav_hints": [
+        "show",
+        "only",
+        "contacts",
+        "phone"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Merge duplicate contacts",
+      "description": "Merge duplicate contacts as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact list",
+        "long-press the contacts to select them",
+        "tap the overflow menu",
+        "tap \"Merge\"/the merge action",
+        "confirm; the details are combined into one entry"
+      ],
+      "keywords": [
+        "merge",
+        "duplicate",
+        "contacts",
+        "contact",
+        "long-press",
+        "them"
+      ],
+      "nav_hints": [
+        "merge",
+        "duplicate",
+        "contacts"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Share a contact as a vCard",
+      "description": "Share a contact as a vCard as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the share icon",
+        "choose the destination app; or long-press several contacts and use the share action to send them together"
+      ],
+      "keywords": [
+        "share",
+        "contact",
+        "vcard"
+      ],
+      "nav_hints": [
+        "share",
+        "contact",
+        "vcard"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Export contacts to a vCard (.vcf) file",
+      "description": "Export contacts to a vCard (.vcf) file as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings (or the overflow menu)",
+        "tap \"Export contacts\"",
+        "choose the accounts to include",
+        "choose the destination file name and folder",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "contacts",
+        "vcard",
+        "vcf",
+        "file",
+        "settings"
+      ],
+      "nav_hints": [
+        "export contacts",
+        "export",
+        "contacts",
+        "vcard"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Import contacts from a vCard file",
+      "description": "Import contacts from a vCard file as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings (or the overflow menu)",
+        "tap \"Import contacts\"",
+        "select the .vcf file",
+        "choose the target account",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "contacts",
+        "vcard",
+        "file",
+        "settings",
+        "overflow"
+      ],
+      "nav_hints": [
+        "import contacts",
+        "import",
+        "contacts",
+        "vcard"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Create a home screen shortcut to a contact",
+      "description": "Create a home screen shortcut to a contact as documented for Fossify Contacts.",
+      "actions": [
+        "Open the contact",
+        "tap the overflow menu",
+        "tap \"Create shortcut\"",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "create",
+        "home",
+        "shortcut",
+        "contact",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create shortcut",
+        "create",
+        "home",
+        "shortcut"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Choose the default tab shown at start-up",
+      "description": "Choose the default tab shown at start-up as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Default tab\" entry",
+        "choose Contacts, Favourites, Groups or \"Last used\"",
+        "confirm"
+      ],
+      "keywords": [
+        "default",
+        "tab",
+        "shown",
+        "start-up",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "default tab",
+        "last used",
+        "default",
+        "tab"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Show or hide the individual tabs",
+      "description": "Show or hide the individual tabs as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "open the tabs section",
+        "tick the tabs (Contacts, Favourites, Groups) to keep visible",
+        "confirm"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "individual",
+        "tabs",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "show",
+        "hide",
+        "individual",
+        "tabs"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "description": "Protect the app with a PIN, pattern or fingerprint as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock entry",
+        "choose the lock type",
+        "set the secret",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "settings",
+        "app-lock"
+      ],
+      "nav_hints": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and pick the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Show contact thumbnails and phone numbers in the list",
+      "description": "Show contact thumbnails and phone numbers in the list as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Show contact thumbnails\" and \"Show phone numbers\" options"
+      ],
+      "keywords": [
+        "show",
+        "contact",
+        "thumbnails",
+        "phone",
+        "numbers",
+        "settings"
+      ],
+      "nav_hints": [
+        "show contact thumbnails",
+        "show phone numbers",
+        "show",
+        "contact"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Contacts.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version, the licences and the source repository link. ## **Category: Media**"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

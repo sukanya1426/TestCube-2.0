@@ -20,6 +20,13 @@ MECHANISMS = (
 
 
 class FeatureTesterConfig(object):
+    # Settable as --max-run-seconds or TESTCUBE_MAX_RUN_SECONDS, etc.
+    INT_OPTIONS = (
+        "max_run_events", "max_run_seconds", "run_grace_seconds",
+        "max_steps_per_feature", "max_feature_attempts", "max_restart_attempts",
+        "max_widget_taps", "max_vlm_calls_per_feature",
+    )
+
     def __init__(self):
         self.afford_search = True
         self.backtrack = True
@@ -40,9 +47,13 @@ class FeatureTesterConfig(object):
         # only stop when the policy raises InputInterruptedException, because
         # droidbot defaults to event_count=1e8 / timeout=-1.
         self.max_run_events = 600
-        # A 28-feature app needs more than 45 min even after the model-call
-        # cuts; too small a budget silently starves the tail of the list.
-        self.max_run_seconds = 5400
+        # The binding budget. Every run gets the same hour of wall clock, so a
+        # batch of APKs takes a predictable time and no tool wins the coverage
+        # comparison just by exploring for longer.
+        self.max_run_seconds = 3600
+        # How long past max_run_seconds the watchdog waits before killing the
+        # process outright. Only reached when the run cannot unwind on its own.
+        self.run_grace_seconds = 300
         self.max_steps_per_feature = 60
         self.max_feature_attempts = 2
         self.max_restart_attempts = 8
@@ -87,6 +98,15 @@ class FeatureTesterConfig(object):
         cfg = cls()
         env = os.environ.get("TESTCUBE_DISABLE") or ""
         cfg.disable(part.strip() for part in env.split(",") if part.strip())
+        # Environment first, command line second: an explicit flag has to beat
+        # a variable left exported in the shell from an earlier run.
+        for name in cls.INT_OPTIONS:
+            raw = os.environ.get("TESTCUBE_%s" % name.upper())
+            if raw:
+                try:
+                    setattr(cfg, name, int(raw))
+                except ValueError:
+                    pass
         if opts is not None:
             cfg.replay_path = getattr(opts, "replay_path", None)
             cfg.ground_truth_path = getattr(opts, "ground_truth_path", None)
@@ -110,25 +130,10 @@ class FeatureTesterConfig(object):
             cfg.disable(part.strip() for part in disable.split(",") if part.strip())
             if getattr(opts, "max_backtracks", None) is not None:
                 cfg.max_backtracks = int(opts.max_backtracks)
-            for name in (
-                "max_run_events", "max_run_seconds", "max_steps_per_feature",
-                "max_feature_attempts", "max_restart_attempts",
-                "max_widget_taps", "max_vlm_calls_per_feature",
-            ):
+            for name in cls.INT_OPTIONS:
                 value = getattr(opts, name, None)
                 if value is not None:
                     setattr(cfg, name, int(value))
-        for name in (
-            "max_run_events", "max_run_seconds", "max_steps_per_feature",
-            "max_feature_attempts", "max_restart_attempts",
-            "max_widget_taps", "max_vlm_calls_per_feature",
-        ):
-            raw = os.environ.get("TESTCUBE_%s" % name.upper())
-            if raw:
-                try:
-                    setattr(cfg, name, int(raw))
-                except ValueError:
-                    pass
         return cfg
 
 
@@ -207,6 +212,30 @@ def add_cli_flags(parser):
         dest="no_restart_between_features",
         action="store_true",
         help="Do not stop/start the app between features (saves ~2 actions per switch).",
+    )
+    parser.add_argument(
+        "--max-run-seconds",
+        dest="max_run_seconds",
+        type=int,
+        default=None,
+        help="Wall-clock budget for the run in seconds (default: 3600). "
+             "0 disables it and explores until the policy stops on its own.",
+    )
+    parser.add_argument(
+        "--max-run-events",
+        dest="max_run_events",
+        type=int,
+        default=None,
+        help="Cap on actions issued (default: 600). The wall clock usually "
+             "binds first; this is the backstop.",
+    )
+    parser.add_argument(
+        "--run-grace-seconds",
+        dest="run_grace_seconds",
+        type=int,
+        default=None,
+        help="Seconds past --max-run-seconds before the run is killed outright "
+             "(default: 300).",
     )
     parser.add_argument(
         "--max-backtracks",

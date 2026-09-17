@@ -1,0 +1,946 @@
+{
+  "app": "Etar Calendar",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Etar repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Etar Calendar (ws.xsoh.etar), version 1.0.57.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create an event",
+      "description": "Create an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "enter the event title",
+        "set the start date and time",
+        "set the end date and time",
+        "choose the calendar",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "event"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create an all-day event",
+      "description": "Create an all-day event as documented for Etar Calendar.",
+      "actions": [
+        "Tap the \"+\" button",
+        "enter the title",
+        "toggle the \"All day\" switch on",
+        "pick the date (or the date range)",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "all-day",
+        "event",
+        "title"
+      ],
+      "nav_hints": [
+        "all day",
+        "create",
+        "all-day",
+        "event"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Create an event by long-pressing a time slot",
+      "description": "Create an event by long-pressing a time slot as documented for Etar Calendar.",
+      "actions": [
+        "Open the day or week view",
+        "long-press the empty time slot",
+        "the new-event editor opens with that time pre-filled",
+        "complete the details",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "long-pressing",
+        "time",
+        "slot",
+        "day"
+      ],
+      "nav_hints": [
+        "create",
+        "event",
+        "long-pressing",
+        "time"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Add a location to an event",
+      "description": "Add a location to an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the location field",
+        "type the address or pick a suggestion",
+        "tap Save; tapping the location in the event detail opens it in a map app"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "event",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "location",
+        "event"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add a description to an event",
+      "description": "Add a description to an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the description/notes field",
+        "type the text",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "description",
+        "event",
+        "editor",
+        "notes",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "description",
+        "event"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Set an event as repeating",
+      "description": "Set an event as repeating as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the repetition row",
+        "choose the pattern (daily, weekly, monthly, yearly or custom)",
+        "set the interval, the weekdays and the end condition",
+        "tap Done",
+        "Save"
+      ],
+      "keywords": [
+        "event",
+        "repeating",
+        "editor",
+        "repetition",
+        "row"
+      ],
+      "nav_hints": [
+        "event",
+        "repeating"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Add reminders to an event",
+      "description": "Add reminders to an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap \"Add reminder\"",
+        "choose the lead time (for example 10 minutes, 1 hour, 1 day before) and the method",
+        "add further reminders if needed",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "reminders",
+        "event",
+        "editor",
+        "reminder"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "add",
+        "reminders",
+        "event"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Invite guests to an event",
+      "description": "Invite guests to an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the guests field",
+        "type or select the email addresses",
+        "tap Save; invitations are sent by the account provider where the calendar supports it"
+      ],
+      "keywords": [
+        "invite",
+        "guests",
+        "event",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "invite",
+        "guests",
+        "event"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Set the availability and privacy of an event",
+      "description": "Set the availability and privacy of an event as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the availability selector and choose Busy or Free",
+        "tap the privacy selector and choose Default, Private or Public",
+        "tap Save"
+      ],
+      "keywords": [
+        "availability",
+        "privacy",
+        "event",
+        "editor",
+        "selector",
+        "busy"
+      ],
+      "nav_hints": [
+        "availability",
+        "privacy",
+        "event"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set an event's time zone",
+      "description": "Set an event's time zone as documented for Etar Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the time zone control beside the start time",
+        "select the time zone from the list",
+        "tap Save"
+      ],
+      "keywords": [
+        "event's",
+        "time",
+        "zone",
+        "event",
+        "editor",
+        "control"
+      ],
+      "nav_hints": [
+        "event's",
+        "time",
+        "zone"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Edit an event",
+      "description": "Edit an event as documented for Etar Calendar.",
+      "actions": [
+        "Tap the event in any view",
+        "tap the edit (pencil) icon",
+        "change the fields",
+        "tap Save",
+        "for a repeating event choose whether the change applies to this occurrence, this and future occurrences, or the whole series"
+      ],
+      "keywords": [
+        "edit",
+        "event",
+        "any",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "event"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Delete an event",
+      "description": "Delete an event as documented for Etar Calendar.",
+      "actions": [
+        "Tap the event",
+        "tap the delete (bin) icon",
+        "confirm",
+        "for a repeating event choose the scope of the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "event",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "event"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Duplicate an event",
+      "description": "Duplicate an event as documented for Etar Calendar.",
+      "actions": [
+        "Tap the event",
+        "tap the overflow menu (three dots)",
+        "tap \"Duplicate\"",
+        "adjust the date and details of the copy",
+        "tap Save"
+      ],
+      "keywords": [
+        "duplicate",
+        "event",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "event"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Share an event",
+      "description": "Share an event as documented for Etar Calendar.",
+      "actions": [
+        "Tap the event",
+        "tap the overflow menu",
+        "tap \"Share\"/the share icon",
+        "choose the target app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "event",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "event"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Switch to the day view",
+      "description": "Switch to the day view as documented for Etar Calendar.",
+      "actions": [
+        "Open the navigation drawer (hamburger icon)",
+        "tap \"Day\"",
+        "swipe horizontally to move between days"
+      ],
+      "keywords": [
+        "switch",
+        "day",
+        "navigation",
+        "drawer",
+        "hamburger"
+      ],
+      "nav_hints": [
+        "day",
+        "switch"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Switch to the week view",
+      "description": "Switch to the week view as documented for Etar Calendar.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Week\"",
+        "swipe horizontally to move between weeks"
+      ],
+      "keywords": [
+        "switch",
+        "week",
+        "drawer"
+      ],
+      "nav_hints": [
+        "week",
+        "switch"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Switch to the month view",
+      "description": "Switch to the month view as documented for Etar Calendar.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Month\"",
+        "swipe to move between months",
+        "tap a day to see its events"
+      ],
+      "keywords": [
+        "switch",
+        "month",
+        "drawer"
+      ],
+      "nav_hints": [
+        "month",
+        "switch"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Switch to the agenda view",
+      "description": "Switch to the agenda view as documented for Etar Calendar.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Agenda\"",
+        "scroll the chronological list of upcoming events",
+        "tap an entry to open it"
+      ],
+      "keywords": [
+        "switch",
+        "agenda",
+        "drawer"
+      ],
+      "nav_hints": [
+        "agenda",
+        "switch"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Jump to today",
+      "description": "Jump to today as documented for Etar Calendar.",
+      "actions": [
+        "Tap the \"Today\" icon in the toolbar (the calendar icon showing the current date)",
+        "the view scrolls to the current date"
+      ],
+      "keywords": [
+        "jump",
+        "today",
+        "toolbar",
+        "calendar",
+        "showing",
+        "current"
+      ],
+      "nav_hints": [
+        "today",
+        "jump"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Go to a specific date",
+      "description": "Go to a specific date as documented for Etar Calendar.",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Go to date\"",
+        "select the date in the picker",
+        "tap OK"
+      ],
+      "keywords": [
+        "specific",
+        "date",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "go to date",
+        "specific",
+        "date"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Search events",
+      "description": "Search events as documented for Etar Calendar.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the text to look for",
+        "review the matching events",
+        "tap one to open it"
+      ],
+      "keywords": [
+        "search",
+        "events",
+        "toolbar",
+        "text",
+        "look"
+      ],
+      "nav_hints": [
+        "search",
+        "events"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Choose which calendars are displayed",
+      "description": "Choose which calendars are displayed as documented for Etar Calendar.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Calendars to display\" (or Settings",
+        "Calendars)",
+        "tick the calendars to show",
+        "tap OK"
+      ],
+      "keywords": [
+        "which",
+        "calendars",
+        "displayed",
+        "navigation",
+        "drawer",
+        "display"
+      ],
+      "nav_hints": [
+        "calendars to display",
+        "which",
+        "calendars",
+        "displayed"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Create a local (offline) calendar",
+      "description": "Create a local (offline) calendar as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the calendars/\"Add offline calendar\" entry",
+        "enter the calendar name",
+        "pick a colour",
+        "tap Save; it is stored on the device only"
+      ],
+      "keywords": [
+        "create",
+        "local",
+        "offline",
+        "calendar",
+        "settings",
+        "calendars"
+      ],
+      "nav_hints": [
+        "add offline calendar",
+        "create",
+        "local",
+        "offline"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Import events from an ICS file",
+      "description": "Import events from an ICS file as documented for Etar Calendar.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Import\"/\"Import ICS\"",
+        "select the .ics file with the picker",
+        "choose the destination calendar",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "events",
+        "ics",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "import",
+        "import ics",
+        "events",
+        "ics"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Export events to an ICS file",
+      "description": "Export events to an ICS file as documented for Etar Calendar.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Export\"",
+        "choose the calendars and the date range",
+        "choose the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "events",
+        "ics",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "export",
+        "events",
+        "ics",
+        "file"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Refresh/sync calendars",
+      "description": "Refresh/sync calendars as documented for Etar Calendar.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Refresh\"",
+        "the account sync adapters are triggered and the views reload"
+      ],
+      "keywords": [
+        "refresh",
+        "sync",
+        "calendars",
+        "overflow"
+      ],
+      "nav_hints": [
+        "refresh",
+        "sync",
+        "calendars"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Snooze or dismiss an event notification",
+      "description": "Snooze or dismiss an event notification as documented for Etar Calendar.",
+      "actions": [
+        "When the reminder notification appears",
+        "tap \"Snooze\" to postpone it by the configured interval, or tap \"Dismiss\" to clear it"
+      ],
+      "keywords": [
+        "snooze",
+        "dismiss",
+        "event",
+        "notification",
+        "reminder",
+        "appears"
+      ],
+      "nav_hints": [
+        "snooze",
+        "dismiss",
+        "event",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Add the calendar home screen widget",
+      "description": "Add the calendar home screen widget as documented for Etar Calendar.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Etar",
+        "drag the agenda or month widget onto the home screen",
+        "configure the calendars and the theme",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "calendar",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "calendar",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Change the theme and colours",
+      "description": "Change the theme and colours as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose light, dark, black or \"follow system\"",
+        "set the primary colour",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "follow system",
+        "change",
+        "theme",
+        "colours"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Set the first day of the week",
+      "description": "Set the first day of the week as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"General\"/\"Week starts on\"",
+        "select the weekday",
+        "return"
+      ],
+      "keywords": [
+        "first",
+        "day",
+        "week",
+        "settings",
+        "general",
+        "starts"
+      ],
+      "nav_hints": [
+        "general",
+        "week starts on",
+        "first",
+        "day"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Show or hide week numbers",
+      "description": "Show or hide week numbers as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "toggle the \"Show week number\" option"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "week",
+        "numbers",
+        "settings",
+        "general"
+      ],
+      "nav_hints": [
+        "show week number",
+        "show",
+        "hide",
+        "week"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Hide declined events",
+      "description": "Hide declined events as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "toggle \"Hide declined events\""
+      ],
+      "keywords": [
+        "hide",
+        "declined",
+        "events",
+        "settings",
+        "general"
+      ],
+      "nav_hints": [
+        "hide declined events",
+        "hide",
+        "declined",
+        "events"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Use a fixed (home) time zone",
+      "description": "Use a fixed (home) time zone as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "tap the time zone entry",
+        "enable \"Use home time zone\"",
+        "choose the time zone; the calendar keeps showing that zone while travelling"
+      ],
+      "keywords": [
+        "fixed",
+        "home",
+        "time",
+        "zone",
+        "settings",
+        "general"
+      ],
+      "nav_hints": [
+        "fixed",
+        "home",
+        "time",
+        "zone"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Set the default reminder time for new events",
+      "description": "Set the default reminder time for new events as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "tap \"Default reminder time\"",
+        "choose the lead time"
+      ],
+      "keywords": [
+        "default",
+        "reminder",
+        "time",
+        "new",
+        "events",
+        "settings"
+      ],
+      "nav_hints": [
+        "default reminder time",
+        "default",
+        "reminder",
+        "time"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Set the default event duration",
+      "description": "Set the default event duration as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "tap the default duration entry",
+        "select the length used for newly created events"
+      ],
+      "keywords": [
+        "default",
+        "event",
+        "duration",
+        "settings",
+        "general"
+      ],
+      "nav_hints": [
+        "default",
+        "event",
+        "duration"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Configure reminder notifications",
+      "description": "Configure reminder notifications as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"Reminders\"/Notifications",
+        "set the notification sound, vibration, pop-up behaviour and the default snooze delay",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "reminder",
+        "notifications",
+        "settings",
+        "reminders"
+      ],
+      "nav_hints": [
+        "reminders",
+        "configure",
+        "reminder",
+        "notifications"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Set quiet hours for notifications",
+      "description": "Set quiet hours for notifications as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "Reminders",
+        "enable quiet hours",
+        "set the start and end time",
+        "return"
+      ],
+      "keywords": [
+        "quiet",
+        "hours",
+        "notifications",
+        "settings",
+        "reminders"
+      ],
+      "nav_hints": [
+        "quiet",
+        "hours",
+        "notifications"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Change the number of days shown in the week/custom view",
+      "description": "Change the number of days shown in the week/custom view as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "General",
+        "tap the \"Days per week\"/custom view range entry",
+        "select the number of days"
+      ],
+      "keywords": [
+        "change",
+        "number",
+        "days",
+        "shown",
+        "week",
+        "custom"
+      ],
+      "nav_hints": [
+        "days per week",
+        "change",
+        "number",
+        "days"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Adjust the text and font size",
+      "description": "Adjust the text and font size as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the appearance/text size entry",
+        "select the size",
+        "return"
+      ],
+      "keywords": [
+        "adjust",
+        "text",
+        "font",
+        "size",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "adjust",
+        "text",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "View the about screen and version",
+      "description": "View the about screen and version as documented for Etar Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"/\"Copyright\"",
+        "read the version number, the licences and the source link"
+      ],
+      "keywords": [
+        "about",
+        "version",
+        "settings",
+        "copyright"
+      ],
+      "nav_hints": [
+        "about",
+        "copyright",
+        "version"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

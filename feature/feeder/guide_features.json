@@ -1,0 +1,301 @@
+{
+  "app": "Feeder",
+  "source": "guide",
+  "url": "Official Feeder repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-31 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Add a feed",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button (Add feed)"
+      ],
+      "keywords": [
+        "add",
+        "feed",
+        "url",
+        "floating"
+      ],
+      "nav_hints": [
+        "add",
+        "feed",
+        "url"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Edit a feed",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "long-press the feed (or open it and use the overflow menu)"
+      ],
+      "keywords": [
+        "edit",
+        "feed",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "edit feed",
+        "edit",
+        "feed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Organise feeds",
+      "description": "Open the feed editor",
+      "actions": [
+        "Open the feed editor",
+        "tap the tag field"
+      ],
+      "keywords": [
+        "organise",
+        "feeds",
+        "tags",
+        "groups"
+      ],
+      "nav_hints": [
+        "organise",
+        "feeds",
+        "tags"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Fetch the full article",
+      "description": "Open the article",
+      "actions": [
+        "Open the article",
+        "tap the \"Full text\"/reader toggle in the toolbar (or enable \"Fetch full articles\" for the feed in its editor)"
+      ],
+      "keywords": [
+        "fetch",
+        "full",
+        "article",
+        "text"
+      ],
+      "nav_hints": [
+        "full text",
+        "fetch full articles",
+        "fetch"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Mark an article",
+      "description": "In the article list",
+      "actions": [
+        "In the article list",
+        "swipe the item sideways to toggle its read state, or open the article (which marks it read) and use the overflow menu"
+      ],
+      "keywords": [
+        "mark",
+        "article",
+        "read",
+        "unread"
+      ],
+      "nav_hints": [
+        "mark as unread",
+        "mark",
+        "article"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Star an article",
+      "description": "Open the article",
+      "actions": [
+        "Open the article",
+        "tap the star/bookmark icon in the toolbar; starred articles are kept and can be filtered separately"
+      ],
+      "keywords": [
+        "star",
+        "bookmark",
+        "article",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "star",
+        "bookmark",
+        "article"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Sort the article list",
+      "description": "Open the article list",
+      "actions": [
+        "Open the article list",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "sort",
+        "article",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "sort",
+        "article"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Listen",
+      "description": "Open the article",
+      "actions": [
+        "Open the article",
+        "tap the \"Read aloud\"/text-to-speech icon in the toolbar"
+      ],
+      "keywords": [
+        "listen",
+        "article",
+        "text",
+        "speech"
+      ],
+      "nav_hints": [
+        "read aloud",
+        "listen",
+        "article"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Refresh feeds manually",
+      "description": "Open the article list",
+      "actions": [
+        "Open the article list",
+        "pull down to refresh, or tap the sync/refresh icon in the toolbar"
+      ],
+      "keywords": [
+        "refresh",
+        "feeds",
+        "manually",
+        "article"
+      ],
+      "nav_hints": [
+        "refresh",
+        "feeds",
+        "manually"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Enable new-article notifications",
+      "description": "Open Settings (or the feed editor)",
+      "actions": [
+        "Open Settings (or the feed editor)",
+        "enable notifications for the feed or globally"
+      ],
+      "keywords": [
+        "enable",
+        "new-article",
+        "notifications",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "new-article",
+        "notifications"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Export feeds",
+      "description": "Open the drawer or Settings",
+      "actions": [
+        "Open the drawer or Settings",
+        "tap \"Export feeds to OPML\""
+      ],
+      "keywords": [
+        "export",
+        "feeds",
+        "opml",
+        "file"
+      ],
+      "nav_hints": [
+        "export",
+        "feeds",
+        "opml"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Set how many articles",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the \"Maximum number of items per feed\"/retention entry"
+      ],
+      "keywords": [
+        "how",
+        "many",
+        "articles",
+        "kept"
+      ],
+      "nav_hints": [
+        "how",
+        "many",
+        "articles"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Change the theme",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "follow system",
+        "change",
+        "theme"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Control image loading",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "open the image section"
+      ],
+      "keywords": [
+        "control",
+        "image",
+        "loading",
+        "settings"
+      ],
+      "nav_hints": [
+        "control",
+        "image",
+        "loading"
+      ],
+      "source": "guide"
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "app": "Odyssey",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Odyssey repository documentation and F-Droid/store listing",
+  "description": "Hand-verified capability inventory for Odyssey (org.gateshipone.odyssey), version F-Droid build 42.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the music library by album",
+      "description": "Browse the music library by album as documented for Odyssey.",
+      "actions": [
+        "Open the app",
+        "grant the media permission",
+        "tap the \"Albums\" tab in My Music",
+        "scroll the album grid",
+        "tap an album to open its track list"
+      ],
+      "keywords": [
+        "browse",
+        "music",
+        "library",
+        "album",
+        "grant",
+        "media"
+      ],
+      "nav_hints": [
+        "albums",
+        "browse",
+        "music",
+        "library"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Browse the music library by artist",
+      "description": "Browse the music library by artist as documented for Odyssey.",
+      "actions": [
+        "Open the \"Artists\" tab",
+        "tap an artist",
+        "review their albums",
+        "tap an album to see its tracks"
+      ],
+      "keywords": [
+        "browse",
+        "music",
+        "library",
+        "artist",
+        "artists",
+        "tab"
+      ],
+      "nav_hints": [
+        "artists",
+        "browse",
+        "music",
+        "library"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Browse all tracks",
+      "description": "Browse all tracks as documented for Odyssey.",
+      "actions": [
+        "Open the \"All tracks\"/Tracks tab",
+        "scroll the alphabetical list",
+        "tap a track to play it"
+      ],
+      "keywords": [
+        "browse",
+        "all",
+        "tracks",
+        "tab",
+        "scroll",
+        "alphabetical"
+      ],
+      "nav_hints": [
+        "all tracks",
+        "browse",
+        "all",
+        "tracks"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Browse recently added albums",
+      "description": "Browse recently added albums as documented for Odyssey.",
+      "actions": [
+        "Open the \"Recent albums\"/recently added section",
+        "tap an album to open or play it"
+      ],
+      "keywords": [
+        "browse",
+        "recently",
+        "added",
+        "albums",
+        "recent",
+        "section"
+      ],
+      "nav_hints": [
+        "recent albums",
+        "browse",
+        "recently",
+        "added"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Browse the file system with the file browser",
+      "description": "Browse the file system with the file browser as documented for Odyssey.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Files\"/the file browser",
+        "navigate the folders on the device",
+        "tap an audio file to play it, or use the folder action to play or enqueue the whole folder"
+      ],
+      "keywords": [
+        "browse",
+        "file",
+        "system",
+        "browser",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "files",
+        "browse",
+        "file",
+        "system"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Play a track",
+      "description": "Play a track as documented for Odyssey.",
+      "actions": [
+        "Tap a track in any list",
+        "playback starts and the now-playing bar appears at the bottom",
+        "drag the bar upwards to open the full player"
+      ],
+      "keywords": [
+        "play",
+        "track",
+        "any",
+        "playback",
+        "starts",
+        "now-playing"
+      ],
+      "nav_hints": [
+        "play",
+        "track"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Control playback from the full player",
+      "description": "Control playback from the full player as documented for Odyssey.",
+      "actions": [
+        "Drag up the now-playing bar",
+        "use play/pause, previous and next",
+        "drag the seek bar to move within the track",
+        "tap the down arrow to collapse the player"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "full",
+        "player",
+        "drag",
+        "now-playing"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "full",
+        "player"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Use repeat and shuffle",
+      "description": "Use repeat and shuffle as documented for Odyssey.",
+      "actions": [
+        "Open the full player",
+        "tap the repeat icon to cycle through off, repeat all and repeat one",
+        "tap the shuffle icon to toggle random playback"
+      ],
+      "keywords": [
+        "repeat",
+        "shuffle",
+        "full",
+        "player",
+        "cycle",
+        "through"
+      ],
+      "nav_hints": [
+        "repeat",
+        "shuffle"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "View and edit the play queue",
+      "description": "View and edit the play queue as documented for Odyssey.",
+      "actions": [
+        "Open the full player",
+        "switch to the queue/playlist view",
+        "drag an item to reorder it",
+        "swipe an item away to remove it",
+        "tap an item to jump to it"
+      ],
+      "keywords": [
+        "edit",
+        "play",
+        "queue",
+        "full",
+        "player",
+        "switch"
+      ],
+      "nav_hints": [
+        "edit",
+        "play",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Add an album, artist or track to the queue",
+      "description": "Add an album, artist or track to the queue as documented for Odyssey.",
+      "actions": [
+        "Long-press the item (or tap its overflow menu)",
+        "choose \"Play\", \"Enqueue\"/\"Add to queue\" or \"Play next\"",
+        "the selection is appended to or inserted into the queue"
+      ],
+      "keywords": [
+        "add",
+        "album",
+        "artist",
+        "track",
+        "queue",
+        "long-press"
+      ],
+      "nav_hints": [
+        "play",
+        "enqueue",
+        "add to queue",
+        "play next"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Clear the play queue",
+      "description": "Clear the play queue as documented for Odyssey.",
+      "actions": [
+        "Open the full player or the queue view",
+        "tap the overflow menu",
+        "tap the clear/\"Clear playlist\" action",
+        "confirm"
+      ],
+      "keywords": [
+        "clear",
+        "play",
+        "queue",
+        "full",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "clear playlist",
+        "clear",
+        "play",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Save the current queue as a playlist",
+      "description": "Save the current queue as a playlist as documented for Odyssey.",
+      "actions": [
+        "Open the full player or queue view",
+        "tap the overflow menu",
+        "tap \"Save playlist\"",
+        "enter the playlist name",
+        "tap OK"
+      ],
+      "keywords": [
+        "save",
+        "current",
+        "queue",
+        "playlist",
+        "full",
+        "player"
+      ],
+      "nav_hints": [
+        "save playlist",
+        "save",
+        "current",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Browse and play saved playlists",
+      "description": "Browse and play saved playlists as documented for Odyssey.",
+      "actions": [
+        "Open the \"Playlists\" tab",
+        "tap a playlist to see its tracks",
+        "tap a track to play from that playlist, or use the overflow menu to play or enqueue the whole playlist"
+      ],
+      "keywords": [
+        "browse",
+        "play",
+        "saved",
+        "playlists",
+        "tab",
+        "playlist"
+      ],
+      "nav_hints": [
+        "playlists",
+        "browse",
+        "play",
+        "saved"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Delete a playlist",
+      "description": "Delete a playlist as documented for Odyssey.",
+      "actions": [
+        "Open the Playlists tab",
+        "long-press the playlist",
+        "tap the delete action",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "playlist",
+        "playlists",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Create a bookmark to resume an audiobook or podcast",
+      "description": "Create a bookmark to resume an audiobook or podcast as documented for Odyssey.",
+      "actions": [
+        "While playing",
+        "open the full player or the overflow menu",
+        "tap \"Create bookmark\"",
+        "enter a name",
+        "tap OK; the current queue and playback position are stored"
+      ],
+      "keywords": [
+        "create",
+        "bookmark",
+        "resume",
+        "audiobook",
+        "podcast",
+        "while"
+      ],
+      "nav_hints": [
+        "create bookmark",
+        "create",
+        "bookmark",
+        "resume"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Resume from a bookmark",
+      "description": "Resume from a bookmark as documented for Odyssey.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Bookmarks\"",
+        "tap the bookmark",
+        "the saved queue is restored and playback resumes from the stored position"
+      ],
+      "keywords": [
+        "resume",
+        "bookmark",
+        "navigation",
+        "drawer",
+        "bookmarks"
+      ],
+      "nav_hints": [
+        "bookmarks",
+        "resume",
+        "bookmark"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Delete a bookmark",
+      "description": "Delete a bookmark as documented for Odyssey.",
+      "actions": [
+        "Open the Bookmarks view",
+        "long-press the bookmark",
+        "tap the delete action",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "bookmark",
+        "bookmarks",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "bookmark"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Search the library",
+      "description": "Search the library as documented for Odyssey.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the query",
+        "review the matching artists, albums and tracks",
+        "tap a result to play or open it"
+      ],
+      "keywords": [
+        "search",
+        "library",
+        "toolbar",
+        "query"
+      ],
+      "nav_hints": [
+        "search",
+        "library"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Jump from a track to its album or artist",
+      "description": "Jump from a track to its album or artist as documented for Odyssey.",
+      "actions": [
+        "Long-press a track (or open the player overflow menu)",
+        "tap \"Show album\" or \"Show artist\"",
+        "the corresponding detail view opens"
+      ],
+      "keywords": [
+        "jump",
+        "track",
+        "album",
+        "artist",
+        "long-press",
+        "player"
+      ],
+      "nav_hints": [
+        "show album",
+        "show artist",
+        "jump",
+        "track"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "View track and album information",
+      "description": "View track and album information as documented for Odyssey.",
+      "actions": [
+        "Long-press a track",
+        "tap the details/information action",
+        "read the title, artist, album, track number, duration and file path"
+      ],
+      "keywords": [
+        "track",
+        "album",
+        "information",
+        "long-press",
+        "details",
+        "action"
+      ],
+      "nav_hints": [
+        "track",
+        "album",
+        "information"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Download artwork for artists and albums",
+      "description": "Download artwork for artists and albums as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the artwork section",
+        "choose the artwork provider (Fanart.tv, Last.fm or MusicBrainz)",
+        "enable the automatic download",
+        "optionally tap the bulk download action to fetch the missing images"
+      ],
+      "keywords": [
+        "download",
+        "artwork",
+        "artists",
+        "albums",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "download",
+        "artwork",
+        "artists",
+        "albums"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Clear the artwork cache",
+      "description": "Clear the artwork cache as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the artwork section",
+        "tap the \"Clear image cache\"/clear artwork action",
+        "confirm"
+      ],
+      "keywords": [
+        "clear",
+        "artwork",
+        "cache",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "clear image cache",
+        "clear",
+        "artwork",
+        "cache"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Restrict artwork downloads to Wi-Fi",
+      "description": "Restrict artwork downloads to Wi-Fi as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the artwork section",
+        "enable the Wi-Fi-only download option",
+        "return"
+      ],
+      "keywords": [
+        "restrict",
+        "artwork",
+        "downloads",
+        "wi-fi",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "restrict",
+        "artwork",
+        "downloads",
+        "wi-fi"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Control playback from the lock screen and the notification",
+      "description": "Control playback from the lock screen and the notification as documented for Odyssey.",
+      "actions": [
+        "Start playback",
+        "pull down the notification shade or wake the lock screen",
+        "use the play/pause, previous, next and stop controls shown with the album art"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "lock",
+        "notification",
+        "start",
+        "pull"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "lock",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Add the Odyssey home screen widget",
+      "description": "Add the Odyssey home screen widget as documented for Odyssey.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Odyssey",
+        "drag the widget onto the home screen",
+        "use its controls to play, pause and skip without opening the app"
+      ],
+      "keywords": [
+        "add",
+        "odyssey",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "odyssey",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Scrobble to Last.fm through a scrobbler app",
+      "description": "Scrobble to Last.fm through a scrobbler app as documented for Odyssey.",
+      "actions": [
+        "Install a compatible scrobbler such as Simple Last.fm Scrobbler",
+        "configure it with the Last.fm account",
+        "play music in Odyssey; the track changes are broadcast and scrobbled automatically"
+      ],
+      "keywords": [
+        "scrobble",
+        "last",
+        "through",
+        "scrobbler",
+        "install",
+        "compatible"
+      ],
+      "nav_hints": [
+        "scrobble",
+        "last",
+        "through",
+        "scrobbler"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Open the system equaliser",
+      "description": "Open the system equaliser as documented for Odyssey.",
+      "actions": [
+        "Open the navigation drawer or the player overflow menu",
+        "tap the equaliser entry",
+        "the system audio effects panel opens",
+        "adjust the bands and presets",
+        "return"
+      ],
+      "keywords": [
+        "system",
+        "equaliser",
+        "navigation",
+        "drawer",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "system",
+        "equaliser"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose one of the Material colour themes and the light, dark or OLED-black variant",
+        "the app restarts the view with the new theme"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Change the library view style",
+      "description": "Change the library view style as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the library/appearance section",
+        "choose whether albums and artists are shown as a grid or as a list",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "library",
+        "style",
+        "settings",
+        "appearance",
+        "section"
+      ],
+      "nav_hints": [
+        "change",
+        "library",
+        "style"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Change the album and track sort order",
+      "description": "Change the album and track sort order as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the library section",
+        "tap the album sort entry",
+        "choose the ordering (for example by name or by year)",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "album",
+        "track",
+        "sort",
+        "order",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "album",
+        "track",
+        "sort"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Configure playback behaviour",
+      "description": "Configure playback behaviour as documented for Odyssey.",
+      "actions": [
+        "Open Settings",
+        "the playback section",
+        "set the resume step size for the seek controls, the behaviour on headphone disconnect and the hardware media-button handling",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "playback",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "playback",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Rescan the media library",
+      "description": "Rescan the media library as documented for Odyssey.",
+      "actions": [
+        "Open Settings (or the drawer)",
+        "tap the library refresh/rescan action",
+        "wait for the Android media scanner to finish",
+        "the new files appear in the lists"
+      ],
+      "keywords": [
+        "rescan",
+        "media",
+        "library",
+        "settings",
+        "drawer",
+        "refresh"
+      ],
+      "nav_hints": [
+        "rescan",
+        "media",
+        "library"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for Odyssey.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"About\"",
+        "read the version number, the source repository link and the GPL licence information"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

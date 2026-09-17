@@ -1,0 +1,302 @@
+{
+  "app": "VLC",
+  "source": "guide",
+  "url": "Official VideoLAN documentation and in-app menus",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-46 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the video library",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the Video tab"
+      ],
+      "keywords": [
+        "browse",
+        "video",
+        "library",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "video",
+        "library"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Browse network shares",
+      "description": "Open the \"Browse\" tab",
+      "actions": [
+        "Open the \"Browse\" tab",
+        "under Local Network tap a discovered server (UPnP/DLNA, SMB, FTP, SFTP or NFS)"
+      ],
+      "keywords": [
+        "browse",
+        "network",
+        "shares",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "network",
+        "shares"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Mark a folder",
+      "description": "Open the Browse tab",
+      "actions": [
+        "Open the Browse tab",
+        "long-press the folder or server"
+      ],
+      "keywords": [
+        "mark",
+        "folder",
+        "share",
+        "favourite"
+      ],
+      "nav_hints": [
+        "mark",
+        "folder",
+        "share"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Switch between list",
+      "description": "Open a library tab",
+      "actions": [
+        "Open a library tab",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "grid",
+        "display"
+      ],
+      "nav_hints": [
+        "list or grid",
+        "switch",
+        "between"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Use gesture controls",
+      "description": "During playback",
+      "actions": [
+        "During playback",
+        "swipe vertically on the right half for volume"
+      ],
+      "keywords": [
+        "gesture",
+        "controls",
+        "volume",
+        "brightness"
+      ],
+      "nav_hints": [
+        "gesture",
+        "controls",
+        "volume"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Download subtitles",
+      "description": "Long-press a video in the library (or open the player overflow menu)",
+      "actions": [
+        "Long-press a video in the library (or open the player overflow menu)",
+        "tap \"Download subtitles\""
+      ],
+      "keywords": [
+        "download",
+        "subtitles",
+        "long-press",
+        "video"
+      ],
+      "nav_hints": [
+        "download subtitles",
+        "download",
+        "subtitles"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Change the playback speed",
+      "description": "During playback",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu"
+      ],
+      "keywords": [
+        "change",
+        "playback",
+        "speed",
+        "during"
+      ],
+      "nav_hints": [
+        "playback speed",
+        "change",
+        "playback"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Jump",
+      "description": "During playback",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu"
+      ],
+      "keywords": [
+        "jump",
+        "specific",
+        "time",
+        "during"
+      ],
+      "nav_hints": [
+        "jump to time",
+        "jump",
+        "specific"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Play a video",
+      "description": "During playback",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu"
+      ],
+      "keywords": [
+        "play",
+        "video",
+        "audio",
+        "only"
+      ],
+      "nav_hints": [
+        "play as audio",
+        "play",
+        "video"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Adjust video filters",
+      "description": "During video playback",
+      "actions": [
+        "During video playback",
+        "tap the player overflow menu"
+      ],
+      "keywords": [
+        "adjust",
+        "video",
+        "filters",
+        "brightness"
+      ],
+      "nav_hints": [
+        "video filters",
+        "adjust",
+        "video"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Add media",
+      "description": "Long-press a track, album or video",
+      "actions": [
+        "Long-press a track, album or video",
+        "tap \"Add to playlist\""
+      ],
+      "keywords": [
+        "add",
+        "media",
+        "existing",
+        "playlist"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "add",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Add media",
+      "description": "Long-press a track or video",
+      "actions": [
+        "Long-press a track or video",
+        "tap \"Append\"/\"Add to queue\""
+      ],
+      "keywords": [
+        "add",
+        "media",
+        "queue",
+        "without"
+      ],
+      "nav_hints": [
+        "append",
+        "add to queue",
+        "play next"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Share a media file",
+      "description": "Long-press the item",
+      "actions": [
+        "Long-press the item",
+        "tap the share action"
+      ],
+      "keywords": [
+        "share",
+        "media",
+        "file",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "media",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Force a media library",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Media library"
+      ],
+      "keywords": [
+        "force",
+        "media",
+        "library",
+        "rescan"
+      ],
+      "nav_hints": [
+        "rescan",
+        "force",
+        "media"
+      ],
+      "source": "guide"
+    }
+  ]
+}

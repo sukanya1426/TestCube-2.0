@@ -1,0 +1,1116 @@
+{
+  "app": "Amaze File Manager",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Amaze File Manager repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Amaze File Manager (com.amaze.filemanager), version 3.11.3.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse internal storage and the SD card",
+      "description": "Browse internal storage and the SD card as documented for Amaze File Manager.",
+      "actions": [
+        "Open the app",
+        "open the navigation drawer (hamburger icon)",
+        "tap the storage volume",
+        "tap folders to navigate",
+        "tap the back arrow or the breadcrumb to move up"
+      ],
+      "keywords": [
+        "browse",
+        "internal",
+        "storage",
+        "card",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "browse",
+        "internal",
+        "storage",
+        "card"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a new folder",
+      "description": "Create a new folder as documented for Amaze File Manager.",
+      "actions": [
+        "Navigate to the target directory",
+        "tap the \"+\" floating action button",
+        "tap \"Folder\"",
+        "enter the folder name",
+        "tap Create"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "folder",
+        "navigate",
+        "target",
+        "directory"
+      ],
+      "nav_hints": [
+        "folder",
+        "create",
+        "new"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Create a new empty file",
+      "description": "Create a new empty file as documented for Amaze File Manager.",
+      "actions": [
+        "Navigate to the target directory",
+        "tap the \"+\" button",
+        "tap \"File\"",
+        "enter the file name",
+        "tap Create"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "empty",
+        "file",
+        "navigate",
+        "target"
+      ],
+      "nav_hints": [
+        "file",
+        "create",
+        "new",
+        "empty"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Copy files and folders",
+      "description": "Copy files and folders as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item(s) to select them",
+        "tap the copy icon in the contextual toolbar",
+        "navigate to the destination folder",
+        "tap the paste button"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press",
+        "them",
+        "contextual"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Move (cut) files and folders",
+      "description": "Move (cut) files and folders as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the cut/move icon",
+        "navigate to the destination",
+        "tap the paste button"
+      ],
+      "keywords": [
+        "move",
+        "cut",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "move",
+        "cut",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Rename a file or folder",
+      "description": "Rename a file or folder as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu in the contextual toolbar",
+        "tap \"Rename\"",
+        "enter the new name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "file",
+        "folder",
+        "long-press",
+        "overflow",
+        "contextual"
+      ],
+      "nav_hints": [
+        "rename",
+        "file",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Delete files and folders",
+      "description": "Delete files and folders as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete (bin) icon",
+        "confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Select multiple items",
+      "description": "Select multiple items as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the first item",
+        "tap the further items to add them",
+        "use the select-all action in the toolbar if required",
+        "apply the wanted bulk operation"
+      ],
+      "keywords": [
+        "multiple",
+        "long-press",
+        "first",
+        "further",
+        "add",
+        "them"
+      ],
+      "nav_hints": [
+        "multiple"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Search for files in the current folder",
+      "description": "Search for files in the current folder as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the file name",
+        "review the results as they appear"
+      ],
+      "keywords": [
+        "search",
+        "files",
+        "current",
+        "folder",
+        "toolbar",
+        "file"
+      ],
+      "nav_hints": [
+        "search",
+        "files",
+        "current",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Run a deep search across subfolders",
+      "description": "Run a deep search across subfolders as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the search icon",
+        "type the query",
+        "tap the \"Search in this folder and subfolders\"/deep search option in the result banner",
+        "wait for the recursive scan to finish"
+      ],
+      "keywords": [
+        "run",
+        "deep",
+        "search",
+        "across",
+        "subfolders",
+        "query"
+      ],
+      "nav_hints": [
+        "run",
+        "deep",
+        "search",
+        "across"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Sort the file list",
+      "description": "Sort the file list as documented for Amaze File Manager.",
+      "actions": [
+        "Open a folder",
+        "tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose the criterion (name, last modified, size or type) and the direction",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "folder",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "file"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Switch between list and grid view",
+      "description": "Switch between list and grid view as documented for Amaze File Manager.",
+      "actions": [
+        "Open a folder",
+        "tap the overflow menu",
+        "tap the \"View\" / grid-list toggle",
+        "the layout changes for that folder"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "grid",
+        "folder",
+        "overflow"
+      ],
+      "nav_hints": [
+        "view",
+        "switch",
+        "between",
+        "grid"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Show or hide hidden files",
+      "description": "Show or hide hidden files as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Show hidden files\""
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files",
+        "overflow",
+        "toggle"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide",
+        "hidden"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Open a file with an external app",
+      "description": "Open a file with an external app as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the file",
+        "if several handlers exist, choose the app in the chooser; or long-press the file",
+        "tap the overflow menu",
+        "tap \"Open with\"",
+        "select the app"
+      ],
+      "keywords": [
+        "file",
+        "external",
+        "several",
+        "handlers",
+        "exist",
+        "chooser"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "external"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Share files",
+      "description": "Share files as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the share icon",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "files",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "files"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "View file properties",
+      "description": "View file properties as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the file",
+        "tap the overflow menu",
+        "tap \"Properties\"",
+        "read the path, size, last-modified time, permissions and the MD5/SHA-1 checksums"
+      ],
+      "keywords": [
+        "file",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "file"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Change file permissions (root)",
+      "description": "Change file permissions (root) as documented for Amaze File Manager.",
+      "actions": [
+        "Enable root access in Settings",
+        "long-press the file",
+        "tap Properties",
+        "open the Permissions tab",
+        "tick the read/write/execute boxes for owner, group and others",
+        "tap Apply"
+      ],
+      "keywords": [
+        "change",
+        "file",
+        "permissions",
+        "root",
+        "enable",
+        "access"
+      ],
+      "nav_hints": [
+        "change",
+        "file",
+        "permissions",
+        "root"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Compress files into an archive",
+      "description": "Compress files into an archive as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the overflow menu",
+        "tap \"Compress\"",
+        "choose the archive format (for example ZIP, TAR or TAR.GZ)",
+        "enter the archive name",
+        "tap Create"
+      ],
+      "keywords": [
+        "compress",
+        "files",
+        "archive",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "compress",
+        "files",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Extract an archive",
+      "description": "Extract an archive as documented for Amaze File Manager.",
+      "actions": [
+        "Tap an archive file (ZIP, RAR, TAR, TAR.GZ, 7Z)",
+        "the archive viewer opens",
+        "tap the extract action",
+        "choose the destination folder",
+        "confirm"
+      ],
+      "keywords": [
+        "extract",
+        "archive",
+        "file",
+        "zip",
+        "rar",
+        "tar"
+      ],
+      "nav_hints": [
+        "extract",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Browse inside an archive without extracting it",
+      "description": "Browse inside an archive without extracting it as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the archive file",
+        "browse the entries",
+        "tap a single entry to preview or extract just that item"
+      ],
+      "keywords": [
+        "browse",
+        "inside",
+        "archive",
+        "without",
+        "extracting",
+        "file"
+      ],
+      "nav_hints": [
+        "browse",
+        "inside",
+        "archive",
+        "without"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Encrypt a file",
+      "description": "Encrypt a file as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the file",
+        "tap the overflow menu",
+        "tap \"Encrypt\"",
+        "choose to use a password or the device fingerprint",
+        "set the password",
+        "confirm; an .aze encrypted file is produced"
+      ],
+      "keywords": [
+        "encrypt",
+        "file",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "encrypt",
+        "file"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Decrypt a file",
+      "description": "Decrypt a file as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the encrypted (.aze) file",
+        "enter the password or authenticate with the fingerprint",
+        "choose the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "decrypt",
+        "file",
+        "encrypted",
+        "aze",
+        "password",
+        "authenticate"
+      ],
+      "nav_hints": [
+        "decrypt",
+        "file"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Edit a text file in the built-in editor",
+      "description": "Edit a text file in the built-in editor as documented for Amaze File Manager.",
+      "actions": [
+        "Tap a text file",
+        "choose the internal text editor",
+        "edit the content",
+        "tap the save icon",
+        "tap back to exit"
+      ],
+      "keywords": [
+        "edit",
+        "text",
+        "file",
+        "built-in",
+        "editor",
+        "internal"
+      ],
+      "nav_hints": [
+        "edit",
+        "text",
+        "file",
+        "built-in"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Add a folder to the bookmarks",
+      "description": "Add a folder to the bookmarks as documented for Amaze File Manager.",
+      "actions": [
+        "Navigate to the folder",
+        "open the navigation drawer",
+        "tap the \"+\" beside Bookmarks (or long-press the folder",
+        "\"Add to bookmarks\")",
+        "confirm the name",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "folder",
+        "bookmarks",
+        "navigate",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "add to bookmarks",
+        "add",
+        "folder",
+        "bookmarks"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Edit or remove a bookmark",
+      "description": "Edit or remove a bookmark as documented for Amaze File Manager.",
+      "actions": [
+        "Open the drawer",
+        "long-press the bookmark",
+        "choose Edit to change the name and path, or Delete to remove it",
+        "confirm"
+      ],
+      "keywords": [
+        "edit",
+        "remove",
+        "bookmark",
+        "drawer",
+        "long-press"
+      ],
+      "nav_hints": [
+        "edit",
+        "remove",
+        "bookmark"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Open a second tab / use the dual pane",
+      "description": "Open a second tab / use the dual pane as documented for Amaze File Manager.",
+      "actions": [
+        "Tap the tab indicator at the top of the file list",
+        "swipe between the two tabs",
+        "use one tab as the source and the other as the destination when copying"
+      ],
+      "keywords": [
+        "second",
+        "tab",
+        "dual",
+        "pane",
+        "indicator",
+        "top"
+      ],
+      "nav_hints": [
+        "second",
+        "tab",
+        "dual",
+        "pane"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Set a folder as the home directory",
+      "description": "Set a folder as the home directory as documented for Amaze File Manager.",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu",
+        "tap \"Set as home\"; opening the app afterwards starts in that folder"
+      ],
+      "keywords": [
+        "folder",
+        "home",
+        "directory",
+        "navigate",
+        "overflow"
+      ],
+      "nav_hints": [
+        "set as home",
+        "folder",
+        "home",
+        "directory"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Open the app manager",
+      "description": "Open the app manager as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Apps\"",
+        "review the installed applications with their sizes and versions",
+        "tap an app for the actions"
+      ],
+      "keywords": [
+        "manager",
+        "navigation",
+        "drawer",
+        "apps"
+      ],
+      "nav_hints": [
+        "apps",
+        "manager"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Uninstall an application from the app manager",
+      "description": "Uninstall an application from the app manager as documented for Amaze File Manager.",
+      "actions": [
+        "Open the Apps list",
+        "long-press the application",
+        "tap the uninstall action",
+        "confirm the system prompt"
+      ],
+      "keywords": [
+        "uninstall",
+        "application",
+        "manager",
+        "apps",
+        "long-press"
+      ],
+      "nav_hints": [
+        "uninstall",
+        "application",
+        "manager"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Back up an installed app's APK",
+      "description": "Back up an installed app's APK as documented for Amaze File Manager.",
+      "actions": [
+        "Open the Apps list",
+        "long-press the application",
+        "tap the backup/\"Save APK\" action",
+        "choose the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "back",
+        "installed",
+        "app's",
+        "apk",
+        "apps",
+        "long-press"
+      ],
+      "nav_hints": [
+        "save apk",
+        "back",
+        "installed",
+        "app's"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Start the built-in FTP server",
+      "description": "Start the built-in FTP server as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"FTP\"/FTP server",
+        "tap the start button",
+        "note the displayed ftp:// address and port",
+        "connect from a computer on the same network",
+        "tap stop to end it"
+      ],
+      "keywords": [
+        "start",
+        "built-in",
+        "ftp",
+        "server",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "ftp",
+        "start",
+        "built-in",
+        "server"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Configure the FTP server",
+      "description": "Configure the FTP server as documented for Amaze File Manager.",
+      "actions": [
+        "Open the FTP screen",
+        "tap the overflow menu/settings",
+        "set the port, the shared directory, the login (anonymous or username and password), the read-only flag, the timeout and whether it stays on over Wi-Fi only",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "ftp",
+        "server",
+        "overflow",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "ftp",
+        "server"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Connect to an SMB (Windows) share",
+      "description": "Connect to an SMB (Windows) share as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the \"+\" beside Network/Cloud",
+        "tap \"SMB connection\"",
+        "enter the server IP or name, the share path, the username and the password",
+        "tap Create",
+        "tap the new entry to browse it"
+      ],
+      "keywords": [
+        "connect",
+        "smb",
+        "windows",
+        "share",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "smb connection",
+        "connect",
+        "smb",
+        "windows"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Connect over SFTP/SSH",
+      "description": "Connect over SFTP/SSH as documented for Amaze File Manager.",
+      "actions": [
+        "Open the drawer",
+        "tap the \"+\" beside the network section",
+        "tap \"SCP/SFTP connection\"",
+        "enter the host, port, username and password or key",
+        "accept the host fingerprint",
+        "tap Create"
+      ],
+      "keywords": [
+        "connect",
+        "over",
+        "sftp",
+        "ssh",
+        "drawer",
+        "beside"
+      ],
+      "nav_hints": [
+        "scp/sftp connection",
+        "connect",
+        "over",
+        "sftp"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Connect to a cloud storage account",
+      "description": "Connect to a cloud storage account as documented for Amaze File Manager.",
+      "actions": [
+        "Open the drawer",
+        "tap the \"+\" beside the cloud section",
+        "choose the provider (for example Dropbox, Google Drive, OneDrive or Box)",
+        "sign in and authorise",
+        "the account appears in the drawer for browsing"
+      ],
+      "keywords": [
+        "connect",
+        "cloud",
+        "storage",
+        "account",
+        "drawer",
+        "beside"
+      ],
+      "nav_hints": [
+        "connect",
+        "cloud",
+        "storage",
+        "account"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Enable root explorer mode",
+      "description": "Enable root explorer mode as documented for Amaze File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Root access\"/root explorer option",
+        "toggle it on",
+        "grant the superuser request",
+        "system directories become browsable and writable"
+      ],
+      "keywords": [
+        "enable",
+        "root",
+        "explorer",
+        "mode",
+        "settings",
+        "access"
+      ],
+      "nav_hints": [
+        "root access",
+        "enable",
+        "root",
+        "explorer"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "View recent files",
+      "description": "View recent files as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Recent files\"/the recent section on the home screen",
+        "tap a file to open it"
+      ],
+      "keywords": [
+        "recent",
+        "files",
+        "navigation",
+        "drawer",
+        "section",
+        "home"
+      ],
+      "nav_hints": [
+        "recent files",
+        "recent",
+        "files"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Browse files by category",
+      "description": "Browse files by category as documented for Amaze File Manager.",
+      "actions": [
+        "Open the drawer or the home screen",
+        "tap a category (Images, Videos, Audio, Documents, Apps)",
+        "review the collected files of that type"
+      ],
+      "keywords": [
+        "browse",
+        "files",
+        "category",
+        "drawer",
+        "home",
+        "images"
+      ],
+      "nav_hints": [
+        "browse",
+        "files",
+        "category"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for Amaze File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"/Theme",
+        "choose Light, Dark, Black or \"Follow system\"",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "appearance",
+        "follow system",
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Change the accent and colour scheme",
+      "description": "Change the accent and colour scheme as documented for Amaze File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the colours entry",
+        "select the primary, accent and icon colours (separate values can be set for the light and dark themes)",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "accent",
+        "colour",
+        "scheme",
+        "settings",
+        "colours"
+      ],
+      "nav_hints": [
+        "change",
+        "accent",
+        "colour",
+        "scheme"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Configure behaviour settings",
+      "description": "Configure behaviour settings as documented for Amaze File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap \"Behaviour\"",
+        "toggle options such as showing the file size in the list, the thumbnail display, the file-count display, the \"exit on back press\" behaviour and the changing of the toolbar colour per folder"
+      ],
+      "keywords": [
+        "configure",
+        "behaviour",
+        "settings"
+      ],
+      "nav_hints": [
+        "behaviour",
+        "configure",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Enable the encrypted folder/hidden files protection",
+      "description": "Enable the encrypted folder/hidden files protection as documented for Amaze File Manager.",
+      "actions": [
+        "Open Settings",
+        "open the security section",
+        "enable the password/fingerprint protection for encrypted files",
+        "confirm"
+      ],
+      "keywords": [
+        "enable",
+        "encrypted",
+        "folder",
+        "hidden",
+        "files",
+        "protection"
+      ],
+      "nav_hints": [
+        "enable",
+        "encrypted",
+        "folder",
+        "hidden"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Add a shortcut to a folder on the home screen",
+      "description": "Add a shortcut to a folder on the home screen as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu",
+        "tap \"Add shortcut\"",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "add",
+        "shortcut",
+        "folder",
+        "home",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "add shortcut",
+        "add",
+        "shortcut",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Copy a file path to the clipboard",
+      "description": "Copy a file path to the clipboard as documented for Amaze File Manager.",
+      "actions": [
+        "Long-press the file",
+        "tap the overflow menu",
+        "tap \"Copy path\"; the full path is placed on the clipboard"
+      ],
+      "keywords": [
+        "copy",
+        "file",
+        "path",
+        "clipboard",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "copy path",
+        "copy",
+        "file",
+        "path"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "View storage usage",
+      "description": "View storage usage as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "the storage entries show the used and total space",
+        "tap a volume to browse it"
+      ],
+      "keywords": [
+        "storage",
+        "usage",
+        "navigation",
+        "drawer",
+        "entries",
+        "show"
+      ],
+      "nav_hints": [
+        "storage",
+        "usage"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Open the about screen and licences",
+      "description": "Open the about screen and licences as documented for Amaze File Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"About\"",
+        "read the version, the changelog, the contributor list and the open-source licences"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

@@ -1,0 +1,1113 @@
+{
+  "app": "VLC",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official VideoLAN documentation and in-app menus",
+  "description": "Hand-verified capability inventory for VLC (org.videolan.vlc), version 3.7.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the video library",
+      "description": "Browse the video library as documented for VLC.",
+      "actions": [
+        "Open the app",
+        "tap the Video tab",
+        "wait for the media library scan",
+        "scroll the thumbnails",
+        "tap a video to play it"
+      ],
+      "keywords": [
+        "browse",
+        "video",
+        "library",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "video",
+        "library"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Browse the audio library",
+      "description": "Browse the audio library as documented for VLC.",
+      "actions": [
+        "Open the app",
+        "tap the Audio tab",
+        "switch between the Artists, Albums, Tracks, Genres and Playlists sub-tabs",
+        "tap an item to open or play it"
+      ],
+      "keywords": [
+        "browse",
+        "audio",
+        "library",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "audio",
+        "library"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Browse device folders and storage",
+      "description": "Browse device folders and storage as documented for VLC.",
+      "actions": [
+        "Open the \"Browse\" tab",
+        "tap the internal storage or SD card entry",
+        "navigate the folders",
+        "tap a media file to play it"
+      ],
+      "keywords": [
+        "browse",
+        "device",
+        "folders",
+        "storage",
+        "tab",
+        "internal"
+      ],
+      "nav_hints": [
+        "browse",
+        "device",
+        "folders",
+        "storage"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Browse network shares",
+      "description": "Browse network shares as documented for VLC.",
+      "actions": [
+        "Open the \"Browse\" tab",
+        "under Local Network tap a discovered server (UPnP/DLNA, SMB, FTP, SFTP or NFS)",
+        "enter credentials if prompted",
+        "browse and tap a file to play it"
+      ],
+      "keywords": [
+        "browse",
+        "network",
+        "shares",
+        "tab",
+        "under",
+        "local"
+      ],
+      "nav_hints": [
+        "browse",
+        "network",
+        "shares"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add a network share manually",
+      "description": "Add a network share manually as documented for VLC.",
+      "actions": [
+        "Open the Browse tab",
+        "tap the \"+\"/\"New network share\" action",
+        "choose the protocol",
+        "enter the server address, port, path and credentials",
+        "tap Save; the share appears in the favourites list"
+      ],
+      "keywords": [
+        "add",
+        "network",
+        "share",
+        "manually",
+        "browse",
+        "tab"
+      ],
+      "nav_hints": [
+        "new network share",
+        "add",
+        "network",
+        "share"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Open a network stream from a URL",
+      "description": "Open a network stream from a URL as documented for VLC.",
+      "actions": [
+        "Open the navigation drawer (hamburger icon)",
+        "tap \"New stream\"/\"Open network stream\"",
+        "paste the stream URL",
+        "tap the play/go button"
+      ],
+      "keywords": [
+        "network",
+        "stream",
+        "url",
+        "navigation",
+        "drawer",
+        "hamburger"
+      ],
+      "nav_hints": [
+        "new stream",
+        "open network stream",
+        "network",
+        "stream"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Mark a folder or share as a favourite",
+      "description": "Mark a folder or share as a favourite as documented for VLC.",
+      "actions": [
+        "Open the Browse tab",
+        "long-press the folder or server",
+        "tap the favourite (star/heart) action; it appears at the top of the Browse screen"
+      ],
+      "keywords": [
+        "mark",
+        "folder",
+        "share",
+        "favourite",
+        "browse",
+        "tab"
+      ],
+      "nav_hints": [
+        "mark",
+        "folder",
+        "share",
+        "favourite"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Search the media library",
+      "description": "Search the media library as documented for VLC.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the title, artist or album",
+        "tap a result to play it"
+      ],
+      "keywords": [
+        "search",
+        "media",
+        "library",
+        "toolbar",
+        "title",
+        "artist"
+      ],
+      "nav_hints": [
+        "search",
+        "media",
+        "library"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Sort the media lists",
+      "description": "Sort the media lists as documented for VLC.",
+      "actions": [
+        "Open a library tab",
+        "tap the sort icon (or the overflow menu",
+        "Sort by)",
+        "choose the field (name, length, date, artist, album, file size)",
+        "tap again to reverse the direction"
+      ],
+      "keywords": [
+        "sort",
+        "media",
+        "lists",
+        "library",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort",
+        "media",
+        "lists"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Switch between list and grid display",
+      "description": "Switch between list and grid display as documented for VLC.",
+      "actions": [
+        "Open a library tab",
+        "tap the overflow menu (three dots)",
+        "tap the display/\"List or grid\" toggle"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "grid",
+        "display",
+        "library",
+        "tab"
+      ],
+      "nav_hints": [
+        "list or grid",
+        "switch",
+        "between",
+        "grid"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Resume playback where you left off",
+      "description": "Resume playback where you left off as documented for VLC.",
+      "actions": [
+        "Reopen a partially watched video",
+        "tap it",
+        "choose \"Resume\" in the prompt (or set the automatic behaviour in Settings",
+        "Video",
+        "Resume playback)"
+      ],
+      "keywords": [
+        "resume",
+        "playback",
+        "where",
+        "left",
+        "off",
+        "reopen"
+      ],
+      "nav_hints": [
+        "resume",
+        "playback",
+        "where",
+        "left"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Control video playback",
+      "description": "Control video playback as documented for VLC.",
+      "actions": [
+        "Start a video",
+        "tap the screen to show the controls",
+        "use play/pause, the seek bar and the skip buttons",
+        "tap the lock icon to lock the controls"
+      ],
+      "keywords": [
+        "control",
+        "video",
+        "playback",
+        "start",
+        "show",
+        "controls"
+      ],
+      "nav_hints": [
+        "control",
+        "video",
+        "playback"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Use gesture controls for volume, brightness and seeking",
+      "description": "Use gesture controls for volume, brightness and seeking as documented for VLC.",
+      "actions": [
+        "During playback",
+        "swipe vertically on the right half for volume",
+        "swipe vertically on the left half for brightness",
+        "swipe horizontally to seek",
+        "the change is shown as an overlay"
+      ],
+      "keywords": [
+        "gesture",
+        "controls",
+        "volume",
+        "brightness",
+        "seeking",
+        "during"
+      ],
+      "nav_hints": [
+        "gesture",
+        "controls",
+        "volume",
+        "brightness"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Select an audio track",
+      "description": "Select an audio track as documented for VLC.",
+      "actions": [
+        "Start playback",
+        "tap the screen",
+        "tap the audio track icon (or the overflow menu",
+        "Audio track)",
+        "choose the track or disable audio"
+      ],
+      "keywords": [
+        "audio",
+        "track",
+        "start",
+        "playback"
+      ],
+      "nav_hints": [
+        "audio",
+        "track"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Load and select subtitles",
+      "description": "Load and select subtitles as documented for VLC.",
+      "actions": [
+        "Start playback",
+        "tap the subtitle icon",
+        "choose an embedded subtitle track, or tap \"Select subtitle file\" and pick a local file"
+      ],
+      "keywords": [
+        "load",
+        "subtitles",
+        "start",
+        "playback",
+        "subtitle"
+      ],
+      "nav_hints": [
+        "select subtitle file",
+        "load",
+        "subtitles"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Download subtitles",
+      "description": "Download subtitles as documented for VLC.",
+      "actions": [
+        "Long-press a video in the library (or open the player overflow menu)",
+        "tap \"Download subtitles\"",
+        "choose the language",
+        "select the matching result to download and apply it"
+      ],
+      "keywords": [
+        "download",
+        "subtitles",
+        "long-press",
+        "video",
+        "library",
+        "player"
+      ],
+      "nav_hints": [
+        "download subtitles",
+        "download",
+        "subtitles"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Adjust the subtitle delay",
+      "description": "Adjust the subtitle delay as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the overflow menu in the player",
+        "tap \"Subtitle delay\"",
+        "use the plus/minus controls to shift the subtitles",
+        "tap outside to close"
+      ],
+      "keywords": [
+        "adjust",
+        "subtitle",
+        "delay",
+        "during",
+        "playback",
+        "overflow"
+      ],
+      "nav_hints": [
+        "subtitle delay",
+        "adjust",
+        "subtitle",
+        "delay"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Adjust the audio delay",
+      "description": "Adjust the audio delay as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap \"Audio delay\"",
+        "shift the audio with the plus/minus controls"
+      ],
+      "keywords": [
+        "adjust",
+        "audio",
+        "delay",
+        "during",
+        "playback",
+        "player"
+      ],
+      "nav_hints": [
+        "audio delay",
+        "adjust",
+        "audio",
+        "delay"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Change the playback speed",
+      "description": "Change the playback speed as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap \"Playback speed\"",
+        "drag the slider or use the preset buttons",
+        "tap outside to close"
+      ],
+      "keywords": [
+        "change",
+        "playback",
+        "speed",
+        "during",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "playback speed",
+        "change",
+        "playback",
+        "speed"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Change the aspect ratio, crop and zoom",
+      "description": "Change the aspect ratio, crop and zoom as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the aspect-ratio/size icon repeatedly to cycle through the modes (best fit, fit screen, fill, 16:9, 4:3, original), or open the player overflow menu",
+        "tap the video size entry"
+      ],
+      "keywords": [
+        "change",
+        "aspect",
+        "ratio",
+        "crop",
+        "zoom",
+        "during"
+      ],
+      "nav_hints": [
+        "change",
+        "aspect",
+        "ratio",
+        "crop"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Lock the screen orientation",
+      "description": "Lock the screen orientation as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap the orientation lock icon",
+        "choose the orientation (sensor, portrait, landscape or locked to the current one)"
+      ],
+      "keywords": [
+        "lock",
+        "orientation",
+        "during",
+        "playback",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "lock",
+        "orientation"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Jump to a specific time",
+      "description": "Jump to a specific time as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap \"Jump to time\"",
+        "enter the timestamp",
+        "tap OK"
+      ],
+      "keywords": [
+        "jump",
+        "specific",
+        "time",
+        "during",
+        "playback",
+        "player"
+      ],
+      "nav_hints": [
+        "jump to time",
+        "jump",
+        "specific",
+        "time"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Set an A-B repeat loop",
+      "description": "Set an A-B repeat loop as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap the A-B repeat control",
+        "tap once to set point A and again to set point B; the segment repeats until you clear it"
+      ],
+      "keywords": [
+        "a-b",
+        "repeat",
+        "loop",
+        "during",
+        "playback",
+        "player"
+      ],
+      "nav_hints": [
+        "a-b",
+        "repeat",
+        "loop"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Play video in picture-in-picture / a floating window",
+      "description": "Play video in picture-in-picture / a floating window as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap \"Picture in picture\"/the popup icon",
+        "grant the permission if prompted",
+        "drag the floating window to reposition it"
+      ],
+      "keywords": [
+        "play",
+        "video",
+        "picture-in-picture",
+        "floating",
+        "window",
+        "during"
+      ],
+      "nav_hints": [
+        "picture in picture",
+        "play",
+        "video",
+        "picture-in-picture"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Play a video as audio only (background playback)",
+      "description": "Play a video as audio only (background playback) as documented for VLC.",
+      "actions": [
+        "During playback",
+        "tap the player overflow menu",
+        "tap \"Play as audio\"; or long-press a video in the library",
+        "tap \"Play as audio\". Playback continues in the notification"
+      ],
+      "keywords": [
+        "play",
+        "video",
+        "audio",
+        "only",
+        "background",
+        "playback"
+      ],
+      "nav_hints": [
+        "play as audio",
+        "play",
+        "video",
+        "audio"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Use the equaliser",
+      "description": "Use the equaliser as documented for VLC.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Equalizer\"",
+        "toggle it on",
+        "choose a preset or drag the band sliders",
+        "set the pre-amp",
+        "the setting applies to the current playback"
+      ],
+      "keywords": [
+        "equaliser",
+        "navigation",
+        "drawer",
+        "equalizer"
+      ],
+      "nav_hints": [
+        "equalizer",
+        "equaliser"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Set a sleep timer",
+      "description": "Set a sleep timer as documented for VLC.",
+      "actions": [
+        "Open the audio player and expand it (or open the drawer",
+        "Sleep timer)",
+        "tap the sleep timer entry",
+        "pick the time",
+        "confirm; playback stops at that moment"
+      ],
+      "keywords": [
+        "sleep",
+        "timer",
+        "audio",
+        "player",
+        "expand",
+        "drawer"
+      ],
+      "nav_hints": [
+        "sleep",
+        "timer"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Adjust video filters (brightness, contrast, hue, saturation, gamma)",
+      "description": "Adjust video filters (brightness, contrast, hue, saturation, gamma) as documented for VLC.",
+      "actions": [
+        "During video playback",
+        "tap the player overflow menu",
+        "tap the \"Video filters\"/adjustment entry",
+        "enable it",
+        "drag the sliders",
+        "close the panel"
+      ],
+      "keywords": [
+        "adjust",
+        "video",
+        "filters",
+        "brightness",
+        "contrast",
+        "hue"
+      ],
+      "nav_hints": [
+        "video filters",
+        "adjust",
+        "video",
+        "filters"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Cast to a renderer (Chromecast or DLNA)",
+      "description": "Cast to a renderer (Chromecast or DLNA) as documented for VLC.",
+      "actions": [
+        "Ensure the device is on the same network",
+        "tap the cast icon in the toolbar or in the player",
+        "select the renderer from the list",
+        "playback moves to that device",
+        "tap the icon again and choose \"Local\" to bring it back"
+      ],
+      "keywords": [
+        "cast",
+        "renderer",
+        "chromecast",
+        "dlna",
+        "ensure",
+        "device"
+      ],
+      "nav_hints": [
+        "local",
+        "cast",
+        "renderer",
+        "chromecast"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Create a playlist",
+      "description": "Create a playlist as documented for VLC.",
+      "actions": [
+        "Open the Audio tab",
+        "Playlists",
+        "tap the \"+\"/new playlist action",
+        "enter the playlist name",
+        "select the tracks",
+        "confirm; or long-press a track",
+        "\"Add to playlist\"",
+        "\"New playlist\""
+      ],
+      "keywords": [
+        "create",
+        "playlist",
+        "audio",
+        "tab",
+        "playlists"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "new playlist",
+        "create",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Add media to an existing playlist",
+      "description": "Add media to an existing playlist as documented for VLC.",
+      "actions": [
+        "Long-press a track, album or video",
+        "tap \"Add to playlist\"",
+        "select the playlist"
+      ],
+      "keywords": [
+        "add",
+        "media",
+        "existing",
+        "playlist",
+        "long-press",
+        "track"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "add",
+        "media",
+        "existing"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Manage the play queue",
+      "description": "Manage the play queue as documented for VLC.",
+      "actions": [
+        "Start playback",
+        "expand the player",
+        "tap the playlist/queue icon",
+        "drag items to reorder them",
+        "swipe an item away to remove it",
+        "tap the clear action to empty the queue"
+      ],
+      "keywords": [
+        "manage",
+        "play",
+        "queue",
+        "start",
+        "playback",
+        "expand"
+      ],
+      "nav_hints": [
+        "manage",
+        "play",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Use repeat and shuffle",
+      "description": "Use repeat and shuffle as documented for VLC.",
+      "actions": [
+        "Expand the player",
+        "tap the repeat icon to cycle off/repeat all/repeat one",
+        "tap the shuffle icon to toggle random playback"
+      ],
+      "keywords": [
+        "repeat",
+        "shuffle",
+        "expand",
+        "player",
+        "cycle",
+        "off"
+      ],
+      "nav_hints": [
+        "repeat",
+        "shuffle"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Add media to the queue without interrupting playback",
+      "description": "Add media to the queue without interrupting playback as documented for VLC.",
+      "actions": [
+        "Long-press a track or video",
+        "tap \"Append\"/\"Add to queue\"",
+        "the item is placed at the end of the current queue; use \"Play next\" to insert it after the current item"
+      ],
+      "keywords": [
+        "add",
+        "media",
+        "queue",
+        "without",
+        "interrupting",
+        "playback"
+      ],
+      "nav_hints": [
+        "append",
+        "add to queue",
+        "play next",
+        "add"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "View media information",
+      "description": "View media information as documented for VLC.",
+      "actions": [
+        "Long-press a media item",
+        "tap \"Information\"",
+        "read the file path, size, duration, resolution, codecs and track list"
+      ],
+      "keywords": [
+        "media",
+        "information",
+        "long-press"
+      ],
+      "nav_hints": [
+        "information",
+        "media"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Delete a media file from the device",
+      "description": "Delete a media file from the device as documented for VLC.",
+      "actions": [
+        "Long-press the item in the library",
+        "tap the delete action",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "media",
+        "file",
+        "device",
+        "long-press",
+        "library"
+      ],
+      "nav_hints": [
+        "delete",
+        "media",
+        "file",
+        "device"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Share a media file",
+      "description": "Share a media file as documented for VLC.",
+      "actions": [
+        "Long-press the item",
+        "tap the share action",
+        "choose the target app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "media",
+        "file",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "share",
+        "media",
+        "file"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "View the playback history",
+      "description": "View the playback history as documented for VLC.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"History\"",
+        "tap an entry to resume it",
+        "use the clear action to empty the history"
+      ],
+      "keywords": [
+        "playback",
+        "history",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "history",
+        "playback"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Choose which folders the media library scans",
+      "description": "Choose which folders the media library scans as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"Media library\"/\"Directories\"",
+        "tick the folders to include and untick the ones to skip",
+        "tap the refresh/rescan action"
+      ],
+      "keywords": [
+        "which",
+        "folders",
+        "media",
+        "library",
+        "scans",
+        "settings"
+      ],
+      "nav_hints": [
+        "media library",
+        "directories",
+        "which",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Force a media library rescan",
+      "description": "Force a media library rescan as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "Media library",
+        "tap \"Rescan\"/\"Reset the media library\"",
+        "confirm; the library is rebuilt"
+      ],
+      "keywords": [
+        "force",
+        "media",
+        "library",
+        "rescan",
+        "settings"
+      ],
+      "nav_hints": [
+        "rescan",
+        "force",
+        "media",
+        "library"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Configure video playback settings",
+      "description": "Configure video playback settings as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"Video\"",
+        "set the resume behaviour, the hardware acceleration mode, the default video aspect, the screen orientation, the brightness handling and whether the video is played in the background"
+      ],
+      "keywords": [
+        "configure",
+        "video",
+        "playback",
+        "settings"
+      ],
+      "nav_hints": [
+        "video",
+        "configure",
+        "playback",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Configure audio playback settings",
+      "description": "Configure audio playback settings as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"Audio\"",
+        "set the audio output mode, digital audio passthrough, the resume behaviour, the headphone behaviour and the audio-focus handling"
+      ],
+      "keywords": [
+        "configure",
+        "audio",
+        "playback",
+        "settings"
+      ],
+      "nav_hints": [
+        "audio",
+        "configure",
+        "playback",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Configure subtitle appearance",
+      "description": "Configure subtitle appearance as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"Subtitles\"",
+        "set the preferred subtitle language, the text encoding, the font size, the colour, the background and the bold option"
+      ],
+      "keywords": [
+        "configure",
+        "subtitle",
+        "appearance",
+        "settings",
+        "subtitles"
+      ],
+      "nav_hints": [
+        "subtitles",
+        "configure",
+        "subtitle",
+        "appearance"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Change the interface settings",
+      "description": "Change the interface settings as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"Interface\"",
+        "set the app theme (light, dark or system), the daily-night switch, the start-up screen, the visible tabs, the interface language and whether the TV interface is used"
+      ],
+      "keywords": [
+        "change",
+        "interface",
+        "settings"
+      ],
+      "nav_hints": [
+        "interface",
+        "change",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Add the VLC home screen widget",
+      "description": "Add the VLC home screen widget as documented for VLC.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find VLC",
+        "drag the widget onto the home screen",
+        "configure the size and theme",
+        "confirm; use it to control playback without opening the app"
+      ],
+      "keywords": [
+        "add",
+        "vlc",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "vlc",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for VLC.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the version, the build information, the authors and the licence"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

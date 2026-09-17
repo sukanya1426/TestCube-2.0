@@ -116,7 +116,8 @@ class DroidBot(object):
                 profiling_method=profiling_method,
                 master=master,
                 replay_output=replay_output,
-                code_coverage=code_coverage
+                code_coverage=code_coverage,
+                timeout=self.timeout
             )
         except Exception:
             import traceback
@@ -141,7 +142,12 @@ class DroidBot(object):
         self.logger.info("Starting DroidBot")
         try:
             if self.timeout > 0:
-                self.timer = Timer(self.timeout, self.stop)
+                # Soft stop only. A full stop() from the timer thread would
+                # disconnect the device and uninstall the app while the policy
+                # is still mid-action, so the final coverage sample would read
+                # a dead device. Let the event loop unwind and write its
+                # reports, then tear down on the main thread below.
+                self.timer = Timer(self.timeout, self.stop_sending_events)
                 self.timer.start()
 
             self.device.set_up()
@@ -180,8 +186,19 @@ class DroidBot(object):
         self.stop()
         self.logger.info("DroidBot Stopped")
 
+    def stop_sending_events(self):
+        """Ask the event loop to finish, without tearing anything down."""
+        self.logger.info("Timeout reached; asking the event loop to stop.")
+        if self.input_manager:
+            self.input_manager.stop()
+
     def stop(self):
         self.enabled = False
+        # Stand the run-budget watchdog down only here, at the true end of the
+        # run: teardown and uninstall talk to adb, which is exactly where a run
+        # hangs, and the watchdog is what stops that stalling a batch.
+        if self.input_manager:
+            self.input_manager.budget.cancel()
         if self.timer and self.timer.is_alive():
             self.timer.cancel()
         if self.env_manager:

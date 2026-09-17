@@ -1,0 +1,726 @@
+{
+  "app": "OpenTasks",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official OpenTasks repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for OpenTasks (org.dmfs.tasks), version 1.4.2.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a task",
+      "description": "Create a task as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "choose the task list to create it in",
+        "enter the title",
+        "fill in the optional fields",
+        "tap the save (tick) button"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "task"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Set the task title and description",
+      "description": "Set the task title and description as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the title field and type the title",
+        "tap the description field and type the details",
+        "tap Save"
+      ],
+      "keywords": [
+        "task",
+        "title",
+        "description",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "task",
+        "title",
+        "description"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Set a due date and time",
+      "description": "Set a due date and time as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the \"Due\" field",
+        "pick the date in the calendar",
+        "pick the time (or toggle the all-day option)",
+        "tap OK",
+        "Save"
+      ],
+      "keywords": [
+        "due",
+        "date",
+        "time",
+        "task",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "due",
+        "date",
+        "time"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Set a start date",
+      "description": "Set a start date as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the \"Start\" field",
+        "select the date and time",
+        "tap OK",
+        "Save"
+      ],
+      "keywords": [
+        "start",
+        "date",
+        "task",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "start",
+        "date"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Set the task priority",
+      "description": "Set the task priority as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the priority selector",
+        "choose the level (for example high, medium, low or undefined)",
+        "tap Save"
+      ],
+      "keywords": [
+        "task",
+        "priority",
+        "editor",
+        "selector"
+      ],
+      "nav_hints": [
+        "task",
+        "priority"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Set the classification/privacy level",
+      "description": "Set the classification/privacy level as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the classification/privacy field",
+        "choose Public, Private or Confidential",
+        "tap Save"
+      ],
+      "keywords": [
+        "classification",
+        "privacy",
+        "level",
+        "task",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "classification",
+        "privacy",
+        "level"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Set the task status",
+      "description": "Set the task status as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the status field",
+        "choose Needs action, In process, Completed or Cancelled",
+        "tap Save"
+      ],
+      "keywords": [
+        "task",
+        "status",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "task",
+        "status"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Set the completion percentage",
+      "description": "Set the completion percentage as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "drag the progress slider (or enter the percentage)",
+        "tap Save; setting it to 100% marks the task completed"
+      ],
+      "keywords": [
+        "completion",
+        "percentage",
+        "task",
+        "editor",
+        "drag",
+        "progress"
+      ],
+      "nav_hints": [
+        "completion",
+        "percentage"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Add a location to a task",
+      "description": "Add a location to a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the location field",
+        "type the location text",
+        "tap Save; the value is stored with the task and can be opened in a map app from the detail view"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "task",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "location",
+        "task"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Add a URL to a task",
+      "description": "Add a URL to a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the URL field",
+        "enter the web address",
+        "tap Save; tapping it in the detail view opens the link"
+      ],
+      "keywords": [
+        "add",
+        "url",
+        "task",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "url",
+        "task"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Add a checklist to a task",
+      "description": "Add a checklist to a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the checklist section",
+        "tap \"Add item\"",
+        "type the item text",
+        "repeat for further items",
+        "tap Save; tick the items from the task detail view"
+      ],
+      "keywords": [
+        "add",
+        "checklist",
+        "task",
+        "editor",
+        "section"
+      ],
+      "nav_hints": [
+        "add item",
+        "add",
+        "checklist",
+        "task"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Set an alarm/reminder",
+      "description": "Set an alarm/reminder as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the alarms/reminder section",
+        "tap \"Add alarm\"",
+        "choose the offset relative to the start or due date (or an absolute date and time)",
+        "tap Save"
+      ],
+      "keywords": [
+        "alarm",
+        "reminder",
+        "task",
+        "editor",
+        "alarms",
+        "section"
+      ],
+      "nav_hints": [
+        "add alarm",
+        "alarm",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Create a recurring task",
+      "description": "Create a recurring task as documented for OpenTasks.",
+      "actions": [
+        "Open the task editor",
+        "tap the recurrence field",
+        "choose the pattern (daily, weekly, monthly, yearly or a custom rule)",
+        "set the interval and the end condition",
+        "tap OK",
+        "Save"
+      ],
+      "keywords": [
+        "create",
+        "recurring",
+        "task",
+        "editor",
+        "recurrence",
+        "field"
+      ],
+      "nav_hints": [
+        "create",
+        "recurring",
+        "task"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Complete a task",
+      "description": "Complete a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task list",
+        "tap the checkbox/round completion control on the task row (or open the task and tap the complete action); the task moves to the completed group"
+      ],
+      "keywords": [
+        "complete",
+        "task",
+        "checkbox",
+        "round",
+        "completion",
+        "control"
+      ],
+      "nav_hints": [
+        "complete",
+        "task"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Edit an existing task",
+      "description": "Edit an existing task as documented for OpenTasks.",
+      "actions": [
+        "Tap the task in the list to open the detail view",
+        "tap the edit (pencil) icon",
+        "change the fields",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "existing",
+        "task",
+        "detail",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "existing",
+        "task"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Delete a task",
+      "description": "Delete a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task detail view",
+        "tap the delete (bin) icon",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "task",
+        "detail",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "task"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Browse tasks grouped by due date",
+      "description": "Browse tasks grouped by due date as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "select the \"Due\" tab",
+        "the tasks are grouped into overdue, today, tomorrow, this week and later sections"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "due",
+        "date",
+        "tab"
+      ],
+      "nav_hints": [
+        "due",
+        "browse",
+        "tasks",
+        "grouped"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Browse tasks grouped by start date",
+      "description": "Browse tasks grouped by start date as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "select the \"Start\" tab",
+        "tasks are grouped by their start dates"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "start",
+        "date",
+        "tab"
+      ],
+      "nav_hints": [
+        "start",
+        "browse",
+        "tasks",
+        "grouped"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Browse tasks grouped by list",
+      "description": "Browse tasks grouped by list as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "select the \"Lists\" tab",
+        "the tasks are grouped under their task list headers",
+        "tap a header to collapse or expand it"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "lists",
+        "tab"
+      ],
+      "nav_hints": [
+        "lists",
+        "browse",
+        "tasks",
+        "grouped"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Browse tasks grouped by priority",
+      "description": "Browse tasks grouped by priority as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "select the \"Priority\" tab",
+        "the tasks are grouped by their priority values"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "priority",
+        "tab"
+      ],
+      "nav_hints": [
+        "priority",
+        "browse",
+        "tasks",
+        "grouped"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Browse tasks grouped by progress",
+      "description": "Browse tasks grouped by progress as documented for OpenTasks.",
+      "actions": [
+        "Open the app",
+        "select the \"Progress\" tab",
+        "the tasks are grouped by completion percentage bands"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "progress",
+        "tab"
+      ],
+      "nav_hints": [
+        "progress",
+        "browse",
+        "tasks",
+        "grouped"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Search for a task",
+      "description": "Search for a task as documented for OpenTasks.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the search text",
+        "review the matching tasks",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "task",
+        "toolbar",
+        "text"
+      ],
+      "nav_hints": [
+        "search",
+        "task"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Show or hide completed tasks",
+      "description": "Show or hide completed tasks as documented for OpenTasks.",
+      "actions": [
+        "Tap the overflow menu (three dots) in the task list",
+        "toggle the \"Show completed tasks\" option"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "completed",
+        "tasks",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "show completed tasks",
+        "show",
+        "hide",
+        "completed"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Choose which task lists are visible",
+      "description": "Choose which task lists are visible as documented for OpenTasks.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Visible lists\"/\"Synchronised lists\"",
+        "tick the lists to display",
+        "tap OK"
+      ],
+      "keywords": [
+        "which",
+        "task",
+        "lists",
+        "visible",
+        "overflow",
+        "synchronised"
+      ],
+      "nav_hints": [
+        "visible lists",
+        "synchronised lists",
+        "which",
+        "task"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Create a local task list",
+      "description": "Create a local task list as documented for OpenTasks.",
+      "actions": [
+        "Open the overflow menu",
+        "open the list management screen",
+        "tap the add action",
+        "enter the list name",
+        "pick a colour",
+        "tap Save. (Remote lists are created by the sync adapter.)"
+      ],
+      "keywords": [
+        "create",
+        "local",
+        "task",
+        "overflow",
+        "management"
+      ],
+      "nav_hints": [
+        "create",
+        "local",
+        "task"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Change a task list's name or colour",
+      "description": "Change a task list's name or colour as documented for OpenTasks.",
+      "actions": [
+        "Open the list management screen",
+        "tap the list",
+        "change the name or colour",
+        "tap Save"
+      ],
+      "keywords": [
+        "change",
+        "task",
+        "list's",
+        "name",
+        "colour",
+        "management"
+      ],
+      "nav_hints": [
+        "change",
+        "task",
+        "list's",
+        "name"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Share a task",
+      "description": "Share a task as documented for OpenTasks.",
+      "actions": [
+        "Open the task detail view",
+        "tap the share icon",
+        "choose the destination app from the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "task",
+        "detail"
+      ],
+      "nav_hints": [
+        "share",
+        "task"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Add the OpenTasks home screen widget",
+      "description": "Add the OpenTasks home screen widget as documented for OpenTasks.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find OpenTasks",
+        "drag the widget onto the home screen",
+        "configure the lists it shows",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "opentasks",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "opentasks",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Open a task from the widget",
+      "description": "Open a task from the widget as documented for OpenTasks.",
+      "actions": [
+        "Tap a task row on the home screen widget",
+        "the task detail view opens in the app; tap the \"+\" on the widget to create a new task"
+      ],
+      "keywords": [
+        "task",
+        "widget",
+        "row",
+        "home",
+        "detail",
+        "opens"
+      ],
+      "nav_hints": [
+        "task",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Configure application settings",
+      "description": "Configure application settings as documented for OpenTasks.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Settings\"",
+        "adjust the available preferences (for example the theme/appearance, whether to open tasks in the detail view, and the visible lists)",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "application",
+        "settings",
+        "overflow"
+      ],
+      "nav_hints": [
+        "settings",
+        "configure",
+        "application"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for OpenTasks.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"About\"",
+        "read the version number, the credits and the licence information"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "overflow"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

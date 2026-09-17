@@ -1,0 +1,293 @@
+{
+  "app": "Fossify Voice Recorder",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-23 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Record audio",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "grant the microphone and storage permissions"
+      ],
+      "keywords": [
+        "record",
+        "audio",
+        "grant",
+        "microphone"
+      ],
+      "nav_hints": [
+        "record",
+        "audio"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Pause",
+      "description": "While recording",
+      "actions": [
+        "While recording",
+        "tap the pause control"
+      ],
+      "keywords": [
+        "pause",
+        "resume",
+        "recording",
+        "while"
+      ],
+      "nav_hints": [
+        "pause",
+        "resume",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Watch the live audio",
+      "description": "Start a recording",
+      "actions": [
+        "Start a recording",
+        "the visualiser/level meter on the recording screen shows the incoming signal in real time"
+      ],
+      "keywords": [
+        "watch",
+        "live",
+        "audio",
+        "level"
+      ],
+      "nav_hints": [
+        "watch",
+        "live",
+        "audio"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Continue recording",
+      "description": "Start a recording",
+      "actions": [
+        "Start a recording",
+        "press the home button or switch apps"
+      ],
+      "keywords": [
+        "continue",
+        "recording",
+        "background",
+        "start"
+      ],
+      "nav_hints": [
+        "continue",
+        "recording",
+        "background"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Browse saved recordings",
+      "description": "Open the \"Recordings\" tab",
+      "actions": [
+        "Open the \"Recordings\" tab",
+        "scroll the list of saved files with their duration, size and date"
+      ],
+      "keywords": [
+        "browse",
+        "saved",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "recordings",
+        "browse",
+        "saved"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Play a recording",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "tap a recording"
+      ],
+      "keywords": [
+        "play",
+        "recording",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "play",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Rename a recording",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "long-press the recording"
+      ],
+      "keywords": [
+        "rename",
+        "recording",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "rename",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Delete a recording",
+      "description": "Long-press the recording",
+      "actions": [
+        "Long-press the recording",
+        "tap the delete (bin) icon"
+      ],
+      "keywords": [
+        "delete",
+        "recording",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Restore",
+      "description": "Open the \"Deleted recordings\"/recycle bin tab",
+      "actions": [
+        "Open the \"Deleted recordings\"/recycle bin tab",
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action"
+      ],
+      "keywords": [
+        "restore",
+        "empty",
+        "recycle",
+        "bin"
+      ],
+      "nav_hints": [
+        "deleted recordings",
+        "empty recycle bin",
+        "restore"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Share a recording",
+      "description": "Long-press the recording (or open it)",
+      "actions": [
+        "Long-press the recording (or open it)",
+        "tap the share icon"
+      ],
+      "keywords": [
+        "share",
+        "recording",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "View recording properties",
+      "description": "Long-press the recording",
+      "actions": [
+        "Long-press the recording",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "recording",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "recording"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Search recordings",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "tap the search icon"
+      ],
+      "keywords": [
+        "search",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "search",
+        "recordings"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Sort the recordings list",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "sort",
+        "recordings",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "recordings"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Choose the recording audio",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the \"Audio format\"/extension entry"
+      ],
+      "keywords": [
+        "recording",
+        "audio",
+        "format",
+        "settings"
+      ],
+      "nav_hints": [
+        "audio format",
+        "recording",
+        "audio"
+      ],
+      "source": "guide"
+    }
+  ]
+}

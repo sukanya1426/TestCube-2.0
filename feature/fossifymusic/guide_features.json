@@ -1,0 +1,293 @@
+{
+  "app": "Fossify Music Player",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-33 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse tracks",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "grant the media permission"
+      ],
+      "keywords": [
+        "browse",
+        "tracks",
+        "grant",
+        "media"
+      ],
+      "nav_hints": [
+        "browse",
+        "tracks"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Browse artists",
+      "description": "Open the Artists tab",
+      "actions": [
+        "Open the Artists tab",
+        "tap an artist"
+      ],
+      "keywords": [
+        "browse",
+        "artists",
+        "tab",
+        "artist"
+      ],
+      "nav_hints": [
+        "browse",
+        "artists"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Browse folders",
+      "description": "Open the Folders tab",
+      "actions": [
+        "Open the Folders tab",
+        "tap a folder"
+      ],
+      "keywords": [
+        "browse",
+        "folders",
+        "tab",
+        "folder"
+      ],
+      "nav_hints": [
+        "browse",
+        "folders"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Create a playlist",
+      "description": "Open the Playlists tab",
+      "actions": [
+        "Open the Playlists tab",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "playlist",
+        "playlists",
+        "tab"
+      ],
+      "nav_hints": [
+        "create",
+        "playlist"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Remove a track",
+      "description": "Open the playlist",
+      "actions": [
+        "Open the playlist",
+        "long-press the track"
+      ],
+      "keywords": [
+        "remove",
+        "track",
+        "playlist",
+        "long-press"
+      ],
+      "nav_hints": [
+        "remove from playlist",
+        "remove",
+        "track"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Control playback",
+      "description": "Start a track",
+      "actions": [
+        "Start a track",
+        "tap the playback bar at the bottom to open the full player"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "start",
+        "track"
+      ],
+      "nav_hints": [
+        "control",
+        "playback"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Change the playback speed",
+      "description": "Open the full player",
+      "actions": [
+        "Open the full player",
+        "tap the playback speed control"
+      ],
+      "keywords": [
+        "change",
+        "playback",
+        "speed",
+        "full"
+      ],
+      "nav_hints": [
+        "change",
+        "playback",
+        "speed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Set a sleep timer",
+      "description": "Open the full player or the overflow menu",
+      "actions": [
+        "Open the full player or the overflow menu",
+        "tap \"Sleep timer\""
+      ],
+      "keywords": [
+        "sleep",
+        "timer",
+        "full",
+        "player"
+      ],
+      "nav_hints": [
+        "sleep timer",
+        "sleep",
+        "timer"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Add tracks",
+      "description": "Long-press a track or album",
+      "actions": [
+        "Long-press a track or album",
+        "tap \"Add to queue\"/\"Play next\""
+      ],
+      "keywords": [
+        "add",
+        "tracks",
+        "current",
+        "queue"
+      ],
+      "nav_hints": [
+        "add to queue",
+        "play next",
+        "add"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Sort the lists",
+      "description": "Open a tab",
+      "actions": [
+        "Open a tab",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "sort",
+        "lists",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "lists"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "View track properties",
+      "description": "Long-press a track",
+      "actions": [
+        "Long-press a track",
+        "tap \"Properties\""
+      ],
+      "keywords": [
+        "track",
+        "properties",
+        "long-press"
+      ],
+      "nav_hints": [
+        "properties",
+        "track"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Share a track",
+      "description": "Long-press the track",
+      "actions": [
+        "Long-press the track",
+        "tap the share icon"
+      ],
+      "keywords": [
+        "share",
+        "track",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "track"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Control playback",
+      "description": "Start playback",
+      "actions": [
+        "Start playback",
+        "pull down the notification shade (or wake the lock screen)"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "notification",
+        "lock"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "notification"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Show",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "open the tabs section"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "individual",
+        "library"
+      ],
+      "nav_hints": [
+        "show",
+        "hide",
+        "individual"
+      ],
+      "source": "guide"
+    }
+  ]
+}

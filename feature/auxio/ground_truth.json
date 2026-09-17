@@ -1,0 +1,810 @@
+{
+  "app": "Auxio",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Auxio repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Auxio (org.oxycblt.auxio), version 4.1.5.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the music library by songs",
+      "description": "Browse the music library by songs as documented for Auxio.",
+      "actions": [
+        "Open the app",
+        "tap the Songs tab in the home screen",
+        "scroll the alphabetically indexed list",
+        "tap a song to start playback"
+      ],
+      "keywords": [
+        "browse",
+        "music",
+        "library",
+        "songs",
+        "tab",
+        "home"
+      ],
+      "nav_hints": [
+        "browse",
+        "music",
+        "library",
+        "songs"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Browse by album",
+      "description": "Browse by album as documented for Auxio.",
+      "actions": [
+        "Open the Albums tab",
+        "scroll or use the fast-scroll index",
+        "tap an album to open its detail page with the track list"
+      ],
+      "keywords": [
+        "browse",
+        "album",
+        "albums",
+        "tab",
+        "scroll",
+        "fast-scroll"
+      ],
+      "nav_hints": [
+        "browse",
+        "album"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Browse by artist",
+      "description": "Browse by artist as documented for Auxio.",
+      "actions": [
+        "Open the Artists tab",
+        "tap an artist",
+        "review their albums and songs on the artist detail page"
+      ],
+      "keywords": [
+        "browse",
+        "artist",
+        "artists",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "artist"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Browse by genre",
+      "description": "Browse by genre as documented for Auxio.",
+      "actions": [
+        "Open the Genres tab",
+        "tap a genre",
+        "review the artists, albums and songs in it"
+      ],
+      "keywords": [
+        "browse",
+        "genre",
+        "genres",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "genre"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Browse by playlist",
+      "description": "Browse by playlist as documented for Auxio.",
+      "actions": [
+        "Open the Playlists tab",
+        "tap a playlist to open it",
+        "tap a track to play it from that playlist"
+      ],
+      "keywords": [
+        "browse",
+        "playlist",
+        "playlists",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Play a song",
+      "description": "Play a song as documented for Auxio.",
+      "actions": [
+        "Tap any song in a list",
+        "playback begins and the bottom playback bar appears",
+        "tap the bar to expand the full player"
+      ],
+      "keywords": [
+        "play",
+        "song",
+        "any",
+        "playback",
+        "begins",
+        "bottom"
+      ],
+      "nav_hints": [
+        "play",
+        "song"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Control playback from the expanded player",
+      "description": "Control playback from the expanded player as documented for Auxio.",
+      "actions": [
+        "Tap the playback bar to expand it",
+        "use play/pause, previous, next and the seek bar",
+        "tap the cover art or swipe down to collapse it"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "expanded",
+        "player",
+        "bar",
+        "expand"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "expanded",
+        "player"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Use repeat and shuffle",
+      "description": "Use repeat and shuffle as documented for Auxio.",
+      "actions": [
+        "Expand the player",
+        "tap the repeat icon to cycle through off, repeat all and repeat one",
+        "tap the shuffle icon to toggle shuffled playback"
+      ],
+      "keywords": [
+        "repeat",
+        "shuffle",
+        "expand",
+        "player",
+        "cycle",
+        "through"
+      ],
+      "nav_hints": [
+        "repeat",
+        "shuffle"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Shuffle the whole library",
+      "description": "Shuffle the whole library as documented for Auxio.",
+      "actions": [
+        "Open the home screen",
+        "tap the shuffle action in the toolbar (or the shuffle floating button)",
+        "the entire library is queued in random order"
+      ],
+      "keywords": [
+        "shuffle",
+        "whole",
+        "library",
+        "home",
+        "action",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "shuffle",
+        "whole",
+        "library"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "View and edit the play queue",
+      "description": "View and edit the play queue as documented for Auxio.",
+      "actions": [
+        "Expand the player",
+        "tap the queue icon",
+        "drag the handle beside an item to reorder it",
+        "swipe an item away to remove it"
+      ],
+      "keywords": [
+        "edit",
+        "play",
+        "queue",
+        "expand",
+        "player"
+      ],
+      "nav_hints": [
+        "edit",
+        "play",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Add a song, album or artist to the queue",
+      "description": "Add a song, album or artist to the queue as documented for Auxio.",
+      "actions": [
+        "Long-press the item (or tap its overflow menu)",
+        "tap \"Play next\" to insert it after the current track, or \"Add to queue\" to append it"
+      ],
+      "keywords": [
+        "add",
+        "song",
+        "album",
+        "artist",
+        "queue",
+        "long-press"
+      ],
+      "nav_hints": [
+        "play next",
+        "add to queue",
+        "add",
+        "song"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Create a playlist",
+      "description": "Create a playlist as documented for Auxio.",
+      "actions": [
+        "Open the Playlists tab",
+        "tap the \"+\"/new playlist action",
+        "enter the playlist name",
+        "select the songs to add",
+        "confirm"
+      ],
+      "keywords": [
+        "create",
+        "playlist",
+        "playlists",
+        "tab",
+        "new",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Add songs to an existing playlist",
+      "description": "Add songs to an existing playlist as documented for Auxio.",
+      "actions": [
+        "Long-press a song, album, artist or genre",
+        "tap \"Add to playlist\"",
+        "select the target playlist (or create a new one)"
+      ],
+      "keywords": [
+        "add",
+        "songs",
+        "existing",
+        "playlist",
+        "long-press",
+        "song"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "add",
+        "songs",
+        "existing"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Rename, reorder or delete a playlist",
+      "description": "Rename, reorder or delete a playlist as documented for Auxio.",
+      "actions": [
+        "Open the Playlists tab",
+        "open the playlist",
+        "tap the overflow menu",
+        "tap Rename and enter the new name, tap the edit action to drag the tracks into a new order, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "rename",
+        "reorder",
+        "delete",
+        "playlist",
+        "playlists",
+        "tab"
+      ],
+      "nav_hints": [
+        "rename",
+        "reorder",
+        "delete",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Import a playlist from an M3U file",
+      "description": "Import a playlist from an M3U file as documented for Auxio.",
+      "actions": [
+        "Open the Playlists tab",
+        "tap the overflow menu",
+        "tap the import option",
+        "select the .m3u/.m3u8 file",
+        "confirm; the referenced songs are matched against the library"
+      ],
+      "keywords": [
+        "import",
+        "playlist",
+        "m3u",
+        "file",
+        "playlists",
+        "tab"
+      ],
+      "nav_hints": [
+        "import",
+        "playlist",
+        "m3u",
+        "file"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Export a playlist to an M3U file",
+      "description": "Export a playlist to an M3U file as documented for Auxio.",
+      "actions": [
+        "Open the playlist",
+        "tap the overflow menu",
+        "tap the export option",
+        "choose the destination and the path format",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "playlist",
+        "m3u",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "export",
+        "playlist",
+        "m3u",
+        "file"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Search the library",
+      "description": "Search the library as documented for Auxio.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the query",
+        "filter the results by type using the chips",
+        "tap a result to play or open it"
+      ],
+      "keywords": [
+        "search",
+        "library",
+        "toolbar",
+        "query"
+      ],
+      "nav_hints": [
+        "search",
+        "library"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Sort a list",
+      "description": "Sort a list as documented for Auxio.",
+      "actions": [
+        "Open any library tab or detail page",
+        "tap the sort icon in the toolbar",
+        "choose the sort field (for example name, artist, album, year, duration, date added or track number)",
+        "choose ascending or descending"
+      ],
+      "keywords": [
+        "sort",
+        "any",
+        "library",
+        "tab",
+        "detail",
+        "page"
+      ],
+      "nav_hints": [
+        "sort"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "View song details and file information",
+      "description": "View song details and file information as documented for Auxio.",
+      "actions": [
+        "Long-press a song",
+        "tap \"Song properties\"/details",
+        "read the title, artist, album, track number, disc, year, genre, format, bitrate, sample rate and file path"
+      ],
+      "keywords": [
+        "song",
+        "details",
+        "file",
+        "information",
+        "long-press",
+        "properties"
+      ],
+      "nav_hints": [
+        "song properties",
+        "song",
+        "details",
+        "file"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Jump from a song to its album or artist",
+      "description": "Jump from a song to its album or artist as documented for Auxio.",
+      "actions": [
+        "Long-press a song (or open the player overflow menu)",
+        "tap \"Go to album\" or \"Go to artist\"",
+        "the corresponding detail page opens"
+      ],
+      "keywords": [
+        "jump",
+        "song",
+        "album",
+        "artist",
+        "long-press",
+        "player"
+      ],
+      "nav_hints": [
+        "go to album",
+        "go to artist",
+        "jump",
+        "song"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Share a song",
+      "description": "Share a song as documented for Auxio.",
+      "actions": [
+        "Long-press the song",
+        "tap the share action",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "song",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "share",
+        "song"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Configure which folders are scanned",
+      "description": "Configure which folders are scanned as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap \"Music\"/the music folders entry",
+        "add folders to the include or exclude list",
+        "tap the rescan action to rebuild the library"
+      ],
+      "keywords": [
+        "configure",
+        "which",
+        "folders",
+        "scanned",
+        "settings",
+        "music"
+      ],
+      "nav_hints": [
+        "music",
+        "configure",
+        "which",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Rescan the music library",
+      "description": "Rescan the music library as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Rescan music library\" action (or pull down to refresh on the home screen)",
+        "wait for the indexing notification to finish"
+      ],
+      "keywords": [
+        "rescan",
+        "music",
+        "library",
+        "settings",
+        "action",
+        "pull"
+      ],
+      "nav_hints": [
+        "rescan music library",
+        "rescan",
+        "music",
+        "library"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Configure how multi-value tags are separated",
+      "description": "Configure how multi-value tags are separated as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "Music",
+        "tap the separators entry",
+        "select the characters (for example comma, semicolon, slash, plus, ampersand) used to split artist and genre tags",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "how",
+        "multi-value",
+        "tags",
+        "separated",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "how",
+        "multi-value",
+        "tags"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Enable or disable ReplayGain",
+      "description": "Enable or disable ReplayGain as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap \"Audio\"/playback",
+        "tap the ReplayGain entry",
+        "choose the mode (off, track, album, or dynamic)",
+        "optionally set the pre-amp values for tracks with and without ReplayGain data"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "replaygain",
+        "settings",
+        "audio",
+        "playback"
+      ],
+      "nav_hints": [
+        "audio",
+        "enable",
+        "disable",
+        "replaygain"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Open the system equaliser",
+      "description": "Open the system equaliser as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap the equaliser entry (or the equaliser action in the player overflow menu)",
+        "the system audio effects panel opens",
+        "adjust the bands",
+        "return"
+      ],
+      "keywords": [
+        "system",
+        "equaliser",
+        "settings",
+        "entry",
+        "action",
+        "player"
+      ],
+      "nav_hints": [
+        "system",
+        "equaliser"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Configure headset and audio focus behaviour",
+      "description": "Configure headset and audio focus behaviour as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "Audio",
+        "toggle whether playback resumes when headphones are plugged in, whether playback pauses on focus loss and whether playback pauses when a song is repeated"
+      ],
+      "keywords": [
+        "configure",
+        "headset",
+        "audio",
+        "focus",
+        "behaviour",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "headset",
+        "audio",
+        "focus"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Choose what the playback bar and notification show",
+      "description": "Choose what the playback bar and notification show as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "open the personalisation/UI section",
+        "set the cover art behaviour, the round-mode option and the information shown in the notification"
+      ],
+      "keywords": [
+        "what",
+        "playback",
+        "bar",
+        "notification",
+        "show",
+        "settings"
+      ],
+      "nav_hints": [
+        "what",
+        "playback",
+        "bar",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Change the theme and accent colour",
+      "description": "Change the theme and accent colour as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap \"Personalise\"/Appearance",
+        "choose the theme (light, dark, system)",
+        "enable the black theme for dark mode",
+        "select the accent colour or enable Material You dynamic colours"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "accent",
+        "colour",
+        "settings",
+        "personalise"
+      ],
+      "nav_hints": [
+        "personalise",
+        "change",
+        "theme",
+        "accent"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Choose which library tabs are visible and their order",
+      "description": "Choose which library tabs are visible and their order as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "Personalise",
+        "tap the tabs/home entry",
+        "tick the tabs to show (Songs, Albums, Artists, Genres, Playlists)",
+        "drag them into the required order",
+        "confirm"
+      ],
+      "keywords": [
+        "which",
+        "library",
+        "tabs",
+        "visible",
+        "their",
+        "order"
+      ],
+      "nav_hints": [
+        "which",
+        "library",
+        "tabs",
+        "visible"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Set the playback behaviour when selecting a song",
+      "description": "Set the playback behaviour when selecting a song as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "open the playback section",
+        "choose whether tapping a song plays from the whole library, the current list, the album or the artist",
+        "confirm"
+      ],
+      "keywords": [
+        "playback",
+        "behaviour",
+        "selecting",
+        "song",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "playback",
+        "behaviour",
+        "selecting",
+        "song"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Add the Auxio home screen widget",
+      "description": "Add the Auxio home screen widget as documented for Auxio.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Auxio",
+        "drag the widget onto the home screen",
+        "resize it to reveal the additional controls"
+      ],
+      "keywords": [
+        "add",
+        "auxio",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "auxio",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Save and restore the playback state",
+      "description": "Save and restore the playback state as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "use the \"Save playback state\" and \"Restore playback state\"/wipe actions in the playback section",
+        "confirm; the queue and position are stored so playback resumes after a restart"
+      ],
+      "keywords": [
+        "save",
+        "restore",
+        "playback",
+        "state",
+        "settings",
+        "wipe"
+      ],
+      "nav_hints": [
+        "save playback state",
+        "restore playback state",
+        "save",
+        "restore"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for Auxio.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the version, the song/album/artist counts, the source link and the open-source licences"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

@@ -1,0 +1,299 @@
+{
+  "app": "MyExpenses",
+  "source": "guide",
+  "url": "Official My Expenses documentation (faq.myexpenses.mobi) and in-app menus",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-46 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create an account",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Accounts\"/the \"+\" beside the account list"
+      ],
+      "keywords": [
+        "create",
+        "account",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "accounts",
+        "create",
+        "account"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "View the aggregate balance",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap the aggregate/\"Total\" entry for a currency"
+      ],
+      "keywords": [
+        "aggregate",
+        "all",
+        "accounts",
+        "balance"
+      ],
+      "nav_hints": [
+        "total",
+        "aggregate",
+        "all"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Record a transfer between",
+      "description": "Tap the \"+\" button",
+      "actions": [
+        "Tap the \"+\" button",
+        "switch to the Transfer tab"
+      ],
+      "keywords": [
+        "record",
+        "transfer",
+        "between",
+        "accounts"
+      ],
+      "nav_hints": [
+        "record",
+        "transfer",
+        "between"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Attach a picture",
+      "description": "Open a transaction",
+      "actions": [
+        "Open a transaction",
+        "tap the attachment (paper clip) icon"
+      ],
+      "keywords": [
+        "attach",
+        "picture",
+        "file",
+        "transaction"
+      ],
+      "nav_hints": [
+        "attach",
+        "picture",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Manage the tag list",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap \"Manage tags\""
+      ],
+      "keywords": [
+        "manage",
+        "tag",
+        "drawer",
+        "tags"
+      ],
+      "nav_hints": [
+        "manage tags",
+        "manage",
+        "tag"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Create a plan",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap \"Templates and plans\""
+      ],
+      "keywords": [
+        "create",
+        "plan",
+        "schedule",
+        "template"
+      ],
+      "nav_hints": [
+        "templates and plans",
+        "create",
+        "plan"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Import a predefined category",
+      "description": "Open \"Manage categories\"",
+      "actions": [
+        "Open \"Manage categories\"",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "import",
+        "predefined",
+        "category",
+        "manage"
+      ],
+      "nav_hints": [
+        "manage categories",
+        "set up categories",
+        "import"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Review budget progress",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap \"Budgets\""
+      ],
+      "keywords": [
+        "review",
+        "budget",
+        "progress",
+        "drawer"
+      ],
+      "nav_hints": [
+        "budgets",
+        "review",
+        "budget"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Search transactions",
+      "description": "Open an account",
+      "actions": [
+        "Open an account",
+        "tap the search icon"
+      ],
+      "keywords": [
+        "search",
+        "transactions",
+        "text",
+        "account"
+      ],
+      "nav_hints": [
+        "search",
+        "transactions",
+        "text"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "View the distribution chart",
+      "description": "Open the drawer or the account overflow menu",
+      "actions": [
+        "Open the drawer or the account overflow menu",
+        "tap \"Distribution\""
+      ],
+      "keywords": [
+        "distribution",
+        "chart",
+        "drawer",
+        "account"
+      ],
+      "nav_hints": [
+        "distribution",
+        "chart"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Export data",
+      "description": "Open the account or the drawer",
+      "actions": [
+        "Open the account or the drawer",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "export",
+        "data",
+        "csv",
+        "qif"
+      ],
+      "nav_hints": [
+        "export",
+        "data",
+        "csv"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Create a backup",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Backup and restore\"/Backup"
+      ],
+      "keywords": [
+        "create",
+        "backup",
+        "settings",
+        "restore"
+      ],
+      "nav_hints": [
+        "backup and restore",
+        "create",
+        "backup"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Set up cloud synchronisation",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Synchronisation\""
+      ],
+      "keywords": [
+        "cloud",
+        "synchronisation",
+        "settings"
+      ],
+      "nav_hints": [
+        "synchronisation",
+        "cloud"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Add a home screen",
+      "description": "Long-press an empty area of the Android home screen",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets"
+      ],
+      "keywords": [
+        "add",
+        "home",
+        "widget",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add",
+        "home",
+        "widget"
+      ],
+      "source": "guide"
+    }
+  ]
+}

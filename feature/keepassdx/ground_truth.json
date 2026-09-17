@@ -1,0 +1,1133 @@
+{
+  "app": "KeePassDX",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official KeePassDX documentation (keepassdx.com) and in-app menus",
+  "description": "Hand-verified capability inventory for KeePassDX (com.kunzisoft.keepass.libre), version 4.4.5.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a database",
+      "description": "Create a database as documented for KeePassDX.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" icon (Create new database)",
+        "give a name for the database",
+        "give a file path/storage location and confirm it with the system file picker",
+        "set the master password and/or select a key file",
+        "tap the save button to create the .kdbx file"
+      ],
+      "keywords": [
+        "create",
+        "database",
+        "new"
+      ],
+      "nav_hints": [
+        "create",
+        "database"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Open an existing database",
+      "description": "Open an existing database as documented for KeePassDX.",
+      "actions": [
+        "Open the app",
+        "tap \"Open existing database\"/the file browse icon",
+        "select the .kdbx file through the file picker",
+        "enter the master password",
+        "tap the unlock button"
+      ],
+      "keywords": [
+        "existing",
+        "database",
+        "file",
+        "browse"
+      ],
+      "nav_hints": [
+        "open existing database",
+        "existing",
+        "database"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Unlock a database with a key file",
+      "description": "Unlock a database with a key file as documented for KeePassDX.",
+      "actions": [
+        "On the unlock screen",
+        "tap the key file selector",
+        "browse to and select the key file",
+        "enter the password if the database also uses one",
+        "tap unlock"
+      ],
+      "keywords": [
+        "unlock",
+        "database",
+        "key",
+        "file",
+        "selector"
+      ],
+      "nav_hints": [
+        "unlock",
+        "database",
+        "key",
+        "file"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Unlock a database with a hardware key (challenge-response)",
+      "description": "Unlock a database with a hardware key (challenge-response) as documented for KeePassDX.",
+      "actions": [
+        "On the unlock screen",
+        "enable the hardware key option",
+        "select the challenge-response method",
+        "present the YubiKey over NFC or connect it by USB when prompted",
+        "tap unlock"
+      ],
+      "keywords": [
+        "unlock",
+        "database",
+        "hardware",
+        "key",
+        "challenge-response",
+        "enable"
+      ],
+      "nav_hints": [
+        "unlock",
+        "database",
+        "hardware",
+        "key"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Unlock with biometrics or the device credential",
+      "description": "Unlock with biometrics or the device credential as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "\"Advanced unlock\"",
+        "enable biometric or device-credential unlock",
+        "unlock the database once with the password and store the credential when prompted",
+        "afterwards, present the fingerprint at the unlock screen"
+      ],
+      "keywords": [
+        "unlock",
+        "biometrics",
+        "device",
+        "credential",
+        "settings",
+        "advanced"
+      ],
+      "nav_hints": [
+        "advanced unlock",
+        "unlock",
+        "biometrics",
+        "device"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Create an entry",
+      "description": "Create an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the database",
+        "navigate to the target group",
+        "tap the \"+\" floating action button",
+        "tap \"Add entry\"",
+        "enter the title, username, password and URL",
+        "add notes",
+        "tap the save (tick) button"
+      ],
+      "keywords": [
+        "create",
+        "entry",
+        "database",
+        "navigate",
+        "target",
+        "group"
+      ],
+      "nav_hints": [
+        "add entry",
+        "create",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Generate a password",
+      "description": "Generate a password as documented for KeePassDX.",
+      "actions": [
+        "Open the entry editor",
+        "tap the generate (dice/refresh) icon beside the password field",
+        "set the length and the character sets (upper case, lower case, digits, special characters, brackets, extended ASCII)",
+        "tap the generate action",
+        "tap Accept to insert it"
+      ],
+      "keywords": [
+        "generate",
+        "password",
+        "entry",
+        "editor",
+        "dice",
+        "refresh"
+      ],
+      "nav_hints": [
+        "generate",
+        "password"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Add custom fields to an entry",
+      "description": "Add custom fields to an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the entry editor",
+        "scroll to the custom/extra fields section",
+        "tap \"Add field\"",
+        "enter the field name and value",
+        "mark it protected if it should be hidden",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "custom",
+        "fields",
+        "entry",
+        "editor",
+        "scroll"
+      ],
+      "nav_hints": [
+        "add field",
+        "add",
+        "custom",
+        "fields"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Add an attachment to an entry",
+      "description": "Add an attachment to an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the entry editor",
+        "tap the attachment (paper clip) action",
+        "select the file from the picker",
+        "confirm",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "attachment",
+        "entry",
+        "editor",
+        "paper",
+        "clip"
+      ],
+      "nav_hints": [
+        "add",
+        "attachment",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Download or open an attachment",
+      "description": "Download or open an attachment as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "tap the attachment name",
+        "choose to open it or to download it to a folder",
+        "confirm"
+      ],
+      "keywords": [
+        "download",
+        "attachment",
+        "entry",
+        "name"
+      ],
+      "nav_hints": [
+        "download",
+        "attachment"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Set an expiration date on an entry",
+      "description": "Set an expiration date on an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the entry editor",
+        "toggle the expiration option",
+        "pick the date and time",
+        "tap Save; expired entries are marked in the list"
+      ],
+      "keywords": [
+        "expiration",
+        "date",
+        "entry",
+        "editor",
+        "toggle"
+      ],
+      "nav_hints": [
+        "expiration",
+        "date",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Configure a one-time password (OTP) token for an entry",
+      "description": "Configure a one-time password (OTP) token for an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the entry editor",
+        "tap the OTP/token action",
+        "choose to scan a QR code, paste an otpauth:// URI or enter the secret manually",
+        "set the type (TOTP or HOTP), the algorithm, the digits and the period",
+        "tap Save; the rotating code is then shown on the entry screen"
+      ],
+      "keywords": [
+        "configure",
+        "one-time",
+        "password",
+        "otp",
+        "token",
+        "entry"
+      ],
+      "nav_hints": [
+        "configure",
+        "one-time",
+        "password",
+        "otp"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Copy a username or password to the clipboard",
+      "description": "Copy a username or password to the clipboard as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "tap the copy icon beside the username or password field",
+        "the value is placed on the clipboard and cleared automatically after the configured timeout"
+      ],
+      "keywords": [
+        "copy",
+        "username",
+        "password",
+        "clipboard",
+        "entry",
+        "beside"
+      ],
+      "nav_hints": [
+        "copy",
+        "username",
+        "password",
+        "clipboard"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Reveal a hidden password",
+      "description": "Reveal a hidden password as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "tap the eye icon beside the password field to show it",
+        "tap it again to hide it"
+      ],
+      "keywords": [
+        "reveal",
+        "hidden",
+        "password",
+        "entry",
+        "eye",
+        "beside"
+      ],
+      "nav_hints": [
+        "reveal",
+        "hidden",
+        "password"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Open the entry URL in the browser",
+      "description": "Open the entry URL in the browser as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "tap the URL field/the open-link action",
+        "the address opens in the default browser"
+      ],
+      "keywords": [
+        "entry",
+        "url",
+        "browser",
+        "field",
+        "open-link",
+        "action"
+      ],
+      "nav_hints": [
+        "entry",
+        "url",
+        "browser"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Edit an entry",
+      "description": "Edit an entry as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "tap the edit (pencil) icon",
+        "change the fields",
+        "tap the save button"
+      ],
+      "keywords": [
+        "edit",
+        "entry",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "View an entry's history",
+      "description": "View an entry's history as documented for KeePassDX.",
+      "actions": [
+        "Open the entry",
+        "scroll to the history section (KDBX databases keep previous versions)",
+        "tap a historic version to inspect it",
+        "optionally restore it"
+      ],
+      "keywords": [
+        "entry's",
+        "history",
+        "entry",
+        "scroll",
+        "section",
+        "kdbx"
+      ],
+      "nav_hints": [
+        "entry's",
+        "history"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Duplicate an entry",
+      "description": "Duplicate an entry as documented for KeePassDX.",
+      "actions": [
+        "Long-press the entry in the list",
+        "tap the copy/duplicate action",
+        "choose the destination group",
+        "confirm"
+      ],
+      "keywords": [
+        "duplicate",
+        "entry",
+        "long-press",
+        "copy",
+        "action"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Move an entry to another group",
+      "description": "Move an entry to another group as documented for KeePassDX.",
+      "actions": [
+        "Long-press the entry",
+        "tap the move action",
+        "navigate to the destination group",
+        "tap the paste/confirm button"
+      ],
+      "keywords": [
+        "move",
+        "entry",
+        "another",
+        "group",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "move",
+        "entry",
+        "another",
+        "group"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Delete an entry",
+      "description": "Delete an entry as documented for KeePassDX.",
+      "actions": [
+        "Long-press the entry",
+        "tap the delete (bin) icon",
+        "confirm; if the recycle bin is enabled the entry is moved there instead of being erased"
+      ],
+      "keywords": [
+        "delete",
+        "entry",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Create a group",
+      "description": "Create a group as documented for KeePassDX.",
+      "actions": [
+        "Open the database",
+        "navigate to the parent group",
+        "tap the \"+\" button",
+        "tap \"Add group\"",
+        "enter the group name",
+        "choose an icon",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "group",
+        "database",
+        "navigate",
+        "parent"
+      ],
+      "nav_hints": [
+        "add group",
+        "create",
+        "group"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Edit, move or delete a group",
+      "description": "Edit, move or delete a group as documented for KeePassDX.",
+      "actions": [
+        "Long-press the group",
+        "tap Edit to rename it or change its icon and notes, tap the move action to relocate it, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "edit",
+        "move",
+        "delete",
+        "group",
+        "long-press",
+        "rename"
+      ],
+      "nav_hints": [
+        "edit",
+        "move",
+        "delete",
+        "group"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Use the recycle bin",
+      "description": "Use the recycle bin as documented for KeePassDX.",
+      "actions": [
+        "Open the database settings and enable the recycle bin",
+        "deleted entries and groups are moved into it",
+        "open the recycle bin group to restore an item (move it back) or to delete it permanently"
+      ],
+      "keywords": [
+        "recycle",
+        "bin",
+        "database",
+        "settings",
+        "enable",
+        "deleted"
+      ],
+      "nav_hints": [
+        "recycle",
+        "bin"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Change an entry or group icon",
+      "description": "Change an entry or group icon as documented for KeePassDX.",
+      "actions": [
+        "Open the entry or group editor",
+        "tap the icon",
+        "choose a standard KeePass icon or a custom icon added to the database",
+        "confirm",
+        "tap Save"
+      ],
+      "keywords": [
+        "change",
+        "entry",
+        "group",
+        "editor"
+      ],
+      "nav_hints": [
+        "change",
+        "entry",
+        "group"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Search the database",
+      "description": "Search the database as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "tap the search icon in the toolbar",
+        "type the query",
+        "review the matching entries",
+        "tap one to open it"
+      ],
+      "keywords": [
+        "search",
+        "database",
+        "unlocked",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "database"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Configure search behaviour",
+      "description": "Configure search behaviour as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "the search section",
+        "choose which fields are searched (title, username, URL, notes, custom fields), whether the search is case sensitive and whether the recycle bin is included"
+      ],
+      "keywords": [
+        "configure",
+        "search",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "search",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Sort the entry list",
+      "description": "Sort the entry list as documented for KeePassDX.",
+      "actions": [
+        "Open a group",
+        "tap the overflow menu (three dots)",
+        "tap \"Sort\"",
+        "choose the field (title, username, creation time, modification time or last access) and the direction",
+        "optionally group entries before groups",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "entry",
+        "group",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Use the KeePassDX autofill service",
+      "description": "Use the KeePassDX autofill service as documented for KeePassDX.",
+      "actions": [
+        "Open the Android system settings",
+        "Passwords and accounts/Autofill service",
+        "select KeePassDX",
+        "return to any app with a login form",
+        "tap the field",
+        "choose the KeePassDX suggestion",
+        "unlock the database",
+        "pick the matching entry; the fields are filled automatically"
+      ],
+      "keywords": [
+        "keepassdx",
+        "autofill",
+        "service",
+        "android",
+        "system",
+        "settings"
+      ],
+      "nav_hints": [
+        "keepassdx",
+        "autofill",
+        "service"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Use the Magikeyboard to type credentials",
+      "description": "Use the Magikeyboard to type credentials as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "enable the Magikeyboard and add it in the Android keyboard settings",
+        "open an app with a login form",
+        "switch to the Magikeyboard",
+        "unlock the database",
+        "pick the entry",
+        "tap the username and password keys to type them"
+      ],
+      "keywords": [
+        "magikeyboard",
+        "credentials",
+        "settings",
+        "enable",
+        "add",
+        "android"
+      ],
+      "nav_hints": [
+        "magikeyboard",
+        "credentials"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Save changes to the database",
+      "description": "Save changes to the database as documented for KeePassDX.",
+      "actions": [
+        "Make the changes",
+        "tap the save icon in the toolbar (or enable automatic saving in Settings)",
+        "wait for the confirmation that the .kdbx file has been written"
+      ],
+      "keywords": [
+        "save",
+        "changes",
+        "database",
+        "make",
+        "toolbar",
+        "enable"
+      ],
+      "nav_hints": [
+        "save",
+        "changes",
+        "database"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Open a database in read-only mode",
+      "description": "Open a database in read-only mode as documented for KeePassDX.",
+      "actions": [
+        "On the unlock screen",
+        "enable the read-only toggle before unlocking",
+        "the database opens without allowing modifications"
+      ],
+      "keywords": [
+        "database",
+        "read-only",
+        "mode",
+        "unlock",
+        "enable",
+        "toggle"
+      ],
+      "nav_hints": [
+        "database",
+        "read-only",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Lock the database manually",
+      "description": "Lock the database manually as documented for KeePassDX.",
+      "actions": [
+        "Tap the lock icon in the toolbar (or use the lock action in the notification)",
+        "the database is closed and the unlock screen returns"
+      ],
+      "keywords": [
+        "lock",
+        "database",
+        "manually",
+        "toolbar",
+        "action",
+        "notification"
+      ],
+      "nav_hints": [
+        "lock",
+        "database",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Configure automatic locking",
+      "description": "Configure automatic locking as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "the security/\"App timeout\" section",
+        "set the inactivity timeout, whether the database locks when the screen turns off and whether it locks when the app is closed",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "automatic",
+        "locking",
+        "settings",
+        "security",
+        "timeout"
+      ],
+      "nav_hints": [
+        "app timeout",
+        "configure",
+        "automatic",
+        "locking"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Configure clipboard timeout",
+      "description": "Configure clipboard timeout as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "the security section",
+        "tap the clipboard timeout entry",
+        "select how long copied values remain on the clipboard before being cleared"
+      ],
+      "keywords": [
+        "configure",
+        "clipboard",
+        "timeout",
+        "settings",
+        "security",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "clipboard",
+        "timeout"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Block screenshots",
+      "description": "Block screenshots as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "security section",
+        "enable the \"Screenshot prohibited\"/secure screen option; the app content is excluded from screenshots and the recents preview"
+      ],
+      "keywords": [
+        "block",
+        "screenshots",
+        "settings",
+        "security",
+        "section"
+      ],
+      "nav_hints": [
+        "screenshot prohibited",
+        "block",
+        "screenshots"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Change the master key of a database",
+      "description": "Change the master key of a database as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "open the database settings",
+        "tap the master key entry",
+        "enter the new password and/or select a new key file",
+        "confirm; save the database afterwards"
+      ],
+      "keywords": [
+        "change",
+        "master",
+        "key",
+        "database",
+        "unlocked",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "master",
+        "key",
+        "database"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Change the database encryption settings",
+      "description": "Change the database encryption settings as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "tap the database settings",
+        "set the encryption algorithm (for example AES or ChaCha20), the key derivation function (AES-KDF or Argon2), the number of iterations, the memory usage and the parallelism",
+        "save"
+      ],
+      "keywords": [
+        "change",
+        "database",
+        "encryption",
+        "settings",
+        "unlocked"
+      ],
+      "nav_hints": [
+        "change",
+        "database",
+        "encryption",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Edit the database name, description and default username",
+      "description": "Edit the database name, description and default username as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "open the database settings",
+        "edit the name, the description, the default username and the database colour",
+        "save"
+      ],
+      "keywords": [
+        "edit",
+        "database",
+        "name",
+        "description",
+        "default",
+        "username"
+      ],
+      "nav_hints": [
+        "edit",
+        "database",
+        "name",
+        "description"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Configure history and compression settings",
+      "description": "Configure history and compression settings as documented for KeePassDX.",
+      "actions": [
+        "Open the database settings",
+        "set the maximum number of history items per entry, the maximum history size and whether the database is compressed",
+        "save"
+      ],
+      "keywords": [
+        "configure",
+        "history",
+        "compression",
+        "settings",
+        "database",
+        "maximum"
+      ],
+      "nav_hints": [
+        "configure",
+        "history",
+        "compression",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Use entry templates",
+      "description": "Use entry templates as documented for KeePassDX.",
+      "actions": [
+        "Open the database settings and set the templates group (KDBX 4)",
+        "tap \"+\"",
+        "\"Add entry\"",
+        "choose a template such as email, Wi-Fi, credit card or note",
+        "fill in the template fields",
+        "tap Save"
+      ],
+      "keywords": [
+        "entry",
+        "templates",
+        "database",
+        "settings",
+        "group",
+        "kdbx"
+      ],
+      "nav_hints": [
+        "add entry",
+        "entry",
+        "templates"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Merge/synchronise changes from another copy of the database",
+      "description": "Merge/synchronise changes from another copy of the database as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "tap the overflow menu",
+        "tap the merge/synchronise action",
+        "select the other .kdbx file",
+        "enter its credentials",
+        "confirm; the differences are merged into the open database"
+      ],
+      "keywords": [
+        "merge",
+        "synchronise",
+        "changes",
+        "another",
+        "copy",
+        "database"
+      ],
+      "nav_hints": [
+        "merge",
+        "synchronise",
+        "changes",
+        "another"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Save a copy of the database (Save as)",
+      "description": "Save a copy of the database (Save as) as documented for KeePassDX.",
+      "actions": [
+        "Open the unlocked database",
+        "tap the overflow menu",
+        "tap \"Save as\"/export",
+        "choose the destination file with the system picker",
+        "confirm"
+      ],
+      "keywords": [
+        "save",
+        "copy",
+        "database",
+        "unlocked",
+        "overflow"
+      ],
+      "nav_hints": [
+        "save as",
+        "save",
+        "copy",
+        "database"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Add a database to the recent list and pin it",
+      "description": "Add a database to the recent list and pin it as documented for KeePassDX.",
+      "actions": [
+        "Open a database once; it appears on the start screen list",
+        "long-press the entry there to remove it, or use the option to keep the file reference for quick reopening"
+      ],
+      "keywords": [
+        "add",
+        "database",
+        "recent",
+        "pin",
+        "once",
+        "appears"
+      ],
+      "nav_hints": [
+        "add",
+        "database",
+        "recent",
+        "pin"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Change the app theme and appearance",
+      "description": "Change the app theme and appearance as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"/Form",
+        "choose the theme (light, dark, black or system), the icon pack style, the list density and the text size",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "appearance",
+        "settings",
+        "form"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry",
+        "select the interface language",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Configure keyboard and form-filling behaviour",
+      "description": "Configure keyboard and form-filling behaviour as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "\"Form filling\"",
+        "toggle the autofill inline suggestions, whether the app asks to save new credentials, and the Magikeyboard behaviour (auto-open, entry selection, notification)"
+      ],
+      "keywords": [
+        "configure",
+        "keyboard",
+        "form-filling",
+        "behaviour",
+        "settings",
+        "form"
+      ],
+      "nav_hints": [
+        "form filling",
+        "configure",
+        "keyboard",
+        "form-filling"
+      ]
+    },
+    {
+      "id": "GT047",
+      "name": "View the about screen, contribution and licence information",
+      "description": "View the about screen, contribution and licence information as documented for KeePassDX.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the version, the changelog, the contribution options and the licence"
+      ],
+      "keywords": [
+        "about",
+        "contribution",
+        "licence",
+        "information",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "contribution",
+        "licence",
+        "information"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

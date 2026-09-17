@@ -1,0 +1,295 @@
+{
+  "app": "KeePassDX",
+  "source": "guide",
+  "url": "Official KeePassDX documentation (keepassdx.com) and in-app menus",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-47 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a database",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" icon (Create new database)"
+      ],
+      "keywords": [
+        "create",
+        "database",
+        "new"
+      ],
+      "nav_hints": [
+        "create",
+        "database"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Unlock a database",
+      "description": "On the unlock screen",
+      "actions": [
+        "On the unlock screen",
+        "enable the hardware key option"
+      ],
+      "keywords": [
+        "unlock",
+        "database",
+        "hardware",
+        "key"
+      ],
+      "nav_hints": [
+        "unlock",
+        "database",
+        "hardware"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Generate a password",
+      "description": "Open the entry editor",
+      "actions": [
+        "Open the entry editor",
+        "tap the generate (dice/refresh) icon beside the password field"
+      ],
+      "keywords": [
+        "generate",
+        "password",
+        "entry",
+        "editor"
+      ],
+      "nav_hints": [
+        "generate",
+        "password"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Download",
+      "description": "Open the entry",
+      "actions": [
+        "Open the entry",
+        "tap the attachment name"
+      ],
+      "keywords": [
+        "download",
+        "attachment",
+        "entry",
+        "name"
+      ],
+      "nav_hints": [
+        "download",
+        "attachment"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Copy a username",
+      "description": "Open the entry",
+      "actions": [
+        "Open the entry",
+        "tap the copy icon beside the username or password field"
+      ],
+      "keywords": [
+        "copy",
+        "username",
+        "password",
+        "clipboard"
+      ],
+      "nav_hints": [
+        "copy",
+        "username",
+        "password"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Edit an entry",
+      "description": "Open the entry",
+      "actions": [
+        "Open the entry",
+        "tap the edit (pencil) icon"
+      ],
+      "keywords": [
+        "edit",
+        "entry",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "entry"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Move an entry",
+      "description": "Long-press the entry",
+      "actions": [
+        "Long-press the entry",
+        "tap the move action"
+      ],
+      "keywords": [
+        "move",
+        "entry",
+        "another",
+        "group"
+      ],
+      "nav_hints": [
+        "move",
+        "entry",
+        "another"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Edit, move",
+      "description": "Long-press the group",
+      "actions": [
+        "Long-press the group",
+        "tap Edit to rename it or change its icon and notes, tap the move action to relocate it, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "edit",
+        "move",
+        "delete",
+        "group"
+      ],
+      "nav_hints": [
+        "edit",
+        "move",
+        "delete"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Search the database",
+      "description": "Open the unlocked database",
+      "actions": [
+        "Open the unlocked database",
+        "tap the search icon in the toolbar"
+      ],
+      "keywords": [
+        "search",
+        "database",
+        "unlocked",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "database"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Use the KeePassDX autofill",
+      "description": "Open the Android system settings",
+      "actions": [
+        "Open the Android system settings",
+        "Passwords and accounts/Autofill service"
+      ],
+      "keywords": [
+        "keepassdx",
+        "autofill",
+        "service",
+        "android"
+      ],
+      "nav_hints": [
+        "keepassdx",
+        "autofill",
+        "service"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Open a database",
+      "description": "On the unlock screen",
+      "actions": [
+        "On the unlock screen",
+        "enable the read-only toggle before unlocking"
+      ],
+      "keywords": [
+        "database",
+        "read-only",
+        "mode",
+        "unlock"
+      ],
+      "nav_hints": [
+        "database",
+        "read-only",
+        "mode"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Configure clipboard timeout",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "the security section"
+      ],
+      "keywords": [
+        "configure",
+        "clipboard",
+        "timeout",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "clipboard",
+        "timeout"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Change the database encryption",
+      "description": "Open the unlocked database",
+      "actions": [
+        "Open the unlocked database",
+        "tap the database settings"
+      ],
+      "keywords": [
+        "change",
+        "database",
+        "encryption",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "database",
+        "encryption"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Use entry templates",
+      "description": "Open the database settings and set the templates group (KDBX 4)",
+      "actions": [
+        "Open the database settings and set the templates group (KDBX 4)",
+        "tap \"+\""
+      ],
+      "keywords": [
+        "entry",
+        "templates",
+        "database",
+        "settings"
+      ],
+      "nav_hints": [
+        "add entry",
+        "entry",
+        "templates"
+      ],
+      "source": "guide"
+    }
+  ]
+}

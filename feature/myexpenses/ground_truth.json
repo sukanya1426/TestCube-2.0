@@ -1,0 +1,1142 @@
+{
+  "app": "MyExpenses",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official My Expenses documentation (faq.myexpenses.mobi) and in-app menus",
+  "description": "Hand-verified capability inventory for MyExpenses (org.totschnig.myexpenses), version 4.1.0.2.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create an account",
+      "description": "Create an account as documented for MyExpenses.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Accounts\"/the \"+\" beside the account list",
+        "enter the account label",
+        "enter the opening balance",
+        "select the currency",
+        "select the account type (for example cash, bank, credit card, asset, liability)",
+        "pick a colour",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "create",
+        "account",
+        "navigation",
+        "drawer",
+        "accounts",
+        "beside"
+      ],
+      "nav_hints": [
+        "accounts",
+        "create",
+        "account"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Edit or delete an account",
+      "description": "Edit or delete an account as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "long-press the account (or open it and use the overflow menu)",
+        "tap Edit to change its properties, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "edit",
+        "delete",
+        "account",
+        "drawer",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "edit",
+        "delete",
+        "account"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Hide or reorder accounts",
+      "description": "Hide or reorder accounts as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "long-press the account",
+        "tap the hide action, or use the sort option in the overflow menu to change the account ordering"
+      ],
+      "keywords": [
+        "hide",
+        "reorder",
+        "accounts",
+        "drawer",
+        "long-press",
+        "account"
+      ],
+      "nav_hints": [
+        "hide",
+        "reorder",
+        "accounts"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "View the aggregate (all accounts) balance",
+      "description": "View the aggregate (all accounts) balance as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap the aggregate/\"Total\" entry for a currency",
+        "the combined transaction list and balance for all accounts in that currency are shown"
+      ],
+      "keywords": [
+        "aggregate",
+        "all",
+        "accounts",
+        "balance",
+        "drawer",
+        "total"
+      ],
+      "nav_hints": [
+        "total",
+        "aggregate",
+        "all",
+        "accounts"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Record an expense",
+      "description": "Record an expense as documented for MyExpenses.",
+      "actions": [
+        "Open the account",
+        "tap the \"+\" floating action button",
+        "keep the Expense tab selected",
+        "enter the amount",
+        "select the category",
+        "select or type the payee",
+        "set the date and time",
+        "add optional notes and tags",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "record",
+        "expense",
+        "account",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "record",
+        "expense"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Record income",
+      "description": "Record income as documented for MyExpenses.",
+      "actions": [
+        "Tap the \"+\" button",
+        "switch to the Income tab",
+        "enter the amount, category and payer",
+        "set the date",
+        "tap save"
+      ],
+      "keywords": [
+        "record",
+        "income",
+        "switch",
+        "tab"
+      ],
+      "nav_hints": [
+        "record",
+        "income"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Record a transfer between accounts",
+      "description": "Record a transfer between accounts as documented for MyExpenses.",
+      "actions": [
+        "Tap the \"+\" button",
+        "switch to the Transfer tab",
+        "select the destination account",
+        "enter the amount (and the equivalent amount for a different currency)",
+        "set the date",
+        "tap save"
+      ],
+      "keywords": [
+        "record",
+        "transfer",
+        "between",
+        "accounts",
+        "switch",
+        "tab"
+      ],
+      "nav_hints": [
+        "record",
+        "transfer",
+        "between",
+        "accounts"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Create a split transaction",
+      "description": "Create a split transaction as documented for MyExpenses.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap the overflow menu",
+        "tap \"Create split\"",
+        "tap \"Add split part\" for each line and enter its amount and category",
+        "repeat until the parts add up",
+        "tap save"
+      ],
+      "keywords": [
+        "create",
+        "split",
+        "transaction",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create split",
+        "add split part",
+        "create",
+        "split"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Use the built-in calculator for amounts",
+      "description": "Use the built-in calculator for amounts as documented for MyExpenses.",
+      "actions": [
+        "Open the transaction editor",
+        "tap the calculator icon beside the amount field",
+        "enter the arithmetic expression",
+        "tap the equals/confirm button to transfer the result into the amount field"
+      ],
+      "keywords": [
+        "built-in",
+        "calculator",
+        "amounts",
+        "transaction",
+        "editor",
+        "beside"
+      ],
+      "nav_hints": [
+        "built-in",
+        "calculator",
+        "amounts"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Attach a picture or file to a transaction",
+      "description": "Attach a picture or file to a transaction as documented for MyExpenses.",
+      "actions": [
+        "Open a transaction",
+        "tap the attachment (paper clip) icon",
+        "choose to take a photo or select an existing file",
+        "confirm; tap the thumbnail later to view it"
+      ],
+      "keywords": [
+        "attach",
+        "picture",
+        "file",
+        "transaction",
+        "attachment",
+        "paper"
+      ],
+      "nav_hints": [
+        "attach",
+        "picture",
+        "file",
+        "transaction"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Scan a receipt with OCR",
+      "description": "Scan a receipt with OCR as documented for MyExpenses.",
+      "actions": [
+        "Open the transaction editor",
+        "tap the OCR/scan action",
+        "take or select the receipt image",
+        "wait for the recognition",
+        "confirm or correct the detected amount, date and payee",
+        "tap save. (Professional feature; requires the OCR engine to be configured in Settings.)"
+      ],
+      "keywords": [
+        "scan",
+        "receipt",
+        "ocr",
+        "transaction",
+        "editor",
+        "action"
+      ],
+      "nav_hints": [
+        "scan",
+        "receipt",
+        "ocr"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Add tags to a transaction",
+      "description": "Add tags to a transaction as documented for MyExpenses.",
+      "actions": [
+        "Open the transaction editor",
+        "tap the tags field",
+        "select existing tags or create a new one",
+        "confirm",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "tags",
+        "transaction",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "tags",
+        "transaction"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Manage the tag list",
+      "description": "Manage the tag list as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Manage tags\"",
+        "tap \"+\" to create a tag",
+        "long-press a tag to rename, recolour or delete it",
+        "confirm"
+      ],
+      "keywords": [
+        "manage",
+        "tag",
+        "drawer",
+        "tags"
+      ],
+      "nav_hints": [
+        "manage tags",
+        "manage",
+        "tag"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Set the transaction status (cleared/reconciled)",
+      "description": "Set the transaction status (cleared/reconciled) as documented for MyExpenses.",
+      "actions": [
+        "Open the transaction list",
+        "long-press the transaction",
+        "tap the status action",
+        "choose uncleared, cleared or reconciled; or use the reconciliation banner in the account view"
+      ],
+      "keywords": [
+        "transaction",
+        "status",
+        "cleared",
+        "reconciled",
+        "long-press"
+      ],
+      "nav_hints": [
+        "transaction",
+        "status",
+        "cleared",
+        "reconciled"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Create a template for a recurring transaction",
+      "description": "Create a template for a recurring transaction as documented for MyExpenses.",
+      "actions": [
+        "Open a saved transaction",
+        "tap the overflow menu",
+        "tap \"Save as template\"",
+        "enter the template title",
+        "tap save; or open the drawer",
+        "\"Templates\"",
+        "tap \"+\" and fill in the details"
+      ],
+      "keywords": [
+        "create",
+        "template",
+        "recurring",
+        "transaction",
+        "saved",
+        "overflow"
+      ],
+      "nav_hints": [
+        "save as template",
+        "templates",
+        "create",
+        "template"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Create a plan (schedule) for a template",
+      "description": "Create a plan (schedule) for a template as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Templates and plans\"",
+        "open the template",
+        "tap the plan/calendar row",
+        "set the start date and the recurrence rule",
+        "choose whether instances are created automatically or require confirmation",
+        "tap save"
+      ],
+      "keywords": [
+        "create",
+        "plan",
+        "schedule",
+        "template",
+        "drawer",
+        "templates"
+      ],
+      "nav_hints": [
+        "templates and plans",
+        "create",
+        "plan",
+        "schedule"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Apply a template manually",
+      "description": "Apply a template manually as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Templates\"",
+        "tap the template",
+        "review the pre-filled transaction",
+        "adjust the amount or date",
+        "tap save"
+      ],
+      "keywords": [
+        "apply",
+        "template",
+        "manually",
+        "drawer",
+        "templates"
+      ],
+      "nav_hints": [
+        "templates",
+        "apply",
+        "template",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Manage categories",
+      "description": "Manage categories as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Manage categories\"",
+        "tap \"+\" to create a category or subcategory",
+        "enter the name",
+        "pick an icon and colour",
+        "tap save; long-press an existing category to edit, move or delete it"
+      ],
+      "keywords": [
+        "manage",
+        "categories",
+        "drawer"
+      ],
+      "nav_hints": [
+        "manage categories",
+        "manage",
+        "categories"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Import a predefined category set",
+      "description": "Import a predefined category set as documented for MyExpenses.",
+      "actions": [
+        "Open \"Manage categories\"",
+        "tap the overflow menu",
+        "tap the \"Set up categories\"/import option",
+        "choose the predefined set",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "predefined",
+        "category",
+        "manage",
+        "categories",
+        "overflow"
+      ],
+      "nav_hints": [
+        "manage categories",
+        "set up categories",
+        "import",
+        "predefined"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Manage parties (payees and payers)",
+      "description": "Manage parties (payees and payers) as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Manage parties\"",
+        "tap \"+\" to add a party",
+        "enter the name",
+        "tap save; long-press to rename, merge or delete"
+      ],
+      "keywords": [
+        "manage",
+        "parties",
+        "payees",
+        "payers",
+        "drawer"
+      ],
+      "nav_hints": [
+        "manage parties",
+        "manage",
+        "parties",
+        "payees"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Create and track a budget",
+      "description": "Create and track a budget as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Budgets\"",
+        "tap \"+\"",
+        "select the account or aggregate",
+        "choose the period (weekly, monthly, yearly or custom)",
+        "enter the total budget",
+        "allocate amounts to individual categories",
+        "tap save"
+      ],
+      "keywords": [
+        "create",
+        "track",
+        "budget",
+        "drawer",
+        "budgets"
+      ],
+      "nav_hints": [
+        "budgets",
+        "create",
+        "track",
+        "budget"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Review budget progress",
+      "description": "Review budget progress as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Budgets\"",
+        "select the budget",
+        "review the progress bars per category and the remaining amount for the period"
+      ],
+      "keywords": [
+        "review",
+        "budget",
+        "progress",
+        "drawer",
+        "budgets"
+      ],
+      "nav_hints": [
+        "budgets",
+        "review",
+        "budget",
+        "progress"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Track debts (money lent and borrowed)",
+      "description": "Track debts (money lent and borrowed) as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Debts\"",
+        "tap \"+\"",
+        "enter the label, the party, the amount and the date",
+        "tap save",
+        "record repayments against the debt from the debt detail screen"
+      ],
+      "keywords": [
+        "track",
+        "debts",
+        "money",
+        "lent",
+        "borrowed",
+        "drawer"
+      ],
+      "nav_hints": [
+        "debts",
+        "track",
+        "money",
+        "lent"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Filter the transaction list",
+      "description": "Filter the transaction list as documented for MyExpenses.",
+      "actions": [
+        "Open an account",
+        "tap the filter icon in the toolbar",
+        "select the criteria (category, payee, amount range, date range, transaction type, status, method, tag or free text)",
+        "apply; tap the clear action to remove the filter"
+      ],
+      "keywords": [
+        "filter",
+        "transaction",
+        "account",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "filter",
+        "transaction"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Search transactions by text",
+      "description": "Search transactions by text as documented for MyExpenses.",
+      "actions": [
+        "Open an account",
+        "tap the search icon",
+        "type the text",
+        "review the matching transactions"
+      ],
+      "keywords": [
+        "search",
+        "transactions",
+        "text",
+        "account"
+      ],
+      "nav_hints": [
+        "search",
+        "transactions",
+        "text"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Group the transaction list by period",
+      "description": "Group the transaction list by period as documented for MyExpenses.",
+      "actions": [
+        "Open an account",
+        "tap the overflow menu",
+        "tap \"Group by\"",
+        "choose none, day, week, month or year",
+        "confirm; group headers with subtotals appear"
+      ],
+      "keywords": [
+        "group",
+        "transaction",
+        "period",
+        "account",
+        "overflow"
+      ],
+      "nav_hints": [
+        "group by",
+        "group",
+        "transaction",
+        "period"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Sort the transaction list",
+      "description": "Sort the transaction list as documented for MyExpenses.",
+      "actions": [
+        "Open an account",
+        "tap the overflow menu",
+        "tap the sort option",
+        "choose the field and direction",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "transaction",
+        "account",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort",
+        "transaction"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "View the distribution chart",
+      "description": "View the distribution chart as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer or the account overflow menu",
+        "tap \"Distribution\"",
+        "select the period",
+        "review the pie/bar chart of spending by category",
+        "tap a slice to drill into the subcategories"
+      ],
+      "keywords": [
+        "distribution",
+        "chart",
+        "drawer",
+        "account",
+        "overflow"
+      ],
+      "nav_hints": [
+        "distribution",
+        "chart"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "View the history chart",
+      "description": "View the history chart as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer or the account overflow menu",
+        "tap \"History\"",
+        "select the grouping period",
+        "review the income, expense and balance trend chart"
+      ],
+      "keywords": [
+        "history",
+        "chart",
+        "drawer",
+        "account",
+        "overflow"
+      ],
+      "nav_hints": [
+        "history",
+        "chart"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Print a report to PDF",
+      "description": "Print a report to PDF as documented for MyExpenses.",
+      "actions": [
+        "Open an account (optionally with a filter applied)",
+        "tap the overflow menu",
+        "tap \"Print\"",
+        "confirm the layout options",
+        "the PDF is generated and saved or sent to the printer"
+      ],
+      "keywords": [
+        "print",
+        "report",
+        "pdf",
+        "account",
+        "optionally",
+        "filter"
+      ],
+      "nav_hints": [
+        "print",
+        "report",
+        "pdf"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Export data to CSV, QIF or JSON",
+      "description": "Export data to CSV, QIF or JSON as documented for MyExpenses.",
+      "actions": [
+        "Open the account or the drawer",
+        "tap the overflow menu",
+        "tap \"Export\"",
+        "choose the format (CSV, QIF or JSON)",
+        "set the date range, the separator, the encoding and the handling of already-exported transactions",
+        "tap the confirm button"
+      ],
+      "keywords": [
+        "export",
+        "data",
+        "csv",
+        "qif",
+        "json",
+        "account"
+      ],
+      "nav_hints": [
+        "export",
+        "data",
+        "csv",
+        "qif"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Import data from CSV",
+      "description": "Import data from CSV as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Import\"",
+        "tap CSV",
+        "select the file",
+        "set the separator and encoding",
+        "map each column to a field",
+        "choose the target account",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "data",
+        "csv",
+        "drawer"
+      ],
+      "nav_hints": [
+        "import",
+        "data",
+        "csv"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Import data from QIF or other formats",
+      "description": "Import data from QIF or other formats as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Import\"",
+        "choose QIF (or another supported format such as OFX or Grisbi)",
+        "select the file",
+        "choose the target account and the currency",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "data",
+        "qif",
+        "other",
+        "formats",
+        "drawer"
+      ],
+      "nav_hints": [
+        "import",
+        "data",
+        "qif",
+        "other"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Create a backup",
+      "description": "Create a backup as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap \"Backup and restore\"/Backup",
+        "choose the destination folder",
+        "optionally enable encryption and set the password",
+        "tap the backup action"
+      ],
+      "keywords": [
+        "create",
+        "backup",
+        "settings",
+        "restore"
+      ],
+      "nav_hints": [
+        "backup and restore",
+        "create",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Restore from a backup",
+      "description": "Restore from a backup as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap \"Backup and restore\"",
+        "tap Restore",
+        "select the backup file",
+        "enter the password if it is encrypted",
+        "confirm; the current data is replaced"
+      ],
+      "keywords": [
+        "restore",
+        "backup",
+        "settings"
+      ],
+      "nav_hints": [
+        "backup and restore",
+        "restore",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Schedule automatic backups",
+      "description": "Schedule automatic backups as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "Backup",
+        "enable the automatic backup option",
+        "set the time and the retention",
+        "confirm"
+      ],
+      "keywords": [
+        "schedule",
+        "automatic",
+        "backups",
+        "settings",
+        "backup"
+      ],
+      "nav_hints": [
+        "schedule",
+        "automatic",
+        "backups"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Set up cloud synchronisation",
+      "description": "Set up cloud synchronisation as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap \"Synchronisation\"",
+        "tap \"+\" to add a backend (for example WebDAV/Nextcloud, Dropbox or Google Drive)",
+        "enter the credentials or complete the OAuth flow",
+        "choose the accounts to sync",
+        "confirm. (Extended/Professional feature.)"
+      ],
+      "keywords": [
+        "cloud",
+        "synchronisation",
+        "settings"
+      ],
+      "nav_hints": [
+        "synchronisation",
+        "cloud"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Protect the app with a password or the device lock",
+      "description": "Protect the app with a password or the device lock as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap \"Protection\"/Security",
+        "choose password protection or device lock (screen lock/biometrics)",
+        "set the password if required",
+        "configure the delay and whether the account balances are hidden",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "password",
+        "device",
+        "lock",
+        "settings",
+        "protection"
+      ],
+      "nav_hints": [
+        "protection",
+        "protect",
+        "password",
+        "device"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Manage currencies and exchange rates",
+      "description": "Manage currencies and exchange rates as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap the currency section",
+        "tap a currency to set its symbol and number of fraction digits",
+        "configure the exchange-rate provider and download rates where supported"
+      ],
+      "keywords": [
+        "manage",
+        "currencies",
+        "exchange",
+        "rates",
+        "settings",
+        "currency"
+      ],
+      "nav_hints": [
+        "manage",
+        "currencies",
+        "exchange",
+        "rates"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Add a home screen widget",
+      "description": "Add a home screen widget as documented for MyExpenses.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find My Expenses",
+        "drag the required widget (for example the template, account balance or quick-expense widget) onto the home screen",
+        "select the account or template",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "home",
+        "widget",
+        "long-press",
+        "empty",
+        "area"
+      ],
+      "nav_hints": [
+        "add",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Configure the user interface",
+      "description": "Configure the user interface as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap \"User interface\"",
+        "set the theme (light, dark or system), the font size, the language, the grouping default, whether the running balance is shown and the home screen summary options"
+      ],
+      "keywords": [
+        "configure",
+        "user",
+        "interface",
+        "settings"
+      ],
+      "nav_hints": [
+        "user interface",
+        "configure",
+        "user",
+        "interface"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Configure transaction entry defaults",
+      "description": "Configure transaction entry defaults as documented for MyExpenses.",
+      "actions": [
+        "Open Settings",
+        "tap the transaction/data entry section",
+        "set options such as the default transaction type, whether the time is recorded, auto-fill of amount and category from the payee, and the default method"
+      ],
+      "keywords": [
+        "configure",
+        "transaction",
+        "entry",
+        "defaults",
+        "settings",
+        "data"
+      ],
+      "nav_hints": [
+        "configure",
+        "transaction",
+        "entry",
+        "defaults"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Manage payment methods",
+      "description": "Manage payment methods as documented for MyExpenses.",
+      "actions": [
+        "Open Settings (or the drawer)",
+        "tap the payment methods entry",
+        "tap \"+\" to add a method",
+        "enter the label and select the applicable account types",
+        "tap save"
+      ],
+      "keywords": [
+        "manage",
+        "payment",
+        "methods",
+        "settings",
+        "drawer",
+        "entry"
+      ],
+      "nav_hints": [
+        "manage",
+        "payment",
+        "methods"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Reset an account (delete its transactions)",
+      "description": "Reset an account (delete its transactions) as documented for MyExpenses.",
+      "actions": [
+        "Open the drawer",
+        "long-press the account",
+        "tap \"Reset\"",
+        "choose whether to export the transactions first and whether to keep the opening balance",
+        "confirm"
+      ],
+      "keywords": [
+        "reset",
+        "account",
+        "delete",
+        "transactions",
+        "drawer",
+        "long-press"
+      ],
+      "nav_hints": [
+        "reset",
+        "account",
+        "delete",
+        "transactions"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Upgrade to a paid tier",
+      "description": "Upgrade to a paid tier as documented for MyExpenses.",
+      "actions": [
+        "Open Settings or the drawer",
+        "tap the Contrib/Professional entry",
+        "review the feature comparison",
+        "complete the in-app purchase or enter a licence key"
+      ],
+      "keywords": [
+        "upgrade",
+        "paid",
+        "tier",
+        "settings",
+        "drawer",
+        "contrib"
+      ],
+      "nav_hints": [
+        "upgrade",
+        "paid",
+        "tier"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Open help and the FAQ",
+      "description": "Open help and the FAQ as documented for MyExpenses.",
+      "actions": [
+        "Open Settings or the overflow menu",
+        "tap \"Help\"/\"FAQ\"",
+        "read the in-app help pages or open the online FAQ. ## **Category: File management**"
+      ],
+      "keywords": [
+        "help",
+        "faq",
+        "settings",
+        "overflow"
+      ],
+      "nav_hints": [
+        "help",
+        "faq"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

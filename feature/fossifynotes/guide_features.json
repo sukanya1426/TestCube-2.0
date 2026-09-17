@@ -1,0 +1,300 @@
+{
+  "app": "Fossify Notes",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-29 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a text note",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "create",
+        "text",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "new note",
+        "text note",
+        "create"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Tick",
+      "description": "Open the checklist note",
+      "actions": [
+        "Open the checklist note",
+        "tap the checkbox beside an item to mark it done"
+      ],
+      "keywords": [
+        "tick",
+        "untick",
+        "checklist",
+        "note"
+      ],
+      "nav_hints": [
+        "tick",
+        "untick",
+        "checklist"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Switch between notes",
+      "description": "Tap the note title in the toolbar (or open the overflow menu",
+      "actions": [
+        "Tap the note title in the toolbar (or open the overflow menu",
+        "\"Open note\")"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "notes",
+        "note"
+      ],
+      "nav_hints": [
+        "open note",
+        "switch",
+        "between"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Delete a note",
+      "description": "Open the note",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "delete",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete note",
+        "delete",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Search inside a note",
+      "description": "Open the note",
+      "actions": [
+        "Open the note",
+        "tap the search icon in the toolbar"
+      ],
+      "keywords": [
+        "search",
+        "inside",
+        "note",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "inside",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Unlock a protected note",
+      "description": "Open the locked note",
+      "actions": [
+        "Open the locked note",
+        "enter the PIN or pattern, or present the fingerprint"
+      ],
+      "keywords": [
+        "unlock",
+        "protected",
+        "note",
+        "locked"
+      ],
+      "nav_hints": [
+        "unlock",
+        "protected",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Export all notes at",
+      "description": "Open the overflow menu",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Export all notes\""
+      ],
+      "keywords": [
+        "export",
+        "all",
+        "notes",
+        "once"
+      ],
+      "nav_hints": [
+        "export all notes",
+        "export",
+        "all"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Keep a note synchronised",
+      "description": "Import or create a note",
+      "actions": [
+        "Import or create a note",
+        "open the overflow menu"
+      ],
+      "keywords": [
+        "keep",
+        "note",
+        "synchronised",
+        "file"
+      ],
+      "nav_hints": [
+        "open file",
+        "keep",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Print a note",
+      "description": "Open the note",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "print",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "print",
+        "save as pdf",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Change the editor font",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "editor",
+        "font",
+        "size"
+      ],
+      "nav_hints": [
+        "change",
+        "editor",
+        "font"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Set where the cursor",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the cursor placement entry"
+      ],
+      "keywords": [
+        "where",
+        "cursor",
+        "placed",
+        "note"
+      ],
+      "nav_hints": [
+        "where",
+        "cursor",
+        "placed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Show a word",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "enable the \"Show word count\" option; the counter is displayed while editing a text note"
+      ],
+      "keywords": [
+        "show",
+        "word",
+        "character",
+        "count"
+      ],
+      "nav_hints": [
+        "show word count",
+        "show",
+        "word"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Enable automatic saving",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "toggle the automatic save option; with it off, a save icon appears in the toolbar and changes must be saved manually"
+      ],
+      "keywords": [
+        "enable",
+        "automatic",
+        "saving",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "automatic",
+        "saving"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Customise the app colours",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\""
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours"
+      ],
+      "source": "guide"
+    }
+  ]
+}

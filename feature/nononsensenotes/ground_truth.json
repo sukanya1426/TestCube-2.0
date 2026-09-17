@@ -1,0 +1,784 @@
+{
+  "app": "NoNonsense Notes",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official NoNonsense Notes repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for NoNonsense Notes (com.nononsenseapps.notepad), version 7.2.6.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a task list",
+      "description": "Create a task list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the navigation drawer (hamburger icon or left-edge swipe)",
+        "tap \"Create new list\"/the \"+\" beside the lists",
+        "enter the list name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "navigation",
+        "drawer",
+        "hamburger",
+        "left-edge"
+      ],
+      "nav_hints": [
+        "create new list",
+        "create",
+        "task"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Rename a task list",
+      "description": "Rename a task list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu (three dots)",
+        "tap \"Rename list\"/\"Edit list\"",
+        "change the name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "task",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "rename list",
+        "edit list",
+        "rename",
+        "task"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Delete a task list",
+      "description": "Delete a task list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu",
+        "tap \"Delete list\"",
+        "confirm; the tasks in that list are removed with it"
+      ],
+      "keywords": [
+        "delete",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete list",
+        "delete",
+        "task"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Set the default list",
+      "description": "Set the default list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the default list entry",
+        "select the list that new tasks and the widget should use by default"
+      ],
+      "keywords": [
+        "default",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "default"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Create a task",
+      "description": "Create a task as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the target list",
+        "tap the \"+\" floating action button",
+        "enter the task title",
+        "enter the optional note text",
+        "tap the back arrow or the save/tick to store it"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "target",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "task"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Edit a task",
+      "description": "Edit a task as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the task",
+        "change the title, note, due date or reminders",
+        "tap back/save"
+      ],
+      "keywords": [
+        "edit",
+        "task"
+      ],
+      "nav_hints": [
+        "edit",
+        "task"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Mark a task as completed",
+      "description": "Mark a task as completed as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the checkbox beside the task; the task is struck through and, depending on the settings, hidden from the active list"
+      ],
+      "keywords": [
+        "mark",
+        "task",
+        "completed",
+        "checkbox",
+        "beside",
+        "struck"
+      ],
+      "nav_hints": [
+        "mark",
+        "task",
+        "completed"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Show or hide completed tasks",
+      "description": "Show or hide completed tasks as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu",
+        "toggle the \"Show completed\"/\"Hide completed\" option"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "completed",
+        "tasks",
+        "overflow"
+      ],
+      "nav_hints": [
+        "show completed",
+        "hide completed",
+        "show",
+        "hide"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Delete all completed tasks in a list",
+      "description": "Delete all completed tasks in a list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu",
+        "tap \"Delete completed tasks\"",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "all",
+        "completed",
+        "tasks",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete completed tasks",
+        "delete",
+        "all",
+        "completed"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Create sub-tasks by indenting",
+      "description": "Create sub-tasks by indenting as documented for NoNonsense Notes.",
+      "actions": [
+        "Open a list in manual/tree sort order",
+        "long-press the task",
+        "drag it to the right (or use the indent control) to nest it under the task above",
+        "release"
+      ],
+      "keywords": [
+        "create",
+        "sub-tasks",
+        "indenting",
+        "manual",
+        "tree",
+        "sort"
+      ],
+      "nav_hints": [
+        "create",
+        "sub-tasks",
+        "indenting"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Reorder tasks manually",
+      "description": "Reorder tasks manually as documented for NoNonsense Notes.",
+      "actions": [
+        "Set the list sort order to manual",
+        "long-press a task",
+        "drag it up or down to the required position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "tasks",
+        "manually",
+        "sort",
+        "order",
+        "manual"
+      ],
+      "nav_hints": [
+        "reorder",
+        "tasks",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Set a due date on a task",
+      "description": "Set a due date on a task as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the due-date field",
+        "select the date in the picker",
+        "tap OK"
+      ],
+      "keywords": [
+        "due",
+        "date",
+        "task",
+        "due-date",
+        "field"
+      ],
+      "nav_hints": [
+        "due",
+        "date",
+        "task"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Set a time-based reminder",
+      "description": "Set a time-based reminder as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the \"Add reminder\" control",
+        "pick the date and time",
+        "tap OK; a notification fires at that moment"
+      ],
+      "keywords": [
+        "time-based",
+        "reminder",
+        "task",
+        "add",
+        "control"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "time-based",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Set a repeating reminder",
+      "description": "Set a repeating reminder as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "add a reminder",
+        "tap the repeat control on the reminder row",
+        "choose the repetition (for example daily, weekly, monthly, yearly)",
+        "confirm"
+      ],
+      "keywords": [
+        "repeating",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "repeating",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Set a location-based reminder",
+      "description": "Set a location-based reminder as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap \"Add reminder\"",
+        "switch to the location option",
+        "grant the location permission",
+        "search for or pick the place on the map",
+        "confirm; the reminder fires when you arrive at that location"
+      ],
+      "keywords": [
+        "location-based",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "location-based",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Remove a reminder",
+      "description": "Remove a reminder as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the delete (X or bin) icon on the reminder row",
+        "the reminder is removed"
+      ],
+      "keywords": [
+        "remove",
+        "reminder",
+        "task",
+        "delete",
+        "bin",
+        "row"
+      ],
+      "nav_hints": [
+        "remove",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Move a task to a different list",
+      "description": "Move a task to a different list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the overflow menu",
+        "tap \"Move to list\"/change the list selector",
+        "choose the target list",
+        "confirm"
+      ],
+      "keywords": [
+        "move",
+        "task",
+        "different",
+        "overflow"
+      ],
+      "nav_hints": [
+        "move to list",
+        "move",
+        "task",
+        "different"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Delete a task",
+      "description": "Delete a task as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the delete (bin) icon, or swipe the task in the list according to the configured swipe action",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "task",
+        "bin",
+        "swipe",
+        "according",
+        "configured"
+      ],
+      "nav_hints": [
+        "delete",
+        "task"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Sort a list",
+      "description": "Sort a list as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu",
+        "tap \"Sort\"",
+        "choose the order (manual/tree, due date, alphabetical or possible/creation order)"
+      ],
+      "keywords": [
+        "sort",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Switch between lists by swiping",
+      "description": "Switch between lists by swiping as documented for NoNonsense Notes.",
+      "actions": [
+        "Open any list",
+        "swipe horizontally left or right to move to the neighbouring list (when the swipe-between-lists option is enabled in Settings)"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "lists",
+        "swiping",
+        "any",
+        "swipe"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "lists",
+        "swiping"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "View all tasks from all lists together",
+      "description": "View all tasks from all lists together as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the \"All lists\"/combined view entry",
+        "the tasks from every list are shown in one screen"
+      ],
+      "keywords": [
+        "all",
+        "tasks",
+        "lists",
+        "together",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "all lists",
+        "all",
+        "tasks",
+        "lists"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Search tasks",
+      "description": "Search tasks as documented for NoNonsense Notes.",
+      "actions": [
+        "Open a list",
+        "tap the search icon in the toolbar",
+        "type the search text",
+        "tap a matching task to open it"
+      ],
+      "keywords": [
+        "search",
+        "tasks",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "tasks"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Share a task",
+      "description": "Share a task as documented for NoNonsense Notes.",
+      "actions": [
+        "Open the task",
+        "tap the share icon (or the overflow menu",
+        "Share)",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "task"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Create a task from text shared by another app",
+      "description": "Create a task from text shared by another app as documented for NoNonsense Notes.",
+      "actions": [
+        "In another app select text",
+        "tap Share",
+        "choose NoNonsense Notes",
+        "pick the target list",
+        "tap save"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "text",
+        "shared",
+        "another",
+        "share"
+      ],
+      "nav_hints": [
+        "create",
+        "task",
+        "text",
+        "shared"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Add the task list home screen widget",
+      "description": "Add the task list home screen widget as documented for NoNonsense Notes.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find NoNonsense Notes",
+        "drag the widget onto the home screen",
+        "choose the list, theme and transparency in the widget configuration",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "task",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "task",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Configure widget appearance",
+      "description": "Configure widget appearance as documented for NoNonsense Notes.",
+      "actions": [
+        "Long-press the placed widget (or open its configuration)",
+        "set the list to display, the header visibility, the background transparency and the text colour",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "widget",
+        "appearance",
+        "long-press",
+        "placed",
+        "configuration"
+      ],
+      "nav_hints": [
+        "configure",
+        "widget",
+        "appearance"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Change the app theme",
+      "description": "Change the app theme as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose light, dark, black or the classic theme"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Change the list and font sizes",
+      "description": "Change the list and font sizes as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "open the appearance section",
+        "set the item text size and the number of note lines shown per row"
+      ],
+      "keywords": [
+        "change",
+        "font",
+        "sizes",
+        "settings",
+        "appearance",
+        "section"
+      ],
+      "nav_hints": [
+        "change",
+        "font",
+        "sizes"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Enable synchronisation with a storage folder (SD card sync)",
+      "description": "Enable synchronisation with a storage folder (SD card sync) as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the synchronisation section",
+        "enable the file/SD card sync",
+        "choose the folder that holds the plain-text task files",
+        "confirm"
+      ],
+      "keywords": [
+        "enable",
+        "synchronisation",
+        "storage",
+        "folder",
+        "card",
+        "sync"
+      ],
+      "nav_hints": [
+        "enable",
+        "synchronisation",
+        "storage",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Configure notification behaviour",
+      "description": "Configure notification behaviour as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the notification section",
+        "set the notification sound, vibration and whether persistent notifications are used for reminders"
+      ],
+      "keywords": [
+        "configure",
+        "notification",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "notification",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Back up the task database",
+      "description": "Back up the task database as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the backup entry",
+        "tap the export/backup action",
+        "choose the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "back",
+        "task",
+        "database",
+        "settings",
+        "backup",
+        "entry"
+      ],
+      "nav_hints": [
+        "back",
+        "task",
+        "database"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Restore the task database from a backup",
+      "description": "Restore the task database from a backup as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the backup entry",
+        "tap Restore/Import",
+        "select the backup file",
+        "confirm"
+      ],
+      "keywords": [
+        "restore",
+        "task",
+        "database",
+        "backup",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "restore",
+        "task",
+        "database",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Configure the swipe gesture on list items",
+      "description": "Configure the swipe gesture on list items as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings",
+        "open the behaviour section",
+        "choose what a horizontal swipe does to a task (for example complete or delete)"
+      ],
+      "keywords": [
+        "configure",
+        "swipe",
+        "gesture",
+        "settings",
+        "behaviour",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "swipe",
+        "gesture"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for NoNonsense Notes.",
+      "actions": [
+        "Open Settings (or the drawer)",
+        "tap \"About\"",
+        "read the version number, the credits and the open-source licences. ## **Category: Tasks, study and habits**"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "settings",
+        "drawer"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

@@ -1,0 +1,1009 @@
+{
+  "app": "Material Files",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Material Files repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Material Files (me.zhanghai.android.files), version 1.7.4.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse local storage",
+      "description": "Browse local storage as documented for Material Files.",
+      "actions": [
+        "Open the app",
+        "open the navigation drawer (hamburger icon or left-edge swipe)",
+        "tap a storage volume or standard directory",
+        "tap folders to navigate",
+        "tap the breadcrumb path at the top to jump back to any ancestor folder"
+      ],
+      "keywords": [
+        "browse",
+        "local",
+        "storage",
+        "navigation",
+        "drawer",
+        "hamburger"
+      ],
+      "nav_hints": [
+        "browse",
+        "local",
+        "storage"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a new folder",
+      "description": "Create a new folder as documented for Material Files.",
+      "actions": [
+        "Navigate to the target directory",
+        "tap the \"+\" floating action button",
+        "tap \"Create folder\"",
+        "enter the name",
+        "tap Create"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "folder",
+        "navigate",
+        "target",
+        "directory"
+      ],
+      "nav_hints": [
+        "create folder",
+        "create",
+        "new",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Create a new empty file",
+      "description": "Create a new empty file as documented for Material Files.",
+      "actions": [
+        "Navigate to the directory",
+        "tap the \"+\" button",
+        "tap \"Create file\"",
+        "enter the file name",
+        "tap Create"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "empty",
+        "file",
+        "navigate",
+        "directory"
+      ],
+      "nav_hints": [
+        "create file",
+        "create",
+        "new",
+        "empty"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Copy files and folders",
+      "description": "Copy files and folders as documented for Material Files.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy icon in the contextual toolbar",
+        "navigate to the destination",
+        "tap the paste button in the bottom bar"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press",
+        "contextual",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Move files and folders",
+      "description": "Move files and folders as documented for Material Files.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the cut/move icon",
+        "navigate to the destination",
+        "tap the paste button"
+      ],
+      "keywords": [
+        "move",
+        "files",
+        "folders",
+        "long-press",
+        "cut"
+      ],
+      "nav_hints": [
+        "move",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Rename an item",
+      "description": "Rename an item as documented for Material Files.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu in the contextual toolbar",
+        "tap \"Rename\"",
+        "enter the new name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "long-press",
+        "overflow",
+        "contextual",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "rename"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Delete items",
+      "description": "Delete items as documented for Material Files.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete icon",
+        "confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Select multiple items and use select all",
+      "description": "Select multiple items and use select all as documented for Material Files.",
+      "actions": [
+        "Long-press the first item",
+        "tap the additional items",
+        "tap the select-all action in the toolbar to select the whole folder",
+        "apply the required action"
+      ],
+      "keywords": [
+        "multiple",
+        "all",
+        "long-press",
+        "first",
+        "additional"
+      ],
+      "nav_hints": [
+        "multiple",
+        "all"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Search for files",
+      "description": "Search for files as documented for Material Files.",
+      "actions": [
+        "Open a folder",
+        "tap the search icon in the toolbar",
+        "type the query",
+        "the recursive search results appear",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "files",
+        "folder",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "files"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Sort the file list",
+      "description": "Sort the file list as documented for Material Files.",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose name, last modified, type or size",
+        "choose ascending or descending",
+        "optionally enable \"Directories first\""
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "directories first",
+        "sort",
+        "file"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Remember the sort order per folder",
+      "description": "Remember the sort order per folder as documented for Material Files.",
+      "actions": [
+        "Set the sort order in a folder",
+        "tap the overflow menu",
+        "enable the \"Sort paths for this folder\"/per-folder sort option so the choice is remembered for that directory only"
+      ],
+      "keywords": [
+        "remember",
+        "sort",
+        "order",
+        "per",
+        "folder",
+        "overflow"
+      ],
+      "nav_hints": [
+        "remember",
+        "sort",
+        "order",
+        "per"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Switch between list and grid view",
+      "description": "Switch between list and grid view as documented for Material Files.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap the view/grid toggle",
+        "the layout changes between the list and the grid of thumbnails"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "grid",
+        "overflow",
+        "toggle"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "grid"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Show or hide hidden files",
+      "description": "Show or hide hidden files as documented for Material Files.",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Show hidden files\""
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files",
+        "overflow",
+        "toggle"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide",
+        "hidden"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "View and open an archive",
+      "description": "View and open an archive as documented for Material Files.",
+      "actions": [
+        "Tap a ZIP, RAR, 7Z, TAR or TAR.GZ file",
+        "the archive opens as a browsable folder",
+        "navigate inside it",
+        "tap a file to preview it"
+      ],
+      "keywords": [
+        "archive",
+        "zip",
+        "rar",
+        "tar",
+        "file",
+        "opens"
+      ],
+      "nav_hints": [
+        "archive"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Extract an archive",
+      "description": "Extract an archive as documented for Material Files.",
+      "actions": [
+        "Long-press the archive file",
+        "tap \"Extract\" (or open the archive and use the extract action)",
+        "choose the destination folder",
+        "confirm"
+      ],
+      "keywords": [
+        "extract",
+        "archive",
+        "long-press",
+        "file",
+        "action"
+      ],
+      "nav_hints": [
+        "extract",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Create an archive",
+      "description": "Create an archive as documented for Material Files.",
+      "actions": [
+        "Long-press the item(s) to include",
+        "tap the overflow menu",
+        "tap \"Compress\"/\"Add to archive\"",
+        "choose the format and enter the archive name",
+        "confirm"
+      ],
+      "keywords": [
+        "create",
+        "archive",
+        "long-press",
+        "include",
+        "overflow"
+      ],
+      "nav_hints": [
+        "compress",
+        "add to archive",
+        "create",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Open a file with another app",
+      "description": "Open a file with another app as documented for Material Files.",
+      "actions": [
+        "Tap the file to open it with the default handler, or long-press it",
+        "tap the overflow menu",
+        "tap \"Open with\"",
+        "pick the app from the chooser"
+      ],
+      "keywords": [
+        "file",
+        "another",
+        "default",
+        "handler",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Share files",
+      "description": "Share files as documented for Material Files.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the share icon",
+        "choose the target app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "files",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "files"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Copy the path of a file",
+      "description": "Copy the path of a file as documented for Material Files.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu",
+        "tap \"Copy path\"; the path is placed on the clipboard"
+      ],
+      "keywords": [
+        "copy",
+        "path",
+        "file",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "copy path",
+        "copy",
+        "path",
+        "file"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "View file properties",
+      "description": "View file properties as documented for Material Files.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu",
+        "tap \"Properties\"",
+        "read the file tab (name, type, size, times), the permissions tab and, on rooted devices, the owner, group and SELinux context"
+      ],
+      "keywords": [
+        "file",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "file"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Change file permissions, owner and SELinux context (root)",
+      "description": "Change file permissions, owner and SELinux context (root) as documented for Material Files.",
+      "actions": [
+        "Enable root access in Settings",
+        "open the file Properties",
+        "open the Permissions tab",
+        "tap the permission, owner, group or SELinux context row",
+        "set the value",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "file",
+        "permissions",
+        "owner",
+        "selinux",
+        "context"
+      ],
+      "nav_hints": [
+        "change",
+        "file",
+        "permissions",
+        "owner"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "View an image in the built-in viewer",
+      "description": "View an image in the built-in viewer as documented for Material Files.",
+      "actions": [
+        "Tap an image file",
+        "the image viewer opens",
+        "swipe left or right for the next image in the folder",
+        "pinch to zoom",
+        "tap the overflow menu for share, delete and info actions"
+      ],
+      "keywords": [
+        "image",
+        "built-in",
+        "viewer",
+        "file",
+        "opens"
+      ],
+      "nav_hints": [
+        "image",
+        "built-in",
+        "viewer"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Edit a text file in the built-in editor",
+      "description": "Edit a text file in the built-in editor as documented for Material Files.",
+      "actions": [
+        "Tap a text file",
+        "the text editor opens",
+        "edit the content",
+        "tap the save icon",
+        "tap back to exit"
+      ],
+      "keywords": [
+        "edit",
+        "text",
+        "file",
+        "built-in",
+        "editor",
+        "opens"
+      ],
+      "nav_hints": [
+        "edit",
+        "text",
+        "file",
+        "built-in"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Change the text file encoding in the editor",
+      "description": "Change the text file encoding in the editor as documented for Material Files.",
+      "actions": [
+        "Open a text file in the editor",
+        "tap the overflow menu",
+        "tap the encoding option",
+        "choose the character set",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "text",
+        "file",
+        "encoding",
+        "editor",
+        "overflow"
+      ],
+      "nav_hints": [
+        "change",
+        "text",
+        "file",
+        "encoding"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Bookmark a directory",
+      "description": "Bookmark a directory as documented for Material Files.",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu",
+        "tap \"Add bookmark\"; the entry appears in the navigation drawer"
+      ],
+      "keywords": [
+        "bookmark",
+        "directory",
+        "navigate",
+        "folder",
+        "overflow"
+      ],
+      "nav_hints": [
+        "add bookmark",
+        "bookmark",
+        "directory"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Manage bookmark directories",
+      "description": "Manage bookmark directories as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap \"Bookmark directories\"",
+        "tap an entry to rename it or change its path",
+        "drag the handle to reorder",
+        "tap the delete action to remove one"
+      ],
+      "keywords": [
+        "manage",
+        "bookmark",
+        "directories",
+        "settings"
+      ],
+      "nav_hints": [
+        "bookmark directories",
+        "manage",
+        "bookmark",
+        "directories"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Add a shortcut to a folder on the home screen",
+      "description": "Add a shortcut to a folder on the home screen as documented for Material Files.",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu",
+        "tap \"Add to home screen\"/\"Create shortcut\"",
+        "confirm the placement"
+      ],
+      "keywords": [
+        "add",
+        "shortcut",
+        "folder",
+        "home",
+        "navigate",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create shortcut",
+        "add",
+        "shortcut",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Connect to an FTP or FTPS server",
+      "description": "Connect to an FTP or FTPS server as documented for Material Files.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Add server\"/the \"+\" beside the network section",
+        "choose FTP or FTPS",
+        "enter the host, port, username and password (or select anonymous)",
+        "tap the tick to save",
+        "tap the entry to browse it"
+      ],
+      "keywords": [
+        "connect",
+        "ftp",
+        "ftps",
+        "server",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "ftp",
+        "ftps"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Connect to an SFTP server",
+      "description": "Connect to an SFTP server as documented for Material Files.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Add server\"",
+        "choose SFTP",
+        "enter the host, port and credentials (password or private key)",
+        "accept the host key",
+        "tap save"
+      ],
+      "keywords": [
+        "connect",
+        "sftp",
+        "server",
+        "drawer",
+        "add"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "sftp",
+        "server"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Connect to an SMB share",
+      "description": "Connect to an SMB share as documented for Material Files.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Add server\"",
+        "choose SMB",
+        "enter the host, share name, domain, username and password",
+        "tap save",
+        "tap the entry to browse it"
+      ],
+      "keywords": [
+        "connect",
+        "smb",
+        "share",
+        "drawer",
+        "add",
+        "server"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "smb",
+        "share"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Connect to a WebDAV server",
+      "description": "Connect to a WebDAV server as documented for Material Files.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Add server\"",
+        "choose WebDAV or WebDAVS",
+        "enter the URL and credentials",
+        "tap save"
+      ],
+      "keywords": [
+        "connect",
+        "webdav",
+        "server",
+        "drawer",
+        "add"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "webdav",
+        "server"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Edit or remove a saved server",
+      "description": "Edit or remove a saved server as documented for Material Files.",
+      "actions": [
+        "Open the drawer",
+        "long-press the server entry",
+        "tap Edit to change the settings, or tap Remove",
+        "confirm"
+      ],
+      "keywords": [
+        "edit",
+        "remove",
+        "saved",
+        "server",
+        "drawer",
+        "long-press"
+      ],
+      "nav_hints": [
+        "edit",
+        "remove",
+        "saved",
+        "server"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Start the built-in FTP server to share files with a computer",
+      "description": "Start the built-in FTP server to share files with a computer as documented for Material Files.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"FTP server\"",
+        "tap the start/toggle control",
+        "note the ftp:// URL shown",
+        "connect from another device on the same network",
+        "tap stop when finished"
+      ],
+      "keywords": [
+        "start",
+        "built-in",
+        "ftp",
+        "server",
+        "share",
+        "files"
+      ],
+      "nav_hints": [
+        "ftp server",
+        "start",
+        "built-in",
+        "ftp"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Configure the FTP server settings",
+      "description": "Configure the FTP server settings as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap the FTP server section",
+        "set the anonymous login or the username and password, the port, the shared directory and the writable flag",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "ftp",
+        "server",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "ftp",
+        "server",
+        "settings"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Enable root access",
+      "description": "Enable root access as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap the root section",
+        "toggle the root strategy/\"Always use root\" option",
+        "grant the superuser request when prompted"
+      ],
+      "keywords": [
+        "enable",
+        "root",
+        "access",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "always use root",
+        "enable",
+        "root",
+        "access"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Show a \"root directory\" entry in the navigation",
+      "description": "Show a \"root directory\" entry in the navigation as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "enable the option that shows the file system root (\"/\") in the drawer",
+        "return to the file list"
+      ],
+      "keywords": [
+        "show",
+        "root",
+        "directory",
+        "entry",
+        "navigation",
+        "settings"
+      ],
+      "nav_hints": [
+        "show",
+        "root",
+        "directory",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Change the theme and colours",
+      "description": "Change the theme and colours as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"/Theme",
+        "choose the theme colour, enable Material You dynamic colours, choose the night mode behaviour and enable the pure-black night theme",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme",
+        "colours"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry",
+        "select the interface language",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Configure the file list behaviour",
+      "description": "Configure the file list behaviour as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "open the file list section",
+        "set the default sort order, whether the file size is shown for directories, whether thumbnails are generated, and the default view type"
+      ],
+      "keywords": [
+        "configure",
+        "file",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "file",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Configure the standard directories shown in the navigation drawer",
+      "description": "Configure the standard directories shown in the navigation drawer as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap \"Standard directories\"",
+        "toggle the individual entries (for example Downloads, Documents, Pictures, Music, Movies, DCIM)",
+        "drag to reorder them"
+      ],
+      "keywords": [
+        "configure",
+        "standard",
+        "directories",
+        "shown",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "standard directories",
+        "configure",
+        "standard",
+        "directories"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Configure the storage volumes shown",
+      "description": "Configure the storage volumes shown as documented for Material Files.",
+      "actions": [
+        "Open Settings",
+        "tap the storage section",
+        "enable or disable the individual volumes and add an external SD card or a document-provider tree",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "storage",
+        "volumes",
+        "shown",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "storage",
+        "volumes",
+        "shown"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Open the about screen and licences",
+      "description": "Open the about screen and licences as documented for Material Files.",
+      "actions": [
+        "Open the navigation drawer or Settings",
+        "tap \"About\"",
+        "read the version, the author information and the open-source licences"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "navigation",
+        "drawer",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

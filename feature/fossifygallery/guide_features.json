@@ -1,0 +1,295 @@
+{
+  "app": "Fossify Gallery",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-37 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse media folders",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "grant the media permission"
+      ],
+      "keywords": [
+        "browse",
+        "media",
+        "folders",
+        "grant"
+      ],
+      "nav_hints": [
+        "browse",
+        "media",
+        "folders"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Play a video",
+      "description": "Open a folder",
+      "actions": [
+        "Open a folder",
+        "tap a video thumbnail"
+      ],
+      "keywords": [
+        "play",
+        "video",
+        "folder",
+        "thumbnail"
+      ],
+      "nav_hints": [
+        "play",
+        "video"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Crop, rotate",
+      "description": "Open the photo",
+      "actions": [
+        "Open the photo",
+        "tap the edit icon"
+      ],
+      "keywords": [
+        "crop",
+        "rotate",
+        "flip",
+        "photo"
+      ],
+      "nav_hints": [
+        "crop",
+        "rotate",
+        "flip"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Draw",
+      "description": "Open the photo",
+      "actions": [
+        "Open the photo",
+        "tap the edit icon"
+      ],
+      "keywords": [
+        "draw",
+        "photo",
+        "edit"
+      ],
+      "nav_hints": [
+        "draw",
+        "photo"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Rotate a photo without",
+      "description": "Open the photo",
+      "actions": [
+        "Open the photo",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "rotate",
+        "photo",
+        "without",
+        "re-encoding"
+      ],
+      "nav_hints": [
+        "rotate",
+        "photo",
+        "without"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Share media",
+      "description": "Open the item (or long-press it in the grid)",
+      "actions": [
+        "Open the item (or long-press it in the grid)",
+        "tap the share icon"
+      ],
+      "keywords": [
+        "share",
+        "media",
+        "long-press",
+        "grid"
+      ],
+      "nav_hints": [
+        "share",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "View media properties",
+      "description": "Long-press the item",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "media",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Copy",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy or move icon"
+      ],
+      "keywords": [
+        "copy",
+        "move",
+        "media",
+        "another"
+      ],
+      "nav_hints": [
+        "copy",
+        "move",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Delete media",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete (bin) icon"
+      ],
+      "keywords": [
+        "delete",
+        "media",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Hide a folder",
+      "description": "Long-press the folder",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "hide",
+        "folder",
+        "gallery",
+        "long-press"
+      ],
+      "nav_hints": [
+        "hide folder",
+        "temporarily show hidden",
+        "hide"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Pin a folder",
+      "description": "Long-press the folder",
+      "actions": [
+        "Long-press the folder",
+        "tap the pin action; pinned folders stay at the top of the folder grid"
+      ],
+      "keywords": [
+        "pin",
+        "folder",
+        "top",
+        "long-press"
+      ],
+      "nav_hints": [
+        "pin",
+        "folder",
+        "top"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Run a slideshow",
+      "description": "Open a folder or a photo",
+      "actions": [
+        "Open a folder or a photo",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "run",
+        "slideshow",
+        "folder",
+        "photo"
+      ],
+      "nav_hints": [
+        "slideshow",
+        "run"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Sort media",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Sort by\""
+      ],
+      "keywords": [
+        "sort",
+        "media",
+        "folders",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Filter the media types",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Filter media\""
+      ],
+      "keywords": [
+        "filter",
+        "media",
+        "types",
+        "shown"
+      ],
+      "nav_hints": [
+        "filter media",
+        "filter",
+        "media"
+      ],
+      "source": "guide"
+    }
+  ]
+}

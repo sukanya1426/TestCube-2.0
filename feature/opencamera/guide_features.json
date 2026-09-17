@@ -1,0 +1,298 @@
+{
+  "app": "Open Camera",
+  "source": "guide",
+  "url": "Official Open Camera help pages (opencamera.org.uk) and in-app settings",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-55 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Take a photo",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "grant the camera and storage permissions"
+      ],
+      "keywords": [
+        "take",
+        "photo",
+        "grant",
+        "camera"
+      ],
+      "nav_hints": [
+        "take",
+        "photo"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Zoom",
+      "description": "Pinch on the preview with two fingers, or drag the on-screen zoom slider, or use the volume keys if they are configured for zoom",
+      "actions": [
+        "Pinch on the preview with two fingers, or drag the on-screen zoom slider, or use the volume keys if they are configured for zoom"
+      ],
+      "keywords": [
+        "zoom",
+        "out",
+        "pinch",
+        "preview"
+      ],
+      "nav_hints": [
+        "zoom",
+        "out"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Set the flash mode",
+      "description": "Tap the flash icon on the preview",
+      "actions": [
+        "Tap the flash icon on the preview",
+        "choose Off, Auto, On, Torch or Red-eye reduction"
+      ],
+      "keywords": [
+        "flash",
+        "mode",
+        "preview",
+        "off"
+      ],
+      "nav_hints": [
+        "flash",
+        "mode"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Set the ISO",
+      "description": "Open Settings and enable the Camera2 API",
+      "actions": [
+        "Open Settings and enable the Camera2 API",
+        "tap the exposure icon"
+      ],
+      "keywords": [
+        "iso",
+        "shutter",
+        "speed",
+        "manually"
+      ],
+      "nav_hints": [
+        "iso",
+        "shutter",
+        "speed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Apply a colour effect",
+      "description": "Tap the popup settings icon",
+      "actions": [
+        "Tap the popup settings icon",
+        "tap the colour effect entry"
+      ],
+      "keywords": [
+        "apply",
+        "colour",
+        "effect",
+        "popup"
+      ],
+      "nav_hints": [
+        "apply",
+        "colour",
+        "effect"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Capture RAW files",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "enable the Camera2 API"
+      ],
+      "keywords": [
+        "capture",
+        "raw",
+        "dng",
+        "files"
+      ],
+      "nav_hints": [
+        "capture",
+        "raw",
+        "dng"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Take an HDR photo",
+      "description": "Tap the photo mode selector in the popup settings",
+      "actions": [
+        "Tap the photo mode selector in the popup settings",
+        "choose HDR"
+      ],
+      "keywords": [
+        "take",
+        "hdr",
+        "photo",
+        "mode"
+      ],
+      "nav_hints": [
+        "take",
+        "hdr",
+        "photo"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Take a noise-reduction photo",
+      "description": "Open the photo mode selector",
+      "actions": [
+        "Open the photo mode selector",
+        "choose NR/Noise reduction"
+      ],
+      "keywords": [
+        "take",
+        "noise-reduction",
+        "low",
+        "light"
+      ],
+      "nav_hints": [
+        "take",
+        "noise-reduction",
+        "low"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Enable auto-level",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Photo settings"
+      ],
+      "keywords": [
+        "enable",
+        "auto-level",
+        "auto-stabilise",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "auto-level",
+        "auto-stabilise"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Show the angle, level,",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "\"On screen GUI\""
+      ],
+      "keywords": [
+        "show",
+        "angle",
+        "level",
+        "battery"
+      ],
+      "nav_hints": [
+        "on screen gui",
+        "show",
+        "angle"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Stamp the date, time",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "\"Photo stamp\"/stamp settings"
+      ],
+      "keywords": [
+        "stamp",
+        "date",
+        "time",
+        "location"
+      ],
+      "nav_hints": [
+        "photo stamp",
+        "stamp",
+        "date"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Record slow-motion",
+      "description": "Switch to video mode",
+      "actions": [
+        "Switch to video mode",
+        "open the popup settings"
+      ],
+      "keywords": [
+        "record",
+        "slow-motion",
+        "high-speed",
+        "video"
+      ],
+      "nav_hints": [
+        "record",
+        "slow-motion",
+        "high-speed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Limit the video duration",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "keywords": [
+        "limit",
+        "video",
+        "duration",
+        "file"
+      ],
+      "nav_hints": [
+        "limit",
+        "video",
+        "duration"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Record GPS/time subtitles",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "keywords": [
+        "record",
+        "gps",
+        "time",
+        "subtitles"
+      ],
+      "nav_hints": [
+        "record",
+        "gps",
+        "time"
+      ],
+      "source": "guide"
+    }
+  ]
+}

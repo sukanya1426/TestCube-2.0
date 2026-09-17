@@ -1,0 +1,300 @@
+{
+  "app": "AnkiDroid",
+  "source": "guide",
+  "url": "Official AnkiDroid manual and in-app menus",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-59 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a deck",
+      "description": "Open the deck list",
+      "actions": [
+        "Open the deck list",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "deck",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create deck",
+        "create",
+        "deck"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Reorder",
+      "description": "Open the deck list",
+      "actions": [
+        "Open the deck list",
+        "long-press a deck"
+      ],
+      "keywords": [
+        "reorder",
+        "re-parent",
+        "decks",
+        "deck"
+      ],
+      "nav_hints": [
+        "rename",
+        "::",
+        "reorder"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Attach an image, audio",
+      "description": "Open the Add/Edit note screen",
+      "actions": [
+        "Open the Add/Edit note screen",
+        "tap the paper-clip/multimedia icon beside a field"
+      ],
+      "keywords": [
+        "attach",
+        "image",
+        "audio",
+        "clip"
+      ],
+      "nav_hints": [
+        "attach",
+        "image",
+        "audio"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Preview a card",
+      "description": "Open the Card Browser",
+      "actions": [
+        "Open the Card Browser",
+        "long-press or select the card"
+      ],
+      "keywords": [
+        "preview",
+        "card",
+        "browser",
+        "long-press"
+      ],
+      "nav_hints": [
+        "preview",
+        "card"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Flag cards",
+      "description": "Open the Card Browser and select cards (or tap the flag icon during review)",
+      "actions": [
+        "Open the Card Browser and select cards (or tap the flag icon during review)",
+        "tap the flag action"
+      ],
+      "keywords": [
+        "flag",
+        "cards",
+        "colours",
+        "card"
+      ],
+      "nav_hints": [
+        "flag",
+        "cards",
+        "colours"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Set a card's due",
+      "description": "Open the Card Browser",
+      "actions": [
+        "Open the Card Browser",
+        "select the cards"
+      ],
+      "keywords": [
+        "card's",
+        "due",
+        "date",
+        "card"
+      ],
+      "nav_hints": [
+        "set due date",
+        "card's",
+        "due"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Delete cards",
+      "description": "Open the Card Browser",
+      "actions": [
+        "Open the Card Browser",
+        "select the items"
+      ],
+      "keywords": [
+        "delete",
+        "cards",
+        "notes",
+        "card"
+      ],
+      "nav_hints": [
+        "delete",
+        "cards",
+        "notes"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Create a filtered/custom study",
+      "description": "Open the deck list",
+      "actions": [
+        "Open the deck list",
+        "tap the deck"
+      ],
+      "keywords": [
+        "create",
+        "filtered",
+        "custom",
+        "study"
+      ],
+      "nav_hints": [
+        "custom study",
+        "create filtered deck",
+        "create"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Synchronise media",
+      "description": "Ensure the AnkiWeb account is configured",
+      "actions": [
+        "Ensure the AnkiWeb account is configured",
+        "run a sync"
+      ],
+      "keywords": [
+        "synchronise",
+        "media",
+        "ensure",
+        "ankiweb"
+      ],
+      "nav_hints": [
+        "synchronise",
+        "media"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Import notes",
+      "description": "Open the import screen",
+      "actions": [
+        "Open the import screen",
+        "select the .csv or .txt file"
+      ],
+      "keywords": [
+        "import",
+        "notes",
+        "csv",
+        "text"
+      ],
+      "nav_hints": [
+        "import",
+        "notes",
+        "csv"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Add",
+      "description": "Open \"Manage note types\"",
+      "actions": [
+        "Open \"Manage note types\"",
+        "tap the note type"
+      ],
+      "keywords": [
+        "add",
+        "reorder",
+        "note",
+        "fields"
+      ],
+      "nav_hints": [
+        "manage note types",
+        "fields",
+        "add"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Configure reviewer appearance",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Reviewing\"/\"Appearance\""
+      ],
+      "keywords": [
+        "configure",
+        "reviewer",
+        "appearance",
+        "settings"
+      ],
+      "nav_hints": [
+        "reviewing",
+        "appearance",
+        "configure"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Configure the minimum card",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Notifications\""
+      ],
+      "keywords": [
+        "configure",
+        "minimum",
+        "card",
+        "count"
+      ],
+      "nav_hints": [
+        "notifications",
+        "configure",
+        "minimum"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Check the database",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "check",
+        "database",
+        "errors",
+        "navigation"
+      ],
+      "nav_hints": [
+        "check database",
+        "check",
+        "database"
+      ],
+      "source": "guide"
+    }
+  ]
+}

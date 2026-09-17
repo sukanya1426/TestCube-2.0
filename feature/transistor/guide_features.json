@@ -1,0 +1,293 @@
+{
+  "app": "Transistor",
+  "source": "guide",
+  "url": "Official Transistor repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-23 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Add a station",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" icon in the top bar"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "searching",
+        "radio-browser"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "searching"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Add a station",
+      "description": "Tap the \"+\" icon in the top bar",
+      "actions": [
+        "Tap the \"+\" icon in the top bar",
+        "paste the playlist file address (.m3u or .pls) into the input field"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "m3u",
+        "pls"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "m3u"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Add a station",
+      "description": "Tap the \"+\" icon",
+      "actions": [
+        "Tap the \"+\" icon",
+        "paste the direct stream URL (MP3, AAC or Ogg/Opus)"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "raw",
+        "stream"
+      ],
+      "nav_hints": [
+        "add",
+        "station",
+        "raw"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Add a station",
+      "description": "In a web browser tap a .m3u or .pls link",
+      "actions": [
+        "In a web browser tap a .m3u or .pls link",
+        "choose Transistor in the \"Open with\" chooser (or set it as the default handler for those file types)"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "opening",
+        "stream"
+      ],
+      "nav_hints": [
+        "open with",
+        "add",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Play a station",
+      "description": "Open the station list",
+      "actions": [
+        "Open the station list",
+        "tap the station (or its play button)"
+      ],
+      "keywords": [
+        "play",
+        "station"
+      ],
+      "nav_hints": [
+        "play",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Stop playback",
+      "description": "Tap the stop button in the player sheet or in the notification, or disconnect the headphones according to the configured behaviour",
+      "actions": [
+        "Tap the stop button in the player sheet or in the notification, or disconnect the headphones according to the configured behaviour"
+      ],
+      "keywords": [
+        "stop",
+        "playback",
+        "player",
+        "sheet"
+      ],
+      "nav_hints": [
+        "stop",
+        "playback"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "View the now-playing metadata",
+      "description": "Start a station",
+      "actions": [
+        "Start a station",
+        "expand the player sheet"
+      ],
+      "keywords": [
+        "now-playing",
+        "metadata",
+        "start",
+        "station"
+      ],
+      "nav_hints": [
+        "now-playing",
+        "metadata"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Delete a station",
+      "description": "Open the station list",
+      "actions": [
+        "Open the station list",
+        "swipe the station row sideways"
+      ],
+      "keywords": [
+        "delete",
+        "station",
+        "swipe",
+        "row"
+      ],
+      "nav_hints": [
+        "delete",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Enable station editing",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Edit stations\" option on"
+      ],
+      "keywords": [
+        "enable",
+        "station",
+        "editing",
+        "settings"
+      ],
+      "nav_hints": [
+        "edit stations",
+        "enable",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Rename a station",
+      "description": "With editing enabled",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station in the list"
+      ],
+      "keywords": [
+        "rename",
+        "station",
+        "editing",
+        "enabled"
+      ],
+      "nav_hints": [
+        "rename",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Change a station's image",
+      "description": "With editing enabled",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station"
+      ],
+      "keywords": [
+        "change",
+        "station's",
+        "image",
+        "editing"
+      ],
+      "nav_hints": [
+        "change",
+        "station's",
+        "image"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Change a station's stream",
+      "description": "With editing enabled",
+      "actions": [
+        "With editing enabled",
+        "tap and hold the station"
+      ],
+      "keywords": [
+        "change",
+        "station's",
+        "stream",
+        "address"
+      ],
+      "nav_hints": [
+        "change",
+        "station's",
+        "stream"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Update station information",
+      "description": "Open the overflow/settings menu",
+      "actions": [
+        "Open the overflow/settings menu",
+        "tap the \"Update station information\" action"
+      ],
+      "keywords": [
+        "update",
+        "station",
+        "information",
+        "source"
+      ],
+      "nav_hints": [
+        "update station information",
+        "update",
+        "station"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Reorder stations",
+      "description": "Open the station list",
+      "actions": [
+        "Open the station list",
+        "tap and hold a station"
+      ],
+      "keywords": [
+        "reorder",
+        "stations",
+        "station",
+        "hold"
+      ],
+      "nav_hints": [
+        "reorder",
+        "stations"
+      ],
+      "source": "guide"
+    }
+  ]
+}

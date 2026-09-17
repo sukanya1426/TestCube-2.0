@@ -1,0 +1,885 @@
+{
+  "app": "Loop Habit Tracker",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Loop Habit Tracker repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Loop Habit Tracker (org.isoron.uhabits), version 2.3.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a yes/no habit",
+      "description": "Create a yes/no habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "tap \"Yes or No\"",
+        "enter the habit name",
+        "enter the optional question",
+        "pick a colour",
+        "set the frequency",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "habit",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "yes or no",
+        "create",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a measurable habit",
+      "description": "Create a measurable habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Measurable\"",
+        "enter the name and question",
+        "enter the unit (for example km, pages, minutes)",
+        "enter the daily target value",
+        "choose the target type (at least / at most)",
+        "pick a colour",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "measurable",
+        "habit"
+      ],
+      "nav_hints": [
+        "measurable",
+        "create",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Set a habit frequency",
+      "description": "Set a habit frequency as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit editor",
+        "tap the frequency row",
+        "choose Every day, Every X days, X times per week, X times per month, or a custom ratio",
+        "tap OK",
+        "Save"
+      ],
+      "keywords": [
+        "habit",
+        "frequency",
+        "editor",
+        "row"
+      ],
+      "nav_hints": [
+        "habit",
+        "frequency"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Set a habit reminder",
+      "description": "Set a habit reminder as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit editor",
+        "tap the reminder row",
+        "pick the time",
+        "select the days of the week the reminder should fire",
+        "tap OK",
+        "Save"
+      ],
+      "keywords": [
+        "habit",
+        "reminder",
+        "editor",
+        "row"
+      ],
+      "nav_hints": [
+        "habit",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add notes to a habit",
+      "description": "Add notes to a habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit editor",
+        "tap the notes field",
+        "type the description",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "notes",
+        "habit",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "notes",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Check off a habit for today",
+      "description": "Check off a habit for today as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the main habit list",
+        "tap the checkmark square in today's column on the habit row; tap again to cycle the state (unchecked, checked, skipped depending on the settings)"
+      ],
+      "keywords": [
+        "check",
+        "off",
+        "habit",
+        "today",
+        "main",
+        "checkmark"
+      ],
+      "nav_hints": [
+        "check",
+        "off",
+        "habit",
+        "today"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Enter a value for a measurable habit",
+      "description": "Enter a value for a measurable habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap today's cell on the measurable habit row",
+        "type the value in the dialog",
+        "tap Save"
+      ],
+      "keywords": [
+        "value",
+        "measurable",
+        "habit",
+        "today's",
+        "cell",
+        "row"
+      ],
+      "nav_hints": [
+        "value",
+        "measurable",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Check off a habit for an earlier day",
+      "description": "Check off a habit for an earlier day as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "scroll the date columns horizontally to the past date",
+        "tap the cell for that date, or open the habit detail",
+        "open the calendar/history view",
+        "tap the day"
+      ],
+      "keywords": [
+        "check",
+        "off",
+        "habit",
+        "earlier",
+        "day",
+        "scroll"
+      ],
+      "nav_hints": [
+        "check",
+        "off",
+        "habit",
+        "earlier"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Mark a day as skipped",
+      "description": "Mark a day as skipped as documented for Loop Habit Tracker.",
+      "actions": [
+        "Long-press (or repeatedly tap, depending on the settings) the day cell",
+        "choose the skip state; skipped days do not break the streak"
+      ],
+      "keywords": [
+        "mark",
+        "day",
+        "skipped",
+        "long-press",
+        "repeatedly",
+        "depending"
+      ],
+      "nav_hints": [
+        "mark",
+        "day",
+        "skipped"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Add a note to a specific day's entry",
+      "description": "Add a note to a specific day's entry as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "open the history/calendar view",
+        "long-press the day",
+        "enter the note text in the dialog",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "note",
+        "specific",
+        "day's",
+        "entry",
+        "habit"
+      ],
+      "nav_hints": [
+        "add",
+        "note",
+        "specific",
+        "day's"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "View a habit's detailed statistics",
+      "description": "View a habit's detailed statistics as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap the habit name",
+        "the detail screen opens showing the overview, the score chart, the history calendar, the streaks list and the frequency (best-time) chart"
+      ],
+      "keywords": [
+        "habit's",
+        "detailed",
+        "statistics",
+        "habit",
+        "name"
+      ],
+      "nav_hints": [
+        "habit's",
+        "detailed",
+        "statistics"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "View the score/strength chart",
+      "description": "View the score/strength chart as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "scroll to the Score card",
+        "tap the interval control to switch between day, week, month, quarter and year granularity"
+      ],
+      "keywords": [
+        "score",
+        "strength",
+        "chart",
+        "habit",
+        "detail",
+        "scroll"
+      ],
+      "nav_hints": [
+        "score",
+        "strength",
+        "chart"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "View the history calendar",
+      "description": "View the history calendar as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "scroll to the History card",
+        "scroll horizontally to move through past months",
+        "tap a day to toggle or edit it"
+      ],
+      "keywords": [
+        "history",
+        "calendar",
+        "habit",
+        "detail",
+        "scroll",
+        "card"
+      ],
+      "nav_hints": [
+        "history",
+        "calendar"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "View the streaks chart",
+      "description": "View the streaks chart as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "scroll to the Streaks card",
+        "review the longest and most recent streaks with their date ranges"
+      ],
+      "keywords": [
+        "streaks",
+        "chart",
+        "habit",
+        "detail",
+        "scroll",
+        "card"
+      ],
+      "nav_hints": [
+        "streaks",
+        "chart"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "View the frequency (weekday/time) chart",
+      "description": "View the frequency (weekday/time) chart as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "scroll to the Frequency card",
+        "review which weekdays the habit is most often completed on"
+      ],
+      "keywords": [
+        "frequency",
+        "weekday",
+        "time",
+        "chart",
+        "habit",
+        "detail"
+      ],
+      "nav_hints": [
+        "frequency",
+        "weekday",
+        "time",
+        "chart"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Edit a habit",
+      "description": "Edit a habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit detail",
+        "tap the edit (pencil) icon (or long-press the habit in the list and tap Edit)",
+        "change the name, question, colour, unit, target, frequency or reminder",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "habit",
+        "detail",
+        "pencil",
+        "long-press"
+      ],
+      "nav_hints": [
+        "edit",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Archive a habit",
+      "description": "Archive a habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "long-press the habit",
+        "tap the archive icon in the contextual toolbar; the habit is hidden from the main list but its data is kept"
+      ],
+      "keywords": [
+        "archive",
+        "habit",
+        "long-press"
+      ],
+      "nav_hints": [
+        "archive",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Unarchive a habit",
+      "description": "Unarchive a habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap the overflow menu (three dots)",
+        "enable \"Show archived\"",
+        "long-press the archived habit",
+        "tap the unarchive action"
+      ],
+      "keywords": [
+        "unarchive",
+        "habit",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "show archived",
+        "unarchive",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Delete a habit",
+      "description": "Delete a habit as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "long-press the habit",
+        "tap the delete (bin) icon",
+        "confirm; the habit and all its records are removed"
+      ],
+      "keywords": [
+        "delete",
+        "habit",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Reorder habits manually",
+      "description": "Reorder habits manually as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap the overflow menu",
+        "set the sort order to manual",
+        "long-press a habit",
+        "drag it to the new position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "habits",
+        "manually",
+        "habit",
+        "overflow"
+      ],
+      "nav_hints": [
+        "reorder",
+        "habits",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Sort the habit list",
+      "description": "Sort the habit list as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap the overflow menu",
+        "tap \"Sort\"",
+        "choose the criterion (manual, by name, by colour, by score or by status)",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "habit",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Filter the habit list",
+      "description": "Filter the habit list as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the habit list",
+        "tap the overflow menu",
+        "tap \"Filter\"",
+        "toggle whether archived habits and completed habits are shown",
+        "confirm"
+      ],
+      "keywords": [
+        "filter",
+        "habit",
+        "overflow"
+      ],
+      "nav_hints": [
+        "filter",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Change the number of days shown in the list",
+      "description": "Change the number of days shown in the list as documented for Loop Habit Tracker.",
+      "actions": [
+        "Rotate the device or resize the window; Loop adjusts the number of visible day columns. The display can also be adjusted from the appearance settings"
+      ],
+      "keywords": [
+        "change",
+        "number",
+        "days",
+        "shown",
+        "rotate",
+        "device"
+      ],
+      "nav_hints": [
+        "change",
+        "number",
+        "days",
+        "shown"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Snooze or dismiss a habit reminder",
+      "description": "Snooze or dismiss a habit reminder as documented for Loop Habit Tracker.",
+      "actions": [
+        "When the reminder notification appears",
+        "tap the check action to record the habit, or tap \"Later\"/snooze and choose the delay"
+      ],
+      "keywords": [
+        "snooze",
+        "dismiss",
+        "habit",
+        "reminder",
+        "notification",
+        "appears"
+      ],
+      "nav_hints": [
+        "later",
+        "snooze",
+        "dismiss",
+        "habit"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Enable persistent (sticky) reminder notifications",
+      "description": "Enable persistent (sticky) reminder notifications as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "find the sticky/persistent notification option",
+        "toggle it on so reminders remain in the notification shade until acted upon"
+      ],
+      "keywords": [
+        "enable",
+        "persistent",
+        "sticky",
+        "reminder",
+        "notifications",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "persistent",
+        "sticky",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Add a habit widget to the home screen",
+      "description": "Add a habit widget to the home screen as documented for Loop Habit Tracker.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Loop Habit Tracker",
+        "drag the required widget type (checkmark, history, score, streaks, frequency or target) onto the home screen",
+        "select the habit it should show",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "habit",
+        "widget",
+        "home",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "habit",
+        "widget",
+        "home"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Check off a habit directly from a widget",
+      "description": "Check off a habit directly from a widget as documented for Loop Habit Tracker.",
+      "actions": [
+        "Tap the checkmark area on the placed home screen widget; the habit is recorded for today without opening the app"
+      ],
+      "keywords": [
+        "check",
+        "off",
+        "habit",
+        "directly",
+        "widget",
+        "checkmark"
+      ],
+      "nav_hints": [
+        "check",
+        "off",
+        "habit",
+        "directly"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Export habit data as CSV",
+      "description": "Export habit data as CSV as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap \"Export as CSV\"",
+        "choose the destination",
+        "confirm; a ZIP of CSV files with the habits and their check-marks is written"
+      ],
+      "keywords": [
+        "export",
+        "habit",
+        "data",
+        "csv",
+        "settings"
+      ],
+      "nav_hints": [
+        "export as csv",
+        "export",
+        "habit",
+        "data"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Create a full database backup",
+      "description": "Create a full database backup as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap \"Export full backup\"",
+        "choose the destination folder",
+        "confirm; a .db file containing the whole database is produced"
+      ],
+      "keywords": [
+        "create",
+        "full",
+        "database",
+        "backup",
+        "settings",
+        "export"
+      ],
+      "nav_hints": [
+        "export full backup",
+        "create",
+        "full",
+        "database"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Restore a full backup",
+      "description": "Restore a full backup as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap \"Import data\"",
+        "select the previously exported .db backup file",
+        "confirm; the existing data is replaced"
+      ],
+      "keywords": [
+        "restore",
+        "full",
+        "backup",
+        "settings",
+        "import",
+        "data"
+      ],
+      "nav_hints": [
+        "import data",
+        "restore",
+        "full",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Import data from another habit app",
+      "description": "Import data from another habit app as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap \"Import data\"",
+        "select the exported file from the supported app (for example Tickmate, HabitBull, Rewire or a Loop CSV/DB backup)",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "data",
+        "another",
+        "habit",
+        "settings"
+      ],
+      "nav_hints": [
+        "import data",
+        "import",
+        "data",
+        "another"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Repair the database",
+      "description": "Repair the database as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Repair database\" entry",
+        "confirm; the app rebuilds the cached scores and check-marks"
+      ],
+      "keywords": [
+        "repair",
+        "database",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "repair database",
+        "repair",
+        "database"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Change the app theme",
+      "description": "Change the app theme as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose the light theme, the dark theme or the pure black (AMOLED) variant",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Set the first day of the week",
+      "description": "Set the first day of the week as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap the \"First day of the week\" entry",
+        "select the weekday",
+        "return"
+      ],
+      "keywords": [
+        "first",
+        "day",
+        "week",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "first",
+        "day",
+        "week"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Set the hour the day starts (day offset)",
+      "description": "Set the hour the day starts (day offset) as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "tap the \"New day starts at\" entry",
+        "select the hour",
+        "return; entries recorded before that hour count towards the previous day"
+      ],
+      "keywords": [
+        "hour",
+        "day",
+        "starts",
+        "offset",
+        "settings",
+        "new"
+      ],
+      "nav_hints": [
+        "hour",
+        "day",
+        "starts",
+        "offset"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Enable or disable the check-mark reverse order and skip days",
+      "description": "Enable or disable the check-mark reverse order and skip days as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings",
+        "toggle the options that control whether the newest day appears first and whether the skip state is available when tapping a cell"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "check-mark",
+        "reverse",
+        "order",
+        "skip"
+      ],
+      "nav_hints": [
+        "enable",
+        "disable",
+        "check-mark",
+        "reverse"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Open the help and FAQ",
+      "description": "Open the help and FAQ as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open the navigation drawer or Settings",
+        "tap \"Help\"/\"FAQ\"",
+        "read the built-in help pages"
+      ],
+      "keywords": [
+        "help",
+        "faq",
+        "navigation",
+        "drawer",
+        "settings"
+      ],
+      "nav_hints": [
+        "help",
+        "faq"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "View the about screen",
+      "description": "View the about screen as documented for Loop Habit Tracker.",
+      "actions": [
+        "Open Settings or the drawer",
+        "tap \"About\"",
+        "read the version number, the source link and the licence. ## **Category: Finance**"
+      ],
+      "keywords": [
+        "about",
+        "settings",
+        "drawer"
+      ],
+      "nav_hints": [
+        "about"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

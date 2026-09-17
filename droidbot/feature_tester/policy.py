@@ -13,6 +13,7 @@ from droidbot.input_policy import (
     InputInterruptedException,
     UtgBasedInputPolicy,
 )
+from droidbot.run_budget import RunBudget
 from droidbot.permission_dialog import (
     grant_runtime_permissions,
     is_permission_screen,
@@ -210,6 +211,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._unresolved_fields = set()
         self._input_manager = None
         self._recent_coords = []
+        self._budget = RunBudget(seconds=0)
         self._run_started = None
         self._consecutive_errors = 0
         # Lifetime restart counter. Unlike _restarts it is never reset, so a
@@ -231,11 +233,16 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         try:
             self._ensure_ready()
             self._grant_permissions()
-            self._run_started = time.time()
-            budget = min(input_manager.event_count, self.cfg.max_run_events)
-            while input_manager.enabled and self.action_count < budget:
-                elapsed = time.time() - self._run_started
-                if elapsed >= self.cfg.max_run_seconds:
+            # One clock for the whole run, owned by the input manager, so the
+            # deadline enforced here and the one enforced in add_event cannot
+            # drift apart.
+            self._budget = getattr(input_manager, "budget", None) or RunBudget(
+                self.cfg.max_run_seconds, self.cfg.run_grace_seconds
+            ).start()
+            self._run_started = self._budget.started_at or time.time()
+            event_budget = min(input_manager.event_count, self.cfg.max_run_events)
+            while input_manager.enabled and self.action_count < event_budget:
+                if self._budget.expired():
                     # Record before finalizing: _finish_run writes the report.
                     self._set_stop_reason("budget_time")
                     self._finish_run("Wall-clock budget reached.")
@@ -249,6 +256,9 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                     self.logger.info("Keyboard interrupt; writing coverage report.")
                     break
                 except InputInterruptedException as exc:
+                    if self._budget.expired():
+                        self._set_stop_reason("budget_time")
+                        self._finish_run("Wall-clock budget reached.")
                     self.logger.warning("stop sending events: %s" % exc)
                     break
                 except Exception as exc:
@@ -267,7 +277,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                     continue
                 self.action_count += 1
             else:
-                if self.action_count >= budget:
+                if self.action_count >= event_budget:
                     self._set_stop_reason("budget_events")
         finally:
             if self.journal and not self._finished:
@@ -2177,7 +2187,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             return False
         # Never let discovery hold a run open past its budget: features it
         # adds now could not be attempted anyway.
-        if self.action_count >= 0.9 * cfg.max_run_events:
+        if self._budget_used() >= 0.9:
             return False
         return bool(
             cfg.enabled("hybrid_discovery")
@@ -2439,14 +2449,48 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if item.get("status") in (None, "pending", "in_progress", "blocked")
         ]
         remaining_features = max(1, len(pending))
-        remaining_events = max(0, self.cfg.max_run_events - self.action_count)
+        remaining_events = int(self.cfg.max_run_events * self._budget_left())
         return max(8, min(cap, remaining_events // remaining_features))
+
+    def _budget_used(self):
+        """Fraction of the run spent, by events or by wall clock — whichever
+        is further along.
+
+        Pacing has to key on the budget that actually binds. With a one-hour
+        threshold the event cap usually never fires, so anything counting only
+        actions would think the run had barely started right up to the moment
+        it ends, and would keep handing full step budgets to features it no
+        longer has time to test.
+        """
+        # Reached from _finalize_journal, which runs on interrupt paths where
+        # the policy may only be half built, so nothing here is assumed to exist.
+        used = 0.0
+        cfg = getattr(self, "cfg", None)
+        if cfg is not None and cfg.max_run_events > 0:
+            used = getattr(self, "action_count", 0) / float(cfg.max_run_events)
+        budget = getattr(self, "_budget", None)
+        if budget is not None:
+            used = max(used, budget.fraction_used())
+        return min(1.0, used)
+
+    def _budget_left(self):
+        return 1.0 - self._budget_used()
 
     def _set_stop_reason(self, reason):
         """Record why the run ended so a truncated run is never compared
         against one that finished naturally."""
         if self.journal is not None:
             self.journal.session.setdefault("stop_reason", reason)
+
+    def finalize_on_hard_stop(self):
+        """Write the feature report from the watchdog thread.
+
+        Only reached when the run blew past its budget and could not unwind on
+        its own, so discovery is skipped: it needs the event loop, which is
+        exactly what is stuck.
+        """
+        self._set_stop_reason("budget_time_hard")
+        self._finalize_journal(run_discovery=False)
 
     def _finish_run(self, reason):
         if self._finished:
@@ -2461,10 +2505,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         # attempted; they inflate the denominator and depress coverage, and
         # the call itself is expensive (money-fix1 spent 37 minutes here,
         # after exploration had finished, for zero usable features).
-        budget_left = 0
+        budget_left = 0.0
         pending_left = 0
         if getattr(self, "cfg", None):
-            budget_left = self.cfg.max_run_events - getattr(self, "action_count", 0)
+            budget_left = self._budget_left()
         if self.journal:
             pending_left = len([
                 item for item in self.journal.features()
@@ -2476,7 +2520,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             and getattr(self, "cfg", None)
             and self.cfg.enabled("hybrid_discovery")
             and self._seen_hub
-            and budget_left >= 0.15 * self.cfg.max_run_events
+            and budget_left >= 0.15
             # Pointless while the existing list still has untested features.
             and pending_left == 0
         ):

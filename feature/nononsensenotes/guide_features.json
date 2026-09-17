@@ -1,0 +1,293 @@
+{
+  "app": "NoNonsense Notes",
+  "source": "guide",
+  "url": "Official NoNonsense Notes repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-34 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a task list",
+      "description": "Open the navigation drawer (hamburger icon or left-edge swipe)",
+      "actions": [
+        "Open the navigation drawer (hamburger icon or left-edge swipe)",
+        "tap \"Create new list\"/the \"+\" beside the lists"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "create new list",
+        "create",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Delete a task list",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "delete",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete list",
+        "delete",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Create a task",
+      "description": "Open the target list",
+      "actions": [
+        "Open the target list",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "target",
+        "floating"
+      ],
+      "nav_hints": [
+        "create",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Mark a task",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "tap the checkbox beside the task; the task is struck through and, depending on the settings, hidden from the active list"
+      ],
+      "keywords": [
+        "mark",
+        "task",
+        "completed",
+        "checkbox"
+      ],
+      "nav_hints": [
+        "mark",
+        "task",
+        "completed"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Delete all completed tasks",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "delete",
+        "all",
+        "completed",
+        "tasks"
+      ],
+      "nav_hints": [
+        "delete completed tasks",
+        "delete",
+        "all"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Reorder tasks manually",
+      "description": "Set the list sort order to manual",
+      "actions": [
+        "Set the list sort order to manual",
+        "long-press a task"
+      ],
+      "keywords": [
+        "reorder",
+        "tasks",
+        "manually",
+        "sort"
+      ],
+      "nav_hints": [
+        "reorder",
+        "tasks",
+        "manually"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Set a time-based reminder",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "tap the \"Add reminder\" control"
+      ],
+      "keywords": [
+        "time-based",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "time-based",
+        "reminder"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Set a location-based reminder",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "tap \"Add reminder\""
+      ],
+      "keywords": [
+        "location-based",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "location-based",
+        "reminder"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Move a task",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "move",
+        "task",
+        "different",
+        "overflow"
+      ],
+      "nav_hints": [
+        "move to list",
+        "move",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Sort a list",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "sort",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "View all tasks",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the \"All lists\"/combined view entry"
+      ],
+      "keywords": [
+        "all",
+        "tasks",
+        "lists",
+        "together"
+      ],
+      "nav_hints": [
+        "all lists",
+        "all",
+        "tasks"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Share a task",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "tap the share icon (or the overflow menu"
+      ],
+      "keywords": [
+        "share",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Add the task list",
+      "description": "Long-press an empty area of the Android home screen",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets"
+      ],
+      "keywords": [
+        "add",
+        "task",
+        "home",
+        "widget"
+      ],
+      "nav_hints": [
+        "add",
+        "task",
+        "home"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Change the app theme",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ],
+      "source": "guide"
+    }
+  ]
+}

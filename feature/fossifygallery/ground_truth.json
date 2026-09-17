@@ -1,0 +1,875 @@
+{
+  "app": "Fossify Gallery",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Gallery (org.fossify.gallery), version F-Droid build 28.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse media folders",
+      "description": "Browse media folders as documented for Fossify Gallery.",
+      "actions": [
+        "Open the app",
+        "grant the media permission",
+        "the folder grid lists every folder containing images or videos",
+        "tap a folder to open its contents"
+      ],
+      "keywords": [
+        "browse",
+        "media",
+        "folders",
+        "grant",
+        "permission"
+      ],
+      "nav_hints": [
+        "browse",
+        "media",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "View a photo full screen",
+      "description": "View a photo full screen as documented for Fossify Gallery.",
+      "actions": [
+        "Open a folder",
+        "tap a thumbnail",
+        "the full-screen viewer opens",
+        "swipe left or right to move to the next or previous item",
+        "pinch to zoom",
+        "double-tap to zoom quickly"
+      ],
+      "keywords": [
+        "photo",
+        "full",
+        "folder",
+        "thumbnail"
+      ],
+      "nav_hints": [
+        "photo",
+        "full"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Play a video",
+      "description": "Play a video as documented for Fossify Gallery.",
+      "actions": [
+        "Open a folder",
+        "tap a video thumbnail",
+        "the built-in player opens",
+        "use play/pause, the seek bar and the skip controls",
+        "rotate the device or tap the fullscreen control for landscape playback"
+      ],
+      "keywords": [
+        "play",
+        "video",
+        "folder",
+        "thumbnail"
+      ],
+      "nav_hints": [
+        "play",
+        "video"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Edit a photo",
+      "description": "Edit a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the edit (pencil) icon",
+        "choose the tool (crop and rotate, filters, or draw)",
+        "apply the change",
+        "tap Save",
+        "choose to overwrite the file or save a copy"
+      ],
+      "keywords": [
+        "edit",
+        "photo",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Crop, rotate and flip a photo",
+      "description": "Crop, rotate and flip a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the edit icon",
+        "select the crop/rotate tool",
+        "pick the aspect ratio or drag the crop handles",
+        "use the rotate and flip buttons",
+        "tap Save"
+      ],
+      "keywords": [
+        "crop",
+        "rotate",
+        "flip",
+        "photo",
+        "edit"
+      ],
+      "nav_hints": [
+        "crop",
+        "rotate",
+        "flip",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Apply a filter to a photo",
+      "description": "Apply a filter to a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the edit icon",
+        "switch to the Filters tab",
+        "tap the filter thumbnail to preview it",
+        "tap Save"
+      ],
+      "keywords": [
+        "apply",
+        "filter",
+        "photo",
+        "edit"
+      ],
+      "nav_hints": [
+        "apply",
+        "filter",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Draw on a photo",
+      "description": "Draw on a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the edit icon",
+        "switch to the Draw tab",
+        "pick the brush colour and stroke width",
+        "draw on the image",
+        "use undo if needed",
+        "tap Save"
+      ],
+      "keywords": [
+        "draw",
+        "photo",
+        "edit"
+      ],
+      "nav_hints": [
+        "draw",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Resize a photo",
+      "description": "Resize a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the overflow menu (three dots)",
+        "tap \"Resize\"",
+        "enter the new width and height (the aspect ratio can be locked)",
+        "tap OK",
+        "choose the destination"
+      ],
+      "keywords": [
+        "resize",
+        "photo",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "resize",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Rotate a photo without re-encoding",
+      "description": "Rotate a photo without re-encoding as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the overflow menu",
+        "tap \"Rotate\"",
+        "choose left, right or 180 degrees; the change is written to the file"
+      ],
+      "keywords": [
+        "rotate",
+        "photo",
+        "without",
+        "re-encoding",
+        "overflow"
+      ],
+      "nav_hints": [
+        "rotate",
+        "photo",
+        "without",
+        "re-encoding"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set a photo as the wallpaper",
+      "description": "Set a photo as the wallpaper as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the overflow menu",
+        "tap \"Set as\"",
+        "choose Wallpaper",
+        "select the home screen, lock screen or both",
+        "confirm"
+      ],
+      "keywords": [
+        "photo",
+        "wallpaper",
+        "overflow"
+      ],
+      "nav_hints": [
+        "set as",
+        "photo",
+        "wallpaper"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Share media",
+      "description": "Share media as documented for Fossify Gallery.",
+      "actions": [
+        "Open the item (or long-press it in the grid)",
+        "tap the share icon",
+        "choose the destination app from the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "media",
+        "long-press",
+        "grid"
+      ],
+      "nav_hints": [
+        "share",
+        "media"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Print a photo",
+      "description": "Print a photo as documented for Fossify Gallery.",
+      "actions": [
+        "Open the photo",
+        "tap the overflow menu",
+        "tap \"Print\"",
+        "choose the printer or \"Save as PDF\"",
+        "confirm"
+      ],
+      "keywords": [
+        "print",
+        "photo",
+        "overflow"
+      ],
+      "nav_hints": [
+        "print",
+        "save as pdf",
+        "photo"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "View media properties",
+      "description": "View media properties as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu",
+        "tap \"Properties\"",
+        "read the name, path, size, resolution or duration, date taken, camera details and EXIF data"
+      ],
+      "keywords": [
+        "media",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "media"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Mark media as a favourite",
+      "description": "Mark media as a favourite as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item",
+        "tap the favourite (heart) action; or open it and tap the heart icon. Favourites are collected in a dedicated Favourites folder"
+      ],
+      "keywords": [
+        "mark",
+        "media",
+        "favourite",
+        "long-press",
+        "heart",
+        "action"
+      ],
+      "nav_hints": [
+        "mark",
+        "media",
+        "favourite"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Copy or move media to another folder",
+      "description": "Copy or move media to another folder as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy or move icon",
+        "select the destination folder",
+        "tap the confirm button"
+      ],
+      "keywords": [
+        "copy",
+        "move",
+        "media",
+        "another",
+        "folder",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy",
+        "move",
+        "media",
+        "another"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Rename media or a folder",
+      "description": "Rename media or a folder as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item or folder",
+        "tap the rename action",
+        "enter the new name (batch renaming with a pattern is offered for multiple selections)",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "media",
+        "folder",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "rename",
+        "media",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Delete media",
+      "description": "Delete media as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete (bin) icon",
+        "confirm; deleted items go to the recycle bin when it is enabled"
+      ],
+      "keywords": [
+        "delete",
+        "media",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "media"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Restore or empty the recycle bin",
+      "description": "Restore or empty the recycle bin as documented for Fossify Gallery.",
+      "actions": [
+        "Open the folder list",
+        "tap the \"Recycle bin\" entry",
+        "long-press an item and tap Restore, or tap \"Empty the recycle bin\"",
+        "confirm"
+      ],
+      "keywords": [
+        "restore",
+        "empty",
+        "recycle",
+        "bin",
+        "folder",
+        "entry"
+      ],
+      "nav_hints": [
+        "recycle bin",
+        "restore",
+        "empty",
+        "recycle"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Hide a folder from the gallery",
+      "description": "Hide a folder from the gallery as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu",
+        "tap \"Hide folder\"",
+        "confirm; use \"Temporarily show hidden\" or the settings toggle to see it again"
+      ],
+      "keywords": [
+        "hide",
+        "folder",
+        "gallery",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "hide folder",
+        "temporarily show hidden",
+        "hide",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Exclude a folder from the gallery",
+      "description": "Exclude a folder from the gallery as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu",
+        "tap \"Exclude folder\"",
+        "confirm; manage the exclusion list later from Settings",
+        "\"Manage excluded folders\""
+      ],
+      "keywords": [
+        "exclude",
+        "folder",
+        "gallery",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "exclude folder",
+        "manage excluded folders",
+        "exclude",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Pin a folder to the top of the list",
+      "description": "Pin a folder to the top of the list as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the folder",
+        "tap the pin action; pinned folders stay at the top of the folder grid"
+      ],
+      "keywords": [
+        "pin",
+        "folder",
+        "top",
+        "long-press",
+        "action",
+        "pinned"
+      ],
+      "nav_hints": [
+        "pin",
+        "folder",
+        "top"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Create a new folder",
+      "description": "Create a new folder as documented for Fossify Gallery.",
+      "actions": [
+        "Open the destination view",
+        "tap the overflow menu",
+        "tap \"Create new folder\"",
+        "enter the name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "folder",
+        "destination",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create new folder",
+        "create",
+        "new",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Run a slideshow",
+      "description": "Run a slideshow as documented for Fossify Gallery.",
+      "actions": [
+        "Open a folder or a photo",
+        "tap the overflow menu",
+        "tap \"Slideshow\"",
+        "set the interval, the animation, whether videos are included and whether it loops randomly",
+        "tap Start"
+      ],
+      "keywords": [
+        "run",
+        "slideshow",
+        "folder",
+        "photo",
+        "overflow"
+      ],
+      "nav_hints": [
+        "slideshow",
+        "run"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Search for media",
+      "description": "Search for media as documented for Fossify Gallery.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type part of the file name",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "media",
+        "toolbar",
+        "part",
+        "file",
+        "name"
+      ],
+      "nav_hints": [
+        "search",
+        "media"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Sort media and folders",
+      "description": "Sort media and folders as documented for Fossify Gallery.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Sort by\"",
+        "choose the field (name, date taken, date modified, size, extension or random) and the direction",
+        "optionally apply it to the current folder only",
+        "tap OK"
+      ],
+      "keywords": [
+        "sort",
+        "media",
+        "folders",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "media",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Group media inside a folder",
+      "description": "Group media inside a folder as documented for Fossify Gallery.",
+      "actions": [
+        "Open a folder",
+        "tap the overflow menu",
+        "tap \"Group by\"",
+        "choose none, folder, last modified, date taken, file type or extension",
+        "confirm; headers appear between the groups"
+      ],
+      "keywords": [
+        "group",
+        "media",
+        "inside",
+        "folder",
+        "overflow"
+      ],
+      "nav_hints": [
+        "group by",
+        "group",
+        "media",
+        "inside"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Filter the media types shown",
+      "description": "Filter the media types shown as documented for Fossify Gallery.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Filter media\"",
+        "tick the types to show (images, videos, GIFs, RAW images, SVGs, portraits)",
+        "tap OK"
+      ],
+      "keywords": [
+        "filter",
+        "media",
+        "types",
+        "shown",
+        "overflow"
+      ],
+      "nav_hints": [
+        "filter media",
+        "filter",
+        "media",
+        "types"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Change the grid column count",
+      "description": "Change the grid column count as documented for Fossify Gallery.",
+      "actions": [
+        "Open a folder",
+        "pinch on the grid to increase or decrease the number of columns, or open the overflow menu",
+        "\"Change view type\"",
+        "select grid or list and the column count"
+      ],
+      "keywords": [
+        "change",
+        "grid",
+        "column",
+        "count",
+        "folder",
+        "pinch"
+      ],
+      "nav_hints": [
+        "change view type",
+        "change",
+        "grid",
+        "column"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Show hidden items",
+      "description": "Show hidden items as documented for Fossify Gallery.",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Temporarily show hidden\" (or enable the permanent setting in Settings)",
+        "hidden folders and .nomedia folders become visible"
+      ],
+      "keywords": [
+        "show",
+        "hidden",
+        "overflow",
+        "toggle",
+        "temporarily",
+        "enable"
+      ],
+      "nav_hints": [
+        "temporarily show hidden",
+        "show",
+        "hidden"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Open a folder as a home screen shortcut",
+      "description": "Open a folder as a home screen shortcut as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu",
+        "tap \"Create shortcut\"",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "folder",
+        "home",
+        "shortcut",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create shortcut",
+        "folder",
+        "home",
+        "shortcut"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Fix the \"date taken\" value of media",
+      "description": "Fix the \"date taken\" value of media as documented for Fossify Gallery.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the overflow menu",
+        "tap \"Fix date taken\"",
+        "confirm; the EXIF date is written back into the file metadata"
+      ],
+      "keywords": [
+        "fix",
+        "date",
+        "taken",
+        "value",
+        "media",
+        "long-press"
+      ],
+      "nav_hints": [
+        "fix date taken",
+        "fix",
+        "date",
+        "taken"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Protect hidden items or the whole app with a lock",
+      "description": "Protect hidden items or the whole app with a lock as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "tap the security section",
+        "enable the protection for hidden items, for the recycle bin, for the whole app or for excluded folders",
+        "choose PIN, pattern or fingerprint",
+        "set the secret"
+      ],
+      "keywords": [
+        "protect",
+        "hidden",
+        "whole",
+        "lock",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "protect",
+        "hidden",
+        "whole",
+        "lock"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Configure the full-screen viewer behaviour",
+      "description": "Configure the full-screen viewer behaviour as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "open the viewer section",
+        "toggle options such as hiding the system bars, the swipe-down-to-close gesture, looping through the folder, showing the file name, allowing deep zoom and the double-tap zoom behaviour"
+      ],
+      "keywords": [
+        "configure",
+        "full-screen",
+        "viewer",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "full-screen",
+        "viewer",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Configure video playback behaviour",
+      "description": "Configure video playback behaviour as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "open the videos section",
+        "toggle automatic playback on open, looping, remembering the last playback position and whether the volume/brightness gestures are enabled"
+      ],
+      "keywords": [
+        "configure",
+        "video",
+        "playback",
+        "behaviour",
+        "settings",
+        "videos"
+      ],
+      "nav_hints": [
+        "configure",
+        "video",
+        "playback",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and choose the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Gallery.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version, the licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

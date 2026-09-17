@@ -1,0 +1,540 @@
+{
+  "app": "Fossify Voice Recorder",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Voice Recorder (org.fossify.voicerecorder), version F-Droid build 18.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Record audio",
+      "description": "Record audio as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the app",
+        "grant the microphone and storage permissions",
+        "tap the record (microphone) button",
+        "speak",
+        "tap the stop button to finish and save the recording"
+      ],
+      "keywords": [
+        "record",
+        "audio",
+        "grant",
+        "microphone",
+        "storage",
+        "permissions"
+      ],
+      "nav_hints": [
+        "record",
+        "audio"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Pause and resume a recording",
+      "description": "Pause and resume a recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "While recording",
+        "tap the pause control",
+        "tap it again to continue the same recording",
+        "tap stop when finished"
+      ],
+      "keywords": [
+        "pause",
+        "resume",
+        "recording",
+        "while",
+        "control"
+      ],
+      "nav_hints": [
+        "pause",
+        "resume",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Watch the live audio level while recording",
+      "description": "Watch the live audio level while recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Start a recording",
+        "the visualiser/level meter on the recording screen shows the incoming signal in real time"
+      ],
+      "keywords": [
+        "watch",
+        "live",
+        "audio",
+        "level",
+        "while",
+        "recording"
+      ],
+      "nav_hints": [
+        "watch",
+        "live",
+        "audio",
+        "level"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Continue recording in the background",
+      "description": "Continue recording in the background as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Start a recording",
+        "press the home button or switch apps",
+        "the recording continues and is controlled from the persistent notification",
+        "tap the notification action to pause or stop it"
+      ],
+      "keywords": [
+        "continue",
+        "recording",
+        "background",
+        "start",
+        "home",
+        "switch"
+      ],
+      "nav_hints": [
+        "continue",
+        "recording",
+        "background"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Browse saved recordings",
+      "description": "Browse saved recordings as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the \"Recordings\" tab",
+        "scroll the list of saved files with their duration, size and date"
+      ],
+      "keywords": [
+        "browse",
+        "saved",
+        "recordings",
+        "tab",
+        "scroll",
+        "files"
+      ],
+      "nav_hints": [
+        "recordings",
+        "browse",
+        "saved"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Play a recording",
+      "description": "Play a recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the Recordings tab",
+        "tap a recording",
+        "the inline player opens",
+        "use play/pause and the seek bar",
+        "tap the skip controls to move forward or back"
+      ],
+      "keywords": [
+        "play",
+        "recording",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "play",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Rename a recording",
+      "description": "Rename a recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the Recordings tab",
+        "long-press the recording",
+        "tap the rename action",
+        "enter the new name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "recording",
+        "recordings",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "rename",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Delete a recording",
+      "description": "Delete a recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Long-press the recording",
+        "tap the delete (bin) icon",
+        "confirm; the file goes to the recycle bin when that option is enabled"
+      ],
+      "keywords": [
+        "delete",
+        "recording",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Restore or empty the recycle bin",
+      "description": "Restore or empty the recycle bin as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the \"Deleted recordings\"/recycle bin tab",
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action",
+        "confirm"
+      ],
+      "keywords": [
+        "restore",
+        "empty",
+        "recycle",
+        "bin",
+        "deleted",
+        "recordings"
+      ],
+      "nav_hints": [
+        "deleted recordings",
+        "empty recycle bin",
+        "restore",
+        "empty"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Share a recording",
+      "description": "Share a recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Long-press the recording (or open it)",
+        "tap the share icon",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "recording",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "View recording properties",
+      "description": "View recording properties as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Long-press the recording",
+        "tap the overflow menu",
+        "tap \"Properties\"",
+        "read the file name, path, size, duration and last-modified date"
+      ],
+      "keywords": [
+        "recording",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Search recordings",
+      "description": "Search recordings as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the Recordings tab",
+        "tap the search icon",
+        "type part of the file name",
+        "tap a result to play it"
+      ],
+      "keywords": [
+        "search",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "search",
+        "recordings"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Sort the recordings list",
+      "description": "Sort the recordings list as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open the Recordings tab",
+        "tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose the field (title, date or size) and the direction",
+        "tap OK"
+      ],
+      "keywords": [
+        "sort",
+        "recordings",
+        "tab",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "recordings"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Choose the recording audio format",
+      "description": "Choose the recording audio format as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Audio format\"/extension entry",
+        "choose the format (for example M4A, MP3 or OGG/Opus)",
+        "confirm"
+      ],
+      "keywords": [
+        "recording",
+        "audio",
+        "format",
+        "settings",
+        "extension",
+        "entry"
+      ],
+      "nav_hints": [
+        "audio format",
+        "recording",
+        "audio",
+        "format"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Set the recording bitrate and quality",
+      "description": "Set the recording bitrate and quality as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap the bitrate entry",
+        "choose the value; higher values give better quality and larger files"
+      ],
+      "keywords": [
+        "recording",
+        "bitrate",
+        "quality",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "recording",
+        "bitrate",
+        "quality"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Choose the folder where recordings are saved",
+      "description": "Choose the folder where recordings are saved as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Save recordings in\" entry",
+        "browse to and select the destination folder",
+        "confirm"
+      ],
+      "keywords": [
+        "folder",
+        "where",
+        "recordings",
+        "saved",
+        "settings",
+        "save"
+      ],
+      "nav_hints": [
+        "save recordings in",
+        "folder",
+        "where",
+        "recordings"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Hide the recording notification",
+      "description": "Hide the recording notification as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Hide notification\"/silent recording option",
+        "confirm; a persistent notification may still be required by Android for background recording"
+      ],
+      "keywords": [
+        "hide",
+        "recording",
+        "notification",
+        "settings",
+        "toggle",
+        "silent"
+      ],
+      "nav_hints": [
+        "hide notification",
+        "hide",
+        "recording",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Keep the screen on while recording",
+      "description": "Keep the screen on while recording as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "enable the \"Keep the screen on\" option",
+        "return to the recording screen"
+      ],
+      "keywords": [
+        "keep",
+        "while",
+        "recording",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "keep",
+        "while",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Add the quick-record home screen widget",
+      "description": "Add the quick-record home screen widget as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Fossify Voice Recorder",
+        "drag the widget onto the home screen",
+        "set the colour and transparency",
+        "tap OK; tapping it starts a recording immediately"
+      ],
+      "keywords": [
+        "add",
+        "quick-record",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "quick-record",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "description": "Protect the app with a PIN, pattern or fingerprint as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock entry",
+        "choose the lock type",
+        "set the secret",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "settings",
+        "app-lock"
+      ],
+      "nav_hints": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and choose the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Voice Recorder.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version, the licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

@@ -1,0 +1,298 @@
+{
+  "app": "Auxio",
+  "source": "guide",
+  "url": "Official Auxio repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-34 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the music library",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the Songs tab in the home screen"
+      ],
+      "keywords": [
+        "browse",
+        "music",
+        "library",
+        "songs"
+      ],
+      "nav_hints": [
+        "browse",
+        "music",
+        "library"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Browse",
+      "description": "Open the Artists tab",
+      "actions": [
+        "Open the Artists tab",
+        "tap an artist"
+      ],
+      "keywords": [
+        "browse",
+        "artist",
+        "artists",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "artist"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Browse",
+      "description": "Open the Playlists tab",
+      "actions": [
+        "Open the Playlists tab",
+        "tap a playlist to open it"
+      ],
+      "keywords": [
+        "browse",
+        "playlist",
+        "playlists",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "playlist"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Control playback",
+      "description": "Tap the playback bar to expand it",
+      "actions": [
+        "Tap the playback bar to expand it",
+        "use play/pause, previous, next and the seek bar"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "expanded",
+        "player"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "expanded"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Shuffle the whole library",
+      "description": "Open the home screen",
+      "actions": [
+        "Open the home screen",
+        "tap the shuffle action in the toolbar (or the shuffle floating button)"
+      ],
+      "keywords": [
+        "shuffle",
+        "whole",
+        "library",
+        "home"
+      ],
+      "nav_hints": [
+        "shuffle",
+        "whole",
+        "library"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Add a song, album",
+      "description": "Long-press the item (or tap its overflow menu)",
+      "actions": [
+        "Long-press the item (or tap its overflow menu)",
+        "tap \"Play next\" to insert it after the current track, or \"Add to queue\" to append it"
+      ],
+      "keywords": [
+        "add",
+        "song",
+        "album",
+        "artist"
+      ],
+      "nav_hints": [
+        "play next",
+        "add to queue",
+        "add"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Add songs",
+      "description": "Long-press a song, album, artist or genre",
+      "actions": [
+        "Long-press a song, album, artist or genre",
+        "tap \"Add to playlist\""
+      ],
+      "keywords": [
+        "add",
+        "songs",
+        "existing",
+        "playlist"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "add",
+        "songs"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Import a playlist",
+      "description": "Open the Playlists tab",
+      "actions": [
+        "Open the Playlists tab",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "import",
+        "playlist",
+        "m3u",
+        "file"
+      ],
+      "nav_hints": [
+        "import",
+        "playlist",
+        "m3u"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Search the library",
+      "description": "Tap the search icon in the toolbar",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the query"
+      ],
+      "keywords": [
+        "search",
+        "library",
+        "toolbar",
+        "query"
+      ],
+      "nav_hints": [
+        "search",
+        "library"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "View song details",
+      "description": "Long-press a song",
+      "actions": [
+        "Long-press a song",
+        "tap \"Song properties\"/details"
+      ],
+      "keywords": [
+        "song",
+        "details",
+        "file",
+        "information"
+      ],
+      "nav_hints": [
+        "song properties",
+        "song",
+        "details"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Share a song",
+      "description": "Long-press the song",
+      "actions": [
+        "Long-press the song",
+        "tap the share action"
+      ],
+      "keywords": [
+        "share",
+        "song",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "share",
+        "song"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Rescan the music library",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the \"Rescan music library\" action (or pull down to refresh on the home screen)"
+      ],
+      "keywords": [
+        "rescan",
+        "music",
+        "library",
+        "settings"
+      ],
+      "nav_hints": [
+        "rescan music library",
+        "rescan",
+        "music"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Enable",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Audio\"/playback"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "replaygain",
+        "settings"
+      ],
+      "nav_hints": [
+        "audio",
+        "enable",
+        "disable"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Configure headset",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Audio"
+      ],
+      "keywords": [
+        "configure",
+        "headset",
+        "audio",
+        "focus"
+      ],
+      "nav_hints": [
+        "configure",
+        "headset",
+        "audio"
+      ],
+      "source": "guide"
+    }
+  ]
+}

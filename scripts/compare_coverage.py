@@ -133,6 +133,7 @@ def load_run(run_dir):
                     "final": cov.get("final_coverage"),
                     "methods_hit": cov.get("methods_hit"),
                     "duration": cov.get("duration"),
+                    "budget": cov.get("budget_seconds"),
                     "total_actions": cov.get("total_actions"),
                     "activity_coverage": cov.get("activity_coverage"),
                     "activities_hit": cov.get("activities_hit"),
@@ -193,6 +194,11 @@ def parse_args(argv=None):
     parser.add_argument("--testcube", action="append", default=[], help="TestCube run dir (repeatable)")
     parser.add_argument("--llmdroid", action="append", default=[], help="LLMDroid run dir (repeatable)")
     parser.add_argument("--out", default=None, help="Write markdown + json here")
+    parser.add_argument("--budget", type=int, default=None,
+                        help="Wall-clock budget both runs were given, in seconds. Given this, "
+                             "the unequal-run-time check is skipped: it compares observed "
+                             "durations, which differ by each tool's shutdown even when the "
+                             "budgets match.")
     return parser.parse_args(argv)
 
 
@@ -259,6 +265,32 @@ def main(argv=None):
                 "instrumented APK." % (sorted(tags), sorted(totals))
             )
         else:
+            # Both tools are budgeted by wall clock now, so an unequal hour is
+            # the way this comparison goes quietly wrong. A shorter run is not
+            # automatically unfair — it may have stopped on its own — but it
+            # always has to be visible next to the delta.
+            # Only meaningful when the budgets are not already known to be equal.
+            # TestCube keeps sampling while it finalises its reports and LLMDroid
+            # stops at its loop, so identical budgets still produce durations that
+            # differ by minutes; comparing those would warn on every app.
+            durations = [r["duration"] for r in groups if r.get("duration")]
+            if args.budget:
+                lines.append("Both tools were given the same %ds budget. Durations below "
+                             "include each tool's own shutdown, so they differ slightly."
+                             % args.budget)
+                lines.append("")
+            elif len(durations) > 1 and min(durations) < 0.9 * max(durations):
+                lines.append(
+                    "> **Unequal run time:** %s. Coverage rises with time, so a "
+                    "delta between runs of different lengths is not a like-for-like "
+                    "result — check whether the shorter run stopped on its own or "
+                    "was cut short."
+                    % ", ".join(
+                        "%s %.0fs" % (r["tool"], r["duration"])
+                        for r in groups if r.get("duration")
+                    )
+                )
+                lines.append("")
             best_tc = max(r["final"] for r in tc)
             best_ld = max(r["final"] for r in ld)
             delta = best_tc - best_ld

@@ -1,0 +1,301 @@
+{
+  "app": "Joplin",
+  "source": "guide",
+  "url": "Official Joplin documentation (joplinapp.org) and in-app menus",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-45 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a notebook",
+      "description": "Open the sidebar (hamburger icon)",
+      "actions": [
+        "Open the sidebar (hamburger icon)",
+        "tap \"New notebook\" / the \"+\" beside Notebooks"
+      ],
+      "keywords": [
+        "create",
+        "notebook",
+        "sidebar",
+        "hamburger"
+      ],
+      "nav_hints": [
+        "new notebook",
+        "create",
+        "notebook"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Create a note",
+      "description": "Open the target notebook",
+      "actions": [
+        "Open the target notebook",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "note",
+        "target",
+        "notebook"
+      ],
+      "nav_hints": [
+        "new note",
+        "create",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Convert a note",
+      "description": "Open the note",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "convert",
+        "note",
+        "to-do",
+        "back"
+      ],
+      "nav_hints": [
+        "convert to to-do",
+        "convert to note",
+        "convert"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Use the Markdown formatting",
+      "description": "Open a note in the editor",
+      "actions": [
+        "Open a note in the editor",
+        "use the toolbar above the keyboard to insert bold, italic, headings, lists, checkboxes, links, code and horizontal rules at the cursor"
+      ],
+      "keywords": [
+        "markdown",
+        "formatting",
+        "toolbar",
+        "note"
+      ],
+      "nav_hints": [
+        "markdown",
+        "formatting",
+        "toolbar"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Attach a photo taken",
+      "description": "Open a note in edit mode",
+      "actions": [
+        "Open a note in edit mode",
+        "tap the attach (paper clip) icon"
+      ],
+      "keywords": [
+        "attach",
+        "photo",
+        "taken",
+        "camera"
+      ],
+      "nav_hints": [
+        "take photo",
+        "attach",
+        "photo"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Use voice typing",
+      "description": "Open a note in edit mode",
+      "actions": [
+        "Open a note in edit mode",
+        "tap the voice typing (microphone) icon in the toolbar"
+      ],
+      "keywords": [
+        "voice",
+        "typing",
+        "dictate",
+        "note"
+      ],
+      "nav_hints": [
+        "voice",
+        "typing",
+        "dictate"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Browse notes",
+      "description": "Open the sidebar",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Tags\""
+      ],
+      "keywords": [
+        "browse",
+        "notes",
+        "tag",
+        "sidebar"
+      ],
+      "nav_hints": [
+        "tags",
+        "browse",
+        "notes"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Reorder notes manually",
+      "description": "Set the sort order to custom",
+      "actions": [
+        "Set the sort order to custom",
+        "long-press a note in the list"
+      ],
+      "keywords": [
+        "reorder",
+        "notes",
+        "manually",
+        "sort"
+      ],
+      "nav_hints": [
+        "reorder",
+        "notes",
+        "manually"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Delete a note",
+      "description": "Open the note (or long-press it in the list)",
+      "actions": [
+        "Open the note (or long-press it in the list)",
+        "tap the delete/bin action"
+      ],
+      "keywords": [
+        "delete",
+        "note",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "note"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Run a synchronisation manually",
+      "description": "Open the sidebar",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Synchronise\""
+      ],
+      "keywords": [
+        "run",
+        "synchronisation",
+        "manually",
+        "sidebar"
+      ],
+      "nav_hints": [
+        "synchronise",
+        "run",
+        "synchronisation"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Enter a master key",
+      "description": "Open Configuration",
+      "actions": [
+        "Open Configuration",
+        "Encryption"
+      ],
+      "keywords": [
+        "master",
+        "key",
+        "password",
+        "decrypt"
+      ],
+      "nav_hints": [
+        "master",
+        "key",
+        "password"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Change the application theme",
+      "description": "Open Configuration",
+      "actions": [
+        "Open Configuration",
+        "tap \"Appearance\""
+      ],
+      "keywords": [
+        "change",
+        "application",
+        "theme",
+        "configuration"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "application"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Install",
+      "description": "Open Configuration",
+      "actions": [
+        "Open Configuration",
+        "tap \"Plugins\""
+      ],
+      "keywords": [
+        "install",
+        "manage",
+        "joplin",
+        "plugins"
+      ],
+      "nav_hints": [
+        "plugins",
+        "install",
+        "manage"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Import notes",
+      "description": "Open Configuration",
+      "actions": [
+        "Open Configuration",
+        "Tools"
+      ],
+      "keywords": [
+        "import",
+        "notes",
+        "file",
+        "configuration"
+      ],
+      "nav_hints": [
+        "import",
+        "notes",
+        "file"
+      ],
+      "source": "guide"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_comment": [
+    "Settings for scripts/run_experiment.py.",
+    "WHICH APKS RUN IS *NOT* HERE -- it is APK_NAMES / NUM_APKS at the top of",
+    "scripts/run_experiment.py, so that choice lives in exactly one place."
+  ],
+  "budget_seconds": 3600,
+  "grace_seconds": 300,
+  "apk_dir": "apks",
+  "instrumented_dir": "apks/instrumented",
+  "testcube_output": "output/experiment/testcube",
+  "llmdroid_output": "output/experiment/llmdroid",
+  "compare_output": "output/experiment/compare",
+  "log_dir": "output/experiment/logs",
+  "policy": "feature_guided",
+  "llmdroid_policy": "dfs_greedy",
+  "llm_backend": "local",
+  "logcat_buffer": "64M",
+  "reinstall_between_runs": true,
+  "verify_instrumentation": true,
+  "run_llmdroid": true,
+  "run_compare": true,
+  "run_feature_eval": true,
+  "feature_matcher": "ai",
+  "skip_completed": true,
+  "device_serial": null
+}

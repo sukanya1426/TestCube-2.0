@@ -1,0 +1,1476 @@
+{
+  "app": "AnkiDroid",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official AnkiDroid manual and in-app menus",
+  "description": "Hand-verified capability inventory for AnkiDroid (com.ichi2.anki), version 2.24.0.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a deck",
+      "description": "Create a deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the \"+\" floating action button",
+        "tap \"Create deck\"",
+        "enter the deck name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "deck",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create deck",
+        "create",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a subdeck",
+      "description": "Create a subdeck as documented for AnkiDroid.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Create deck\"",
+        "enter the name using the \"Parent::Child\" notation (for example \"Spanish::Verbs\")",
+        "tap OK; the deck is nested under the parent"
+      ],
+      "keywords": [
+        "create",
+        "subdeck",
+        "deck"
+      ],
+      "nav_hints": [
+        "create deck",
+        "parent::child",
+        "spanish::verbs",
+        "create"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Rename a deck",
+      "description": "Rename a deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "long-press the deck (or tap the gear icon on the deck row)",
+        "tap \"Rename\"",
+        "enter the new name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "deck",
+        "long-press",
+        "gear",
+        "row"
+      ],
+      "nav_hints": [
+        "rename",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Delete a deck",
+      "description": "Delete a deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "long-press the deck (or tap the gear icon)",
+        "tap \"Delete\"",
+        "confirm; the deck and its cards are removed"
+      ],
+      "keywords": [
+        "delete",
+        "deck",
+        "long-press",
+        "gear"
+      ],
+      "nav_hints": [
+        "delete",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Reorder or re-parent decks",
+      "description": "Reorder or re-parent decks as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "long-press a deck",
+        "tap \"Rename\"",
+        "change the \"::\" prefix to move it under a different parent",
+        "tap OK"
+      ],
+      "keywords": [
+        "reorder",
+        "re-parent",
+        "decks",
+        "deck",
+        "long-press"
+      ],
+      "nav_hints": [
+        "rename",
+        "::",
+        "reorder",
+        "re-parent"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Study a deck",
+      "description": "Study a deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the deck name",
+        "tap \"Study Now\"",
+        "read the question",
+        "tap \"Show Answer\"",
+        "tap one of the answer buttons (Again, Hard, Good, Easy) to grade the card"
+      ],
+      "keywords": [
+        "study",
+        "deck",
+        "name"
+      ],
+      "nav_hints": [
+        "study now",
+        "show answer",
+        "study",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Add a note (create cards)",
+      "description": "Add a note (create cards) as documented for AnkiDroid.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Add\"",
+        "choose the note type",
+        "choose the target deck",
+        "fill in the fields (for example Front and Back)",
+        "add tags if wanted",
+        "tap the save/tick button"
+      ],
+      "keywords": [
+        "add",
+        "note",
+        "create",
+        "cards"
+      ],
+      "nav_hints": [
+        "add",
+        "note",
+        "create",
+        "cards"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Create a cloze deletion card",
+      "description": "Create a cloze deletion card as documented for AnkiDroid.",
+      "actions": [
+        "Tap \"+\"",
+        "Add",
+        "set the note type to Cloze",
+        "type the sentence in the Text field",
+        "select the word to hide",
+        "tap the cloze ([...]) button in the field toolbar",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "cloze",
+        "deletion",
+        "card",
+        "add"
+      ],
+      "nav_hints": [
+        "create",
+        "cloze",
+        "deletion",
+        "card"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Attach an image, audio clip or recording to a field",
+      "description": "Attach an image, audio clip or recording to a field as documented for AnkiDroid.",
+      "actions": [
+        "Open the Add/Edit note screen",
+        "tap the paper-clip/multimedia icon beside a field",
+        "choose Image, Audio or Record",
+        "pick or capture the media",
+        "confirm; the media reference is inserted into the field"
+      ],
+      "keywords": [
+        "attach",
+        "image",
+        "audio",
+        "clip",
+        "recording",
+        "field"
+      ],
+      "nav_hints": [
+        "attach",
+        "image",
+        "audio",
+        "clip"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Create an image occlusion note",
+      "description": "Create an image occlusion note as documented for AnkiDroid.",
+      "actions": [
+        "Tap \"+\"",
+        "Add",
+        "select the Image Occlusion note type",
+        "choose the image",
+        "draw the masks over the areas to hide",
+        "add optional header and comment text",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "image",
+        "occlusion",
+        "note",
+        "add"
+      ],
+      "nav_hints": [
+        "create",
+        "image",
+        "occlusion",
+        "note"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Add tags to a note",
+      "description": "Add tags to a note as documented for AnkiDroid.",
+      "actions": [
+        "Open the Add or Edit note screen",
+        "tap the Tags row",
+        "select existing tags or type a new tag",
+        "tap OK",
+        "save the note"
+      ],
+      "keywords": [
+        "add",
+        "tags",
+        "note",
+        "edit",
+        "row"
+      ],
+      "nav_hints": [
+        "add",
+        "tags",
+        "note"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Edit an existing card or note",
+      "description": "Edit an existing card or note as documented for AnkiDroid.",
+      "actions": [
+        "While reviewing, tap the edit (pencil) icon; or open the Card Browser and tap the card",
+        "change the field contents",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "existing",
+        "card",
+        "note",
+        "while",
+        "reviewing"
+      ],
+      "nav_hints": [
+        "edit",
+        "existing",
+        "card",
+        "note"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Preview a card",
+      "description": "Preview a card as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "long-press or select the card",
+        "tap the Preview action",
+        "step through the question and answer sides with the navigation arrows"
+      ],
+      "keywords": [
+        "preview",
+        "card",
+        "browser",
+        "long-press"
+      ],
+      "nav_hints": [
+        "preview",
+        "card"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Browse and search cards",
+      "description": "Browse and search cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Card Browser\"",
+        "tap the search field",
+        "type an Anki search query (for example \"deck:Spanish tag:verb is:due\")",
+        "review the matching cards"
+      ],
+      "keywords": [
+        "browse",
+        "search",
+        "cards",
+        "navigation",
+        "drawer",
+        "card"
+      ],
+      "nav_hints": [
+        "card browser",
+        "deck:spanish tag:verb is:due",
+        "browse",
+        "search"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Filter the Card Browser by deck, note type, flag or tag",
+      "description": "Filter the Card Browser by deck, note type, flag or tag as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "tap the filter/sidebar icon",
+        "select a deck, note type, tag, flag or saved search from the sidebar",
+        "the list updates"
+      ],
+      "keywords": [
+        "filter",
+        "card",
+        "browser",
+        "deck",
+        "note",
+        "flag"
+      ],
+      "nav_hints": [
+        "filter",
+        "card",
+        "browser",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Save a search in the Card Browser",
+      "description": "Save a search in the Card Browser as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "type the search query",
+        "tap the overflow menu (three dots)",
+        "tap \"Save current search\"",
+        "enter a name",
+        "tap OK"
+      ],
+      "keywords": [
+        "save",
+        "search",
+        "card",
+        "browser",
+        "query"
+      ],
+      "nav_hints": [
+        "save current search",
+        "save",
+        "search",
+        "card"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Flag cards with colours",
+      "description": "Flag cards with colours as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser and select cards (or tap the flag icon during review)",
+        "tap the flag action",
+        "choose the flag colour (for example red, orange, green, blue, pink, turquoise, purple)",
+        "confirm"
+      ],
+      "keywords": [
+        "flag",
+        "cards",
+        "colours",
+        "card",
+        "browser",
+        "during"
+      ],
+      "nav_hints": [
+        "flag",
+        "cards",
+        "colours"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Suspend or unsuspend cards",
+      "description": "Suspend or unsuspend cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "long-press to select the cards",
+        "tap the overflow menu",
+        "tap \"Toggle Suspend\"; suspended cards are shown greyed out and are skipped during study"
+      ],
+      "keywords": [
+        "suspend",
+        "unsuspend",
+        "cards",
+        "card",
+        "browser",
+        "long-press"
+      ],
+      "nav_hints": [
+        "toggle suspend",
+        "suspend",
+        "unsuspend",
+        "cards"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Bury a card or note",
+      "description": "Bury a card or note as documented for AnkiDroid.",
+      "actions": [
+        "During review tap the overflow menu",
+        "tap \"Bury card\" or \"Bury note\"; the item is postponed to the next day"
+      ],
+      "keywords": [
+        "bury",
+        "card",
+        "note",
+        "during",
+        "review",
+        "overflow"
+      ],
+      "nav_hints": [
+        "bury card",
+        "bury note",
+        "bury",
+        "card"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Reposition new cards",
+      "description": "Reposition new cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the new cards",
+        "tap the overflow menu",
+        "tap \"Reposition\"",
+        "enter the start position and step",
+        "tap OK"
+      ],
+      "keywords": [
+        "reposition",
+        "new",
+        "cards",
+        "card",
+        "browser"
+      ],
+      "nav_hints": [
+        "reposition",
+        "new",
+        "cards"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Set a card's due date",
+      "description": "Set a card's due date as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the cards",
+        "tap the overflow menu",
+        "tap \"Set due date\"",
+        "enter the number of days or a range",
+        "choose whether to change the interval",
+        "tap OK"
+      ],
+      "keywords": [
+        "card's",
+        "due",
+        "date",
+        "card",
+        "browser",
+        "cards"
+      ],
+      "nav_hints": [
+        "set due date",
+        "card's",
+        "due",
+        "date"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Reset/forget cards",
+      "description": "Reset/forget cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the cards",
+        "tap the overflow menu",
+        "tap \"Reset\"/\"Forget\"",
+        "choose whether to restore the original position",
+        "confirm"
+      ],
+      "keywords": [
+        "reset",
+        "forget",
+        "cards",
+        "card",
+        "browser"
+      ],
+      "nav_hints": [
+        "reset",
+        "forget",
+        "cards"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Change the deck of selected cards",
+      "description": "Change the deck of selected cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the cards",
+        "tap the overflow menu",
+        "tap \"Change deck\"",
+        "choose the target deck",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "deck",
+        "selected",
+        "cards",
+        "card",
+        "browser"
+      ],
+      "nav_hints": [
+        "change deck",
+        "change",
+        "deck",
+        "selected"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Change the note type of selected notes",
+      "description": "Change the note type of selected notes as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the notes",
+        "tap the overflow menu",
+        "tap \"Change note type\"",
+        "map the old fields and templates to the new ones",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "note",
+        "selected",
+        "notes",
+        "card",
+        "browser"
+      ],
+      "nav_hints": [
+        "change note type",
+        "change",
+        "note",
+        "selected"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Delete cards or notes",
+      "description": "Delete cards or notes as documented for AnkiDroid.",
+      "actions": [
+        "Open the Card Browser",
+        "select the items",
+        "tap the delete (bin) icon",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "cards",
+        "notes",
+        "card",
+        "browser"
+      ],
+      "nav_hints": [
+        "delete",
+        "cards",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Undo the last action",
+      "description": "Undo the last action as documented for AnkiDroid.",
+      "actions": [
+        "Tap the undo arrow in the toolbar (available on the reviewer, the Card Browser and the deck list)",
+        "the previous action is reverted"
+      ],
+      "keywords": [
+        "undo",
+        "last",
+        "action",
+        "arrow",
+        "toolbar",
+        "available"
+      ],
+      "nav_hints": [
+        "undo",
+        "last",
+        "action"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Configure deck options (scheduling)",
+      "description": "Configure deck options (scheduling) as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the gear icon on the deck row",
+        "tap \"Options\"",
+        "set the new cards/day limit, the maximum reviews/day, the learning steps, the graduating and easy intervals, the lapse steps, the leech threshold and action, the burying options and the display order",
+        "tap Save"
+      ],
+      "keywords": [
+        "configure",
+        "deck",
+        "scheduling",
+        "gear",
+        "row"
+      ],
+      "nav_hints": [
+        "options",
+        "configure",
+        "deck",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Enable and configure FSRS scheduling",
+      "description": "Enable and configure FSRS scheduling as documented for AnkiDroid.",
+      "actions": [
+        "Open deck options",
+        "open the FSRS section",
+        "toggle FSRS on",
+        "set the desired retention",
+        "optionally tap \"Optimize\" to compute parameters from your review history",
+        "tap Save"
+      ],
+      "keywords": [
+        "enable",
+        "configure",
+        "fsrs",
+        "scheduling",
+        "deck",
+        "section"
+      ],
+      "nav_hints": [
+        "optimize",
+        "enable",
+        "configure",
+        "fsrs"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Create a filtered/custom study deck",
+      "description": "Create a filtered/custom study deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the deck",
+        "tap \"Custom Study\" (or use the \"+\" button",
+        "\"Create filtered deck\")",
+        "choose the option (for example increase today's new card limit, review forgotten cards, study by card state or tag)",
+        "set the search, limit and order",
+        "tap Build"
+      ],
+      "keywords": [
+        "create",
+        "filtered",
+        "custom",
+        "study",
+        "deck"
+      ],
+      "nav_hints": [
+        "custom study",
+        "create filtered deck",
+        "create",
+        "filtered"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Rebuild or empty a filtered deck",
+      "description": "Rebuild or empty a filtered deck as documented for AnkiDroid.",
+      "actions": [
+        "Open the filtered deck",
+        "tap \"Rebuild\" to refill it with matching cards, or tap \"Empty\" to return the cards to their home decks"
+      ],
+      "keywords": [
+        "rebuild",
+        "empty",
+        "filtered",
+        "deck",
+        "refill",
+        "matching"
+      ],
+      "nav_hints": [
+        "rebuild",
+        "empty",
+        "filtered",
+        "deck"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "View study statistics",
+      "description": "View study statistics as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Statistics\"",
+        "select the scope (deck or collection) and the period (for example 1 month, 1 year, all history)",
+        "scroll the graphs (Future Due, Calendar, Reviews, Card Counts, Card Ease/Difficulty, Hourly Breakdown, Answer Buttons, True Retention)"
+      ],
+      "keywords": [
+        "study",
+        "statistics",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "statistics",
+        "study"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Synchronise with AnkiWeb",
+      "description": "Synchronise with AnkiWeb as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the sync icon in the toolbar",
+        "enter the AnkiWeb email address and password on first use",
+        "tap Log in",
+        "the collection syncs; tap sync again later to sync manually"
+      ],
+      "keywords": [
+        "synchronise",
+        "ankiweb",
+        "navigation",
+        "drawer",
+        "sync",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "synchronise",
+        "ankiweb"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Synchronise media",
+      "description": "Synchronise media as documented for AnkiDroid.",
+      "actions": [
+        "Ensure the AnkiWeb account is configured",
+        "run a sync",
+        "media files are uploaded and downloaded as part of the sync; check progress in the sync notification"
+      ],
+      "keywords": [
+        "synchronise",
+        "media",
+        "ensure",
+        "ankiweb",
+        "account",
+        "configured"
+      ],
+      "nav_hints": [
+        "synchronise",
+        "media"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Enable automatic synchronisation",
+      "description": "Enable automatic synchronisation as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Sync\"",
+        "toggle \"Automatic synchronisation\" on",
+        "optionally restrict syncing to unmetered networks",
+        "return"
+      ],
+      "keywords": [
+        "enable",
+        "automatic",
+        "synchronisation",
+        "settings",
+        "sync"
+      ],
+      "nav_hints": [
+        "sync",
+        "automatic synchronisation",
+        "enable",
+        "automatic"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Download shared decks",
+      "description": "Download shared decks as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the \"+\" button",
+        "tap \"Get shared decks\"",
+        "browse or search the AnkiWeb shared deck site in the opened view",
+        "download the .apkg",
+        "confirm the import"
+      ],
+      "keywords": [
+        "download",
+        "shared",
+        "decks",
+        "deck"
+      ],
+      "nav_hints": [
+        "get shared decks",
+        "download",
+        "shared",
+        "decks"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Import an .apkg or .colpkg file",
+      "description": "Import an .apkg or .colpkg file as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Import\"/use the \"+\" button",
+        "select the .apkg or .colpkg file from the picker",
+        "review the import summary",
+        "tap Import"
+      ],
+      "keywords": [
+        "import",
+        "apkg",
+        "colpkg",
+        "file",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "import",
+        "apkg",
+        "colpkg",
+        "file"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Import notes from a CSV/text file",
+      "description": "Import notes from a CSV/text file as documented for AnkiDroid.",
+      "actions": [
+        "Open the import screen",
+        "select the .csv or .txt file",
+        "map the columns to the note-type fields",
+        "choose the target deck, the field separator and the duplicate handling",
+        "tap Import"
+      ],
+      "keywords": [
+        "import",
+        "notes",
+        "csv",
+        "text",
+        "file",
+        "txt"
+      ],
+      "nav_hints": [
+        "import",
+        "notes",
+        "csv",
+        "text"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Export a deck or the whole collection",
+      "description": "Export a deck or the whole collection as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the gear icon on a deck",
+        "tap \"Export\"; or open the drawer",
+        "Export collection",
+        "choose whether to include scheduling data and media",
+        "tap OK",
+        "pick the destination"
+      ],
+      "keywords": [
+        "export",
+        "deck",
+        "whole",
+        "collection",
+        "gear"
+      ],
+      "nav_hints": [
+        "export",
+        "deck",
+        "whole",
+        "collection"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Create and manage note types",
+      "description": "Create and manage note types as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Manage note types\"",
+        "tap \"+\" to add a note type (clone or standard)",
+        "tap an existing type to rename it, edit its fields or edit its card templates",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "manage",
+        "note",
+        "types",
+        "settings"
+      ],
+      "nav_hints": [
+        "manage note types",
+        "create",
+        "manage",
+        "note"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Edit card templates and styling",
+      "description": "Edit card templates and styling as documented for AnkiDroid.",
+      "actions": [
+        "Open \"Manage note types\"",
+        "tap the note type",
+        "tap \"Cards\"",
+        "edit the front template, the back template and the shared styling CSS",
+        "tap the preview to check the result",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "card",
+        "templates",
+        "styling",
+        "manage",
+        "note"
+      ],
+      "nav_hints": [
+        "manage note types",
+        "cards",
+        "edit",
+        "card"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Add or reorder note type fields",
+      "description": "Add or reorder note type fields as documented for AnkiDroid.",
+      "actions": [
+        "Open \"Manage note types\"",
+        "tap the note type",
+        "tap \"Fields\"",
+        "tap \"+\" to add a field, drag to reorder, or tap a field to rename it and set its font, size, sort order and RTL flag",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "reorder",
+        "note",
+        "fields",
+        "manage",
+        "types"
+      ],
+      "nav_hints": [
+        "manage note types",
+        "fields",
+        "add",
+        "reorder"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Use the whiteboard during review",
+      "description": "Use the whiteboard during review as documented for AnkiDroid.",
+      "actions": [
+        "Start reviewing",
+        "tap the overflow menu",
+        "tap \"Enable whiteboard\"",
+        "draw the answer with a finger or stylus",
+        "use the undo, eraser, colour and clear controls",
+        "tap the toggle again to hide it"
+      ],
+      "keywords": [
+        "whiteboard",
+        "during",
+        "review",
+        "start",
+        "reviewing",
+        "overflow"
+      ],
+      "nav_hints": [
+        "enable whiteboard",
+        "whiteboard",
+        "during",
+        "review"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Play card audio and use text to speech",
+      "description": "Play card audio and use text to speech as documented for AnkiDroid.",
+      "actions": [
+        "During review, tap the replay-audio control to hear the attached audio; to have fields read aloud, open deck options or Settings",
+        "enable the text-to-speech/read-aloud option and select the voice and speed"
+      ],
+      "keywords": [
+        "play",
+        "card",
+        "audio",
+        "text",
+        "speech",
+        "during"
+      ],
+      "nav_hints": [
+        "play",
+        "card",
+        "audio",
+        "text"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Configure review gestures and controls",
+      "description": "Configure review gestures and controls as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Controls\"/\"Gestures\"",
+        "enable gestures",
+        "assign an action (for example Show Answer, Answer Good, Undo, Bury, Edit) to each tap zone, swipe direction and hardware key",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "review",
+        "gestures",
+        "controls",
+        "settings"
+      ],
+      "nav_hints": [
+        "controls",
+        "gestures",
+        "configure",
+        "review"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Configure reviewer appearance",
+      "description": "Configure reviewer appearance as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Reviewing\"/\"Appearance\"",
+        "set the card font size and default font, the answer button placement, whether the timer and remaining counts are shown, and whether the screen stays on",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "reviewer",
+        "appearance",
+        "settings",
+        "reviewing"
+      ],
+      "nav_hints": [
+        "reviewing",
+        "appearance",
+        "configure",
+        "reviewer"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Enable full screen review mode",
+      "description": "Enable full screen review mode as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "Appearance/Reviewing",
+        "tap the \"Fullscreen mode\" entry",
+        "choose the level (for example hide the status bar, hide the status bar and navigation bar)",
+        "return"
+      ],
+      "keywords": [
+        "enable",
+        "full",
+        "review",
+        "mode",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "fullscreen mode",
+        "enable",
+        "full",
+        "review"
+      ]
+    },
+    {
+      "id": "GT047",
+      "name": "Switch the app theme (including night mode)",
+      "description": "Switch the app theme (including night mode) as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"",
+        "tap the theme entry",
+        "choose the day theme, the night theme, and whether to follow the system setting",
+        "return"
+      ],
+      "keywords": [
+        "switch",
+        "theme",
+        "including",
+        "night",
+        "mode",
+        "settings"
+      ],
+      "nav_hints": [
+        "appearance",
+        "switch",
+        "theme",
+        "including"
+      ]
+    },
+    {
+      "id": "GT048",
+      "name": "Set a deck study reminder notification",
+      "description": "Set a deck study reminder notification as documented for AnkiDroid.",
+      "actions": [
+        "Open the deck list",
+        "tap the gear icon on the deck",
+        "tap \"Set reminder\"/\"Custom study reminder\"",
+        "pick the time",
+        "confirm. General notification behaviour is set in Settings",
+        "Notifications"
+      ],
+      "keywords": [
+        "deck",
+        "study",
+        "reminder",
+        "notification",
+        "gear"
+      ],
+      "nav_hints": [
+        "set reminder",
+        "custom study reminder",
+        "deck",
+        "study"
+      ]
+    },
+    {
+      "id": "GT049",
+      "name": "Configure the minimum card count for notifications",
+      "description": "Configure the minimum card count for notifications as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Notifications\"",
+        "set the minimum number of due cards that triggers a notification and the vibration/blink options",
+        "return"
+      ],
+      "keywords": [
+        "configure",
+        "minimum",
+        "card",
+        "count",
+        "notifications",
+        "settings"
+      ],
+      "nav_hints": [
+        "notifications",
+        "configure",
+        "minimum",
+        "card"
+      ]
+    },
+    {
+      "id": "GT050",
+      "name": "Change the AnkiDroid collection folder",
+      "description": "Change the AnkiDroid collection folder as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Advanced\"",
+        "tap \"AnkiDroid directory\"",
+        "select the new storage path",
+        "confirm and restart the app when prompted"
+      ],
+      "keywords": [
+        "change",
+        "ankidroid",
+        "collection",
+        "folder",
+        "settings",
+        "advanced"
+      ],
+      "nav_hints": [
+        "advanced",
+        "ankidroid directory",
+        "change",
+        "ankidroid"
+      ]
+    },
+    {
+      "id": "GT051",
+      "name": "Create a backup of the collection",
+      "description": "Create a backup of the collection as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "Advanced/Backups",
+        "set the number of automatic backups to keep, or trigger a manual backup from the deck list overflow menu",
+        "confirm"
+      ],
+      "keywords": [
+        "create",
+        "backup",
+        "collection",
+        "settings",
+        "advanced",
+        "backups"
+      ],
+      "nav_hints": [
+        "create",
+        "backup",
+        "collection"
+      ]
+    },
+    {
+      "id": "GT052",
+      "name": "Restore the collection from a backup",
+      "description": "Restore the collection from a backup as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "Advanced",
+        "tap \"Backups\"/\"Restore from backup\"",
+        "select the backup file by date",
+        "confirm; the current collection is replaced"
+      ],
+      "keywords": [
+        "restore",
+        "collection",
+        "backup",
+        "settings",
+        "advanced"
+      ],
+      "nav_hints": [
+        "backups",
+        "restore from backup",
+        "restore",
+        "collection"
+      ]
+    },
+    {
+      "id": "GT053",
+      "name": "Check the database for errors",
+      "description": "Check the database for errors as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the overflow menu",
+        "tap \"Check database\"",
+        "wait for the check",
+        "review the reported result"
+      ],
+      "keywords": [
+        "check",
+        "database",
+        "errors",
+        "navigation",
+        "drawer",
+        "overflow"
+      ],
+      "nav_hints": [
+        "check database",
+        "check",
+        "database",
+        "errors"
+      ]
+    },
+    {
+      "id": "GT054",
+      "name": "Check for unused or missing media",
+      "description": "Check for unused or missing media as documented for AnkiDroid.",
+      "actions": [
+        "Open the drawer overflow menu",
+        "tap \"Check media\"",
+        "review the list of missing and unused files",
+        "tap the delete action to remove the unused files if wanted"
+      ],
+      "keywords": [
+        "check",
+        "unused",
+        "missing",
+        "media",
+        "drawer",
+        "overflow"
+      ],
+      "nav_hints": [
+        "check media",
+        "check",
+        "unused",
+        "missing"
+      ]
+    },
+    {
+      "id": "GT055",
+      "name": "Delete empty cards",
+      "description": "Delete empty cards as documented for AnkiDroid.",
+      "actions": [
+        "Open the drawer overflow menu",
+        "tap \"Empty cards\"",
+        "review the report",
+        "confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "empty",
+        "cards",
+        "drawer",
+        "overflow"
+      ],
+      "nav_hints": [
+        "empty cards",
+        "delete",
+        "empty",
+        "cards"
+      ]
+    },
+    {
+      "id": "GT056",
+      "name": "Add the AnkiDroid home screen widget",
+      "description": "Add the AnkiDroid home screen widget as documented for AnkiDroid.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find AnkiDroid",
+        "drag the deck-picker or card-count widget onto the home screen",
+        "select the decks to display if prompted"
+      ],
+      "keywords": [
+        "add",
+        "ankidroid",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "ankidroid",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT057",
+      "name": "Enable the AnkiDroid API for third-party apps",
+      "description": "Enable the AnkiDroid API for third-party apps as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"Advanced\"",
+        "enable the API/third-party app access option",
+        "grant the permission when another app requests it"
+      ],
+      "keywords": [
+        "enable",
+        "ankidroid",
+        "api",
+        "third-party",
+        "apps",
+        "settings"
+      ],
+      "nav_hints": [
+        "advanced",
+        "enable",
+        "ankidroid",
+        "api"
+      ]
+    },
+    {
+      "id": "GT058",
+      "name": "Change the interface language",
+      "description": "Change the interface language as documented for AnkiDroid.",
+      "actions": [
+        "Open Settings",
+        "tap \"General\"",
+        "tap \"Language\"",
+        "select the language",
+        "restart the app if prompted"
+      ],
+      "keywords": [
+        "change",
+        "interface",
+        "language",
+        "settings",
+        "general"
+      ],
+      "nav_hints": [
+        "general",
+        "language",
+        "change",
+        "interface"
+      ]
+    },
+    {
+      "id": "GT059",
+      "name": "View help, the manual and the about screen",
+      "description": "View help, the manual and the about screen as documented for AnkiDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Help\"/\"About\"",
+        "open the linked manual, the support page or the version and licence information"
+      ],
+      "keywords": [
+        "help",
+        "manual",
+        "about",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "help",
+        "about",
+        "manual"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

@@ -1,0 +1,295 @@
+{
+  "app": "Fossify Clock",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-26 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "View the current time",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "the Clock tab shows the current time and date for the device time zone"
+      ],
+      "keywords": [
+        "current",
+        "time",
+        "clock",
+        "tab"
+      ],
+      "nav_hints": [
+        "current",
+        "time",
+        "clock"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Add a time zone",
+      "description": "Open the Clock tab",
+      "actions": [
+        "Open the Clock tab",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "add",
+        "time",
+        "zone",
+        "clock"
+      ],
+      "nav_hints": [
+        "add",
+        "time",
+        "zone"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Remove",
+      "description": "Open the Clock tab",
+      "actions": [
+        "Open the Clock tab",
+        "tap the \"+\" button and untick a zone to remove it, or open Settings"
+      ],
+      "keywords": [
+        "remove",
+        "reorder",
+        "time",
+        "zones"
+      ],
+      "nav_hints": [
+        "manage time zones",
+        "remove",
+        "reorder"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Open the full-screen clock",
+      "description": "Open the Clock tab",
+      "actions": [
+        "Open the Clock tab",
+        "tap the clock face"
+      ],
+      "keywords": [
+        "full-screen",
+        "screensaver",
+        "clock",
+        "tab"
+      ],
+      "nav_hints": [
+        "full-screen",
+        "screensaver",
+        "clock"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Create an alarm",
+      "description": "Open the Alarm tab",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the \"+\" button"
+      ],
+      "keywords": [
+        "create",
+        "alarm",
+        "tab"
+      ],
+      "nav_hints": [
+        "create",
+        "alarm"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Enable",
+      "description": "Open the Alarm tab",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the toggle switch beside the alarm row"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "alarm",
+        "tab"
+      ],
+      "nav_hints": [
+        "enable",
+        "disable",
+        "alarm"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Edit an alarm",
+      "description": "Open the Alarm tab",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the alarm row"
+      ],
+      "keywords": [
+        "edit",
+        "alarm",
+        "tab",
+        "row"
+      ],
+      "nav_hints": [
+        "edit",
+        "alarm"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Delete an alarm",
+      "description": "Open the Alarm tab",
+      "actions": [
+        "Open the Alarm tab",
+        "long-press the alarm"
+      ],
+      "keywords": [
+        "delete",
+        "alarm",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "alarm"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Set the alarm sound",
+      "description": "Open an alarm for editing",
+      "actions": [
+        "Open an alarm for editing",
+        "tap the alarm sound entry and select a tone (or a file from storage)"
+      ],
+      "keywords": [
+        "alarm",
+        "sound",
+        "vibration",
+        "editing"
+      ],
+      "nav_hints": [
+        "alarm",
+        "sound",
+        "vibration"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Snooze",
+      "description": "When the alarm rings",
+      "actions": [
+        "When the alarm rings",
+        "tap Snooze to postpone it by the configured interval, or tap Dismiss to stop it"
+      ],
+      "keywords": [
+        "snooze",
+        "dismiss",
+        "ringing",
+        "alarm"
+      ],
+      "nav_hints": [
+        "snooze",
+        "dismiss",
+        "ringing"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Configure the snooze duration",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the snooze time entry and choose the delay"
+      ],
+      "keywords": [
+        "configure",
+        "snooze",
+        "duration",
+        "maximum"
+      ],
+      "nav_hints": [
+        "configure",
+        "snooze",
+        "duration"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Make the alarm volume",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "enable the \"Increase volume gradually\" option"
+      ],
+      "keywords": [
+        "make",
+        "alarm",
+        "volume",
+        "increase"
+      ],
+      "nav_hints": [
+        "increase volume gradually",
+        "make",
+        "alarm"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Use the stopwatch",
+      "description": "Open the Stopwatch tab",
+      "actions": [
+        "Open the Stopwatch tab",
+        "tap Start"
+      ],
+      "keywords": [
+        "stopwatch",
+        "tab",
+        "start"
+      ],
+      "nav_hints": [
+        "stopwatch"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Sort the recorded stopwatch",
+      "description": "Open the Stopwatch tab with laps recorded",
+      "actions": [
+        "Open the Stopwatch tab with laps recorded",
+        "tap the sort/overflow control"
+      ],
+      "keywords": [
+        "sort",
+        "recorded",
+        "stopwatch",
+        "laps"
+      ],
+      "nav_hints": [
+        "sort",
+        "recorded",
+        "stopwatch"
+      ],
+      "source": "guide"
+    }
+  ]
+}

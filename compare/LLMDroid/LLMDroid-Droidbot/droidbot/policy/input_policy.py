@@ -60,7 +60,11 @@ class InputPolicy(object):
         :param input_manager: instance of InputManager
         """
         self.action_count = 0
+        budget = getattr(input_manager, "budget", None)
         while input_manager.enabled and self.action_count < input_manager.event_count:
+            if budget is not None and budget.expired():
+                self.logger.info("stop sending events: %s" % budget.reason())
+                break
             try:
                 # # make sure the first event is go to HOME screen
                 # # the second event is to start the app

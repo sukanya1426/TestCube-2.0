@@ -32,6 +32,8 @@ class AndroLogCVMonitor(CodeCoverageMonitor):
         self.__log_tag = tag
         self.summary = {}
         self.visited_components = set()
+        self._logcat_proc = None
+        self._stop = threading.Event()
 
 
         self.logger.info(f"[CodeCoverageMonitor] total methods: {total}, TAG: {tag}")
@@ -70,14 +72,22 @@ class AndroLogCVMonitor(CodeCoverageMonitor):
 
     def start_logcat_listener(self):
         def listener():
-            while True:
+            while not self._stop.is_set():
                 try:
                     subprocess.run(["adb", "logcat", "-c"], check=True)
                     self.logger.info("[CodeCoverageMonitor] clear adb log cache")
                     cmd = ["adb", "logcat", "-s", self.__log_tag]
-                    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, text=True)
+                    # stderr to DEVNULL, not inherited: this process outlives the
+                    # interpreter that spawned it, and an inherited stderr keeps the
+                    # parent's output pipe open, so whoever launched droidbot blocks
+                    # forever waiting for an EOF that never arrives.
+                    process = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                               stderr=subprocess.DEVNULL, text=True)
+                    self._logcat_proc = process
                     for line in process.stdout:
                         self.__analyze_line(line)
+                    if self._stop.is_set():
+                        return
                     self.logger.warning(
                         "[CodeCoverageMonitor] ******************** !! thread stop !! *************************")
                     self.logger.warning(
@@ -88,6 +98,16 @@ class AndroLogCVMonitor(CodeCoverageMonitor):
         thread = threading.Thread(target=listener)
         thread.setDaemon(True)
         thread.start()
+
+    def stop_logcat_listener(self):
+        """Kill the adb child so it is not left running against the device."""
+        self._stop.set()
+        process = self._logcat_proc
+        if process is not None and process.poll() is None:
+            try:
+                process.terminate()
+            except Exception:
+                pass
 
     def _get_code_coverage(self) -> float:
         """

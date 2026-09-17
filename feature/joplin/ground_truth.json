@@ -1,0 +1,1099 @@
+{
+  "app": "Joplin",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Joplin documentation (joplinapp.org) and in-app menus",
+  "description": "Hand-verified capability inventory for Joplin (net.cozic.joplin), version 3.6.21.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a notebook",
+      "description": "Create a notebook as documented for Joplin.",
+      "actions": [
+        "Open the sidebar (hamburger icon)",
+        "tap \"New notebook\" / the \"+\" beside Notebooks",
+        "enter the notebook title",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "notebook",
+        "sidebar",
+        "hamburger",
+        "new",
+        "beside"
+      ],
+      "nav_hints": [
+        "new notebook",
+        "create",
+        "notebook"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a nested sub-notebook",
+      "description": "Create a nested sub-notebook as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "long-press the parent notebook",
+        "tap \"Edit\"/move option and set the parent, or create a new notebook and then long-press it",
+        "tap \"Move\"",
+        "select the parent notebook",
+        "confirm"
+      ],
+      "keywords": [
+        "create",
+        "nested",
+        "sub-notebook",
+        "sidebar",
+        "long-press",
+        "parent"
+      ],
+      "nav_hints": [
+        "edit",
+        "move",
+        "create",
+        "nested"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Rename or delete a notebook",
+      "description": "Rename or delete a notebook as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "long-press the notebook",
+        "tap \"Edit\" to rename it and tap Save, or tap \"Delete\" and confirm"
+      ],
+      "keywords": [
+        "rename",
+        "delete",
+        "notebook",
+        "sidebar",
+        "long-press"
+      ],
+      "nav_hints": [
+        "edit",
+        "delete",
+        "rename",
+        "notebook"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Create a note",
+      "description": "Create a note as documented for Joplin.",
+      "actions": [
+        "Open the target notebook",
+        "tap the \"+\" floating action button",
+        "tap \"New note\"",
+        "enter the title",
+        "type the body",
+        "tap the back arrow or the tick to save"
+      ],
+      "keywords": [
+        "create",
+        "note",
+        "target",
+        "notebook",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "new note",
+        "create",
+        "note"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Create a to-do",
+      "description": "Create a to-do as documented for Joplin.",
+      "actions": [
+        "Open a notebook",
+        "tap the \"+\" button",
+        "tap \"New to-do\"",
+        "enter the title and body",
+        "tap back to save; the item appears with a checkbox in the note list"
+      ],
+      "keywords": [
+        "create",
+        "to-do",
+        "notebook"
+      ],
+      "nav_hints": [
+        "new to-do",
+        "create",
+        "to-do"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Mark a to-do as completed",
+      "description": "Mark a to-do as completed as documented for Joplin.",
+      "actions": [
+        "Open the note list",
+        "tap the checkbox beside the to-do; completed to-dos are struck through and can be hidden through the sort/filter options"
+      ],
+      "keywords": [
+        "mark",
+        "to-do",
+        "completed",
+        "note",
+        "checkbox",
+        "beside"
+      ],
+      "nav_hints": [
+        "mark",
+        "to-do",
+        "completed"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Convert a note to a to-do and back",
+      "description": "Convert a note to a to-do and back as documented for Joplin.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu (three dots)",
+        "tap \"Convert to to-do\" (or \"Convert to note\")",
+        "confirm"
+      ],
+      "keywords": [
+        "convert",
+        "note",
+        "to-do",
+        "back",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "convert to to-do",
+        "convert to note",
+        "convert",
+        "note"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Set an alarm on a to-do",
+      "description": "Set an alarm on a to-do as documented for Joplin.",
+      "actions": [
+        "Open a to-do",
+        "tap the overflow menu",
+        "tap \"Set alarm\"",
+        "pick the date and time",
+        "tap Save; a notification fires at that time"
+      ],
+      "keywords": [
+        "alarm",
+        "to-do",
+        "overflow"
+      ],
+      "nav_hints": [
+        "set alarm",
+        "alarm",
+        "to-do"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Write in Markdown with live syntax highlighting",
+      "description": "Write in Markdown with live syntax highlighting as documented for Joplin.",
+      "actions": [
+        "Open a note in the Markdown editor",
+        "type Markdown syntax (headings, lists, links, code fences, tables)",
+        "the editor highlights the syntax as you type"
+      ],
+      "keywords": [
+        "write",
+        "markdown",
+        "live",
+        "syntax",
+        "highlighting",
+        "note"
+      ],
+      "nav_hints": [
+        "write",
+        "markdown",
+        "live",
+        "syntax"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Use the Markdown formatting toolbar",
+      "description": "Use the Markdown formatting toolbar as documented for Joplin.",
+      "actions": [
+        "Open a note in the editor",
+        "use the toolbar above the keyboard to insert bold, italic, headings, lists, checkboxes, links, code and horizontal rules at the cursor"
+      ],
+      "keywords": [
+        "markdown",
+        "formatting",
+        "toolbar",
+        "note",
+        "editor",
+        "above"
+      ],
+      "nav_hints": [
+        "markdown",
+        "formatting",
+        "toolbar"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Switch between the Markdown editor and the rich text (WYSIWYG) editor",
+      "description": "Switch between the Markdown editor and the rich text (WYSIWYG) editor as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the editor toggle icon in the toolbar (or set the default in Settings",
+        "Note)",
+        "the note reopens in the other editing mode"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "markdown",
+        "editor",
+        "rich",
+        "text"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "markdown",
+        "editor"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Switch between edit mode and the rendered viewer",
+      "description": "Switch between edit mode and the rendered viewer as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the eye/edit toggle in the toolbar",
+        "the rendered Markdown is displayed",
+        "tap the pencil to go back to editing"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "edit",
+        "mode",
+        "rendered",
+        "viewer"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "edit",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Attach a photo taken with the camera",
+      "description": "Attach a photo taken with the camera as documented for Joplin.",
+      "actions": [
+        "Open a note in edit mode",
+        "tap the attach (paper clip) icon",
+        "tap \"Take photo\"",
+        "grant the camera permission",
+        "capture the image",
+        "confirm; the image is embedded as a resource"
+      ],
+      "keywords": [
+        "attach",
+        "photo",
+        "taken",
+        "camera",
+        "note",
+        "edit"
+      ],
+      "nav_hints": [
+        "take photo",
+        "attach",
+        "photo",
+        "taken"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Attach an image or file from the device",
+      "description": "Attach an image or file from the device as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the attach icon",
+        "tap \"Attach file\"/\"Attach photo\"",
+        "select the item from the picker",
+        "confirm"
+      ],
+      "keywords": [
+        "attach",
+        "image",
+        "file",
+        "device",
+        "note"
+      ],
+      "nav_hints": [
+        "attach file",
+        "attach photo",
+        "attach",
+        "image"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Record and attach audio",
+      "description": "Record and attach audio as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the attach icon",
+        "choose the audio recorder option",
+        "grant the microphone permission",
+        "record",
+        "stop",
+        "the audio resource is embedded"
+      ],
+      "keywords": [
+        "record",
+        "attach",
+        "audio",
+        "note"
+      ],
+      "nav_hints": [
+        "record",
+        "attach",
+        "audio"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Use voice typing to dictate note text",
+      "description": "Use voice typing to dictate note text as documented for Joplin.",
+      "actions": [
+        "Open a note in edit mode",
+        "tap the voice typing (microphone) icon in the toolbar",
+        "download the language model if prompted",
+        "speak",
+        "tap stop; the transcription is inserted at the cursor"
+      ],
+      "keywords": [
+        "voice",
+        "typing",
+        "dictate",
+        "note",
+        "text",
+        "edit"
+      ],
+      "nav_hints": [
+        "voice",
+        "typing",
+        "dictate",
+        "note"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Attach the current geolocation to a note",
+      "description": "Attach the current geolocation to a note as documented for Joplin.",
+      "actions": [
+        "Enable the geolocation option in Settings",
+        "Note",
+        "create or open a note",
+        "tap the overflow menu",
+        "tap \"Attach geolocation\"/\"Show note location\" as available",
+        "grant the location permission"
+      ],
+      "keywords": [
+        "attach",
+        "current",
+        "geolocation",
+        "note",
+        "enable",
+        "settings"
+      ],
+      "nav_hints": [
+        "attach geolocation",
+        "show note location",
+        "attach",
+        "current"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Add tags to a note",
+      "description": "Add tags to a note as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Tags\"",
+        "type a new tag or select existing tags",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "tags",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "tags",
+        "add",
+        "note"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Browse notes by tag",
+      "description": "Browse notes by tag as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Tags\"",
+        "tap the tag name",
+        "the note list shows all notes carrying that tag"
+      ],
+      "keywords": [
+        "browse",
+        "notes",
+        "tag",
+        "sidebar",
+        "tags"
+      ],
+      "nav_hints": [
+        "tags",
+        "browse",
+        "notes",
+        "tag"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Search notes",
+      "description": "Search notes as documented for Joplin.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the query (supports Joplin search syntax such as tag:, notebook:, title: and created:)",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "notes",
+        "toolbar",
+        "query",
+        "supports",
+        "joplin"
+      ],
+      "nav_hints": [
+        "search",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Sort the note list",
+      "description": "Sort the note list as documented for Joplin.",
+      "actions": [
+        "Open a notebook",
+        "tap the overflow menu (three dots)",
+        "tap the sort option",
+        "choose the field (updated date, created date, title or custom order) and the direction"
+      ],
+      "keywords": [
+        "sort",
+        "note",
+        "notebook",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort",
+        "note"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Reorder notes manually",
+      "description": "Reorder notes manually as documented for Joplin.",
+      "actions": [
+        "Set the sort order to custom",
+        "long-press a note in the list",
+        "drag it to the required position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "notes",
+        "manually",
+        "sort",
+        "order",
+        "custom"
+      ],
+      "nav_hints": [
+        "reorder",
+        "notes",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Move a note to another notebook",
+      "description": "Move a note to another notebook as documented for Joplin.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Move\" / the notebook selector",
+        "choose the destination notebook",
+        "confirm"
+      ],
+      "keywords": [
+        "move",
+        "note",
+        "another",
+        "notebook",
+        "overflow"
+      ],
+      "nav_hints": [
+        "move",
+        "note",
+        "another",
+        "notebook"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Duplicate a note",
+      "description": "Duplicate a note as documented for Joplin.",
+      "actions": [
+        "Open the note list",
+        "long-press the note",
+        "tap \"Duplicate\" from the contextual menu"
+      ],
+      "keywords": [
+        "duplicate",
+        "note",
+        "long-press"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "note"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Delete a note",
+      "description": "Delete a note as documented for Joplin.",
+      "actions": [
+        "Open the note (or long-press it in the list)",
+        "tap the delete/bin action",
+        "confirm; the note moves to the trash"
+      ],
+      "keywords": [
+        "delete",
+        "note",
+        "long-press",
+        "bin",
+        "action"
+      ],
+      "nav_hints": [
+        "delete",
+        "note"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Restore notes from the trash",
+      "description": "Restore notes from the trash as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Trash\"",
+        "long-press the deleted note",
+        "tap Restore, or tap the permanent delete action to purge it"
+      ],
+      "keywords": [
+        "restore",
+        "notes",
+        "trash",
+        "sidebar"
+      ],
+      "nav_hints": [
+        "trash",
+        "restore",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Configure synchronisation with a remote target",
+      "description": "Configure synchronisation with a remote target as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Configuration\"/Settings",
+        "tap \"Synchronisation\"",
+        "choose the sync target (Joplin Cloud, Joplin Server, Dropbox, OneDrive, Nextcloud/WebDAV, AWS S3 or the local file system)",
+        "enter the credentials or complete the OAuth login",
+        "tap \"Check synchronisation configuration\"",
+        "save"
+      ],
+      "keywords": [
+        "configure",
+        "synchronisation",
+        "remote",
+        "target",
+        "sidebar",
+        "configuration"
+      ],
+      "nav_hints": [
+        "configuration",
+        "synchronisation",
+        "configure",
+        "remote"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Run a synchronisation manually",
+      "description": "Run a synchronisation manually as documented for Joplin.",
+      "actions": [
+        "Open the sidebar",
+        "tap \"Synchronise\"",
+        "the sync progress is shown in the sidebar",
+        "wait for completion"
+      ],
+      "keywords": [
+        "run",
+        "synchronisation",
+        "manually",
+        "sidebar",
+        "synchronise"
+      ],
+      "nav_hints": [
+        "synchronise",
+        "run",
+        "synchronisation",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Set the automatic synchronisation interval",
+      "description": "Set the automatic synchronisation interval as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "Synchronisation",
+        "tap the \"Synchronisation interval\" entry",
+        "select the interval (or disable it)",
+        "also set whether syncing over mobile data is allowed"
+      ],
+      "keywords": [
+        "automatic",
+        "synchronisation",
+        "interval",
+        "configuration"
+      ],
+      "nav_hints": [
+        "synchronisation interval",
+        "automatic",
+        "synchronisation",
+        "interval"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Enable end-to-end encryption",
+      "description": "Enable end-to-end encryption as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Encryption\"",
+        "toggle end-to-end encryption on",
+        "set the master password",
+        "confirm; run a sync so the encrypted data is uploaded"
+      ],
+      "keywords": [
+        "enable",
+        "end-to-end",
+        "encryption",
+        "configuration"
+      ],
+      "nav_hints": [
+        "encryption",
+        "enable",
+        "end-to-end"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Enter a master key password to decrypt synced notes",
+      "description": "Enter a master key password to decrypt synced notes as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "Encryption",
+        "find the listed master key",
+        "tap it",
+        "enter the password",
+        "tap Save; decryption starts automatically"
+      ],
+      "keywords": [
+        "master",
+        "key",
+        "password",
+        "decrypt",
+        "synced",
+        "notes"
+      ],
+      "nav_hints": [
+        "master",
+        "key",
+        "password",
+        "decrypt"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Publish/share a note (Joplin Cloud account required)",
+      "description": "Publish/share a note (Joplin Cloud account required) as documented for Joplin.",
+      "actions": [
+        "Log in to Joplin Cloud in the synchronisation settings",
+        "open the note",
+        "tap the overflow menu",
+        "tap the share/publish option",
+        "confirm",
+        "copy the generated public link"
+      ],
+      "keywords": [
+        "publish",
+        "share",
+        "note",
+        "joplin",
+        "cloud",
+        "account"
+      ],
+      "nav_hints": [
+        "publish",
+        "share",
+        "note",
+        "joplin"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Lock the app with a PIN or biometrics",
+      "description": "Lock the app with a PIN or biometrics as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Application\"/security section",
+        "enable the app lock",
+        "set the PIN",
+        "optionally enable fingerprint/biometric unlock",
+        "confirm"
+      ],
+      "keywords": [
+        "lock",
+        "pin",
+        "biometrics",
+        "configuration",
+        "application",
+        "security"
+      ],
+      "nav_hints": [
+        "application",
+        "lock",
+        "pin",
+        "biometrics"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Change the application theme",
+      "description": "Change the application theme as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Appearance\"",
+        "select the theme (light, dark, dracula, solarized, Nord, aritim dark and so on)",
+        "optionally enable the automatic light/dark switch"
+      ],
+      "keywords": [
+        "change",
+        "application",
+        "theme",
+        "configuration",
+        "appearance"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "application",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Change the editor and viewer font size",
+      "description": "Change the editor and viewer font size as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "Appearance",
+        "set the editor font size and the note viewer font size",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "editor",
+        "viewer",
+        "font",
+        "size",
+        "configuration"
+      ],
+      "nav_hints": [
+        "change",
+        "editor",
+        "viewer",
+        "font"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Enable Markdown rendering plugins",
+      "description": "Enable Markdown rendering plugins as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Markdown\"/\"Note\"",
+        "toggle the individual renderer plugins (for example KaTeX maths, Mermaid diagrams, footnotes, tables, task lists, abbreviations, sub/superscript, mark and typographer)"
+      ],
+      "keywords": [
+        "enable",
+        "markdown",
+        "rendering",
+        "plugins",
+        "configuration",
+        "note"
+      ],
+      "nav_hints": [
+        "markdown",
+        "note",
+        "enable",
+        "rendering"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Install and manage Joplin plugins",
+      "description": "Install and manage Joplin plugins as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Plugins\"",
+        "browse or search the plugin repository",
+        "tap Install on a plugin",
+        "restart the app if prompted",
+        "use the toggle to enable or disable an installed plugin"
+      ],
+      "keywords": [
+        "install",
+        "manage",
+        "joplin",
+        "plugins",
+        "configuration"
+      ],
+      "nav_hints": [
+        "plugins",
+        "install",
+        "manage",
+        "joplin"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Configure note behaviour defaults",
+      "description": "Configure note behaviour defaults as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Note\"",
+        "set options such as the default editor, sort order, whether completed to-dos are shown, whether note counts are displayed and whether new notes get the geolocation"
+      ],
+      "keywords": [
+        "configure",
+        "note",
+        "behaviour",
+        "defaults",
+        "configuration"
+      ],
+      "nav_hints": [
+        "note",
+        "configure",
+        "behaviour",
+        "defaults"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Export a JEX/RAW backup or share note data",
+      "description": "Export a JEX/RAW backup or share note data as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Tools\"/Export",
+        "choose the export format (for example JEX archive)",
+        "pick the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "jex",
+        "raw",
+        "backup",
+        "share",
+        "note"
+      ],
+      "nav_hints": [
+        "tools",
+        "export",
+        "jex",
+        "raw"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Import notes from a file",
+      "description": "Import notes from a file as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "Tools",
+        "tap the import option",
+        "select the JEX or Markdown file",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "notes",
+        "file",
+        "configuration",
+        "tools"
+      ],
+      "nav_hints": [
+        "import",
+        "notes",
+        "file"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Send a note to another app",
+      "description": "Send a note to another app as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Share\"/\"Export\"",
+        "choose the target app in the Android share sheet"
+      ],
+      "keywords": [
+        "send",
+        "note",
+        "another",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "export",
+        "send",
+        "note"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Create a note from another app via the share sheet",
+      "description": "Create a note from another app via the share sheet as documented for Joplin.",
+      "actions": [
+        "In any app, tap Share on the text, link or image",
+        "choose Joplin",
+        "select the destination notebook if prompted",
+        "confirm; a new note is created"
+      ],
+      "keywords": [
+        "create",
+        "note",
+        "another",
+        "via",
+        "share",
+        "sheet"
+      ],
+      "nav_hints": [
+        "create",
+        "note",
+        "another",
+        "via"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "View note properties",
+      "description": "View note properties as documented for Joplin.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Properties\"/\"Note info\"",
+        "read the created and updated times, the source URL, the location and the internal ID"
+      ],
+      "keywords": [
+        "note",
+        "properties",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "note info",
+        "note"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "View the synchronisation status and log",
+      "description": "View the synchronisation status and log as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"Synchronisation status\" to see counts of items and encryption state, or open Tools",
+        "\"Log\" to read the diagnostic log"
+      ],
+      "keywords": [
+        "synchronisation",
+        "status",
+        "log",
+        "configuration",
+        "see",
+        "counts"
+      ],
+      "nav_hints": [
+        "synchronisation status",
+        "log",
+        "synchronisation",
+        "status"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Check for application updates",
+      "description": "Check for application updates as documented for Joplin.",
+      "actions": [
+        "Open Configuration",
+        "tap \"About\"/\"Check for updates\"",
+        "follow the prompt if a newer version is available (available on non-store builds)"
+      ],
+      "keywords": [
+        "check",
+        "application",
+        "updates",
+        "configuration",
+        "about"
+      ],
+      "nav_hints": [
+        "about",
+        "check for updates",
+        "check",
+        "application"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

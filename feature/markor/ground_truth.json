@@ -1,0 +1,1138 @@
+{
+  "app": "Markor",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Markor repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Markor (net.gsantner.markor), version 2.16.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the notebook folder",
+      "description": "Browse the notebook folder as documented for Markor.",
+      "actions": [
+        "Open the app",
+        "the Files tab opens at the configured notebook root",
+        "tap a folder to enter it",
+        "tap the up arrow or the breadcrumb path to move back up"
+      ],
+      "keywords": [
+        "browse",
+        "notebook",
+        "folder",
+        "files",
+        "tab",
+        "opens"
+      ],
+      "nav_hints": [
+        "browse",
+        "notebook",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a new plain text or Markdown document",
+      "description": "Create a new plain text or Markdown document as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the \"+\" floating action button",
+        "tap \"File\"",
+        "enter the file name",
+        "choose the file type/extension (for example .md, .txt)",
+        "optionally pick a template",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "plain",
+        "text",
+        "markdown",
+        "document"
+      ],
+      "nav_hints": [
+        "file",
+        "create",
+        "new",
+        "plain"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Create a document from a template",
+      "description": "Create a document from a template as documented for Markor.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap File",
+        "tap the template selector",
+        "choose a template (for example empty file, Markdown reference, to-do list, Zim page or a user template)",
+        "enter the name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "document",
+        "template",
+        "file"
+      ],
+      "nav_hints": [
+        "create",
+        "document",
+        "template"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Create a folder",
+      "description": "Create a folder as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the \"+\" button",
+        "tap \"Folder\"",
+        "enter the folder name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "folder",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folder",
+        "create"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Edit a document in the text editor",
+      "description": "Edit a document in the text editor as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap a file",
+        "the editor opens",
+        "type the content",
+        "tap the back arrow or the save icon; changes are stored to the file"
+      ],
+      "keywords": [
+        "edit",
+        "document",
+        "text",
+        "editor",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "edit",
+        "document",
+        "text",
+        "editor"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Switch between edit mode and rendered preview",
+      "description": "Switch between edit mode and rendered preview as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the preview/eye icon in the toolbar",
+        "the rendered view is shown",
+        "tap the icon again (or the edit pencil) to return to editing"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "edit",
+        "mode",
+        "rendered",
+        "preview"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "edit",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Apply Markdown formatting with the action toolbar",
+      "description": "Apply Markdown formatting with the action toolbar as documented for Markor.",
+      "actions": [
+        "Open a Markdown document",
+        "place the cursor or select text",
+        "tap an icon on the format action bar below the editor (bold, italic, strikethrough, heading level, code, quote, horizontal rule)",
+        "the syntax is inserted around the selection"
+      ],
+      "keywords": [
+        "apply",
+        "markdown",
+        "formatting",
+        "action",
+        "toolbar",
+        "document"
+      ],
+      "nav_hints": [
+        "apply",
+        "markdown",
+        "formatting",
+        "action"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Insert bullet, numbered and checkbox lists",
+      "description": "Insert bullet, numbered and checkbox lists as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "position the cursor on the line",
+        "tap the list, numbered list or checkbox action in the action bar",
+        "continue typing; pressing Enter continues the list automatically"
+      ],
+      "keywords": [
+        "insert",
+        "bullet",
+        "numbered",
+        "checkbox",
+        "lists",
+        "document"
+      ],
+      "nav_hints": [
+        "insert",
+        "bullet",
+        "numbered",
+        "checkbox"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Insert a link",
+      "description": "Insert a link as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "select the text to link (optional)",
+        "tap the link action in the action bar",
+        "enter or pick the target path or URL",
+        "confirm; the Markdown link syntax is inserted"
+      ],
+      "keywords": [
+        "insert",
+        "link",
+        "document",
+        "text",
+        "optional"
+      ],
+      "nav_hints": [
+        "insert",
+        "link"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Insert an image from the gallery or camera",
+      "description": "Insert an image from the gallery or camera as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the image/attachment action in the action bar",
+        "choose \"Take a picture\", \"Pick from gallery\" or \"Select a file\"",
+        "grant the permission if prompted",
+        "the image is copied into the attachment folder and the Markdown image reference is inserted"
+      ],
+      "keywords": [
+        "insert",
+        "image",
+        "gallery",
+        "camera",
+        "document",
+        "attachment"
+      ],
+      "nav_hints": [
+        "take a picture",
+        "pick from gallery",
+        "select a file",
+        "insert"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Record and insert an audio note",
+      "description": "Record and insert an audio note as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the attachment action",
+        "choose the audio recording option",
+        "grant the microphone permission",
+        "tap record",
+        "tap stop",
+        "the recording is saved and linked in the document"
+      ],
+      "keywords": [
+        "record",
+        "insert",
+        "audio",
+        "note",
+        "document",
+        "attachment"
+      ],
+      "nav_hints": [
+        "record",
+        "insert",
+        "audio",
+        "note"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Insert the current date or time",
+      "description": "Insert the current date or time as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the date/time action in the action bar",
+        "select the required format from the list (or long-press to configure the default format)",
+        "the timestamp is inserted at the cursor"
+      ],
+      "keywords": [
+        "insert",
+        "current",
+        "date",
+        "time",
+        "document",
+        "action"
+      ],
+      "nav_hints": [
+        "insert",
+        "current",
+        "date",
+        "time"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Insert a table",
+      "description": "Insert a table as documented for Markor.",
+      "actions": [
+        "Open a Markdown document",
+        "tap the table action in the action bar",
+        "choose the number of columns",
+        "the table skeleton is inserted",
+        "fill in the cells"
+      ],
+      "keywords": [
+        "insert",
+        "table",
+        "markdown",
+        "document",
+        "action",
+        "bar"
+      ],
+      "nav_hints": [
+        "insert",
+        "table"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Undo and redo edits",
+      "description": "Undo and redo edits as documented for Markor.",
+      "actions": [
+        "While editing",
+        "tap the undo arrow in the toolbar to revert the last change",
+        "tap the redo arrow to reapply it"
+      ],
+      "keywords": [
+        "undo",
+        "redo",
+        "edits",
+        "while",
+        "editing",
+        "arrow"
+      ],
+      "nav_hints": [
+        "undo",
+        "redo",
+        "edits"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Search inside the open document",
+      "description": "Search inside the open document as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the search icon in the editor toolbar",
+        "type the search term",
+        "step through the highlighted matches"
+      ],
+      "keywords": [
+        "search",
+        "inside",
+        "document",
+        "editor",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "inside",
+        "document"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Search across all files in the notebook",
+      "description": "Search across all files in the notebook as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the search icon in the toolbar",
+        "type the query",
+        "choose whether to search file names only or file contents",
+        "review the matching files",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "across",
+        "all",
+        "files",
+        "notebook",
+        "tab"
+      ],
+      "nav_hints": [
+        "search",
+        "across",
+        "all",
+        "files"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Open the QuickNote file",
+      "description": "Open the QuickNote file as documented for Markor.",
+      "actions": [
+        "Tap the QuickNote tab in the bottom navigation bar (or open it from the drawer)",
+        "the dedicated QuickNote document opens directly in the editor"
+      ],
+      "keywords": [
+        "quicknote",
+        "file",
+        "tab",
+        "bottom",
+        "navigation",
+        "bar"
+      ],
+      "nav_hints": [
+        "quicknote",
+        "file"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Open the To-Do file",
+      "description": "Open the To-Do file as documented for Markor.",
+      "actions": [
+        "Tap the To-Do tab in the bottom navigation bar",
+        "the dedicated to-do document opens in the editor"
+      ],
+      "keywords": [
+        "to-do",
+        "file",
+        "tab",
+        "bottom",
+        "navigation",
+        "bar"
+      ],
+      "nav_hints": [
+        "to-do",
+        "file"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Manage a todo.txt file",
+      "description": "Manage a todo.txt file as documented for Markor.",
+      "actions": [
+        "Open or create a .txt file in todo.txt format",
+        "the todo.txt action bar appears",
+        "use the actions to add a priority, a project (+), a context (@), a due date or to mark a line done",
+        "tap the sort action to reorder by priority, due date, project or context"
+      ],
+      "keywords": [
+        "manage",
+        "todo",
+        "txt",
+        "file",
+        "create",
+        "format"
+      ],
+      "nav_hints": [
+        "manage",
+        "todo",
+        "txt",
+        "file"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Edit a Zim Wiki page",
+      "description": "Edit a Zim Wiki page as documented for Markor.",
+      "actions": [
+        "Open a file with the Zim Wiki extension/format",
+        "the Zim-specific action bar appears",
+        "use the heading, bold, italic, checkbox and link actions",
+        "tap the preview icon to see the rendered page"
+      ],
+      "keywords": [
+        "edit",
+        "zim",
+        "wiki",
+        "page",
+        "file",
+        "extension"
+      ],
+      "nav_hints": [
+        "edit",
+        "zim",
+        "wiki",
+        "page"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Edit AsciiDoc, Org-Mode, CSV and plain text files",
+      "description": "Edit AsciiDoc, Org-Mode, CSV and plain text files as documented for Markor.",
+      "actions": [
+        "Open a file with the corresponding extension",
+        "Markor selects the matching syntax highlighting and action bar",
+        "edit the content",
+        "use the preview toggle where a renderer is available"
+      ],
+      "keywords": [
+        "edit",
+        "asciidoc",
+        "org-mode",
+        "csv",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "edit",
+        "asciidoc",
+        "org-mode",
+        "csv"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Preview a CSV file as a table",
+      "description": "Preview a CSV file as a table as documented for Markor.",
+      "actions": [
+        "Open a .csv file",
+        "tap the preview/eye icon",
+        "the delimited data is rendered as a table"
+      ],
+      "keywords": [
+        "preview",
+        "csv",
+        "file",
+        "table",
+        "eye"
+      ],
+      "nav_hints": [
+        "preview",
+        "csv",
+        "file",
+        "table"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Create a Markdown presentation",
+      "description": "Create a Markdown presentation as documented for Markor.",
+      "actions": [
+        "Create or open a Markdown file containing the presentation front-matter/slide separators",
+        "tap the preview icon",
+        "the slides are rendered",
+        "swipe or tap to advance between slides"
+      ],
+      "keywords": [
+        "create",
+        "markdown",
+        "presentation",
+        "file",
+        "containing",
+        "front-matter"
+      ],
+      "nav_hints": [
+        "create",
+        "markdown",
+        "presentation"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Export the document as a PDF or print it",
+      "description": "Export the document as a PDF or print it as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the overflow menu (three dots)",
+        "tap \"Share\" or the print/PDF option",
+        "choose \"Print / Save as PDF\"",
+        "select the printer or \"Save as PDF\"",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "document",
+        "pdf",
+        "print",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "share",
+        "save as pdf",
+        "export",
+        "document"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Share the document as plain text or rendered HTML",
+      "description": "Share the document as plain text or rendered HTML as documented for Markor.",
+      "actions": [
+        "Open a document",
+        "tap the overflow menu",
+        "tap Share",
+        "choose to share the raw text, the rendered HTML or the file itself",
+        "pick the target app"
+      ],
+      "keywords": [
+        "share",
+        "document",
+        "plain",
+        "text",
+        "rendered",
+        "html"
+      ],
+      "nav_hints": [
+        "share",
+        "document",
+        "plain",
+        "text"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Rename a file or folder",
+      "description": "Rename a file or folder as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press the item to select it",
+        "tap the rename action in the contextual toolbar",
+        "enter the new name",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "file",
+        "folder",
+        "files",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "rename",
+        "file",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Move or copy files and folders",
+      "description": "Move or copy files and folders as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press one or more items",
+        "tap the move or copy action",
+        "browse to the destination folder",
+        "tap the confirm button"
+      ],
+      "keywords": [
+        "move",
+        "copy",
+        "files",
+        "folders",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "move",
+        "copy",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Delete files and folders",
+      "description": "Delete files and folders as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press the items to select them",
+        "tap the delete (bin) icon",
+        "confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "tab",
+        "long-press",
+        "them"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Select multiple files at once",
+      "description": "Select multiple files at once as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press the first item",
+        "tap additional items to add them to the selection",
+        "use the select-all action in the contextual toolbar if required",
+        "apply the wanted bulk action"
+      ],
+      "keywords": [
+        "multiple",
+        "files",
+        "once",
+        "tab",
+        "long-press",
+        "first"
+      ],
+      "nav_hints": [
+        "multiple",
+        "files",
+        "once"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Mark a file or folder as a favourite",
+      "description": "Mark a file or folder as a favourite as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press the item",
+        "tap the favourite (star) action",
+        "open the favourites view from the drawer or the folder shortcuts to reach it quickly"
+      ],
+      "keywords": [
+        "mark",
+        "file",
+        "folder",
+        "favourite",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "mark",
+        "file",
+        "folder",
+        "favourite"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Sort the file list",
+      "description": "Sort the file list as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the sort icon (or the overflow menu",
+        "Sort)",
+        "choose the sort key (name, date modified, file size or file type)",
+        "toggle ascending/descending",
+        "optionally enable \"folders first\""
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "files",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "folders first",
+        "sort",
+        "file"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Show or hide hidden files",
+      "description": "Show or hide hidden files as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the overflow menu (three dots)",
+        "toggle \"Show hidden files\""
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide",
+        "hidden"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Jump to a specific folder path",
+      "description": "Jump to a specific folder path as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the overflow menu",
+        "tap the \"Go to\" option",
+        "choose a preset location (notebook, internal storage, SD card, app data, recent or popular documents) or type a path",
+        "confirm"
+      ],
+      "keywords": [
+        "jump",
+        "specific",
+        "folder",
+        "path",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "go to",
+        "jump",
+        "specific",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "View recent and popular documents",
+      "description": "View recent and popular documents as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "tap the \"Go to\" menu",
+        "tap \"Recent documents\" or \"Popular documents\"",
+        "tap a listed file to reopen it"
+      ],
+      "keywords": [
+        "recent",
+        "popular",
+        "documents",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "go to",
+        "recent documents",
+        "popular documents",
+        "recent"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "View file information",
+      "description": "View file information as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press a file",
+        "tap the info action",
+        "read the path, size, modification date and permissions"
+      ],
+      "keywords": [
+        "file",
+        "information",
+        "files",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "file",
+        "information"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Encrypt and open password-protected notes",
+      "description": "Encrypt and open password-protected notes as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "set the encryption password under the encryption/security section",
+        "create or open a file with the encrypted (.jenc) extension",
+        "enter the password when prompted",
+        "edit the decrypted content as usual"
+      ],
+      "keywords": [
+        "encrypt",
+        "password-protected",
+        "notes",
+        "settings",
+        "encryption",
+        "password"
+      ],
+      "nav_hints": [
+        "encrypt",
+        "password-protected",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Open a file with another application",
+      "description": "Open a file with another application as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press a file",
+        "tap the \"Open with\" action",
+        "select the external app from the chooser"
+      ],
+      "keywords": [
+        "file",
+        "another",
+        "application",
+        "files",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another",
+        "application"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Add a launcher shortcut to a document",
+      "description": "Add a launcher shortcut to a document as documented for Markor.",
+      "actions": [
+        "Open the Files tab",
+        "long-press a file",
+        "tap the \"Create launcher shortcut\" action",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "add",
+        "launcher",
+        "shortcut",
+        "document",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "create launcher shortcut",
+        "add",
+        "launcher",
+        "shortcut"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Add the Markor home screen widget",
+      "description": "Add the Markor home screen widget as documented for Markor.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Markor",
+        "drag the widget onto the home screen",
+        "choose the folder or file it should open"
+      ],
+      "keywords": [
+        "add",
+        "markor",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "markor",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Change the notebook (root) directory",
+      "description": "Change the notebook (root) directory as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Notebook\" / root folder entry",
+        "browse to the folder to use",
+        "tap the select/confirm button"
+      ],
+      "keywords": [
+        "change",
+        "notebook",
+        "root",
+        "directory",
+        "settings",
+        "folder"
+      ],
+      "nav_hints": [
+        "notebook",
+        "change",
+        "root",
+        "directory"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Change the theme and colours",
+      "description": "Change the theme and colours as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"/theme",
+        "choose light, dark or system default",
+        "set the editor background and accent colour options"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme",
+        "colours"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Change the editor font family and size",
+      "description": "Change the editor font family and size as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "open the editor section",
+        "tap the font family entry to pick a font",
+        "tap the font size entry and set the value"
+      ],
+      "keywords": [
+        "change",
+        "editor",
+        "font",
+        "family",
+        "size",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "editor",
+        "font",
+        "family"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Configure editor behaviour",
+      "description": "Configure editor behaviour as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "open the editor section",
+        "toggle options such as line numbers, syntax highlighting, word wrap, auto-format, tab width, keep screen on, and highlighting delay"
+      ],
+      "keywords": [
+        "configure",
+        "editor",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "editor",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Configure the format action bar buttons",
+      "description": "Configure the format action bar buttons as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "open the action-bar/format section",
+        "enable, disable or reorder the individual formatting actions shown above the keyboard"
+      ],
+      "keywords": [
+        "configure",
+        "format",
+        "action",
+        "bar",
+        "buttons",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "format",
+        "action",
+        "bar"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for Markor.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry",
+        "choose the interface language from the list",
+        "the app reloads in that language"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Review the changelog, help and licences",
+      "description": "Review the changelog, help and licences as documented for Markor.",
+      "actions": [
+        "Open Settings or the overflow menu",
+        "tap \"About\"/\"Help\"",
+        "read the changelog, the built-in help pages, the open-source licences and the version number"
+      ],
+      "keywords": [
+        "review",
+        "changelog",
+        "help",
+        "licences",
+        "settings",
+        "overflow"
+      ],
+      "nav_hints": [
+        "about",
+        "help",
+        "review",
+        "changelog"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

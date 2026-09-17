@@ -1,0 +1,296 @@
+{
+  "app": "Fossify Calendar",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-38 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create an event",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "event",
+        "create"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Mark a task",
+      "description": "Open the event list or the day view",
+      "actions": [
+        "Open the event list or the day view",
+        "tap the task"
+      ],
+      "keywords": [
+        "mark",
+        "task",
+        "done",
+        "event"
+      ],
+      "nav_hints": [
+        "mark completed",
+        "mark",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Add a location",
+      "description": "Open the event editor",
+      "actions": [
+        "Open the event editor",
+        "tap the location field"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "event",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "location",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Set a repeating event",
+      "description": "Open the event editor",
+      "actions": [
+        "Open the event editor",
+        "tap the repetition row"
+      ],
+      "keywords": [
+        "repeating",
+        "event",
+        "custom",
+        "rule"
+      ],
+      "nav_hints": [
+        "repeating",
+        "event",
+        "custom"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Add attendees",
+      "description": "Open an event stored in a synced (CalDAV) calendar",
+      "actions": [
+        "Open an event stored in a synced (CalDAV) calendar",
+        "tap the attendees row"
+      ],
+      "keywords": [
+        "add",
+        "attendees",
+        "event",
+        "stored"
+      ],
+      "nav_hints": [
+        "add",
+        "attendees",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Edit an event",
+      "description": "Tap the event",
+      "actions": [
+        "Tap the event",
+        "tap the edit (pencil) icon"
+      ],
+      "keywords": [
+        "edit",
+        "event",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Delete an event",
+      "description": "Open the event",
+      "actions": [
+        "Open the event",
+        "tap the delete (bin) icon"
+      ],
+      "keywords": [
+        "delete",
+        "event",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Switch between the calendar",
+      "description": "Tap the view selector in the toolbar (or open the drawer)",
+      "actions": [
+        "Tap the view selector in the toolbar (or open the drawer)",
+        "choose Daily, Weekly, Monthly, Monthly by day, Yearly or Event list"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "calendar",
+        "views"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "calendar"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Go",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Go to date\""
+      ],
+      "keywords": [
+        "specific",
+        "date",
+        "overflow"
+      ],
+      "nav_hints": [
+        "go to date",
+        "specific",
+        "date"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Create an event type",
+      "description": "Open Settings (or the overflow menu)",
+      "actions": [
+        "Open Settings (or the overflow menu)",
+        "tap \"Manage event types\""
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "own",
+        "colour"
+      ],
+      "nav_hints": [
+        "manage event types",
+        "create",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Import events",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Import events\""
+      ],
+      "keywords": [
+        "import",
+        "events",
+        "ics",
+        "file"
+      ],
+      "nav_hints": [
+        "import events",
+        "import",
+        "events"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Import contact birthdays",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Add birthdays from contacts\"/the birthdays entry"
+      ],
+      "keywords": [
+        "import",
+        "contact",
+        "birthdays",
+        "settings"
+      ],
+      "nav_hints": [
+        "import",
+        "contact",
+        "birthdays"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Import public holidays",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Add holidays\""
+      ],
+      "keywords": [
+        "import",
+        "public",
+        "holidays",
+        "settings"
+      ],
+      "nav_hints": [
+        "add holidays",
+        "import",
+        "public"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Add the monthly calendar",
+      "description": "Long-press an empty area of the Android home screen",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets"
+      ],
+      "keywords": [
+        "add",
+        "monthly",
+        "calendar",
+        "home"
+      ],
+      "nav_hints": [
+        "add",
+        "monthly",
+        "calendar"
+      ],
+      "source": "guide"
+    }
+  ]
+}

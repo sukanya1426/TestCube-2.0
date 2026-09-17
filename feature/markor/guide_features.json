@@ -1,0 +1,300 @@
+{
+  "app": "Markor",
+  "source": "guide",
+  "url": "Official Markor repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-46 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the notebook folder",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "the Files tab opens at the configured notebook root"
+      ],
+      "keywords": [
+        "browse",
+        "notebook",
+        "folder",
+        "files"
+      ],
+      "nav_hints": [
+        "browse",
+        "notebook",
+        "folder"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Create a folder",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "tap the \"+\" button"
+      ],
+      "keywords": [
+        "create",
+        "folder",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folder",
+        "create"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Apply Markdown formatting",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "place the cursor or select text"
+      ],
+      "keywords": [
+        "apply",
+        "markdown",
+        "formatting",
+        "action"
+      ],
+      "nav_hints": [
+        "apply",
+        "markdown",
+        "formatting"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Insert an image",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "tap the image/attachment action in the action bar"
+      ],
+      "keywords": [
+        "insert",
+        "image",
+        "gallery",
+        "camera"
+      ],
+      "nav_hints": [
+        "take a picture",
+        "pick from gallery",
+        "select a file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Insert a table",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "tap the table action in the action bar"
+      ],
+      "keywords": [
+        "insert",
+        "table",
+        "markdown",
+        "document"
+      ],
+      "nav_hints": [
+        "insert",
+        "table"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Search across all files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "tap the search icon in the toolbar"
+      ],
+      "keywords": [
+        "search",
+        "across",
+        "all",
+        "files"
+      ],
+      "nav_hints": [
+        "search",
+        "across",
+        "all"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Manage a todo.txt file",
+      "description": "Open or create a .txt file in todo.txt format",
+      "actions": [
+        "Open or create a .txt file in todo.txt format",
+        "the todo.txt action bar appears"
+      ],
+      "keywords": [
+        "manage",
+        "todo",
+        "txt",
+        "file"
+      ],
+      "nav_hints": [
+        "manage",
+        "todo",
+        "txt"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Preview a CSV file",
+      "description": "Open a .csv file",
+      "actions": [
+        "Open a .csv file",
+        "tap the preview/eye icon"
+      ],
+      "keywords": [
+        "preview",
+        "csv",
+        "file",
+        "table"
+      ],
+      "nav_hints": [
+        "preview",
+        "csv",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Share the document",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "share",
+        "document",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "share",
+        "document",
+        "plain"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Delete files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "long-press the items to select them"
+      ],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "tab"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Sort the file list",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "tap the sort icon (or the overflow menu"
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folders first",
+        "sort",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "View recent",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "tap the \"Go to\" menu"
+      ],
+      "keywords": [
+        "recent",
+        "popular",
+        "documents",
+        "files"
+      ],
+      "nav_hints": [
+        "go to",
+        "recent documents",
+        "popular documents"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Open a file",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "long-press a file"
+      ],
+      "keywords": [
+        "file",
+        "another",
+        "application",
+        "files"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Change the notebook directory",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the \"Notebook\" / root folder entry"
+      ],
+      "keywords": [
+        "change",
+        "notebook",
+        "root",
+        "directory"
+      ],
+      "nav_hints": [
+        "notebook",
+        "change",
+        "root"
+      ],
+      "source": "guide"
+    }
+  ]
+}

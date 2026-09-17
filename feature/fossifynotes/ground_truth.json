@@ -1,0 +1,694 @@
+{
+  "app": "Fossify Notes",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Notes (org.fossify.notes), version F-Droid build 13.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a text note",
+      "description": "Create a text note as documented for Fossify Notes.",
+      "actions": [
+        "Open the app",
+        "tap the overflow menu (three dots)",
+        "tap \"New note\"/the \"+\" action",
+        "enter the note title",
+        "choose the \"Text note\" type",
+        "tap OK",
+        "type the content; the text is saved automatically"
+      ],
+      "keywords": [
+        "create",
+        "text",
+        "note",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "new note",
+        "text note",
+        "create",
+        "text"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a checklist note",
+      "description": "Create a checklist note as documented for Fossify Notes.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"New note\"",
+        "enter the title",
+        "choose the \"Checklist\" type",
+        "tap OK",
+        "tap the \"+\" to add each item",
+        "type the item text",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "checklist",
+        "note",
+        "overflow",
+        "new"
+      ],
+      "nav_hints": [
+        "new note",
+        "checklist",
+        "create",
+        "note"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Tick and untick checklist items",
+      "description": "Tick and untick checklist items as documented for Fossify Notes.",
+      "actions": [
+        "Open the checklist note",
+        "tap the checkbox beside an item to mark it done",
+        "tap it again to clear it"
+      ],
+      "keywords": [
+        "tick",
+        "untick",
+        "checklist",
+        "note",
+        "checkbox",
+        "beside"
+      ],
+      "nav_hints": [
+        "tick",
+        "untick",
+        "checklist"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Reorder or remove checklist items",
+      "description": "Reorder or remove checklist items as documented for Fossify Notes.",
+      "actions": [
+        "Open the checklist note",
+        "long-press an item",
+        "drag it to a new position, or tap the delete action on the item",
+        "confirm"
+      ],
+      "keywords": [
+        "reorder",
+        "remove",
+        "checklist",
+        "note",
+        "long-press"
+      ],
+      "nav_hints": [
+        "reorder",
+        "remove",
+        "checklist"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Switch between notes",
+      "description": "Switch between notes as documented for Fossify Notes.",
+      "actions": [
+        "Tap the note title in the toolbar (or open the overflow menu",
+        "\"Open note\")",
+        "select the note from the list; the editor switches to it"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "notes",
+        "note",
+        "title",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "open note",
+        "switch",
+        "between",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Rename a note",
+      "description": "Rename a note as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Rename note\"",
+        "enter the new title",
+        "tap OK"
+      ],
+      "keywords": [
+        "rename",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "rename note",
+        "rename",
+        "note"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Delete a note",
+      "description": "Delete a note as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Delete note\"",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete note",
+        "delete",
+        "note"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Undo and redo edits",
+      "description": "Undo and redo edits as documented for Fossify Notes.",
+      "actions": [
+        "While editing a text note",
+        "tap the undo arrow in the toolbar to revert the last change",
+        "tap the redo arrow to reapply it"
+      ],
+      "keywords": [
+        "undo",
+        "redo",
+        "edits",
+        "while",
+        "editing",
+        "text"
+      ],
+      "nav_hints": [
+        "undo",
+        "redo",
+        "edits"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Search inside a note",
+      "description": "Search inside a note as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the search icon in the toolbar",
+        "type the search term",
+        "step through the highlighted matches with the up/down chevrons"
+      ],
+      "keywords": [
+        "search",
+        "inside",
+        "note",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "inside",
+        "note"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Lock a note with a PIN, pattern or fingerprint",
+      "description": "Lock a note with a PIN, pattern or fingerprint as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Lock note\"",
+        "choose the protection type",
+        "set the secret",
+        "confirm; the note content is hidden until it is unlocked"
+      ],
+      "keywords": [
+        "lock",
+        "note",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "overflow"
+      ],
+      "nav_hints": [
+        "lock note",
+        "lock",
+        "note",
+        "pin"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Unlock a protected note",
+      "description": "Unlock a protected note as documented for Fossify Notes.",
+      "actions": [
+        "Open the locked note",
+        "enter the PIN or pattern, or present the fingerprint",
+        "the content is revealed"
+      ],
+      "keywords": [
+        "unlock",
+        "protected",
+        "note",
+        "locked",
+        "pin",
+        "pattern"
+      ],
+      "nav_hints": [
+        "unlock",
+        "protected",
+        "note"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Export a note to a file",
+      "description": "Export a note to a file as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Export as file\"",
+        "choose the destination folder and the file name",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "note",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "export as file",
+        "export",
+        "note",
+        "file"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Export all notes at once",
+      "description": "Export all notes at once as documented for Fossify Notes.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Export all notes\"",
+        "choose the destination folder",
+        "confirm; each note is written as a separate file"
+      ],
+      "keywords": [
+        "export",
+        "all",
+        "notes",
+        "once",
+        "overflow"
+      ],
+      "nav_hints": [
+        "export all notes",
+        "export",
+        "all",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Import a note from a file",
+      "description": "Import a note from a file as documented for Fossify Notes.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Import a note\"/\"Open file\"",
+        "select the text file",
+        "choose whether to keep the note synchronised with the file",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "note",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "import a note",
+        "open file",
+        "import",
+        "note"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Keep a note synchronised with a file on disk",
+      "description": "Keep a note synchronised with a file on disk as documented for Fossify Notes.",
+      "actions": [
+        "Import or create a note",
+        "open the overflow menu",
+        "tap the \"Open file\"/sync option",
+        "select the target file",
+        "confirm; changes to the note are written back to that file"
+      ],
+      "keywords": [
+        "keep",
+        "note",
+        "synchronised",
+        "file",
+        "disk",
+        "import"
+      ],
+      "nav_hints": [
+        "open file",
+        "keep",
+        "note",
+        "synchronised"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Share a note",
+      "description": "Share a note as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Share\"",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "note"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Print a note",
+      "description": "Print a note as documented for Fossify Notes.",
+      "actions": [
+        "Open the note",
+        "tap the overflow menu",
+        "tap \"Print\"",
+        "choose the printer or \"Save as PDF\"",
+        "confirm"
+      ],
+      "keywords": [
+        "print",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "print",
+        "save as pdf",
+        "note"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Add the note home screen widget",
+      "description": "Add the note home screen widget as documented for Fossify Notes.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Fossify Notes",
+        "drag the widget onto the home screen",
+        "select the note it should display",
+        "set the background colour, transparency and text colour",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "note",
+        "home",
+        "widget",
+        "long-press",
+        "empty"
+      ],
+      "nav_hints": [
+        "add",
+        "note",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Change the editor font size and typeface",
+      "description": "Change the editor font size and typeface as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the font size entry and choose the size",
+        "toggle the monospaced font option if a fixed-width font is preferred"
+      ],
+      "keywords": [
+        "change",
+        "editor",
+        "font",
+        "size",
+        "typeface",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "editor",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Enable or disable line wrapping",
+      "description": "Enable or disable line wrapping as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Use line wrap\"/word-wrap option; with it off, long lines can be scrolled horizontally"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "line",
+        "wrapping",
+        "settings",
+        "toggle"
+      ],
+      "nav_hints": [
+        "use line wrap",
+        "enable",
+        "disable",
+        "line"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Set where the cursor is placed when a note is opened",
+      "description": "Set where the cursor is placed when a note is opened as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the cursor placement entry",
+        "choose the start or the end of the note"
+      ],
+      "keywords": [
+        "where",
+        "cursor",
+        "placed",
+        "note",
+        "opened",
+        "settings"
+      ],
+      "nav_hints": [
+        "where",
+        "cursor",
+        "placed",
+        "note"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Configure checklist behaviour",
+      "description": "Configure checklist behaviour as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "toggle whether completed items are moved to the bottom of the checklist and whether new items are added at the top"
+      ],
+      "keywords": [
+        "configure",
+        "checklist",
+        "behaviour",
+        "settings",
+        "toggle",
+        "whether"
+      ],
+      "nav_hints": [
+        "configure",
+        "checklist",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Show a word and character count",
+      "description": "Show a word and character count as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "enable the \"Show word count\" option; the counter is displayed while editing a text note"
+      ],
+      "keywords": [
+        "show",
+        "word",
+        "character",
+        "count",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "show word count",
+        "show",
+        "word",
+        "character"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Set the note text alignment",
+      "description": "Set the note text alignment as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the gravity/alignment entry",
+        "choose left, centre or right",
+        "return"
+      ],
+      "keywords": [
+        "note",
+        "text",
+        "alignment",
+        "settings",
+        "gravity",
+        "entry"
+      ],
+      "nav_hints": [
+        "note",
+        "text",
+        "alignment"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Enable automatic saving",
+      "description": "Enable automatic saving as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "toggle the automatic save option; with it off, a save icon appears in the toolbar and changes must be saved manually"
+      ],
+      "keywords": [
+        "enable",
+        "automatic",
+        "saving",
+        "settings",
+        "toggle",
+        "save"
+      ],
+      "nav_hints": [
+        "enable",
+        "automatic",
+        "saving"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Protect the whole app with a lock",
+      "description": "Protect the whole app with a lock as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock entry",
+        "choose PIN, pattern or fingerprint",
+        "set the secret",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "whole",
+        "lock",
+        "settings",
+        "app-lock",
+        "entry"
+      ],
+      "nav_hints": [
+        "protect",
+        "whole",
+        "lock"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry",
+        "select the interface language"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version, the licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

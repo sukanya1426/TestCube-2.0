@@ -64,7 +64,8 @@ def parse_args():
                         type=int,
                         help="Interval in seconds between each two events. Default: %d" % input_manager.DEFAULT_EVENT_INTERVAL)
     parser.add_argument("-timeout", action="store", dest="timeout", default=input_manager.DEFAULT_TIMEOUT, type=int,
-                        help="Timeout in seconds, -1 means unlimited. Default: %d" % input_manager.DEFAULT_TIMEOUT)
+                        help="Wall-clock budget for the run in seconds, -1 means unlimited. Default: %d"
+                             % input_manager.DEFAULT_TIMEOUT)
     parser.add_argument("-cv", action="store_true", dest="cv_mode",
                         help="Use OpenCV (instead of UIAutomator) to identify UI components. CV mode requires opencv-python installed.")
     parser.add_argument("-debug", action="store_true", dest="debug_mode",

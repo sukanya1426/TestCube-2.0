@@ -1,0 +1,770 @@
+{
+  "app": "Fossify Music Player",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Music Player (org.fossify.musicplayer), version 1.8.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse tracks",
+      "description": "Browse tracks as documented for Fossify Music Player.",
+      "actions": [
+        "Open the app",
+        "grant the media permission",
+        "tap the Tracks tab",
+        "scroll the list",
+        "tap a track to play it"
+      ],
+      "keywords": [
+        "browse",
+        "tracks",
+        "grant",
+        "media",
+        "permission"
+      ],
+      "nav_hints": [
+        "browse",
+        "tracks"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Browse albums",
+      "description": "Browse albums as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Albums tab",
+        "scroll the album grid or list",
+        "tap an album to see its track list",
+        "tap a track to play"
+      ],
+      "keywords": [
+        "browse",
+        "albums",
+        "tab",
+        "scroll",
+        "album",
+        "grid"
+      ],
+      "nav_hints": [
+        "browse",
+        "albums"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Browse artists",
+      "description": "Browse artists as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Artists tab",
+        "tap an artist",
+        "review their albums",
+        "tap an album or track to play"
+      ],
+      "keywords": [
+        "browse",
+        "artists",
+        "tab",
+        "artist"
+      ],
+      "nav_hints": [
+        "browse",
+        "artists"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Browse genres",
+      "description": "Browse genres as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Genres tab",
+        "tap a genre",
+        "review the tracks in it",
+        "tap one to play"
+      ],
+      "keywords": [
+        "browse",
+        "genres",
+        "tab",
+        "genre"
+      ],
+      "nav_hints": [
+        "browse",
+        "genres"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Browse folders",
+      "description": "Browse folders as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Folders tab",
+        "tap a folder",
+        "review the audio files it contains",
+        "tap a file to play it"
+      ],
+      "keywords": [
+        "browse",
+        "folders",
+        "tab",
+        "folder"
+      ],
+      "nav_hints": [
+        "browse",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Browse and open playlists",
+      "description": "Browse and open playlists as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Playlists tab",
+        "tap a playlist",
+        "review its tracks",
+        "tap a track to start playback from that playlist"
+      ],
+      "keywords": [
+        "browse",
+        "playlists",
+        "tab",
+        "playlist"
+      ],
+      "nav_hints": [
+        "browse",
+        "playlists"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Create a playlist",
+      "description": "Create a playlist as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Playlists tab",
+        "tap the \"+\" floating action button",
+        "enter the playlist name",
+        "tap OK",
+        "add tracks to it"
+      ],
+      "keywords": [
+        "create",
+        "playlist",
+        "playlists",
+        "tab",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Add tracks to a playlist",
+      "description": "Add tracks to a playlist as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press a track, album, artist, genre or folder",
+        "tap \"Add to playlist\"",
+        "select the target playlist (or create a new one)",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "tracks",
+        "playlist",
+        "long-press",
+        "track",
+        "album"
+      ],
+      "nav_hints": [
+        "add to playlist",
+        "add",
+        "tracks",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Remove a track from a playlist",
+      "description": "Remove a track from a playlist as documented for Fossify Music Player.",
+      "actions": [
+        "Open the playlist",
+        "long-press the track",
+        "tap \"Remove from playlist\"",
+        "confirm"
+      ],
+      "keywords": [
+        "remove",
+        "track",
+        "playlist",
+        "long-press"
+      ],
+      "nav_hints": [
+        "remove from playlist",
+        "remove",
+        "track",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Rename or delete a playlist",
+      "description": "Rename or delete a playlist as documented for Fossify Music Player.",
+      "actions": [
+        "Open the Playlists tab",
+        "long-press the playlist",
+        "tap Rename and enter the new name, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "rename",
+        "delete",
+        "playlist",
+        "playlists",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "rename",
+        "delete",
+        "playlist"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Control playback",
+      "description": "Control playback as documented for Fossify Music Player.",
+      "actions": [
+        "Start a track",
+        "tap the playback bar at the bottom to open the full player",
+        "use play/pause, previous, next and the seek bar",
+        "tap the back arrow to collapse"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "start",
+        "track",
+        "bar",
+        "bottom"
+      ],
+      "nav_hints": [
+        "control",
+        "playback"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Use shuffle and repeat",
+      "description": "Use shuffle and repeat as documented for Fossify Music Player.",
+      "actions": [
+        "Open the full player",
+        "tap the shuffle icon to toggle random order",
+        "tap the repeat icon to cycle through repeat off, repeat all and repeat one track"
+      ],
+      "keywords": [
+        "shuffle",
+        "repeat",
+        "full",
+        "player",
+        "toggle",
+        "random"
+      ],
+      "nav_hints": [
+        "shuffle",
+        "repeat"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Change the playback speed",
+      "description": "Change the playback speed as documented for Fossify Music Player.",
+      "actions": [
+        "Open the full player",
+        "tap the playback speed control",
+        "drag the slider or use the preset buttons",
+        "tap outside to close"
+      ],
+      "keywords": [
+        "change",
+        "playback",
+        "speed",
+        "full",
+        "player",
+        "control"
+      ],
+      "nav_hints": [
+        "change",
+        "playback",
+        "speed"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Open the equaliser",
+      "description": "Open the equaliser as documented for Fossify Music Player.",
+      "actions": [
+        "Open the full player",
+        "tap the equaliser icon (or the overflow menu",
+        "Equalizer)",
+        "choose a preset or drag the band sliders",
+        "tap the back arrow to apply"
+      ],
+      "keywords": [
+        "equaliser",
+        "full",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "equaliser"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Set a sleep timer",
+      "description": "Set a sleep timer as documented for Fossify Music Player.",
+      "actions": [
+        "Open the full player or the overflow menu",
+        "tap \"Sleep timer\"",
+        "select the duration (or set a custom value)",
+        "confirm; playback stops when the timer expires"
+      ],
+      "keywords": [
+        "sleep",
+        "timer",
+        "full",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sleep timer",
+        "sleep",
+        "timer"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "View and manage the play queue",
+      "description": "View and manage the play queue as documented for Fossify Music Player.",
+      "actions": [
+        "Open the full player",
+        "tap the queue icon",
+        "drag the handle to reorder items",
+        "swipe an item away to remove it",
+        "tap a track to jump to it"
+      ],
+      "keywords": [
+        "manage",
+        "play",
+        "queue",
+        "full",
+        "player"
+      ],
+      "nav_hints": [
+        "manage",
+        "play",
+        "queue"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Add tracks to the current queue",
+      "description": "Add tracks to the current queue as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press a track or album",
+        "tap \"Add to queue\"/\"Play next\"",
+        "the items are added to the queue without stopping the current track"
+      ],
+      "keywords": [
+        "add",
+        "tracks",
+        "current",
+        "queue",
+        "long-press",
+        "track"
+      ],
+      "nav_hints": [
+        "add to queue",
+        "play next",
+        "add",
+        "tracks"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Search the library",
+      "description": "Search the library as documented for Fossify Music Player.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the track, album or artist name",
+        "tap a result to play it"
+      ],
+      "keywords": [
+        "search",
+        "library",
+        "toolbar",
+        "track",
+        "album",
+        "artist"
+      ],
+      "nav_hints": [
+        "search",
+        "library"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Sort the lists",
+      "description": "Sort the lists as documented for Fossify Music Player.",
+      "actions": [
+        "Open a tab",
+        "tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose the field (title, artist, album, duration, date added or track number) and the direction",
+        "tap OK"
+      ],
+      "keywords": [
+        "sort",
+        "lists",
+        "tab",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "lists"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Edit track metadata",
+      "description": "Edit track metadata as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press a track",
+        "tap the overflow menu",
+        "tap \"Edit\"/Properties edit",
+        "change the title, artist, album, track number or year",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "track",
+        "metadata",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "edit",
+        "track",
+        "metadata"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "View track properties",
+      "description": "View track properties as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press a track",
+        "tap \"Properties\"",
+        "read the file name, path, size, duration, format and last-modified date"
+      ],
+      "keywords": [
+        "track",
+        "properties",
+        "long-press"
+      ],
+      "nav_hints": [
+        "properties",
+        "track"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Delete a track from the device",
+      "description": "Delete a track from the device as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press the track",
+        "tap the delete (bin) icon",
+        "confirm; the file is removed (or moved to the recycle bin if enabled)"
+      ],
+      "keywords": [
+        "delete",
+        "track",
+        "device",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "track",
+        "device"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Share a track",
+      "description": "Share a track as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press the track",
+        "tap the share icon",
+        "choose the destination app"
+      ],
+      "keywords": [
+        "share",
+        "track",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "track"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Exclude folders from the library",
+      "description": "Exclude folders from the library as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press a folder in the Folders tab",
+        "tap \"Exclude folder\"; or open Settings",
+        "\"Manage excluded folders\"",
+        "add or remove folders",
+        "confirm"
+      ],
+      "keywords": [
+        "exclude",
+        "folders",
+        "library",
+        "long-press",
+        "folder",
+        "tab"
+      ],
+      "nav_hints": [
+        "exclude folder",
+        "manage excluded folders",
+        "exclude",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Control playback from the notification and the lock screen",
+      "description": "Control playback from the notification and the lock screen as documented for Fossify Music Player.",
+      "actions": [
+        "Start playback",
+        "pull down the notification shade (or wake the lock screen)",
+        "use the play/pause, previous, next and close controls shown there"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "notification",
+        "lock",
+        "start",
+        "pull"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "notification",
+        "lock"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Add the music player home screen widget",
+      "description": "Add the music player home screen widget as documented for Fossify Music Player.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Fossify Music Player",
+        "drag the widget onto the home screen",
+        "set the background colour and transparency",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "music",
+        "player",
+        "home",
+        "widget",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add",
+        "music",
+        "player",
+        "home"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Show or hide the individual library tabs",
+      "description": "Show or hide the individual library tabs as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "open the tabs section",
+        "tick the tabs to display (Playlists, Folders, Artists, Albums, Tracks, Genres)",
+        "confirm"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "individual",
+        "library",
+        "tabs",
+        "settings"
+      ],
+      "nav_hints": [
+        "show",
+        "hide",
+        "individual",
+        "library"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Configure playback behaviour",
+      "description": "Configure playback behaviour as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "open the playback section",
+        "toggle options such as gapless-style auto-advance, whether playback resumes on headset connection, whether the album cover is shown on the lock screen and the swipe gesture behaviour"
+      ],
+      "keywords": [
+        "configure",
+        "playback",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "playback",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Configure the recycle bin for deleted tracks",
+      "description": "Configure the recycle bin for deleted tracks as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "toggle \"Move deleted files into the recycle bin\"",
+        "use the recycle bin entry later to restore or permanently delete them"
+      ],
+      "keywords": [
+        "configure",
+        "recycle",
+        "bin",
+        "deleted",
+        "tracks",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "recycle",
+        "bin",
+        "deleted"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "description": "Protect the app with a PIN, pattern or fingerprint as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock entry",
+        "choose the lock type",
+        "set the secret",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "settings",
+        "app-lock"
+      ],
+      "nav_hints": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and pick the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Music Player.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version number, the licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

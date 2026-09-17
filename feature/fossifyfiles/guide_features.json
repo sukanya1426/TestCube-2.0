@@ -1,0 +1,294 @@
+{
+  "app": "Fossify File Manager",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-37 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse internal storage, the",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the Storage tab"
+      ],
+      "keywords": [
+        "browse",
+        "internal",
+        "storage",
+        "card"
+      ],
+      "nav_hints": [
+        "browse",
+        "internal",
+        "storage"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "View recent files",
+      "description": "Open the \"Recents\" tab",
+      "actions": [
+        "Open the \"Recents\" tab",
+        "scroll the list of recently modified files"
+      ],
+      "keywords": [
+        "recent",
+        "files",
+        "recents",
+        "tab"
+      ],
+      "nav_hints": [
+        "recents",
+        "recent",
+        "files"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Create a new folder",
+      "description": "Navigate to the target directory",
+      "actions": [
+        "Navigate to the target directory",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "folder",
+        "navigate"
+      ],
+      "nav_hints": [
+        "folder",
+        "create",
+        "new"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Copy files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy icon (or the overflow menu"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy to",
+        "copy",
+        "files"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Rename items",
+      "description": "Long-press the item",
+      "actions": [
+        "Long-press the item",
+        "tap the rename (pencil) icon"
+      ],
+      "keywords": [
+        "rename",
+        "long-press",
+        "pencil"
+      ],
+      "nav_hints": [
+        "rename"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Select multiple items",
+      "description": "Long-press the first item",
+      "actions": [
+        "Long-press the first item",
+        "tap the further items to add them, or tap the select-all action in the contextual toolbar"
+      ],
+      "keywords": [
+        "multiple",
+        "long-press",
+        "first",
+        "further"
+      ],
+      "nav_hints": [
+        "multiple"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Sort the file list",
+      "description": "Tap the overflow menu (three dots)",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort by\""
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Show",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Temporarily show hidden\"/\"Show hidden items\"; the permanent setting is in Settings"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "overflow"
+      ],
+      "nav_hints": [
+        "temporarily show hidden",
+        "show hidden items",
+        "show"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Decompress a ZIP archive",
+      "description": "Long-press the archive",
+      "actions": [
+        "Long-press the archive",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "decompress",
+        "zip",
+        "archive",
+        "long-press"
+      ],
+      "nav_hints": [
+        "decompress",
+        "zip",
+        "archive"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Share files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the share icon"
+      ],
+      "keywords": [
+        "share",
+        "files",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "files"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Print a file",
+      "description": "Open an image or text file",
+      "actions": [
+        "Open an image or text file",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "print",
+        "file",
+        "image",
+        "text"
+      ],
+      "nav_hints": [
+        "print",
+        "save as pdf",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Set a folder",
+      "description": "Navigate to the folder",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "folder",
+        "home",
+        "navigate",
+        "overflow"
+      ],
+      "nav_hints": [
+        "set as home",
+        "folder",
+        "home"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Copy the path of",
+      "description": "Long-press the item",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu"
+      ],
+      "keywords": [
+        "copy",
+        "path",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "copy",
+        "path"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Protect hidden items",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Password protect hidden items\""
+      ],
+      "keywords": [
+        "protect",
+        "hidden",
+        "pin",
+        "pattern"
+      ],
+      "nav_hints": [
+        "protect",
+        "hidden",
+        "pin"
+      ],
+      "source": "guide"
+    }
+  ]
+}

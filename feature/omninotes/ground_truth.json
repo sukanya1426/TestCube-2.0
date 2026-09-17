@@ -1,0 +1,1162 @@
+{
+  "app": "Omni Notes",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Omni Notes repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Omni Notes (it.feio.android.omninotes.foss), version 6.3.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a text note",
+      "description": "Create a text note as documented for Omni Notes.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "tap the text/note option",
+        "enter a title",
+        "enter the note body",
+        "tap the back arrow to save"
+      ],
+      "keywords": [
+        "create",
+        "text",
+        "note",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "text",
+        "note"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a checklist note",
+      "description": "Create a checklist note as documented for Omni Notes.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap the checklist option (or open a note and use the overflow menu",
+        "\"Convert to checklist\")",
+        "type the first item",
+        "press Enter to add the next item",
+        "tap the back arrow to save"
+      ],
+      "keywords": [
+        "create",
+        "checklist",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "convert to checklist",
+        "create",
+        "checklist",
+        "note"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Tick and untick checklist items",
+      "description": "Tick and untick checklist items as documented for Omni Notes.",
+      "actions": [
+        "Open a checklist note",
+        "tap the checkbox beside an item to mark it done",
+        "tap it again to clear it; completed items move or are struck through according to the settings"
+      ],
+      "keywords": [
+        "tick",
+        "untick",
+        "checklist",
+        "note",
+        "checkbox",
+        "beside"
+      ],
+      "nav_hints": [
+        "tick",
+        "untick",
+        "checklist"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Convert a note between text and checklist",
+      "description": "Convert a note between text and checklist as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu (three dots)",
+        "tap \"Convert to checklist\" or \"Convert to note\"",
+        "confirm"
+      ],
+      "keywords": [
+        "convert",
+        "note",
+        "between",
+        "text",
+        "checklist",
+        "overflow"
+      ],
+      "nav_hints": [
+        "convert to checklist",
+        "convert to note",
+        "convert",
+        "note"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Attach a photo from the camera",
+      "description": "Attach a photo from the camera as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the attachment (paper clip) icon",
+        "tap Camera",
+        "grant the camera permission if prompted",
+        "take the picture",
+        "confirm to attach it"
+      ],
+      "keywords": [
+        "attach",
+        "photo",
+        "camera",
+        "note",
+        "attachment",
+        "paper"
+      ],
+      "nav_hints": [
+        "attach",
+        "photo",
+        "camera"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Attach an image or video from the gallery",
+      "description": "Attach an image or video from the gallery as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the attachment icon",
+        "tap Gallery/Files",
+        "select the media",
+        "confirm"
+      ],
+      "keywords": [
+        "attach",
+        "image",
+        "video",
+        "gallery",
+        "note",
+        "attachment"
+      ],
+      "nav_hints": [
+        "attach",
+        "image",
+        "video",
+        "gallery"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Record and attach an audio note",
+      "description": "Record and attach an audio note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the attachment icon",
+        "tap the recording option",
+        "grant the microphone permission",
+        "tap record",
+        "tap stop",
+        "the recording is attached to the note"
+      ],
+      "keywords": [
+        "record",
+        "attach",
+        "audio",
+        "note",
+        "attachment"
+      ],
+      "nav_hints": [
+        "record",
+        "attach",
+        "audio",
+        "note"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Create and attach a sketch",
+      "description": "Create and attach a sketch as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the attachment icon",
+        "tap \"Sketch\"",
+        "draw on the canvas",
+        "use the stroke size, eraser and colour controls",
+        "tap the back arrow/save to attach the drawing"
+      ],
+      "keywords": [
+        "create",
+        "attach",
+        "sketch",
+        "note",
+        "attachment"
+      ],
+      "nav_hints": [
+        "sketch",
+        "create",
+        "attach"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Attach an arbitrary file",
+      "description": "Attach an arbitrary file as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the attachment icon",
+        "tap Files",
+        "browse and select the file",
+        "confirm"
+      ],
+      "keywords": [
+        "attach",
+        "arbitrary",
+        "file",
+        "note",
+        "attachment"
+      ],
+      "nav_hints": [
+        "attach",
+        "arbitrary",
+        "file"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Add a location to a note",
+      "description": "Add a location to a note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Add location\"",
+        "grant the location permission",
+        "confirm the detected address or search for a place",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "add location",
+        "add",
+        "location",
+        "note"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Set a reminder on a note",
+      "description": "Set a reminder on a note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the alarm/clock icon",
+        "pick the date",
+        "pick the time",
+        "tap Done; the reminder fires as an Android notification"
+      ],
+      "keywords": [
+        "reminder",
+        "note",
+        "alarm",
+        "clock"
+      ],
+      "nav_hints": [
+        "reminder",
+        "note"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Set a recurring reminder",
+      "description": "Set a recurring reminder as documented for Omni Notes.",
+      "actions": [
+        "Open the reminder dialog on a note",
+        "tap the repeat/recurrence option",
+        "choose the repetition rule (for example daily, weekly, monthly, yearly or a custom rule)",
+        "confirm"
+      ],
+      "keywords": [
+        "recurring",
+        "reminder",
+        "dialog",
+        "note",
+        "repeat",
+        "recurrence"
+      ],
+      "nav_hints": [
+        "recurring",
+        "reminder"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "View all notes that have reminders",
+      "description": "View all notes that have reminders as documented for Omni Notes.",
+      "actions": [
+        "Open the navigation drawer (hamburger icon or left-edge swipe)",
+        "tap \"Reminders\"",
+        "review the notes with scheduled alarms"
+      ],
+      "keywords": [
+        "all",
+        "notes",
+        "have",
+        "reminders",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "reminders",
+        "all",
+        "notes",
+        "have"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Create a category",
+      "description": "Create a category as documented for Omni Notes.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Categories\" (or the manage-categories entry)",
+        "tap the \"+\" button",
+        "enter the category name and description",
+        "pick a colour",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "category",
+        "navigation",
+        "drawer",
+        "categories",
+        "manage-categories"
+      ],
+      "nav_hints": [
+        "categories",
+        "create",
+        "category"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Edit or delete a category",
+      "description": "Edit or delete a category as documented for Omni Notes.",
+      "actions": [
+        "Open the drawer",
+        "open the categories list",
+        "long-press (or tap) the category",
+        "tap Edit to change the name, description or colour, or tap Delete",
+        "confirm"
+      ],
+      "keywords": [
+        "edit",
+        "delete",
+        "category",
+        "drawer",
+        "categories"
+      ],
+      "nav_hints": [
+        "edit",
+        "delete",
+        "category"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Assign a category to a note",
+      "description": "Assign a category to a note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Category\"",
+        "select the category from the list",
+        "the note is colour-coded accordingly"
+      ],
+      "keywords": [
+        "assign",
+        "category",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "category",
+        "assign",
+        "note"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Filter notes by category",
+      "description": "Filter notes by category as documented for Omni Notes.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the category name in the drawer list",
+        "the note list shows only the notes in that category"
+      ],
+      "keywords": [
+        "filter",
+        "notes",
+        "category",
+        "navigation",
+        "drawer",
+        "name"
+      ],
+      "nav_hints": [
+        "filter",
+        "notes",
+        "category"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Tag notes with hashtags",
+      "description": "Tag notes with hashtags as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "type a hashtag such as \"#work\" in the title or body (or tap the tag action in the overflow menu and pick a tag)",
+        "save the note"
+      ],
+      "keywords": [
+        "tag",
+        "notes",
+        "hashtags",
+        "note",
+        "hashtag",
+        "such"
+      ],
+      "nav_hints": [
+        "#work",
+        "tag",
+        "notes",
+        "hashtags"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Filter notes by tag",
+      "description": "Filter notes by tag as documented for Omni Notes.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Tags\"",
+        "select one or more tags",
+        "confirm; the list is filtered to notes carrying those tags"
+      ],
+      "keywords": [
+        "filter",
+        "notes",
+        "tag",
+        "navigation",
+        "drawer",
+        "tags"
+      ],
+      "nav_hints": [
+        "tags",
+        "filter",
+        "notes",
+        "tag"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Search notes",
+      "description": "Search notes as documented for Omni Notes.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the search text",
+        "the note list filters as you type",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "notes",
+        "toolbar",
+        "text"
+      ],
+      "nav_hints": [
+        "search",
+        "notes"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Archive a note",
+      "description": "Archive a note as documented for Omni Notes.",
+      "actions": [
+        "On the note list",
+        "swipe the note (according to the configured swipe action) or open the note and tap the overflow menu",
+        "tap \"Archive\"; the note moves to the Archive section of the drawer"
+      ],
+      "keywords": [
+        "archive",
+        "note",
+        "swipe",
+        "according",
+        "configured",
+        "action"
+      ],
+      "nav_hints": [
+        "archive",
+        "note"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Restore a note from the archive",
+      "description": "Restore a note from the archive as documented for Omni Notes.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Archive\"",
+        "long-press the note",
+        "tap the unarchive action",
+        "confirm"
+      ],
+      "keywords": [
+        "restore",
+        "note",
+        "archive",
+        "drawer"
+      ],
+      "nav_hints": [
+        "archive",
+        "restore",
+        "note"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Move a note to the trash",
+      "description": "Move a note to the trash as documented for Omni Notes.",
+      "actions": [
+        "On the note list",
+        "long-press the note",
+        "tap the delete (bin) icon",
+        "confirm; the note moves to Trash"
+      ],
+      "keywords": [
+        "move",
+        "note",
+        "trash",
+        "long-press"
+      ],
+      "nav_hints": [
+        "move",
+        "note",
+        "trash"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Restore or permanently delete notes from the trash",
+      "description": "Restore or permanently delete notes from the trash as documented for Omni Notes.",
+      "actions": [
+        "Open the drawer",
+        "tap \"Trash\"",
+        "long-press the note",
+        "tap Restore to bring it back, or tap Delete permanently",
+        "confirm. Use \"Empty trash\" from the overflow menu to purge everything"
+      ],
+      "keywords": [
+        "restore",
+        "permanently",
+        "delete",
+        "notes",
+        "trash",
+        "drawer"
+      ],
+      "nav_hints": [
+        "trash",
+        "empty trash",
+        "restore",
+        "permanently"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Pin a note to the top of the list",
+      "description": "Pin a note to the top of the list as documented for Omni Notes.",
+      "actions": [
+        "Long-press the note in the list",
+        "tap the pin action in the contextual toolbar; pinned notes stay above the rest"
+      ],
+      "keywords": [
+        "pin",
+        "note",
+        "top",
+        "long-press",
+        "action",
+        "contextual"
+      ],
+      "nav_hints": [
+        "pin",
+        "note",
+        "top"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Lock a note with a password",
+      "description": "Lock a note with a password as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "set a password and a recovery question",
+        "open the note",
+        "tap the overflow menu",
+        "tap \"Lock\"; the note content is hidden until the password is entered"
+      ],
+      "keywords": [
+        "lock",
+        "note",
+        "password",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "lock",
+        "note",
+        "password"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Unlock a locked note",
+      "description": "Unlock a locked note as documented for Omni Notes.",
+      "actions": [
+        "Tap a locked note in the list",
+        "enter the password in the prompt",
+        "tap OK to reveal the content"
+      ],
+      "keywords": [
+        "unlock",
+        "locked",
+        "note",
+        "password",
+        "prompt"
+      ],
+      "nav_hints": [
+        "unlock",
+        "locked",
+        "note"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Merge several notes into one",
+      "description": "Merge several notes into one as documented for Omni Notes.",
+      "actions": [
+        "Long-press the first note",
+        "tap the additional notes to add them to the selection",
+        "tap the overflow menu in the contextual toolbar",
+        "tap \"Merge\"",
+        "confirm; the contents are combined into a single note"
+      ],
+      "keywords": [
+        "merge",
+        "several",
+        "notes",
+        "one",
+        "long-press",
+        "first"
+      ],
+      "nav_hints": [
+        "merge",
+        "several",
+        "notes",
+        "one"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Duplicate a note",
+      "description": "Duplicate a note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Duplicate\"; a copy is created in the list"
+      ],
+      "keywords": [
+        "duplicate",
+        "note",
+        "overflow"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "note"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Share a note",
+      "description": "Share a note as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the share icon",
+        "choose whether to include attachments if prompted",
+        "select the destination app from the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "note"
+      ],
+      "nav_hints": [
+        "share",
+        "note"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Add a note from another app via the share sheet",
+      "description": "Add a note from another app via the share sheet as documented for Omni Notes.",
+      "actions": [
+        "In any app, select text or a file",
+        "tap Share",
+        "choose Omni Notes",
+        "the content opens as a new note",
+        "add a title",
+        "tap back to save"
+      ],
+      "keywords": [
+        "add",
+        "note",
+        "another",
+        "via",
+        "share",
+        "sheet"
+      ],
+      "nav_hints": [
+        "add",
+        "note",
+        "another",
+        "via"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Sort the note list",
+      "description": "Sort the note list as documented for Omni Notes.",
+      "actions": [
+        "Tap the overflow menu (three dots) in the note list",
+        "tap \"Sort by\"",
+        "choose the criterion (for example creation date, last modification, reminder date, title or manual/drag order)",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "note",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "note"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Reorder notes manually",
+      "description": "Reorder notes manually as documented for Omni Notes.",
+      "actions": [
+        "Set the sort order to manual/custom",
+        "long-press a note",
+        "drag it to the required position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "notes",
+        "manually",
+        "sort",
+        "order",
+        "manual"
+      ],
+      "nav_hints": [
+        "reorder",
+        "notes",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Switch the note list between list and grid layout",
+      "description": "Switch the note list between list and grid layout as documented for Omni Notes.",
+      "actions": [
+        "Tap the overflow menu in the note list",
+        "tap the layout/\"Expanded view\" toggle to switch between the compact list and the expanded card layout"
+      ],
+      "keywords": [
+        "switch",
+        "note",
+        "between",
+        "grid",
+        "layout",
+        "overflow"
+      ],
+      "nav_hints": [
+        "expanded view",
+        "switch",
+        "note",
+        "between"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "View note details and statistics",
+      "description": "View note details and statistics as documented for Omni Notes.",
+      "actions": [
+        "Open a note",
+        "tap the overflow menu",
+        "tap \"Note info\"/\"Details\"",
+        "read the creation date, last modification date, word and character counts and the attachment count. The global statistics screen is reachable from Settings"
+      ],
+      "keywords": [
+        "note",
+        "details",
+        "statistics",
+        "overflow"
+      ],
+      "nav_hints": [
+        "note info",
+        "details",
+        "note",
+        "statistics"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Add the Omni Notes home screen widget",
+      "description": "Add the Omni Notes home screen widget as documented for Omni Notes.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Omni Notes",
+        "drag the widget onto the home screen",
+        "select the category or filter it should display",
+        "confirm"
+      ],
+      "keywords": [
+        "add",
+        "omni",
+        "notes",
+        "home",
+        "widget",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add",
+        "omni",
+        "notes",
+        "home"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Export a full backup",
+      "description": "Export a full backup as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Data\"",
+        "tap \"Export data\"/Backup",
+        "enter or confirm the backup name",
+        "choose whether to include settings",
+        "tap OK"
+      ],
+      "keywords": [
+        "export",
+        "full",
+        "backup",
+        "settings",
+        "data"
+      ],
+      "nav_hints": [
+        "data",
+        "export data",
+        "export",
+        "full"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Import data from a backup",
+      "description": "Import data from a backup as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Data\"",
+        "tap \"Import data\"",
+        "select the backup from the list",
+        "confirm; the notes, attachments and (optionally) the settings are restored"
+      ],
+      "keywords": [
+        "import",
+        "data",
+        "backup",
+        "settings"
+      ],
+      "nav_hints": [
+        "data",
+        "import data",
+        "import",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Schedule automatic backups",
+      "description": "Schedule automatic backups as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Data\"",
+        "enable the automatic backup option",
+        "choose the interval",
+        "confirm"
+      ],
+      "keywords": [
+        "schedule",
+        "automatic",
+        "backups",
+        "settings",
+        "data"
+      ],
+      "nav_hints": [
+        "data",
+        "schedule",
+        "automatic",
+        "backups"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Delete an existing backup",
+      "description": "Delete an existing backup as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Data\"",
+        "tap the import/backup list",
+        "long-press the backup entry",
+        "tap Delete",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "existing",
+        "backup",
+        "settings",
+        "data"
+      ],
+      "nav_hints": [
+        "data",
+        "delete",
+        "existing",
+        "backup"
+      ]
+    },
+    {
+      "id": "GT041",
+      "name": "Change the interface language",
+      "description": "Change the interface language as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Interface\"",
+        "tap \"Language\"",
+        "select the language from the list"
+      ],
+      "keywords": [
+        "change",
+        "interface",
+        "language",
+        "settings"
+      ],
+      "nav_hints": [
+        "interface",
+        "language",
+        "change"
+      ]
+    },
+    {
+      "id": "GT042",
+      "name": "Change the app colours and theme",
+      "description": "Change the app colours and theme as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Interface\"",
+        "set the navigation drawer colour, the note-list colour behaviour and the dark/light theme options"
+      ],
+      "keywords": [
+        "change",
+        "colours",
+        "theme",
+        "settings",
+        "interface"
+      ],
+      "nav_hints": [
+        "interface",
+        "change",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT043",
+      "name": "Change the text size in the note list",
+      "description": "Change the text size in the note list as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Interface\"",
+        "tap the text size entry",
+        "choose the size"
+      ],
+      "keywords": [
+        "change",
+        "text",
+        "size",
+        "note",
+        "settings",
+        "interface"
+      ],
+      "nav_hints": [
+        "interface",
+        "change",
+        "text",
+        "size"
+      ]
+    },
+    {
+      "id": "GT044",
+      "name": "Configure the swipe gesture action",
+      "description": "Configure the swipe gesture action as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Behaviour\"/Navigation",
+        "choose what a swipe on a note does (archive or delete)",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "swipe",
+        "gesture",
+        "action",
+        "settings",
+        "behaviour"
+      ],
+      "nav_hints": [
+        "behaviour",
+        "configure",
+        "swipe",
+        "gesture"
+      ]
+    },
+    {
+      "id": "GT045",
+      "name": "Configure checklist behaviour",
+      "description": "Configure checklist behaviour as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Behaviour\"",
+        "set whether checked items move to the bottom, whether they are kept or removed on save, and whether unchecked items are shown first"
+      ],
+      "keywords": [
+        "configure",
+        "checklist",
+        "behaviour",
+        "settings"
+      ],
+      "nav_hints": [
+        "behaviour",
+        "configure",
+        "checklist"
+      ]
+    },
+    {
+      "id": "GT046",
+      "name": "Configure notification behaviour for reminders",
+      "description": "Configure notification behaviour for reminders as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Notifications\"",
+        "set the notification sound, vibration, LED and snooze delay",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "notification",
+        "behaviour",
+        "reminders",
+        "settings",
+        "notifications"
+      ],
+      "nav_hints": [
+        "notifications",
+        "configure",
+        "notification",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT047",
+      "name": "Set the password and recovery question",
+      "description": "Set the password and recovery question as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "tap \"Security\"",
+        "tap \"Password\"",
+        "enter the new password twice",
+        "enter the recovery question and answer",
+        "tap Confirm"
+      ],
+      "keywords": [
+        "password",
+        "recovery",
+        "question",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "security",
+        "password",
+        "recovery",
+        "question"
+      ]
+    },
+    {
+      "id": "GT048",
+      "name": "View the app version, changelog and licences",
+      "description": "View the app version, changelog and licences as documented for Omni Notes.",
+      "actions": [
+        "Open Settings",
+        "scroll to the \"About\"/Info section",
+        "tap it to read the version, the changelog, the privacy policy and the open-source licences"
+      ],
+      "keywords": [
+        "version",
+        "changelog",
+        "licences",
+        "settings",
+        "scroll",
+        "about"
+      ],
+      "nav_hints": [
+        "about",
+        "version",
+        "changelog",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

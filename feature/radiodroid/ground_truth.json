@@ -1,0 +1,762 @@
+{
+  "app": "RadioDroid",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official RadioDroid repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for RadioDroid (net.programmierecke.radiodroid2), version 0.86.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse popular radio stations",
+      "description": "Browse popular radio stations as documented for RadioDroid.",
+      "actions": [
+        "Open the app",
+        "open the \"Stations\" screen",
+        "switch between the sub-lists (for example most popular/top clicked, top voted, trending/recently clicked and recently changed)",
+        "tap a station to play it"
+      ],
+      "keywords": [
+        "browse",
+        "popular",
+        "radio",
+        "stations"
+      ],
+      "nav_hints": [
+        "stations",
+        "browse",
+        "popular",
+        "radio"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Search for a station by name",
+      "description": "Search for a station by name as documented for RadioDroid.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the station name",
+        "tap the search key",
+        "tap a result to play it"
+      ],
+      "keywords": [
+        "search",
+        "station",
+        "name",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "search",
+        "station",
+        "name"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Search stations by tag, country, language or state",
+      "description": "Search stations by tag, country, language or state as documented for RadioDroid.",
+      "actions": [
+        "Open the search screen",
+        "switch to the advanced/category search",
+        "choose the tag, country, state, language, codec or minimum bitrate criteria",
+        "run the search",
+        "tap a station"
+      ],
+      "keywords": [
+        "search",
+        "stations",
+        "tag",
+        "country",
+        "language",
+        "state"
+      ],
+      "nav_hints": [
+        "search",
+        "stations",
+        "tag",
+        "country"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Play a station",
+      "description": "Play a station as documented for RadioDroid.",
+      "actions": [
+        "Tap the station in any list",
+        "playback starts and the player bar appears at the bottom",
+        "tap the bar to expand the full player"
+      ],
+      "keywords": [
+        "play",
+        "station",
+        "any",
+        "playback",
+        "starts",
+        "player"
+      ],
+      "nav_hints": [
+        "play",
+        "station"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Stop playback",
+      "description": "Stop playback as documented for RadioDroid.",
+      "actions": [
+        "Tap the stop control in the player bar, the expanded player or the notification"
+      ],
+      "keywords": [
+        "stop",
+        "playback",
+        "control",
+        "player",
+        "bar",
+        "expanded"
+      ],
+      "nav_hints": [
+        "stop",
+        "playback"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Add a station to favourites",
+      "description": "Add a station to favourites as documented for RadioDroid.",
+      "actions": [
+        "Long-press the station in a list (or open its detail page)",
+        "tap the star/\"Add to favourites\" action; the station appears in the Favourites/Starred screen"
+      ],
+      "keywords": [
+        "add",
+        "station",
+        "favourites",
+        "long-press",
+        "detail",
+        "page"
+      ],
+      "nav_hints": [
+        "add to favourites",
+        "add",
+        "station",
+        "favourites"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Remove a station from favourites",
+      "description": "Remove a station from favourites as documented for RadioDroid.",
+      "actions": [
+        "Open the Favourites screen",
+        "long-press the station",
+        "tap the remove/unstar action",
+        "confirm"
+      ],
+      "keywords": [
+        "remove",
+        "station",
+        "favourites",
+        "long-press"
+      ],
+      "nav_hints": [
+        "remove",
+        "station",
+        "favourites"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Reorder favourite stations",
+      "description": "Reorder favourite stations as documented for RadioDroid.",
+      "actions": [
+        "Open the Favourites screen",
+        "long-press a station",
+        "drag it to the new position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "favourite",
+        "stations",
+        "favourites",
+        "long-press",
+        "station"
+      ],
+      "nav_hints": [
+        "reorder",
+        "favourite",
+        "stations"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "View station details",
+      "description": "View station details as documented for RadioDroid.",
+      "actions": [
+        "Tap a station",
+        "open its detail page",
+        "read the bitrate, codec, country, language, tags, click and vote counts, and the homepage link"
+      ],
+      "keywords": [
+        "station",
+        "details",
+        "detail",
+        "page"
+      ],
+      "nav_hints": [
+        "station",
+        "details"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Vote for a station",
+      "description": "Vote for a station as documented for RadioDroid.",
+      "actions": [
+        "Open the station detail page",
+        "tap the vote/thumbs-up action; the vote is sent to the radio-browser directory"
+      ],
+      "keywords": [
+        "vote",
+        "station",
+        "detail",
+        "page",
+        "thumbs-up",
+        "action"
+      ],
+      "nav_hints": [
+        "vote",
+        "station"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Open a station's homepage",
+      "description": "Open a station's homepage as documented for RadioDroid.",
+      "actions": [
+        "Open the station detail page",
+        "tap the homepage/website link",
+        "the page opens in the browser"
+      ],
+      "keywords": [
+        "station's",
+        "homepage",
+        "station",
+        "detail",
+        "page",
+        "website"
+      ],
+      "nav_hints": [
+        "station's",
+        "homepage"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Share a station",
+      "description": "Share a station as documented for RadioDroid.",
+      "actions": [
+        "Long-press the station (or open its detail page)",
+        "tap the share action",
+        "choose whether to share the stream URL or the station page",
+        "pick the target app"
+      ],
+      "keywords": [
+        "share",
+        "station",
+        "long-press",
+        "detail",
+        "page",
+        "action"
+      ],
+      "nav_hints": [
+        "share",
+        "station"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Record the stream to a file",
+      "description": "Record the stream to a file as documented for RadioDroid.",
+      "actions": [
+        "Start playing a station",
+        "tap the record button in the player (or the overflow menu",
+        "Record)",
+        "the stream is written to the configured recordings folder",
+        "tap the record button again to stop"
+      ],
+      "keywords": [
+        "record",
+        "stream",
+        "file",
+        "start",
+        "playing",
+        "station"
+      ],
+      "nav_hints": [
+        "record",
+        "stream",
+        "file"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Browse and play saved recordings",
+      "description": "Browse and play saved recordings as documented for RadioDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Recordings\"",
+        "tap a recording to play it",
+        "long-press to rename, share or delete it"
+      ],
+      "keywords": [
+        "browse",
+        "play",
+        "saved",
+        "recordings",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "recordings",
+        "browse",
+        "play",
+        "saved"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "View the played-track history",
+      "description": "View the played-track history as documented for RadioDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"History\"/the track history",
+        "review the songs reported by the stations you have listened to",
+        "tap an entry to search for it"
+      ],
+      "keywords": [
+        "played-track",
+        "history",
+        "navigation",
+        "drawer",
+        "track"
+      ],
+      "nav_hints": [
+        "history",
+        "played-track"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Set a sleep timer",
+      "description": "Set a sleep timer as documented for RadioDroid.",
+      "actions": [
+        "Open the expanded player or the overflow menu",
+        "tap \"Sleep timer\"",
+        "set the duration",
+        "confirm; playback stops when the timer runs out"
+      ],
+      "keywords": [
+        "sleep",
+        "timer",
+        "expanded",
+        "player",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sleep timer",
+        "sleep",
+        "timer"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Set a radio alarm clock",
+      "description": "Set a radio alarm clock as documented for RadioDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Alarm\"",
+        "tap the \"+\"/add action",
+        "pick the time",
+        "select the station to wake up to",
+        "choose the repeat days",
+        "set the volume ramp options",
+        "tap Save"
+      ],
+      "keywords": [
+        "radio",
+        "alarm",
+        "clock",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "alarm",
+        "radio",
+        "clock"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Enable, edit or delete an alarm",
+      "description": "Enable, edit or delete an alarm as documented for RadioDroid.",
+      "actions": [
+        "Open the Alarm screen",
+        "toggle the switch to enable or disable an alarm",
+        "tap it to change the time, station or repeat days",
+        "long-press to delete it"
+      ],
+      "keywords": [
+        "enable",
+        "edit",
+        "delete",
+        "alarm",
+        "toggle",
+        "switch"
+      ],
+      "nav_hints": [
+        "enable",
+        "edit",
+        "delete",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Import favourite stations from an M3U file",
+      "description": "Import favourite stations from an M3U file as documented for RadioDroid.",
+      "actions": [
+        "Open the navigation drawer or the Favourites overflow menu",
+        "tap the import option",
+        "select the .m3u file",
+        "confirm; the stations are added to the favourites"
+      ],
+      "keywords": [
+        "import",
+        "favourite",
+        "stations",
+        "m3u",
+        "file",
+        "navigation"
+      ],
+      "nav_hints": [
+        "import",
+        "favourite",
+        "stations",
+        "m3u"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Export favourite stations to an M3U file",
+      "description": "Export favourite stations to an M3U file as documented for RadioDroid.",
+      "actions": [
+        "Open the Favourites screen",
+        "tap the overflow menu",
+        "tap the export option",
+        "choose the destination",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "favourite",
+        "stations",
+        "m3u",
+        "file",
+        "favourites"
+      ],
+      "nav_hints": [
+        "export",
+        "favourite",
+        "stations",
+        "m3u"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Cast a station to a Chromecast device",
+      "description": "Cast a station to a Chromecast device as documented for RadioDroid.",
+      "actions": [
+        "Ensure the phone and the Chromecast are on the same network",
+        "tap the cast icon in the toolbar",
+        "select the device",
+        "playback moves to it"
+      ],
+      "keywords": [
+        "cast",
+        "station",
+        "chromecast",
+        "device",
+        "ensure",
+        "phone"
+      ],
+      "nav_hints": [
+        "cast",
+        "station",
+        "chromecast",
+        "device"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Send playback to an MPD server",
+      "description": "Send playback to an MPD server as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "open the MPD section",
+        "add the server address and port",
+        "confirm",
+        "then use the MPD action in the player or the overflow menu to send the current station to that server"
+      ],
+      "keywords": [
+        "send",
+        "playback",
+        "mpd",
+        "server",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "send",
+        "playback",
+        "mpd",
+        "server"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Control playback from the notification",
+      "description": "Control playback from the notification as documented for RadioDroid.",
+      "actions": [
+        "Start a station",
+        "pull down the notification shade",
+        "use the play/stop and record controls displayed there"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "notification",
+        "start",
+        "station",
+        "pull"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "notification"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Choose the media player engine",
+      "description": "Choose the media player engine as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "tap the player/playback section",
+        "choose between the system MediaPlayer and ExoPlayer",
+        "confirm"
+      ],
+      "keywords": [
+        "media",
+        "player",
+        "engine",
+        "settings",
+        "playback",
+        "section"
+      ],
+      "nav_hints": [
+        "media",
+        "player",
+        "engine"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Adjust the streaming buffer and resume behaviour",
+      "description": "Adjust the streaming buffer and resume behaviour as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "playback section",
+        "set the buffer size and the automatic reconnect/resume behaviour after a network interruption"
+      ],
+      "keywords": [
+        "adjust",
+        "streaming",
+        "buffer",
+        "resume",
+        "behaviour",
+        "settings"
+      ],
+      "nav_hints": [
+        "adjust",
+        "streaming",
+        "buffer",
+        "resume"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Set the recordings folder and naming",
+      "description": "Set the recordings folder and naming as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "open the recordings section",
+        "choose the destination directory",
+        "set the file naming scheme",
+        "confirm"
+      ],
+      "keywords": [
+        "recordings",
+        "folder",
+        "naming",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "recordings",
+        "folder",
+        "naming"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Restrict playback or downloads to Wi-Fi",
+      "description": "Restrict playback or downloads to Wi-Fi as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "find the network/metered connection option",
+        "enable the Wi-Fi-only behaviour",
+        "confirm"
+      ],
+      "keywords": [
+        "restrict",
+        "playback",
+        "downloads",
+        "wi-fi",
+        "settings",
+        "find"
+      ],
+      "nav_hints": [
+        "restrict",
+        "playback",
+        "downloads",
+        "wi-fi"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose the light, dark or black theme",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Change the station list layout and icon display",
+      "description": "Change the station list layout and icon display as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "open the appearance section",
+        "toggle whether station icons are loaded, and choose the list or grid layout",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "station",
+        "layout",
+        "display",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "change",
+        "station",
+        "layout",
+        "display"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Select the radio-browser server or mirror",
+      "description": "Select the radio-browser server or mirror as documented for RadioDroid.",
+      "actions": [
+        "Open Settings",
+        "open the server/advanced section",
+        "choose the automatic server selection or enter a specific radio-browser mirror",
+        "confirm"
+      ],
+      "keywords": [
+        "radio-browser",
+        "server",
+        "mirror",
+        "settings",
+        "advanced",
+        "section"
+      ],
+      "nav_hints": [
+        "radio-browser",
+        "server",
+        "mirror"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Add the home screen shortcut for a station",
+      "description": "Add the home screen shortcut for a station as documented for RadioDroid.",
+      "actions": [
+        "Long-press a station",
+        "tap the shortcut action (where available)",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "add",
+        "home",
+        "shortcut",
+        "station",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "add",
+        "home",
+        "shortcut",
+        "station"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for RadioDroid.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"About\"",
+        "read the version, the credits, the licence and the radio-browser attribution"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

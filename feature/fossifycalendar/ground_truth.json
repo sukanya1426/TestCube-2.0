@@ -1,0 +1,905 @@
+{
+  "app": "Fossify Calendar",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Calendar (org.fossify.calendar), version 1.10.3.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create an event",
+      "description": "Create an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button",
+        "tap \"Event\"",
+        "enter the title",
+        "set the start and end date and time",
+        "choose the event type/calendar",
+        "tap the save (tick) icon"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "event",
+        "create"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Create a task",
+      "description": "Create a task as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Task\"",
+        "enter the task title",
+        "set the date and time",
+        "add a reminder",
+        "tap the save icon; tasks can be ticked off from the event list"
+      ],
+      "keywords": [
+        "create",
+        "task"
+      ],
+      "nav_hints": [
+        "task",
+        "create"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Mark a task as done",
+      "description": "Mark a task as done as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event list or the day view",
+        "tap the task",
+        "tap the \"Mark completed\"/checkbox action; the task is shown struck through"
+      ],
+      "keywords": [
+        "mark",
+        "task",
+        "done",
+        "event",
+        "day"
+      ],
+      "nav_hints": [
+        "mark completed",
+        "mark",
+        "task",
+        "done"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Create an all-day event",
+      "description": "Create an all-day event as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap Event",
+        "toggle \"All-day\" on",
+        "set the date or the date range",
+        "tap save"
+      ],
+      "keywords": [
+        "create",
+        "all-day",
+        "event"
+      ],
+      "nav_hints": [
+        "all-day",
+        "create",
+        "event"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add a location to an event",
+      "description": "Add a location to an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the location field",
+        "type the address",
+        "tap save; tap the location in the detail view to open it in a map app"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "event",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "location",
+        "event"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Add a description to an event",
+      "description": "Add a description to an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the description field",
+        "type the text",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "description",
+        "event",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "add",
+        "description",
+        "event"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Set a repeating event with a custom rule",
+      "description": "Set a repeating event with a custom rule as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the repetition row",
+        "choose the interval (daily, weekly, monthly, yearly or a custom number of days/weeks/months)",
+        "set the repeat rule (for example the same weekday of the month or the last day of the month)",
+        "set the repeat limit (forever, until a date or after N occurrences)",
+        "tap save"
+      ],
+      "keywords": [
+        "repeating",
+        "event",
+        "custom",
+        "rule",
+        "editor",
+        "repetition"
+      ],
+      "nav_hints": [
+        "repeating",
+        "event",
+        "custom",
+        "rule"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Add several reminders to an event",
+      "description": "Add several reminders to an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the first reminder row and pick the lead time",
+        "tap the additional reminder rows to add up to three reminders",
+        "optionally set the notification type per reminder",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "several",
+        "reminders",
+        "event",
+        "editor",
+        "first"
+      ],
+      "nav_hints": [
+        "add",
+        "several",
+        "reminders",
+        "event"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Add attendees to an event",
+      "description": "Add attendees to an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open an event stored in a synced (CalDAV) calendar",
+        "tap the attendees row",
+        "type or select the contacts",
+        "tap save"
+      ],
+      "keywords": [
+        "add",
+        "attendees",
+        "event",
+        "stored",
+        "synced",
+        "caldav"
+      ],
+      "nav_hints": [
+        "add",
+        "attendees",
+        "event"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Set the event time zone",
+      "description": "Set the event time zone as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event editor",
+        "tap the time zone control",
+        "pick the time zone",
+        "tap save"
+      ],
+      "keywords": [
+        "event",
+        "time",
+        "zone",
+        "editor",
+        "control"
+      ],
+      "nav_hints": [
+        "event",
+        "time",
+        "zone"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Edit an event",
+      "description": "Edit an event as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the event",
+        "tap the edit (pencil) icon",
+        "change the values",
+        "tap save",
+        "for a repeating event choose whether to apply the change to this occurrence, this and future occurrences, or all occurrences"
+      ],
+      "keywords": [
+        "edit",
+        "event",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "event"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Duplicate an event",
+      "description": "Duplicate an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event",
+        "tap the overflow menu (three dots)",
+        "tap \"Duplicate\"",
+        "adjust the copy",
+        "tap save"
+      ],
+      "keywords": [
+        "duplicate",
+        "event",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "event"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Delete an event",
+      "description": "Delete an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event",
+        "tap the delete (bin) icon",
+        "choose the deletion scope for a repeating event",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "event",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "event"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Share an event",
+      "description": "Share an event as documented for Fossify Calendar.",
+      "actions": [
+        "Open the event",
+        "tap the overflow menu",
+        "tap \"Share\"/export as .ics",
+        "choose the destination app"
+      ],
+      "keywords": [
+        "share",
+        "event",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "event"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Switch between the calendar views",
+      "description": "Switch between the calendar views as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the view selector in the toolbar (or open the drawer)",
+        "choose Daily, Weekly, Monthly, Monthly by day, Yearly or Event list",
+        "the calendar redraws in that mode"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "calendar",
+        "views",
+        "selector",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "switch",
+        "between",
+        "calendar",
+        "views"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Navigate between periods",
+      "description": "Navigate between periods as documented for Fossify Calendar.",
+      "actions": [
+        "In any view",
+        "swipe horizontally to move to the previous or next day, week, month or year",
+        "tap the \"Today\" icon in the toolbar to jump back to the current date"
+      ],
+      "keywords": [
+        "navigate",
+        "between",
+        "periods",
+        "any",
+        "swipe",
+        "horizontally"
+      ],
+      "nav_hints": [
+        "today",
+        "navigate",
+        "between",
+        "periods"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Go to a specific date",
+      "description": "Go to a specific date as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Go to date\"",
+        "select the date",
+        "tap OK"
+      ],
+      "keywords": [
+        "specific",
+        "date",
+        "overflow"
+      ],
+      "nav_hints": [
+        "go to date",
+        "specific",
+        "date"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Search events",
+      "description": "Search events as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the text",
+        "tap a result to open the event"
+      ],
+      "keywords": [
+        "search",
+        "events",
+        "toolbar",
+        "text"
+      ],
+      "nav_hints": [
+        "search",
+        "events"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Create an event type with its own colour",
+      "description": "Create an event type with its own colour as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings (or the overflow menu)",
+        "tap \"Manage event types\"",
+        "tap the \"+\" button",
+        "enter the type name",
+        "pick a colour",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "own",
+        "colour",
+        "settings",
+        "overflow"
+      ],
+      "nav_hints": [
+        "manage event types",
+        "create",
+        "event",
+        "own"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Filter which event types are shown",
+      "description": "Filter which event types are shown as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Filter events by type\"",
+        "tick the types to display",
+        "tap OK"
+      ],
+      "keywords": [
+        "filter",
+        "which",
+        "event",
+        "types",
+        "shown",
+        "overflow"
+      ],
+      "nav_hints": [
+        "filter",
+        "which",
+        "event",
+        "types"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Import events from an ICS file",
+      "description": "Import events from an ICS file as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Import events\"",
+        "select the .ics file",
+        "choose the target event type",
+        "confirm"
+      ],
+      "keywords": [
+        "import",
+        "events",
+        "ics",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "import events",
+        "import",
+        "events",
+        "ics"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Export events to an ICS file",
+      "description": "Export events to an ICS file as documented for Fossify Calendar.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Export events\"",
+        "choose the event types to include and whether to export past events",
+        "choose the destination file",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "events",
+        "ics",
+        "file",
+        "overflow"
+      ],
+      "nav_hints": [
+        "export events",
+        "export",
+        "events",
+        "ics"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Import contact birthdays",
+      "description": "Import contact birthdays as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"Add birthdays from contacts\"/the birthdays entry",
+        "grant the contacts permission",
+        "confirm; birthdays appear as yearly events"
+      ],
+      "keywords": [
+        "import",
+        "contact",
+        "birthdays",
+        "settings",
+        "add",
+        "contacts"
+      ],
+      "nav_hints": [
+        "import",
+        "contact",
+        "birthdays"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Import contact anniversaries",
+      "description": "Import contact anniversaries as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the anniversaries entry",
+        "grant the contacts permission",
+        "confirm; anniversaries are added as yearly events"
+      ],
+      "keywords": [
+        "import",
+        "contact",
+        "anniversaries",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "import",
+        "contact",
+        "anniversaries"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Import public holidays",
+      "description": "Import public holidays as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"Add holidays\"",
+        "select the country/region",
+        "confirm; the public holidays are added as a separate event type"
+      ],
+      "keywords": [
+        "import",
+        "public",
+        "holidays",
+        "settings",
+        "add"
+      ],
+      "nav_hints": [
+        "add holidays",
+        "import",
+        "public",
+        "holidays"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Show events from synced CalDAV calendars",
+      "description": "Show events from synced CalDAV calendars as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"CalDAV sync\"",
+        "enable it",
+        "tick the accounts and calendars to display",
+        "confirm"
+      ],
+      "keywords": [
+        "show",
+        "events",
+        "synced",
+        "caldav",
+        "calendars",
+        "settings"
+      ],
+      "nav_hints": [
+        "caldav sync",
+        "show",
+        "events",
+        "synced"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Add the monthly calendar home screen widget",
+      "description": "Add the monthly calendar home screen widget as documented for Fossify Calendar.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Fossify Calendar",
+        "drag the monthly widget onto the home screen",
+        "set the background colour, transparency and text colour",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "monthly",
+        "calendar",
+        "home",
+        "widget",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add",
+        "monthly",
+        "calendar",
+        "home"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Add the event list home screen widget",
+      "description": "Add the event list home screen widget as documented for Fossify Calendar.",
+      "actions": [
+        "Long-press the home screen",
+        "tap Widgets",
+        "find Fossify Calendar",
+        "drag the event-list widget onto the home screen",
+        "configure its colours and the period it covers",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "event",
+        "home",
+        "widget",
+        "long-press",
+        "widgets"
+      ],
+      "nav_hints": [
+        "add",
+        "event",
+        "home",
+        "widget"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Change the start day of the week",
+      "description": "Change the start day of the week as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"Start week on\"",
+        "select the weekday",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "start",
+        "day",
+        "week",
+        "settings"
+      ],
+      "nav_hints": [
+        "start week on",
+        "change",
+        "start",
+        "day"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Show week numbers",
+      "description": "Show week numbers as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Show week numbers\" option"
+      ],
+      "keywords": [
+        "show",
+        "week",
+        "numbers",
+        "settings",
+        "toggle"
+      ],
+      "nav_hints": [
+        "show week numbers",
+        "show",
+        "week",
+        "numbers"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Set the default event duration, reminder and event type",
+      "description": "Set the default event duration, reminder and event type as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "open the \"New events\" section",
+        "set the default start time, the default duration, the default reminder and the default event type for new entries"
+      ],
+      "keywords": [
+        "default",
+        "event",
+        "duration",
+        "reminder",
+        "settings",
+        "new"
+      ],
+      "nav_hints": [
+        "new events",
+        "default",
+        "event",
+        "duration"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Configure reminder notification behaviour",
+      "description": "Configure reminder notification behaviour as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "open the reminders section",
+        "set the notification sound, vibration, whether reminders loop until dismissed, and the snooze delay"
+      ],
+      "keywords": [
+        "configure",
+        "reminder",
+        "notification",
+        "behaviour",
+        "settings",
+        "reminders"
+      ],
+      "nav_hints": [
+        "configure",
+        "reminder",
+        "notification",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Configure the weekly view display",
+      "description": "Configure the weekly view display as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "open the weekly view section",
+        "set the number of days shown, whether to start at the current time, whether all-day events are shown at the top and the row height"
+      ],
+      "keywords": [
+        "configure",
+        "weekly",
+        "display",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "weekly",
+        "display"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Configure the monthly view display",
+      "description": "Configure the monthly view display as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "open the monthly view section",
+        "toggle whether events are shown as dots or as text and whether grid lines are drawn"
+      ],
+      "keywords": [
+        "configure",
+        "monthly",
+        "display",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "configure",
+        "monthly",
+        "display"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "description": "Protect the app with a PIN, pattern or fingerprint as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock entry",
+        "choose the lock type",
+        "set the secret",
+        "confirm"
+      ],
+      "keywords": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "settings",
+        "app-lock"
+      ],
+      "nav_hints": [
+        "protect",
+        "pin",
+        "pattern",
+        "fingerprint"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and choose the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Calendar.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, version, licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

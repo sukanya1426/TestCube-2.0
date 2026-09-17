@@ -1,0 +1,616 @@
+{
+  "app": "Fossify Clock",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify Clock (org.fossify.clock), version F-Droid build 10.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "View the current time on the clock tab",
+      "description": "View the current time on the clock tab as documented for Fossify Clock.",
+      "actions": [
+        "Open the app",
+        "the Clock tab shows the current time and date for the device time zone"
+      ],
+      "keywords": [
+        "current",
+        "time",
+        "clock",
+        "tab",
+        "shows",
+        "date"
+      ],
+      "nav_hints": [
+        "current",
+        "time",
+        "clock",
+        "tab"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Add a time zone to the clock",
+      "description": "Add a time zone to the clock as documented for Fossify Clock.",
+      "actions": [
+        "Open the Clock tab",
+        "tap the \"+\" floating action button",
+        "tick the time zones to display",
+        "tap OK; the selected cities are listed with their local time"
+      ],
+      "keywords": [
+        "add",
+        "time",
+        "zone",
+        "clock",
+        "tab",
+        "floating"
+      ],
+      "nav_hints": [
+        "add",
+        "time",
+        "zone",
+        "clock"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Remove or reorder time zones",
+      "description": "Remove or reorder time zones as documented for Fossify Clock.",
+      "actions": [
+        "Open the Clock tab",
+        "tap the \"+\" button and untick a zone to remove it, or open Settings",
+        "\"Manage time zones\"/edit the list",
+        "drag the handles to reorder",
+        "confirm"
+      ],
+      "keywords": [
+        "remove",
+        "reorder",
+        "time",
+        "zones",
+        "clock",
+        "tab"
+      ],
+      "nav_hints": [
+        "manage time zones",
+        "remove",
+        "reorder",
+        "time"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Open the full-screen (screensaver) clock",
+      "description": "Open the full-screen (screensaver) clock as documented for Fossify Clock.",
+      "actions": [
+        "Open the Clock tab",
+        "tap the clock face",
+        "the dimmed full-screen clock is displayed",
+        "tap the screen or press back to exit"
+      ],
+      "keywords": [
+        "full-screen",
+        "screensaver",
+        "clock",
+        "tab",
+        "face"
+      ],
+      "nav_hints": [
+        "full-screen",
+        "screensaver",
+        "clock"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Create an alarm",
+      "description": "Create an alarm as documented for Fossify Clock.",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the \"+\" button",
+        "set the hour and minute in the picker",
+        "tap OK",
+        "select the repeat days",
+        "tap the label field and enter a name",
+        "choose the alarm sound",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "alarm",
+        "tab"
+      ],
+      "nav_hints": [
+        "create",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Enable or disable an alarm",
+      "description": "Enable or disable an alarm as documented for Fossify Clock.",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the toggle switch beside the alarm row"
+      ],
+      "keywords": [
+        "enable",
+        "disable",
+        "alarm",
+        "tab",
+        "toggle",
+        "switch"
+      ],
+      "nav_hints": [
+        "enable",
+        "disable",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Edit an alarm",
+      "description": "Edit an alarm as documented for Fossify Clock.",
+      "actions": [
+        "Open the Alarm tab",
+        "tap the alarm row",
+        "change the time, repeat days, label, sound or vibration",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "alarm",
+        "tab",
+        "row"
+      ],
+      "nav_hints": [
+        "edit",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Delete an alarm",
+      "description": "Delete an alarm as documented for Fossify Clock.",
+      "actions": [
+        "Open the Alarm tab",
+        "long-press the alarm",
+        "tap the delete (bin) icon",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "alarm",
+        "tab",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Set the alarm sound and vibration",
+      "description": "Set the alarm sound and vibration as documented for Fossify Clock.",
+      "actions": [
+        "Open an alarm for editing",
+        "tap the alarm sound entry and select a tone (or a file from storage)",
+        "toggle the vibration option",
+        "tap Save"
+      ],
+      "keywords": [
+        "alarm",
+        "sound",
+        "vibration",
+        "editing",
+        "entry",
+        "tone"
+      ],
+      "nav_hints": [
+        "alarm",
+        "sound",
+        "vibration"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Snooze or dismiss a ringing alarm",
+      "description": "Snooze or dismiss a ringing alarm as documented for Fossify Clock.",
+      "actions": [
+        "When the alarm rings",
+        "tap Snooze to postpone it by the configured interval, or tap Dismiss to stop it"
+      ],
+      "keywords": [
+        "snooze",
+        "dismiss",
+        "ringing",
+        "alarm",
+        "rings",
+        "postpone"
+      ],
+      "nav_hints": [
+        "snooze",
+        "dismiss",
+        "ringing",
+        "alarm"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Configure the snooze duration and maximum ring time",
+      "description": "Configure the snooze duration and maximum ring time as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "tap the snooze time entry and choose the delay",
+        "tap the \"Alarm max reminder duration\" entry and choose how long the alarm rings before it stops"
+      ],
+      "keywords": [
+        "configure",
+        "snooze",
+        "duration",
+        "maximum",
+        "ring",
+        "time"
+      ],
+      "nav_hints": [
+        "configure",
+        "snooze",
+        "duration",
+        "maximum"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Make the alarm volume increase gradually",
+      "description": "Make the alarm volume increase gradually as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "enable the \"Increase volume gradually\" option",
+        "set the ramp period if offered"
+      ],
+      "keywords": [
+        "make",
+        "alarm",
+        "volume",
+        "increase",
+        "gradually",
+        "settings"
+      ],
+      "nav_hints": [
+        "increase volume gradually",
+        "make",
+        "alarm",
+        "volume"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Use the stopwatch",
+      "description": "Use the stopwatch as documented for Fossify Clock.",
+      "actions": [
+        "Open the Stopwatch tab",
+        "tap Start",
+        "tap the lap button to record a lap",
+        "tap Stop to pause",
+        "tap Reset to clear it"
+      ],
+      "keywords": [
+        "stopwatch",
+        "tab",
+        "start"
+      ],
+      "nav_hints": [
+        "stopwatch"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Sort the recorded stopwatch laps",
+      "description": "Sort the recorded stopwatch laps as documented for Fossify Clock.",
+      "actions": [
+        "Open the Stopwatch tab with laps recorded",
+        "tap the sort/overflow control",
+        "choose the lap ordering (for example by lap number or lap time)",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "recorded",
+        "stopwatch",
+        "laps",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort",
+        "recorded",
+        "stopwatch",
+        "laps"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Create a timer",
+      "description": "Create a timer as documented for Fossify Clock.",
+      "actions": [
+        "Open the Timer tab",
+        "set the hours, minutes and seconds",
+        "tap Start; tap the \"+\" button to create an additional timer"
+      ],
+      "keywords": [
+        "create",
+        "timer",
+        "tab",
+        "hours",
+        "minutes",
+        "seconds"
+      ],
+      "nav_hints": [
+        "create",
+        "timer"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Label a timer and set its sound",
+      "description": "Label a timer and set its sound as documented for Fossify Clock.",
+      "actions": [
+        "Open the Timer tab",
+        "tap the settings/edit control on the timer",
+        "enter the label",
+        "choose the alert sound and the vibration option",
+        "confirm"
+      ],
+      "keywords": [
+        "label",
+        "timer",
+        "sound",
+        "tab",
+        "settings",
+        "edit"
+      ],
+      "nav_hints": [
+        "label",
+        "timer",
+        "sound"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Pause, resume, reset or delete a timer",
+      "description": "Pause, resume, reset or delete a timer as documented for Fossify Clock.",
+      "actions": [
+        "Open the Timer tab",
+        "tap the pause control to hold the countdown",
+        "tap it again to resume",
+        "tap the reset control to return it to the start value",
+        "tap the delete action to remove the timer"
+      ],
+      "keywords": [
+        "pause",
+        "resume",
+        "reset",
+        "delete",
+        "timer",
+        "tab"
+      ],
+      "nav_hints": [
+        "pause",
+        "resume",
+        "reset",
+        "delete"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Add the digital clock home screen widget",
+      "description": "Add the digital clock home screen widget as documented for Fossify Clock.",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets",
+        "find Fossify Clock",
+        "drag the widget onto the home screen",
+        "set the text colour, background colour and transparency",
+        "tap OK"
+      ],
+      "keywords": [
+        "add",
+        "digital",
+        "clock",
+        "home",
+        "widget",
+        "long-press"
+      ],
+      "nav_hints": [
+        "add",
+        "digital",
+        "clock",
+        "home"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Set the time format",
+      "description": "Set the time format as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Use 24-hour time format\" option (or follow the system setting)"
+      ],
+      "keywords": [
+        "time",
+        "format",
+        "settings",
+        "toggle",
+        "hour",
+        "follow"
+      ],
+      "nav_hints": [
+        "time",
+        "format"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Set the first day of the week",
+      "description": "Set the first day of the week as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Start week on\"/Sunday-first option",
+        "choose the weekday used by the alarm repeat selector"
+      ],
+      "keywords": [
+        "first",
+        "day",
+        "week",
+        "settings",
+        "start",
+        "sunday-first"
+      ],
+      "nav_hints": [
+        "start week on",
+        "first",
+        "day",
+        "week"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Keep the screen on in the clock tab",
+      "description": "Keep the screen on in the clock tab as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "enable the \"Keep the screen on\" option for the clock view"
+      ],
+      "keywords": [
+        "keep",
+        "clock",
+        "tab",
+        "settings",
+        "enable"
+      ],
+      "nav_hints": [
+        "keep",
+        "clock",
+        "tab"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Choose which tabs are visible",
+      "description": "Choose which tabs are visible as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "open the tabs section",
+        "tick the tabs to show (Clock, Alarm, Stopwatch, Timer)",
+        "confirm"
+      ],
+      "keywords": [
+        "which",
+        "tabs",
+        "visible",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "which",
+        "tabs",
+        "visible"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Make alarms ignore silent mode",
+      "description": "Make alarms ignore silent mode as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "toggle the option that allows alarms to sound even when the device is in silent or do-not-disturb mode"
+      ],
+      "keywords": [
+        "make",
+        "alarms",
+        "ignore",
+        "silent",
+        "mode",
+        "settings"
+      ],
+      "nav_hints": [
+        "make",
+        "alarms",
+        "ignore",
+        "silent"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Customise the app colours and theme",
+      "description": "Customise the app colours and theme as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme or set the text, background, primary and app-icon colours",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Change the app language and font size",
+      "description": "Change the app language and font size as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry and choose the language",
+        "tap the font size entry and choose the size"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "View the about screen, FAQ and licences",
+      "description": "View the about screen, FAQ and licences as documented for Fossify Clock.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version, the licences and the source repository link"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

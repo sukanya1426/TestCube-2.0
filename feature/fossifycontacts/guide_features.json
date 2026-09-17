@@ -1,0 +1,297 @@
+{
+  "app": "Fossify Contacts",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-38 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a contact",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "contact",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Add multiple phone numbers",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the phone section"
+      ],
+      "keywords": [
+        "add",
+        "multiple",
+        "phone",
+        "numbers"
+      ],
+      "nav_hints": [
+        "add",
+        "multiple",
+        "phone"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Add postal addresses",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the address section"
+      ],
+      "keywords": [
+        "add",
+        "postal",
+        "addresses",
+        "contact"
+      ],
+      "nav_hints": [
+        "add",
+        "postal",
+        "addresses"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Add the organisation",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "scroll to the organisation section"
+      ],
+      "keywords": [
+        "add",
+        "organisation",
+        "job",
+        "title"
+      ],
+      "nav_hints": [
+        "add",
+        "organisation",
+        "job"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Add notes",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "scroll to the notes field"
+      ],
+      "keywords": [
+        "add",
+        "notes",
+        "contact",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "notes",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Edit a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "tap the edit (pencil) icon"
+      ],
+      "keywords": [
+        "edit",
+        "contact",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Mark a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "tap the star icon in the toolbar; or long-press the contact in the list"
+      ],
+      "keywords": [
+        "mark",
+        "contact",
+        "favourite",
+        "star"
+      ],
+      "nav_hints": [
+        "add to favourites",
+        "mark",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Call a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "tap the phone number (or the call icon beside it); the dialler is opened with the number"
+      ],
+      "keywords": [
+        "call",
+        "contact",
+        "phone",
+        "number"
+      ],
+      "nav_hints": [
+        "call",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Send an email",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "tap the email address"
+      ],
+      "keywords": [
+        "send",
+        "email",
+        "contact",
+        "address"
+      ],
+      "nav_hints": [
+        "send",
+        "email",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Add contacts",
+      "description": "Open the Groups tab",
+      "actions": [
+        "Open the Groups tab",
+        "tap the group"
+      ],
+      "keywords": [
+        "add",
+        "contacts",
+        "group",
+        "groups"
+      ],
+      "nav_hints": [
+        "add",
+        "contacts",
+        "group"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Send a message",
+      "description": "Open the Groups tab",
+      "actions": [
+        "Open the Groups tab",
+        "tap the group"
+      ],
+      "keywords": [
+        "send",
+        "message",
+        "email",
+        "whole"
+      ],
+      "nav_hints": [
+        "send",
+        "message",
+        "email"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Sort the contact list",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Sort by\""
+      ],
+      "keywords": [
+        "sort",
+        "contact",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Choose",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap \"Manage shown contact fields\""
+      ],
+      "keywords": [
+        "which",
+        "fields",
+        "visible",
+        "contact"
+      ],
+      "nav_hints": [
+        "which",
+        "fields",
+        "visible"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Merge duplicate contacts",
+      "description": "Open the contact list",
+      "actions": [
+        "Open the contact list",
+        "long-press the contacts to select them"
+      ],
+      "keywords": [
+        "merge",
+        "duplicate",
+        "contacts",
+        "contact"
+      ],
+      "nav_hints": [
+        "merge",
+        "duplicate",
+        "contacts"
+      ],
+      "source": "guide"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "app": "Etar Calendar",
+  "source": "guide",
+  "url": "Official Etar repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-40 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create an event",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Create an event",
+      "description": "Open the day or week view",
+      "actions": [
+        "Open the day or week view",
+        "long-press the empty time slot"
+      ],
+      "keywords": [
+        "create",
+        "event",
+        "long-pressing",
+        "time"
+      ],
+      "nav_hints": [
+        "create",
+        "event",
+        "long-pressing"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Add a description",
+      "description": "Open the event editor",
+      "actions": [
+        "Open the event editor",
+        "tap the description/notes field"
+      ],
+      "keywords": [
+        "add",
+        "description",
+        "event",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "description",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Add reminders",
+      "description": "Open the event editor",
+      "actions": [
+        "Open the event editor",
+        "tap \"Add reminder\""
+      ],
+      "keywords": [
+        "add",
+        "reminders",
+        "event",
+        "editor"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "add",
+        "reminders"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G005",
+      "name": "Set the availability",
+      "description": "Open the event editor",
+      "actions": [
+        "Open the event editor",
+        "tap the availability selector and choose Busy or Free"
+      ],
+      "keywords": [
+        "availability",
+        "privacy",
+        "event",
+        "editor"
+      ],
+      "nav_hints": [
+        "availability",
+        "privacy",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Edit an event",
+      "description": "Tap the event in any view",
+      "actions": [
+        "Tap the event in any view",
+        "tap the edit (pencil) icon"
+      ],
+      "keywords": [
+        "edit",
+        "event",
+        "any",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G007",
+      "name": "Duplicate an event",
+      "description": "Tap the event",
+      "actions": [
+        "Tap the event",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "duplicate",
+        "event",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "duplicate",
+        "event"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Switch",
+      "description": "Open the navigation drawer (hamburger icon)",
+      "actions": [
+        "Open the navigation drawer (hamburger icon)",
+        "tap \"Day\""
+      ],
+      "keywords": [
+        "switch",
+        "day",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "day",
+        "switch"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Switch",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "tap \"Month\""
+      ],
+      "keywords": [
+        "switch",
+        "month",
+        "drawer"
+      ],
+      "nav_hints": [
+        "month",
+        "switch"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G010",
+      "name": "Jump",
+      "description": "Tap the \"Today\" icon in the toolbar (the calendar icon showing the current date)",
+      "actions": [
+        "Tap the \"Today\" icon in the toolbar (the calendar icon showing the current date)",
+        "the view scrolls to the current date"
+      ],
+      "keywords": [
+        "jump",
+        "today",
+        "toolbar",
+        "calendar"
+      ],
+      "nav_hints": [
+        "today",
+        "jump"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Search events",
+      "description": "Tap the search icon in the toolbar",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the text to look for"
+      ],
+      "keywords": [
+        "search",
+        "events",
+        "toolbar",
+        "text"
+      ],
+      "nav_hints": [
+        "search",
+        "events"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Create a local calendar",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "tap the calendars/\"Add offline calendar\" entry"
+      ],
+      "keywords": [
+        "create",
+        "local",
+        "offline",
+        "calendar"
+      ],
+      "nav_hints": [
+        "add offline calendar",
+        "create",
+        "local"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G013",
+      "name": "Export events",
+      "description": "Open the overflow menu",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Export\""
+      ],
+      "keywords": [
+        "export",
+        "events",
+        "ics",
+        "file"
+      ],
+      "nav_hints": [
+        "export",
+        "events",
+        "ics"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Snooze",
+      "description": "When the reminder notification appears",
+      "actions": [
+        "When the reminder notification appears",
+        "tap \"Snooze\" to postpone it by the configured interval, or tap \"Dismiss\" to clear it"
+      ],
+      "keywords": [
+        "snooze",
+        "dismiss",
+        "event",
+        "notification"
+      ],
+      "nav_hints": [
+        "snooze",
+        "dismiss",
+        "event"
+      ],
+      "source": "guide"
+    }
+  ]
+}

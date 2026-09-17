@@ -1,0 +1,970 @@
+{
+  "app": "Aegis Authenticator",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Aegis repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Aegis Authenticator (com.beemdevelopment.aegis), version 3.4.2.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create and encrypt the vault on first launch",
+      "description": "Create and encrypt the vault on first launch as documented for Aegis Authenticator.",
+      "actions": [
+        "Install and open the app",
+        "tap through the welcome screens",
+        "choose to protect the vault with a password",
+        "enter the password twice",
+        "tap Next",
+        "optionally enable biometric unlock",
+        "tap Finish"
+      ],
+      "keywords": [
+        "create",
+        "encrypt",
+        "vault",
+        "first",
+        "launch",
+        "install"
+      ],
+      "nav_hints": [
+        "create",
+        "encrypt",
+        "vault",
+        "first"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Unlock the vault with a password",
+      "description": "Unlock the vault with a password as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the app",
+        "type the vault password in the unlock screen",
+        "tap the unlock button"
+      ],
+      "keywords": [
+        "unlock",
+        "vault",
+        "password"
+      ],
+      "nav_hints": [
+        "unlock",
+        "vault",
+        "password"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Unlock the vault with biometrics",
+      "description": "Unlock the vault with biometrics as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "enable biometric unlock and authenticate",
+        "from then on, open the app and present the fingerprint (or face) at the unlock prompt"
+      ],
+      "keywords": [
+        "unlock",
+        "vault",
+        "biometrics",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "unlock",
+        "vault",
+        "biometrics"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Add an entry by scanning a QR code",
+      "description": "Add an entry by scanning a QR code as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the \"+\" floating action button",
+        "tap \"Scan a QR code\"",
+        "grant the camera permission",
+        "point the camera at the QR code",
+        "review the pre-filled details",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "entry",
+        "scanning",
+        "code",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "add",
+        "entry",
+        "scanning",
+        "code"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Add an entry from a QR code image",
+      "description": "Add an entry from a QR code image as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan an image\"/\"Scan image from gallery\"",
+        "select the picture containing the QR code",
+        "confirm the parsed entry",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "entry",
+        "code",
+        "image",
+        "scan",
+        "gallery"
+      ],
+      "nav_hints": [
+        "scan an image",
+        "add",
+        "entry",
+        "code"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Add an entry manually",
+      "description": "Add an entry manually as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Enter manually\"",
+        "enter the issuer and the account name",
+        "paste the shared secret",
+        "choose the type (TOTP, HOTP, Steam, Yandex or mOTP)",
+        "set the algorithm, digit count and period or counter",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "entry",
+        "manually"
+      ],
+      "nav_hints": [
+        "enter manually",
+        "add",
+        "entry",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Edit an entry",
+      "description": "Edit an entry as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the entry in the list (or long-press it)",
+        "tap the edit action",
+        "change the issuer, name, note, icon, group or token parameters",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "entry",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "edit",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Set a custom icon for an entry",
+      "description": "Set a custom icon for an entry as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the entry editor",
+        "tap the icon placeholder",
+        "choose to select an image from the device or pick one from an installed icon pack",
+        "crop it",
+        "tap Save"
+      ],
+      "keywords": [
+        "custom",
+        "entry",
+        "editor",
+        "placeholder"
+      ],
+      "nav_hints": [
+        "custom",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Import an icon pack",
+      "description": "Import an icon pack as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Icon packs\"",
+        "tap the import action",
+        "select the icon pack archive",
+        "confirm; the icons become available in the entry editor"
+      ],
+      "keywords": [
+        "import",
+        "pack",
+        "settings",
+        "packs"
+      ],
+      "nav_hints": [
+        "icon packs",
+        "import",
+        "pack"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Copy a code to the clipboard",
+      "description": "Copy a code to the clipboard as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the entry list",
+        "tap the entry (or its copy icon)",
+        "the current code is copied to the clipboard and a confirmation appears"
+      ],
+      "keywords": [
+        "copy",
+        "code",
+        "clipboard",
+        "entry"
+      ],
+      "nav_hints": [
+        "copy",
+        "code",
+        "clipboard"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Reveal a hidden code",
+      "description": "Reveal a hidden code as documented for Aegis Authenticator.",
+      "actions": [
+        "With the \"tap to reveal\" option enabled",
+        "tap the entry in the list",
+        "the code is shown for the configured number of seconds before being hidden again"
+      ],
+      "keywords": [
+        "reveal",
+        "hidden",
+        "code",
+        "enabled",
+        "entry"
+      ],
+      "nav_hints": [
+        "tap to reveal",
+        "reveal",
+        "hidden",
+        "code"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Generate the next HOTP code",
+      "description": "Generate the next HOTP code as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the list",
+        "find the counter-based entry",
+        "tap the refresh/next-code button on that entry; the counter is incremented and the new code is displayed"
+      ],
+      "keywords": [
+        "generate",
+        "next",
+        "hotp",
+        "code",
+        "find",
+        "counter-based"
+      ],
+      "nav_hints": [
+        "generate",
+        "next",
+        "hotp",
+        "code"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Search entries",
+      "description": "Search entries as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type part of the issuer or account name",
+        "the list filters as you type"
+      ],
+      "keywords": [
+        "search",
+        "entries",
+        "toolbar",
+        "part",
+        "issuer",
+        "account"
+      ],
+      "nav_hints": [
+        "search",
+        "entries"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Sort the entry list",
+      "description": "Sort the entry list as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort\"",
+        "choose the order (custom/manual, alphabetical by issuer, alphabetical by account, or last used)",
+        "confirm"
+      ],
+      "keywords": [
+        "sort",
+        "entry",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Reorder entries manually",
+      "description": "Reorder entries manually as documented for Aegis Authenticator.",
+      "actions": [
+        "Set the sort order to custom",
+        "long-press an entry",
+        "drag it to its new position",
+        "release"
+      ],
+      "keywords": [
+        "reorder",
+        "entries",
+        "manually",
+        "sort",
+        "order",
+        "custom"
+      ],
+      "nav_hints": [
+        "reorder",
+        "entries",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Create a group",
+      "description": "Create a group as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Manage groups\"",
+        "tap the \"+\"/add action",
+        "enter the group name",
+        "tap Save"
+      ],
+      "keywords": [
+        "create",
+        "group",
+        "overflow",
+        "manage",
+        "groups"
+      ],
+      "nav_hints": [
+        "manage groups",
+        "create",
+        "group"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Assign an entry to a group",
+      "description": "Assign an entry to a group as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the entry editor",
+        "tap the group selector",
+        "tick the group(s)",
+        "confirm",
+        "tap Save"
+      ],
+      "keywords": [
+        "assign",
+        "entry",
+        "group",
+        "editor",
+        "selector"
+      ],
+      "nav_hints": [
+        "assign",
+        "entry",
+        "group"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Filter the list by group",
+      "description": "Filter the list by group as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the group chip bar at the top of the list (or the filter icon)",
+        "select the group",
+        "only its entries are shown",
+        "tap the \"All\" chip to clear the filter"
+      ],
+      "keywords": [
+        "filter",
+        "group",
+        "chip",
+        "bar",
+        "top"
+      ],
+      "nav_hints": [
+        "all",
+        "filter",
+        "group"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Rename or delete a group",
+      "description": "Rename or delete a group as documented for Aegis Authenticator.",
+      "actions": [
+        "Open the overflow menu",
+        "tap \"Manage groups\"",
+        "tap the group",
+        "tap Rename and enter the new name, or tap Delete and confirm"
+      ],
+      "keywords": [
+        "rename",
+        "delete",
+        "group",
+        "overflow",
+        "manage",
+        "groups"
+      ],
+      "nav_hints": [
+        "manage groups",
+        "rename",
+        "delete",
+        "group"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Delete an entry",
+      "description": "Delete an entry as documented for Aegis Authenticator.",
+      "actions": [
+        "Long-press the entry",
+        "tap the delete (bin) icon in the contextual toolbar",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "entry",
+        "long-press",
+        "bin",
+        "contextual",
+        "toolbar"
+      ],
+      "nav_hints": [
+        "delete",
+        "entry"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Select and act on multiple entries",
+      "description": "Select and act on multiple entries as documented for Aegis Authenticator.",
+      "actions": [
+        "Long-press the first entry",
+        "tap the further entries to add them",
+        "use the contextual toolbar to assign a group, delete or share/export them together"
+      ],
+      "keywords": [
+        "act",
+        "multiple",
+        "entries",
+        "long-press",
+        "first",
+        "entry"
+      ],
+      "nav_hints": [
+        "act",
+        "multiple",
+        "entries"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Export the vault as an encrypted file",
+      "description": "Export the vault as an encrypted file as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Import and export\"",
+        "tap \"Export\"",
+        "choose the encrypted format",
+        "confirm the warning",
+        "pick the destination file",
+        "the encrypted JSON vault is written"
+      ],
+      "keywords": [
+        "export",
+        "vault",
+        "encrypted",
+        "file",
+        "settings",
+        "import"
+      ],
+      "nav_hints": [
+        "import and export",
+        "export",
+        "vault",
+        "encrypted"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Export the vault in plain text or as HTML",
+      "description": "Export the vault in plain text or as HTML as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Import and export",
+        "tap Export",
+        "choose the plain-text JSON or the HTML/QR-code output",
+        "read and accept the security warning",
+        "pick the destination"
+      ],
+      "keywords": [
+        "export",
+        "vault",
+        "plain",
+        "text",
+        "html",
+        "settings"
+      ],
+      "nav_hints": [
+        "export",
+        "vault",
+        "plain",
+        "text"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Import a vault from Aegis or another authenticator",
+      "description": "Import a vault from Aegis or another authenticator as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Import and export\"",
+        "tap \"Import from file\"",
+        "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo)",
+        "select the exported file",
+        "enter its password if required",
+        "confirm the entries to import"
+      ],
+      "keywords": [
+        "import",
+        "vault",
+        "aegis",
+        "another",
+        "authenticator",
+        "settings"
+      ],
+      "nav_hints": [
+        "import and export",
+        "import from file",
+        "import",
+        "vault"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Import entries by scanning a Google Authenticator transfer QR code",
+      "description": "Import entries by scanning a Google Authenticator transfer QR code as documented for Aegis Authenticator.",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan a QR code\"",
+        "scan the export QR code produced by Google Authenticator",
+        "review the batch of entries",
+        "confirm the import"
+      ],
+      "keywords": [
+        "import",
+        "entries",
+        "scanning",
+        "google",
+        "authenticator",
+        "transfer"
+      ],
+      "nav_hints": [
+        "import",
+        "entries",
+        "scanning",
+        "google"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Set or change the vault password",
+      "description": "Set or change the vault password as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Security\"",
+        "tap the password entry",
+        "enter the current password",
+        "enter the new password twice",
+        "tap Save"
+      ],
+      "keywords": [
+        "change",
+        "vault",
+        "password",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "security",
+        "change",
+        "vault",
+        "password"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Add a second unlock method (password slot)",
+      "description": "Add a second unlock method (password slot) as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "tap the credential/slot management entry",
+        "add a biometric slot or an additional password slot",
+        "authenticate to confirm"
+      ],
+      "keywords": [
+        "add",
+        "second",
+        "unlock",
+        "method",
+        "password",
+        "slot"
+      ],
+      "nav_hints": [
+        "add",
+        "second",
+        "unlock",
+        "method"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Configure automatic locking",
+      "description": "Configure automatic locking as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "tap the auto-lock entry",
+        "tick when the vault should lock (for example when the screen turns off, when the back button is pressed, when the app is minimised, or after a timeout)",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "automatic",
+        "locking",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "configure",
+        "automatic",
+        "locking"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Set the lock timeout",
+      "description": "Set the lock timeout as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "tap the timeout entry",
+        "select the period of inactivity after which the vault relocks"
+      ],
+      "keywords": [
+        "lock",
+        "timeout",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "lock",
+        "timeout"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Block screenshots and screen recording",
+      "description": "Block screenshots and screen recording as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Security",
+        "enable the \"Secure screen\"/screenshot-blocking option; the entry list no longer appears in screenshots or in the recent-apps preview"
+      ],
+      "keywords": [
+        "block",
+        "screenshots",
+        "recording",
+        "settings",
+        "security"
+      ],
+      "nav_hints": [
+        "secure screen",
+        "block",
+        "screenshots",
+        "recording"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Enable a panic trigger",
+      "description": "Enable a panic trigger as documented for Aegis Authenticator.",
+      "actions": [
+        "Install a compatible panic-trigger app",
+        "open Settings",
+        "Security",
+        "enable the panic trigger and choose the response (for example lock the vault or wipe it)",
+        "confirm"
+      ],
+      "keywords": [
+        "enable",
+        "panic",
+        "trigger",
+        "install",
+        "compatible",
+        "panic-trigger"
+      ],
+      "nav_hints": [
+        "enable",
+        "panic",
+        "trigger"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Enable automatic backups to a folder",
+      "description": "Enable automatic backups to a folder as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Backups\"",
+        "enable the automatic backup option",
+        "choose the destination folder",
+        "set the number of backup versions to keep",
+        "confirm"
+      ],
+      "keywords": [
+        "enable",
+        "automatic",
+        "backups",
+        "folder",
+        "settings"
+      ],
+      "nav_hints": [
+        "backups",
+        "enable",
+        "automatic",
+        "folder"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Enable Android system backups",
+      "description": "Enable Android system backups as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Backups",
+        "enable the Android built-in backup option",
+        "confirm the warning about where the data is stored"
+      ],
+      "keywords": [
+        "enable",
+        "android",
+        "system",
+        "backups",
+        "settings"
+      ],
+      "nav_hints": [
+        "enable",
+        "android",
+        "system",
+        "backups"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"Appearance\"",
+        "tap the theme entry",
+        "choose light, dark, AMOLED black or \"follow system\"",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "appearance",
+        "follow system",
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Change the accent colour and dynamic colours",
+      "description": "Change the accent colour and dynamic colours as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Appearance",
+        "tap the accent colour entry",
+        "select the colour or enable the Material You dynamic colour option"
+      ],
+      "keywords": [
+        "change",
+        "accent",
+        "colour",
+        "dynamic",
+        "colours",
+        "settings"
+      ],
+      "nav_hints": [
+        "change",
+        "accent",
+        "colour",
+        "dynamic"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Change the entry list view mode",
+      "description": "Change the entry list view mode as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Appearance",
+        "tap the view mode entry",
+        "choose Normal, Compact or Small",
+        "return; the list density changes accordingly"
+      ],
+      "keywords": [
+        "change",
+        "entry",
+        "mode",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "change",
+        "entry",
+        "mode"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Configure code display and copy behaviour",
+      "description": "Configure code display and copy behaviour as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Appearance/Behaviour",
+        "toggle \"Tap to reveal\", set the reveal duration, choose whether tapping copies the code, choose whether codes are grouped into digit blocks, and set whether the account name is shown"
+      ],
+      "keywords": [
+        "configure",
+        "code",
+        "display",
+        "copy",
+        "behaviour",
+        "settings"
+      ],
+      "nav_hints": [
+        "tap to reveal",
+        "configure",
+        "code",
+        "display"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Highlight the entry whose code is about to expire",
+      "description": "Highlight the entry whose code is about to expire as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Appearance",
+        "enable the option that highlights entries or shows the expiry progress",
+        "return to the list"
+      ],
+      "keywords": [
+        "highlight",
+        "entry",
+        "whose",
+        "code",
+        "about",
+        "expire"
+      ],
+      "nav_hints": [
+        "highlight",
+        "entry",
+        "whose",
+        "code"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "Appearance",
+        "tap the Language entry",
+        "select the interface language",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "appearance"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for Aegis Authenticator.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the version number, the source repository link, the licence and the credits"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

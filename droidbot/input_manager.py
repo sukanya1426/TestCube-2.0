@@ -6,7 +6,9 @@ import subprocess
 import time
 
 from .input_event import EventLog
-from .input_policy import UtgBasedInputPolicy, UtgNaiveSearchPolicy, UtgGreedySearchPolicy, \
+from .run_budget import RunBudget, DEFAULT_GRACE_SECONDS, DEFAULT_RUN_SECONDS
+from .input_policy import InputInterruptedException, \
+                         UtgBasedInputPolicy, UtgNaiveSearchPolicy, UtgGreedySearchPolicy, \
                          UtgReplayPolicy, \
                          ManualPolicy, \
                          POLICY_NAIVE_DFS, POLICY_GREEDY_DFS, \
@@ -56,6 +58,9 @@ class InputManager(object):
         self.replay_output = replay_output
 
         self.monkey = None
+        # Wall-clock budget for the run. Started in start(), enforced in
+        # add_event() so it binds on every policy, not just feature_guided.
+        self.budget = RunBudget(seconds=0)
 
         if script_path is not None:
             f = open(script_path, 'r')
@@ -200,6 +205,11 @@ class InputManager(object):
             # Total actions the tool actually issued. Coverage is only
             # interpretable next to the effort that produced it.
             summary["total_actions"] = len(self.events)
+            # The budget, not the observed duration: this summary is written after
+            # the policy has finalised its reports, so "elapsed" here overstates the
+            # time actually spent exploring and is not comparable with a tool that
+            # stops measuring when its loop ends.
+            summary["budget_seconds"] = self.budget.seconds or None
             self.coverage_summary = summary
             output_dir = getattr(self.device, "output_dir", None)
             if output_dir:
@@ -231,6 +241,46 @@ class InputManager(object):
                 pass
             self.coverage_monitor = None
 
+    def _start_run_budget(self):
+        """Start the wall clock for this run.
+
+        The threshold comes from the feature-tester config so that one value
+        governs every policy; get_config() returns defaults even when no
+        feature spec is in play, which is what makes dfs_greedy obey the same
+        hour as feature_guided.
+        """
+        seconds = DEFAULT_RUN_SECONDS
+        grace = DEFAULT_GRACE_SECONDS
+        try:
+            from .feature_tester.config import get_config
+            cfg = get_config()
+            seconds = getattr(cfg, "max_run_seconds", seconds)
+            grace = getattr(cfg, "run_grace_seconds", grace)
+        except Exception as exc:
+            self.logger.warning("Using the default run budget: %s", exc)
+        self.budget = RunBudget(
+            seconds=seconds, grace=grace,
+            on_expire=self._write_reports_for_hard_stop,
+            logger=self.logger,
+        )
+        self.budget.start()
+
+    def _write_reports_for_hard_stop(self):
+        """Salvage the reports when the watchdog is about to kill the run.
+
+        Called from the watchdog thread, so it can only touch things that do
+        not need the event loop: the coverage summary, and whatever the policy
+        can write on its own.
+        """
+        self.enabled = False
+        self._stop_coverage_monitor()
+        finalize = getattr(self.policy, "finalize_on_hard_stop", None)
+        if callable(finalize):
+            try:
+                finalize()
+            except Exception as exc:
+                self.logger.warning("Could not finalize the policy report: %s", exc)
+
     def add_event(self, event):
         """
         add one event to the event list
@@ -239,6 +289,11 @@ class InputManager(object):
         """
         if event is None:
             return
+        # Checked here rather than only at the top of each policy loop:
+        # generating one event can take minutes of model calls, and an event
+        # produced after the deadline must not still be sent.
+        if self.budget.expired():
+            raise InputInterruptedException(self.budget.reason())
         self.events.append(event)
 
         event_log = EventLog(self.device, self.app, event, self.profiling_method)
@@ -256,6 +311,7 @@ class InputManager(object):
         """
         self.logger.info("start sending events, policy is %s" % self.policy_name)
         self._start_coverage_monitor()
+        self._start_run_budget()
 
         try:
             if self.policy is not None:
@@ -264,7 +320,7 @@ class InputManager(object):
                 self.device.start_app(self.app)
                 if self.event_count == 0:
                     return
-                while self.enabled:
+                while self.enabled and not self.budget.expired():
                     time.sleep(1)
             elif self.policy_name == POLICY_MONKEY:
                 throttle = self.event_interval * 1000
@@ -295,10 +351,16 @@ class InputManager(object):
                         state.save2dir()
         except KeyboardInterrupt:
             pass
+        except InputInterruptedException as exc:
+            # A policy that does not handle it itself (monkey, none, manual).
+            self.logger.info("stop sending events: %s" % exc)
 
         self._stop_coverage_monitor()
         self.stop()
-        self.logger.info("Finish sending events")
+        self.logger.info(
+            "Finish sending events (%d actions in %.0fs)",
+            len(self.events), self.budget.elapsed(),
+        )
 
     def stop(self):
         """

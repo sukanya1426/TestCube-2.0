@@ -466,6 +466,24 @@ class UtgBasedInputPolicy(InputPolicy):
         self.__future = Future()
         self.__llm_agent.set_future(self.__future)
 
+    def finalize_coverage(self):
+        """Take one last coverage sample before the run is torn down.
+
+        A time-bounded run stops mid-step, and update_code_coverage() otherwise
+        only fires at the start of the next one, so the final line of
+        codecoverage.txt would miss whatever the last step reached.
+        """
+        if self.__cv_monitor is not None:
+            self.__cv_monitor.update_code_coverage()
+            stop = getattr(self.__cv_monitor, "stop_logcat_listener", None)
+            if callable(stop):
+                stop()
+
+    def finalize_on_hard_stop(self):
+        """Last-resort save when the watchdog is about to kill the run."""
+        self.finalize_coverage()
+        self.debug_states()
+
     def debug_states(self):
         # print cluster
         with open(os.path.join(self.app.output_dir, 'debug_state.json'), 'w', encoding='utf-8') as file:

@@ -1,0 +1,875 @@
+{
+  "app": "Fossify File Manager",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Fossify File Manager (org.fossify.filemanager), version 1.6.1.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse internal storage, the SD card and USB storage",
+      "description": "Browse internal storage, the SD card and USB storage as documented for Fossify File Manager.",
+      "actions": [
+        "Open the app",
+        "tap the Storage tab",
+        "tap the volume to browse",
+        "tap folders to navigate",
+        "use the breadcrumb bar at the top to move back up"
+      ],
+      "keywords": [
+        "browse",
+        "internal",
+        "storage",
+        "card",
+        "usb",
+        "tab"
+      ],
+      "nav_hints": [
+        "browse",
+        "internal",
+        "storage",
+        "card"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "View storage usage by category",
+      "description": "View storage usage by category as documented for Fossify File Manager.",
+      "actions": [
+        "Open the Storage tab",
+        "review the used/free space bar",
+        "tap a category tile (Images, Videos, Audio, Documents, Archives, Others) to list all files of that type"
+      ],
+      "keywords": [
+        "storage",
+        "usage",
+        "category",
+        "tab",
+        "review",
+        "free"
+      ],
+      "nav_hints": [
+        "storage",
+        "usage",
+        "category"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "View recent files",
+      "description": "View recent files as documented for Fossify File Manager.",
+      "actions": [
+        "Open the \"Recents\" tab",
+        "scroll the list of recently modified files",
+        "tap a file to open it"
+      ],
+      "keywords": [
+        "recent",
+        "files",
+        "recents",
+        "tab",
+        "scroll",
+        "recently"
+      ],
+      "nav_hints": [
+        "recents",
+        "recent",
+        "files"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Add and open favourites",
+      "description": "Add and open favourites as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press a folder",
+        "tap the overflow menu",
+        "tap \"Add to favourites\"",
+        "open the Favourites section from the drawer/top bar to reach it later"
+      ],
+      "keywords": [
+        "add",
+        "favourites",
+        "long-press",
+        "folder",
+        "overflow"
+      ],
+      "nav_hints": [
+        "add to favourites",
+        "add",
+        "favourites"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Create a new folder",
+      "description": "Create a new folder as documented for Fossify File Manager.",
+      "actions": [
+        "Navigate to the target directory",
+        "tap the \"+\" floating action button",
+        "tap \"Folder\"",
+        "enter the folder name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "folder",
+        "navigate",
+        "target",
+        "directory"
+      ],
+      "nav_hints": [
+        "folder",
+        "create",
+        "new"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Create a new file",
+      "description": "Create a new file as documented for Fossify File Manager.",
+      "actions": [
+        "Navigate to the directory",
+        "tap the \"+\" button",
+        "tap \"File\"",
+        "enter the file name",
+        "tap OK"
+      ],
+      "keywords": [
+        "create",
+        "new",
+        "file",
+        "navigate",
+        "directory"
+      ],
+      "nav_hints": [
+        "file",
+        "create",
+        "new"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Copy files and folders",
+      "description": "Copy files and folders as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the copy icon (or the overflow menu",
+        "\"Copy to\")",
+        "select the destination folder",
+        "tap the confirm button"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "copy to",
+        "copy",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Move files and folders",
+      "description": "Move files and folders as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the move icon (or the overflow menu",
+        "\"Move to\")",
+        "choose the destination folder",
+        "tap the confirm button"
+      ],
+      "keywords": [
+        "move",
+        "files",
+        "folders",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "move to",
+        "move",
+        "files",
+        "folders"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Rename items",
+      "description": "Rename items as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item",
+        "tap the rename (pencil) icon",
+        "enter the new name",
+        "tap OK; selecting several items offers batch renaming with a name pattern or an appended value"
+      ],
+      "keywords": [
+        "rename",
+        "long-press",
+        "pencil"
+      ],
+      "nav_hints": [
+        "rename"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Delete items",
+      "description": "Delete items as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the delete (bin) icon",
+        "confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Select multiple items",
+      "description": "Select multiple items as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the first item",
+        "tap the further items to add them, or tap the select-all action in the contextual toolbar",
+        "apply the bulk operation"
+      ],
+      "keywords": [
+        "multiple",
+        "long-press",
+        "first",
+        "further",
+        "add",
+        "them"
+      ],
+      "nav_hints": [
+        "multiple"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Search for files",
+      "description": "Search for files as documented for Fossify File Manager.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the file name",
+        "the current folder and its subfolders are searched",
+        "tap a result to open it"
+      ],
+      "keywords": [
+        "search",
+        "files",
+        "toolbar",
+        "file",
+        "name"
+      ],
+      "nav_hints": [
+        "search",
+        "files"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Sort the file list",
+      "description": "Sort the file list as documented for Fossify File Manager.",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose name, date modified, size, extension or a random order",
+        "choose ascending or descending",
+        "optionally enable per-folder sorting",
+        "tap OK"
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "file"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Switch between list and grid view",
+      "description": "Switch between list and grid view as documented for Fossify File Manager.",
+      "actions": [
+        "Tap the overflow menu",
+        "tap \"Change view type\"",
+        "select Grid or List",
+        "optionally apply it to that folder only",
+        "tap OK"
+      ],
+      "keywords": [
+        "switch",
+        "between",
+        "grid",
+        "overflow",
+        "change"
+      ],
+      "nav_hints": [
+        "change view type",
+        "switch",
+        "between",
+        "grid"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Show or hide hidden items",
+      "description": "Show or hide hidden items as documented for Fossify File Manager.",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Temporarily show hidden\"/\"Show hidden items\"; the permanent setting is in Settings"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "overflow",
+        "toggle",
+        "temporarily"
+      ],
+      "nav_hints": [
+        "temporarily show hidden",
+        "show hidden items",
+        "show",
+        "hide"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Compress files into a ZIP archive",
+      "description": "Compress files into a ZIP archive as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the overflow menu",
+        "tap \"Compress\"",
+        "enter the archive name",
+        "optionally set a password",
+        "tap OK"
+      ],
+      "keywords": [
+        "compress",
+        "files",
+        "zip",
+        "archive",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "compress",
+        "files",
+        "zip",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Decompress a ZIP archive",
+      "description": "Decompress a ZIP archive as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the archive",
+        "tap the overflow menu",
+        "tap \"Decompress\"",
+        "choose the destination",
+        "enter the password if the archive is protected",
+        "tap OK"
+      ],
+      "keywords": [
+        "decompress",
+        "zip",
+        "archive",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "decompress",
+        "zip",
+        "archive"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Open a file with another app",
+      "description": "Open a file with another app as documented for Fossify File Manager.",
+      "actions": [
+        "Tap the file",
+        "pick the handler from the chooser; or long-press it",
+        "tap the overflow menu",
+        "tap \"Open with\"",
+        "select the app"
+      ],
+      "keywords": [
+        "file",
+        "another",
+        "pick",
+        "handler",
+        "chooser",
+        "long-press"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Share files",
+      "description": "Share files as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item(s)",
+        "tap the share icon",
+        "select the target app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "files",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "files"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "View file properties and checksums",
+      "description": "View file properties and checksums as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu",
+        "tap \"Properties\"",
+        "read the path, size, last-modified time, resolution or duration where relevant, and the MD5 checksum"
+      ],
+      "keywords": [
+        "file",
+        "properties",
+        "checksums",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "file",
+        "checksums"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Print a file",
+      "description": "Print a file as documented for Fossify File Manager.",
+      "actions": [
+        "Open an image or text file",
+        "tap the overflow menu",
+        "tap \"Print\"",
+        "choose the printer or \"Save as PDF\"",
+        "confirm"
+      ],
+      "keywords": [
+        "print",
+        "file",
+        "image",
+        "text",
+        "overflow"
+      ],
+      "nav_hints": [
+        "print",
+        "save as pdf",
+        "file"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Edit a text file in the built-in editor",
+      "description": "Edit a text file in the built-in editor as documented for Fossify File Manager.",
+      "actions": [
+        "Tap a text file",
+        "the built-in editor opens",
+        "edit the content",
+        "tap the save icon",
+        "tap back"
+      ],
+      "keywords": [
+        "edit",
+        "text",
+        "file",
+        "built-in",
+        "editor",
+        "opens"
+      ],
+      "nav_hints": [
+        "edit",
+        "text",
+        "file",
+        "built-in"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Set a folder as the home folder",
+      "description": "Set a folder as the home folder as documented for Fossify File Manager.",
+      "actions": [
+        "Navigate to the folder",
+        "tap the overflow menu",
+        "tap \"Set as home\"; the app opens in that folder from then on"
+      ],
+      "keywords": [
+        "folder",
+        "home",
+        "navigate",
+        "overflow"
+      ],
+      "nav_hints": [
+        "set as home",
+        "folder",
+        "home"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Create a home screen shortcut to a folder",
+      "description": "Create a home screen shortcut to a folder as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the folder",
+        "tap the overflow menu",
+        "tap \"Create shortcut\"",
+        "confirm the placement on the Android home screen"
+      ],
+      "keywords": [
+        "create",
+        "home",
+        "shortcut",
+        "folder",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create shortcut",
+        "create",
+        "home",
+        "shortcut"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Copy the path of an item",
+      "description": "Copy the path of an item as documented for Fossify File Manager.",
+      "actions": [
+        "Long-press the item",
+        "tap the overflow menu",
+        "tap \"Copy path to clipboard\""
+      ],
+      "keywords": [
+        "copy",
+        "path",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "copy",
+        "path"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Enable root access to browse system folders",
+      "description": "Enable root access to browse system folders as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "enable the root access option",
+        "grant the superuser request",
+        "the root (\"/\") volume becomes browsable"
+      ],
+      "keywords": [
+        "enable",
+        "root",
+        "access",
+        "browse",
+        "system",
+        "folders"
+      ],
+      "nav_hints": [
+        "enable",
+        "root",
+        "access",
+        "browse"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Protect hidden items with a PIN, pattern or fingerprint",
+      "description": "Protect hidden items with a PIN, pattern or fingerprint as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap \"Password protect hidden items\"",
+        "choose PIN, pattern or fingerprint",
+        "set the secret",
+        "confirm; hidden items now require authentication"
+      ],
+      "keywords": [
+        "protect",
+        "hidden",
+        "pin",
+        "pattern",
+        "fingerprint",
+        "settings"
+      ],
+      "nav_hints": [
+        "protect",
+        "hidden",
+        "pin",
+        "pattern"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Protect the whole app with a lock",
+      "description": "Protect the whole app with a lock as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the app-lock/\"Password protect the whole app\" entry",
+        "choose the lock type",
+        "set the secret",
+        "confirm; the app asks for it on launch"
+      ],
+      "keywords": [
+        "protect",
+        "whole",
+        "lock",
+        "settings",
+        "app-lock",
+        "password"
+      ],
+      "nav_hints": [
+        "protect",
+        "whole",
+        "lock"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Customise the colours and theme",
+      "description": "Customise the colours and theme as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap \"Customise colours\"",
+        "choose a preset theme (light, dark, black and white, system default) or set the text, background, primary and app-icon colours individually",
+        "tap the tick to save"
+      ],
+      "keywords": [
+        "customise",
+        "colours",
+        "theme",
+        "settings"
+      ],
+      "nav_hints": [
+        "customise colours",
+        "customise",
+        "colours",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Change the app language",
+      "description": "Change the app language as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the Language entry",
+        "select the language from the system language picker"
+      ],
+      "keywords": [
+        "change",
+        "language",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "language"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "Change the font size",
+      "description": "Change the font size as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the font size entry",
+        "choose small, medium, large or extra large",
+        "confirm"
+      ],
+      "keywords": [
+        "change",
+        "font",
+        "size",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "font",
+        "size"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Configure the delete confirmation and recycle bin behaviour",
+      "description": "Configure the delete confirmation and recycle bin behaviour as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Show a confirmation dialog before deleting\" option and the \"Move deleted files into the recycle bin\" option"
+      ],
+      "keywords": [
+        "configure",
+        "delete",
+        "confirmation",
+        "recycle",
+        "bin",
+        "behaviour"
+      ],
+      "nav_hints": [
+        "option and the",
+        "configure",
+        "delete",
+        "confirmation"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Empty or restore the recycle bin",
+      "description": "Empty or restore the recycle bin as documented for Fossify File Manager.",
+      "actions": [
+        "Open the drawer/overflow menu",
+        "tap \"Recycle bin\"",
+        "long-press an item and tap Restore, or tap the \"Empty the recycle bin\" action",
+        "confirm"
+      ],
+      "keywords": [
+        "empty",
+        "restore",
+        "recycle",
+        "bin",
+        "drawer",
+        "overflow"
+      ],
+      "nav_hints": [
+        "recycle bin",
+        "empty",
+        "restore",
+        "recycle"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Configure what the \"+\" button and the tabs show",
+      "description": "Configure what the \"+\" button and the tabs show as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "open the tabs/visibility section",
+        "enable or disable the Files, Recents and Storage tabs",
+        "confirm"
+      ],
+      "keywords": [
+        "configure",
+        "what",
+        "tabs",
+        "show",
+        "settings",
+        "visibility"
+      ],
+      "nav_hints": [
+        "configure",
+        "what",
+        "tabs",
+        "show"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Keep the last-modified date when copying",
+      "description": "Keep the last-modified date when copying as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "toggle the \"Keep the last modified date of copied files\" option"
+      ],
+      "keywords": [
+        "keep",
+        "last-modified",
+        "date",
+        "copying",
+        "settings",
+        "toggle"
+      ],
+      "nav_hints": [
+        "keep",
+        "last-modified",
+        "date",
+        "copying"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Enable thumbnails for media files",
+      "description": "Enable thumbnails for media files as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "toggle the option that shows image and video thumbnails in the file list"
+      ],
+      "keywords": [
+        "enable",
+        "thumbnails",
+        "media",
+        "files",
+        "settings",
+        "toggle"
+      ],
+      "nav_hints": [
+        "enable",
+        "thumbnails",
+        "media",
+        "files"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Open the about screen, FAQ and licences",
+      "description": "Open the about screen, FAQ and licences as documented for Fossify File Manager.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the FAQ, the version number, the licence list, the privacy policy and the links to the source repository. ## **Category: Calendar and contacts**"
+      ],
+      "keywords": [
+        "about",
+        "faq",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "faq",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

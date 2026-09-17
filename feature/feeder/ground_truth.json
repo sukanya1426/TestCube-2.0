@@ -1,0 +1,736 @@
+{
+  "app": "Feeder",
+  "platform": "Android",
+  "source": "apk_dataset_inventory",
+  "url": "Official Feeder repository documentation and F-Droid listing",
+  "description": "Hand-verified capability inventory for Feeder (com.nononsenseapps.feeder), version F-Droid build 4050.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Add a feed by URL",
+      "description": "Add a feed by URL as documented for Feeder.",
+      "actions": [
+        "Open the app",
+        "tap the \"+\" floating action button (Add feed)",
+        "paste or type the feed or website address",
+        "tap the search/find action",
+        "select the discovered feed from the results",
+        "optionally set the title and tag",
+        "tap OK/Save"
+      ],
+      "keywords": [
+        "add",
+        "feed",
+        "url",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "add",
+        "feed",
+        "url"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Add a feed by sharing a link from another app",
+      "description": "Add a feed by sharing a link from another app as documented for Feeder.",
+      "actions": [
+        "In a browser or another app, tap Share on the page link",
+        "choose Feeder",
+        "the add-feed screen opens with the URL pre-filled",
+        "confirm the discovered feed",
+        "tap Save"
+      ],
+      "keywords": [
+        "add",
+        "feed",
+        "sharing",
+        "link",
+        "another",
+        "browser"
+      ],
+      "nav_hints": [
+        "add",
+        "feed",
+        "sharing",
+        "link"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Edit a feed",
+      "description": "Edit a feed as documented for Feeder.",
+      "actions": [
+        "Open the navigation drawer",
+        "long-press the feed (or open it and use the overflow menu)",
+        "tap \"Edit feed\"",
+        "change the title, the tag, the full-text setting, the notification setting and the article opener",
+        "tap Save"
+      ],
+      "keywords": [
+        "edit",
+        "feed",
+        "navigation",
+        "drawer",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "edit feed",
+        "edit",
+        "feed"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Delete a feed",
+      "description": "Delete a feed as documented for Feeder.",
+      "actions": [
+        "Open the drawer",
+        "long-press the feed",
+        "tap \"Delete feed\"",
+        "confirm"
+      ],
+      "keywords": [
+        "delete",
+        "feed",
+        "drawer",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete feed",
+        "delete",
+        "feed"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Organise feeds into tags/groups",
+      "description": "Organise feeds into tags/groups as documented for Feeder.",
+      "actions": [
+        "Open the feed editor",
+        "tap the tag field",
+        "type a new tag name or pick an existing one",
+        "tap Save; the drawer then groups the feeds under that tag"
+      ],
+      "keywords": [
+        "organise",
+        "feeds",
+        "tags",
+        "groups",
+        "feed",
+        "editor"
+      ],
+      "nav_hints": [
+        "organise",
+        "feeds",
+        "tags",
+        "groups"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "Read an article",
+      "description": "Read an article as documented for Feeder.",
+      "actions": [
+        "Open a feed or the \"All feeds\" view",
+        "tap an article",
+        "the reader view opens with the title, image and text",
+        "scroll to read",
+        "swipe or use the navigation arrows to move to the next article"
+      ],
+      "keywords": [
+        "read",
+        "article",
+        "feed",
+        "all",
+        "feeds"
+      ],
+      "nav_hints": [
+        "all feeds",
+        "read",
+        "article"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Fetch the full article text",
+      "description": "Fetch the full article text as documented for Feeder.",
+      "actions": [
+        "Open the article",
+        "tap the \"Full text\"/reader toggle in the toolbar (or enable \"Fetch full articles\" for the feed in its editor)",
+        "the complete page content is downloaded and rendered"
+      ],
+      "keywords": [
+        "fetch",
+        "full",
+        "article",
+        "text",
+        "reader",
+        "toggle"
+      ],
+      "nav_hints": [
+        "full text",
+        "fetch full articles",
+        "fetch",
+        "full"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Open an article in the browser",
+      "description": "Open an article in the browser as documented for Feeder.",
+      "actions": [
+        "Open the article",
+        "tap the \"Open in browser\"/globe icon",
+        "the page opens in the default browser or a custom tab according to the settings"
+      ],
+      "keywords": [
+        "article",
+        "browser",
+        "globe"
+      ],
+      "nav_hints": [
+        "open in browser",
+        "article",
+        "browser"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Mark an article as read or unread",
+      "description": "Mark an article as read or unread as documented for Feeder.",
+      "actions": [
+        "In the article list",
+        "swipe the item sideways to toggle its read state, or open the article (which marks it read) and use the overflow menu",
+        "\"Mark as unread\""
+      ],
+      "keywords": [
+        "mark",
+        "article",
+        "read",
+        "unread",
+        "swipe",
+        "sideways"
+      ],
+      "nav_hints": [
+        "mark as unread",
+        "mark",
+        "article",
+        "read"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Mark all articles as read",
+      "description": "Mark all articles as read as documented for Feeder.",
+      "actions": [
+        "Open a feed or the All feeds view",
+        "tap the \"Mark all as read\"/tick-all icon in the toolbar",
+        "confirm"
+      ],
+      "keywords": [
+        "mark",
+        "all",
+        "articles",
+        "read",
+        "feed",
+        "feeds"
+      ],
+      "nav_hints": [
+        "mark",
+        "all",
+        "articles",
+        "read"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Star (bookmark) an article",
+      "description": "Star (bookmark) an article as documented for Feeder.",
+      "actions": [
+        "Open the article",
+        "tap the star/bookmark icon in the toolbar; starred articles are kept and can be filtered separately"
+      ],
+      "keywords": [
+        "star",
+        "bookmark",
+        "article",
+        "toolbar",
+        "starred",
+        "articles"
+      ],
+      "nav_hints": [
+        "star",
+        "bookmark",
+        "article"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Filter the article list",
+      "description": "Filter the article list as documented for Feeder.",
+      "actions": [
+        "Open the article list",
+        "tap the filter icon",
+        "choose to show all articles, only unread articles, only starred articles or only recently read ones",
+        "confirm"
+      ],
+      "keywords": [
+        "filter",
+        "article"
+      ],
+      "nav_hints": [
+        "filter",
+        "article"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Sort the article list",
+      "description": "Sort the article list as documented for Feeder.",
+      "actions": [
+        "Open the article list",
+        "tap the overflow menu (three dots)",
+        "tap the sort option",
+        "choose newest first or oldest first"
+      ],
+      "keywords": [
+        "sort",
+        "article",
+        "overflow",
+        "three",
+        "dots"
+      ],
+      "nav_hints": [
+        "sort",
+        "article"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "Search articles",
+      "description": "Search articles as documented for Feeder.",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "type the query",
+        "review the matching articles",
+        "tap one to open it"
+      ],
+      "keywords": [
+        "search",
+        "articles",
+        "toolbar",
+        "query"
+      ],
+      "nav_hints": [
+        "search",
+        "articles"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "Listen to an article with text to speech",
+      "description": "Listen to an article with text to speech as documented for Feeder.",
+      "actions": [
+        "Open the article",
+        "tap the \"Read aloud\"/text-to-speech icon in the toolbar",
+        "use the play, pause and stop controls",
+        "the reading continues in a notification"
+      ],
+      "keywords": [
+        "listen",
+        "article",
+        "text",
+        "speech",
+        "read",
+        "aloud"
+      ],
+      "nav_hints": [
+        "read aloud",
+        "listen",
+        "article",
+        "text"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Share an article",
+      "description": "Share an article as documented for Feeder.",
+      "actions": [
+        "Open the article",
+        "tap the share icon",
+        "choose the destination app in the Android share sheet"
+      ],
+      "keywords": [
+        "share",
+        "article"
+      ],
+      "nav_hints": [
+        "share",
+        "article"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "Refresh feeds manually",
+      "description": "Refresh feeds manually as documented for Feeder.",
+      "actions": [
+        "Open the article list",
+        "pull down to refresh, or tap the sync/refresh icon in the toolbar",
+        "wait for the update to complete"
+      ],
+      "keywords": [
+        "refresh",
+        "feeds",
+        "manually",
+        "article",
+        "pull",
+        "down"
+      ],
+      "nav_hints": [
+        "refresh",
+        "feeds",
+        "manually"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Configure automatic background syncing",
+      "description": "Configure automatic background syncing as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the synchronisation section",
+        "set the sync interval (for example every hour, every few hours or manually)",
+        "choose whether syncing is limited to Wi-Fi and whether it runs while charging only"
+      ],
+      "keywords": [
+        "configure",
+        "automatic",
+        "background",
+        "syncing",
+        "settings",
+        "synchronisation"
+      ],
+      "nav_hints": [
+        "configure",
+        "automatic",
+        "background",
+        "syncing"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Enable new-article notifications",
+      "description": "Enable new-article notifications as documented for Feeder.",
+      "actions": [
+        "Open Settings (or the feed editor)",
+        "enable notifications for the feed or globally",
+        "grant the Android notification permission",
+        "new items then produce a notification"
+      ],
+      "keywords": [
+        "enable",
+        "new-article",
+        "notifications",
+        "settings",
+        "feed",
+        "editor"
+      ],
+      "nav_hints": [
+        "enable",
+        "new-article",
+        "notifications"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Import feeds from an OPML file",
+      "description": "Import feeds from an OPML file as documented for Feeder.",
+      "actions": [
+        "Open the navigation drawer or Settings",
+        "tap \"Import feeds from OPML\"",
+        "select the .opml file with the picker",
+        "confirm; the feeds and their tags are added"
+      ],
+      "keywords": [
+        "import",
+        "feeds",
+        "opml",
+        "file",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "import",
+        "feeds",
+        "opml",
+        "file"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Export feeds to an OPML file",
+      "description": "Export feeds to an OPML file as documented for Feeder.",
+      "actions": [
+        "Open the drawer or Settings",
+        "tap \"Export feeds to OPML\"",
+        "choose the destination file name and folder",
+        "confirm"
+      ],
+      "keywords": [
+        "export",
+        "feeds",
+        "opml",
+        "file",
+        "drawer",
+        "settings"
+      ],
+      "nav_hints": [
+        "export",
+        "feeds",
+        "opml",
+        "file"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Synchronise read state between devices",
+      "description": "Synchronise read state between devices as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the device synchronisation section",
+        "tap \"Set up sync\"",
+        "create a sync chain on one device and copy the code/link",
+        "on the other device tap \"Join sync chain\" and paste it",
+        "confirm; read and starred states are then shared"
+      ],
+      "keywords": [
+        "synchronise",
+        "read",
+        "state",
+        "between",
+        "devices",
+        "settings"
+      ],
+      "nav_hints": [
+        "set up sync",
+        "join sync chain",
+        "synchronise",
+        "read"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Set how many articles are kept per feed",
+      "description": "Set how many articles are kept per feed as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "tap the \"Maximum number of items per feed\"/retention entry",
+        "choose the value",
+        "confirm"
+      ],
+      "keywords": [
+        "how",
+        "many",
+        "articles",
+        "kept",
+        "per",
+        "feed"
+      ],
+      "nav_hints": [
+        "how",
+        "many",
+        "articles",
+        "kept"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Choose the default article opener",
+      "description": "Choose the default article opener as documented for Feeder.",
+      "actions": [
+        "Open Settings (or the feed editor)",
+        "tap the \"Open articles with\" entry",
+        "choose the reader view, the custom tab or the external browser"
+      ],
+      "keywords": [
+        "default",
+        "article",
+        "opener",
+        "settings",
+        "feed",
+        "editor"
+      ],
+      "nav_hints": [
+        "open articles with",
+        "default",
+        "article",
+        "opener"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Change the theme",
+      "description": "Change the theme as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "tap the theme entry",
+        "choose light, dark, e-ink or \"follow system\"",
+        "optionally enable dynamic (Material You) colours or the pure-black dark theme"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "follow system",
+        "change",
+        "theme"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Change the reader font, text size and alignment",
+      "description": "Change the reader font, text size and alignment as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the reader/text section",
+        "set the font, the text size and whether the text is justified",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "reader",
+        "font",
+        "text",
+        "size",
+        "alignment"
+      ],
+      "nav_hints": [
+        "change",
+        "reader",
+        "font",
+        "text"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Control image loading",
+      "description": "Control image loading as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the image section",
+        "choose whether images are loaded always, only on Wi-Fi or never",
+        "optionally enable the thumbnail display in the article list"
+      ],
+      "keywords": [
+        "control",
+        "image",
+        "loading",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "control",
+        "image",
+        "loading"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Choose the swipe gesture behaviour",
+      "description": "Choose the swipe gesture behaviour as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the behaviour section",
+        "set what a swipe on an article row does (for example mark as read or nothing) and whether swiping between articles is enabled"
+      ],
+      "keywords": [
+        "swipe",
+        "gesture",
+        "behaviour",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "swipe",
+        "gesture",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Block articles by keyword",
+      "description": "Block articles by keyword as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "open the block list section",
+        "tap \"Add\"",
+        "enter the word or phrase to filter out",
+        "confirm; matching articles are hidden from the lists"
+      ],
+      "keywords": [
+        "block",
+        "articles",
+        "keyword",
+        "settings",
+        "section"
+      ],
+      "nav_hints": [
+        "add",
+        "block",
+        "articles",
+        "keyword"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Change the article list layout",
+      "description": "Change the article list layout as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "tap the feed item style/layout entry",
+        "choose the compact, card or super-compact presentation",
+        "return"
+      ],
+      "keywords": [
+        "change",
+        "article",
+        "layout",
+        "settings",
+        "feed",
+        "style"
+      ],
+      "nav_hints": [
+        "change",
+        "article",
+        "layout"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "View the about screen and licences",
+      "description": "View the about screen and licences as documented for Feeder.",
+      "actions": [
+        "Open Settings",
+        "tap \"About\"",
+        "read the version, the source link, the privacy policy and the open-source licences"
+      ],
+      "keywords": [
+        "about",
+        "licences",
+        "settings"
+      ],
+      "nav_hints": [
+        "about",
+        "licences"
+      ]
+    }
+  ],
+  "id_scheme": "GT### - independent of live README extraction IDs (F###)",
+  "note": "Generated by scripts/make_feature_specs.py from APK_DATASET.md. Evaluation only: never pass this file to a live run. The evaluator matches by name/description similarity, so IDs are not a join key."
+}

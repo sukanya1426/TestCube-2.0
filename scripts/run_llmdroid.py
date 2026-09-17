@@ -10,6 +10,11 @@ for the app being tested.
     python scripts/run_llmdroid.py --app spotube --tag SPOTUBE_SUPER_LOG
 
 Result lands in output/llmdroid/<app>/ alongside output/<app>/ for TestCube.
+
+Both tools are budgeted by wall clock (one hour by default), not by action
+count: whichever explores longer wins on coverage by default, so the hour has
+to be the same on both sides. Pass --timeout to change it, and give TestCube
+the same value via --max-run-seconds.
 """
 
 import argparse
@@ -29,8 +34,12 @@ def parse_args(argv=None):
     parser.add_argument("--apk", default=None, help="Override APK path")
     parser.add_argument("--out", default=None, help="Override output dir")
     parser.add_argument("--config", default=None, help="config.json to use (default: config.json.<app>)")
-    parser.add_argument("--timeout", type=int, default=2700)
-    parser.add_argument("--count", type=int, default=300)
+    parser.add_argument("--timeout", type=int, default=3600,
+                        help="Wall-clock budget in seconds (default: 3600, i.e. one hour). "
+                             "Must match TestCube's --max-run-seconds for the run to be comparable.")
+    parser.add_argument("--count", type=int, default=100000000,
+                        help="Cap on actions issued. Effectively unlimited by default so the "
+                             "wall clock is the only budget that binds, on both tools.")
     parser.add_argument("--interval", type=int, default=3)
     parser.add_argument("--policy", default="dfs_greedy")
     parser.add_argument("--code-coverage", dest="code_coverage", default="androlog",
@@ -74,7 +83,11 @@ def main(argv=None):
         "-timeout", str(args.timeout),
         "-count", str(args.count),
         "-interval", str(args.interval),
-        "-keep_app", "-keep_env", "-grant_perm",
+        # No -keep_app: droidbot installs only when the package is absent and
+        # uninstalls at teardown. Leaving the app behind means the next run of the
+        # same app skips its own install, inherits this run's logged-in state, and
+        # silently ignores -grant_perm because no install happens.
+        "-keep_env", "-grant_perm",
     ]
     print("[*] cwd: %s" % LLMDROID)
     print("[*] %s" % " ".join(command))
