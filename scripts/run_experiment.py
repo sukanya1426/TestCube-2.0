@@ -549,6 +549,12 @@ def choose_apps(cfg, catalogue, args):
     by_stem = dict((a["stem"], a) for a in catalogue["apps"])
     names = [s.strip() for s in args.apps.split(",") if s.strip()] if args.apps else list(APK_NAMES)
     count = args.count if args.count is not None else NUM_APKS
+    # --all and an explicit --count both mean "ignore the name list", otherwise
+    # there is no way to widen the run without editing the file.
+    if args.all or args.count is not None:
+        names = []
+    if args.all:
+        count = len(catalogue["apps"])
 
     if names:
         source = "--apps" if args.apps else "APK_NAMES in scripts/run_experiment.py"
@@ -571,10 +577,21 @@ def choose_apps(cfg, catalogue, args):
                              % (cfg["apk_dir"], ", ".join(missing), how))
         return chosen
 
-    source = "--count" if args.count is not None else "NUM_APKS in scripts/run_experiment.py"
+    source = ("--all" if args.all else
+              "--count" if args.count is not None else
+              "NUM_APKS in scripts/run_experiment.py")
     pool = [a for a in catalogue["apps"] if a["pool"] == "selected"]
+    if args.usable_only:
+        skipped = [a["stem"] for a in pool
+                   if str(a.get("instrumentation_status", "")).startswith("fail")]
+        pool = [a for a in pool
+                if not str(a.get("instrumentation_status", "")).startswith("fail")]
+        if skipped:
+            say("Skipping %d app(s) recorded as failing instrumentation: %s"
+                % (len(skipped), ", ".join(skipped)))
     present = [a for a in pool
-               if os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))]
+               if os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))
+               or cfg.get("auto_fetch_apks", True)]
     absent = [a["stem"] for a in pool if a not in present]
     say("Selecting the first %d app(s) with a binary (%s); %d of %d have one."
         % (count, source, len(present), len(pool)))
@@ -636,7 +653,12 @@ def main(argv=None):
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--config", default=CONFIG)
     parser.add_argument("--apps", default="", help="Comma-separated stems, overrides the config")
-    parser.add_argument("--count", type=int, default=None, help="How many apps to run")
+    parser.add_argument("--count", type=int, default=None,
+                        help="How many apps to run. Overrides APK_NAMES.")
+    parser.add_argument("--all", action="store_true",
+                        help="Run every selected app that has a binary. Overrides APK_NAMES.")
+    parser.add_argument("--usable-only", action="store_true",
+                        help="Skip apps already recorded as failing instrumentation.")
     parser.add_argument("--budget-seconds", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true", help="Print the plan and stop")
     parser.add_argument("--resume", action="store_true",
