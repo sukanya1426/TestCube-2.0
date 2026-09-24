@@ -13,7 +13,9 @@ needs in its config.json (Tag / TotalMethod).
 
 import argparse
 import os
+import shutil
 import struct
+import tempfile
 import subprocess
 import sys
 import zipfile
@@ -41,6 +43,88 @@ INT_DEC = 0x10000008
 ANDROID_NS = 130
 ATTR_LEN = 20
 MIN_SDK_FLOOR = 21
+
+
+# Binary AXML chunk types and layout. Resolving the attribute by NAME out of the
+# string pool is exact; the byte-pattern search below it is only a fallback.
+_RES_STRING_POOL = 0x001C0001
+_RES_START_TAG = 0x00100102          # type 0x0102 | headerSize 0x0010 << 16
+_UTF8_FLAG = 0x00000100
+_ATTR_SIZE = 20
+_ATTR_DATA_OFF = 16
+
+
+def _axml_strings(raw):
+    """Every string in the manifest's string pool, in index order."""
+    offset = 8                                   # past the file header
+    while offset + 8 <= len(raw):
+        chunk_type, chunk_size = struct.unpack_from("<II", raw, offset)
+        if chunk_type == _RES_STRING_POOL:
+            count, _styles, flags, strings_start = struct.unpack_from("<IIII", raw, offset + 8)
+            offsets_at = offset + 28
+            data_at = offset + strings_start
+            utf8 = bool(flags & _UTF8_FLAG)
+            out = []
+            for i in range(count):
+                try:
+                    rel, = struct.unpack_from("<I", raw, offsets_at + 4 * i)
+                    at = data_at + rel
+                    if utf8:
+                        n = raw[at + 1]
+                        if n & 0x80:             # two-byte length
+                            n = ((n & 0x7F) << 8) | raw[at + 2]
+                            at += 1
+                        out.append(bytes(raw[at + 2:at + 2 + n]).decode("utf-8", "replace"))
+                    else:
+                        n, = struct.unpack_from("<H", raw, at)
+                        if n & 0x8000:
+                            n = ((n & 0x7FFF) << 16) | struct.unpack_from("<H", raw, at + 2)[0]
+                            at += 2
+                        out.append(bytes(raw[at + 2:at + 2 + n * 2]).decode("utf-16-le", "replace"))
+                except Exception:
+                    out.append("")
+            return out
+        if chunk_size <= 0:
+            break
+        offset += chunk_size
+    return []
+
+
+def _find_min_sdk_by_name(raw):
+    """(offset, minSdk, targetSdk) found by resolving attribute names.
+
+    Walks the START_TAG chunks and matches the attribute literally called
+    minSdkVersion, rather than guessing from the shape of the bytes. Manifests
+    order and space their attributes freely, which is what defeats a pattern
+    match: markor declares minSdk 18 and was skipped entirely.
+    """
+    strings = _axml_strings(raw)
+    if not strings:
+        return None
+    offset, found = 8, {}
+    while offset + 8 <= len(raw):
+        chunk_type, chunk_size = struct.unpack_from("<II", raw, offset)
+        if chunk_type == _RES_START_TAG:
+            attr_start, _attr_size, attr_count = struct.unpack_from("<HHH", raw, offset + 24)
+            base = offset + 16 + attr_start
+            for i in range(attr_count):
+                at = base + i * _ATTR_SIZE
+                if at + _ATTR_SIZE > len(raw):
+                    break
+                _ns, name_idx = struct.unpack_from("<II", raw, at)
+                name = strings[name_idx] if 0 <= name_idx < len(strings) else ""
+                if name in ("minSdkVersion", "targetSdkVersion"):
+                    data_at = at + _ATTR_DATA_OFF
+                    value, = struct.unpack_from("<I", raw, data_at)
+                    found.setdefault(name, (data_at, value))
+        if chunk_size <= 0:
+            break
+        offset += chunk_size
+    if "minSdkVersion" not in found:
+        return None
+    data_at, value = found["minSdkVersion"]
+    target = found.get("targetSdkVersion", (0, 0))[1]
+    return data_at, value, target
 
 
 def _find_uses_sdk(raw):
@@ -82,7 +166,10 @@ def bump_min_sdk(src, dst, new_min=MIN_SDK_FLOOR):
     """Rewrite minSdkVersion. Returns True when a new APK was written."""
     with zipfile.ZipFile(src) as archive:
         raw = bytearray(archive.read("AndroidManifest.xml"))
-    found = _find_uses_sdk(raw)
+    found = _find_min_sdk_by_name(raw)
+    if not found:
+        # Fall back to the old byte-pattern search before giving up.
+        found = _find_uses_sdk(raw)
     if not found:
         print("[!] could not locate <uses-sdk> minSdkVersion; leaving APK as is")
         return False
@@ -137,10 +224,17 @@ def main(argv=None):
 
     source_apk = args.apk
     staged = None
+    staged_dir = None
     if args.bump_min_sdk:
-        staged = os.path.join(out_dir, ".minsdk-" + os.path.basename(args.apk))
+        # NOT in out_dir: AndroLog writes its result to <out_dir>/<basename of
+        # input>, so staging there makes the output path equal the input path.
+        # It truncates the file it is about to read and dies with "zip file is
+        # empty", which is why raising minSdk never actually worked.
+        staged_dir = tempfile.mkdtemp(prefix="testcube-minsdk-")
+        staged = os.path.join(staged_dir, os.path.basename(args.apk))
         if bump_min_sdk(args.apk, staged):
             source_apk = staged
+            print("[*] staged patched APK at %s" % staged)
         else:
             staged = None
 
@@ -161,14 +255,17 @@ def main(argv=None):
     produced = os.path.join(out_dir, os.path.basename(source_apk))
     if not os.path.exists(produced):
         sys.stderr.write("AndroLog reported success but no APK at %s\n" % produced)
+        if staged_dir:
+            shutil.rmtree(staged_dir, ignore_errors=True)
         return 1
     if staged:
         # Name the result after the original APK, and drop the staging copy.
         final = os.path.join(out_dir, os.path.basename(args.apk))
-        os.replace(produced, final)
+        if os.path.abspath(produced) != os.path.abspath(final):
+            os.replace(produced, final)
         produced = final
-        if os.path.exists(staged):
-            os.remove(staged)
+    if staged_dir:
+        shutil.rmtree(staged_dir, ignore_errors=True)
 
     total = total_methods_from_apk(produced)
     print("\n[✓] Instrumented APK: %s" % produced)

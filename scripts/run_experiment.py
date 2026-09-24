@@ -296,8 +296,15 @@ def instrument(app, cfg, log):
     stem, tag = app["stem"], app["coverage_tag"]
     source = os.path.join(REPO, cfg["apk_dir"], "%s.apk" % stem)
     target = os.path.join(REPO, cfg["instrumented_dir"], "%s.apk" % stem)
+    if not os.path.isfile(source) and cfg.get("auto_fetch_apks", True):
+        log.write(u"[%s] no APK at %s; fetching from F-Droid\n"
+                  % (stamp(), os.path.relpath(source, REPO)))
+        run([sys.executable, "scripts/fetch_apks.py", "--only", stem],
+            log=log, label="fetch", timeout=1800)
     if not os.path.isfile(source):
-        return None, "no APK at %s" % os.path.relpath(source, REPO), None
+        return None, ("no APK at %s (auto-fetch %s)"
+                      % (os.path.relpath(source, REPO),
+                         "failed" if cfg.get("auto_fetch_apks", True) else "disabled")), None
 
     if os.path.isfile(target) and cfg.get("skip_completed", True):
         log.write(u"[%s] already instrumented: %s\n" % (stamp(), os.path.relpath(target, REPO)))
@@ -557,9 +564,11 @@ def choose_apps(cfg, catalogue, args):
         missing = [a["stem"] for a in chosen
                    if not os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))]
         if missing:
-            sys.stderr.write("[!] named but no binary in %s/: %s\n"
-                             "    They will be reported as skipped_instrumentation.\n"
-                             % (cfg["apk_dir"], ", ".join(missing)))
+            how = ("they will be fetched from F-Droid at run time"
+                   if cfg.get("auto_fetch_apks", True)
+                   else "auto_fetch_apks is off, so they will be skipped")
+            sys.stderr.write("[i] no binary yet in %s/ for: %s\n    (%s)\n"
+                             % (cfg["apk_dir"], ", ".join(missing), how))
         return chosen
 
     source = "--count" if args.count is not None else "NUM_APKS in scripts/run_experiment.py"

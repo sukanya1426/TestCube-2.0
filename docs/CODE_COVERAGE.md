@@ -152,42 +152,95 @@ Run with `-code_coverage androlog`; `time` measures nothing.
 
 ## Which APKs work
 
-| APK | Classes | Obfuscated | Status |
-| --- | ---: | ---: | --- |
-| `money.apk` | 21,939 | 2.5% | ✅ 147,371 methods / 51 activities |
-| `newpipe.apk` (0.27.0) | 12,418 | 2.0% | ✅ 74,478 methods |
-| `newpipe-0.29.1.apk` | — | — | ❌ Soot `[0..1]` |
-| `vinyl.apk` | — | — | ❌ `VerifyError` in `MusicUtil.getSongInfoString` — app dies on startup while still *appearing* to run |
-| `spotube.apk` | 6,749 | 71.6% | ❌ Soot `[0..1]` |
-| `renpho.apk` | 90,405 | 3.0% | ❌ Soot `[0..1]` |
-| `tasks.apk` | 24,146 | 0.2% | ❌ Soot `[0..1]` |
-| `antennapod.apk` | 11,992 | 5.4% | ❌ Soot `[0..1]` |
+Measured by `scripts/survey_instrumentation.py` on 2026-09-24 across the 30 selected
+apps, after two bugs in `scripts/instrument_apk.py` were fixed (below).
+**20 of 30 instrument cleanly.** Re-measure at any time with:
+
+```bash
+python scripts/survey_instrumentation.py --redo
+```
+
+| APK | Methods | Status |
+| --- | ---: | --- |
+| `vlc` | 205,862 | OK |
+| `money` | 147,371 | OK |
+| `keepassdx` | 111,626 | OK |
+| `radiodroid` | 91,188 | OK |
+| `newpipe` | 74,478 | OK |
+| `fossifycontacts` | 62,716 | OK |
+| `markor` | 61,884 | OK |
+| `amaze` | 60,810 | OK |
+| `odyssey` | 55,027 | OK |
+| `fossifygallery` | 44,309 | OK |
+| `loophabits` | 41,715 | OK |
+| `opencamera` | 36,079 | OK |
+| `omninotes` | 33,780 | OK |
+| `materialfiles` | 33,328 | OK |
+| `fossifyvoicerecorder` | 29,941 | OK |
+| `fossifyclock` | 27,793 | OK |
+| `fossifynotes` | 26,609 | OK |
+| `aegis` | 26,432 | OK |
+| `opentasks` | 25,768 | OK |
+| `nononsensenotes` | 15,514 | OK |
+| `joplin` | - | FAIL Soot `[0..1]` |
+| `ankidroid` | - | FAIL Soot `[0..1]` |
+| `myexpenses` | - | FAIL `Invalid number of arguments` |
+| `fossifyfiles` | - | FAIL Soot `[0..1]` |
+| `etar` | - | FAIL Soot `[0..1]` |
+| `fossifycalendar` | - | FAIL Soot `[0..1]` |
+| `auxio` | - | FAIL Soot `[0..1]` |
+| `fossifymusic` | - | FAIL Soot `[0..1]` |
+| `transistor` | - | FAIL Soot `[0..1]` |
+| `feeder` | - | FAIL Soot `[0..1]` |
+
+The older APKs that predate the dataset (`spotube`, `renpho`, `tasks`, `antennapod`,
+`newpipe-0.29.1`) all failed on the Soot `[0..1]` bug, and `vinyl` produced dex that
+installs and launches while being silently dead (`VerifyError` in
+`MusicUtil.getSongInfoString`). They have not been retested since the fixes.
+
+### Two bugs that were hiding usable apps
+
+`minSdk < 21` blocks Soot's dex splitting, and the repo already had a patcher to
+raise it to 21. It never worked, for two independent reasons:
+
+1. **The field was never found.** The patcher matched the binary manifest by byte
+   *shape*, requiring `minSdkVersion` and `targetSdkVersion` to be adjacent with a
+   particular name-index spacing. Manifests order attributes freely, so it printed
+   `could not locate <uses-sdk> minSdkVersion` and gave up. It now parses the AXML
+   string pool and matches the attribute by name.
+2. **Staging overwrote its own input.** The patched APK went to
+   `apks/instrumented/.minsdk-<app>.apk`, which is exactly where AndroLog writes its
+   output. AndroLog truncated the file it was about to read and died with
+   `ZipException: zip file is empty`. Staging now uses a temp directory, cleaned up
+   on success and on failure.
+
+Fixing both unlocked four apps: `markor` (minSdk 18), `vlc` (17), `radiodroid` (16)
+and `keepassdx` (19) - including the two largest in the set, at 205,862 and 111,626
+methods. The lesson generalises: check the toolchain before blaming the app.
 
 ### The `[0..1]` failure
 
-Five of the six failures are one Soot 4.6.0 bug, not six app problems. Soot leaks its
-1-bit integer type (`Integer1Type`, printed `[0..1]`) out of the type assigner and then
-dies at whichever stage sees it first:
+Nine of the ten remaining failures are one Soot 4.6.0 bug, not nine app problems.
+Soot leaks its 1-bit integer type (`Integer1Type`, printed `[0..1]`) out of the type
+assigner and dies either while jimplifying (`Unexpected type [0..1]`) or while
+writing dex (`not found: [0..1]` in `PrimitiveType.getByName`).
 
-- while jimplifying — `InternalTypingException: Unexpected type [0..1] (Integer1Type)`
-  in `integer.ClassHierarchy.typeNode` (tasks)
-- while writing dex — `RuntimeException: not found: [0..1]` in
-  `toDex.PrimitiveType.getByName`, via `ExprVisitor.castPrimitive`
-  (renpho, antennapod, spotube, newpipe 0.29.1)
-
-**App selection does not avoid it.** Neither obfuscation nor dex format predicts it:
-tasks.apk is the cleanest APK measured (0.2% renamed classes) and still fails, while
-money.apk passes at dex 039 and newpipe 0.29.1 fails at dex 035.
+**App selection does not avoid it.** Neither obfuscation nor size predicts it:
+`etar` and `auxio` are small, clean, open-source apps that fail, while `vlc` at
+205,862 methods passes.
 
 Things that do NOT work, all verified here rather than assumed:
 
-- **`-n` / `-pkg`** — `SummaryBuilder` uses these only to decide whether to insert a
+- **`-n` / `-pkg`** - `SummaryBuilder` uses these only to decide whether to insert a
   probe. DexPrinter still writes every class, so the crash is untouched.
-- **`-p jb.tr use-older-type-assigner:true`** — strictly worse. It fails earlier and on
+- **`-p jb.tr use-older-type-assigner:true`** - strictly worse. It fails earlier and on
   a JDK class (`java.lang.ThreadGroup.uncaughtException`), with runaway recursion in
   `TypeVariable.fixAncestors`.
 
 Patching `PrimitiveType.getByName` to map `[0..1]` to boolean would silence the crash,
 but it is not safe for a measurement tool: coercing a type Soot failed to infer can emit
-subtly wrong bytecode, which is exactly the vinyl failure mode — an APK that installs and
+subtly wrong bytecode, which is exactly the vinyl failure mode - an APK that installs and
 launches but is quietly broken. Prefer an APK that instruments cleanly.
+
+`myexpenses` fails differently (`Invalid number of arguments` from AndroLog itself),
+which has not been diagnosed.
