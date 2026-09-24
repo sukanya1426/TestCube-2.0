@@ -19,9 +19,20 @@ under the same budget.
 
 **Prerequisites**
 
-1. `Python` 3, `Java`, `Android SDK`, with `platform-tools` on `PATH`
+1. `Python` 3, `Java` 17+, `Maven`, `Android SDK` with `platform-tools` on `PATH`
 2. An emulator or device on `adb`
 3. Ollama running the local VLM (both tools use it)
+
+**One-time setup after cloning** — `tools/` is gitignored, so a fresh clone has
+neither the AndroLog jar nor the Soot platform stubs. Without them *every* APK
+fails to instrument, which looks like broken APKs and is not:
+
+```bash
+bash scripts/setup_tools.sh        # clones + builds AndroLog, fetches platforms, smoke-tests
+```
+
+`run_experiment.py` refuses to start until this is done, and says so in a second
+rather than after downloading 1 GB of APKs.
 
 ```bash
 # terminal 1 - emulator

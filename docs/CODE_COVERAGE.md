@@ -5,6 +5,16 @@ AndroLog probes — the same mechanism LLMDroid uses, so the two are comparable.
 
 ## One-time setup
 
+`tools/` is gitignored, so a fresh clone has neither the AndroLog jar (26 MB) nor
+the Soot platform stubs. Without them **every** APK fails to instrument. The
+scripted route does all of this and smoke-tests the result:
+
+```bash
+bash scripts/setup_tools.sh
+```
+
+The manual equivalent:
+
 ```bash
 brew install maven                       # JDK 17+ also required
 git clone https://github.com/JordanSamhi/AndroLog.git tools/AndroLog

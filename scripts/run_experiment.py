@@ -600,6 +600,44 @@ def choose_apps(cfg, catalogue, args):
     return present[:count]
 
 
+ANDROLOG_JAR = os.path.join(REPO, "tools", "AndroLog", "target",
+                            "androlog-0.1-jar-with-dependencies.jar")
+ANDROID_PLATFORMS = os.path.join(REPO, "tools", "android-platforms")
+
+
+def check_toolchain():
+    """Fail immediately when the instrumentation toolchain is absent.
+
+    `tools/` is gitignored, so a fresh clone has neither the AndroLog jar nor the
+    Soot platform stubs. Without them every single APK fails to instrument, which
+    reads as "all the APKs are broken" rather than "one setup step was skipped".
+    Checked before anything is downloaded so that mistake costs a second, not a
+    1 GB download and twenty failed runs.
+    """
+    problems = []
+    if not os.path.isfile(ANDROLOG_JAR):
+        problems.append("AndroLog jar missing: %s" % os.path.relpath(ANDROLOG_JAR, REPO))
+    if not os.path.isdir(ANDROID_PLATFORMS) or not os.listdir(ANDROID_PLATFORMS):
+        problems.append("Android platforms missing: %s"
+                        % os.path.relpath(ANDROID_PLATFORMS, REPO))
+    try:
+        subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT)
+    except Exception:
+        problems.append("java not on PATH (JDK 17+ required)")
+    if not problems:
+        return True
+    sys.stderr.write(
+        "\nThe instrumentation toolchain is not set up, so every APK would fail:\n\n")
+    for problem in problems:
+        sys.stderr.write("  - %s\n" % problem)
+    sys.stderr.write(
+        "\ntools/ is gitignored, so a fresh clone never has these. Run the one-time\n"
+        "setup, which clones and builds them and then smoke-tests instrumentation:\n\n"
+        "    bash scripts/setup_tools.sh\n\n"
+        "Then re-run this command. See docs/CODE_COVERAGE.md for the manual steps.\n")
+    return False
+
+
 def prefetch_apks(apps, cfg, log_say=None):
     """Download every APK in the run list before the first app starts.
 
@@ -700,6 +738,8 @@ def main(argv=None):
 
     cfg = load_json(args.config)
     catalogue = load_json(CATALOGUE)
+    if not args.dry_run and not check_toolchain():
+        return 2
     if args.budget_seconds is not None:
         cfg["budget_seconds"] = args.budget_seconds
     if args.no_llmdroid:
