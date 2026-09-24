@@ -600,6 +600,38 @@ def choose_apps(cfg, catalogue, args):
     return present[:count]
 
 
+def prefetch_apks(apps, cfg, log_say=None):
+    """Download every APK in the run list before the first app starts.
+
+    The instrument step can fetch a missing APK on its own, but doing it up
+    front means a broken download or a vanished F-Droid build is reported in the
+    first minute rather than eighteen hours into a batch.
+    """
+    say_ = log_say or say
+    missing = [a["stem"] for a in apps
+               if not os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))]
+    if not missing:
+        say_("All %d APK(s) already in %s/." % (len(apps), cfg["apk_dir"]))
+        return [], []
+    if not cfg.get("auto_fetch_apks", True):
+        say_("%d APK(s) missing and auto_fetch_apks is off: %s"
+             % (len(missing), ", ".join(missing)))
+        return [], missing
+
+    say_("Fetching %d missing APK(s) from F-Droid: %s" % (len(missing), ", ".join(missing)))
+    rc, _ = run([sys.executable, "scripts/fetch_apks.py", "--only", ",".join(missing)],
+                label="fetch", timeout=120 * 60)
+    still = [stem for stem in missing
+             if not os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % stem))]
+    got = [stem for stem in missing if stem not in still]
+    if got:
+        say_("Fetched %d: %s" % (len(got), ", ".join(got)))
+    if still:
+        say_("Could NOT fetch %d: %s" % (len(still), ", ".join(still)))
+        say_("  They will be reported as skipped_instrumentation; the batch continues.")
+    return got, still
+
+
 def update_catalogue(results):
     """Record what instrumentation actually did, so the next run knows."""
     try:
@@ -714,15 +746,25 @@ def main(argv=None):
         if not os.path.isdir(path):
             os.makedirs(path)
 
+    missing_now = [a["stem"] for a in apps
+                   if not os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))]
     total_budget = len(apps) * 2 * (cfg["budget_seconds"] + cfg["grace_seconds"])
     say("\n%d app(s): %s" % (len(apps), ", ".join(a["stem"] for a in apps)))
     say("Budget %ds per tool per app -> worst case about %s in total."
           % (cfg["budget_seconds"], human(total_budget)))
     say("TestCube -> %s\nLLMDroid -> %s\nLogs     -> %s\n"
           % (cfg["testcube_output"], cfg["llmdroid_output"], cfg["log_dir"]))
+    if missing_now:
+        say("%d APK(s) not yet downloaded: %s" % (len(missing_now), ", ".join(missing_now)))
+        say("  %s\n" % ("they will be fetched before the first app starts"
+                        if cfg.get("auto_fetch_apks", True)
+                        else "auto_fetch_apks is off, so these will be skipped"))
     if args.dry_run:
         say("--dry-run: nothing executed.")
         return 0
+
+    # Everything the batch needs, downloaded before any of it runs.
+    prefetch_apks(apps, cfg)
 
     # AndroLog floods the default logcat buffer.
     adb(["logcat", "-G", cfg.get("logcat_buffer", "64M")], cfg.get("device_serial"))
