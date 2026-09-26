@@ -28,7 +28,7 @@
       "dataset_features": 47,
       "coverage_tag": "PIPE_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Already instruments cleanly at 0.27.0 (74,478 methods). Open source, no account needed to search or play. Also LLMDroid's own benchmark app.",
       "pin_version_code": 997
     },
@@ -40,7 +40,7 @@
       "dataset_features": 46,
       "coverage_tag": "MARKOR_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source (F-Droid), entirely local files, no account, no network, no hardware. 46 features that are all plain GUI: create/edit/preview documents, file operations, settings."
     },
     {
@@ -51,7 +51,7 @@
       "dataset_features": 48,
       "coverage_tag": "OMNINOTES_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source FOSS build, local notes database, no account. 48 features reachable by tapping: notes, checklists, categories, tags, archive, trash, settings."
     },
     {
@@ -62,7 +62,7 @@
       "dataset_features": 45,
       "coverage_tag": "JOPLIN_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source. Notebooks, notes, to-dos, tags and search all work locally; sync and encryption are optional extras, so no account is needed to exercise the app."
     },
     {
@@ -73,7 +73,7 @@
       "dataset_features": 34,
       "coverage_tag": "NONONSENSENO_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, small, local task lists with no account and no network. 34 features, mostly list/task CRUD and settings."
     },
     {
@@ -84,7 +84,7 @@
       "dataset_features": 59,
       "coverage_tag": "ANKIDROID_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source, large local app (59 features). Decks, cards, browser, statistics and settings all work offline; AnkiWeb sync is optional."
     },
     {
@@ -95,7 +95,7 @@
       "dataset_features": 31,
       "coverage_tag": "OPENTASKS_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, uses the Android task provider so it works with no account; sync is delegated to a separate app. 31 features, all local CRUD and grouping tabs."
     },
     {
@@ -106,7 +106,7 @@
       "dataset_features": 38,
       "coverage_tag": "LOOPHABITS_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, fully offline habit tracking with no account. 38 features: habit CRUD, check-marks, charts, widgets, backup/restore."
     },
     {
@@ -117,7 +117,7 @@
       "dataset_features": 46,
       "coverage_tag": "MYEXPENSES_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_other",
       "reason": "Open source. Accounts, transactions, categories, budgets and reports all work in the free tier offline; only sync/OCR need a paid tier."
     },
     {
@@ -128,7 +128,7 @@
       "dataset_features": 46,
       "coverage_tag": "AMAZE_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source file manager, works on local storage with no account. 46 features; only the root-explorer and cloud items need extras."
     },
     {
@@ -139,7 +139,7 @@
       "dataset_features": 42,
       "coverage_tag": "MATERIALFILE_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source file manager, local storage, no account. 42 features covering browse, CRUD, archives, viewers and settings."
     },
     {
@@ -150,7 +150,7 @@
       "dataset_features": 37,
       "coverage_tag": "FOSSIFYFILES_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source, local storage only, no account, no network. 37 straightforward GUI features."
     },
     {
@@ -161,7 +161,7 @@
       "dataset_features": 40,
       "coverage_tag": "ETAR_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source calendar on the Android provider; a local offline calendar can be created, so no account is needed. 40 features."
     },
     {
@@ -172,7 +172,7 @@
       "dataset_features": 38,
       "coverage_tag": "FOSSIFYCALEN_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source, local event storage, no account. 38 features: events, tasks, views, event types, import/export, settings."
     },
     {
@@ -183,7 +183,7 @@
       "dataset_features": 38,
       "coverage_tag": "FOSSIFYCONTA_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, uses local device contacts, no account. 38 features: contact CRUD, groups, favourites, import/export vCard."
     },
     {
@@ -205,7 +205,7 @@
       "dataset_features": 34,
       "coverage_tag": "AUXIO_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source local music player, no account, no network. 34 features: library browsing, queue, playlists, settings."
     },
     {
@@ -216,7 +216,7 @@
       "dataset_features": 33,
       "coverage_tag": "FOSSIFYMUSIC_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source local music player, no account. 33 features across tabs, playlists, queue and settings."
     },
     {
@@ -227,7 +227,7 @@
       "dataset_features": 33,
       "coverage_tag": "ODYSSEY_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source local music player, no account. 33 features including bookmarks and the file browser; artwork download is optional."
     },
     {
@@ -238,7 +238,7 @@
       "dataset_features": 32,
       "coverage_tag": "RADIODROID_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, no account. Station browsing and search need only plain internet, which the emulator has; favourites, alarms and settings are local."
     },
     {
@@ -249,7 +249,7 @@
       "dataset_features": 23,
       "coverage_tag": "TRANSISTOR_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source, deliberately minimal (23 features), no account. Station add/edit/play plus settings."
     },
     {
@@ -260,7 +260,7 @@
       "dataset_features": 40,
       "coverage_tag": "AEGIS_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, fully offline, no account. 40 features: vault setup, entry CRUD, groups, import/export, security and appearance settings."
     },
     {
@@ -271,7 +271,7 @@
       "dataset_features": 47,
       "coverage_tag": "KEEPASSDX_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, fully offline, no account. 47 features: database create/open, entry and group CRUD, generator, settings."
     },
     {
@@ -282,7 +282,7 @@
       "dataset_features": 55,
       "coverage_tag": "OPENCAMERA_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, no account. The emulator exposes a virtual camera, and most of the 55 features are shutter actions and settings screens."
     },
     {
@@ -293,7 +293,7 @@
       "dataset_features": 37,
       "coverage_tag": "FOSSIFYGALLE_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_verify",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, local media only, no account. 37 features: browsing, viewer, editor, folder management, settings."
     },
     {
@@ -315,7 +315,7 @@
       "dataset_features": 26,
       "coverage_tag": "FOSSIFYCLOCK_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, fully offline, no account. 26 features across four self-contained tabs (clock, alarm, stopwatch, timer)."
     },
     {
@@ -326,7 +326,7 @@
       "dataset_features": 23,
       "coverage_tag": "FOSSIFYVOICE_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "verified_ok",
+      "instrumentation_status": "fail_instrument",
       "reason": "Open source, fully offline, no account. 23 features; the emulator provides a virtual microphone."
     },
     {
@@ -337,7 +337,7 @@
       "dataset_features": 31,
       "coverage_tag": "FEEDER_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_verify",
+      "instrumentation_status": "fail_soot_0_1",
       "reason": "Open source RSS reader, no account. Feeds are added by URL over plain internet; reading, starring and settings are local. 31 features."
     },
     {
@@ -348,7 +348,7 @@
       "dataset_features": 47,
       "coverage_tag": "TASKS_SUPER_LOG",
       "pool": "reserve",
-      "instrumentation_status": "untested",
+      "instrumentation_status": "known_fail_soot_0_1",
       "reason": "KNOWN FAIL: apks/tasks.apk was instrumented here and died on the Soot [0..1] bug, despite being the cleanest APK measured (0.2% renamed classes). Kept as evidence that app properties do not predict compatibility."
     },
     {
