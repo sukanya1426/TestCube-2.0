@@ -418,6 +418,21 @@ def run_testcube(app, apk, cfg, log):
     return rc, out_dir
 
 
+def last_error_lines(output, limit=3):
+    """The lines worth reading from a failed command.
+
+    experiment_results.json is committed but *.log is gitignored, so without
+    this a collaborator's failure arrives as a bare `rc=1` with no way to tell
+    why. This puts the reason in the artifact that actually travels.
+    """
+    interesting = [line.strip() for line in (output or "").splitlines()
+                   if any(marker in line for marker in
+                          ("Error", "error:", "Exception", "Traceback",
+                           "ModuleNotFound", "No such file", "refused"))]
+    return interesting[-limit:] if interesting else [
+        line.strip() for line in (output or "").splitlines() if line.strip()][-limit:]
+
+
 def run_llmdroid(app, cfg, log):
     out_dir = os.path.join(REPO, cfg["llmdroid_output"], app["stem"])
     command = [
@@ -429,9 +444,9 @@ def run_llmdroid(app, cfg, log):
         "--policy", cfg.get("llmdroid_policy", "dfs_greedy"),
         "--code-coverage", "androlog",
     ]
-    rc, _ = run(command, log=log, label="llmdroid",
-                timeout=cfg["budget_seconds"] + cfg["grace_seconds"] + 600)
-    return rc, out_dir
+    rc, out = run(command, log=log, label="llmdroid",
+                  timeout=cfg["budget_seconds"] + cfg["grace_seconds"] + 600)
+    return rc, out_dir, (last_error_lines(out) if rc != 0 else [])
 
 
 def run_compare(app, tc_dir, ld_dir, cfg, log):
@@ -512,9 +527,12 @@ def do_app(app, cfg, log):
     ld_dir = None
     if cfg.get("run_llmdroid", True) and ok:
         log.write(u"\n[%s] === LLMDroid: %s ===\n" % (stamp(), app["stem"]))
-        rc2, ld_dir = run_llmdroid(app, cfg, log)
+        rc2, ld_dir, why = run_llmdroid(app, cfg, log)
         result["steps"]["llmdroid"] = "ok" if rc2 == 0 else "rc=%s" % rc2
         result["llmdroid_output"] = os.path.relpath(ld_dir, REPO)
+        if why:
+            result["llmdroid_error"] = why
+            log.write(u"[%s] LLMDroid failed: %s\n" % (stamp(), " | ".join(why)))
 
     if cfg.get("run_compare", True) and ld_dir:
         rc3, cmp_dir = run_compare(app, tc_dir, ld_dir, cfg, log)
@@ -530,6 +548,23 @@ def do_app(app, cfg, log):
     if cfg.get("run_feature_eval", True):
         rc4 = run_feature_eval(app, tc_dir, cfg, log)
         result["steps"]["feature_eval"] = "ok" if rc4 == 0 else "rc=%s" % rc4
+
+    # Zero coverage after real exploration is the vinyl failure mode: dex that
+    # installs, launches and verifies while never executing a probe. Recording it
+    # as a successful 0% would put a fake data point in the comparison.
+    summary_path = os.path.join(tc_dir, "code_coverage.json")
+    if os.path.isfile(summary_path):
+        try:
+            tc = load_json(summary_path)
+            if not tc.get("final_coverage") and (tc.get("total_actions") or 0) >= 10:
+                result["steps"]["testcube"] = "zero_coverage"
+                result["zero_coverage"] = (
+                    "0.00000%% after %s actions: the APK ran but emitted no AndroLog "
+                    "probes. Treat as a failed instrumentation, not a real 0%%."
+                    % tc.get("total_actions"))
+                log.write(u"[%s] %s\n" % (stamp(), result["zero_coverage"]))
+        except Exception:
+            pass
 
     failures = [k for k, v in result["steps"].items() if v not in ("ok",)]
     if failures:
@@ -603,6 +638,36 @@ def choose_apps(cfg, catalogue, args):
 ANDROLOG_JAR = os.path.join(REPO, "tools", "AndroLog", "target",
                             "androlog-0.1-jar-with-dependencies.jar")
 ANDROID_PLATFORMS = os.path.join(REPO, "tools", "android-platforms")
+
+
+def check_llmdroid_deps():
+    """LLMDroid imports `openai` and `jpype` at module load.
+
+    `jpype` is only used by the JaCoCo path, but utg_based_policy imports
+    JacocoCVMonitor unconditionally, so both are required even for an androlog
+    run. Missing either makes LLMDroid exit 1 for *every* app while TestCube --
+    which imports neither -- succeeds, so the batch looks half-working and
+    produces no comparison at all. Checked up front for that reason.
+    """
+    missing = []
+    for module in ("openai", "jpype"):
+        probe = ("import sys; sys.path.insert(0, %r); import %s"
+                 % (LLMDROID, module))
+        try:
+            subprocess.check_output([sys.executable, "-c", probe],
+                                    stderr=subprocess.STDOUT)
+        except Exception:
+            missing.append(module)
+    if not missing:
+        return True
+    sys.stderr.write(
+        "\nLLMDroid cannot import: %s\n\n"
+        "It imports these at module load, so every LLMDroid run would exit 1 while\n"
+        "TestCube kept working -- a batch that produces no comparison. Install them:\n\n"
+        "    pip install openai jpype1\n\n"
+        "Or run with --no-llmdroid to measure TestCube only.\n"
+        % ", ".join("openai" if m == "openai" else "jpype1" for m in missing))
+    return False
 
 
 def check_toolchain():
@@ -687,9 +752,20 @@ def update_catalogue(results):
     changed = False
     for app in catalogue["apps"]:
         new = status.get(app["stem"])
-        if new and app.get("instrumentation_status") != new:
-            app["instrumentation_status"] = new
+        if not new or app.get("instrumentation_status") == new:
+            continue
+        was = app.get("instrumentation_status")
+        if was == "verified_ok" and new != "verified_ok":
+            # Do not erase a verdict another machine measured successfully. The
+            # same APK and Soot can differ by JDK, so this is a disagreement to
+            # surface, not a correction to apply.
+            app["instrumentation_conflict"] = new
+            say("[!] %s instrumented fine elsewhere but failed here (%s); keeping "
+                "verified_ok and recording the conflict." % (app["stem"], new))
             changed = True
+            continue
+        app["instrumentation_status"] = new
+        changed = True
     if changed:
         save_json(CATALOGUE, catalogue)
 
@@ -738,8 +814,11 @@ def main(argv=None):
 
     cfg = load_json(args.config)
     catalogue = load_json(CATALOGUE)
-    if not args.dry_run and not check_toolchain():
-        return 2
+    if not args.dry_run:
+        if not check_toolchain():
+            return 2
+        if cfg.get("run_llmdroid", True) and not check_llmdroid_deps():
+            return 2
     if args.budget_seconds is not None:
         cfg["budget_seconds"] = args.budget_seconds
     if args.no_llmdroid:

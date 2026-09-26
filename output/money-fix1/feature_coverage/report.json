@@ -1,0 +1,803 @@
+{
+  "application": "Money Manager Ex",
+  "total_features": 28,
+  "covered_features": 2,
+  "uncovered_features": 21,
+  "partial_features": 5,
+  "coverage": 0.07142857142857142,
+  "coverage_percentage": 7.14,
+  "results_dir": "output/money-fix1",
+  "readme_path": null,
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/money/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a New Database",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "some steps executed but not all",
+        "touch SelectDatabaseActivity/Button-CREATE DAT"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT002",
+      "name": "Create First/New Account",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "no steps executed"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Add a Transaction",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "no steps executed"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Edit / Delete / Modify a Transaction",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "No long-press or selection of edit/delete options.",
+        "touch SearchActivity/TextView-STATUS"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT005",
+      "name": "Filter Transactions by Date Range",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "All steps in the gold capability were followed.",
+        "touch SettingsActivity/ImageButton-",
+        "touch SearchActivity/TextView-STATUS"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT006",
+      "name": "Search/Sort Transactions",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.7,
+      "evidence": [
+        "No search or sort actions were performed.",
+        "touch SearchActivity/TextView-STATUS"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT007",
+      "name": "Mark Account as Favorite",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch MainActivity/TextView-Welcome to"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT008",
+      "name": "Manage Accounts",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch MainActivity/TextView-Welcome to"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Set Up a Budget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch MainActivity/TextView-Welcome to"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Set/Edit a Category Budget Amount",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-press and Edit steps missing; Save step missing.",
+        "touch MainActivity/Button-",
+        "touch AccountEditActivity/ImageButton-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.4
+    },
+    {
+      "id": "GT011",
+      "name": "View Budget Details / Transactions",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-press and View Transactions steps missing.",
+        "touch MainActivity/TextView-Budgets",
+        "touch BudgetListActivity/TextView-Budget lis"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.4
+    },
+    {
+      "id": "GT012",
+      "name": "Delete a Budget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No steps related to long-press, delete, or confirmation.",
+        "touch MainActivity/TextView-Money Mana",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Configure Budget View Options",
+      "status": "covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps missing for toggling options",
+        "touch MainActivity/Button-SETTINGS",
+        "Completed by later features: GT004"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT014",
+      "name": "Create a Recurring/Scheduled Transaction",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps missing for setting recurrence",
+        "touch MainActivity/Button-SETTINGS"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "Respond to a Recurring Transaction Prompt",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps missing for handling prompts",
+        "touch MainActivity/Button-SETTINGS"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Manage Payees",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "Partial steps completed, lacks key actions like adding a new payee.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT017",
+      "name": "Manage Categories",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "Partial steps completed, lacks key actions like adding a new category.",
+        "touch MainActivity/Button-CREATE NEW"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.4
+    },
+    {
+      "id": "GT018",
+      "name": "View a Built-In Report",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM coverage judge did not return a verdict."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Run a General Report",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps related to running a General Report."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Track Stock/Mutual Fund Investments",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps related to tracking stock/mutual fund investments."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Add a Stock Transaction",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps related to adding a stock transaction."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Track Fixed Assets",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Manage Currencies & Exchange Rates",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Set Up Data Sync",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Set/Change Database Password",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "no relevant actions found",
+        "later PasswordActivity/Button-OK"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Enable Fingerprint/Biometric Lock",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "no relevant actions found",
+        "later PasswordActivity/Button-OK"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Import/Export via QIF or CSV",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "no relevant actions found",
+        "later PasswordActivity/Button-OK"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Configure App Settings",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to configuring app settings."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Create a New Database",
+      "journal_id": "GT001",
+      "journal_name": "New database",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Create First/New Account",
+      "journal_id": "GT002",
+      "journal_name": "New account",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Add a Transaction",
+      "journal_id": "GT003",
+      "journal_name": "Add transaction",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Edit / Delete / Modify a Transaction",
+      "journal_id": "GT004",
+      "journal_name": "Edit transaction",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Filter Transactions by Date Range",
+      "journal_id": "GT005",
+      "journal_name": "Filter by date",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Search/Sort Transactions",
+      "journal_id": "GT006",
+      "journal_name": "Search transactions",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Mark Account as Favorite",
+      "journal_id": "GT007",
+      "journal_name": "Favorite account",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Manage Accounts",
+      "journal_id": "GT008",
+      "journal_name": "Manage accounts",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Set Up a Budget",
+      "journal_id": "GT009",
+      "journal_name": "Budget",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Set/Edit a Category Budget Amount",
+      "journal_id": "GT010",
+      "journal_name": "Budget amount",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "View Budget Details / Transactions",
+      "journal_id": "GT011",
+      "journal_name": "Budget details",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Delete a Budget",
+      "journal_id": "GT012",
+      "journal_name": "Delete budget",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Configure Budget View Options",
+      "journal_id": "GT013",
+      "journal_name": "Budget view options",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Create a Recurring/Scheduled Transaction",
+      "journal_id": "GT014",
+      "journal_name": "Scheduled transaction",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Respond to a Recurring Transaction Prompt",
+      "journal_id": "GT015",
+      "journal_name": "Recurring prompt",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Manage Payees",
+      "journal_id": "GT016",
+      "journal_name": "Payees",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Manage Categories",
+      "journal_id": "GT017",
+      "journal_name": "Categories",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "View a Built-In Report",
+      "journal_id": "GT018",
+      "journal_name": "Built-in report",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Run a General Report",
+      "journal_id": "GT019",
+      "journal_name": "General report",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Track Stock/Mutual Fund Investments",
+      "journal_id": "GT020",
+      "journal_name": "Investments",
+      "name_similarity": 0.385,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Add a Stock Transaction",
+      "journal_id": "GT021",
+      "journal_name": "Stock transaction",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Track Fixed Assets",
+      "journal_id": "GT022",
+      "journal_name": "Fixed assets",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Manage Currencies & Exchange Rates",
+      "journal_id": "GT023",
+      "journal_name": "Currencies",
+      "name_similarity": 0.357,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Set Up Data Sync",
+      "journal_id": "GT024",
+      "journal_name": "Sync",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Set/Change Database Password",
+      "journal_id": "GT025",
+      "journal_name": "Database password",
+      "name_similarity": 0.625,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Enable Fingerprint/Biometric Lock",
+      "journal_id": "GT026",
+      "journal_name": "Fingerprint lock",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Import/Export via QIF or CSV",
+      "journal_id": "GT027",
+      "journal_name": "Import export",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Configure App Settings",
+      "journal_id": "GT028",
+      "journal_name": "Settings",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 28,
+    "false_negatives": 0,
+    "false_positives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 28,
+    "ground_truth_count": 28,
+    "feature_completeness_ratio": 1.0,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 7,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.1571428571428571,
+  "weighted_coverage_percentage": 15.71,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

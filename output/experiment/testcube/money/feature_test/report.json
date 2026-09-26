@@ -1,0 +1,3379 @@
+{
+  "app": "Money Manager Ex",
+  "started_at": "2026-09-17 05:29:14",
+  "finished_at": "2026-09-17 05:35:53",
+  "total_features": 28,
+  "covered": 0,
+  "partial": 6,
+  "dropped": 0,
+  "not_present": 0,
+  "blocked": 0,
+  "coverage": 0.0,
+  "weighted_coverage": 0.10952380952380951,
+  "unscored_discovered": 0,
+  "feature_source": "guide",
+  "guide_vs_readme": {
+    "guide_count": 28,
+    "readme_count": 3,
+    "both": [
+      {
+        "guide_id": "GT027",
+        "guide_name": "Import export",
+        "readme_id": "F003",
+        "readme_name": "Import or export data",
+        "name_similarity": 0.667
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "GT001",
+        "name": "New database"
+      },
+      {
+        "id": "GT002",
+        "name": "New account"
+      },
+      {
+        "id": "GT003",
+        "name": "Add transaction"
+      },
+      {
+        "id": "GT004",
+        "name": "Edit transaction"
+      },
+      {
+        "id": "GT005",
+        "name": "Filter by date"
+      },
+      {
+        "id": "GT006",
+        "name": "Search transactions"
+      },
+      {
+        "id": "GT007",
+        "name": "Favorite account"
+      },
+      {
+        "id": "GT008",
+        "name": "Manage accounts"
+      },
+      {
+        "id": "GT009",
+        "name": "Budget"
+      },
+      {
+        "id": "GT010",
+        "name": "Budget amount"
+      },
+      {
+        "id": "GT011",
+        "name": "Budget details"
+      },
+      {
+        "id": "GT012",
+        "name": "Delete budget"
+      },
+      {
+        "id": "GT013",
+        "name": "Budget view options"
+      },
+      {
+        "id": "GT014",
+        "name": "Scheduled transaction"
+      },
+      {
+        "id": "GT015",
+        "name": "Recurring prompt"
+      },
+      {
+        "id": "GT016",
+        "name": "Payees"
+      },
+      {
+        "id": "GT017",
+        "name": "Categories"
+      },
+      {
+        "id": "GT018",
+        "name": "Built-in report"
+      },
+      {
+        "id": "GT019",
+        "name": "General report"
+      },
+      {
+        "id": "GT020",
+        "name": "Investments"
+      },
+      {
+        "id": "GT021",
+        "name": "Stock transaction"
+      },
+      {
+        "id": "GT022",
+        "name": "Fixed assets"
+      },
+      {
+        "id": "GT023",
+        "name": "Currencies"
+      },
+      {
+        "id": "GT024",
+        "name": "Sync"
+      },
+      {
+        "id": "GT025",
+        "name": "Database password"
+      },
+      {
+        "id": "GT026",
+        "name": "Fingerprint lock"
+      },
+      {
+        "id": "GT028",
+        "name": "Settings"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Create or open a database"
+      }
+    ]
+  },
+  "guide_features_path": "/Users/mahdiya/TestCube-2.0/feature/money/guide_features.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "New database",
+      "description": "Create a new Money Manager database on first launch.",
+      "actions": [
+        "Tap on the Money Manager Ex app icon to open it.",
+        "Select the 'Create a database' option from the main menu.",
+        "Enter a name for the new database.",
+        "Tap the 'Create' button to finalize the new database creation.",
+        "Verify the new database is listed in the database selection screen.",
+        "Close the app to complete the feature setup."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "database",
+        "create"
+      ],
+      "nav_hints": [
+        "create database"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Hit the per-feature step limit.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the Money Manager Ex app icon to open it.",
+        "Select the 'Create a database' option from the main menu.",
+        "Enter a name for the new database.",
+        "Tap the 'Create' button to finalize the new database creation."
+      ],
+      "remaining_actions": [
+        "Verify the new database is listed in the database selection screen.",
+        "Close the app to complete the feature setup."
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f76546fea06bf63a5005018b967ba56c, view=8128f880d82f0f3d0deac64ec4ce2db8(TutorialActivity/TextView-CLOSE))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.tutorial.TutorialActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_052919.png",
+          "state": "f76546fea06bf63a5005018b967ba56c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/skipTextView",
+            "text": "CLOSE",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|skiptextview|close|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c6a27efb5e0bd6a96dce76e8ab21bb42, view=e10f8a3f37f86db158a570e15a2f2674(GeneralSettingsActivity/ImageButton-))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.settings.GeneralSettingsActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052921.png",
+          "state": "c6a27efb5e0bd6a96dce76e8ab21bb42",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "Navigate up",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|navigate up|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=47be119a7326ee15d6cedb2c9f2dfff1, view=137a2809d2283a7da8e596daff8c7e19(SelectDatabaseActivity/Button-CREATE DAT))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.home.SelectDatabaseActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052924.png",
+          "state": "47be119a7326ee15d6cedb2c9f2dfff1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/createDatabaseButton",
+            "text": "CREATE DATABASE",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|createdatabasebutton|create database|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=db9de7889d8d1b431453c3981085d929, view=cb84193f80591015faa7bf2a764ab8c3(PickActivity/Button-SAVE))",
+          "reason": "Picking a file/confirming in the system picker: SAVE button1",
+          "matched_step": "Tap on the Money Manager Ex app icon to open it.",
+          "source": "rule",
+          "activity": "com.google.android.documentsui/com.android.documentsui.picker.PickActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052926.png",
+          "state": "db9de7889d8d1b431453c3981085d929",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button1",
+            "text": "SAVE",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button1|save|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=967325bb19d8b40560a7364d0acb7f45, view=e775d76c9d80720909bf1f0537d19984(PasswordActivity/Button-OK))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.database.PasswordActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052929.png",
+          "state": "967325bb19d8b40560a7364d0acb7f45",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/btnSubmit",
+            "text": "OK",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnsubmit|ok|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Select the 'Create a database' option from the main menu.",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052931.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/buttonAddAccount",
+            "text": "CREATE NEW ACCOUNT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|buttonaddaccount|create new account|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "testcube.mmb",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052934.png",
+          "state": "7fe42e2da8b25787daf620ca2edd4801",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "Account name",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "testcube.mmb",
+          "signature": "set_text|edittextaccountname|account name|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "testcube.mmb",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_052947.png",
+          "state": "7fe42e2da8b25787daf620ca2edd4801",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "Account name",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "testcube.mmb",
+          "signature": "set_text|edittextaccountname|account name|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)",
+          "reason": "scroll spinnerAccountType up",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_052949.png",
+          "state": "21e79083fc5c249a15a24696183e0e3c",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "testcube.mmb",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "testcube.mmb",
+          "signature": "set_text|edittextaccountname|testcube.mmb|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)",
+          "reason": "Scroll to adjust the spinnerAccountType to select the correct account type.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053031.png",
+          "state": "21e79083fc5c249a15a24696183e0e3c",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "testcube.mmb",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "testcube.mmb",
+          "signature": "set_text|edittextaccountname|testcube.mmb|edittext"
+        }
+      ],
+      "completion_ratio": 0.6666666666666666,
+      "completion_source": "executed",
+      "credited_from": [
+        "GT003"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "GT003",
+          "matched_step": "Tap the 'Create' button to finalize the new database creation.",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))"
+        }
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "New account",
+      "description": "Create the first account after database setup.",
+      "actions": [
+        "Tap on the 'Account' section in the navigation drawer.",
+        "Select 'New Account' from the account options.",
+        "Enter the name of the new account in the input field.",
+        "Tap on the 'Save' button to create the new account.",
+        "Verify the new account is listed in the account section."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "account"
+      ],
+      "nav_hints": [
+        "account"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Onboarding already finished; main screen is visible.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the 'Save' button to create the new account.",
+        "Tap on the 'Account' section in the navigation drawer."
+      ],
+      "remaining_actions": [
+        "Select 'New Account' from the account options.",
+        "Enter the name of the new account in the input field.",
+        "Verify the new account is listed in the account section."
+      ],
+      "steps": [],
+      "completion_ratio": 0.4,
+      "completion_source": "executed",
+      "credited_from": [
+        "GT003",
+        "GT006"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "GT003",
+          "matched_step": "Tap on the 'Save' button to create the new account.",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))"
+        },
+        {
+          "from_feature": "GT006",
+          "matched_step": "Tap on the 'Account' section in the navigation drawer.",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-))"
+        }
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Add transaction",
+      "description": "Add a new income or expense.",
+      "actions": [
+        "Tap on the 'Add a transaction' button",
+        "Select the 'Income' or 'Expense' option",
+        "Enter the amount",
+        "Select the category",
+        "Enter the description",
+        "Tap the 'Save' button"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "transaction",
+        "add"
+      ],
+      "nav_hints": [
+        "transaction"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Hit the per-feature step limit.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap the 'Save' button",
+        "Select the 'Income' or 'Expense' option",
+        "Select the category"
+      ],
+      "remaining_actions": [
+        "Tap on the 'Add a transaction' button",
+        "Enter the amount",
+        "Enter the description"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+          "reason": "nav hint transaction",
+          "matched_step": "",
+          "source": "nav",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053115.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "All transactions in MoneyManagerEx belong to accounts.\n\nYou currently have no visible accounts. Either adjust the filter for visible accounts in the Settings, or select one of the options below.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|all transactions in moneymanagerex belong to accounts. you currently have no visible accounts. either adjust the filter for visible accounts in the settings, or select one of the options below.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+          "reason": "nav hint transaction",
+          "matched_step": "",
+          "source": "nav",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053118.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "All transactions in MoneyManagerEx belong to accounts.\n\nYou currently have no visible accounts. Either adjust the filter for visible accounts in the Settings, or select one of the options below.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|all transactions in moneymanagerex belong to accounts. you currently have no visible accounts. either adjust the filter for visible accounts in the settings, or select one of the options below.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))",
+          "reason": "Structural affordance (plus) before spending a model call.",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053120.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/buttonAddAccount",
+            "text": "CREATE NEW ACCOUNT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|buttonaddaccount|create new account|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=8bcd308b8146e2d2f0591bd37449b85a(AccountEditActivity/EditText-Account nu), text=1)",
+          "reason": "Select the 'Add a transaction' button to proceed with adding a new income or expense",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053123.png",
+          "state": "7fe42e2da8b25787daf620ca2edd4801",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountNumber",
+            "text": "Account number",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "1",
+          "signature": "set_text|edittextaccountnumber|account number|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=9bedc058f258c8f45e4b12e2c42f64b3, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=1)",
+          "reason": "The next step is to navigate back to the previous screen to add a transaction, as the current screen is for account editing.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053154.png",
+          "state": "9bedc058f258c8f45e4b12e2c42f64b3",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "Account name",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "1",
+          "signature": "set_text|edittextaccountname|account name|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1), text=1)",
+          "reason": "Scrolling to adjust the spinnerAccountType to find the correct option for the account type.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053226.png",
+          "state": "256358af08e6815432edd71b2d1df748",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "1",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "1",
+          "signature": "set_text|edittextaccountname|1|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1))",
+          "reason": "Select the 'Cash' option from the ACCOUNT TYPE spinner to proceed with adding a transaction.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053259.png",
+          "state": "256358af08e6815432edd71b2d1df748",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextAccountName",
+            "text": "1",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|edittextaccountname|1|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=44e793bd4cb64fb1c3cc43b013194efd(AccountEditActivity/TextView-SELECT CUR))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.account.AccountEditActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053305.png",
+          "state": "256358af08e6815432edd71b2d1df748",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SELECT CURRENCY",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|select currency|textview"
+        }
+      ],
+      "completion_ratio": 0.5,
+      "completion_source": "executed",
+      "credited_from": [
+        "GT001"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "GT001",
+          "matched_step": "Tap the 'Save' button",
+          "event": "CustomTouchEvent(state=47be119a7326ee15d6cedb2c9f2dfff1, view=137a2809d2283a7da8e596daff8c7e19(SelectDatabaseActivity/Button-CREATE DAT))"
+        },
+        {
+          "from_feature": "GT001",
+          "matched_step": "Select the 'Income' or 'Expense' option",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))"
+        },
+        {
+          "from_feature": "GT001",
+          "matched_step": "Select the category",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))"
+        }
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Edit transaction",
+      "description": "Edit or delete an existing transaction.",
+      "actions": [
+        "Tap on the transaction you want to edit in the transaction list.",
+        "Select the 'Edit' option from the menu that appears.",
+        "Enter the new details for the transaction.",
+        "Tap the 'Save' button to update the transaction.",
+        "Confirm the changes if prompted."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "edit",
+        "delete"
+      ],
+      "nav_hints": [
+        "edit"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Hit the per-feature step limit.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the transaction you want to edit in the transaction list.",
+        "Select the 'Edit' option from the menu that appears.",
+        "Enter the new details for the transaction."
+      ],
+      "remaining_actions": [
+        "Tap the 'Save' button to update the transaction.",
+        "Confirm the changes if prompted."
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=56093e4f89e8ecaca6bdcad38145fe9f(MainActivity/ImageButton-))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053313.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "Open",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|open|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7081635cc4d3e28f6425391f1c1a78d6, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Tap on the transaction you want to edit in the transaction list.",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053342.png",
+          "state": "7081635cc4d3e28f6425391f1c1a78d6",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "All transactions in MoneyManagerEx belong to accounts.\n\nYou currently have no visible accounts. Either adjust the filter for visible accounts in the Settings, or select one of the options below.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|all transactions in moneymanagerex belong to accounts. you currently have no visible accounts. either adjust the filter for visible accounts in the settings, or select one of the options below.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=f9c0e13417200920ea1b1c3174b0e414, view=3d0da6020df9c26a32aa108fcb4464bd(MainActivity/ExpandableListView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053344.png",
+          "state": "f9c0e13417200920ea1b1c3174b0e414",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/drawerExpandableList",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ExpandableListView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|drawerexpandablelist|expandablelistview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=878dad5a22919e5ee516f44c3956487e, view=136d64e49e0c174b7cecd0cea5c3de55(MainActivity/Button-))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Select the 'Edit' option from the menu that appears.",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053347.png",
+          "state": "878dad5a22919e5ee516f44c3956487e",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/menu_sort",
+            "text": "",
+            "content_description": "Sort",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|menu_sort|sort|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7e72fb35420dfd44b347de75e08974ff, view=193690f5f9169553ff37dcfdad9e2711(MainActivity/CheckBox-))",
+          "reason": "add/create control",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053350.png",
+          "state": "7e72fb35420dfd44b347de75e08974ff",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/checkbox",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.CheckBox",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|checkbox|checkbox"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=7f1538788b703799c2a3c2ea38d7f7a0, view=f791beeb9799f0db39d52cdc9466fc11(MainActivity/AutoCompleteTextView-   ), text=Saimon Bhuiyan)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "set_text",
+          "text": "Saimon Bhuiyan",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053352.png",
+          "state": "7f1538788b703799c2a3c2ea38d7f7a0",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/search_src_text",
+            "text": "   ",
+            "content_description": "",
+            "class": "android.widget.AutoCompleteTextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "Saimon Bhuiyan",
+          "signature": "set_text|search_src_text|autocompletetextview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=2ec765d399440d7f03cebf41a2c317c3, view=43b71a6e44f22650d96a72325cba1683(MainActivity/AutoCompleteTextView-Saimon Bhu), text=Saimon Bhuiyan)",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053407.png",
+          "state": "2ec765d399440d7f03cebf41a2c317c3",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/search_src_text",
+            "text": "Saimon Bhuiyan",
+            "content_description": "",
+            "class": "android.widget.AutoCompleteTextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "Saimon Bhuiyan",
+          "signature": "set_text|search_src_text|saimon bhuiyan|autocompletetextview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=2ec765d399440d7f03cebf41a2c317c3, x=918, y=2223)",
+          "reason": "typing the search query to find the transaction for editing",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053448.png",
+          "state": "2ec765d399440d7f03cebf41a2c317c3",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "",
+            "name": "",
+            "direction": "",
+            "x": 918,
+            "y": 2223
+          },
+          "value": "",
+          "signature": "touch"
+        }
+      ],
+      "completion_ratio": 0.6,
+      "completion_source": "executed"
+    },
+    {
+      "id": "GT005",
+      "name": "Filter by date",
+      "description": "Filter the transaction list by date range.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Tap on the menu icon",
+        "Select 'Filter transactions by date'",
+        "Enter the start date in the date range field",
+        "Enter the end date in the date range field",
+        "Tap the 'Apply' button to filter the transaction list by date range"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "filter",
+        "date"
+      ],
+      "nav_hints": [
+        "date"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Hit the per-feature step limit.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open the Money Manager Ex app",
+        "Tap on the menu icon",
+        "Select 'Filter transactions by date'"
+      ],
+      "remaining_actions": [
+        "Enter the start date in the date range field",
+        "Enter the end date in the date range field",
+        "Tap the 'Apply' button to filter the transaction list by date range"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=3e50a1a3c41b9700c7097f818c90a401(MainActivity/TextView-Money Mana))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Open the Money Manager Ex app",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053500.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Money Manager Ex",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|money manager ex|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Tap on the menu icon",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053503.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/menu_search",
+            "text": "",
+            "content_description": "Search",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|menu_search|search|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=7cffa83d253e5f2a61bfa3b4bda9978e(SearchActivity/TextView-To Date))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Select 'Filter transactions by date'",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053505.png",
+          "state": "68765b32bba10fd5c6bfbd691ac91e39",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/textViewToDate",
+            "text": "To Date",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|textviewtodate|to date|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053508.png",
+          "state": "97d121fab7d7f6af3321f8c9b03f9529",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/date_picker_header_date",
+            "text": "Thu, Sep 17",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|date_picker_header_date|thu, sep 17|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053510.png",
+          "state": "97d121fab7d7f6af3321f8c9b03f9529",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/date_picker_header_date",
+            "text": "Thu, Sep 17",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|date_picker_header_date|thu, sep 17|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053513.png",
+          "state": "97d121fab7d7f6af3321f8c9b03f9529",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/date_picker_header_year",
+            "text": "2026",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|date_picker_header_year|2026|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+          "reason": "Ignored unhelpful scroll; using an in-app control instead.",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053515.png",
+          "state": "770dd326de7b40e3adbb300d52ad7488",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/date_picker_header_year",
+            "text": "2026",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|date_picker_header_year|2026|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+          "reason": "Ignored unhelpful scroll; using an in-app control instead.",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053517.png",
+          "state": "770dd326de7b40e3adbb300d52ad7488",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/date_picker_header_year",
+            "text": "2026",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|date_picker_header_year|2026|textview"
+        }
+      ],
+      "completion_ratio": 0.5,
+      "completion_source": "executed"
+    },
+    {
+      "id": "GT006",
+      "name": "Search transactions",
+      "description": "Search or sort transactions.",
+      "actions": [
+        "Tap on the 'Search transactions' option in the navigation drawer.",
+        "Enter the search term in the search bar.",
+        "Press the 'Enter' key to execute the search.",
+        "Select the desired transaction from the search results.",
+        "Tap on the 'Sort' button to change the sorting order of the transactions."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search",
+        "sort"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the 'Search transactions' option in the navigation drawer.",
+        "Enter the search term in the search bar."
+      ],
+      "remaining_actions": [
+        "Press the 'Enter' key to execute the search.",
+        "Select the desired transaction from the search results.",
+        "Tap on the 'Sort' button to change the sorting order of the transactions."
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-))",
+          "reason": "navigate to search",
+          "matched_step": "Tap on the 'Search transactions' option in the navigation drawer.",
+          "source": "heuristic",
+          "activity": "com.money.manager.ex/.home.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053526.png",
+          "state": "f00e04918ea3ad23ba29c76ba4864753",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/menu_search",
+            "text": "",
+            "content_description": "Search",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|menu_search|search|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=e77bab3f2311825eb5ce47c9122e85e6(SearchActivity/EditText-Transactio), text=123456789)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "set_text",
+          "text": "123456789",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/temp/screen_2026-09-17_053528.png",
+          "state": "68765b32bba10fd5c6bfbd691ac91e39",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextTransNumber",
+            "text": "Transaction number",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "123456789",
+          "signature": "set_text|edittexttransnumber|transaction number|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=5699579216d73b2fc5fa0071b0873039, view=59c45f22653c8f838c3dbdf7e5ed868b(SearchActivity/EditText-123456789), text=123456789)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.money.manager.ex/.search.SearchActivity",
+          "event_type": "set_text",
+          "text": "123456789",
+          "screenshot": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/.droidbot/states/screen_2026-09-17_053543.png",
+          "state": "5699579216d73b2fc5fa0071b0873039",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.money.manager.ex:id/editTextTransNumber",
+            "text": "123456789",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "123456789",
+          "signature": "set_text|edittexttransnumber|123456789|edittext"
+        }
+      ],
+      "completion_ratio": 0.4
+    },
+    {
+      "id": "GT007",
+      "name": "Favorite account",
+      "description": "Mark an account as favorite.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the 'Accounts' section",
+        "Select the account you want to mark as favorite",
+        "Tap on the 'Favorite' option",
+        "Confirm the favorite status by tapping the confirmation button"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "favorite",
+        "account"
+      ],
+      "nav_hints": [
+        "favorite"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the 'Accounts' section",
+        "Select the account you want to mark as favorite",
+        "Tap on the 'Favorite' option",
+        "Confirm the favorite status by tapping the confirmation button"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT008",
+      "name": "Manage accounts",
+      "description": "Open the account list and edit an account.",
+      "actions": [
+        "Tap on the 'Accounts' navigation hint to open the account list.",
+        "Select the account you wish to edit from the account list.",
+        "Tap on the 'Edit' option for the selected account.",
+        "Make the necessary changes to the account details.",
+        "Tap on the 'Save' button to confirm the changes."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "accounts"
+      ],
+      "nav_hints": [
+        "accounts"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Accounts' navigation hint to open the account list.",
+        "Select the account you wish to edit from the account list.",
+        "Tap on the 'Edit' option for the selected account.",
+        "Make the necessary changes to the account details.",
+        "Tap on the 'Save' button to confirm the changes."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Budget",
+      "description": "Set up a budget.",
+      "actions": [
+        "Tap on the 'Open budgets' option in the navigation drawer.",
+        "Select 'Create a budget' from the available options.",
+        "Enter a name for the new budget.",
+        "Set a start date for the budget.",
+        "Set an end date for the budget.",
+        "Enter a budget amount."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "budget"
+      ],
+      "nav_hints": [
+        "budget"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Open budgets' option in the navigation drawer.",
+        "Select 'Create a budget' from the available options.",
+        "Enter a name for the new budget.",
+        "Set a start date for the budget.",
+        "Set an end date for the budget.",
+        "Enter a budget amount."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Budget amount",
+      "description": "Set a category budget amount.",
+      "actions": [
+        "Tap on the 'Budget' section in the main menu.",
+        "Select the 'Edit a budget amount' option.",
+        "Enter the desired budget amount in the input field.",
+        "Tap the 'Save' button to confirm the budget amount.",
+        "Verify that the budget amount is correctly updated in the app."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "budget",
+        "category"
+      ],
+      "nav_hints": [
+        "budget"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Budget' section in the main menu.",
+        "Select the 'Edit a budget amount' option.",
+        "Enter the desired budget amount in the input field.",
+        "Tap the 'Save' button to confirm the budget amount.",
+        "Verify that the budget amount is correctly updated in the app."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "Budget details",
+      "description": "View budget details and related transactions.",
+      "actions": [
+        "Tap on the 'Budget' section in the navigation drawer.",
+        "Select 'Budget Details' from the menu.",
+        "Tap on the 'View' button to display the budget details.",
+        "Scroll through the list of transactions to view related transactions.",
+        "Select a transaction to view its details."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "budget",
+        "details"
+      ],
+      "nav_hints": [
+        "budget"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Budget' section in the navigation drawer.",
+        "Select 'Budget Details' from the menu.",
+        "Tap on the 'View' button to display the budget details.",
+        "Scroll through the list of transactions to view related transactions.",
+        "Select a transaction to view its details."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Delete budget",
+      "description": "Delete a budget.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Select the 'Budgets' section",
+        "Locate and select the budget you want to delete",
+        "Tap the 'Delete' button",
+        "Confirm the deletion by tapping 'Yes' to delete the budget"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "delete",
+        "budget"
+      ],
+      "nav_hints": [
+        "delete"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Select the 'Budgets' section",
+        "Locate and select the budget you want to delete",
+        "Tap the 'Delete' button",
+        "Confirm the deletion by tapping 'Yes' to delete the budget"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Budget view options",
+      "description": "Change how budgets are displayed.",
+      "actions": [
+        "Tap on the 'Budget' navigation hint",
+        "Select 'Change budget view options'",
+        "Tap on the 'Budget view options' menu item",
+        "Select the desired budget view option from the menu",
+        "Confirm the selection by tapping 'Done' or 'Apply'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "budget",
+        "view"
+      ],
+      "nav_hints": [
+        "budget"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Budget' navigation hint",
+        "Select 'Change budget view options'",
+        "Tap on the 'Budget view options' menu item",
+        "Select the desired budget view option from the menu",
+        "Confirm the selection by tapping 'Done' or 'Apply'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT014",
+      "name": "Scheduled transaction",
+      "description": "Create a recurring transaction.",
+      "actions": [
+        "Tap on the 'Transactions' section in the main menu.",
+        "Select 'Add Transaction' from the dropdown menu.",
+        "Tap on 'Recurring Transaction' to start creating a recurring transaction.",
+        "Enter the details of the transaction, including the amount and description.",
+        "Set the frequency and date for the recurring transaction.",
+        "Tap on 'Save' to finalize the recurring transaction setup."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "recurring",
+        "scheduled"
+      ],
+      "nav_hints": [
+        "recurring"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Transactions' section in the main menu.",
+        "Select 'Add Transaction' from the dropdown menu.",
+        "Tap on 'Recurring Transaction' to start creating a recurring transaction.",
+        "Enter the details of the transaction, including the amount and description.",
+        "Set the frequency and date for the recurring transaction.",
+        "Tap on 'Save' to finalize the recurring transaction setup."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "Recurring prompt",
+      "description": "Confirm a due recurring transaction.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the Recurring Transactions section",
+        "Select the recurring transaction you want to confirm",
+        "Tap on the 'Confirm' button to proceed",
+        "Review the details of the transaction",
+        "Tap the 'Confirm' button to finalize the transaction"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "recurring",
+        "prompt"
+      ],
+      "nav_hints": [
+        "recurring"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the Recurring Transactions section",
+        "Select the recurring transaction you want to confirm",
+        "Tap on the 'Confirm' button to proceed",
+        "Review the details of the transaction",
+        "Tap the 'Confirm' button to finalize the transaction"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Payees",
+      "description": "Add or edit payees.",
+      "actions": [
+        "Tap on the 'Payees' section in the Money Manager Ex app.",
+        "Enter the name of the payee you wish to add or edit.",
+        "Select the payee from the list if you are editing an existing payee.",
+        "Tap on the 'Save' or 'Update' button to confirm the changes.",
+        "Verify that the payee has been added or updated by checking the list of payees."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "payee"
+      ],
+      "nav_hints": [
+        "payee"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Payees' section in the Money Manager Ex app.",
+        "Enter the name of the payee you wish to add or edit.",
+        "Select the payee from the list if you are editing an existing payee.",
+        "Tap on the 'Save' or 'Update' button to confirm the changes.",
+        "Verify that the payee has been added or updated by checking the list of payees."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Categories",
+      "description": "Add or edit categories.",
+      "actions": [
+        "Tap on the 'Categories' section in the Money Manager Ex app",
+        "Select the 'Add New Category' option",
+        "Enter the name of the new category",
+        "Tap on the 'Save' button to add the category",
+        "Select the 'Edit' option to modify an existing category",
+        "Enter the new name for the category"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "category"
+      ],
+      "nav_hints": [
+        "category"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Categories' section in the Money Manager Ex app",
+        "Select the 'Add New Category' option",
+        "Enter the name of the new category",
+        "Tap on the 'Save' button to add the category",
+        "Select the 'Edit' option to modify an existing category",
+        "Enter the new name for the category"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Built-in report",
+      "description": "Open a built-in report.",
+      "actions": [
+        "Open reports"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "report"
+      ],
+      "nav_hints": [
+        "report"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open reports"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "General report",
+      "description": "Run a general report.",
+      "actions": [
+        "Tap on the 'report' navigation hint.",
+        "Select the 'General report' option from the report menu.",
+        "Tap on the 'Run a general report' button to generate the report."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "report"
+      ],
+      "nav_hints": [
+        "report"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'report' navigation hint.",
+        "Select the 'General report' option from the report menu.",
+        "Tap on the 'Run a general report' button to generate the report."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Investments",
+      "description": "Track a stock or fund.",
+      "actions": [
+        "Tap on the 'Investments' section in the main menu.",
+        "Select the 'Track a stock or fund' option.",
+        "Enter the name or ticker symbol of the stock or fund you want to track.",
+        "Tap on the 'Add' button to save the new investment.",
+        "Verify the investment is listed in the 'Investments' section."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "stock",
+        "investment"
+      ],
+      "nav_hints": [
+        "investment"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Investments' section in the main menu.",
+        "Select the 'Track a stock or fund' option.",
+        "Enter the name or ticker symbol of the stock or fund you want to track.",
+        "Tap on the 'Add' button to save the new investment.",
+        "Verify the investment is listed in the 'Investments' section."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Stock transaction",
+      "description": "Add a stock transaction.",
+      "actions": [
+        "Tap on the 'Stock' navigation hint.",
+        "Select the 'Add a stock transaction' option.",
+        "Enter the stock symbol.",
+        "Enter the number of shares.",
+        "Enter the price per share.",
+        "Select the date of the transaction."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "stock"
+      ],
+      "nav_hints": [
+        "stock"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Stock' navigation hint.",
+        "Select the 'Add a stock transaction' option.",
+        "Enter the stock symbol.",
+        "Enter the number of shares.",
+        "Enter the price per share.",
+        "Select the date of the transaction."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Fixed assets",
+      "description": "Track a fixed asset.",
+      "actions": [
+        "Tap on the 'Assets' section in the navigation drawer.",
+        "Select the 'Fixed Assets' option.",
+        "Enter the name of the fixed asset in the input field.",
+        "Tap on the 'Add' button to save the fixed asset.",
+        "Verify the fixed asset is listed under the 'Fixed Assets' section."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "asset"
+      ],
+      "nav_hints": [
+        "asset"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Assets' section in the navigation drawer.",
+        "Select the 'Fixed Assets' option.",
+        "Enter the name of the fixed asset in the input field.",
+        "Tap on the 'Add' button to save the fixed asset.",
+        "Verify the fixed asset is listed under the 'Fixed Assets' section."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Currencies",
+      "description": "Manage currencies and rates.",
+      "actions": [
+        "Open the app",
+        "Tap on 'Currencies' in the navigation drawer",
+        "Select the 'Manage currencies and rates' option",
+        "Enter the desired currency",
+        "Select the currency rate",
+        "Tap on the 'Save' button to update the currency rate"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "currency"
+      ],
+      "nav_hints": [
+        "currency"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the app",
+        "Tap on 'Currencies' in the navigation drawer",
+        "Select the 'Manage currencies and rates' option",
+        "Enter the desired currency",
+        "Select the currency rate",
+        "Tap on the 'Save' button to update the currency rate"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Sync",
+      "description": "Set up data sync.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the main menu",
+        "Select the 'Settings' option",
+        "Scroll down to find the 'Sync' settings",
+        "Tap on the 'Sync' settings",
+        "Select 'Open sync settings'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "sync"
+      ],
+      "nav_hints": [
+        "sync"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the main menu",
+        "Select the 'Settings' option",
+        "Scroll down to find the 'Sync' settings",
+        "Tap on the 'Sync' settings",
+        "Select 'Open sync settings'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Database password",
+      "description": "Set or change the database password.",
+      "actions": [
+        "Tap on the 'Settings' menu.",
+        "Select 'Database' from the settings menu.",
+        "Tap on 'Database Password' to proceed.",
+        "Enter the new database password.",
+        "Confirm the new database password.",
+        "Tap on 'Save' to apply the changes."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "password"
+      ],
+      "nav_hints": [
+        "password"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Settings' menu.",
+        "Select 'Database' from the settings menu.",
+        "Tap on 'Database Password' to proceed.",
+        "Enter the new database password.",
+        "Confirm the new database password.",
+        "Tap on 'Save' to apply the changes."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Fingerprint lock",
+      "description": "Turn on biometric lock.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the settings menu",
+        "Select 'Security' from the settings menu",
+        "Tap on 'Fingerprint lock'",
+        "Enable fingerprint lock",
+        "Confirm the fingerprint lock setup"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "fingerprint",
+        "lock"
+      ],
+      "nav_hints": [
+        "fingerprint"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the settings menu",
+        "Select 'Security' from the settings menu",
+        "Tap on 'Fingerprint lock'",
+        "Enable fingerprint lock",
+        "Confirm the fingerprint lock setup"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Import export",
+      "description": "Import or export QIF or CSV.",
+      "actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the 'Import or export' feature",
+        "Select 'Import' or 'Export' based on the user's choice",
+        "Choose the file type (QIF or CSV)",
+        "Locate and select the file to import or export",
+        "Confirm the import or export operation"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "import",
+        "export",
+        "qif",
+        "csv"
+      ],
+      "nav_hints": [
+        "import"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Money Manager Ex app",
+        "Navigate to the 'Import or export' feature",
+        "Select 'Import' or 'Export' based on the user's choice",
+        "Choose the file type (QIF or CSV)",
+        "Locate and select the file to import or export",
+        "Confirm the import or export operation"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Settings",
+      "description": "Open app settings.",
+      "actions": [
+        "Tap on the 'Settings' option in the app's main menu.",
+        "Select the 'Settings' option from the menu.",
+        "Open the settings menu by tapping on the 'Settings' option."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "settings"
+      ],
+      "nav_hints": [
+        "settings"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Settings' option in the app's main menu.",
+        "Select the 'Settings' option from the menu.",
+        "Open the settings menu by tapping on the 'Settings' option."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    }
+  ],
+  "session_path": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/feature_test/session.json",
+  "log_path": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money/feature_test/log.md",
+  "exploration_bank": [
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=f76546fea06bf63a5005018b967ba56c, view=8128f880d82f0f3d0deac64ec4ce2db8(TutorialActivity/TextView-CLOSE))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.tutorial.TutorialActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f76546fea06bf63a5005018b967ba56c, view=8128f880d82f0f3d0deac64ec4ce2db8(TutorialActivity/TextView-CLOSE))  Finish first-run / tutorial. com.money.manager.ex/.tutorial.TutorialActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=c6a27efb5e0bd6a96dce76e8ab21bb42, view=e10f8a3f37f86db158a570e15a2f2674(GeneralSettingsActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.settings.GeneralSettingsActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c6a27efb5e0bd6a96dce76e8ab21bb42, view=e10f8a3f37f86db158a570e15a2f2674(GeneralSettingsActivity/ImageButton-))  Finish first-run / tutorial. com.money.manager.ex/.settings.GeneralSettingsActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=47be119a7326ee15d6cedb2c9f2dfff1, view=137a2809d2283a7da8e596daff8c7e19(SelectDatabaseActivity/Button-CREATE DAT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.SelectDatabaseActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=47be119a7326ee15d6cedb2c9f2dfff1, view=137a2809d2283a7da8e596daff8c7e19(SelectDatabaseActivity/Button-CREATE DAT))  Finish first-run / tutorial. com.money.manager.ex/.home.SelectDatabaseActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=db9de7889d8d1b431453c3981085d929, view=cb84193f80591015faa7bf2a764ab8c3(PickActivity/Button-SAVE))",
+      "event_type": "touch",
+      "matched_step": "Tap on the Money Manager Ex app icon to open it.",
+      "activity": "com.google.android.documentsui/com.android.documentsui.picker.PickActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=db9de7889d8d1b431453c3981085d929, view=cb84193f80591015faa7bf2a764ab8c3(PickActivity/Button-SAVE)) Tap on the Money Manager Ex app icon to open it. Picking a file/confirming in the system picker: SAVE button1 com.google.android.documentsui/com.android.documentsui.picker.PickActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=967325bb19d8b40560a7364d0acb7f45, view=e775d76c9d80720909bf1f0537d19984(PasswordActivity/Button-OK))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.database.PasswordActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=967325bb19d8b40560a7364d0acb7f45, view=e775d76c9d80720909bf1f0537d19984(PasswordActivity/Button-OK))  Finish first-run / tutorial. com.money.manager.ex/.database.PasswordActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))",
+      "event_type": "touch",
+      "matched_step": "Select the 'Create a database' option from the main menu.",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW)) Select the 'Create a database' option from the main menu. visible label matches the remaining step com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "testcube.mmb",
+      "blob": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)  Mandatory fill of required text field. com.money.manager.ex/.account.AccountEditActivity testcube.mmb set_text"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "testcube.mmb",
+      "blob": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=testcube.mmb)  Mandatory fill of required text field. com.money.manager.ex/.account.AccountEditActivity testcube.mmb set_text"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)  scroll spinnerAccountType up com.money.manager.ex/.account.AccountEditActivity  set_text"
+    },
+    {
+      "feature_id": "GT001",
+      "event": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=21e79083fc5c249a15a24696183e0e3c, view=624b5b32f5baf3cdfd8f063c867d4d5d(AccountEditActivity/EditText-testcube.m), text=testcube.mmb)  Scroll to adjust the spinnerAccountType to select the correct account type. com.money.manager.ex/.account.AccountEditActivity  set_text"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))  nav hint transaction com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))  nav hint transaction com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=102b50a5ced55aeaa1fd01022ce0a1c1(MainActivity/Button-CREATE NEW))  Structural affordance (plus) before spending a model call. com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=8bcd308b8146e2d2f0591bd37449b85a(AccountEditActivity/EditText-Account nu), text=1)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=7fe42e2da8b25787daf620ca2edd4801, view=8bcd308b8146e2d2f0591bd37449b85a(AccountEditActivity/EditText-Account nu), text=1)  Select the 'Add a transaction' button to proceed with adding a new income or expense com.money.manager.ex/.account.AccountEditActivity  set_text"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomSetTextEvent(state=9bedc058f258c8f45e4b12e2c42f64b3, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=1)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=9bedc058f258c8f45e4b12e2c42f64b3, view=79740c2fa1c6361f0e70fef7f2f2c302(AccountEditActivity/EditText-Account na), text=1)  The next step is to navigate back to the previous screen to add a transaction, as the current screen is for account editing. com.money.manager.ex/.account.AccountEditActivity  set_text"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomSetTextEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1), text=1)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1), text=1)  Scrolling to adjust the spinnerAccountType to find the correct option for the account type. com.money.manager.ex/.account.AccountEditActivity  set_text"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=4f14a0dcaca0feb8d4b8dfec578791ba(AccountEditActivity/EditText-1))  Select the 'Cash' option from the ACCOUNT TYPE spinner to proceed with adding a transaction. com.money.manager.ex/.account.AccountEditActivity  touch"
+    },
+    {
+      "feature_id": "GT003",
+      "event": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=44e793bd4cb64fb1c3cc43b013194efd(AccountEditActivity/TextView-SELECT CUR))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.account.AccountEditActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=256358af08e6815432edd71b2d1df748, view=44e793bd4cb64fb1c3cc43b013194efd(AccountEditActivity/TextView-SELECT CUR))  Loop detected; trying an untried widget (backtrack 1/3). com.money.manager.ex/.account.AccountEditActivity  touch"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=56093e4f89e8ecaca6bdcad38145fe9f(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=56093e4f89e8ecaca6bdcad38145fe9f(MainActivity/ImageButton-))  Current screen is not the feature yet; navigating inside the app. com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomTouchEvent(state=7081635cc4d3e28f6425391f1c1a78d6, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa))",
+      "event_type": "touch",
+      "matched_step": "Tap on the transaction you want to edit in the transaction list.",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7081635cc4d3e28f6425391f1c1a78d6, view=1d9c989699ab02325b1a654c912fb0d1(MainActivity/TextView-All transa)) Tap on the transaction you want to edit in the transaction list. visible label matches the remaining step com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "ScrollEvent(state=f9c0e13417200920ea1b1c3174b0e414, view=3d0da6020df9c26a32aa108fcb4464bd(MainActivity/ExpandableListView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=f9c0e13417200920ea1b1c3174b0e414, view=3d0da6020df9c26a32aa108fcb4464bd(MainActivity/ExpandableListView-), direction=left)  Finish first-run / tutorial. com.money.manager.ex/.home.MainActivity  scroll"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomTouchEvent(state=878dad5a22919e5ee516f44c3956487e, view=136d64e49e0c174b7cecd0cea5c3de55(MainActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "Select the 'Edit' option from the menu that appears.",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=878dad5a22919e5ee516f44c3956487e, view=136d64e49e0c174b7cecd0cea5c3de55(MainActivity/Button-)) Select the 'Edit' option from the menu that appears. visible label matches the remaining step com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomTouchEvent(state=7e72fb35420dfd44b347de75e08974ff, view=193690f5f9169553ff37dcfdad9e2711(MainActivity/CheckBox-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7e72fb35420dfd44b347de75e08974ff, view=193690f5f9169553ff37dcfdad9e2711(MainActivity/CheckBox-))  add/create control com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomSetTextEvent(state=7f1538788b703799c2a3c2ea38d7f7a0, view=f791beeb9799f0db39d52cdc9466fc11(MainActivity/AutoCompleteTextView-   ), text=Saimon Bhuiyan)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "Saimon Bhuiyan",
+      "blob": "CustomSetTextEvent(state=7f1538788b703799c2a3c2ea38d7f7a0, view=f791beeb9799f0db39d52cdc9466fc11(MainActivity/AutoCompleteTextView-   ), text=Saimon Bhuiyan)  Mandatory fill of required text field. com.money.manager.ex/.home.MainActivity Saimon Bhuiyan set_text"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomSetTextEvent(state=2ec765d399440d7f03cebf41a2c317c3, view=43b71a6e44f22650d96a72325cba1683(MainActivity/AutoCompleteTextView-Saimon Bhu), text=Saimon Bhuiyan)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=2ec765d399440d7f03cebf41a2c317c3, view=43b71a6e44f22650d96a72325cba1683(MainActivity/AutoCompleteTextView-Saimon Bhu), text=Saimon Bhuiyan)  Current screen is not the feature yet; navigating inside the app. com.money.manager.ex/.home.MainActivity  set_text"
+    },
+    {
+      "feature_id": "GT004",
+      "event": "CustomTouchEvent(state=2ec765d399440d7f03cebf41a2c317c3, x=918, y=2223)",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=2ec765d399440d7f03cebf41a2c317c3, x=918, y=2223)  typing the search query to find the transaction for editing com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=3e50a1a3c41b9700c7097f818c90a401(MainActivity/TextView-Money Mana))",
+      "event_type": "touch",
+      "matched_step": "Open the Money Manager Ex app",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=3e50a1a3c41b9700c7097f818c90a401(MainActivity/TextView-Money Mana)) Open the Money Manager Ex app visible label matches the remaining step com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "Tap on the menu icon",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-)) Tap on the menu icon visible label matches the remaining step com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=7cffa83d253e5f2a61bfa3b4bda9978e(SearchActivity/TextView-To Date))",
+      "event_type": "touch",
+      "matched_step": "Select 'Filter transactions by date'",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=7cffa83d253e5f2a61bfa3b4bda9978e(SearchActivity/TextView-To Date)) Select 'Filter transactions by date' visible label matches the remaining step com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))  visible label matches the remaining step com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a59db7317c0fe2974966399c62e41381(SearchActivity/TextView-Thu, Sep 1))  visible label matches the remaining step com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=97d121fab7d7f6af3321f8c9b03f9529, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))  visible label matches the remaining step com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))  Ignored unhelpful scroll; using an in-app control instead. com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT005",
+      "event": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=770dd326de7b40e3adbb300d52ad7488, view=a30cce194483e695fd2aa80b77cdf9b9(SearchActivity/TextView-2026))  Ignored unhelpful scroll; using an in-app control instead. com.money.manager.ex/.search.SearchActivity  touch"
+    },
+    {
+      "feature_id": "GT006",
+      "event": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "Tap on the 'Search transactions' option in the navigation drawer.",
+      "activity": "com.money.manager.ex/.home.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f00e04918ea3ad23ba29c76ba4864753, view=4c5be2b19e11edc29c55cb86570ed65a(MainActivity/Button-)) Tap on the 'Search transactions' option in the navigation drawer. navigate to search com.money.manager.ex/.home.MainActivity  touch"
+    },
+    {
+      "feature_id": "GT006",
+      "event": "CustomSetTextEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=e77bab3f2311825eb5ce47c9122e85e6(SearchActivity/EditText-Transactio), text=123456789)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "123456789",
+      "blob": "CustomSetTextEvent(state=68765b32bba10fd5c6bfbd691ac91e39, view=e77bab3f2311825eb5ce47c9122e85e6(SearchActivity/EditText-Transactio), text=123456789)  Mandatory fill of required text field. com.money.manager.ex/.search.SearchActivity 123456789 set_text"
+    },
+    {
+      "feature_id": "GT006",
+      "event": "CustomSetTextEvent(state=5699579216d73b2fc5fa0071b0873039, view=59c45f22653c8f838c3dbdf7e5ed868b(SearchActivity/EditText-123456789), text=123456789)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.money.manager.ex/.search.SearchActivity",
+      "text": "123456789",
+      "blob": "CustomSetTextEvent(state=5699579216d73b2fc5fa0071b0873039, view=59c45f22653c8f838c3dbdf7e5ed868b(SearchActivity/EditText-123456789), text=123456789)  Mandatory fill of required text field. com.money.manager.ex/.search.SearchActivity 123456789 set_text"
+    }
+  ],
+  "online_coverage": {
+    "covered": 0,
+    "total": 28,
+    "coverage": 0.0,
+    "partial": 6,
+    "weighted_coverage": 0.10952380952380951,
+    "dropped": 0,
+    "not_present": 0,
+    "explanation": "Feature coverage is fully covered / total. Weighted coverage is the mean per-feature completion ratio so partial gold steps count."
+  },
+  "shared_flow_reuses": [],
+  "run_cost": {
+    "wall_clock_seconds": 610.18,
+    "llm_calls": {
+      "feature_extraction": 0,
+      "widget_scoring": 9,
+      "context_retrieval": 0,
+      "hybrid_discovery": 0,
+      "other": 0
+    },
+    "llm_calls_total": 9,
+    "vlm_fallbacks": 9,
+    "sparse_screens": [],
+    "mechanisms": [
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 442.7670328617096
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 442.76856684684753
+      }
+    ],
+    "text_inputs": [
+      {
+        "value": "testcube.mmb",
+        "source": "llm",
+        "field": "Account name",
+        "accepted": null
+      },
+      {
+        "value": "testcube.mmb",
+        "source": "verify",
+        "field": "Account name",
+        "accepted": false
+      },
+      {
+        "value": "testcube.mmb",
+        "source": "llm",
+        "field": "Account name",
+        "accepted": null
+      },
+      {
+        "value": "testcube.mmb",
+        "source": "verify",
+        "field": "Account name",
+        "accepted": true
+      },
+      {
+        "value": "testcube.mmb",
+        "source": "llm",
+        "field": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "value": "testcube.mmb",
+        "source": "llm",
+        "field": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "value": "1",
+        "source": "credential",
+        "field": "Account number",
+        "accepted": null
+      },
+      {
+        "value": "1",
+        "source": "credential",
+        "field": "Account name",
+        "accepted": null
+      },
+      {
+        "value": "1",
+        "source": "credential",
+        "field": "1",
+        "accepted": null
+      },
+      {
+        "value": "Saimon Bhuiyan",
+        "source": "llm",
+        "field": "   ",
+        "accepted": null
+      },
+      {
+        "value": "Saimon Bhuiyan",
+        "source": "verify",
+        "field": "   ",
+        "accepted": true
+      },
+      {
+        "value": "Saimon Bhuiyan",
+        "source": "llm",
+        "field": "Saimon Bhuiyan",
+        "accepted": null
+      },
+      {
+        "value": "Saimon Bhuiyan",
+        "source": "llm",
+        "field": "Saimon Bhuiyan",
+        "accepted": null
+      },
+      {
+        "value": "123456789",
+        "source": "llm",
+        "field": "Transaction number",
+        "accepted": null
+      },
+      {
+        "value": "123456789",
+        "source": "verify",
+        "field": "Transaction number",
+        "accepted": true
+      },
+      {
+        "value": "123456789",
+        "source": "llm",
+        "field": "123456789",
+        "accepted": null
+      }
+    ],
+    "context_calls": [],
+    "field_fills": {
+      "credential": 3,
+      "vlm": 9,
+      "unresolved": 0,
+      "optional-blank": 0
+    },
+    "field_resolutions": [
+      {
+        "source": "vlm",
+        "field": "Account name",
+        "value": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "Account name",
+        "value": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "testcube.mmb",
+        "value": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "testcube.mmb",
+        "value": "testcube.mmb",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "Account number",
+        "value": "1",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "Account name",
+        "value": "1",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "1",
+        "value": "1",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "   ",
+        "value": "Saimon Bhuiyan",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "Saimon Bhuiyan",
+        "value": "Saimon Bhuiyan",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "Saimon Bhuiyan",
+        "value": "Saimon Bhuiyan",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "Transaction number",
+        "value": "123456789",
+        "accepted": null
+      },
+      {
+        "source": "vlm",
+        "field": "123456789",
+        "value": "123456789",
+        "accepted": null
+      }
+    ]
+  },
+  "offline_coverage": {
+    "covered": 0,
+    "total": 28,
+    "coverage": 0.0,
+    "partial": 3,
+    "exercised": 3,
+    "coverage_formula": "covered / total",
+    "weighted_coverage": 0.05357142857142857,
+    "weighted_coverage_percentage": 5.36,
+    "explanation": "Offline coverage is an LLM/VLM semantic judge vs ground-truth JSON. Feature Coverage = COVERED / Total. Weighted Coverage = mean(completion_ratio) so partial gold steps still count. Step order is not required. Later exploration can complete an earlier partial feature.",
+    "features": [
+      {
+        "id": "GT001",
+        "name": "Create a New Database",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Some steps were partially completed, but the database creation was not fully covered.",
+          "touch SelectDatabaseActivity/Button-CREATE DAT"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.5
+      },
+      {
+        "id": "GT002",
+        "name": "Create First/New Account",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.4,
+        "evidence": [
+          "No steps related to account creation were completed.",
+          "touch MainActivity/Button-CREATE NEW"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT003",
+        "name": "Add a Transaction",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.3,
+        "evidence": [
+          "No steps related to transaction addition were completed.",
+          "touch AccountEditActivity/EditText-1"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT004",
+        "name": "Edit / Delete / Modify a Transaction",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Partially covers edit transaction, lacks deletion and void options.",
+          "touch MainActivity/TextView-All transa",
+          "set_text MainActivity/AutoCompleteTextView-Saimon Bhu"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.5
+      },
+      {
+        "id": "GT005",
+        "name": "Filter Transactions by Date Range",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Partially covers date range filtering, lacks end date selection.",
+          "touch SearchActivity/TextView-To Date",
+          "touch SearchActivity/TextView-Thu, Sep 1"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.5
+      },
+      {
+        "id": "GT006",
+        "name": "Search/Sort Transactions",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT007",
+        "name": "Mark Account as Favorite",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to marking an account as favorite."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT008",
+        "name": "Manage Accounts",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to managing accounts."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT009",
+        "name": "Set Up a Budget",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to setting up a budget."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT010",
+        "name": "Set/Edit a Category Budget Amount",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to setting/editing a category budget amount"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT011",
+        "name": "View Budget Details / Transactions",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to viewing budget details/transactions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT012",
+        "name": "Delete a Budget",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to deleting a budget"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT013",
+        "name": "Configure Budget View Options",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT014",
+        "name": "Create a Recurring/Scheduled Transaction",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT015",
+        "name": "Respond to a Recurring Transaction Prompt",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT016",
+        "name": "Manage Payees",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT017",
+        "name": "Manage Categories",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT018",
+        "name": "View a Built-In Report",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT019",
+        "name": "Run a General Report",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "later GT001: Tap on the Money Manager Ex app icon to open it."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT020",
+        "name": "Track Stock/Mutual Fund Investments",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "later GT001: Tap on the Money Manager Ex app icon to open it."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT021",
+        "name": "Add a Stock Transaction",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "touch AccountEditActivity/EditText-1"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT022",
+        "name": "Track Fixed Assets",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions for feature"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT023",
+        "name": "Manage Currencies & Exchange Rates",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions for feature"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT024",
+        "name": "Set Up Data Sync",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions for feature"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT025",
+        "name": "Set/Change Database Password",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to setting or changing a database password."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT026",
+        "name": "Enable Fingerprint/Biometric Lock",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to enabling fingerprint/biometric lock."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT027",
+        "name": "Import/Export via QIF or CSV",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to importing/exporting via QIF or CSV."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT028",
+        "name": "Configure App Settings",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions taken"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      }
+    ],
+    "confusion": [
+      {
+        "ground_truth_id": "GT001",
+        "ground_truth_name": "Create a New Database",
+        "journal_id": "GT001",
+        "journal_name": "New database",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT002",
+        "ground_truth_name": "Create First/New Account",
+        "journal_id": "GT002",
+        "journal_name": "New account",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT003",
+        "ground_truth_name": "Add a Transaction",
+        "journal_id": "GT003",
+        "journal_name": "Add transaction",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT004",
+        "ground_truth_name": "Edit / Delete / Modify a Transaction",
+        "journal_id": "GT004",
+        "journal_name": "Edit transaction",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT005",
+        "ground_truth_name": "Filter Transactions by Date Range",
+        "journal_id": "GT005",
+        "journal_name": "Filter by date",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT006",
+        "ground_truth_name": "Search/Sort Transactions",
+        "journal_id": "GT006",
+        "journal_name": "Search transactions",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT007",
+        "ground_truth_name": "Mark Account as Favorite",
+        "journal_id": "GT007",
+        "journal_name": "Favorite account",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT008",
+        "ground_truth_name": "Manage Accounts",
+        "journal_id": "GT008",
+        "journal_name": "Manage accounts",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT009",
+        "ground_truth_name": "Set Up a Budget",
+        "journal_id": "GT009",
+        "journal_name": "Budget",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT010",
+        "ground_truth_name": "Set/Edit a Category Budget Amount",
+        "journal_id": "GT010",
+        "journal_name": "Budget amount",
+        "name_similarity": 0.4,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT011",
+        "ground_truth_name": "View Budget Details / Transactions",
+        "journal_id": "GT011",
+        "journal_name": "Budget details",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT012",
+        "ground_truth_name": "Delete a Budget",
+        "journal_id": "GT012",
+        "journal_name": "Delete budget",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT013",
+        "ground_truth_name": "Configure Budget View Options",
+        "journal_id": "GT013",
+        "journal_name": "Budget view options",
+        "name_similarity": 0.75,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT014",
+        "ground_truth_name": "Create a Recurring/Scheduled Transaction",
+        "journal_id": "GT014",
+        "journal_name": "Scheduled transaction",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT015",
+        "ground_truth_name": "Respond to a Recurring Transaction Prompt",
+        "journal_id": "GT015",
+        "journal_name": "Recurring prompt",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT016",
+        "ground_truth_name": "Manage Payees",
+        "journal_id": "GT016",
+        "journal_name": "Payees",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT017",
+        "ground_truth_name": "Manage Categories",
+        "journal_id": "GT017",
+        "journal_name": "Categories",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT018",
+        "ground_truth_name": "View a Built-In Report",
+        "journal_id": "GT018",
+        "journal_name": "Built-in report",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT019",
+        "ground_truth_name": "Run a General Report",
+        "journal_id": "GT019",
+        "journal_name": "General report",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT020",
+        "ground_truth_name": "Track Stock/Mutual Fund Investments",
+        "journal_id": "GT020",
+        "journal_name": "Investments",
+        "name_similarity": 0.385,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT021",
+        "ground_truth_name": "Add a Stock Transaction",
+        "journal_id": "GT021",
+        "journal_name": "Stock transaction",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT022",
+        "ground_truth_name": "Track Fixed Assets",
+        "journal_id": "GT022",
+        "journal_name": "Fixed assets",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT023",
+        "ground_truth_name": "Manage Currencies & Exchange Rates",
+        "journal_id": "GT023",
+        "journal_name": "Currencies",
+        "name_similarity": 0.357,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT024",
+        "ground_truth_name": "Set Up Data Sync",
+        "journal_id": "GT024",
+        "journal_name": "Sync",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT025",
+        "ground_truth_name": "Set/Change Database Password",
+        "journal_id": "GT025",
+        "journal_name": "Database password",
+        "name_similarity": 0.625,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT026",
+        "ground_truth_name": "Enable Fingerprint/Biometric Lock",
+        "journal_id": "GT026",
+        "journal_name": "Fingerprint lock",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT027",
+        "ground_truth_name": "Import/Export via QIF or CSV",
+        "journal_id": "GT027",
+        "journal_name": "Import export",
+        "name_similarity": 0.4,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT028",
+        "ground_truth_name": "Configure App Settings",
+        "journal_id": "GT028",
+        "journal_name": "Settings",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      }
+    ],
+    "feature_inference": {
+      "true_positives": 28,
+      "false_negatives": 0,
+      "false_positives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_not_present": 0,
+      "false_not_present_rate": 0.0,
+      "extracted_count": 28,
+      "ground_truth_count": 28,
+      "feature_completeness_ratio": 1.0,
+      "id_collisions": [],
+      "id_collisions_loud": false,
+      "prf1_withheld": false
+    }
+  },
+  "attempt_summary": {
+    "attempted": 6,
+    "never_attempted": 22,
+    "blocked_then_recovered": 0,
+    "blocked_still": 0
+  },
+  "ground_truth_source": "independent_labeled_set",
+  "ground_truth_addendum": {
+    "path": "/Users/mahdiya/TestCube-2.0/feature/money/ground_truth_addendum.json",
+    "total": 6,
+    "matched": 2,
+    "pairs": [
+      {
+        "addendum_name": "Split a transaction",
+        "journal_id": "GT003",
+        "journal_name": "Add transaction",
+        "journal_source": "guide",
+        "name_similarity": 0.333
+      },
+      {
+        "addendum_name": "Reconcile a transaction",
+        "journal_id": "GT003",
+        "journal_name": "Add transaction",
+        "journal_source": "guide",
+        "name_similarity": 0.333
+      }
+    ],
+    "missed": [
+      "Attach a picture to a transaction",
+      "Hide an account from Home",
+      "Backup the database",
+      "View the cash-flow calendar"
+    ],
+    "explanation": "Independent features not in the guide list. matched = live journal features with name similarity >= 0.3 (hybrid discovery is the expected source)."
+  }
+}

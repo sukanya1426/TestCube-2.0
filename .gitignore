@@ -87,3 +87,20 @@ target/
 # Code coverage tooling (build output, cloned upstream)
 tools/
 apks/instrumented/
+
+# --- run artifacts -----------------------------------------------------------
+# Runs produce thousands of screenshots and view dumps (199 MB for one batch).
+# Ignore everything under output/ EXCEPT the small report files, so results stay
+# shareable through git without the raw dumps.
+output/**
+!output/**/
+!output/**/code_coverage.json
+!output/**/codecoverage.txt
+!output/**/coverage_comparison.json
+!output/**/coverage_comparison.md
+!output/**/experiment_results.json
+!output/**/experiment_summary.md
+!output/**/feature_coverage/report.json
+!output/**/feature_coverage/report.txt
+!output/**/feature_test/report.json
+!output/**/feature_test/report.md

@@ -1,0 +1,292 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Money Manager Ex
+
+Total Features   : 28
+Covered Features : 1
+Partial          : 0
+Uncovered        : 27
+
+Feature Coverage : 3.57%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 3.57%  (mean completion ratio; partial steps count)
+Exercised        : 1  (covered 1 + partial 0)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a New Database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to creating a database.
+
+[GT002] Create First/New Account
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to creating an account.
+
+[GT003] Add a Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to adding a transaction.
+
+[GT004] Edit / Delete / Modify a Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed; no transaction editing or deletion.
+  - touch MainActivity/Button-
+  - later PasswordActivity/Button-OK
+
+[GT005] Filter Transactions by Date Range
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed; no date range filtering.
+  - later GeneralSettingsActivity/ImageButton-
+  - later SelectDatabaseActivity/Button-CREATE DAT
+
+[GT006] Search/Sort Transactions
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed; no search or sort functionality.
+  - later GeneralSettingsActivity/ImageButton-
+  - later SelectDatabaseActivity/Button-CREATE DAT
+
+[GT007] Mark Account as Favorite
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to marking an account as favorite.
+  - touch MainActivity/Button-CREATE NEW
+
+[GT008] Manage Accounts
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to managing accounts.
+  - touch MainActivity/TextView-All transa
+
+[GT009] Set Up a Budget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to setting up a budget.
+  - touch MainActivity/Button-CREATE NEW
+
+[GT010] Set/Edit a Category Budget Amount
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/Button-SETTINGS
+
+[GT011] View Budget Details / Transactions
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/Button-SETTINGS
+
+[GT012] Delete a Budget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-Money Mana
+
+[GT013] Configure Budget View Options
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed; no relevant actions.
+
+[GT014] Create a Recurring/Scheduled Transaction
+Status     : COVERED
+Confidence : 0.50
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Gold steps not followed; no relevant actions.
+  - Completed by later features: GT015
+
+[GT015] Respond to a Recurring Transaction Prompt
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed; no relevant actions.
+
+[GT016] Manage Payees
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal dropped, no actions match Gold steps
+
+[GT017] Manage Categories
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal dropped, no actions match Gold steps
+
+[GT018] View a Built-In Report
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal dropped, no actions match Gold steps
+
+[GT019] Run a General Report
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards running a general report.
+  - touch MainActivity/Button-
+
+[GT020] Track Stock/Mutual Fund Investments
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards tracking stock/mutual fund investments.
+  - touch MainActivity/Button-
+
+[GT021] Add a Stock Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding a stock transaction.
+  - touch MainActivity/Button-
+
+[GT022] Track Fixed Assets
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Track Fixed Assets
+
+[GT023] Manage Currencies & Exchange Rates
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Manage Currencies & Exchange Rates
+
+[GT024] Set Up Data Sync
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Set Up Data Sync
+
+[GT025] Set/Change Database Password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to setting or changing database password.
+  - later PasswordActivity/Button-OK
+
+[GT026] Enable Fingerprint/Biometric Lock
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to enabling fingerprint/biometric lock.
+  - later GeneralSettingsActivity/ImageButton-
+
+[GT027] Import/Export via QIF or CSV
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to importing/exporting via QIF or CSV.
+  - later SelectDatabaseActivity/Button-CREATE DAT
+
+[GT028] Configure App Settings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to configuring app settings.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 28 features covered
+0 / 28 features partial
+Feature Coverage = COVERED / Total = 3.57%
+Weighted Feature Coverage = mean(completion_ratio) = 3.57%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 28 / 28 (completeness ratio 1.0)
+
+Feature-inference P/R/F1: 1.00 / 1.00 / 1.00 (false not_present=0)
+
+GT GT001 'Create a New Database' | journal=GT001 'New database' (sim=0.667, name) status=covered | offline=not_covered
+GT GT002 'Create First/New Account' | journal=GT002 'New account' (sim=0.5, name) status=covered | offline=not_covered
+GT GT003 'Add a Transaction' | journal=GT003 'Add transaction' (sim=1.0, name) status=dropped | offline=not_covered
+GT GT004 'Edit / Delete / Modify a Transaction' | journal=GT004 'Edit transaction' (sim=0.5, name) status=covered | offline=not_covered
+GT GT005 'Filter Transactions by Date Range' | journal=GT005 'Filter by date' (sim=0.5, name) status=covered | offline=not_covered
+GT GT006 'Search/Sort Transactions' | journal=GT006 'Search transactions' (sim=0.667, name) status=covered | offline=not_covered
+GT GT007 'Mark Account as Favorite' | journal=GT007 'Favorite account' (sim=0.667, name) status=covered | offline=not_covered
+GT GT008 'Manage Accounts' | journal=GT008 'Manage accounts' (sim=1.0, name) status=covered | offline=not_covered
+GT GT009 'Set Up a Budget' | journal=GT009 'Budget' (sim=0.5, name) status=dropped | offline=not_covered
+GT GT010 'Set/Edit a Category Budget Amount' | journal=GT010 'Budget amount' (sim=0.4, name) status=covered | offline=not_covered
+GT GT011 'View Budget Details / Transactions' | journal=GT011 'Budget details' (sim=0.5, name) status=covered | offline=not_covered
+GT GT012 'Delete a Budget' | journal=GT012 'Delete budget' (sim=1.0, name) status=dropped | offline=not_covered
+GT GT013 'Configure Budget View Options' | journal=GT013 'Budget view options' (sim=0.75, name) status=covered | offline=not_covered
+GT GT014 'Create a Recurring/Scheduled Transaction' | journal=GT014 'Scheduled transaction' (sim=0.5, name) status=covered | offline=covered
+GT GT015 'Respond to a Recurring Transaction Prompt' | journal=GT015 'Recurring prompt' (sim=0.5, name) status=covered | offline=not_covered
+GT GT016 'Manage Payees' | journal=GT016 'Payees' (sim=0.5, name) status=dropped | offline=not_covered
+GT GT017 'Manage Categories' | journal=GT017 'Categories' (sim=0.5, name) status=dropped | offline=not_covered
+GT GT018 'View a Built-In Report' | journal=GT018 'Built-in report' (sim=0.667, name) status=dropped | offline=not_covered
+GT GT019 'Run a General Report' | journal=GT019 'General report' (sim=0.667, name) status=covered | offline=not_covered
+GT GT020 'Track Stock/Mutual Fund Investments' | journal=GT020 'Investments' (sim=0.385, name) status=dropped | offline=not_covered
+GT GT021 'Add a Stock Transaction' | journal=GT021 'Stock transaction' (sim=0.667, name) status=dropped | offline=not_covered
+GT GT022 'Track Fixed Assets' | journal=GT022 'Fixed assets' (sim=0.667, name) status=dropped | offline=not_covered
+GT GT023 'Manage Currencies & Exchange Rates' | journal=GT023 'Currencies' (sim=0.357, name) status=pending | offline=not_covered
+GT GT024 'Set Up Data Sync' | journal=GT024 'Sync' (sim=0.333, name) status=pending | offline=not_covered
+GT GT025 'Set/Change Database Password' | journal=GT025 'Database password' (sim=0.625, name) status=pending | offline=not_covered
+GT GT026 'Enable Fingerprint/Biometric Lock' | journal=GT026 'Fingerprint lock' (sim=0.5, name) status=pending | offline=not_covered
+GT GT027 'Import/Export via QIF or CSV' | journal=GT027 'Import export' (sim=0.4, name) status=pending | offline=not_covered
+GT GT028 'Configure App Settings' | journal=GT028 'Settings' (sim=0.333, name) status=pending | offline=not_covered

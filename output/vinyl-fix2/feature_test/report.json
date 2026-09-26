@@ -1,0 +1,2527 @@
+{
+  "app": "Vinyl Music Player",
+  "started_at": "2026-08-23 11:00:37",
+  "finished_at": "2026-08-23 11:07:41",
+  "total_features": 9,
+  "covered": 5,
+  "partial": 4,
+  "dropped": 0,
+  "not_present": 0,
+  "blocked": 0,
+  "coverage": 0.5555555555555556,
+  "weighted_coverage": 0.7722222222222223,
+  "unscored_discovered": 0,
+  "feature_source": "guide",
+  "guide_vs_readme": {
+    "guide_count": 9,
+    "readme_count": 7,
+    "both": [
+      {
+        "guide_id": "F002",
+        "guide_name": "Play a song",
+        "readme_id": "F002",
+        "readme_name": "Browse and play songs from the library",
+        "name_similarity": 0.333
+      },
+      {
+        "guide_id": "F003",
+        "guide_name": "Now playing",
+        "readme_id": "F003",
+        "readme_name": "Open the currently playing screen from the bottom mini-player card",
+        "name_similarity": 0.538
+      },
+      {
+        "guide_id": "F007",
+        "guide_name": "Search",
+        "readme_id": "F005",
+        "readme_name": "Search the library",
+        "name_similarity": 0.375
+      },
+      {
+        "guide_id": "F008",
+        "guide_name": "Rescan",
+        "readme_id": "F006",
+        "readme_name": "Rescan the music library from the navigation drawer",
+        "name_similarity": 0.417
+      },
+      {
+        "guide_id": "F009",
+        "guide_name": "Shuffle all",
+        "readme_id": "F007",
+        "readme_name": "Shuffle all from the overflow menu",
+        "name_similarity": 0.429
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "F001",
+        "name": "Get started"
+      },
+      {
+        "id": "F004",
+        "name": "Pause"
+      },
+      {
+        "id": "F005",
+        "name": "Next"
+      },
+      {
+        "id": "F006",
+        "name": "Previous"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F004",
+        "name": "Pause, next, and previous from the now-playing screen"
+      }
+    ]
+  },
+  "guide_features_path": "/Users/mahdiya/TestCube-2.0/feature/vinyl/guide_features.json",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Get started",
+      "description": "Finish intro and allow music permissions.",
+      "actions": [
+        "Tap Get Started",
+        "Tap Allow permissions",
+        "Select Yes to allow media storage permissions"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "get started",
+        "permission"
+      ],
+      "nav_hints": [
+        "get started",
+        "allow"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Onboarding already finished; main screen is visible.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap Get Started"
+      ],
+      "remaining_actions": [
+        "Tap Allow permissions",
+        "Select Yes to allow media storage permissions"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=78948f3c7969465335fa13a4f9ac4f5d, view=afa2a38edb962b882e577d03cc9deae3(AppIntroActivity/Button-GET STARTE))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.intro.AppIntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110043.png",
+          "state": "78948f3c7969465335fa13a4f9ac4f5d",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "GET STARTED",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|get started|button"
+        }
+      ],
+      "completion_ratio": 0.3333333333333333,
+      "completion_source": "executed",
+      "credited_from": [
+        "F003"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "F003",
+          "matched_step": "Tap Get Started",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))"
+        }
+      ]
+    },
+    {
+      "id": "F002",
+      "name": "Play a song",
+      "description": "Tap a song in the library so it starts playing.",
+      "actions": [
+        "Tap a song"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "play",
+        "song"
+      ],
+      "nav_hints": [
+        "songs"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink. Later exploration completed remaining steps.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap a song"
+      ],
+      "remaining_actions": [],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110052.png",
+          "state": "b86bd0753bf68fe0f760ed1855e464dc",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SONGS",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|songs|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110055.png",
+          "state": "b86bd0753bf68fe0f760ed1855e464dc",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SONGS",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|songs|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=09a8295a8187d295e7203205bec4e29c(MainActivity/TextView-SoundHelix))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110058.png",
+          "state": "b86bd0753bf68fe0f760ed1855e464dc",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/text",
+            "text": "SoundHelix  \u2022  Music",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|text|soundhelix \u2022 music|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=3073af271ad5d9e50ada4e958808b32d, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110102.png",
+          "state": "3073af271ad5d9e50ada4e958808b32d",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SONGS",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|songs|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110105.png",
+          "state": "7290f7ab56ff4e9c650aa521e1564249",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SONGS",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|songs|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110107.png",
+          "state": "7290f7ab56ff4e9c650aa521e1564249",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "SONGS",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|songs|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=84e7b9e430fb4cd8774fb8889e70bdcb(MainActivity/ProgressBar-))",
+          "reason": "likely result row",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110110.png",
+          "state": "7290f7ab56ff4e9c650aa521e1564249",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/progress_bar",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ProgressBar",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|progress_bar|progressbar"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=d5008f6b2bff1f3ecdfc16c8aa65b597, view=5575fb62b3c1d4c3ac4e0dd5a620bee3(MainActivity/FrameLayout-))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110113.png",
+          "state": "d5008f6b2bff1f3ecdfc16c8aa65b597",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/current_song",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.FrameLayout",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|current_song|framelayout"
+        }
+      ],
+      "completion_ratio": 1.0,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "cross_feature",
+      "credited_from": [
+        "F004"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "F004",
+          "matched_step": "Tap a song",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        }
+      ]
+    },
+    {
+      "id": "F003",
+      "name": "Now playing",
+      "description": "Open the full player from the bottom mini-player.",
+      "actions": [
+        "Tap the bottom playing card",
+        "Select the full player from the bottom mini-player",
+        "Enter the now playing screen",
+        "Pause the currently playing song",
+        "Next to the currently playing song",
+        "Previous to the currently playing song"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "now playing",
+        "mini player"
+      ],
+      "nav_hints": [
+        "playing"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Pause the currently playing song",
+        "Next to the currently playing song",
+        "Previous to the currently playing song",
+        "Select the full player from the bottom mini-player"
+      ],
+      "remaining_actions": [
+        "Tap the bottom playing card",
+        "Enter the now playing screen"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))",
+          "reason": "mini-player card",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110124.png",
+          "state": "89a69a45b73a8397697f79d49544e08c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/mini_player_title",
+            "text": "TestCube Track Two",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|mini_player_title|testcube track two|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+          "reason": "Continue onboarding.",
+          "matched_step": "Tap Get Started or Continue if shown",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110127.png",
+          "state": "8a1ec1f2368028d46fb22d666f62154a",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_queue_sub_header",
+            "text": "Up next  \u2022  0:00  \u2022  3/3",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_queue_sub_header|up next \u2022 0:00 \u2022 3/3|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+          "reason": "Continue onboarding.",
+          "matched_step": "Tap Get Started or Continue if shown",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110129.png",
+          "state": "8a1ec1f2368028d46fb22d666f62154a",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_queue_sub_header",
+            "text": "Up next  \u2022  0:00  \u2022  3/3",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_queue_sub_header|up next \u2022 0:00 \u2022 3/3|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+          "reason": "Affordance search before drop (fab).",
+          "matched_step": "",
+          "source": "afford_search",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110132.png",
+          "state": "8a1ec1f2368028d46fb22d666f62154a",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_play_pause_fab",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_play_pause_fab|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+          "reason": "Continue onboarding.",
+          "matched_step": "Tap Get Started or Continue if shown",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110135.png",
+          "state": "8609cf6f872d0354db23b09739827c07",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_queue_sub_header",
+            "text": "Up next  \u2022  0:00  \u2022  3/3",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_queue_sub_header|up next \u2022 0:00 \u2022 3/3|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+          "reason": "Continue onboarding.",
+          "matched_step": "Tap Get Started or Continue if shown",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110138.png",
+          "state": "1c72efef7b08ed97bf2ecc2d4b4b8074",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_queue_sub_header",
+            "text": "Up next  \u2022  0:00  \u2022  3/3",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_queue_sub_header|up next \u2022 0:00 \u2022 3/3|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=7621f63fbe63dccca2c4f9dbf25a446c, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+          "reason": "Continue onboarding.",
+          "matched_step": "Tap Get Started or Continue if shown",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110141.png",
+          "state": "7621f63fbe63dccca2c4f9dbf25a446c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_queue_sub_header",
+            "text": "Up next  \u2022  0:00  \u2022  3/3",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_queue_sub_header|up next \u2022 0:00 \u2022 3/3|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=078550fca6002564fe7f574fed92396c, view=402ddbabdc074f1f7582568d82b6a7bb(MainActivity/ImageButton-))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110143.png",
+          "state": "078550fca6002564fe7f574fed92396c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_next_button",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_next_button|imagebutton"
+        }
+      ],
+      "completion_ratio": 0.6666666666666666,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "F004",
+        "F006"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "F004",
+          "matched_step": "Pause the currently playing song",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        },
+        {
+          "from_feature": "F004",
+          "matched_step": "Next to the currently playing song",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        },
+        {
+          "from_feature": "F004",
+          "matched_step": "Previous to the currently playing song",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        },
+        {
+          "from_feature": "F006",
+          "matched_step": "Select the full player from the bottom mini-player",
+          "event": "CustomTouchEvent(state=6fd1e0784f6853fdeda15bdb43c06810, view=98e71aae6ee5bacb411951cfef24b097(MainActivity/FrameLayout-))"
+        }
+      ]
+    },
+    {
+      "id": "F004",
+      "name": "Pause",
+      "description": "Pause the current song from the player.",
+      "actions": [
+        "Tap the now-playing screen to open the currently playing song",
+        "Tap the pause button to pause the current song",
+        "Confirm the song is paused by checking the pause icon",
+        "Tap the play button to resume the song",
+        "Confirm the song is playing by checking the play icon"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "pause"
+      ],
+      "nav_hints": [
+        "pause"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Listed steps are done.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap the now-playing screen to open the currently playing song",
+        "Tap the pause button to pause the current song",
+        "Confirm the song is paused by checking the pause icon",
+        "Tap the play button to resume the song",
+        "Confirm the song is playing by checking the play icon"
+      ],
+      "remaining_actions": [],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=1d90648c66aa628ea306f309d0c8b573(MainActivity/FrameLayout-))",
+          "reason": "mini-player card",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110154.png",
+          "state": "89a69a45b73a8397697f79d49544e08c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/mini_player_fragment",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.FrameLayout",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|mini_player_fragment|framelayout"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))",
+          "reason": "likely result row",
+          "matched_step": "Tap the now-playing screen to open the currently playing song",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110157.png",
+          "state": "8a1ec1f2368028d46fb22d666f62154a",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_current_progress",
+            "text": "0:00",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_current_progress|0:00|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+          "reason": "player control pause",
+          "matched_step": "Tap the pause button to pause the current song",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110200.png",
+          "state": "8a1ec1f2368028d46fb22d666f62154a",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_play_pause_fab",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_play_pause_fab|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+          "reason": "player control pause",
+          "matched_step": "Confirm the song is paused by checking the pause icon",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110202.png",
+          "state": "8609cf6f872d0354db23b09739827c07",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_play_pause_fab",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_play_pause_fab|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=47b24b5b4d03c6e2443a175bbb5a00be, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+          "reason": "player control pause",
+          "matched_step": "Tap the play button to resume the song",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110205.png",
+          "state": "47b24b5b4d03c6e2443a175bbb5a00be",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_play_pause_fab",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_play_pause_fab|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Confirm the song is playing by checking the play icon",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110208.png",
+          "state": "1c72efef7b08ed97bf2ecc2d4b4b8074",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_play_pause_fab",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_play_pause_fab|imagebutton"
+        }
+      ],
+      "completion_ratio": 1.0,
+      "completion_source": "executed"
+    },
+    {
+      "id": "F005",
+      "name": "Next",
+      "description": "Skip to the next song.",
+      "actions": [
+        "Tap on the bottom mini-player card to open the now-playing screen",
+        "Locate the 'Next' button on the now-playing screen",
+        "Tap the 'Next' button to skip to the next song"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "next"
+      ],
+      "nav_hints": [
+        "next"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Onboarding already finished; main screen is visible. Later exploration completed remaining steps.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the bottom mini-player card to open the now-playing screen",
+        "Tap the 'Next' button to skip to the next song",
+        "Locate the 'Next' button on the now-playing screen"
+      ],
+      "remaining_actions": [],
+      "steps": [],
+      "completion_ratio": 1.0,
+      "completion_source": "cross_feature",
+      "credited_from": [
+        "F004"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "F004",
+          "matched_step": "Tap on the bottom mini-player card to open the now-playing screen",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        },
+        {
+          "from_feature": "F004",
+          "matched_step": "Tap the 'Next' button to skip to the next song",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))"
+        },
+        {
+          "from_feature": "F004",
+          "matched_step": "Locate the 'Next' button on the now-playing screen",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        }
+      ]
+    },
+    {
+      "id": "F006",
+      "name": "Previous",
+      "description": "Go back to the previous song.",
+      "actions": [
+        "Open the player",
+        "Tap the now-playing screen",
+        "Tap the 'previous' navigation hint",
+        "Confirm the transition to the previous song"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "previous"
+      ],
+      "nav_hints": [
+        "previous"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open the player",
+        "Tap the now-playing screen",
+        "Confirm the transition to the previous song"
+      ],
+      "remaining_actions": [
+        "Tap the 'previous' navigation hint"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=dca0b23fcbace0f63ed46a889fc202bb, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))",
+          "reason": "mini-player card",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110226.png",
+          "state": "dca0b23fcbace0f63ed46a889fc202bb",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/mini_player_title",
+            "text": "TestCube Track Two",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|mini_player_title|testcube track two|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=6fd1e0784f6853fdeda15bdb43c06810, view=98e71aae6ee5bacb411951cfef24b097(MainActivity/FrameLayout-))",
+          "reason": "bottom player bar",
+          "matched_step": "Open the player",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110229.png",
+          "state": "6fd1e0784f6853fdeda15bdb43c06810",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_panel",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.FrameLayout",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_panel|framelayout"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=6a23e8248bc395d97ce98d4a767f3220, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110233.png",
+          "state": "6a23e8248bc395d97ce98d4a767f3220",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=ab68f267c91f593be2681193117148f4, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110236.png",
+          "state": "ab68f267c91f593be2681193117148f4",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=650a8b07a659f39801a0e5fa84746e64, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110238.png",
+          "state": "650a8b07a659f39801a0e5fa84746e64",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=df5728ff3198ae2cfb7cc71afee39ac5, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110241.png",
+          "state": "df5728ff3198ae2cfb7cc71afee39ac5",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=e70e34bf8af26279ed45fc076424dd0e, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110244.png",
+          "state": "e70e34bf8af26279ed45fc076424dd0e",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=3e5d159ffef9107c834411f4f5876956, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110246.png",
+          "state": "3e5d159ffef9107c834411f4f5876956",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_total_time",
+            "text": "6:12",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_total_time|6:12|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=35f6446c8ac8602ea6e84d2e4e2914c3, view=1f9c16dbcd9b1fe70c027e2a19e1ede7(MainActivity/TextView-0:15))",
+          "reason": "navigate to player",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110249.png",
+          "state": "35f6446c8ac8602ea6e84d2e4e2914c3",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_current_progress",
+            "text": "0:15",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_current_progress|0:15|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=41216138e225f1b07562e90a1b6f866b, view=f7a6921a7c1545eccfd4848812821dd5(MainActivity/TextView-0:17))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110251.png",
+          "state": "41216138e225f1b07562e90a1b6f866b",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/player_song_current_progress",
+            "text": "0:17",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|player_song_current_progress|0:17|textview"
+        }
+      ],
+      "completion_ratio": 0.75,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "F004"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "F004",
+          "matched_step": "Tap the now-playing screen",
+          "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))"
+        },
+        {
+          "from_feature": "F004",
+          "matched_step": "Confirm the transition to the previous song",
+          "event": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))"
+        }
+      ]
+    },
+    {
+      "id": "F007",
+      "name": "Search",
+      "description": "Search the library.",
+      "actions": [
+        "Tap on the search icon in the top right corner of the main screen.",
+        "Enter the query text in the search input field.",
+        "Press the enter key to execute the search.",
+        "Review the search results displayed on the screen."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Listed steps are done.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the search icon in the top right corner of the main screen.",
+        "Enter the query text in the search input field.",
+        "Press the enter key to execute the search.",
+        "Review the search results displayed on the screen."
+      ],
+      "remaining_actions": [],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "(screen already shows this destination)",
+          "reason": "The current screen already matches this navigation step.",
+          "matched_step": "Tap on the search icon in the top right corner of the main screen.",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "nav",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110301.png",
+          "state": "d5194fec2235e1dadba8d4a193d760f5"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=48c2edc3f61acb668ad3232dacdc46ec(MainActivity/Button-))",
+          "reason": "likely input control",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110301.png",
+          "state": "d5194fec2235e1dadba8d4a193d760f5",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/action_search",
+            "text": "",
+            "content_description": "Search",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|action_search|search|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=e29036d121a264c18ddd796e600f04db, view=891d1ceb7034dcb8bef24fe3217b5e46(SearchActivity/AutoCompleteTextView-Search you), text=song)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+          "event_type": "set_text",
+          "text": "song",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110304.png",
+          "state": "e29036d121a264c18ddd796e600f04db",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/search_src_text",
+            "text": "Search your library\u2026",
+            "content_description": "",
+            "class": "android.widget.AutoCompleteTextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "song",
+          "signature": "set_text|search_src_text|search your library\u2026|autocompletetextview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=1357895617878c1eedb80451b029fa9c(SearchActivity/AutoCompleteTextView-song), text=song)",
+          "reason": "Mandatory fill of required text field.",
+          "matched_step": "",
+          "source": "mandatory_fill",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+          "event_type": "set_text",
+          "text": "song",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110307.png",
+          "state": "ea1eee7fe7756290c7e6a4e4996e4c65",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/search_src_text",
+            "text": "song",
+            "content_description": "",
+            "class": "android.widget.AutoCompleteTextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "song",
+          "signature": "set_text|search_src_text|song|autocompletetextview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=d937d6330e97435560e4b596456a5f71(SearchActivity/ImageView-))",
+          "reason": "navigate to search",
+          "matched_step": "Review the search results displayed on the screen.",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110310.png",
+          "state": "ea1eee7fe7756290c7e6a4e4996e4c65",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/search_close_btn",
+            "text": "",
+            "content_description": "Clear query",
+            "class": "android.widget.ImageView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|search_close_btn|clear query|imageview"
+        }
+      ],
+      "completion_ratio": 1.0,
+      "completion_source": "executed"
+    },
+    {
+      "id": "F008",
+      "name": "Rescan",
+      "description": "Rescan the music library from the side menu.",
+      "actions": [
+        "Tap the menu icon in the top left corner of the app",
+        "Select 'Rescan' from the menu",
+        "Confirm the rescan operation by tapping 'Rescan' again",
+        "Wait for the rescan process to complete",
+        "Check the library for any newly added or updated songs"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "rescan",
+        "scan"
+      ],
+      "nav_hints": [
+        "menu",
+        "rescan"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap the menu icon in the top left corner of the app"
+      ],
+      "remaining_actions": [
+        "Select 'Rescan' from the menu",
+        "Confirm the rescan operation by tapping 'Rescan' again",
+        "Wait for the rescan process to complete",
+        "Check the library for any newly added or updated songs"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=86038acd0561819548756efaea008e0a(MainActivity/ImageView-))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Tap the menu icon in the top left corner of the app",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110319.png",
+          "state": "d5194fec2235e1dadba8d4a193d760f5",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/menu",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|menu|imageview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=13b72c76e0f697df98afb0f1117ffa21, view=835163ba426ae45f5f8a01cdf84a8cee(MainActivity/TextView-Add to pla))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110322.png",
+          "state": "13b72c76e0f697df98afb0f1117ffa21",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/title",
+            "text": "Add to playlist\u2026",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|title|add to playlist\u2026|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=223f20f1fad01c96176f45c937fb48cb, view=c9b344fde6fe9e766c4447ff6fce615d(MainActivity/TextView-New playli))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110325.png",
+          "state": "223f20f1fad01c96176f45c937fb48cb",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/md_title",
+            "text": "New playlist\u2026",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|md_title|new playlist\u2026|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110328.png",
+          "state": "88d3b5e541c6887d7ab9652803458125",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/md_title",
+            "text": "New playlist",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|md_title|new playlist|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110331.png",
+          "state": "88d3b5e541c6887d7ab9652803458125",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/md_title",
+            "text": "New playlist",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|md_title|new playlist|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110333.png",
+          "state": "88d3b5e541c6887d7ab9652803458125",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/input",
+            "text": "Playlist name",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|input|playlist name|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))",
+          "reason": "navigate to library",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110336.png",
+          "state": "88d3b5e541c6887d7ab9652803458125",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/input",
+            "text": "Playlist name",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|input|playlist name|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=bbfdcf0f701d873b0c033d93f3d6bc78(MainActivity/TextView-CANCEL))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110340.png",
+          "state": "88d3b5e541c6887d7ab9652803458125",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/md_buttonDefaultNegative",
+            "text": "CANCEL",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|md_buttondefaultnegative|cancel|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=460eef10a5ad889ad7320c65299993a6(MainActivity/LinearLayout-))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110414.png",
+          "state": "d5194fec2235e1dadba8d4a193d760f5",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "PLAYLISTS",
+            "class": "android.widget.LinearLayout",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|playlists|linearlayout"
+        }
+      ],
+      "completion_ratio": 0.2,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed"
+    },
+    {
+      "id": "F009",
+      "name": "Shuffle all",
+      "description": "Shuffle the whole library from the overflow menu.",
+      "actions": [
+        "Open the 3-dot menu",
+        "Tap Shuffle"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "shuffle"
+      ],
+      "nav_hints": [
+        "shuffle"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Listed steps are done.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open the 3-dot menu",
+        "Tap Shuffle"
+      ],
+      "remaining_actions": [],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=87abf3dd6da7e7c1997f57ede9e5ecc7, view=0c0cbe68137101c8f7f5996972e46c4a(MainActivity/ImageView-))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Open the 3-dot menu",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/temp/screen_2026-08-23_110425.png",
+          "state": "87abf3dd6da7e7c1997f57ede9e5ecc7",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.poupa.vinylmusicplayer:id/menu",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|menu|imageview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=aec070fe38448d08ab2cd77f1342dc20, view=82c589e63d3095a7f725f59a79458530(MainActivity/TextView-Shuffle pl))",
+          "reason": "player control shuffle",
+          "matched_step": "Tap Shuffle",
+          "source": "heuristic",
+          "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "output/vinyl-fix2/.droidbot/states/screen_2026-08-23_110428.png",
+          "state": "aec070fe38448d08ab2cd77f1342dc20",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/title",
+            "text": "Shuffle playlist",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|title|shuffle playlist|textview"
+        }
+      ],
+      "completion_ratio": 1.0,
+      "completion_source": "executed"
+    }
+  ],
+  "session_path": "output/vinyl-fix2/feature_test/session.json",
+  "log_path": "output/vinyl-fix2/feature_test/log.md",
+  "exploration_bank": [
+    {
+      "feature_id": "F001",
+      "event": "CustomTouchEvent(state=78948f3c7969465335fa13a4f9ac4f5d, view=afa2a38edb962b882e577d03cc9deae3(AppIntroActivity/Button-GET STARTE))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.intro.AppIntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=78948f3c7969465335fa13a4f9ac4f5d, view=afa2a38edb962b882e577d03cc9deae3(AppIntroActivity/Button-GET STARTE))  Finish first-run / tutorial. com.poupa.vinylmusicplayer/.ui.activities.intro.AppIntroActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=09a8295a8187d295e7203205bec4e29c(MainActivity/TextView-SoundHelix))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b86bd0753bf68fe0f760ed1855e464dc, view=09a8295a8187d295e7203205bec4e29c(MainActivity/TextView-SoundHelix))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=3073af271ad5d9e50ada4e958808b32d, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=3073af271ad5d9e50ada4e958808b32d, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=e24f2cac1d44dfa2e0aedc9d96790cd8(MainActivity/TextView-SONGS))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=84e7b9e430fb4cd8774fb8889e70bdcb(MainActivity/ProgressBar-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7290f7ab56ff4e9c650aa521e1564249, view=84e7b9e430fb4cd8774fb8889e70bdcb(MainActivity/ProgressBar-))  likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F002",
+      "event": "CustomTouchEvent(state=d5008f6b2bff1f3ecdfc16c8aa65b597, view=5575fb62b3c1d4c3ac4e0dd5a620bee3(MainActivity/FrameLayout-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=d5008f6b2bff1f3ecdfc16c8aa65b597, view=5575fb62b3c1d4c3ac4e0dd5a620bee3(MainActivity/FrameLayout-))  Loop detected; trying an untried widget (backtrack 1/3). com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))  mini-player card com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+      "event_type": "touch",
+      "matched_step": "Tap Get Started or Continue if shown",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022)) Tap Get Started or Continue if shown Continue onboarding. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+      "event_type": "touch",
+      "matched_step": "Tap Get Started or Continue if shown",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022)) Tap Get Started or Continue if shown Continue onboarding. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))  Affordance search before drop (fab). com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+      "event_type": "touch",
+      "matched_step": "Tap Get Started or Continue if shown",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022)) Tap Get Started or Continue if shown Continue onboarding. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+      "event_type": "touch",
+      "matched_step": "Tap Get Started or Continue if shown",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022)) Tap Get Started or Continue if shown Continue onboarding. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=7621f63fbe63dccca2c4f9dbf25a446c, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022))",
+      "event_type": "touch",
+      "matched_step": "Tap Get Started or Continue if shown",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=7621f63fbe63dccca2c4f9dbf25a446c, view=879303190c471c8ae7856660a4e522de(MainActivity/TextView-Up next  \u2022)) Tap Get Started or Continue if shown Continue onboarding. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F003",
+      "event": "CustomTouchEvent(state=078550fca6002564fe7f574fed92396c, view=402ddbabdc074f1f7582568d82b6a7bb(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=078550fca6002564fe7f574fed92396c, view=402ddbabdc074f1f7582568d82b6a7bb(MainActivity/ImageButton-))  Loop detected; trying an untried widget (backtrack 1/3). com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=1d90648c66aa628ea306f309d0c8b573(MainActivity/FrameLayout-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=89a69a45b73a8397697f79d49544e08c, view=1d90648c66aa628ea306f309d0c8b573(MainActivity/FrameLayout-))  mini-player card com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00))",
+      "event_type": "touch",
+      "matched_step": "Tap the now-playing screen to open the currently playing song",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=9c0425b7d738befcfda0237a56e90f58(MainActivity/TextView-0:00)) Tap the now-playing screen to open the currently playing song likely result row com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "Tap the pause button to pause the current song",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8a1ec1f2368028d46fb22d666f62154a, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-)) Tap the pause button to pause the current song player control pause com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "Confirm the song is paused by checking the pause icon",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8609cf6f872d0354db23b09739827c07, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-)) Confirm the song is paused by checking the pause icon player control pause com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=47b24b5b4d03c6e2443a175bbb5a00be, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "Tap the play button to resume the song",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=47b24b5b4d03c6e2443a175bbb5a00be, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-)) Tap the play button to resume the song player control pause com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F004",
+      "event": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "Confirm the song is playing by checking the play icon",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=1c72efef7b08ed97bf2ecc2d4b4b8074, view=e410a78f59bea26032c4e95ecba0d0b7(MainActivity/ImageButton-)) Confirm the song is playing by checking the play icon visible label matches the remaining step com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=dca0b23fcbace0f63ed46a889fc202bb, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=dca0b23fcbace0f63ed46a889fc202bb, view=172a3a516ea5139878f66af5be3d0636(MainActivity/TextView-TestCube T))  mini-player card com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=6fd1e0784f6853fdeda15bdb43c06810, view=98e71aae6ee5bacb411951cfef24b097(MainActivity/FrameLayout-))",
+      "event_type": "touch",
+      "matched_step": "Open the player",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=6fd1e0784f6853fdeda15bdb43c06810, view=98e71aae6ee5bacb411951cfef24b097(MainActivity/FrameLayout-)) Open the player bottom player bar com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=6a23e8248bc395d97ce98d4a767f3220, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=6a23e8248bc395d97ce98d4a767f3220, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=ab68f267c91f593be2681193117148f4, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=ab68f267c91f593be2681193117148f4, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=650a8b07a659f39801a0e5fa84746e64, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=650a8b07a659f39801a0e5fa84746e64, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=df5728ff3198ae2cfb7cc71afee39ac5, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=df5728ff3198ae2cfb7cc71afee39ac5, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=e70e34bf8af26279ed45fc076424dd0e, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=e70e34bf8af26279ed45fc076424dd0e, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=3e5d159ffef9107c834411f4f5876956, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=3e5d159ffef9107c834411f4f5876956, view=37c49057c48a3a1fbbafc2495fffc9c9(MainActivity/TextView-6:12))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=35f6446c8ac8602ea6e84d2e4e2914c3, view=1f9c16dbcd9b1fe70c027e2a19e1ede7(MainActivity/TextView-0:15))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=35f6446c8ac8602ea6e84d2e4e2914c3, view=1f9c16dbcd9b1fe70c027e2a19e1ede7(MainActivity/TextView-0:15))  navigate to player com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F006",
+      "event": "CustomTouchEvent(state=41216138e225f1b07562e90a1b6f866b, view=f7a6921a7c1545eccfd4848812821dd5(MainActivity/TextView-0:17))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=41216138e225f1b07562e90a1b6f866b, view=f7a6921a7c1545eccfd4848812821dd5(MainActivity/TextView-0:17))  Loop detected; trying an untried widget (backtrack 1/3). com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F007",
+      "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=48c2edc3f61acb668ad3232dacdc46ec(MainActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=48c2edc3f61acb668ad3232dacdc46ec(MainActivity/Button-))  likely input control com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F007",
+      "event": "CustomSetTextEvent(state=e29036d121a264c18ddd796e600f04db, view=891d1ceb7034dcb8bef24fe3217b5e46(SearchActivity/AutoCompleteTextView-Search you), text=song)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+      "text": "song",
+      "blob": "CustomSetTextEvent(state=e29036d121a264c18ddd796e600f04db, view=891d1ceb7034dcb8bef24fe3217b5e46(SearchActivity/AutoCompleteTextView-Search you), text=song)  Mandatory fill of required text field. com.poupa.vinylmusicplayer/.ui.activities.SearchActivity song set_text"
+    },
+    {
+      "feature_id": "F007",
+      "event": "CustomSetTextEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=1357895617878c1eedb80451b029fa9c(SearchActivity/AutoCompleteTextView-song), text=song)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+      "text": "song",
+      "blob": "CustomSetTextEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=1357895617878c1eedb80451b029fa9c(SearchActivity/AutoCompleteTextView-song), text=song)  Mandatory fill of required text field. com.poupa.vinylmusicplayer/.ui.activities.SearchActivity song set_text"
+    },
+    {
+      "feature_id": "F007",
+      "event": "CustomTouchEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=d937d6330e97435560e4b596456a5f71(SearchActivity/ImageView-))",
+      "event_type": "touch",
+      "matched_step": "Review the search results displayed on the screen.",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.SearchActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=ea1eee7fe7756290c7e6a4e4996e4c65, view=d937d6330e97435560e4b596456a5f71(SearchActivity/ImageView-)) Review the search results displayed on the screen. navigate to search com.poupa.vinylmusicplayer/.ui.activities.SearchActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=86038acd0561819548756efaea008e0a(MainActivity/ImageView-))",
+      "event_type": "touch",
+      "matched_step": "Tap the menu icon in the top left corner of the app",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=86038acd0561819548756efaea008e0a(MainActivity/ImageView-)) Tap the menu icon in the top left corner of the app visible label matches the remaining step com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=13b72c76e0f697df98afb0f1117ffa21, view=835163ba426ae45f5f8a01cdf84a8cee(MainActivity/TextView-Add to pla))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=13b72c76e0f697df98afb0f1117ffa21, view=835163ba426ae45f5f8a01cdf84a8cee(MainActivity/TextView-Add to pla))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=223f20f1fad01c96176f45c937fb48cb, view=c9b344fde6fe9e766c4447ff6fce615d(MainActivity/TextView-New playli))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=223f20f1fad01c96176f45c937fb48cb, view=c9b344fde6fe9e766c4447ff6fce615d(MainActivity/TextView-New playli))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=2e9fed0ebe8dc005423bd1f921761777(MainActivity/TextView-New playli))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=86ade8e68cd42a8fb2bca07b1c8a7399(MainActivity/EditText-Playlist n))  navigate to library com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=bbfdcf0f701d873b0c033d93f3d6bc78(MainActivity/TextView-CANCEL))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=88d3b5e541c6887d7ab9652803458125, view=bbfdcf0f701d873b0c033d93f3d6bc78(MainActivity/TextView-CANCEL))  Current screen is not the feature yet; navigating inside the app. com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F008",
+      "event": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=460eef10a5ad889ad7320c65299993a6(MainActivity/LinearLayout-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=d5194fec2235e1dadba8d4a193d760f5, view=460eef10a5ad889ad7320c65299993a6(MainActivity/LinearLayout-))  Loop detected; trying an untried widget (backtrack 1/3). com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F009",
+      "event": "CustomTouchEvent(state=87abf3dd6da7e7c1997f57ede9e5ecc7, view=0c0cbe68137101c8f7f5996972e46c4a(MainActivity/ImageView-))",
+      "event_type": "touch",
+      "matched_step": "Open the 3-dot menu",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=87abf3dd6da7e7c1997f57ede9e5ecc7, view=0c0cbe68137101c8f7f5996972e46c4a(MainActivity/ImageView-)) Open the 3-dot menu visible label matches the remaining step com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    },
+    {
+      "feature_id": "F009",
+      "event": "CustomTouchEvent(state=aec070fe38448d08ab2cd77f1342dc20, view=82c589e63d3095a7f725f59a79458530(MainActivity/TextView-Shuffle pl))",
+      "event_type": "touch",
+      "matched_step": "Tap Shuffle",
+      "activity": "com.poupa.vinylmusicplayer/.ui.activities.MainActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=aec070fe38448d08ab2cd77f1342dc20, view=82c589e63d3095a7f725f59a79458530(MainActivity/TextView-Shuffle pl)) Tap Shuffle player control shuffle com.poupa.vinylmusicplayer/.ui.activities.MainActivity  touch"
+    }
+  ],
+  "online_coverage": {
+    "covered": 5,
+    "total": 9,
+    "coverage": 0.5555555555555556,
+    "partial": 4,
+    "weighted_coverage": 0.7722222222222223,
+    "dropped": 0,
+    "not_present": 0,
+    "explanation": "Feature coverage is fully covered / total. Weighted coverage is the mean per-feature completion ratio so partial gold steps count."
+  },
+  "shared_flow_reuses": [],
+  "run_cost": {
+    "wall_clock_seconds": 451.5,
+    "llm_calls": {
+      "feature_extraction": 0,
+      "widget_scoring": 1,
+      "context_retrieval": 0,
+      "hybrid_discovery": 1,
+      "other": 0
+    },
+    "llm_calls_total": 2,
+    "vlm_fallbacks": 1,
+    "sparse_screens": [],
+    "mechanisms": [
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 63.556540727615356
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 63.55733299255371
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 66.3014919757843
+      },
+      {
+        "name": "afford_search",
+        "detail": "fab",
+        "t": 82.56391286849976
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 93.67519783973694
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 93.67627477645874
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 96.59630584716797
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 161.7790379524231
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 161.78065991401672
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 164.4039180278778
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 244.8297300338745
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 244.83214688301086
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 247.85448908805847
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 1",
+        "t": 263.6149218082428
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 2",
+        "t": 273.9678068161011
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 3",
+        "t": 277.2718997001648
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 4",
+        "t": 280.1384208202362
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 5",
+        "t": 283.058043718338
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 6",
+        "t": 287.0526068210602
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 7",
+        "t": 290.1196949481964
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 8",
+        "t": 293.0843997001648
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 9",
+        "t": 296.18687772750854
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 10",
+        "t": 299.12533688545227
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 11",
+        "t": 302.0362160205841
+      },
+      {
+        "name": "hybrid_discovery",
+        "detail": "crawl 12",
+        "t": 305.93685603141785
+      }
+    ],
+    "text_inputs": [
+      {
+        "value": "song",
+        "source": "credential",
+        "field": "Search your library\u2026",
+        "accepted": null
+      },
+      {
+        "value": "song",
+        "source": "verify",
+        "field": "Search your library\u2026",
+        "accepted": true
+      },
+      {
+        "value": "song",
+        "source": "credential",
+        "field": "song",
+        "accepted": null
+      },
+      {
+        "value": "song",
+        "source": "verify",
+        "field": "song",
+        "accepted": true
+      }
+    ],
+    "context_calls": [],
+    "field_fills": {
+      "credential": 2,
+      "vlm": 0,
+      "unresolved": 0,
+      "optional-blank": 0
+    },
+    "field_resolutions": [
+      {
+        "source": "credential",
+        "field": "Search your library\u2026",
+        "value": "song",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "song",
+        "value": "song",
+        "accepted": null
+      }
+    ]
+  },
+  "offline_coverage": {
+    "covered": 5,
+    "total": 9,
+    "coverage": 0.5555555555555556,
+    "partial": 2,
+    "exercised": 7,
+    "coverage_formula": "covered / total",
+    "weighted_coverage": 0.6333333333333333,
+    "weighted_coverage_percentage": 63.33,
+    "explanation": "Offline coverage is an LLM/VLM semantic judge vs ground-truth JSON. Feature Coverage = COVERED / Total. Weighted Coverage = mean(completion_ratio) so partial gold steps still count. Step order is not required. Later exploration can complete an earlier partial feature.",
+    "features": [
+      {
+        "id": "F001",
+        "name": "Get Started",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Tapped 'Get Started', but permissions not covered.",
+          "touch AppIntroActivity/Button-GET STARTED"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.2
+      },
+      {
+        "id": "F002",
+        "name": "Play song",
+        "status": "covered",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.9,
+        "evidence": [
+          "Tapped a song in the library.",
+          "touch MainActivity/TextView-SONGS",
+          "Completed by later features: F004"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      },
+      {
+        "id": "F003",
+        "name": "Open Currently Playing",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.4,
+        "evidence": [
+          "No action taken to open currently playing screen.",
+          "touch MainActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "F004",
+        "name": "Pause Song",
+        "status": "covered",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.8,
+        "evidence": [
+          "Tapped now-playing screen, paused song, confirmed pause icon.",
+          "touch MainActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      },
+      {
+        "id": "F005",
+        "name": "Next song",
+        "status": "covered",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.8,
+        "evidence": [
+          "Tapped bottom card, skipped to next song.",
+          "touch MainActivity/ImageButton-",
+          "Completed by later features: F004"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      },
+      {
+        "id": "F006",
+        "name": "Previous song",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Tapped now-playing screen, transitioned to previous song.",
+          "touch MainActivity/TextView-6:12"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.5
+      },
+      {
+        "id": "F007",
+        "name": "Search",
+        "status": "covered",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.8,
+        "evidence": [
+          "Search steps fully executed.",
+          "touch SearchActivity/ImageView-",
+          "set_text SearchActivity/AutoCompleteTextView-song",
+          "touch SearchActivity/ImageView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      },
+      {
+        "id": "F008",
+        "name": "Rescan library",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "Steps to open navigation drawer and rescan library not covered.",
+          "touch MainActivity/ImageView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "F009",
+        "name": "Shuffle All",
+        "status": "covered",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.8,
+        "evidence": [
+          "Shuffle All steps fully executed.",
+          "touch MainActivity/ImageView-",
+          "touch MainActivity/TextView-Shuffle pl"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      }
+    ],
+    "confusion": [
+      {
+        "ground_truth_id": "F001",
+        "ground_truth_name": "Get Started",
+        "journal_id": "F001",
+        "journal_name": "Get started",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F002",
+        "ground_truth_name": "Play song",
+        "journal_id": "F002",
+        "journal_name": "Play a song",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F003",
+        "ground_truth_name": "Open Currently Playing",
+        "journal_id": "F003",
+        "journal_name": "Now playing",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F004",
+        "ground_truth_name": "Pause Song",
+        "journal_id": "F004",
+        "journal_name": "Pause",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F005",
+        "ground_truth_name": "Next song",
+        "journal_id": "F005",
+        "journal_name": "Next",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F006",
+        "ground_truth_name": "Previous song",
+        "journal_id": "F006",
+        "journal_name": "Previous",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F007",
+        "ground_truth_name": "Search",
+        "journal_id": "F007",
+        "journal_name": "Search",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F008",
+        "ground_truth_name": "Rescan library",
+        "journal_id": "F008",
+        "journal_name": "Rescan",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "F009",
+        "ground_truth_name": "Shuffle All",
+        "journal_id": "F009",
+        "journal_name": "Shuffle all",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      }
+    ],
+    "feature_inference": {
+      "true_positives": 9,
+      "false_negatives": 0,
+      "false_positives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_not_present": 0,
+      "false_not_present_rate": 0.0,
+      "extracted_count": 9,
+      "ground_truth_count": 9,
+      "feature_completeness_ratio": 1.0,
+      "id_collisions": [],
+      "id_collisions_loud": false,
+      "prf1_withheld": false
+    }
+  },
+  "attempt_summary": {
+    "attempted": 9,
+    "never_attempted": 0,
+    "blocked_then_recovered": 0,
+    "blocked_still": 0
+  },
+  "ground_truth_source": "independent_labeled_set",
+  "ground_truth_addendum": null
+}

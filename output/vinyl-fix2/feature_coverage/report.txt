@@ -1,0 +1,148 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Vinyl Music Player
+
+Total Features   : 9
+Covered Features : 5
+Partial          : 2
+Uncovered        : 2
+
+Feature Coverage : 55.56%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 63.33%  (mean completion ratio; partial steps count)
+Exercised        : 7  (covered 5 + partial 2)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[F001] Get Started
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Tapped 'Get Started', but permissions not covered.
+  - touch AppIntroActivity/Button-GET STARTED
+
+[F002] Play song
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Tapped a song in the library.
+  - touch MainActivity/TextView-SONGS
+  - Completed by later features: F004
+
+[F003] Open Currently Playing
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No action taken to open currently playing screen.
+  - touch MainActivity/ImageButton-
+
+[F004] Pause Song
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Tapped now-playing screen, paused song, confirmed pause icon.
+  - touch MainActivity/ImageButton-
+
+[F005] Next song
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Tapped bottom card, skipped to next song.
+  - touch MainActivity/ImageButton-
+  - Completed by later features: F004
+
+[F006] Previous song
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tapped now-playing screen, transitioned to previous song.
+  - touch MainActivity/TextView-6:12
+
+[F007] Search
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Search steps fully executed.
+  - touch SearchActivity/ImageView-
+  - set_text SearchActivity/AutoCompleteTextView-song
+  - touch SearchActivity/ImageView-
+
+[F008] Rescan library
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps to open navigation drawer and rescan library not covered.
+  - touch MainActivity/ImageView-
+
+[F009] Shuffle All
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Shuffle All steps fully executed.
+  - touch MainActivity/ImageView-
+  - touch MainActivity/TextView-Shuffle pl
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+5 / 9 features covered
+2 / 9 features partial
+Feature Coverage = COVERED / Total = 55.56%
+Weighted Feature Coverage = mean(completion_ratio) = 63.33%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 9 / 9 (completeness ratio 1.0)
+
+Feature-inference P/R/F1: 1.00 / 1.00 / 1.00 (false not_present=0)
+
+GT F001 'Get Started' | journal=F001 'Get started' (sim=1.0, name) status=partial | offline=partial
+GT F002 'Play song' | journal=F002 'Play a song' (sim=1.0, name) status=covered | offline=covered
+GT F003 'Open Currently Playing' | journal=F003 'Now playing' (sim=0.667, name) status=partial | offline=not_covered
+GT F004 'Pause Song' | journal=F004 'Pause' (sim=0.5, name) status=covered | offline=covered
+GT F005 'Next song' | journal=F005 'Next' (sim=0.5, name) status=covered | offline=covered
+GT F006 'Previous song' | journal=F006 'Previous' (sim=0.5, name) status=partial | offline=partial
+GT F007 'Search' | journal=F007 'Search' (sim=1.0, name) status=covered | offline=covered
+GT F008 'Rescan library' | journal=F008 'Rescan' (sim=0.5, name) status=partial | offline=not_covered
+GT F009 'Shuffle All' | journal=F009 'Shuffle all' (sim=1.0, name) status=covered | offline=covered

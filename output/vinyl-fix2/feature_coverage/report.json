@@ -1,0 +1,302 @@
+{
+  "application": "Vinyl Music Player",
+  "total_features": 9,
+  "covered_features": 5,
+  "uncovered_features": 2,
+  "partial_features": 2,
+  "coverage": 0.5555555555555556,
+  "coverage_percentage": 55.56,
+  "results_dir": "output/vinyl-fix2",
+  "readme_path": null,
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/vinyl/ground_truth.json",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Get Started",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Tapped 'Get Started', but permissions not covered.",
+        "touch AppIntroActivity/Button-GET STARTED"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "F002",
+      "name": "Play song",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "Tapped a song in the library.",
+        "touch MainActivity/TextView-SONGS",
+        "Completed by later features: F004"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "F003",
+      "name": "Open Currently Playing",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No action taken to open currently playing screen.",
+        "touch MainActivity/ImageButton-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F004",
+      "name": "Pause Song",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Tapped now-playing screen, paused song, confirmed pause icon.",
+        "touch MainActivity/ImageButton-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "F005",
+      "name": "Next song",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Tapped bottom card, skipped to next song.",
+        "touch MainActivity/ImageButton-",
+        "Completed by later features: F004"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "F006",
+      "name": "Previous song",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Tapped now-playing screen, transitioned to previous song.",
+        "touch MainActivity/TextView-6:12"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "F007",
+      "name": "Search",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Search steps fully executed.",
+        "touch SearchActivity/ImageView-",
+        "set_text SearchActivity/AutoCompleteTextView-song",
+        "touch SearchActivity/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "F008",
+      "name": "Rescan library",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "Steps to open navigation drawer and rescan library not covered.",
+        "touch MainActivity/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F009",
+      "name": "Shuffle All",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Shuffle All steps fully executed.",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/TextView-Shuffle pl"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "F001",
+      "ground_truth_name": "Get Started",
+      "journal_id": "F001",
+      "journal_name": "Get started",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F002",
+      "ground_truth_name": "Play song",
+      "journal_id": "F002",
+      "journal_name": "Play a song",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F003",
+      "ground_truth_name": "Open Currently Playing",
+      "journal_id": "F003",
+      "journal_name": "Now playing",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F004",
+      "ground_truth_name": "Pause Song",
+      "journal_id": "F004",
+      "journal_name": "Pause",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F005",
+      "ground_truth_name": "Next song",
+      "journal_id": "F005",
+      "journal_name": "Next",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F006",
+      "ground_truth_name": "Previous song",
+      "journal_id": "F006",
+      "journal_name": "Previous",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F007",
+      "ground_truth_name": "Search",
+      "journal_id": "F007",
+      "journal_name": "Search",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F008",
+      "ground_truth_name": "Rescan library",
+      "journal_id": "F008",
+      "journal_name": "Rescan",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F009",
+      "ground_truth_name": "Shuffle All",
+      "journal_id": "F009",
+      "journal_name": "Shuffle all",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 9,
+    "false_negatives": 0,
+    "false_positives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 9,
+    "ground_truth_count": 9,
+    "feature_completeness_ratio": 1.0,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 7,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.6333333333333333,
+  "weighted_coverage_percentage": 63.33,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

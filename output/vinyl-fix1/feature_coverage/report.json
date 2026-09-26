@@ -1,0 +1,287 @@
+{
+  "application": "Vinyl Music Player",
+  "total_features": 9,
+  "covered_features": 1,
+  "uncovered_features": 6,
+  "partial_features": 2,
+  "coverage": 0.1111111111111111,
+  "coverage_percentage": 11.11,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/vinyl-fix1",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/vinyl/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/vinyl/ground_truth.json",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Get Started",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "No Get Started screen or permissions prompt.",
+        "nav (screen already shows this destination)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F002",
+      "name": "Play song",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No song selection or playback.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F003",
+      "name": "Open Currently Playing",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No bottom playing card or currently playing screen.",
+        "touch MainActivity/FrameLayout-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F004",
+      "name": "Pause Song",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "Tap now-playing screen, pause button not tapped",
+        "touch MainActivity/FrameLayout-",
+        "touch MainActivity/View-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "F005",
+      "name": "Next song",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 1.0,
+      "evidence": [
+        "Tapped now-playing screen, next button tapped",
+        "later MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "F006",
+      "name": "Previous song",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F007",
+      "name": "Search",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Search field not tapped; query not entered.",
+        "set_text SearchActivity/AutoCompleteTextView-song"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.33
+    },
+    {
+      "id": "F008",
+      "name": "Rescan library",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "No navigation drawer or rescan option found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "F009",
+      "name": "Shuffle All",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.1,
+      "evidence": [
+        "No 3-dot overflow menu or shuffle option found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "F001",
+      "ground_truth_name": "Get Started",
+      "journal_id": "F001",
+      "journal_name": "Get started",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F002",
+      "ground_truth_name": "Play song",
+      "journal_id": "F002",
+      "journal_name": "Play a song",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "dropped",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F003",
+      "ground_truth_name": "Open Currently Playing",
+      "journal_id": "F003",
+      "journal_name": "Now playing",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F004",
+      "ground_truth_name": "Pause Song",
+      "journal_id": "F004",
+      "journal_name": "Pause",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F005",
+      "ground_truth_name": "Next song",
+      "journal_id": "F005",
+      "journal_name": "Next",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F006",
+      "ground_truth_name": "Previous song",
+      "journal_id": "F006",
+      "journal_name": "Previous",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F007",
+      "ground_truth_name": "Search",
+      "journal_id": "F007",
+      "journal_name": "Search",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F008",
+      "ground_truth_name": "Rescan library",
+      "journal_id": "F008",
+      "journal_name": "Rescan",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "F009",
+      "ground_truth_name": "Shuffle All",
+      "journal_id": "F009",
+      "journal_name": "Shuffle all",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 9,
+    "false_negatives": 0,
+    "false_positives": 11,
+    "precision": 0.45,
+    "recall": 1.0,
+    "f1": 0.6206896551724138,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 20,
+    "ground_truth_count": 9,
+    "feature_completeness_ratio": 2.222,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 3,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.20333333333333334,
+  "weighted_coverage_percentage": 20.33,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}
