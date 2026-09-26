@@ -515,14 +515,18 @@ def do_app(app, cfg, log):
     if not ok:
         log.write(u"[%s] %s -- LLMDroid will be skipped\n" % (stamp(), reason))
 
-    log.write(u"\n[%s] === TestCube: %s ===\n" % (stamp(), app["stem"]))
-    rc, tc_dir = run_testcube(app, apk, cfg, log)
-    result["steps"]["testcube"] = "ok" if rc == 0 else ("hard_stop" if rc == EXIT_HARD_STOP
-                                                        else "rc=%s" % rc)
-    result["testcube_output"] = os.path.relpath(tc_dir, REPO)
-    if rc == EXIT_HARD_STOP:
-        log.write(u"[%s] TestCube was killed by the run-budget watchdog; "
-                  u"its reports are partial.\n" % stamp())
+    tc_dir = os.path.join(REPO, cfg["testcube_output"], app["stem"])
+    if cfg.get("run_testcube", True):
+        log.write(u"\n[%s] === TestCube: %s ===\n" % (stamp(), app["stem"]))
+        rc, tc_dir = run_testcube(app, apk, cfg, log)
+        result["steps"]["testcube"] = "ok" if rc == 0 else ("hard_stop" if rc == EXIT_HARD_STOP
+                                                            else "rc=%s" % rc)
+        result["testcube_output"] = os.path.relpath(tc_dir, REPO)
+        if rc == EXIT_HARD_STOP:
+            log.write(u"[%s] TestCube was killed by the run-budget watchdog; "
+                      u"its reports are partial.\n" % stamp())
+    else:
+        log.write(u"[%s] TestCube skipped (--no-testcube)\n" % stamp())
 
     ld_dir = None
     if cfg.get("run_llmdroid", True) and ok:
@@ -534,7 +538,10 @@ def do_app(app, cfg, log):
             result["llmdroid_error"] = why
             log.write(u"[%s] LLMDroid failed: %s\n" % (stamp(), " | ".join(why)))
 
-    if cfg.get("run_compare", True) and ld_dir:
+    # Comparison and feature scoring both need TestCube output. With
+    # --no-testcube they run only if an earlier TestCube result is on disk.
+    have_tc = os.path.isfile(os.path.join(tc_dir, "code_coverage.json"))
+    if cfg.get("run_compare", True) and ld_dir and have_tc:
         rc3, cmp_dir = run_compare(app, tc_dir, ld_dir, cfg, log)
         result["steps"]["compare"] = "ok" if rc3 == 0 else "rc=%s" % rc3
         result["compare_output"] = os.path.relpath(cmp_dir, REPO)
@@ -545,7 +552,7 @@ def do_app(app, cfg, log):
             except Exception:
                 pass
 
-    if cfg.get("run_feature_eval", True):
+    if cfg.get("run_feature_eval", True) and have_tc:
         rc4 = run_feature_eval(app, tc_dir, cfg, log)
         result["steps"]["feature_eval"] = "ok" if rc4 == 0 else "rc=%s" % rc4
 
@@ -553,7 +560,7 @@ def do_app(app, cfg, log):
     # installs, launches and verifies while never executing a probe. Recording it
     # as a successful 0% would put a fake data point in the comparison.
     summary_path = os.path.join(tc_dir, "code_coverage.json")
-    if os.path.isfile(summary_path):
+    if cfg.get("run_testcube", True) and os.path.isfile(summary_path):
         try:
             tc = load_json(summary_path)
             if not tc.get("final_coverage") and (tc.get("total_actions") or 0) >= 10:
@@ -809,7 +816,11 @@ def main(argv=None):
     parser.add_argument("--dry-run", action="store_true", help="Print the plan and stop")
     parser.add_argument("--resume", action="store_true",
                         help="Skip apps that already have a TestCube code_coverage.json")
-    parser.add_argument("--no-llmdroid", action="store_true")
+    parser.add_argument("--no-llmdroid", action="store_true",
+                        help="Run TestCube only.")
+    parser.add_argument("--no-testcube", action="store_true",
+                        help="Run LLMDroid only. Comparison and feature eval are skipped "
+                             "unless a TestCube result for the app already exists.")
     args = parser.parse_args(argv)
 
     cfg = load_json(args.config)
@@ -823,6 +834,11 @@ def main(argv=None):
         cfg["budget_seconds"] = args.budget_seconds
     if args.no_llmdroid:
         cfg["run_llmdroid"] = False
+    if args.no_testcube:
+        cfg["run_testcube"] = False
+    if args.no_llmdroid and args.no_testcube:
+        sys.stderr.write("--no-llmdroid and --no-testcube together leave nothing to run.\n")
+        return 2
 
     if not args.dry_run:
         ok, holder = acquire_lock()
@@ -867,7 +883,9 @@ def main(argv=None):
 
     missing_now = [a["stem"] for a in apps
                    if not os.path.isfile(os.path.join(REPO, cfg["apk_dir"], "%s.apk" % a["stem"]))]
-    total_budget = len(apps) * 2 * (cfg["budget_seconds"] + cfg["grace_seconds"])
+    tools = ((1 if cfg.get("run_testcube", True) else 0)
+             + (1 if cfg.get("run_llmdroid", True) else 0))
+    total_budget = len(apps) * max(1, tools) * (cfg["budget_seconds"] + cfg["grace_seconds"])
     say("\n%d app(s): %s" % (len(apps), ", ".join(a["stem"] for a in apps)))
     say("Budget %ds per tool per app -> worst case about %s in total."
           % (cfg["budget_seconds"], human(total_budget)))
