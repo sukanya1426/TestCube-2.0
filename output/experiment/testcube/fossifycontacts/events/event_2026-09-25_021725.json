@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_021725",
+  "event": {
+    "event_type": "long_touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1108
+        ],
+        [
+          806,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_number",
+      "checked": false,
+      "text": "Number",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "669*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number[text]Number[desc]None[enabled,,]",
+      "view_str": "85f91a9b0332e27dfc11133559270814",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<input bound_box=137,1108,806,1220>Number</input>"
+    },
+    "duration": 1500,
+    "skip_oracle": true
+  },
+  "start_state": "a9772a31246c3fe39a9691927a349b14",
+  "stop_state": "a9772a31246c3fe39a9691927a349b14",
+  "event_str": "LongTouchEvent(state=a9772a31246c3fe39a9691927a349b14, view=85f91a9b0332e27dfc11133559270814(EditContactActivity/EditText-Number))"
+}

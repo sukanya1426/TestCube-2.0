@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-24_223910",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Show/Hide streams",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          828,
+          73
+        ],
+        [
+          954,
+          199
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/menu_item_feed_toggle_played_items",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 13,
+      "size": "126*126",
+      "signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/menu_item_feed_toggle_played_items[text]None[desc]Show/Hide streams[enabled,,]",
+      "view_str": "d52076366ad91b49823bc125bf5d3f05",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/menu_item_feed_toggle_played_items",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Show/Hide streams' bound_box=828,73,954,199></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "dca01089ff41fa943b32d2624fc2292a",
+  "stop_state": "4492094f04df051be30763eedb33f8d4",
+  "event_str": "CustomTouchEvent(state=dca01089ff41fa943b32d2624fc2292a, view=d52076366ad91b49823bc125bf5d3f05(MainActivity/Button-))"
+}

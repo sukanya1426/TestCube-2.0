@@ -1,0 +1,396 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Contacts
+
+Total Actions    : 167
+
+Total Features   : 38
+Covered Features : 0
+Partial          : 7
+Uncovered        : 31
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 5.42%  (mean completion ratio; partial steps count)
+Exercised        : 7  (covered 0 + partial 7)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a contact
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Some steps were partially completed but not in the correct order.
+  - touch EditContactActivity/ImageView-
+  - set_text EditContactActivity/AutoCompleteTextView-First name
+
+[GT002] Add a photo to a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to adding a photo were executed.
+
+[GT003] Add multiple phone numbers with types
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Some steps were partially completed but not in the correct order.
+  - touch EditContactActivity/TextView-Home
+  - touch EditContactActivity/RadioButton-Custom
+
+[GT004] Add email addresses
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding email addresses.
+  - touch MainActivity/ImageView-
+  - touch MainActivity/TextView-Settings
+
+[GT005] Add postal addresses
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding postal addresses.
+  - touch MainActivity/ImageView-
+  - touch MainActivity/TextView-Settings
+
+[GT006] Add important dates (birthday and anniversary)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding important dates.
+  - touch MainActivity/ImageView-
+  - touch MainActivity/TextView-Settings
+
+[GT007] Add the organisation and job title
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Tapped 'Add' button but did not complete all steps.
+  - touch CustomTouchEvent(state=46ac1cbd5e80666829184c5238ef3854, x=891, y=1647)
+
+[GT008] Add websites and instant messaging handles
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for adding websites or IM handles.
+
+[GT009] Add notes to a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Actions do not match the gold steps for adding notes.
+
+[GT010] Set a custom ringtone for a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT011] Edit a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT012] Delete a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT013] Mark a contact as a favourite
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Tap star icon in contact details
+  - touch EditContactActivity/ImageView-
+
+[GT014] Remove a contact from favourites
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found
+
+[GT015] Call a contact
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Tap phone number to open dialer
+  - touch MainActivity/Button-
+
+[GT016] Send an SMS to a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT017] Send an email to a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT018] Create a contact group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT019] Add contacts to a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT020] Rename or delete a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT021] Send a message or email to a whole group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT022] Search contacts
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No search functionality tested.
+  - touch MainActivity/TextView-Contacts
+
+[GT023] Sort the contact list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No sort functionality tested.
+  - touch MainActivity/TextView-Contacts
+
+[GT024] Filter which contact sources are shown
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No filter functionality tested.
+  - touch MainActivity/TextView-Contacts
+
+[GT025] Choose which fields are visible in the contact detail
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - scroll to 'Manage shown contact fields' but did not complete selection
+  - touch CustomTouchEvent(state=e47dc04b4e08f47b17e43a603d88679c, x=586, y=1100)
+
+[GT026] Show only contacts with phone numbers
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions for toggling phone number filter
+  - intent intent=am start org.fossify.contacts/org.fossify.contacts.activities.SplashActivity.... state_ch...
+
+[GT027] Merge duplicate contacts
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - long-pressed but did not complete merge action
+  - long_touch EditContactActivity/TextView-Mobile
+
+[GT028] Share a contact as a vCard
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards sharing a contact as a vCard.
+
+[GT029] Export contacts to a vCard (.vcf) file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards exporting contacts to a vCard file.
+
+[GT030] Import contacts from a vCard file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards importing contacts from a vCard file.
+
+[GT031] Create a home screen shortcut to a contact
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch EditContactActivity/ImageView-
+
+[GT032] Choose the default tab shown at start-up
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch FloatingActionButton
+  - touch ImageView
+
+[GT033] Show or hide the individual tabs
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT034] Customise the app colours and theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - intent start activity
+
+[GT035] Protect the app with a PIN, pattern or fingerprint
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - intent start activity
+
+[GT036] Change the app language and font size
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - intent start activity
+
+[GT037] Show contact thumbnails and phone numbers in the list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to settings or contact thumbnails.
+
+[GT038] View the about screen, FAQ and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to viewing the about screen, FAQ, or licences.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 38 features covered
+7 / 38 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 5.42%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 38 (completeness ratio 0.368)
+
+Feature-inference P/R/F1: 0.93 / 0.37 / 0.53 (false not_present=0)
+
+GT GT001 'Create a contact' | journal=G001 'Create a contact' (sim=1.0, name) status=partial | offline=partial
+GT GT002 'Add a photo to a contact' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Add multiple phone numbers with types' | journal=G002 'Add multiple phone numbers' (sim=0.667, name) status=partial | offline=partial
+GT GT004 'Add email addresses' | journal=G003 'Add postal addresses' (sim=0.5, name) status=partial | offline=not_covered
+GT GT005 'Add postal addresses' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Add important dates (birthday and anniversary)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Add the organisation and job title' | journal=G004 'Add the organisation' (sim=0.538, name) status=partial | offline=partial
+GT GT008 'Add websites and instant messaging handles' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Add notes to a contact' | journal=G005 'Add notes' (sim=0.667, name) status=partial | offline=not_covered
+GT GT010 'Set a custom ringtone for a contact' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Edit a contact' | journal=G006 'Edit a contact' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Delete a contact' | journal=G007 'Mark a contact' (sim=0.333, name) status=partial | offline=not_covered
+GT GT013 'Mark a contact as a favourite' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'Remove a contact from favourites' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Call a contact' | journal=G008 'Call a contact' (sim=1.0, name) status=partial | offline=partial
+GT GT016 'Send an SMS to a contact' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Send an email to a contact' | journal=G009 'Send an email' (sim=0.667, name) status=partial | offline=not_covered
+GT GT018 'Create a contact group' | journal=G010 'Add contacts' (sim=0.333, name) status=partial | offline=not_covered
+GT GT019 'Add contacts to a group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Rename or delete a group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Send a message or email to a whole group' | journal=G011 'Send a message' (sim=0.4, name) status=partial | offline=not_covered
+GT GT022 'Search contacts' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Sort the contact list' | journal=G012 'Sort the contact list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT024 'Filter which contact sources are shown' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Choose which fields are visible in the contact detail' | journal=G013 'Choose' (sim=0.429, name) status=partial | offline=partial
+GT GT026 'Show only contacts with phone numbers' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Merge duplicate contacts' | journal=G014 'Merge duplicate contacts' (sim=1.0, name) status=partial | offline=partial
+GT GT028 'Share a contact as a vCard' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Export contacts to a vCard (.vcf) file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Import contacts from a vCard file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Create a home screen shortcut to a contact' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Choose the default tab shown at start-up' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Show or hide the individual tabs' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'Protect the app with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Show contact thumbnails and phone numbers in the list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=not_covered

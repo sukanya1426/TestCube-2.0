@@ -1,0 +1,81 @@
+{
+  "feature_id": "G006",
+  "name": "Capture RAW files",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "net.sourceforge.opencamera:id/popup",
+        "text": "",
+        "content_description": "Popup settings",
+        "class": "android.widget.ImageButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "net.sourceforge.opencamera:id/settings",
+        "text": "",
+        "content_description": "Settings",
+        "class": "android.widget.ImageButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/title",
+        "text": "Video settings\u2026",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/title",
+        "text": "Location settings\u2026",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/text1",
+        "text": "Don't restart",
+        "content_description": "",
+        "class": "android.widget.CheckedTextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/title",
+        "text": "Location settings\u2026",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "partial",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/opencamera/feature_test",
+  "completion_source": "executed"
+}

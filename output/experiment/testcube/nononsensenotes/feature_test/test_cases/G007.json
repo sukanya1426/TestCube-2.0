@@ -1,0 +1,105 @@
+{
+  "feature_id": "G007",
+  "name": "Set a time-based reminder",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "",
+        "content_description": "Open navigation drawer",
+        "class": "android.widget.ImageButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/text1",
+        "text": "TASKS",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "",
+        "content_description": "Open navigation drawer",
+        "class": "android.widget.ImageButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "All lists",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "All lists",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.nononsenseapps.notepad:id/drawer_menu_createlist",
+        "text": "",
+        "content_description": "Start new list",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "set_text",
+      "selector": {
+        "resource_id": "com.nononsenseapps.notepad:id/titleField",
+        "text": "Title",
+        "content_description": "",
+        "class": "android.widget.EditText",
+        "name": "",
+        "direction": ""
+      },
+      "value": "no"
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.nononsenseapps.notepad:id/dialog_yes",
+        "text": "OK",
+        "content_description": "",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "partial",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/nononsensenotes/feature_test",
+  "completion_source": "executed"
+}

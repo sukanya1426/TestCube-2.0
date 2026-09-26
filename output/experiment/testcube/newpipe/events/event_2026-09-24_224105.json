@@ -1,0 +1,58 @@
+{
+  "tag": "2026-09-24_224105",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Trending",
+      "children": [
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          270,
+          336
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "270*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]Trending[enabled,,]",
+      "view_str": "d78a50973dd2bd95a8b8caac2c8ac3d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Trending' bound_box=0,210,270,336></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "6aeff1ca8b95ca69329d6fd581f47b2e",
+  "stop_state": "d50c52c1df46ceea6e2656296d1e6a5b",
+  "event_str": "CustomTouchEvent(state=6aeff1ca8b95ca69329d6fd581f47b2e, view=d78a50973dd2bd95a8b8caac2c8ac3d1(MainActivity/LinearLayout-))"
+}

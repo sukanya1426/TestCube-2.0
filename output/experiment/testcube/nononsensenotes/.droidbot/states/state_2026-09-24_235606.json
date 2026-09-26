@@ -1,0 +1,1042 @@
+{
+  "tag": "2026-09-24_235606",
+  "state_str": "e415c3ee1292598dc25f52bbd8de92af",
+  "state_str_content_free": "fe43bfa0669f224944fa99e4a10e4ceb",
+  "foreground_activity": "com.nononsenseapps.notepad/.activities.main.ActivityMain_",
+  "activity_stack": [
+    "com.nononsenseapps.notepad/.activities.main.ActivityMain_"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          73
+        ],
+        [
+          1070,
+          703
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "515*630",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "98743c08fe24385c187804448c945008",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          73
+        ],
+        [
+          1070,
+          703
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "515*630",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "53ac88b7d9ffeec6c95f1f9b82a8cc20",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3,
+        7,
+        11,
+        15,
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          73
+        ],
+        [
+          1070,
+          703
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ListView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "515*630",
+      "signature": "[class]android.widget.ListView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "bf3a8b96f8b21df159e4b84ff4b7bc0f",
+      "content_free_signature": "[class]android.widget.ListView[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          73
+        ],
+        [
+          1070,
+          199
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f4e8341e37d01f0fa8a0d4c3d49ccb97",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          73
+        ],
+        [
+          1070,
+          199
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "1b28d47ef25b32a2f670b9aec1406bbc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          107
+        ],
+        [
+          1028,
+          164
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "431*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "bbca3d1e1885dadd98a4e98c4f869a93",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          107
+        ],
+        [
+          1028,
+          164
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/title",
+      "checked": false,
+      "text": "Sync",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "431*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title[text]Sync[desc]None[enabled,,]",
+      "view_str": "c8413c87ef7e6b0161cdff39679ef61e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button bound_box=597,107,1028,164>Sync</button>"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          199
+        ],
+        [
+          1070,
+          325
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 7,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f4e8341e37d01f0fa8a0d4c3d49ccb97",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          199
+        ],
+        [
+          1070,
+          325
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "1b28d47ef25b32a2f670b9aec1406bbc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          233
+        ],
+        [
+          1028,
+          290
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "431*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d7f8c6852167bf06e13577c3d87d0dc7",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          233
+        ],
+        [
+          1028,
+          290
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/title",
+      "checked": false,
+      "text": "Archive",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "431*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title[text]Archive[desc]None[enabled,,]",
+      "view_str": "6a840d69ef2ef34f59276fd5edccccd6",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=597,233,1028,290>Archive</button>"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          325
+        ],
+        [
+          1070,
+          451
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 11,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f4e8341e37d01f0fa8a0d4c3d49ccb97",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          325
+        ],
+        [
+          1070,
+          451
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "1b28d47ef25b32a2f670b9aec1406bbc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          359
+        ],
+        [
+          1028,
+          416
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "431*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3f3eb36882b7018522148dd3df00aef1",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          359
+        ],
+        [
+          1028,
+          416
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/title",
+      "checked": false,
+      "text": "Clear completed",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "431*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title[text]Clear completed[desc]None[enabled,,]",
+      "view_str": "c85d95d58c4943765f2de735dcc59404",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=597,359,1028,416>Clear completed</button>"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          451
+        ],
+        [
+          1070,
+          577
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 15,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f4e8341e37d01f0fa8a0d4c3d49ccb97",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17,
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          451
+        ],
+        [
+          1070,
+          577
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "ff6a8614e47a57c8adfaf75c54122313",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          485
+        ],
+        [
+          944,
+          542
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "347*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e8571ddc53ec1577aeb23bb5f0754614",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          485
+        ],
+        [
+          944,
+          542
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/title",
+      "checked": false,
+      "text": "Sorting",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "347*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title[text]Sorting[desc]None[enabled,,]",
+      "view_str": "6e7d9c6d884c0a9a615d70fdd7801528",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=597,485,944,542>Sorting</button>"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          965,
+          482
+        ],
+        [
+          1028,
+          545
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/submenuarrow",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 19,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]com.nononsenseapps.notepad:id/submenuarrow[text]None[desc]None[enabled,,]",
+      "view_str": "5adf09866ab4249d8eed21ae15ef9707",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.nononsenseapps.notepad:id/submenuarrow"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          577
+        ],
+        [
+          1070,
+          703
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 20,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f4e8341e37d01f0fa8a0d4c3d49ccb97",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          555,
+          577
+        ],
+        [
+          1070,
+          703
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "1b28d47ef25b32a2f670b9aec1406bbc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.nononsenseapps.notepad:id/content"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        23
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          611
+        ],
+        [
+          1028,
+          668
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 21,
+      "temp_id": 22,
+      "size": "431*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "eb892bc6e845b95397133b77b8fe6f65",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "com.nononsenseapps.notepad",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          597,
+          611
+        ],
+        [
+          1028,
+          668
+        ]
+      ],
+      "resource_id": "com.nononsenseapps.notepad:id/title",
+      "checked": false,
+      "text": "Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "431*57",
+      "signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title[text]Settings[desc]None[enabled,,]",
+      "view_str": "52202694fa89205fb14f884d27d6cb19",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.nononsenseapps.notepad:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=597,611,1028,668>Settings</button>"
+    }
+  ]
+}

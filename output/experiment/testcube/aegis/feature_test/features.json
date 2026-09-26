@@ -1,0 +1,521 @@
+{
+  "app": "Aegis Authenticator",
+  "source": "guide",
+  "url": "Official Aegis repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-40 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create",
+      "description": "Install and open the app",
+      "actions": [
+        "Install and open the app",
+        "Tap through the welcome screens",
+        "Select 'Create' from the navigation menu",
+        "Enter a name for the vault",
+        "Tap 'Encrypt' to secure the vault",
+        "Enter a password to encrypt the vault"
+      ],
+      "keywords": [
+        "create",
+        "encrypt",
+        "vault",
+        "first"
+      ],
+      "nav_hints": [
+        "create",
+        "encrypt",
+        "vault"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Install and open the app",
+        "tap through the welcome screens"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Unlock the vault",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' icon",
+        "Select 'Security'",
+        "Tap on 'Unlock the vault' option",
+        "Enter the required password",
+        "Select 'Unlock vault with password' option",
+        "Tap on 'Unlock vault with biometrics' option"
+      ],
+      "keywords": [
+        "unlock",
+        "vault",
+        "biometrics",
+        "settings"
+      ],
+      "nav_hints": [
+        "unlock",
+        "vault",
+        "biometrics"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "Security"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Add an entry",
+      "description": "Tap the \"+\" button",
+      "actions": [
+        "Tap the '+' button",
+        "Tap 'Scan an image'/Scan image from gallery'",
+        "Select the image to scan",
+        "Tap 'Add Entry'",
+        "Enter the necessary details for the entry",
+        "Tap 'Save'"
+      ],
+      "keywords": [
+        "add",
+        "entry",
+        "code",
+        "image"
+      ],
+      "nav_hints": [
+        "scan an image",
+        "add",
+        "entry"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan an image\"/\"Scan image from gallery\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Edit an entry",
+      "description": "Tap the entry in the list (or long-press it)",
+      "actions": [
+        "Tap the entry in the list (or long-press it)",
+        "Tap the edit action",
+        "Enter the new information",
+        "Tap the save button",
+        "Verify the updated entry in the list"
+      ],
+      "keywords": [
+        "edit",
+        "entry",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "edit",
+        "entry"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the entry in the list (or long-press it)",
+        "tap the edit action"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Import an icon pack",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll down to find 'Icon packs'",
+        "Tap on 'Icon packs'",
+        "Tap on 'Import'",
+        "Select a desired icon pack",
+        "Confirm the import"
+      ],
+      "keywords": [
+        "import",
+        "pack",
+        "settings",
+        "packs"
+      ],
+      "nav_hints": [
+        "icon packs",
+        "import",
+        "pack"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap \"Icon packs\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Reveal a hidden code",
+      "description": "With the \"tap to reveal\" option enabled",
+      "actions": [
+        "Tap on the 'Reveal a hidden code' option in the settings menu.",
+        "Select the entry in the list that you want to reveal the hidden code for.",
+        "Tap the 'Tap to reveal' option next to the selected entry.",
+        "The hidden code will be displayed in the app's interface."
+      ],
+      "keywords": [
+        "reveal",
+        "hidden",
+        "code",
+        "enabled"
+      ],
+      "nav_hints": [
+        "tap to reveal",
+        "reveal",
+        "hidden"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "With the \"tap to reveal\" option enabled",
+        "tap the entry in the list"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Search entries",
+      "description": "Tap the search icon in the toolbar",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "Type part of the issuer or account name",
+        "Press the Enter key to execute the search"
+      ],
+      "keywords": [
+        "search",
+        "entries",
+        "toolbar",
+        "part"
+      ],
+      "nav_hints": [
+        "search",
+        "entries"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the search icon in the toolbar",
+        "type part of the issuer or account name"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Reorder entries manually",
+      "description": "Set the sort order to custom",
+      "actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entries list",
+        "Select the 'Sort' option",
+        "Choose 'Custom' from the sort options",
+        "Long-press an entry to start reordering",
+        "Drag the entry to a new position in the list"
+      ],
+      "keywords": [
+        "reorder",
+        "entries",
+        "manually",
+        "sort"
+      ],
+      "nav_hints": [
+        "reorder",
+        "entries",
+        "manually"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Set the sort order to custom",
+        "long-press an entry"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Assign an entry",
+      "description": "Open the entry editor",
+      "actions": [
+        "Open the entry editor",
+        "Tap the group selector",
+        "Select the group to assign the entry to",
+        "Tap the 'Assign' button",
+        "Confirm the assignment"
+      ],
+      "keywords": [
+        "assign",
+        "entry",
+        "group",
+        "editor"
+      ],
+      "nav_hints": [
+        "assign",
+        "entry",
+        "group"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the entry editor",
+        "tap the group selector"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Rename",
+      "description": "Open the overflow menu",
+      "actions": [
+        "Tap on the overflow menu",
+        "Select 'Manage groups'",
+        "Tap on the group you want to rename",
+        "Enter the new name for the group",
+        "Tap the 'Rename' button to save the changes"
+      ],
+      "keywords": [
+        "rename",
+        "delete",
+        "group",
+        "overflow"
+      ],
+      "nav_hints": [
+        "manage groups",
+        "rename",
+        "delete"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the overflow menu",
+        "tap \"Manage groups\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Select",
+      "description": "Long-press the first entry",
+      "actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entry list",
+        "Long-press the first entry",
+        "Tap the further entries to add them",
+        "Verify the app state changes"
+      ],
+      "keywords": [
+        "act",
+        "multiple",
+        "entries",
+        "long-press"
+      ],
+      "nav_hints": [
+        "act",
+        "multiple",
+        "entries"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the first entry",
+        "tap the further entries to add them"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Export the vault",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find the 'Import and export' option and tap on it.",
+        "Select 'Export the vault' from the export options.",
+        "Wait for the export process to complete and confirm the export.",
+        "Check the exported vault file to ensure it is in the desired format."
+      ],
+      "keywords": [
+        "export",
+        "vault",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "export",
+        "vault",
+        "plain"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "Import and export"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Import entries",
+      "description": "Tap the \"+\" button",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan a QR code\""
+      ],
+      "keywords": [
+        "import",
+        "entries",
+        "scanning",
+        "google"
+      ],
+      "nav_hints": [
+        "import",
+        "entries",
+        "scanning"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G014",
+      "name": "Add a second unlock",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on 'Settings'",
+        "Select 'Security'",
+        "Select 'Add second unlock'",
+        "Enter a name for the second unlock",
+        "Confirm the addition of the second unlock"
+      ],
+      "keywords": [
+        "add",
+        "second",
+        "unlock",
+        "method"
+      ],
+      "nav_hints": [
+        "add",
+        "second",
+        "unlock"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "Security"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Create",
+    "Unlock the vault",
+    "Add an entry",
+    "Edit an entry",
+    "Import an icon pack",
+    "Reveal a hidden code",
+    "Search entries",
+    "Reorder entries manually",
+    "Assign an entry",
+    "Rename",
+    "Select",
+    "Export the vault",
+    "Add a second unlock"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/aegis/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/aegis/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 8,
+    "both": [
+      {
+        "guide_id": "G007",
+        "guide_name": "Search entries",
+        "readme_id": "F006",
+        "readme_name": "Search",
+        "name_similarity": 0.5
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create"
+      },
+      {
+        "id": "G002",
+        "name": "Unlock the vault"
+      },
+      {
+        "id": "G003",
+        "name": "Add an entry"
+      },
+      {
+        "id": "G004",
+        "name": "Edit an entry"
+      },
+      {
+        "id": "G005",
+        "name": "Import an icon pack"
+      },
+      {
+        "id": "G006",
+        "name": "Reveal a hidden code"
+      },
+      {
+        "id": "G008",
+        "name": "Reorder entries manually"
+      },
+      {
+        "id": "G009",
+        "name": "Assign an entry"
+      },
+      {
+        "id": "G010",
+        "name": "Rename"
+      },
+      {
+        "id": "G011",
+        "name": "Select"
+      },
+      {
+        "id": "G012",
+        "name": "Export the vault"
+      },
+      {
+        "id": "G013",
+        "name": "Import entries"
+      },
+      {
+        "id": "G014",
+        "name": "Add a second unlock"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F007",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F008",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

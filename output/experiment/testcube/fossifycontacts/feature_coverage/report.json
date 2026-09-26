@@ -1,0 +1,1070 @@
+{
+  "application": "Fossify Contacts",
+  "total_features": 38,
+  "covered_features": 0,
+  "uncovered_features": 31,
+  "partial_features": 7,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifycontacts",
+  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/README.md",
+  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a contact",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Some steps were partially completed but not in the correct order.",
+        "touch EditContactActivity/ImageView-",
+        "set_text EditContactActivity/AutoCompleteTextView-First name"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT002",
+      "name": "Add a photo to a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No steps related to adding a photo were executed."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Add multiple phone numbers with types",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Some steps were partially completed but not in the correct order.",
+        "touch EditContactActivity/TextView-Home",
+        "touch EditContactActivity/RadioButton-Custom"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT004",
+      "name": "Add email addresses",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards adding email addresses.",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT005",
+      "name": "Add postal addresses",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards adding postal addresses.",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT006",
+      "name": "Add important dates (birthday and anniversary)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards adding important dates.",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT007",
+      "name": "Add the organisation and job title",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Tapped 'Add' button but did not complete all steps.",
+        "touch CustomTouchEvent(state=46ac1cbd5e80666829184c5238ef3854, x=891, y=1647)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT008",
+      "name": "Add websites and instant messaging handles",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "No relevant actions for adding websites or IM handles."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Add notes to a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "Actions do not match the gold steps for adding notes."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Set a custom ringtone for a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "Edit a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Delete a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.6,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Mark a contact as a favourite",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Tap star icon in contact details",
+        "touch EditContactActivity/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.33
+    },
+    {
+      "id": "GT014",
+      "name": "Remove a contact from favourites",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No relevant actions found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "Call a contact",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Tap phone number to open dialer",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.33
+    },
+    {
+      "id": "GT016",
+      "name": "Send an SMS to a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps match the gold capability."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Send an email to a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps match the gold capability."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Create a contact group",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps match the gold capability."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Add contacts to a group",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "no relevant actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Rename or delete a group",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "no relevant actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Send a message or email to a whole group",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "no relevant actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Search contacts",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No search functionality tested.",
+        "touch MainActivity/TextView-Contacts"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Sort the contact list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No sort functionality tested.",
+        "touch MainActivity/TextView-Contacts"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Filter which contact sources are shown",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No filter functionality tested.",
+        "touch MainActivity/TextView-Contacts"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Choose which fields are visible in the contact detail",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "scroll to 'Manage shown contact fields' but did not complete selection",
+        "touch CustomTouchEvent(state=e47dc04b4e08f47b17e43a603d88679c, x=586, y=1100)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT026",
+      "name": "Show only contacts with phone numbers",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "no relevant actions for toggling phone number filter",
+        "intent intent=am start org.fossify.contacts/org.fossify.contacts.activities.SplashActivity.... state_ch..."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Merge duplicate contacts",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "long-pressed but did not complete merge action",
+        "long_touch EditContactActivity/TextView-Mobile"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT028",
+      "name": "Share a contact as a vCard",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards sharing a contact as a vCard."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Export contacts to a vCard (.vcf) file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards exporting contacts to a vCard file."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT030",
+      "name": "Import contacts from a vCard file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards importing contacts from a vCard file."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT031",
+      "name": "Create a home screen shortcut to a contact",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "steps not aligned with gold",
+        "touch EditContactActivity/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT032",
+      "name": "Choose the default tab shown at start-up",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "steps not aligned with gold",
+        "touch FloatingActionButton",
+        "touch ImageView"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT033",
+      "name": "Show or hide the individual tabs",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT034",
+      "name": "Customise the app colours and theme",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "intent start activity"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT035",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "intent start activity"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT036",
+      "name": "Change the app language and font size",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "intent start activity"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT037",
+      "name": "Show contact thumbnails and phone numbers in the list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to settings or contact thumbnails."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT038",
+      "name": "View the about screen, FAQ and licences",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to viewing the about screen, FAQ, or licences."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Create a contact",
+      "journal_id": "G001",
+      "journal_name": "Create a contact",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Add a photo to a contact",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Add multiple phone numbers with types",
+      "journal_id": "G002",
+      "journal_name": "Add multiple phone numbers",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Add email addresses",
+      "journal_id": "G003",
+      "journal_name": "Add postal addresses",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Add postal addresses",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 1.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Add important dates (birthday and anniversary)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Add the organisation and job title",
+      "journal_id": "G004",
+      "journal_name": "Add the organisation",
+      "name_similarity": 0.538,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Add websites and instant messaging handles",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Add notes to a contact",
+      "journal_id": "G005",
+      "journal_name": "Add notes",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Set a custom ringtone for a contact",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Edit a contact",
+      "journal_id": "G006",
+      "journal_name": "Edit a contact",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Delete a contact",
+      "journal_id": "G007",
+      "journal_name": "Mark a contact",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Mark a contact as a favourite",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.667,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Remove a contact from favourites",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Call a contact",
+      "journal_id": "G008",
+      "journal_name": "Call a contact",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Send an SMS to a contact",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Send an email to a contact",
+      "journal_id": "G009",
+      "journal_name": "Send an email",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Create a contact group",
+      "journal_id": "G010",
+      "journal_name": "Add contacts",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Add contacts to a group",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.667,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Rename or delete a group",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Send a message or email to a whole group",
+      "journal_id": "G011",
+      "journal_name": "Send a message",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Search contacts",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Sort the contact list",
+      "journal_id": "G012",
+      "journal_name": "Sort the contact list",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Filter which contact sources are shown",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Choose which fields are visible in the contact detail",
+      "journal_id": "G013",
+      "journal_name": "Choose",
+      "name_similarity": 0.429,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Show only contacts with phone numbers",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Merge duplicate contacts",
+      "journal_id": "G014",
+      "journal_name": "Merge duplicate contacts",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Share a contact as a vCard",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Export contacts to a vCard (.vcf) file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Import contacts from a vCard file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "Create a home screen shortcut to a contact",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.4,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "Choose the default tab shown at start-up",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.188,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT033",
+      "ground_truth_name": "Show or hide the individual tabs",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT034",
+      "ground_truth_name": "Customise the app colours and theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.125,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT035",
+      "ground_truth_name": "Protect the app with a PIN, pattern or fingerprint",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.111,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT036",
+      "ground_truth_name": "Change the app language and font size",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.111,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT037",
+      "ground_truth_name": "Show contact thumbnails and phone numbers in the list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT038",
+      "ground_truth_name": "View the about screen, FAQ and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.118,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 14,
+    "false_negatives": 24,
+    "false_positives": 1,
+    "precision": 0.9333333333333333,
+    "recall": 0.3684210526315789,
+    "f1": 0.5283018867924527,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 14,
+    "ground_truth_count": 38,
+    "feature_completeness_ratio": 0.368,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 7,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.05421052631578947,
+  "weighted_coverage_percentage": 5.42,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

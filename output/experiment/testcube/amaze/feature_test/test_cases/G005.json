@@ -1,0 +1,69 @@
+{
+  "feature_id": "G005",
+  "name": "Show",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.amaze.filemanager:id/md_content",
+        "text": "Since Android 11, Google requests File Managers to request user permission for managing all files on the device. Details available at https://developer.android.com/training/data-storage/manage-all-files.\n\nAmaze File Manager needs this permission too. After pressing 'Grant', please select Allow access to manage all files option on the next screen.\n\nCanceling this dialog will exit the app. ",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.amaze.filemanager:id/md_content",
+        "text": "Since Android 11, Google requests File Managers to request user permission for managing all files on the device. Details available at https://developer.android.com/training/data-storage/manage-all-files.\n\nAmaze File Manager needs this permission too. After pressing 'Grant', please select Allow access to manage all files option on the next screen.\n\nCanceling this dialog will exit the app. ",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.amaze.filemanager:id/md_buttonDefaultPositive",
+        "text": "GRANT",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.amaze.filemanager:id/fabs_menu",
+        "text": "",
+        "content_description": "",
+        "class": "android.widget.LinearLayout",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "com.amaze.filemanager:id/pathname",
+        "text": "13 folders and 0 files",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "covered",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/amaze/feature_test",
+  "completion_source": "executed"
+}

@@ -1,0 +1,2470 @@
+{
+  "config": {
+    "_comment": [
+      "Settings for scripts/run_experiment.py.",
+      "WHICH APKS RUN IS *NOT* HERE -- it is APK_NAMES / NUM_APKS at the top of",
+      "scripts/run_experiment.py, so that choice lives in exactly one place."
+    ],
+    "budget_seconds": 3600,
+    "grace_seconds": 300,
+    "apk_dir": "apks",
+    "auto_fetch_apks": true,
+    "instrumented_dir": "apks/instrumented",
+    "testcube_output": "output/experiment/testcube",
+    "llmdroid_output": "output/experiment/llmdroid",
+    "compare_output": "output/experiment/compare",
+    "log_dir": "output/experiment/logs",
+    "policy": "feature_guided",
+    "llmdroid_policy": "dfs_greedy",
+    "llm_backend": "local",
+    "logcat_buffer": "64M",
+    "reinstall_between_runs": true,
+    "verify_instrumentation": true,
+    "run_llmdroid": true,
+    "run_compare": true,
+    "run_feature_eval": true,
+    "feature_matcher": "ai",
+    "skip_completed": true,
+    "device_serial": null
+  },
+  "results": [
+    {
+      "stem": "money",
+      "package": "com.money.manager.ex",
+      "tag": "MONEY_SUPER_LOG",
+      "started": "2026-09-24T22:19:42.434130",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "newpipe",
+      "package": "org.schabi.newpipe",
+      "tag": "PIPE_SUPER_LOG",
+      "started": "2026-09-24T22:19:58.913990",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 74478,
+      "testcube_output": "output/experiment/testcube/newpipe",
+      "llmdroid_output": "output/experiment/llmdroid/newpipe",
+      "compare_output": "output/experiment/compare/newpipe",
+      "coverage": [
+        {
+          "name": "newpipe",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/newpipe",
+          "tag": "PIPE_SUPER_LOG",
+          "total": 74478,
+          "final": 16.16182,
+          "methods_hit": 12037,
+          "duration": 1638.65,
+          "total_actions": 152,
+          "activity_coverage": 25.0,
+          "activities_hit": 3,
+          "total_activities": 12,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 11.92433,
+              "methods_hit": 8881,
+              "elapsed": 115.47,
+              "activity_coverage": 8.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.73933,
+              "methods_hit": 9488,
+              "elapsed": 185.34,
+              "activity_coverage": 8.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.47646,
+              "methods_hit": 10037,
+              "elapsed": 311.88,
+              "activity_coverage": 16.67,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.51809,
+              "methods_hit": 10068,
+              "elapsed": 468.43,
+              "activity_coverage": 16.67,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.51809,
+              "methods_hit": 10068,
+              "elapsed": 541.7,
+              "activity_coverage": 16.67,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 15.05277,
+              "methods_hit": 11211,
+              "elapsed": 632.41,
+              "activity_coverage": 16.67,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 15.50391,
+              "methods_hit": 11547,
+              "elapsed": 744.3,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.51196,
+              "methods_hit": 11553,
+              "elapsed": 845.2,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.51599,
+              "methods_hit": 11556,
+              "elapsed": 945.51,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.72545,
+              "methods_hit": 11712,
+              "elapsed": 1085.72,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.72679,
+              "methods_hit": 11713,
+              "elapsed": 1191.06,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.72679,
+              "methods_hit": 11713,
+              "elapsed": 1273.28,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 15.82212,
+              "methods_hit": 11784,
+              "elapsed": 1397.65,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 16.14571,
+              "methods_hit": 12025,
+              "elapsed": 1487.91,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 16.15511,
+              "methods_hit": 12032,
+              "elapsed": 1586.95,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 16.16182,
+              "methods_hit": 12037,
+              "elapsed": 1638.65,
+              "activity_coverage": 25.0,
+              "activities_hit": 3
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1782.5
+    },
+    {
+      "stem": "markor",
+      "package": "net.gsantner.markor",
+      "tag": "MARKOR_SUPER_LOG",
+      "started": "2026-09-24T22:49:41.417773",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 61884,
+      "testcube_output": "output/experiment/testcube/markor",
+      "llmdroid_output": "output/experiment/llmdroid/markor",
+      "compare_output": "output/experiment/compare/markor",
+      "coverage": [
+        {
+          "name": "markor",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor",
+          "tag": "MARKOR_SUPER_LOG",
+          "total": 61884,
+          "final": 5.04977,
+          "methods_hit": 3125,
+          "duration": 472.51,
+          "total_actions": 41,
+          "activity_coverage": 18.18,
+          "activities_hit": 2,
+          "total_activities": 11,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 5.0223,
+              "methods_hit": 3108,
+              "elapsed": 116.17,
+              "activity_coverage": 18.18,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 5.04977,
+              "methods_hit": 3125,
+              "elapsed": 213.1,
+              "activity_coverage": 18.18,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 5.04977,
+              "methods_hit": 3125,
+              "elapsed": 313.16,
+              "activity_coverage": 18.18,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 5.04977,
+              "methods_hit": 3125,
+              "elapsed": 425.27,
+              "activity_coverage": 18.18,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 5.04977,
+              "methods_hit": 3125,
+              "elapsed": 472.51,
+              "activity_coverage": 18.18,
+              "activities_hit": 2
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 595.1
+    },
+    {
+      "stem": "omninotes",
+      "package": "it.feio.android.omninotes.foss",
+      "tag": "OMNINOTES_SUPER_LOG",
+      "started": "2026-09-24T22:59:38.148103",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 33780,
+      "testcube_output": "output/experiment/testcube/omninotes",
+      "llmdroid_output": "output/experiment/llmdroid/omninotes",
+      "compare_output": "output/experiment/compare/omninotes",
+      "coverage": [
+        {
+          "name": "omninotes",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/omninotes",
+          "tag": "OMNINOTES_SUPER_LOG",
+          "total": 33780,
+          "final": 18.31853,
+          "methods_hit": 6188,
+          "duration": 1660.47,
+          "total_actions": 154,
+          "activity_coverage": 7.69,
+          "activities_hit": 1,
+          "total_activities": 13,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 9.00237,
+              "methods_hit": 3041,
+              "elapsed": 118.43,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.9177,
+              "methods_hit": 3688,
+              "elapsed": 266.61,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 11.2611,
+              "methods_hit": 3804,
+              "elapsed": 337.04,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 14.62108,
+              "methods_hit": 4939,
+              "elapsed": 432.69,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.40261,
+              "methods_hit": 5203,
+              "elapsed": 541.15,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.45293,
+              "methods_hit": 5220,
+              "elapsed": 644.27,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.47957,
+              "methods_hit": 5229,
+              "elapsed": 750.86,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.47957,
+              "methods_hit": 5229,
+              "elapsed": 866.51,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.5003,
+              "methods_hit": 5236,
+              "elapsed": 991.01,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.53878,
+              "methods_hit": 5249,
+              "elapsed": 1083.26,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.54174,
+              "methods_hit": 5250,
+              "elapsed": 1182.9,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.72647,
+              "methods_hit": 5988,
+              "elapsed": 1285.98,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 18.25636,
+              "methods_hit": 6167,
+              "elapsed": 1380.75,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 18.28301,
+              "methods_hit": 6176,
+              "elapsed": 1489.67,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 18.31853,
+              "methods_hit": 6188,
+              "elapsed": 1575.44,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 18.31853,
+              "methods_hit": 6188,
+              "elapsed": 1660.47,
+              "activity_coverage": 7.69,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1760.2
+    },
+    {
+      "stem": "joplin",
+      "package": "net.cozic.joplin",
+      "tag": "JOPLIN_SUPER_LOG",
+      "started": "2026-09-24T23:29:01.678697",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "nononsensenotes",
+      "package": "com.nononsenseapps.notepad",
+      "tag": "NONONSENSENO_SUPER_LOG",
+      "started": "2026-09-24T23:30:57.144298",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 15514,
+      "testcube_output": "output/experiment/testcube/nononsensenotes",
+      "llmdroid_output": "output/experiment/llmdroid/nononsensenotes",
+      "compare_output": "output/experiment/compare/nononsensenotes",
+      "coverage": [
+        {
+          "name": "nononsensenotes",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/nononsensenotes",
+          "tag": "NONONSENSENO_SUPER_LOG",
+          "total": 15514,
+          "final": 0.0,
+          "methods_hit": 0,
+          "duration": 1631.96,
+          "total_actions": 139,
+          "activity_coverage": 0.0,
+          "activities_hit": 0,
+          "total_activities": 8,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 172.66,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 249.72,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 379.72,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 517.52,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 623.07,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 707.97,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 839.39,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 944.99,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1054.77,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1171.63,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1295.11,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1373.31,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1485.54,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            },
+            {
+              "coverage": 0.0,
+              "methods_hit": 0,
+              "elapsed": 1631.96,
+              "activity_coverage": 0.0,
+              "activities_hit": 0
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1698.4
+    },
+    {
+      "stem": "ankidroid",
+      "package": "com.ichi2.anki",
+      "tag": "ANKIDROID_SUPER_LOG",
+      "started": "2026-09-24T23:59:15.596823",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "opentasks",
+      "package": "org.dmfs.tasks",
+      "tag": "OPENTASKS_SUPER_LOG",
+      "started": "2026-09-24T23:59:20.416924",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 25768,
+      "testcube_output": "output/experiment/testcube/opentasks",
+      "llmdroid_output": "output/experiment/llmdroid/opentasks",
+      "compare_output": "output/experiment/compare/opentasks",
+      "coverage": [
+        {
+          "name": "opentasks",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/opentasks",
+          "tag": "OPENTASKS_SUPER_LOG",
+          "total": 25768,
+          "final": 14.681,
+          "methods_hit": 3783,
+          "duration": 1769.52,
+          "total_actions": 160,
+          "activity_coverage": 37.5,
+          "activities_hit": 3,
+          "total_activities": 8,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 12.03819,
+              "methods_hit": 3102,
+              "elapsed": 104.37,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 12.23611,
+              "methods_hit": 3153,
+              "elapsed": 233.31,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.44691,
+              "methods_hit": 3465,
+              "elapsed": 333.48,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.44691,
+              "methods_hit": 3465,
+              "elapsed": 407.36,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.94365,
+              "methods_hit": 3593,
+              "elapsed": 529.74,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.00962,
+              "methods_hit": 3610,
+              "elapsed": 616.65,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.04843,
+              "methods_hit": 3620,
+              "elapsed": 703.89,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.06007,
+              "methods_hit": 3623,
+              "elapsed": 860.95,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.06396,
+              "methods_hit": 3624,
+              "elapsed": 973.64,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.06396,
+              "methods_hit": 3624,
+              "elapsed": 1054.72,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.16486,
+              "methods_hit": 3650,
+              "elapsed": 1147.91,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.20754,
+              "methods_hit": 3661,
+              "elapsed": 1254.49,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.20754,
+              "methods_hit": 3661,
+              "elapsed": 1389.15,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.21143,
+              "methods_hit": 3662,
+              "elapsed": 1529.72,
+              "activity_coverage": 25.0,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 14.54905,
+              "methods_hit": 3749,
+              "elapsed": 1645.25,
+              "activity_coverage": 37.5,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.681,
+              "methods_hit": 3783,
+              "elapsed": 1724.17,
+              "activity_coverage": 37.5,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.681,
+              "methods_hit": 3783,
+              "elapsed": 1769.52,
+              "activity_coverage": 37.5,
+              "activities_hit": 3
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1851.3
+    },
+    {
+      "stem": "loophabits",
+      "package": "org.isoron.uhabits",
+      "tag": "LOOPHABITS_SUPER_LOG",
+      "started": "2026-09-25T00:30:18.234397",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 41715,
+      "testcube_output": "output/experiment/testcube/loophabits",
+      "llmdroid_output": "output/experiment/llmdroid/loophabits",
+      "compare_output": "output/experiment/compare/loophabits",
+      "coverage": [
+        {
+          "name": "loophabits",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/loophabits",
+          "tag": "LOOPHABITS_SUPER_LOG",
+          "total": 41715,
+          "final": 14.134,
+          "methods_hit": 5896,
+          "duration": 1592.71,
+          "total_actions": 136,
+          "activity_coverage": 36.36,
+          "activities_hit": 4,
+          "total_activities": 11,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 11.52104,
+              "methods_hit": 4806,
+              "elapsed": 123.2,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.34808,
+              "methods_hit": 5151,
+              "elapsed": 217.96,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.38643,
+              "methods_hit": 5167,
+              "elapsed": 324.65,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.44157,
+              "methods_hit": 5190,
+              "elapsed": 456.44,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.44157,
+              "methods_hit": 5190,
+              "elapsed": 551.72,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.44157,
+              "methods_hit": 5190,
+              "elapsed": 636.0,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.5039,
+              "methods_hit": 5216,
+              "elapsed": 778.77,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.81074,
+              "methods_hit": 5344,
+              "elapsed": 867.36,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.82273,
+              "methods_hit": 5349,
+              "elapsed": 1034.98,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.82273,
+              "methods_hit": 5349,
+              "elapsed": 1173.59,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 12.82273,
+              "methods_hit": 5349,
+              "elapsed": 1252.99,
+              "activity_coverage": 27.27,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.09805,
+              "methods_hit": 5881,
+              "elapsed": 1344.08,
+              "activity_coverage": 36.36,
+              "activities_hit": 4
+            },
+            {
+              "coverage": 14.134,
+              "methods_hit": 5896,
+              "elapsed": 1447.04,
+              "activity_coverage": 36.36,
+              "activities_hit": 4
+            },
+            {
+              "coverage": 14.134,
+              "methods_hit": 5896,
+              "elapsed": 1592.71,
+              "activity_coverage": 36.36,
+              "activities_hit": 4
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1678.8
+    },
+    {
+      "stem": "myexpenses",
+      "package": "org.totschnig.myexpenses",
+      "tag": "MYEXPENSES_SUPER_LOG",
+      "started": "2026-09-25T00:58:19.810303",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "instrumentation failed (rc=1)"
+    },
+    {
+      "stem": "amaze",
+      "package": "com.amaze.filemanager",
+      "tag": "AMAZE_SUPER_LOG",
+      "started": "2026-09-25T01:02:37.880667",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 60810,
+      "testcube_output": "output/experiment/testcube/amaze",
+      "llmdroid_output": "output/experiment/llmdroid/amaze",
+      "compare_output": "output/experiment/compare/amaze",
+      "coverage": [
+        {
+          "name": "amaze",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/amaze",
+          "tag": "AMAZE_SUPER_LOG",
+          "total": 60810,
+          "final": 17.67637,
+          "methods_hit": 10749,
+          "duration": 2290.22,
+          "total_actions": 175,
+          "activity_coverage": 12.5,
+          "activities_hit": 1,
+          "total_activities": 8,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 14.88407,
+              "methods_hit": 9051,
+              "elapsed": 148.91,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.10771,
+              "methods_hit": 9187,
+              "elapsed": 242.42,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 15.8247,
+              "methods_hit": 9623,
+              "elapsed": 338.83,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 16.11906,
+              "methods_hit": 9802,
+              "elapsed": 464.84,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 16.11906,
+              "methods_hit": 9802,
+              "elapsed": 628.42,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 16.12235,
+              "methods_hit": 9804,
+              "elapsed": 731.19,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 16.49564,
+              "methods_hit": 10031,
+              "elapsed": 849.98,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.27183,
+              "methods_hit": 10503,
+              "elapsed": 978.41,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.27183,
+              "methods_hit": 10503,
+              "elapsed": 1135.88,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.27183,
+              "methods_hit": 10503,
+              "elapsed": 1283.7,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.27183,
+              "methods_hit": 10503,
+              "elapsed": 1410.34,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.29485,
+              "methods_hit": 10517,
+              "elapsed": 1549.17,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.34254,
+              "methods_hit": 10546,
+              "elapsed": 1705.16,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.34254,
+              "methods_hit": 10546,
+              "elapsed": 1806.13,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.34254,
+              "methods_hit": 10546,
+              "elapsed": 1976.64,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.63032,
+              "methods_hit": 10721,
+              "elapsed": 2068.15,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.66321,
+              "methods_hit": 10741,
+              "elapsed": 2189.19,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 17.67637,
+              "methods_hit": 10749,
+              "elapsed": 2290.22,
+              "activity_coverage": 12.5,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 2389.5
+    },
+    {
+      "stem": "materialfiles",
+      "package": "me.zhanghai.android.files",
+      "tag": "MATERIALFILE_SUPER_LOG",
+      "started": "2026-09-25T01:42:27.547918",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 33328,
+      "testcube_output": "output/experiment/testcube/materialfiles",
+      "llmdroid_output": "output/experiment/llmdroid/materialfiles",
+      "compare_output": "output/experiment/compare/materialfiles",
+      "coverage": [
+        {
+          "name": "materialfiles",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles",
+          "tag": "MATERIALFILE_SUPER_LOG",
+          "total": 33328,
+          "final": 12.97708,
+          "methods_hit": 4325,
+          "duration": 208.73,
+          "total_actions": 16,
+          "activity_coverage": 3.57,
+          "activities_hit": 1,
+          "total_activities": 28,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 12.97708,
+              "methods_hit": 4325,
+              "elapsed": 129.38,
+              "activity_coverage": 3.57,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.97708,
+              "methods_hit": 4325,
+              "elapsed": 208.73,
+              "activity_coverage": 3.57,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 324.5
+    },
+    {
+      "stem": "fossifyfiles",
+      "package": "org.fossify.filemanager",
+      "tag": "FOSSIFYFILES_SUPER_LOG",
+      "started": "2026-09-25T01:47:52.143673",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "etar",
+      "package": "ws.xsoh.etar",
+      "tag": "ETAR_SUPER_LOG",
+      "started": "2026-09-25T01:48:43.200676",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "fossifycalendar",
+      "package": "org.fossify.calendar",
+      "tag": "FOSSIFYCALEN_SUPER_LOG",
+      "started": "2026-09-25T01:49:16.719826",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "fossifycontacts",
+      "package": "org.fossify.contacts",
+      "tag": "FOSSIFYCONTA_SUPER_LOG",
+      "started": "2026-09-25T01:49:56.806743",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 62716,
+      "testcube_output": "output/experiment/testcube/fossifycontacts",
+      "llmdroid_output": "output/experiment/llmdroid/fossifycontacts",
+      "compare_output": "output/experiment/compare/fossifycontacts",
+      "coverage": [
+        {
+          "name": "fossifycontacts",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifycontacts",
+          "tag": "FOSSIFYCONTA_SUPER_LOG",
+          "total": 62716,
+          "final": 11.58556,
+          "methods_hit": 7266,
+          "duration": 1761.55,
+          "total_actions": 167,
+          "activity_coverage": 20.0,
+          "activities_hit": 3,
+          "total_activities": 15,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 8.7378,
+              "methods_hit": 5480,
+              "elapsed": 128.51,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.89381,
+              "methods_hit": 6205,
+              "elapsed": 212.42,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.56987,
+              "methods_hit": 6629,
+              "elapsed": 325.15,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 10.59379,
+              "methods_hit": 6644,
+              "elapsed": 423.5,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 10.63684,
+              "methods_hit": 6671,
+              "elapsed": 578.21,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 10.64162,
+              "methods_hit": 6674,
+              "elapsed": 652.76,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 10.64322,
+              "methods_hit": 6675,
+              "elapsed": 726.57,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 10.71656,
+              "methods_hit": 6721,
+              "elapsed": 829.96,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.36233,
+              "methods_hit": 7126,
+              "elapsed": 943.23,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.45162,
+              "methods_hit": 7182,
+              "elapsed": 1052.87,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.45481,
+              "methods_hit": 7184,
+              "elapsed": 1164.51,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.48192,
+              "methods_hit": 7201,
+              "elapsed": 1273.81,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.50743,
+              "methods_hit": 7217,
+              "elapsed": 1371.27,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.50743,
+              "methods_hit": 7217,
+              "elapsed": 1449.33,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.517,
+              "methods_hit": 7223,
+              "elapsed": 1543.92,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.58078,
+              "methods_hit": 7263,
+              "elapsed": 1654.43,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 11.58556,
+              "methods_hit": 7266,
+              "elapsed": 1761.55,
+              "activity_coverage": 20.0,
+              "activities_hit": 3
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1897.1
+    },
+    {
+      "stem": "vlc",
+      "package": "org.videolan.vlc",
+      "tag": "VLC_SUPER_LOG",
+      "started": "2026-09-25T02:21:34.193268",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "instrumentation failed (rc=1)"
+    },
+    {
+      "stem": "auxio",
+      "package": "org.oxycblt.auxio",
+      "tag": "AUXIO_SUPER_LOG",
+      "started": "2026-09-25T02:23:55.597705",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "fossifymusic",
+      "package": "org.fossify.musicplayer",
+      "tag": "FOSSIFYMUSIC_SUPER_LOG",
+      "started": "2026-09-25T02:24:11.447689",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "instrumentation failed (rc=1)"
+    },
+    {
+      "stem": "odyssey",
+      "package": "org.gateshipone.odyssey",
+      "tag": "ODYSSEY_SUPER_LOG",
+      "started": "2026-09-25T02:25:08.164495",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 55027,
+      "testcube_output": "output/experiment/testcube/odyssey",
+      "llmdroid_output": "output/experiment/llmdroid/odyssey",
+      "compare_output": "output/experiment/compare/odyssey",
+      "coverage": [
+        {
+          "name": "odyssey",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/odyssey",
+          "tag": "ODYSSEY_SUPER_LOG",
+          "total": 55027,
+          "final": 10.26042,
+          "methods_hit": 5646,
+          "duration": 2274.46,
+          "total_actions": 218,
+          "activity_coverage": 33.33,
+          "activities_hit": 1,
+          "total_activities": 3,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 8.892,
+              "methods_hit": 4893,
+              "elapsed": 87.44,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.25546,
+              "methods_hit": 5093,
+              "elapsed": 184.86,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.8806,
+              "methods_hit": 5437,
+              "elapsed": 273.05,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.94784,
+              "methods_hit": 5474,
+              "elapsed": 373.18,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.94784,
+              "methods_hit": 5474,
+              "elapsed": 455.47,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.95511,
+              "methods_hit": 5478,
+              "elapsed": 541.38,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.97692,
+              "methods_hit": 5490,
+              "elapsed": 663.36,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.98964,
+              "methods_hit": 5497,
+              "elapsed": 760.8,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.98964,
+              "methods_hit": 5497,
+              "elapsed": 854.42,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.98964,
+              "methods_hit": 5497,
+              "elapsed": 952.7,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 9.98964,
+              "methods_hit": 5497,
+              "elapsed": 1030.05,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.01327,
+              "methods_hit": 5510,
+              "elapsed": 1164.75,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.05325,
+              "methods_hit": 5532,
+              "elapsed": 1282.63,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.05506,
+              "methods_hit": 5533,
+              "elapsed": 1413.69,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.12776,
+              "methods_hit": 5573,
+              "elapsed": 1486.67,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.12776,
+              "methods_hit": 5573,
+              "elapsed": 1585.9,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.12776,
+              "methods_hit": 5573,
+              "elapsed": 1713.56,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.19863,
+              "methods_hit": 5612,
+              "elapsed": 1793.45,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.19863,
+              "methods_hit": 5612,
+              "elapsed": 1914.78,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.19863,
+              "methods_hit": 5612,
+              "elapsed": 2072.31,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.26042,
+              "methods_hit": 5646,
+              "elapsed": 2164.71,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 10.26042,
+              "methods_hit": 5646,
+              "elapsed": 2274.46,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 2382.4
+    },
+    {
+      "stem": "radiodroid",
+      "package": "net.programmierecke.radiodroid2",
+      "tag": "RADIODROID_SUPER_LOG",
+      "started": "2026-09-25T03:04:57.661559",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 91188,
+      "testcube_output": "output/experiment/testcube/radiodroid",
+      "llmdroid_output": "output/experiment/llmdroid/radiodroid",
+      "compare_output": "output/experiment/compare/radiodroid",
+      "coverage": [
+        {
+          "name": "radiodroid",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/radiodroid",
+          "tag": "RADIODROID_SUPER_LOG",
+          "total": 91188,
+          "final": 13.69149,
+          "methods_hit": 12485,
+          "duration": 1617.72,
+          "total_actions": 154,
+          "activity_coverage": 100.0,
+          "activities_hit": 1,
+          "total_activities": 1,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 11.18349,
+              "methods_hit": 10198,
+              "elapsed": 108.74,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.20117,
+              "methods_hit": 11126,
+              "elapsed": 202.9,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.23297,
+              "methods_hit": 11155,
+              "elapsed": 345.04,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.29986,
+              "methods_hit": 11216,
+              "elapsed": 447.29,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.61241,
+              "methods_hit": 11501,
+              "elapsed": 525.79,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.92385,
+              "methods_hit": 11785,
+              "elapsed": 654.46,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.92714,
+              "methods_hit": 11788,
+              "elapsed": 737.3,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 12.99513,
+              "methods_hit": 11850,
+              "elapsed": 841.84,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.19801,
+              "methods_hit": 12035,
+              "elapsed": 933.03,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.22652,
+              "methods_hit": 12061,
+              "elapsed": 1045.01,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.43708,
+              "methods_hit": 12253,
+              "elapsed": 1161.71,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.43927,
+              "methods_hit": 12255,
+              "elapsed": 1243.28,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.48862,
+              "methods_hit": 12300,
+              "elapsed": 1329.43,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.493,
+              "methods_hit": 12304,
+              "elapsed": 1447.81,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.53906,
+              "methods_hit": 12346,
+              "elapsed": 1542.79,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 13.69149,
+              "methods_hit": 12485,
+              "elapsed": 1617.72,
+              "activity_coverage": 100.0,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1748.3
+    },
+    {
+      "stem": "transistor",
+      "package": "org.y20k.transistor",
+      "tag": "TRANSISTOR_SUPER_LOG",
+      "started": "2026-09-25T03:34:06.226626",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "Soot [0..1] bug (Integer1Type leaked from the type assigner)"
+    },
+    {
+      "stem": "aegis",
+      "package": "com.beemdevelopment.aegis",
+      "tag": "AEGIS_SUPER_LOG",
+      "started": "2026-09-25T03:34:09.966350",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 26432,
+      "testcube_output": "output/experiment/testcube/aegis",
+      "llmdroid_output": "output/experiment/llmdroid/aegis",
+      "compare_output": "output/experiment/compare/aegis",
+      "coverage": [
+        {
+          "name": "aegis",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis",
+          "tag": "AEGIS_SUPER_LOG",
+          "total": 26432,
+          "final": 11.33096,
+          "methods_hit": 2995,
+          "duration": 909.37,
+          "total_actions": 82,
+          "activity_coverage": 13.33,
+          "activities_hit": 2,
+          "total_activities": 15,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 9.25015,
+              "methods_hit": 2445,
+              "elapsed": 156.07,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.61214,
+              "methods_hit": 2805,
+              "elapsed": 237.38,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.61592,
+              "methods_hit": 2806,
+              "elapsed": 309.44,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.84292,
+              "methods_hit": 2866,
+              "elapsed": 412.33,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.33096,
+              "methods_hit": 2995,
+              "elapsed": 526.57,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.33096,
+              "methods_hit": 2995,
+              "elapsed": 626.01,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.33096,
+              "methods_hit": 2995,
+              "elapsed": 777.75,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.33096,
+              "methods_hit": 2995,
+              "elapsed": 865.18,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.33096,
+              "methods_hit": 2995,
+              "elapsed": 909.37,
+              "activity_coverage": 13.33,
+              "activities_hit": 2
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1010.8
+    },
+    {
+      "stem": "keepassdx",
+      "package": "com.kunzisoft.keepass.libre",
+      "tag": "KEEPASSDX_SUPER_LOG",
+      "started": "2026-09-25T03:51:00.826106",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 111626,
+      "testcube_output": "output/experiment/testcube/keepassdx",
+      "llmdroid_output": "output/experiment/llmdroid/keepassdx",
+      "compare_output": "output/experiment/compare/keepassdx",
+      "coverage": [
+        {
+          "name": "keepassdx",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/keepassdx",
+          "tag": "KEEPASSDX_SUPER_LOG",
+          "total": 111626,
+          "final": 5.53455,
+          "methods_hit": 6178,
+          "duration": 1378.11,
+          "total_actions": 136,
+          "activity_coverage": 5.0,
+          "activities_hit": 1,
+          "total_activities": 20,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 3.96413,
+              "methods_hit": 4425,
+              "elapsed": 114.74,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.9713,
+              "methods_hit": 4433,
+              "elapsed": 193.29,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.9713,
+              "methods_hit": 4433,
+              "elapsed": 301.91,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.9713,
+              "methods_hit": 4433,
+              "elapsed": 415.13,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.9713,
+              "methods_hit": 4433,
+              "elapsed": 515.13,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.97219,
+              "methods_hit": 4434,
+              "elapsed": 594.01,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.97219,
+              "methods_hit": 4434,
+              "elapsed": 694.05,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.97219,
+              "methods_hit": 4434,
+              "elapsed": 796.22,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.97219,
+              "methods_hit": 4434,
+              "elapsed": 920.85,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 3.97219,
+              "methods_hit": 4434,
+              "elapsed": 1023.54,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 4.18182,
+              "methods_hit": 4668,
+              "elapsed": 1131.44,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 4.19078,
+              "methods_hit": 4678,
+              "elapsed": 1212.28,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 5.53455,
+              "methods_hit": 6178,
+              "elapsed": 1298.91,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 5.53455,
+              "methods_hit": 6178,
+              "elapsed": 1378.11,
+              "activity_coverage": 5.0,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1562.7
+    },
+    {
+      "stem": "opencamera",
+      "package": "net.sourceforge.opencamera",
+      "tag": "OPENCAMERA_SUPER_LOG",
+      "started": "2026-09-25T04:17:03.750692",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 36079,
+      "testcube_output": "output/experiment/testcube/opencamera",
+      "llmdroid_output": "output/experiment/llmdroid/opencamera",
+      "compare_output": "output/experiment/compare/opencamera",
+      "coverage": [
+        {
+          "name": "opencamera",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/opencamera",
+          "tag": "OPENCAMERA_SUPER_LOG",
+          "total": 36079,
+          "final": 8.00466,
+          "methods_hit": 2888,
+          "duration": 2227.01,
+          "total_actions": 194,
+          "activity_coverage": 33.33,
+          "activities_hit": 1,
+          "total_activities": 3,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 6.60495,
+              "methods_hit": 2383,
+              "elapsed": 134.9,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 6.82946,
+              "methods_hit": 2464,
+              "elapsed": 277.34,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.37548,
+              "methods_hit": 2661,
+              "elapsed": 377.03,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.42814,
+              "methods_hit": 2680,
+              "elapsed": 453.53,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.46418,
+              "methods_hit": 2693,
+              "elapsed": 599.75,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.63325,
+              "methods_hit": 2754,
+              "elapsed": 673.3,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.87162,
+              "methods_hit": 2840,
+              "elapsed": 787.96,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.87439,
+              "methods_hit": 2841,
+              "elapsed": 951.92,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98248,
+              "methods_hit": 2880,
+              "elapsed": 1051.63,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98248,
+              "methods_hit": 2880,
+              "elapsed": 1127.26,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98248,
+              "methods_hit": 2880,
+              "elapsed": 1261.58,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98248,
+              "methods_hit": 2880,
+              "elapsed": 1398.6,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98525,
+              "methods_hit": 2881,
+              "elapsed": 1505.35,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98525,
+              "methods_hit": 2881,
+              "elapsed": 1671.99,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98525,
+              "methods_hit": 2881,
+              "elapsed": 1767.59,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98525,
+              "methods_hit": 2881,
+              "elapsed": 1837.82,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98803,
+              "methods_hit": 2882,
+              "elapsed": 1939.65,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98803,
+              "methods_hit": 2882,
+              "elapsed": 2022.1,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 7.98803,
+              "methods_hit": 2882,
+              "elapsed": 2114.71,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            },
+            {
+              "coverage": 8.00466,
+              "methods_hit": 2888,
+              "elapsed": 2227.01,
+              "activity_coverage": 33.33,
+              "activities_hit": 1
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 2325.7
+    },
+    {
+      "stem": "fossifygallery",
+      "package": "org.fossify.gallery",
+      "tag": "FOSSIFYGALLE_SUPER_LOG",
+      "started": "2026-09-25T04:55:51.134226",
+      "steps": {
+        "instrument": "ok",
+        "verify": "fail"
+      },
+      "status": "skipped_verify",
+      "reason": "dex does not verify (5 VerifyError/FATAL lines)",
+      "total_methods": 44309
+    },
+    {
+      "stem": "fossifynotes",
+      "package": "org.fossify.notes",
+      "tag": "FOSSIFYNOTES_SUPER_LOG",
+      "started": "2026-09-25T04:57:26.737413",
+      "steps": {
+        "instrument": "fail"
+      },
+      "status": "skipped_instrumentation",
+      "reason": "instrumentation failed (rc=1)"
+    },
+    {
+      "stem": "fossifyclock",
+      "package": "org.fossify.clock",
+      "tag": "FOSSIFYCLOCK_SUPER_LOG",
+      "started": "2026-09-25T04:57:56.966874",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 27793,
+      "testcube_output": "output/experiment/testcube/fossifyclock",
+      "llmdroid_output": "output/experiment/llmdroid/fossifyclock",
+      "compare_output": "output/experiment/compare/fossifyclock",
+      "coverage": [
+        {
+          "name": "fossifyclock",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifyclock",
+          "tag": "FOSSIFYCLOCK_SUPER_LOG",
+          "total": 27793,
+          "final": 14.12586,
+          "methods_hit": 3926,
+          "duration": 1679.08,
+          "total_actions": 143,
+          "activity_coverage": 18.75,
+          "activities_hit": 3,
+          "total_activities": 16,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 11.42014,
+              "methods_hit": 3174,
+              "elapsed": 103.67,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.44533,
+              "methods_hit": 3181,
+              "elapsed": 238.72,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.75116,
+              "methods_hit": 3266,
+              "elapsed": 327.18,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.75116,
+              "methods_hit": 3266,
+              "elapsed": 455.02,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 11.75116,
+              "methods_hit": 3266,
+              "elapsed": 564.86,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 12.80898,
+              "methods_hit": 3560,
+              "elapsed": 642.45,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 12.80898,
+              "methods_hit": 3560,
+              "elapsed": 783.91,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 12.80898,
+              "methods_hit": 3560,
+              "elapsed": 894.47,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.19757,
+              "methods_hit": 3668,
+              "elapsed": 998.38,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.27313,
+              "methods_hit": 3689,
+              "elapsed": 1112.22,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.27313,
+              "methods_hit": 3689,
+              "elapsed": 1278.83,
+              "activity_coverage": 12.5,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 13.96395,
+              "methods_hit": 3881,
+              "elapsed": 1407.22,
+              "activity_coverage": 18.75,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.10787,
+              "methods_hit": 3921,
+              "elapsed": 1476.32,
+              "activity_coverage": 18.75,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.12586,
+              "methods_hit": 3926,
+              "elapsed": 1626.15,
+              "activity_coverage": 18.75,
+              "activities_hit": 3
+            },
+            {
+              "coverage": 14.12586,
+              "methods_hit": 3926,
+              "elapsed": 1679.08,
+              "activity_coverage": 18.75,
+              "activities_hit": 3
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1774.0
+    },
+    {
+      "stem": "fossifyvoicerecorder",
+      "package": "org.fossify.voicerecorder",
+      "tag": "FOSSIFYVOICE_SUPER_LOG",
+      "started": "2026-09-25T05:27:31.234383",
+      "steps": {
+        "instrument": "ok",
+        "verify": "ok",
+        "llmdroid_config": "ok",
+        "testcube": "ok",
+        "llmdroid": "rc=1",
+        "compare": "ok",
+        "feature_eval": "ok"
+      },
+      "status": "partial",
+      "reason": "steps not clean: llmdroid",
+      "total_methods": 29941,
+      "testcube_output": "output/experiment/testcube/fossifyvoicerecorder",
+      "llmdroid_output": "output/experiment/llmdroid/fossifyvoicerecorder",
+      "compare_output": "output/experiment/compare/fossifyvoicerecorder",
+      "coverage": [
+        {
+          "name": "fossifyvoicerecorder",
+          "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifyvoicerecorder",
+          "tag": "FOSSIFYVOICE_SUPER_LOG",
+          "total": 29941,
+          "final": 10.51067,
+          "methods_hit": 3147,
+          "duration": 1815.17,
+          "total_actions": 161,
+          "activity_coverage": 15.38,
+          "activities_hit": 2,
+          "total_activities": 13,
+          "activity_source": "androlog",
+          "samples": [
+            {
+              "coverage": 7.84543,
+              "methods_hit": 2349,
+              "elapsed": 138.57,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 8.83404,
+              "methods_hit": 2645,
+              "elapsed": 251.98,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 8.89082,
+              "methods_hit": 2662,
+              "elapsed": 334.2,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 8.90084,
+              "methods_hit": 2665,
+              "elapsed": 454.78,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.02107,
+              "methods_hit": 2701,
+              "elapsed": 558.41,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.13129,
+              "methods_hit": 2734,
+              "elapsed": 653.6,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.13797,
+              "methods_hit": 2736,
+              "elapsed": 763.75,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.13797,
+              "methods_hit": 2736,
+              "elapsed": 924.73,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.13797,
+              "methods_hit": 2736,
+              "elapsed": 1000.97,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.14131,
+              "methods_hit": 2737,
+              "elapsed": 1110.37,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.14131,
+              "methods_hit": 2737,
+              "elapsed": 1214.2,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.15801,
+              "methods_hit": 2742,
+              "elapsed": 1321.17,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.15801,
+              "methods_hit": 2742,
+              "elapsed": 1444.8,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 9.15801,
+              "methods_hit": 2742,
+              "elapsed": 1575.81,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.51067,
+              "methods_hit": 3147,
+              "elapsed": 1714.84,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.51067,
+              "methods_hit": 3147,
+              "elapsed": 1786.07,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            },
+            {
+              "coverage": 10.51067,
+              "methods_hit": 3147,
+              "elapsed": 1815.17,
+              "activity_coverage": 15.38,
+              "activities_hit": 2
+            }
+          ],
+          "tool": "TestCube"
+        }
+      ],
+      "elapsed_seconds": 1928.9
+    },
+    {
+      "stem": "feeder",
+      "package": "com.nononsenseapps.feeder",
+      "tag": "FEEDER_SUPER_LOG",
+      "started": "2026-09-25T05:59:53.077179",
+      "steps": {
+        "instrument": "ok",
+        "verify": "fail"
+      },
+      "status": "skipped_verify",
+      "reason": "dex does not verify (1 VerifyError/FATAL lines)",
+      "total_methods": 58186
+    }
+  ]
+}

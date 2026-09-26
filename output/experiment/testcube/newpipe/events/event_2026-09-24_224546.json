@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-24_224546",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          583,
+          952
+        ],
+        [
+          785,
+          1078
+        ]
+      ],
+      "resource_id": "android:id/button2",
+      "checked": false,
+      "text": "CANCEL",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "202*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button2[text]CANCEL[desc]None[enabled,,]",
+      "view_str": "5386f38edbc95dcaab75e0806af7b358",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button2",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=583,952,785,1078>CANCEL</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "be40985ce2010a47a72b7e38cf284926",
+  "stop_state": "cc847f5181bd76d21dc23632c419453a",
+  "event_str": "CustomTouchEvent(state=be40985ce2010a47a72b7e38cf284926, view=5386f38edbc95dcaab75e0806af7b358(MainActivity/Button-CANCEL))"
+}

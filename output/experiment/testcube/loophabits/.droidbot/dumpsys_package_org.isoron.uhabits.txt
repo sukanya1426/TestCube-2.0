@@ -1,0 +1,189 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        73a05a9 org.isoron.uhabits/.MainActivity filter b24172e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.appwidget.action.APPWIDGET_CONFIGURE:
+        90212cf org.isoron.uhabits/.widgets.activities.HabitPickerDialog filter 2b7445c
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        a045365 org.isoron.uhabits/.widgets.activities.BooleanHabitPickerDialog filter a5e783a
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+        9b70ceb org.isoron.uhabits/.widgets.activities.NumericalHabitPickerDialog filter 1a24a48
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+      com.twofortyfouram.locale.intent.action.EDIT_SETTING:
+        6bc0e1 org.isoron.uhabits/.automation.EditSettingActivity filter 1abde06
+          Action: "com.twofortyfouram.locale.intent.action.EDIT_SETTING"
+
+Receiver Resolver Table:
+  Schemes:
+      content:
+        d55a451 org.isoron.uhabits/.receivers.WidgetReceiver filter d2dd4b6
+          Action: "org.isoron.uhabits.ACTION_SET_NUMERICAL_VALUE"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "org.isoron.uhabits": -1
+        d55a451 org.isoron.uhabits/.receivers.WidgetReceiver filter e1735b7
+          Action: "org.isoron.uhabits.ACTION_TOGGLE_REPETITION"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "org.isoron.uhabits": -1
+        d55a451 org.isoron.uhabits/.receivers.WidgetReceiver filter 4c9d124
+          Action: "org.isoron.uhabits.ACTION_ADD_REPETITION"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "org.isoron.uhabits": -1
+        d55a451 org.isoron.uhabits/.receivers.WidgetReceiver filter d7f348d
+          Action: "org.isoron.uhabits.ACTION_REMOVE_REPETITION"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "content"
+          Authority: "org.isoron.uhabits": -1
+
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        564db90 org.isoron.uhabits/androidx.profileinstaller.ProfileInstallReceiver filter de124af
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        564db90 org.isoron.uhabits/androidx.profileinstaller.ProfileInstallReceiver filter 8378c89
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        564db90 org.isoron.uhabits/androidx.profileinstaller.ProfileInstallReceiver filter 76ec48e
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        564db90 org.isoron.uhabits/androidx.profileinstaller.ProfileInstallReceiver filter 6420bc
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        9906db org.isoron.uhabits/.receivers.ReminderReceiver filter 9a0d578
+          Action: "android.intent.action.BOOT_COMPLETED"
+      com.twofortyfouram.locale.intent.action.FIRE_SETTING:
+        33a8642 org.isoron.uhabits/.automation.FireSettingReceiver filter ddf7653
+          Action: "com.twofortyfouram.locale.intent.action.FIRE_SETTING"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        2778cc7 org.isoron.uhabits/.widgets.CheckmarkWidgetProvider filter 2b5c2f4
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        5828a1d org.isoron.uhabits/.widgets.HistoryWidgetProvider filter e17d492
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        dd62e63 org.isoron.uhabits/.widgets.ScoreWidgetProvider filter 9e61a60
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        942ab19 org.isoron.uhabits/.widgets.StreakWidgetProvider filter fdaa7de
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        2f34dbf org.isoron.uhabits/.widgets.FrequencyWidgetProvider filter 4027c8c
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        749dfd5 org.isoron.uhabits/.widgets.TargetWidgetProvider filter 6563ea
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+
+Domain verification status:
+
+Permissions:
+  Permission [org.isoron.uhabits.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (2b70200):
+    sourcePackage=org.isoron.uhabits
+    uid=10221 gids=[] type=0 prot=signature
+    perm=PermissionInfo{6880a39 org.isoron.uhabits.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  org.isoron.uhabits/androidx.core.content.FileProvider:
+    Provider{c1fe87e org.isoron.uhabits/androidx.core.content.FileProvider}
+  org.isoron.uhabits/androidx.startup.InitializationProvider:
+    Provider{1e091df org.isoron.uhabits/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [org.isoron.uhabits]:
+    Provider{c1fe87e org.isoron.uhabits/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{a8a3e2c org.isoron.uhabits}
+  [org.isoron.uhabits.androidx-startup]:
+    Provider{1e091df org.isoron.uhabits/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{dd610f5 org.isoron.uhabits}
+
+Key Set Manager:
+  [org.isoron.uhabits]
+      Signing KeySets: 71
+
+Packages:
+  Package [org.isoron.uhabits] (8d2bfef):
+    appId=10221
+    pkg=Package{fce0e8a org.isoron.uhabits}
+    codePath=/data/app/~~Ep6N-YLcmpJmmxvZ_-tafA==/org.isoron.uhabits-UI6pjBahp979v6K1JCacKg==
+    resourcePath=/data/app/~~Ep6N-YLcmpJmmxvZ_-tafA==/org.isoron.uhabits-UI6pjBahp979v6K1JCacKg==
+    legacyNativeLibraryDir=/data/app/~~Ep6N-YLcmpJmmxvZ_-tafA==/org.isoron.uhabits-UI6pjBahp979v6K1JCacKg==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=20301 minSdk=28 targetSdk=36
+    minExtensionVersions=[]
+    versionName=2.3.1
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-09-25 00:31:01
+    lastUpdateTime=2026-09-25 00:31:01
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{be66cfb version:3, signatures:[39dd705e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      org.isoron.uhabits.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.POST_NOTIFICATIONS
+      org.isoron.uhabits.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.USE_EXACT_ALARM
+      android.permission.SCHEDULE_EXACT_ALARM
+      android.permission.VIBRATE
+    install permissions:
+      org.isoron.uhabits.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.USE_EXACT_ALARM: granted=true
+      android.permission.VIBRATE: granted=true
+    User 0: ceDataInode=360555 deDataInode=90664 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/org.isoron.uhabits
+      firstInstallTime=2026-09-25 00:31:01
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-F6gz.frro
+        /data/resource-cache/com.android.systemui-accent-AmcD.frro
+        /data/resource-cache/com.android.systemui-dynamic-3oAu.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=true, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      org.isoron.uhabits
+    com.google.android.settings.intelligence:
+      org.isoron.uhabits
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [org.isoron.uhabits]
+    path: /data/app/~~Ep6N-YLcmpJmmxvZ_-tafA==/org.isoron.uhabits-UI6pjBahp979v6K1JCacKg==/base.apk
+      x86_64: [status=verify] [reason=install] [primary-abi]
+        [location is /data/app/~~Ep6N-YLcmpJmmxvZ_-tafA==/org.isoron.uhabits-UI6pjBahp979v6K1JCacKg==/oat/x86_64/base.odex]
+
+Compiler stats:
+  [org.isoron.uhabits]
+     base.apk - 1020

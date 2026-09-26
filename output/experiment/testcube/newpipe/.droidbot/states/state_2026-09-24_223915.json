@@ -1,0 +1,864 @@
+{
+  "tag": "2026-09-24_223915",
+  "state_str": "4492094f04df051be30763eedb33f8d4",
+  "state_str_content_free": "cc8c6770039721d565e1fc91ba14dfa6",
+  "foreground_activity": "org.schabi.newpipe/.MainActivity",
+  "activity_stack": [
+    "org.schabi.newpipe/.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.webview/org.chromium.android_webview.services.MetricsBridgeService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          28,
+          589
+        ],
+        [
+          1052,
+          1330
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1024*741",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f98365db5369d32de520e5a140a40bbf",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "940*657",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ce5b25027b425146541acda0f375bf38",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "940*657",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f2f16721f118c40cecb61c7341d13b29",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "940*657",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.schabi.newpipe:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "1118a2e90af1bd118dfeb67061742a31",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.schabi.newpipe:id/action_bar_root"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "940*657",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "e04140698a8af346b2e5d7f869cccdbd",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        10,
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/parentPanel",
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "940*657",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.schabi.newpipe:id/parentPanel[text]None[desc]None[enabled,,]",
+      "view_str": "5bb70ef3def06fe59f24ce1ca56ce78c",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.schabi.newpipe:id/parentPanel"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7,
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          762
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/topPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "940*131",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.schabi.newpipe:id/topPanel[text]None[desc]None[enabled,,]",
+      "view_str": "e7c18259f193530c490dfad09c259227",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.schabi.newpipe:id/topPanel"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          631
+        ],
+        [
+          1010,
+          741
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/title_template",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "940*110",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.schabi.newpipe:id/title_template[text]None[desc]None[enabled,,]",
+      "view_str": "8855f37b2a8c93897909337035cdea65",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.schabi.newpipe:id/title_template"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          678
+        ],
+        [
+          947,
+          741
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/alertTitle",
+      "checked": false,
+      "text": "Show the following streams",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "814*63",
+      "signature": "[class]android.widget.TextView[resource_id]org.schabi.newpipe:id/alertTitle[text]Show the following streams[desc]None[enabled,,]",
+      "view_str": "0cab9b6d5393040b9011a99e4d9ef4f1",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.schabi.newpipe:id/alertTitle",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=133,678,947,741>Show the following streams</p>"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          741
+        ],
+        [
+          1010,
+          762
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/titleDividerNoCustom",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 9,
+      "size": "940*21",
+      "signature": "[class]android.view.View[resource_id]org.schabi.newpipe:id/titleDividerNoCustom[text]None[desc]None[enabled,,]",
+      "view_str": "da1a5403e657678d4b7b7511fe9e7f26",
+      "content_free_signature": "[class]android.view.View[resource_id]org.schabi.newpipe:id/titleDividerNoCustom"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          762
+        ],
+        [
+          1010,
+          1140
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/contentPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 10,
+      "size": "940*378",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.schabi.newpipe:id/contentPanel[text]None[desc]None[enabled,,]",
+      "view_str": "9c698ea61fc03a4df5d49c0d72d69f97",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.schabi.newpipe:id/contentPanel"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        13,
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          762
+        ],
+        [
+          1010,
+          1140
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/select_dialog_listview",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ListView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "940*378",
+      "signature": "[class]android.widget.ListView[resource_id]org.schabi.newpipe:id/select_dialog_listview[text]None[desc]None[enabled,,]",
+      "view_str": "322afacd67b0a3a30cc789f16af4ac95",
+      "content_free_signature": "[class]android.widget.ListView[resource_id]org.schabi.newpipe:id/select_dialog_listview"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          762
+        ],
+        [
+          1010,
+          888
+        ]
+      ],
+      "resource_id": "android:id/text1",
+      "checked": true,
+      "text": "Fully watched",
+      "class": "android.widget.CheckedTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "940*126",
+      "signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1[text]Fully watched[desc]None[enabled,checked,]",
+      "view_str": "afe98cba5a83ae8789bb25e99671be71",
+      "content_free_signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "1",
+      "desc": "<checkbox bound_box=70,762,1010,888>Fully watched</checkbox>"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          888
+        ],
+        [
+          1010,
+          1014
+        ]
+      ],
+      "resource_id": "android:id/text1",
+      "checked": true,
+      "text": "Partially watched",
+      "class": "android.widget.CheckedTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 13,
+      "size": "940*126",
+      "signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1[text]Partially watched[desc]None[enabled,checked,]",
+      "view_str": "0da2bbad78a1d801258f93bc41de15c4",
+      "content_free_signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "2",
+      "desc": "<checkbox bound_box=70,888,1010,1014>Partially watched</checkbox>"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          1014
+        ],
+        [
+          1010,
+          1140
+        ]
+      ],
+      "resource_id": "android:id/text1",
+      "checked": true,
+      "text": "Upcoming",
+      "class": "android.widget.CheckedTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 14,
+      "size": "940*126",
+      "signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1[text]Upcoming[desc]None[enabled,checked,]",
+      "view_str": "f73f8392f6e445d59ef3a5de217b7baf",
+      "content_free_signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "3",
+      "desc": "<checkbox bound_box=70,1014,1010,1140>Upcoming</checkbox>"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          1140
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/buttonPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 15,
+      "size": "940*148",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.schabi.newpipe:id/buttonPanel[text]None[desc]None[enabled,,]",
+      "view_str": "56e34aff7d1f7edda946877646fa48ca",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.schabi.newpipe:id/buttonPanel"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17,
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          1140
+        ],
+        [
+          1010,
+          1288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "940*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "bc4f2885003584f1887391ff8f6aba3e",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          608,
+          1151
+        ],
+        [
+          810,
+          1277
+        ]
+      ],
+      "resource_id": "android:id/button2",
+      "checked": false,
+      "text": "CANCEL",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "202*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button2[text]CANCEL[desc]None[enabled,,]",
+      "view_str": "5386f38edbc95dcaab75e0806af7b358",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button2",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=608,1151,810,1277>CANCEL</button>"
+    },
+    {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          810,
+          1151
+        ],
+        [
+          978,
+          1277
+        ]
+      ],
+      "resource_id": "android:id/button1",
+      "checked": false,
+      "text": "OK",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 18,
+      "size": "168*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button1[text]OK[desc]None[enabled,,]",
+      "view_str": "6337a738be96648f84bb3dfecd4bb6ba",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button1",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=810,1151,978,1277>OK</button>"
+    }
+  ]
+}

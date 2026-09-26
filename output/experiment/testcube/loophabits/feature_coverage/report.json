@@ -1,0 +1,1089 @@
+{
+  "application": "Loop Habit Tracker",
+  "total_features": 38,
+  "covered_features": 0,
+  "uncovered_features": 25,
+  "partial_features": 13,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/loophabits",
+  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/README.md",
+  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a yes/no habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "Tap 'Yes or No' but no question entered",
+        "touch MainActivity/TextView-Yes or No"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT002",
+      "name": "Create a measurable habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.7,
+      "evidence": [
+        "Tap 'Measurable' but no question entered",
+        "touch MainActivity/TextView-Yes or No"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT003",
+      "name": "Set a habit frequency",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No frequency selection or save action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Set a habit reminder",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial steps attempted, but not all required actions were completed.",
+        "touch MainActivity/TextView-You have n",
+        "touch MainActivity/TextView-You have n",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/CheckBox-",
+        "touch ListHabitsActivity/TextView-You have n",
+        "touch ListHabitsActivity/TextView-You have n"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT005",
+      "name": "Add notes to a habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial steps attempted, but not all required actions were completed.",
+        "touch MainActivity/TextView-Habits",
+        "touch MainActivity/TextView-Habits",
+        "touch MainActivity/ImageView-",
+        "touch MainActivity/CheckBox-",
+        "touch ListHabitsActivity/Button-",
+        "touch ListHabitsActivity/TextView-Yes or No"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT006",
+      "name": "Check off a habit for today",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No relevant actions taken to check off a habit.",
+        "nav (screen already shows this destination)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT007",
+      "name": "Enter a value for a measurable habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Some steps were attempted but not fully completed.",
+        "touch MainActivity/View-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT008",
+      "name": "Check off a habit for an earlier day",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Mark a day as skipped",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Add a note to a specific day's entry",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch Button 'Add habit'"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "View a habit's detailed statistics",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch MainActivity/TextView-\uf5c0"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "View the score/strength chart",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.8,
+      "evidence": [
+        "Gold steps not followed.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "View the history calendar",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because only opened habit detail, not scrolled to History card.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT014",
+      "name": "View the streaks chart",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because only opened habit detail, not scrolled to Streaks card.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT015",
+      "name": "View the frequency (weekday/time) chart",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because only opened habit detail, not scrolled to Frequency card.",
+        "touch MainActivity/Button-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT016",
+      "name": "Edit a habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-pressed but no edit actions",
+        "long_touch MainActivity/TextView-You have n"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT017",
+      "name": "Archive a habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-pressed but no archive action",
+        "long_touch MainActivity/TextView-You have n"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT018",
+      "name": "Unarchive a habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-pressed but no unarchive action",
+        "long_touch MainActivity/TextView-You have n"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT019",
+      "name": "Delete a habit",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-press and delete steps attempted but not fully completed.",
+        "long_touch MainActivity/TextView-You have n"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.6
+    },
+    {
+      "id": "GT020",
+      "name": "Reorder habits manually",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.3,
+      "evidence": [
+        "No steps related to reordering habits manually."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Sort the habit list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.3,
+      "evidence": [
+        "No steps related to sorting the habit list."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Filter the habit list",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "partially covered, some steps missing",
+        "touch MainActivity/TextView-Yes or No"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT023",
+      "name": "Change the number of days shown in the list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "no relevant actions found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Snooze or dismiss a habit reminder",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "no relevant actions found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Enable persistent (sticky) reminder notifications",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "steps missing to enable sticky notifications",
+        "touch MainActivity/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Add a habit widget to the home screen",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "steps missing to add a habit widget",
+        "touch Button \"Got it\""
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Check off a habit directly from a widget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Export habit data as CSV",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no export steps found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Create a full database backup",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no backup steps found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT030",
+      "name": "Restore a full backup",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no restore steps found"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT031",
+      "name": "Import data from another habit app",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed",
+        "touch Button 'Add habit'"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT032",
+      "name": "Repair the database",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed",
+        "touch Button 'Add habit'"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT033",
+      "name": "Change the app theme",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "Gold steps not followed",
+        "touch SettingsActivity/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT034",
+      "name": "Set the first day of the week",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "touch Button \"Add habit\""
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT035",
+      "name": "Set the hour the day starts (day offset)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "touch Button \"Add habit\""
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT036",
+      "name": "Enable or disable the check-mark reverse order and skip days",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "actions do not match gold steps",
+        "touch Button \"Got it\""
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT037",
+      "name": "Open the help and FAQ",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No navigation to Help/FAQ."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT038",
+      "name": "View the about screen",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No navigation to About screen."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Create a yes/no habit",
+      "journal_id": "G001",
+      "journal_name": "Create a yes/no habit",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Create a measurable habit",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Set a habit frequency",
+      "journal_id": "G002",
+      "journal_name": "Set a habit frequency",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Set a habit reminder",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Add notes to a habit",
+      "journal_id": "G003",
+      "journal_name": "Add notes",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Check off a habit for today",
+      "journal_id": "G014",
+      "journal_name": "Check off a habit",
+      "name_similarity": 0.6,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Enter a value for a measurable habit",
+      "journal_id": "G004",
+      "journal_name": "Enter a value",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Check off a habit for an earlier day",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Mark a day as skipped",
+      "journal_id": "G005",
+      "journal_name": "Mark a day",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Add a note to a specific day's entry",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "View a habit's detailed statistics",
+      "journal_id": "G006",
+      "journal_name": "View a habit's detailed",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "View the score/strength chart",
+      "journal_id": "G008",
+      "journal_name": "View the frequency chart",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "View the history calendar",
+      "journal_id": "G007",
+      "journal_name": "View the history calendar",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "View the streaks chart",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.6,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "View the frequency (weekday/time) chart",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.667,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Edit a habit",
+      "journal_id": "G009",
+      "journal_name": "Archive a habit",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Archive a habit",
+      "journal_id": "G010",
+      "journal_name": "Delete a habit",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Unarchive a habit",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Delete a habit",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 1.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Reorder habits manually",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.154,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Sort the habit list",
+      "journal_id": "G011",
+      "journal_name": "Sort the habit list",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Filter the habit list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.6,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Change the number of days shown in the list",
+      "journal_id": "G012",
+      "journal_name": "Change the number of",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Snooze or dismiss a habit reminder",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Enable persistent (sticky) reminder notifications",
+      "journal_id": "G013",
+      "journal_name": "Enable persistent reminder notifications",
+      "name_similarity": 0.8,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Add a habit widget to the home screen",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Check off a habit directly from a widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Export habit data as CSV",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Create a full database backup",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Restore a full backup",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.074,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "Import data from another habit app",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "Repair the database",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT033",
+      "ground_truth_name": "Change the app theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.4,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT034",
+      "ground_truth_name": "Set the first day of the week",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.188,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT035",
+      "ground_truth_name": "Set the hour the day starts (day offset)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.176,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT036",
+      "ground_truth_name": "Enable or disable the check-mark reverse order and skip days",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.138,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT037",
+      "ground_truth_name": "Open the help and FAQ",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.188,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT038",
+      "ground_truth_name": "View the about screen",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 14,
+    "false_negatives": 24,
+    "false_positives": 0,
+    "precision": 1.0,
+    "recall": 0.3684210526315789,
+    "f1": 0.5384615384615384,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 14,
+    "ground_truth_count": 38,
+    "feature_completeness_ratio": 0.368,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 13,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.1105263157894737,
+  "weighted_coverage_percentage": 11.05,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

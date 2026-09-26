@@ -1,0 +1,242 @@
+Activity Resolver Table:
+  Full MIME Types:
+      text/plain:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      image/*:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Base MIME Types:
+      text:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Wild MIME Types:
+      image:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Schemes:
+      otpauth:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 4ffa28b
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "otpauth"
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter ffb605a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      info.guardianproject.panic.action.TRIGGER:
+        a735f81 com.beemdevelopment.aegis/.ui.PanicResponderActivity filter 8ff2826
+          Action: "info.guardianproject.panic.action.TRIGGER"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.intent.action.SEND:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      android.intent.action.SEND_MULTIPLE:
+        9214805 com.beemdevelopment.aegis/.ui.MainActivity filter 6e0bf68
+          Action: "android.intent.action.SEND"
+          Action: "android.intent.action.SEND_MULTIPLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "image"
+          StaticType: "text/plain"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.beemdevelopment.aegis.LOCK_VAULT:
+        643dc67 com.beemdevelopment.aegis/.receivers.VaultLockReceiver filter 6b66a14
+          Action: "com.beemdevelopment.aegis.LOCK_VAULT"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        7a7d803 com.beemdevelopment.aegis/androidx.profileinstaller.ProfileInstallReceiver filter cc915fe
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        7a7d803 com.beemdevelopment.aegis/androidx.profileinstaller.ProfileInstallReceiver filter b9a1380
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        7a7d803 com.beemdevelopment.aegis/androidx.profileinstaller.ProfileInstallReceiver filter 78b7db9
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        7a7d803 com.beemdevelopment.aegis/androidx.profileinstaller.ProfileInstallReceiver filter 6c5f15f
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        f7572bd com.beemdevelopment.aegis/.receivers.QsTileRefreshReceiver filter 925a0b2
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.USER_UNLOCKED"
+      android.intent.action.USER_UNLOCKED:
+        f7572bd com.beemdevelopment.aegis/.receivers.QsTileRefreshReceiver filter 925a0b2
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.USER_UNLOCKED"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.service.quicksettings.action.QS_TILE:
+        4ce7ac com.beemdevelopment.aegis/.services.LaunchAppTileService filter a5d3c75 permission android.permission.BIND_QUICK_SETTINGS_TILE
+          Action: "android.service.quicksettings.action.QS_TILE"
+        99c940a com.beemdevelopment.aegis/.services.LaunchScannerTileService filter 682447b permission android.permission.BIND_QUICK_SETTINGS_TILE
+          Action: "android.service.quicksettings.action.QS_TILE"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.beemdevelopment.aegis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (3bc914b):
+    sourcePackage=com.beemdevelopment.aegis
+    uid=10233 gids=[] type=0 prot=signature
+    perm=PermissionInfo{690e728 com.beemdevelopment.aegis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.beemdevelopment.aegis/androidx.core.content.FileProvider:
+    Provider{3a14dd4 com.beemdevelopment.aegis/androidx.core.content.FileProvider}
+  com.beemdevelopment.aegis/androidx.startup.InitializationProvider:
+    Provider{dbbdec3 com.beemdevelopment.aegis/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.beemdevelopment.aegis.fileprovider]:
+    Provider{3a14dd4 com.beemdevelopment.aegis/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{5f3a41f com.beemdevelopment.aegis}
+  [com.beemdevelopment.aegis.androidx-startup]:
+    Provider{dbbdec3 com.beemdevelopment.aegis/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{3b8836c com.beemdevelopment.aegis}
+
+Key Set Manager:
+  [com.beemdevelopment.aegis]
+      Signing KeySets: 83
+
+Packages:
+  Package [com.beemdevelopment.aegis] (f110678):
+    appId=10233
+    pkg=Package{4b8633b com.beemdevelopment.aegis}
+    codePath=/data/app/~~9qBEceCl19wu5TDCxDTwLw==/com.beemdevelopment.aegis-G56-6I-LOnuUUkD-i3AjuA==
+    resourcePath=/data/app/~~9qBEceCl19wu5TDCxDTwLw==/com.beemdevelopment.aegis-G56-6I-LOnuUUkD-i3AjuA==
+    legacyNativeLibraryDir=/data/app/~~9qBEceCl19wu5TDCxDTwLw==/com.beemdevelopment.aegis-G56-6I-LOnuUUkD-i3AjuA==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=81 minSdk=23 targetSdk=35
+    minExtensionVersions=[]
+    versionName=3.4.2
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[com.stratumauth.app, com.authy.authy, org.fedorahosted.freeotp, org.liberty.android.freeotpplus, com.google.android.apps.authenticator2, com.azure.authenticator, com.valvesoftware.android.steam.community, com.authenticator.authservice2, com.duosecurity.duomobile, com.blizzard.messenger]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+    usesLibraryFiles:
+      /system_ext/framework/androidx.window.extensions.jar
+      /system_ext/framework/androidx.window.sidecar.jar
+    timeStamp=2026-09-25 03:35:09
+    lastUpdateTime=2026-09-25 03:35:09
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{b606a58 version:3, signatures:[39dd705e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.beemdevelopment.aegis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      com.beemdevelopment.aegis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.CAMERA
+      android.permission.USE_FINGERPRINT
+      android.permission.VIBRATE
+      android.permission.USE_BIOMETRIC
+    install permissions:
+      com.beemdevelopment.aegis.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.USE_BIOMETRIC: granted=true
+    User 0: ceDataInode=360482 deDataInode=90704 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/com.beemdevelopment.aegis
+      firstInstallTime=2026-09-25 03:35:09
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-F6gz.frro
+        /data/resource-cache/com.android.systemui-accent-AmcD.frro
+        /data/resource-cache/com.android.systemui-dynamic-3oAu.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      runtime permissions:
+        android.permission.CAMERA: granted=true
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      com.beemdevelopment.aegis
+    com.google.android.apps.messaging:
+      com.beemdevelopment.aegis
+    com.google.android.settings.intelligence:
+      com.beemdevelopment.aegis
+    com.google.android.apps.maps:
+      com.beemdevelopment.aegis
+    com.google.android.apps.youtube.music:
+      com.beemdevelopment.aegis
+    com.google.android.youtube:
+      com.beemdevelopment.aegis
+    com.google.android.apps.photos:
+      com.beemdevelopment.aegis
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [com.beemdevelopment.aegis]
+    path: /data/app/~~9qBEceCl19wu5TDCxDTwLw==/com.beemdevelopment.aegis-G56-6I-LOnuUUkD-i3AjuA==/base.apk
+      x86_64: [status=verify] [reason=install] [primary-abi]
+        [location is /data/app/~~9qBEceCl19wu5TDCxDTwLw==/com.beemdevelopment.aegis-G56-6I-LOnuUUkD-i3AjuA==/oat/x86_64/base.odex]
+
+Compiler stats:
+  [com.beemdevelopment.aegis]
+     base.apk - 1438

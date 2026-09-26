@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_021247",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Dialpad",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          461,
+          1426
+        ],
+        [
+          619,
+          1584
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/main_dialpad_button",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 46,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/main_dialpad_button[text]None[desc]Dialpad[enabled,,]",
+      "view_str": "0d6fe26769ad0fc2e451fe198db8dfbc",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/main_dialpad_button",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button text='Dialpad' bound_box=461,1426,619,1584></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "20e26d540c39e6abca13c756cc3be3eb",
+  "stop_state": "7c67b028a4c5f08ec8701882d70a12d4",
+  "event_str": "CustomTouchEvent(state=20e26d540c39e6abca13c756cc3be3eb, view=0d6fe26769ad0fc2e451fe198db8dfbc(MainActivity/ImageView-))"
+}

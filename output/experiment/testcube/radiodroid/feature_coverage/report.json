@@ -1,0 +1,909 @@
+{
+  "application": "RadioDroid",
+  "total_features": 32,
+  "covered_features": 1,
+  "uncovered_features": 24,
+  "partial_features": 7,
+  "coverage": 0.03125,
+  "coverage_percentage": 3.12,
+  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/radiodroid",
+  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/README.md",
+  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse popular radio stations",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Selected a station but did not switch between sub-lists or play it.",
+        "touch ActivityMain/TextView-Stations"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT002",
+      "name": "Search for a station by name",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "Did not tap the search icon, type a station name, or tap a result.",
+        "touch ActivityMain/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Search stations by tag, country, language or state",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "Did not open the search screen or switch to advanced search.",
+        "touch ActivityMain/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Play a station",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Long-press station; tap bar not expanded",
+        "long_touch ActivityMain/LinearLayout-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT005",
+      "name": "Stop playback",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Tap stop control; not in expanded player",
+        "touch ActivityMain/ImageView-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT006",
+      "name": "Add a station to favourites",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "Long-press station; no star action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT007",
+      "name": "Remove a station from favourites",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Long-pressed station; tapped 'Favourites' screen.",
+        "long_touch ActivityMain/LinearLayout-",
+        "touch ActivityMain/LinearLayout-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT008",
+      "name": "Reorder favourite stations",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "No reorder action attempted.",
+        "touch ActivityMain/ViewGroup-",
+        "touch ActivityMain/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "View station details",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "Tapped station; opened detail page.",
+        "touch ActivityMain/LinearLayout-",
+        "touch ActivityMain/TextView-Radio Para",
+        "Completed by later features: G006"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT010",
+      "name": "Vote for a station",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "steps not aligned with gold capability",
+        "long_touch actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "Open a station's homepage",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "steps not aligned with gold capability",
+        "long_touch actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Share a station",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "steps not aligned with gold capability",
+        "long_touch actions"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Record the stream to a file",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial steps completed, lacks record and stop actions.",
+        "touch ActivityMain/ImageButton-"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT014",
+      "name": "Browse and play saved recordings",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No actions related to browsing or playing saved recordings.",
+        "touch ActivityMain/TextView-History"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "View the played-track history",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.3,
+      "evidence": [
+        "No actions related to viewing played-track history.",
+        "touch ActivityMain/TextView-History"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Set a sleep timer",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to setting a sleep timer."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Set a radio alarm clock",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to setting a radio alarm clock."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Enable, edit or delete an alarm",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to enabling, editing or deleting an alarm."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Import favourite stations from an M3U file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No import functionality found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Export favourite stations to an M3U file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No export functionality found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Cast a station to a Chromecast device",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No cast functionality found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Send playback to an MPD server",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Control playback from the notification",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Choose the media player engine",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No relevant actions found."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Adjust the streaming buffer and resume behaviour",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because only settings opened, buffer not adjusted.",
+        "touch ActivityMain/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT026",
+      "name": "Set the recordings folder and naming",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "No relevant actions for setting recordings folder and naming."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Restrict playback or downloads to Wi-Fi",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because settings opened, Wi-Fi restriction not enabled.",
+        "touch ActivityMain/TextView-Settings"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT028",
+      "name": "Change the theme",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to theme change."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Change the station list layout and icon display",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to station list layout or icon display."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT030",
+      "name": "Select the radio-browser server or mirror",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No actions related to server or mirror selection."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT031",
+      "name": "Add the home screen shortcut for a station",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no long press or shortcut addition action",
+        "touch TextView 'Stations'"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT032",
+      "name": "View the about screen and licences",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Browse popular radio stations",
+      "journal_id": "G001",
+      "journal_name": "Browse popular radio stations",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Search for a station by name",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Search stations by tag, country, language or state",
+      "journal_id": "G002",
+      "journal_name": "Search stations",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Play a station",
+      "journal_id": "G004",
+      "journal_name": "Remove a station",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Stop playback",
+      "journal_id": "G003",
+      "journal_name": "Stop playback",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Add a station to favourites",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Remove a station from favourites",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Reorder favourite stations",
+      "journal_id": "G010",
+      "journal_name": "Import favourite stations",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "View station details",
+      "journal_id": "G005",
+      "journal_name": "View station details",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Vote for a station",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Open a station's homepage",
+      "journal_id": "G006",
+      "journal_name": "Open a station's homepage",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Share a station",
+      "journal_id": "G011",
+      "journal_name": "Cast a station",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Record the stream to a file",
+      "journal_id": "G007",
+      "journal_name": "Record the stream",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Browse and play saved recordings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.125,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "View the played-track history",
+      "journal_id": "G008",
+      "journal_name": "View the played-track history",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Set a sleep timer",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Set a radio alarm clock",
+      "journal_id": "G009",
+      "journal_name": "Set a radio alarm",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Enable, edit or delete an alarm",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Import favourite stations from an M3U file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Export favourite stations to an M3U file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Cast a station to a Chromecast device",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Send playback to an MPD server",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Control playback from the notification",
+      "journal_id": "G012",
+      "journal_name": "Control playback",
+      "name_similarity": 0.455,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Choose the media player engine",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.176,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Adjust the streaming buffer and resume behaviour",
+      "journal_id": "G013",
+      "journal_name": "Adjust the streaming buffer",
+      "name_similarity": 0.571,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Set the recordings folder and naming",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.125,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Restrict playback or downloads to Wi-Fi",
+      "journal_id": "G014",
+      "journal_name": "Restrict playback",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Change the theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Change the station list layout and icon display",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Select the radio-browser server or mirror",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.125,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "Add the home screen shortcut for a station",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "View the about screen and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.267,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 14,
+    "false_negatives": 18,
+    "false_positives": 0,
+    "precision": 1.0,
+    "recall": 0.4375,
+    "f1": 0.6086956521739131,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 14,
+    "ground_truth_count": 32,
+    "feature_completeness_ratio": 0.438,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 8,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.09999999999999998,
+  "weighted_coverage_percentage": 10.0,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

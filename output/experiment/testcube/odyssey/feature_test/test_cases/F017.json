@@ -1,0 +1,57 @@
+{
+  "feature_id": "F017",
+  "name": "Navigate to saved playlists",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "",
+        "content_description": "Open navigation drawer",
+        "class": "android.widget.ImageButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.gateshipone.odyssey:id/nav_saved_playlists",
+        "text": "",
+        "content_description": "",
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.gateshipone.odyssey:id/empty_view_message",
+        "text": "No playlists found.",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.gateshipone.odyssey:id/empty_view_message",
+        "text": "No playlists found.",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "covered",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/odyssey/feature_test",
+  "completion_source": "executed"
+}

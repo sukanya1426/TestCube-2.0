@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-24_222513",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Close Drawer",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          147,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "147*147",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[desc]Close Drawer[enabled,,]",
+      "view_str": "1f892bc1c62f41e8d42173c79300e8b6",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button text='Close Drawer' bound_box=0,63,147,210></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "86a81684bc351334383b55d29a587293",
+  "stop_state": "f5f0c9a422a963c0cc6da5d08c55b8f5",
+  "event_str": "CustomTouchEvent(state=86a81684bc351334383b55d29a587293, view=1f892bc1c62f41e8d42173c79300e8b6(MainActivity/ImageButton-))"
+}

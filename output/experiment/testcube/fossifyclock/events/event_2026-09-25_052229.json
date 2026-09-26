@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_052229",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          643
+        ],
+        [
+          1080,
+          911
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/stopwatch_time",
+      "checked": false,
+      "text": "2.3",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 30,
+      "temp_id": 31,
+      "size": "1080*268",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/stopwatch_time[text]2.3[desc]None[enabled,,]",
+      "view_str": "cd7a6c7290ecc84913c2bc87292d67a4",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/stopwatch_time",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=0,643,1080,911>2.3</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "3242db28284be6003adb76facdb0d8b6",
+  "stop_state": "2270b01f820e0140a41eccb2adcd0f9b",
+  "event_str": "CustomTouchEvent(state=3242db28284be6003adb76facdb0d8b6, view=cd7a6c7290ecc84913c2bc87292d67a4(MainActivity/TextView-2.3))"
+}

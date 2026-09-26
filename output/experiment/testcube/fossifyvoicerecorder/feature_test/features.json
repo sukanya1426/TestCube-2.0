@@ -1,0 +1,486 @@
+{
+  "app": "Fossify Voice Recorder",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-23 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Record audio",
+      "description": "Open the app",
+      "actions": [
+        "Tap on the 'Record' button to start recording.",
+        "Watch the live audio level while recording.",
+        "Tap on the 'Pause' button to stop the recording.",
+        "Tap on the 'Resume' button to continue recording.",
+        "Tap on the 'Browse' button to view saved recordings."
+      ],
+      "keywords": [
+        "record",
+        "audio",
+        "grant",
+        "microphone"
+      ],
+      "nav_hints": [
+        "record",
+        "audio"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "grant the microphone and storage permissions"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Pause",
+      "description": "While recording",
+      "actions": [
+        "Tap on the pause control to pause the recording.",
+        "The recording will visibly stop, and the pause button will change to resume.",
+        "Tap on the resume button to continue recording.",
+        "The recording will resume, and the pause button will change back to pause.",
+        "The app will display the visibly different, checkable app state with the recording resumed."
+      ],
+      "keywords": [
+        "pause",
+        "resume",
+        "recording",
+        "while"
+      ],
+      "nav_hints": [
+        "pause",
+        "resume",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "While recording",
+        "tap the pause control"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Watch the live audio",
+      "description": "Start a recording",
+      "actions": [
+        "Tap on the 'Start a recording' button to begin recording.",
+        "The visualiser/level meter on the recording screen shows the incoming signal in real time.",
+        "The app displays the live audio level while recording.",
+        "The recording continues in the background as the user navigates away from the recording screen.",
+        "The user can watch the live audio level while recording by selecting the 'Watch the live audio' option."
+      ],
+      "keywords": [
+        "watch",
+        "live",
+        "audio",
+        "level"
+      ],
+      "nav_hints": [
+        "watch",
+        "live",
+        "audio"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Start a recording",
+        "the visualiser/level meter on the recording screen shows the incoming signal in real time"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Continue recording",
+      "description": "Start a recording",
+      "actions": [
+        "Tap on the 'Continue recording' feature in the app's main menu.",
+        "Select the 'Continue' option to resume the recording.",
+        "If the recording is paused, tap on the 'Resume' button to start recording again.",
+        "If the recording is in the background, navigate to the app's main screen to continue recording.",
+        "If the recording is stopped, tap on the 'Start a recording' button to begin recording again."
+      ],
+      "keywords": [
+        "continue",
+        "recording",
+        "background",
+        "start"
+      ],
+      "nav_hints": [
+        "continue",
+        "recording",
+        "background"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Start a recording",
+        "press the home button or switch apps"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Browse saved recordings",
+      "description": "Open the \"Recordings\" tab",
+      "actions": [
+        "Open the \"Recordings\" tab",
+        "scroll the list of saved files with their duration, size and date"
+      ],
+      "keywords": [
+        "browse",
+        "saved",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "recordings",
+        "browse",
+        "saved"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Play a recording",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Tap on the 'Recordings' tab",
+        "Tap on the recording you want to play",
+        "Tap on the 'Play' button to start playing the recording"
+      ],
+      "keywords": [
+        "play",
+        "recording",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "play",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Recordings tab",
+        "tap a recording"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Rename a recording",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Tap on the 'Recordings' tab",
+        "Long-press the recording you want to rename",
+        "Select 'Rename' from the context menu",
+        "Enter the new name for the recording",
+        "Tap 'Rename' to save the changes"
+      ],
+      "keywords": [
+        "rename",
+        "recording",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "rename",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Recordings tab",
+        "long-press the recording"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Delete a recording",
+      "description": "Long-press the recording",
+      "actions": [
+        "Long-press the recording",
+        "Tap the delete (bin) icon",
+        "Confirm deletion by tapping 'Delete'"
+      ],
+      "keywords": [
+        "delete",
+        "recording",
+        "long-press",
+        "bin"
+      ],
+      "nav_hints": [
+        "delete",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the recording",
+        "tap the delete (bin) icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Restore",
+      "description": "Open the \"Deleted recordings\"/recycle bin tab",
+      "actions": [
+        "Tap on the 'Recordings' tab in the main menu.",
+        "Scroll down until you see the 'Deleted recordings'/recycle bin tab.",
+        "Tap on the 'Deleted recordings'/recycle bin tab to open it.",
+        "Long-press on the recording you want to restore.",
+        "Tap on the 'Restore' option that appears."
+      ],
+      "keywords": [
+        "restore",
+        "empty",
+        "recycle",
+        "bin"
+      ],
+      "nav_hints": [
+        "deleted recordings",
+        "empty recycle bin",
+        "restore"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the \"Deleted recordings\"/recycle bin tab",
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Share a recording",
+      "description": "Long-press the recording (or open it)",
+      "actions": [
+        "Long-press the recording (or open it)",
+        "Tap the share icon",
+        "Select the desired sharing method",
+        "Confirm the sharing action"
+      ],
+      "keywords": [
+        "share",
+        "recording",
+        "long-press"
+      ],
+      "nav_hints": [
+        "share",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the recording (or open it)",
+        "tap the share icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "View recording properties",
+      "description": "Long-press the recording",
+      "actions": [
+        "Long-press the recording",
+        "Tap the overflow menu",
+        "Select 'Properties'",
+        "Review the recording properties"
+      ],
+      "keywords": [
+        "recording",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "recording"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the recording",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Search recordings",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "Tap the search icon",
+        "Enter search query",
+        "Select search result",
+        "Review search results"
+      ],
+      "keywords": [
+        "search",
+        "recordings",
+        "tab"
+      ],
+      "nav_hints": [
+        "search",
+        "recordings"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Recordings tab",
+        "tap the search icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Sort the recordings list",
+      "description": "Open the Recordings tab",
+      "actions": [
+        "Open the Recordings tab",
+        "Tap the overflow menu (three dots)",
+        "Select 'sort by'",
+        "Tap 'Date'",
+        "Select 'Ascending'"
+      ],
+      "keywords": [
+        "sort",
+        "recordings",
+        "tab",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "recordings"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Recordings tab",
+        "tap the overflow menu (three dots)"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Choose the recording audio",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll to 'Audio format'",
+        "Select 'Audio format'",
+        "Tap the 'Audio format' entry",
+        "Select the desired audio format"
+      ],
+      "keywords": [
+        "recording",
+        "audio",
+        "format",
+        "settings"
+      ],
+      "nav_hints": [
+        "audio format",
+        "recording",
+        "audio"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap the \"Audio format\"/extension entry"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Record audio",
+    "Pause",
+    "Watch the live audio",
+    "Continue recording",
+    "Play a recording",
+    "Rename a recording",
+    "Delete a recording",
+    "Restore",
+    "Share a recording",
+    "View recording properties",
+    "Search recordings",
+    "Sort the recordings list",
+    "Choose the recording audio"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyvoicerecorder/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyvoicerecorder/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 3,
+    "both": [
+      {
+        "guide_id": "G012",
+        "guide_name": "Search recordings",
+        "readme_id": "F002",
+        "readme_name": "Search",
+        "name_similarity": 0.5
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Record audio"
+      },
+      {
+        "id": "G002",
+        "name": "Pause"
+      },
+      {
+        "id": "G003",
+        "name": "Watch the live audio"
+      },
+      {
+        "id": "G004",
+        "name": "Continue recording"
+      },
+      {
+        "id": "G005",
+        "name": "Browse saved recordings"
+      },
+      {
+        "id": "G006",
+        "name": "Play a recording"
+      },
+      {
+        "id": "G007",
+        "name": "Rename a recording"
+      },
+      {
+        "id": "G008",
+        "name": "Delete a recording"
+      },
+      {
+        "id": "G009",
+        "name": "Restore"
+      },
+      {
+        "id": "G010",
+        "name": "Share a recording"
+      },
+      {
+        "id": "G011",
+        "name": "View recording properties"
+      },
+      {
+        "id": "G013",
+        "name": "Sort the recordings list"
+      },
+      {
+        "id": "G014",
+        "name": "Choose the recording audio"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F003",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

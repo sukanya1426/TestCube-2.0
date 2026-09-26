@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_005501",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "android",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          902
+        ],
+        [
+          1010,
+          1028
+        ]
+      ],
+      "resource_id": "android:id/aerr_close",
+      "checked": false,
+      "text": "Close app",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "940*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/aerr_close[text]Close app[desc]None[enabled,,]",
+      "view_str": "eae15d5f2c95d692c8cd580c8c095beb",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/aerr_close",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=70,902,1010,1028>Close app</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "0fca48f3d02701870f89cee514b8b148",
+  "stop_state": "71178c04f9efaf3ab240753c1ead5210",
+  "event_str": "CustomTouchEvent(state=0fca48f3d02701870f89cee514b8b148, view=eae15d5f2c95d692c8cd580c8c095beb(MainActivity/Button-Close app))"
+}

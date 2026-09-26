@@ -1,0 +1,805 @@
+{
+  "tag": "2026-09-25_022647",
+  "state_str": "6b3f5bcb8be11f4245a5c8ad50beb4df",
+  "state_str_content_free": "bced23ae6ab454f7421a09bab6f9d6b2",
+  "foreground_activity": "org.gateshipone.odyssey/.activities.OdysseyMainActivity",
+  "activity_stack": [
+    "org.gateshipone.odyssey/.activities.OdysseyMainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "org.gateshipone.odyssey/.playbackservice.PlaybackService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.gms/.chimera.GmsInternalBoundBrokerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          28,
+          363
+        ],
+        [
+          1052,
+          1557
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1024*1194",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7a5d149a8ee6bb284ec220e3aebee2ef",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "898*774",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "8a17a727637f9ce907ef02e2f385b213",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "898*774",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "9266ba67fc844d940d6e0a48eb58d276",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "898*774",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.gateshipone.odyssey:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "a3e78fb001f969f9ce06c7b68a7a3738",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.gateshipone.odyssey:id/action_bar_root"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "898*774",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "f7a39d841d8d000f64c4d7b362ad0cd6",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        10,
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/parentPanel",
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "898*774",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.gateshipone.odyssey:id/parentPanel[text]None[desc]None[enabled,,]",
+      "view_str": "39d83874578e9361fbe06f2f105abf0c",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.gateshipone.odyssey:id/parentPanel"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7,
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          725
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/topPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "898*152",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.gateshipone.odyssey:id/topPanel[text]None[desc]None[enabled,,]",
+      "view_str": "e8bbf443b8080ef78789fc584e354102",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.gateshipone.odyssey:id/topPanel"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          573
+        ],
+        [
+          989,
+          683
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/title_template",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "898*110",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.gateshipone.odyssey:id/title_template[text]None[desc]None[enabled,,]",
+      "view_str": "6cd2276c51b064b2edc79cc19a838cd2",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.gateshipone.odyssey:id/title_template"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          154,
+          620
+        ],
+        [
+          711,
+          683
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/alertTitle",
+      "checked": false,
+      "text": "Battery optimization active",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "557*63",
+      "signature": "[class]android.widget.TextView[resource_id]org.gateshipone.odyssey:id/alertTitle[text]Battery optimization active[desc]None[enabled,,]",
+      "view_str": "84fd62ccfed500fcd8505b8322a3e5e4",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.gateshipone.odyssey:id/alertTitle",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=154,620,711,683>Battery optimization active</p>"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          683
+        ],
+        [
+          989,
+          725
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/titleDividerNoCustom",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 9,
+      "size": "898*42",
+      "signature": "[class]android.view.View[resource_id]org.gateshipone.odyssey:id/titleDividerNoCustom[text]None[desc]None[enabled,,]",
+      "view_str": "edb45ec7be246ddd19c37052695727a4",
+      "content_free_signature": "[class]android.view.View[resource_id]org.gateshipone.odyssey:id/titleDividerNoCustom"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          725
+        ],
+        [
+          989,
+          1147
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/contentPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 10,
+      "size": "898*422",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.gateshipone.odyssey:id/contentPanel[text]None[desc]None[enabled,,]",
+      "view_str": "72f8160adc3fd643036f87680805d8c0",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.gateshipone.odyssey:id/contentPanel"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          725
+        ],
+        [
+          989,
+          1147
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/scrollView",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "898*422",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.gateshipone.odyssey:id/scrollView[text]None[desc]None[enabled,,]",
+      "view_str": "23da0c267388254bc759432a97a739ce",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.gateshipone.odyssey:id/scrollView"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          725
+        ],
+        [
+          989,
+          1147
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "898*422",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2943de286d2a0c48e32e3b9c87e17355",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          725
+        ],
+        [
+          989,
+          1147
+        ]
+      ],
+      "resource_id": "android:id/message",
+      "checked": false,
+      "text": "Battery optimization for Odyssey is active. \n\nThis will prevent Odyssey from automatically resuming playback after background playback was paused. \n\nPlease consider to deactivate this option in order to ensure Odyssey works correctly.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "898*422",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/message[text]None[desc]None[enabled,,]",
+      "view_str": "24eb027bbbccfd2b11bc18537a0e25fa",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/message",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=91,725,989,1147>Battery optimization for Odyssey is active. \n\nThis will prevent Odyssey from automatically resuming playback after background playback was paused. \n\nPlease consider to deactivate this option in order to ensure Odyssey works correctly.</p>"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          1147
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/buttonPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 14,
+      "size": "898*200",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.gateshipone.odyssey:id/buttonPanel[text]None[desc]None[enabled,,]",
+      "view_str": "a0a71d26d537aeac1f1ec5fcc5b45337",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.gateshipone.odyssey:id/buttonPanel"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          1147
+        ],
+        [
+          989,
+          1347
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "898*200",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "570c0028a9356563461ab83b87e445d2",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          429,
+          1184
+        ],
+        [
+          608,
+          1310
+        ]
+      ],
+      "resource_id": "android:id/button2",
+      "checked": false,
+      "text": "Cancel",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "179*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button2[text]Cancel[desc]None[enabled,,]",
+      "view_str": "3eba4ce0cacf2d5d227cbbd40f319c8b",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button2",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=429,1184,608,1310>Cancel</button>"
+    },
+    {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          629,
+          1184
+        ],
+        [
+          926,
+          1310
+        ]
+      ],
+      "resource_id": "android:id/button1",
+      "checked": false,
+      "text": "Open settings",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 17,
+      "size": "297*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button1[text]Open settings[desc]None[enabled,,]",
+      "view_str": "3ba1d4509040fddacc5164b823f1e0c4",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button1",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=629,1184,926,1310>Open settings</button>"
+    }
+  ]
+}

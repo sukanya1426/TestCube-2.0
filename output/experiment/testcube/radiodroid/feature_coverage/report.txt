@@ -1,0 +1,343 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: RadioDroid
+
+Total Actions    : 154
+
+Total Features   : 32
+Covered Features : 1
+Partial          : 7
+Uncovered        : 24
+
+Feature Coverage : 3.12%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 10.00%  (mean completion ratio; partial steps count)
+Exercised        : 8  (covered 1 + partial 7)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse popular radio stations
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Selected a station but did not switch between sub-lists or play it.
+  - touch ActivityMain/TextView-Stations
+
+[GT002] Search for a station by name
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Did not tap the search icon, type a station name, or tap a result.
+  - touch ActivityMain/ImageView-
+
+[GT003] Search stations by tag, country, language or state
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Did not open the search screen or switch to advanced search.
+  - touch ActivityMain/ImageView-
+
+[GT004] Play a station
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-press station; tap bar not expanded
+  - long_touch ActivityMain/LinearLayout-
+
+[GT005] Stop playback
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Tap stop control; not in expanded player
+  - touch ActivityMain/ImageView-
+
+[GT006] Add a station to favourites
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press station; no star action
+
+[GT007] Remove a station from favourites
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Long-pressed station; tapped 'Favourites' screen.
+  - long_touch ActivityMain/LinearLayout-
+  - touch ActivityMain/LinearLayout-
+
+[GT008] Reorder favourite stations
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No reorder action attempted.
+  - touch ActivityMain/ViewGroup-
+  - touch ActivityMain/TextView-Settings
+
+[GT009] View station details
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Tapped station; opened detail page.
+  - touch ActivityMain/LinearLayout-
+  - touch ActivityMain/TextView-Radio Para
+  - Completed by later features: G006
+
+[GT010] Vote for a station
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold capability
+  - long_touch actions
+
+[GT011] Open a station's homepage
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold capability
+  - long_touch actions
+
+[GT012] Share a station
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold capability
+  - long_touch actions
+
+[GT013] Record the stream to a file
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial steps completed, lacks record and stop actions.
+  - touch ActivityMain/ImageButton-
+
+[GT014] Browse and play saved recordings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to browsing or playing saved recordings.
+  - touch ActivityMain/TextView-History
+
+[GT015] View the played-track history
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to viewing played-track history.
+  - touch ActivityMain/TextView-History
+
+[GT016] Set a sleep timer
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to setting a sleep timer.
+
+[GT017] Set a radio alarm clock
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to setting a radio alarm clock.
+
+[GT018] Enable, edit or delete an alarm
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to enabling, editing or deleting an alarm.
+
+[GT019] Import favourite stations from an M3U file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No import functionality found.
+
+[GT020] Export favourite stations to an M3U file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No export functionality found.
+
+[GT021] Cast a station to a Chromecast device
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No cast functionality found.
+
+[GT022] Send playback to an MPD server
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT023] Control playback from the notification
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT024] Choose the media player engine
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT025] Adjust the streaming buffer and resume behaviour
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial because only settings opened, buffer not adjusted.
+  - touch ActivityMain/TextView-Settings
+
+[GT026] Set the recordings folder and naming
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for setting recordings folder and naming.
+
+[GT027] Restrict playback or downloads to Wi-Fi
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial because settings opened, Wi-Fi restriction not enabled.
+  - touch ActivityMain/TextView-Settings
+
+[GT028] Change the theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to theme change.
+
+[GT029] Change the station list layout and icon display
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to station list layout or icon display.
+
+[GT030] Select the radio-browser server or mirror
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to server or mirror selection.
+
+[GT031] Add the home screen shortcut for a station
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no long press or shortcut addition action
+  - touch TextView 'Stations'
+
+[GT032] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 32 features covered
+7 / 32 features partial
+Feature Coverage = COVERED / Total = 3.12%
+Weighted Feature Coverage = mean(completion_ratio) = 10.00%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 32 (completeness ratio 0.438)
+
+Feature-inference P/R/F1: 1.00 / 0.44 / 0.61 (false not_present=0)
+
+GT GT001 'Browse popular radio stations' | journal=G001 'Browse popular radio stations' (sim=1.0, name) status=partial | offline=partial
+GT GT002 'Search for a station by name' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Search stations by tag, country, language or state' | journal=G002 'Search stations' (sim=0.333, name) status=covered | offline=not_covered
+GT GT004 'Play a station' | journal=G004 'Remove a station' (sim=0.333, name) status=partial | offline=partial
+GT GT005 'Stop playback' | journal=G003 'Stop playback' (sim=1.0, name) status=partial | offline=partial
+GT GT006 'Add a station to favourites' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Remove a station from favourites' | journal=missing (no name match) status=missing | offline=partial
+GT GT008 'Reorder favourite stations' | journal=G010 'Import favourite stations' (sim=0.5, name) status=covered | offline=not_covered
+GT GT009 'View station details' | journal=G005 'View station details' (sim=1.0, name) status=covered | offline=covered
+GT GT010 'Vote for a station' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 "Open a station's homepage" | journal=G006 "Open a station's homepage" (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Share a station' | journal=G011 'Cast a station' (sim=0.333, name) status=partial | offline=not_covered
+GT GT013 'Record the stream to a file' | journal=G007 'Record the stream' (sim=0.75, name) status=partial | offline=partial
+GT GT014 'Browse and play saved recordings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'View the played-track history' | journal=G008 'View the played-track history' (sim=1.0, name) status=partial | offline=not_covered
+GT GT016 'Set a sleep timer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Set a radio alarm clock' | journal=G009 'Set a radio alarm' (sim=0.75, name) status=partial | offline=not_covered
+GT GT018 'Enable, edit or delete an alarm' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Import favourite stations from an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Export favourite stations to an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Cast a station to a Chromecast device' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Send playback to an MPD server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Control playback from the notification' | journal=G012 'Control playback' (sim=0.455, name) status=partial | offline=not_covered
+GT GT024 'Choose the media player engine' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Adjust the streaming buffer and resume behaviour' | journal=G013 'Adjust the streaming buffer' (sim=0.571, name) status=partial | offline=partial
+GT GT026 'Set the recordings folder and naming' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Restrict playback or downloads to Wi-Fi' | journal=G014 'Restrict playback' (sim=0.667, name) status=partial | offline=partial
+GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Change the station list layout and icon display' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Select the radio-browser server or mirror' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Add the home screen shortcut for a station' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

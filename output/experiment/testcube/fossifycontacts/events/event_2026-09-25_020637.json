@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_020637",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Filter",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          795,
+          84
+        ],
+        [
+          922,
+          210
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/filter",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 14,
+      "size": "127*126",
+      "signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/filter[text]None[desc]Filter[enabled,,]",
+      "view_str": "468302ac30db598ce8f0bb164d0f8178",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/filter",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Filter' bound_box=795,84,922,210></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "46ac1cbd5e80666829184c5238ef3854",
+  "stop_state": "052cc0d5f17b77e8c8142f3ba9eb7a5a",
+  "event_str": "CustomTouchEvent(state=46ac1cbd5e80666829184c5238ef3854, view=468302ac30db598ce8f0bb164d0f8178(MainActivity/Button-))"
+}

@@ -1,0 +1,497 @@
+{
+  "app": "Loop Habit Tracker",
+  "source": "guide",
+  "url": "Official Loop Habit Tracker repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-38 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a yes/no habit",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap the '+' floating action button",
+        "Select 'yes or no' from the options",
+        "Enter the name of the habit",
+        "Tap 'create' to finalize the habit creation"
+      ],
+      "keywords": [
+        "create",
+        "habit",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "yes or no",
+        "create",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Set a habit frequency",
+      "description": "Open the habit editor",
+      "actions": [
+        "Open the habit editor",
+        "Tap the frequency row",
+        "Select the desired frequency",
+        "Tap the save button"
+      ],
+      "keywords": [
+        "habit",
+        "frequency",
+        "editor",
+        "row"
+      ],
+      "nav_hints": [
+        "habit",
+        "frequency"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit editor",
+        "tap the frequency row"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Add notes",
+      "description": "Open the habit editor",
+      "actions": [
+        "Open the habit editor",
+        "Tap the notes field",
+        "Enter the note text",
+        "Tap the save button"
+      ],
+      "keywords": [
+        "add",
+        "notes",
+        "habit",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "notes",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit editor",
+        "tap the notes field"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Enter a value",
+      "description": "Open the habit list",
+      "actions": [
+        "Open the habit list",
+        "Tap on the measurable habit row",
+        "Scroll to the 'Enter a value' section",
+        "Tap on the 'Enter a value' field",
+        "Enter the desired value",
+        "Tap the 'Save' button to confirm the value"
+      ],
+      "keywords": [
+        "value",
+        "measurable",
+        "habit",
+        "today's"
+      ],
+      "nav_hints": [
+        "value",
+        "measurable",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit list",
+        "tap today's cell on the measurable habit row"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Mark a day",
+      "description": "Long-press (or repeatedly tap, depending on the settings) the day cell",
+      "actions": [
+        "Tap on the day cell in the habit list.",
+        "Long-press (or repeatedly tap, depending on the settings) the day cell.",
+        "Select the 'Mark as Skipped' option from the menu.",
+        "Confirm the skip action by tapping the 'Confirm' button.",
+        "The app updates the day cell to show the skipped state."
+      ],
+      "keywords": [
+        "mark",
+        "day",
+        "skipped",
+        "long-press"
+      ],
+      "nav_hints": [
+        "mark",
+        "day",
+        "skipped"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press (or repeatedly tap, depending on the settings) the day cell",
+        "choose the skip state; skipped days do not break the streak"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "View a habit's detailed",
+      "description": "Open the habit list",
+      "actions": [
+        "Open the habit list",
+        "Tap the habit name",
+        "Select the habit's detailed statistics",
+        "Tap the habit's detailed statistics",
+        "View the habit's detailed statistics"
+      ],
+      "keywords": [
+        "habit's",
+        "detailed",
+        "statistics",
+        "habit"
+      ],
+      "nav_hints": [
+        "habit's",
+        "detailed",
+        "statistics"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit list",
+        "tap the habit name"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "View the history calendar",
+      "description": "Open the habit detail",
+      "actions": [
+        "Tap on the habit detail",
+        "Scroll to the History card",
+        "Tap on the History card",
+        "Tap on the Calendar icon",
+        "Select the desired date on the calendar"
+      ],
+      "keywords": [
+        "history",
+        "calendar",
+        "habit",
+        "detail"
+      ],
+      "nav_hints": [
+        "history",
+        "calendar"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit detail",
+        "scroll to the History card"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "View the frequency chart",
+      "description": "Open the habit detail",
+      "actions": [
+        "Open the habit detail",
+        "Scroll to the Frequency card",
+        "Select the Frequency chart",
+        "Check the displayed frequency data"
+      ],
+      "keywords": [
+        "frequency",
+        "weekday",
+        "time",
+        "chart"
+      ],
+      "nav_hints": [
+        "frequency",
+        "weekday",
+        "time"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit detail",
+        "scroll to the Frequency card"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Archive a habit",
+      "description": "Open the habit list",
+      "actions": [
+        "Open the habit list",
+        "Locate the habit you want to archive",
+        "Long-press the habit",
+        "Select the 'Archive' option from the menu",
+        "Confirm the archive action"
+      ],
+      "keywords": [
+        "archive",
+        "habit",
+        "long-press"
+      ],
+      "nav_hints": [
+        "archive",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit list",
+        "long-press the habit"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Delete a habit",
+      "description": "Open the habit list",
+      "actions": [
+        "Open the habit list",
+        "Scroll to find the habit you want to delete",
+        "Long-press the habit",
+        "Select the delete option",
+        "Confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "habit",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit list",
+        "long-press the habit"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Sort the habit list",
+      "description": "Open the habit list",
+      "actions": [
+        "Open the habit list",
+        "Tap the overflow menu",
+        "Select 'Sort' from the overflow menu",
+        "Select 'Reorder habits manually'",
+        "Tap 'Sort the habit list'",
+        "Tap 'Reorder habits manually'"
+      ],
+      "keywords": [
+        "sort",
+        "habit",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the habit list",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Change the number of",
+      "description": "Rotate the device or resize the window; Loop adjusts the number of visible day columns. The display can also be adjusted from the appearance",
+      "actions": [
+        "Tap on the 'Appearance' settings option in the app's main menu.",
+        "Select the 'Columns' option within the appearance settings.",
+        "Enter the desired number of day columns you want to display.",
+        "Confirm the changes by tapping the 'Save' button.",
+        "Rotate the device or resize the window to see the updated number of day columns."
+      ],
+      "keywords": [
+        "change",
+        "number",
+        "days",
+        "shown"
+      ],
+      "nav_hints": [
+        "change",
+        "number",
+        "days"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Rotate the device or resize the window; Loop adjusts the number of visible day columns. The display can also be adjusted from the appearance settings"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Enable persistent reminder notifications",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll to find the sticky/persistent notification option",
+        "Select the sticky/persistent notification option",
+        "Toggle the persistent reminder notification setting",
+        "Save the settings"
+      ],
+      "keywords": [
+        "enable",
+        "persistent",
+        "sticky",
+        "reminder"
+      ],
+      "nav_hints": [
+        "enable",
+        "persistent",
+        "sticky"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "find the sticky/persistent notification option"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Check off a habit",
+      "description": "Tap the checkmark area on the placed home screen widget; the habit is recorded for today without opening the app",
+      "actions": [
+        "Tap the home screen widget for the habit you want to check off.",
+        "Locate the checkmark area on the widget.",
+        "Tap the checkmark area to record the habit for today without opening the app."
+      ],
+      "keywords": [
+        "check",
+        "off",
+        "habit",
+        "directly"
+      ],
+      "nav_hints": [
+        "check",
+        "off",
+        "habit"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the checkmark area on the placed home screen widget; the habit is recorded for today without opening the app"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Create a yes/no habit",
+    "Set a habit frequency",
+    "Add notes",
+    "Enter a value",
+    "Mark a day",
+    "View a habit's detailed",
+    "View the history calendar",
+    "View the frequency chart",
+    "Archive a habit",
+    "Delete a habit",
+    "Sort the habit list",
+    "Change the number of",
+    "Enable persistent reminder notifications",
+    "Check off a habit"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 3,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create a yes/no habit"
+      },
+      {
+        "id": "G002",
+        "name": "Set a habit frequency"
+      },
+      {
+        "id": "G003",
+        "name": "Add notes"
+      },
+      {
+        "id": "G004",
+        "name": "Enter a value"
+      },
+      {
+        "id": "G005",
+        "name": "Mark a day"
+      },
+      {
+        "id": "G006",
+        "name": "View a habit's detailed"
+      },
+      {
+        "id": "G007",
+        "name": "View the history calendar"
+      },
+      {
+        "id": "G008",
+        "name": "View the frequency chart"
+      },
+      {
+        "id": "G009",
+        "name": "Archive a habit"
+      },
+      {
+        "id": "G010",
+        "name": "Delete a habit"
+      },
+      {
+        "id": "G011",
+        "name": "Sort the habit list"
+      },
+      {
+        "id": "G012",
+        "name": "Change the number of"
+      },
+      {
+        "id": "G013",
+        "name": "Enable persistent reminder notifications"
+      },
+      {
+        "id": "G014",
+        "name": "Check off a habit"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F003",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

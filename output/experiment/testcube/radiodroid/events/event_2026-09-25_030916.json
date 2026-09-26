@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_030916",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          262
+        ],
+        [
+          1038,
+          325
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search",
+      "checked": false,
+      "text": "Search\u2026",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 20,
+      "temp_id": 22,
+      "size": "849*63",
+      "signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search[text]Search\u2026[desc]None[enabled,,]",
+      "view_str": "b014bc2bcf669a4a683f2ffad7f1781d",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=189,262,1038,325>Search\u2026</input>"
+    },
+    "text": "test",
+    "skip_oracle": true
+  },
+  "start_state": "d02480851f7703ce409483c0ff0f4943",
+  "stop_state": "295a9021806f9725356f2c3f1b41457f",
+  "event_str": "CustomSetTextEvent(state=d02480851f7703ce409483c0ff0f4943, view=b014bc2bcf669a4a683f2ffad7f1781d(ActivityMain/EditText-Search\u2026), text=test)"
+}

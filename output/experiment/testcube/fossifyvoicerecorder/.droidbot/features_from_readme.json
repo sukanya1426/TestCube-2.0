@@ -1,0 +1,70 @@
+{
+  "app": "Voice Recorder",
+  "source": "local_readme",
+  "features": [
+    {
+      "name": "Complete first-run setup",
+      "description": "Pass welcome, skip/login, or create-database screens and reach the main UI.",
+      "actions": [
+        "Close or skip the tutorial",
+        "Leave any first-run analytics or settings screen",
+        "Tap Create Database or Open Database if shown",
+        "Enter a file name if asked and confirm Save",
+        "Reach the home or main screen"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "onboarding",
+        "get started",
+        "skip",
+        "database",
+        "home"
+      ],
+      "nav_hints": [
+        "skip",
+        "create database",
+        "next"
+      ],
+      "id": "F001",
+      "granularity_flag": "needs_split"
+    },
+    {
+      "name": "Search",
+      "description": "Exercise the 'Search' capability described in the app documentation.",
+      "actions": [
+        "Tap Search",
+        "Type a query",
+        "Open a result"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search",
+        "query"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "id": "F002"
+    },
+    {
+      "name": "Change app settings",
+      "description": "Exercise the 'Change app settings' capability described in the app documentation.",
+      "actions": [
+        "Open Settings",
+        "Open a settings category",
+        "Toggle or select an option"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "settings"
+      ],
+      "nav_hints": [
+        "settings"
+      ],
+      "id": "F003"
+    }
+  ],
+  "granularity_flags": [
+    "Complete first-run setup"
+  ]
+}

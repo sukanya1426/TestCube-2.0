@@ -1,0 +1,996 @@
+{
+  "tag": "2026-09-24_230842",
+  "state_str": "acef88737734a30f878024eb76cd84f6",
+  "state_str_content_free": "10a555bfaaa1efabc883a162aa719212",
+  "foreground_activity": "it.feio.android.omninotes.foss/it.feio.android.omninotes.MainActivity",
+  "activity_stack": [
+    "it.feio.android.omninotes.foss/it.feio.android.omninotes.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.webview/org.chromium.android_webview.services.MetricsBridgeService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          74
+        ],
+        [
+          1080,
+          620
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "637*546",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4978358f603dd9bb6f7aa54361456315",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          74
+        ],
+        [
+          1080,
+          620
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "637*546",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7c1ee4725e61bc7bc710db98d53efcde",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3,
+        8,
+        13,
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          95
+        ],
+        [
+          1080,
+          599
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ListView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "637*504",
+      "signature": "[class]android.widget.ListView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2a45215a14e5a8a9df91c5c9eb3e0962",
+      "content_free_signature": "[class]android.widget.ListView[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          95
+        ],
+        [
+          1080,
+          221
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b83ae67df4c76b97d6e66ab7c11b7e53",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5,
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          95
+        ],
+        [
+          1080,
+          221
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "df8cec7309ea0890ad516597220d3ba7",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          129
+        ],
+        [
+          912,
+          186
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "427*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4ba82be0dbc8d92aa628782af646be67",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          129
+        ],
+        [
+          912,
+          186
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/title",
+      "checked": false,
+      "text": "Title",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "427*57",
+      "signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title[text]Title[desc]None[enabled,,]",
+      "view_str": "bc146850df4b012c41f96e3aee5d85f8",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button bound_box=485,129,912,186>Title</button>"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          95
+        ],
+        [
+          1038,
+          221
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/radio",
+      "checked": true,
+      "text": null,
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 7,
+      "size": "126*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio[text]None[desc]None[enabled,checked,]",
+      "view_str": "39cf693ac06ba7a2b66166a1fdaa5953",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          221
+        ],
+        [
+          1080,
+          347
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 8,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b83ae67df4c76b97d6e66ab7c11b7e53",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10,
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          221
+        ],
+        [
+          1080,
+          347
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "507ed1bbe257e52ad9c80dc8fec5aa92",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          255
+        ],
+        [
+          912,
+          312
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "427*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a5948f1ec10659defffb3149d868e4ec",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          255
+        ],
+        [
+          912,
+          312
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/title",
+      "checked": false,
+      "text": "Creation date",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "427*57",
+      "signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title[text]Creation date[desc]None[enabled,,]",
+      "view_str": "007188049796a4989063cf76713b3063",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=485,255,912,312>Creation date</button>"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          221
+        ],
+        [
+          1038,
+          347
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/radio",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 12,
+      "size": "126*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio[text]None[desc]None[enabled,,]",
+      "view_str": "1f3898069d4b3cb5c516721fbd112779",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          347
+        ],
+        [
+          1080,
+          473
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 13,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b83ae67df4c76b97d6e66ab7c11b7e53",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          347
+        ],
+        [
+          1080,
+          473
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "507ed1bbe257e52ad9c80dc8fec5aa92",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          381
+        ],
+        [
+          912,
+          438
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "427*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "67a4f0c68a3109ba7eb611cf234aeec8",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          381
+        ],
+        [
+          912,
+          438
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/title",
+      "checked": false,
+      "text": "Last modification date",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "427*57",
+      "signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title[text]Last modification date[desc]None[enabled,,]",
+      "view_str": "a6c1c4e81ef0c636b17a3162368ec32a",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=485,381,912,438>Last modification date</button>"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          347
+        ],
+        [
+          1038,
+          473
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/radio",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 17,
+      "size": "126*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio[text]None[desc]None[enabled,,]",
+      "view_str": "1f3898069d4b3cb5c516721fbd112779",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          473
+        ],
+        [
+          1080,
+          599
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 18,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b83ae67df4c76b97d6e66ab7c11b7e53",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20,
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          443,
+          473
+        ],
+        [
+          1080,
+          599
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 18,
+      "temp_id": 19,
+      "size": "637*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "507ed1bbe257e52ad9c80dc8fec5aa92",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]it.feio.android.omninotes.foss:id/content"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          507
+        ],
+        [
+          912,
+          564
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 20,
+      "size": "427*57",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "73c9878e704672b28b856e5499388bfa",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          485,
+          507
+        ],
+        [
+          912,
+          564
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/title",
+      "checked": false,
+      "text": "Reminder date",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "427*57",
+      "signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title[text]Reminder date[desc]None[enabled,,]",
+      "view_str": "b791ae12451bf3533be10452bac114d0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]it.feio.android.omninotes.foss:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=485,507,912,564>Reminder date</button>"
+    },
+    {
+      "package": "it.feio.android.omninotes.foss",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          473
+        ],
+        [
+          1038,
+          599
+        ]
+      ],
+      "resource_id": "it.feio.android.omninotes.foss:id/radio",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 22,
+      "size": "126*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio[text]None[desc]None[enabled,,]",
+      "view_str": "1f3898069d4b3cb5c516721fbd112779",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]it.feio.android.omninotes.foss:id/radio"
+    }
+  ]
+}

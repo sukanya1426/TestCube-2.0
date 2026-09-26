@@ -1,0 +1,488 @@
+{
+  "app": "OpenTasks",
+  "source": "guide",
+  "url": "Official OpenTasks repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-31 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a task",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap the '+' floating action button",
+        "Enter the task title",
+        "Enter the task description",
+        "Tap the 'Save' button"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Set a due date",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "Tap the 'Due' field",
+        "Select the date",
+        "Set the due date",
+        "Tap the 'Due' field",
+        "Select the time"
+      ],
+      "keywords": [
+        "due",
+        "date",
+        "time",
+        "task"
+      ],
+      "nav_hints": [
+        "due",
+        "date",
+        "time"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task editor",
+        "tap the \"Due\" field"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Set the task priority",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "Tap the priority selector",
+        "Select the desired priority level",
+        "Tap the save button to confirm changes"
+      ],
+      "keywords": [
+        "task",
+        "priority",
+        "editor",
+        "selector"
+      ],
+      "nav_hints": [
+        "task",
+        "priority"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task editor",
+        "tap the priority selector"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Set the task status",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "Tap the status field",
+        "Select the desired status",
+        "Tap the save button"
+      ],
+      "keywords": [
+        "task",
+        "status",
+        "editor",
+        "field"
+      ],
+      "nav_hints": [
+        "task",
+        "status"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task editor",
+        "tap the status field"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Add a location",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "tap the location field"
+      ],
+      "keywords": [
+        "add",
+        "location",
+        "task",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "location",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Add a checklist",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "Tap the checklist section",
+        "Enter the checklist item",
+        "Tap the 'Add' button",
+        "Enter the second checklist item",
+        "Tap the 'Add' button"
+      ],
+      "keywords": [
+        "add",
+        "checklist",
+        "task",
+        "editor"
+      ],
+      "nav_hints": [
+        "add item",
+        "add",
+        "checklist"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task editor",
+        "tap the checklist section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Create a recurring task",
+      "description": "Open the task editor",
+      "actions": [
+        "Open the task editor",
+        "Tap the recurrence field",
+        "Select the recurrence type",
+        "Enter the recurrence interval",
+        "Enter the recurrence duration",
+        "Save the task"
+      ],
+      "keywords": [
+        "create",
+        "recurring",
+        "task",
+        "editor"
+      ],
+      "nav_hints": [
+        "create",
+        "recurring",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task editor",
+        "tap the recurrence field"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Edit an existing task",
+      "description": "Tap the task in the list to open the detail view",
+      "actions": [
+        "Tap the task in the list to open the detail view",
+        "Tap the edit (pencil) icon",
+        "Enter the new title for the task",
+        "Enter the new description for the task",
+        "Tap the save icon to update the task",
+        "Verify the task has been updated in the list"
+      ],
+      "keywords": [
+        "edit",
+        "existing",
+        "task",
+        "detail"
+      ],
+      "nav_hints": [
+        "edit",
+        "existing",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the task in the list to open the detail view",
+        "tap the edit (pencil) icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Browse tasks grouped",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Select the 'Due' tab",
+        "Select the 'Browse' option",
+        "Select the 'Tasks' option",
+        "Select the 'Grouped' option"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "due"
+      ],
+      "nav_hints": [
+        "due",
+        "browse",
+        "tasks"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "select the \"Due\" tab"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Browse tasks grouped",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Select the 'Lists' tab",
+        "Select the 'Browse' option",
+        "Select the 'Tasks' option",
+        "Select the 'Grouped' option"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "lists"
+      ],
+      "nav_hints": [
+        "lists",
+        "browse",
+        "tasks"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "select the \"Lists\" tab"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Browse tasks grouped",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Select the 'Progress' tab",
+        "Select the 'Browse' option",
+        "Select the 'Tasks' option",
+        "Select the 'Grouped' option"
+      ],
+      "keywords": [
+        "browse",
+        "tasks",
+        "grouped",
+        "progress"
+      ],
+      "nav_hints": [
+        "progress",
+        "browse",
+        "tasks"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "select the \"Progress\" tab"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Show",
+      "description": "Tap the overflow menu (three dots) in the task list",
+      "actions": [
+        "Tap the overflow menu (three dots) in the task list",
+        "Select 'Show completed tasks' from the overflow menu",
+        "Tap the 'Show' option in the navigation bar"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "completed",
+        "tasks"
+      ],
+      "nav_hints": [
+        "show completed tasks",
+        "show",
+        "hide"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the overflow menu (three dots) in the task list",
+        "toggle the \"Show completed tasks\" option"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Create a local task",
+      "description": "Open the overflow menu",
+      "actions": [
+        "Tap on the overflow menu",
+        "Select 'Create' from the overflow menu",
+        "Select 'Local' from the navigation hints",
+        "Enter a title for the task",
+        "Enter a description for the task",
+        "Tap on the 'Create' button to save the task"
+      ],
+      "keywords": [
+        "create",
+        "local",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "create",
+        "local",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the overflow menu",
+        "open the list management screen"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Share a task",
+      "description": "Open the task detail view",
+      "actions": [
+        "Open the task detail view",
+        "tap the share icon"
+      ],
+      "keywords": [
+        "share",
+        "task",
+        "detail"
+      ],
+      "nav_hints": [
+        "share",
+        "task"
+      ],
+      "source": "guide"
+    }
+  ],
+  "enriched_features": [
+    "Create a task",
+    "Set a due date",
+    "Set the task priority",
+    "Set the task status",
+    "Add a checklist",
+    "Create a recurring task",
+    "Edit an existing task",
+    "Browse tasks grouped",
+    "Browse tasks grouped",
+    "Browse tasks grouped",
+    "Show",
+    "Create a local task"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/opentasks/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/opentasks/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 3,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create a task"
+      },
+      {
+        "id": "G002",
+        "name": "Set a due date"
+      },
+      {
+        "id": "G003",
+        "name": "Set the task priority"
+      },
+      {
+        "id": "G004",
+        "name": "Set the task status"
+      },
+      {
+        "id": "G005",
+        "name": "Add a location"
+      },
+      {
+        "id": "G006",
+        "name": "Add a checklist"
+      },
+      {
+        "id": "G007",
+        "name": "Create a recurring task"
+      },
+      {
+        "id": "G008",
+        "name": "Edit an existing task"
+      },
+      {
+        "id": "G009",
+        "name": "Browse tasks grouped"
+      },
+      {
+        "id": "G010",
+        "name": "Browse tasks grouped"
+      },
+      {
+        "id": "G011",
+        "name": "Browse tasks grouped"
+      },
+      {
+        "id": "G012",
+        "name": "Show"
+      },
+      {
+        "id": "G013",
+        "name": "Create a local task"
+      },
+      {
+        "id": "G014",
+        "name": "Share a task"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Search"
+      },
+      {
+        "id": "F003",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Odyssey
+
+Total Actions    : 218
+
+Total Features   : 33
+Covered Features : 2
+Partial          : 5
+Uncovered        : 26
+
+Feature Coverage : 6.06%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 9.70%  (mean completion ratio; partial steps count)
+Exercised        : 7  (covered 2 + partial 5)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the music library by album
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Selected 'Browse the music library', but did not complete album selection.
+  - touch OdysseyMainActivity/TextView-No albums
+
+[GT002] Browse the music library by artist
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Selected 'Browse the music library', but did not complete artist selection.
+  - touch OdysseyMainActivity/TextView-No albums
+
+[GT003] Browse all tracks
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Successfully navigated to 'All tracks' tab and scrolled through list.
+  - touch OdysseyMainActivity/TextView-Search
+
+[GT004] Browse recently added albums
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold capability.
+
+[GT005] Browse the file system with the file browser
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold capability.
+
+[GT006] Play a track
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold capability.
+
+[GT007] Control playback from the full player
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - dragged now-playing bar, released, adjusted playback controls
+  - touch OdysseyMainActivity/Button-
+
+[GT008] Use repeat and shuffle
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to repeat or shuffle
+
+[GT009] View and edit the play queue
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to queue/playlist view, reordering, or removing items
+
+[GT010] Add an album, artist or track to the queue
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+
+[GT011] Clear the play queue
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+
+[GT012] Save the current queue as a playlist
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+
+[GT013] Browse and play saved playlists
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long press on playlist, but no delete action followed.
+  - long_touch OdysseyMainActivity/TextView-My Music
+
+[GT014] Delete a playlist
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No delete action or confirmation.
+  - long_touch OdysseyMainActivity/TextView-My Music
+
+[GT015] Create a bookmark to resume an audiobook or podcast
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No create bookmark action or name entry.
+  - touch OdysseyMainActivity/ImageView-
+
+[GT016] Resume from a bookmark
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - test_001
+
+[GT017] Delete a bookmark
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - long_touch
+
+[GT018] Search the library
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch
+
+[GT019] Jump from a track to its album or artist
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT020] View track and album information
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT021] Download artwork for artists and albums
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+
+[GT022] Clear the artwork cache
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch OdysseyMainActivity/ImageView-
+
+[GT023] Restrict artwork downloads to Wi-Fi
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch OdysseyMainActivity/ImageView-
+
+[GT024] Control playback from the lock screen and the notification
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - touch TextView "No albums found." rid=empty_view_message activity=OdysseyMainActivity | activity=Odysse...
+
+[GT025] Add the Odyssey home screen widget
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-press and tap actions, but widget not added
+  - Long-press an empty area of the Android home screen; Tap Add; Tap Odyssey
+
+[GT026] Scrobble to Last.fm through a scrobbler app
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to scrobbling or Last.fm
+
+[GT027] Open the system equaliser
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.40
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Navigation drawer opened, but no equaliser entry tapped
+  - Open the navigation drawer or the player overflow menu
+
+[GT028] Change the theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards theme change
+  - intent
+  - start activity
+
+[GT029] Change the library view style
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards view style change
+  - intent
+  - start activity
+
+[GT030] Change the album and track sort order
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards sort order change
+  - intent
+  - start activity
+
+[GT031] Configure playback behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for configuring playback behavior.
+  - none
+
+[GT032] Rescan the media library
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for rescanning the media library.
+  - none
+
+[GT033] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for viewing the about screen and licenses.
+  - none
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+2 / 33 features covered
+5 / 33 features partial
+Feature Coverage = COVERED / Total = 6.06%
+Weighted Feature Coverage = mean(completion_ratio) = 9.70%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 21 / 33 (completeness ratio 0.636)
+
+Feature-inference P/R/F1: 0.67 / 0.42 / 0.52 (false not_present=0)
+
+GT GT001 'Browse the music library by album' | journal=G001 'Browse the music library' (sim=0.8, name) status=partial | offline=partial
+GT GT002 'Browse the music library by artist' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Browse all tracks' | journal=G002 'Browse all tracks' (sim=1.0, name) status=covered | offline=covered
+GT GT004 'Browse recently added albums' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Browse the file system with the file browser' | journal=G003 'Browse the file system' (sim=0.667, name) status=partial | offline=not_covered
+GT GT006 'Play a track' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Control playback from the full player' | journal=G004 'Control playback' (sim=0.615, name) status=covered | offline=covered
+GT GT008 'Use repeat and shuffle' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'View and edit the play queue' | journal=G005 'View' (sim=0.538, name) status=partial | offline=not_covered
+GT GT010 'Add an album, artist or track to the queue' | journal=G010 'Jump' (sim=0.375, name) status=partial | offline=not_covered
+GT GT011 'Clear the play queue' | journal=G006 'Clear the play queue' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Save the current queue as a playlist' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Browse and play saved playlists' | journal=G007 'Browse' (sim=0.417, name) status=covered | offline=partial
+GT GT014 'Delete a playlist' | journal=G009 'Delete a bookmark' (sim=0.333, name) status=partial | offline=not_covered
+GT GT015 'Create a bookmark to resume an audiobook or podcast' | journal=G008 'Create a bookmark' (sim=0.5, name) status=partial | offline=not_covered
+GT GT016 'Resume from a bookmark' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Delete a bookmark' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Search the library' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Jump from a track to its album or artist' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'View track and album information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Download artwork for artists and albums' | journal=G011 'Download artwork' (sim=0.455, name) status=partial | offline=not_covered
+GT GT022 'Clear the artwork cache' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Restrict artwork downloads to Wi-Fi' | journal=G012 'Restrict artwork downloads' (sim=1.0, name) status=partial | offline=not_covered
+GT GT024 'Control playback from the lock screen and the notification' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Add the Odyssey home screen widget' | journal=G013 'Add the Odyssey home' (sim=0.692, name) status=partial | offline=partial
+GT GT026 'Scrobble to Last.fm through a scrobbler app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Open the system equaliser' | journal=G014 'Open the system equaliser' (sim=1.0, name) status=partial | offline=partial
+GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Change the library view style' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Change the album and track sort order' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Configure playback behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Rescan the media library' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

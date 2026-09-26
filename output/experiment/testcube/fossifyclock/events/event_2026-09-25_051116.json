@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_051116",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "android",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          1028
+        ],
+        [
+          1010,
+          1154
+        ]
+      ],
+      "resource_id": "android:id/aerr_wait",
+      "checked": false,
+      "text": "Wait",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 11,
+      "size": "940*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/aerr_wait[text]Wait[desc]None[enabled,,]",
+      "view_str": "6eca7260af81443d8baa2b4d642c45e2",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/aerr_wait",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=70,1028,1010,1154>Wait</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "002525ce9c22275a9e434fa17eaeda0e",
+  "stop_state": "338fc3eedada97cc1178b9e7e2f9dcee",
+  "event_str": "CustomTouchEvent(state=002525ce9c22275a9e434fa17eaeda0e, view=6eca7260af81443d8baa2b4d642c45e2(MainActivity/Button-Wait))"
+}

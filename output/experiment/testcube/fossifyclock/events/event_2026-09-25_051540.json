@@ -1,0 +1,57 @@
+{
+  "tag": "2026-09-25_051540",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          715
+        ],
+        [
+          837,
+          764
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/alarm_days",
+      "checked": false,
+      "text": "Sun, Sat",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 29,
+      "size": "795*49",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/alarm_days[text]Sun, Sat[desc]None[enabled,,]",
+      "view_str": "43c238be0d6f0796162a7ebb114ab433",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/alarm_days",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button bound_box=42,715,837,764>Sun, Sat</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "065d2711fab7fce449580d4a92e76c28",
+  "stop_state": "afa3afeca60ed711274096327c667d64",
+  "event_str": "CustomTouchEvent(state=065d2711fab7fce449580d4a92e76c28, view=43c238be0d6f0796162a7ebb114ab433(MainActivity/TextView-Sun, Sat))"
+}

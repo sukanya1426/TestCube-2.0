@@ -1,0 +1,460 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Amaze File Manager
+
+Total Actions    : 175
+
+Total Features   : 46
+Covered Features : 1
+Partial          : 3
+Uncovered        : 42
+
+Feature Coverage : 2.17%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 4.63%  (mean completion ratio; partial steps count)
+Exercised        : 4  (covered 1 + partial 3)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse internal storage and the SD card
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed correctly
+  - touch MainActivity/TextView-GRANT
+
+[GT002] Create a new folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed correctly
+  - touch MainActivity/TextView-GRANT
+
+[GT003] Create a new empty file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed correctly
+  - touch MainActivity/TextView-GRANT
+
+[GT004] Copy files and folders
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Long-press and copy actions missing
+  - long_touch MainActivity/TextView-GRANT
+  - touch MainActivity/ImageButton-
+
+[GT005] Move (cut) files and folders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No cut/move actions found
+  - intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=...
+
+[GT006] Rename a file or folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No rename actions found
+  - intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=...
+
+[GT007] Delete files and folders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press action not observed
+  - long_touch MainActivity/TextView-CANCEL
+
+[GT008] Select multiple items
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No selection of multiple items
+  - touch TextView
+  - touch TextView
+
+[GT009] Search for files in the current folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT010] Run a deep search across subfolders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT011] Sort the file list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT012] Switch between list and grid view
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT013] Show or hide hidden files
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to showing or hiding hidden files.
+
+[GT014] Open a file with an external app
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to opening a file with an external app.
+
+[GT015] Share files
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to sharing files.
+
+[GT016] View file properties
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press action not present.
+
+[GT017] Change file permissions (root)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Root access not enabled.
+
+[GT018] Compress files into an archive
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press and Compress actions not present.
+
+[GT019] Extract an archive
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to extracting an archive.
+
+[GT020] Browse inside an archive without extracting it
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to browsing inside an archive.
+
+[GT021] Encrypt a file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to encrypting a file.
+
+[GT022] Decrypt a file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - missing steps: choose destination, confirm
+  - Tap the 'Decrypt' button
+
+[GT023] Edit a text file in the built-in editor
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - missing steps: choose editor, edit content, save, exit
+  - none
+
+[GT024] Add a folder to the bookmarks
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - missing steps: open navigation drawer, add to bookmarks, confirm name, tap OK
+  - touch TextView 'Add to Bookmarks'
+
+[GT025] Edit or remove a bookmark
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-press action present, but no edit or delete confirmed.
+  - long_touch MainActivity/TextView-Since Andr
+
+[GT026] Open a second tab / use the dual pane
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to opening a second tab or using dual pane.
+
+[GT027] Set a folder as the home directory
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to setting a folder as the home directory.
+
+[GT028] Open the app manager
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - opened navigation drawer, navigated to apps, reviewed, tapped app
+  - Tap the navigation drawer icon to open the navigation drawer; Scroll to the 'Apps' section in the navigation drawer; Tap 'Apps' to open the app manager
+
+[GT029] Uninstall an application from the app manager
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no uninstall action present
+  - Tap the navigation drawer icon to open the navigation drawer; Scroll to the 'Apps' section in the navigation drawer; Tap 'Apps' to open the app manager
+
+[GT030] Back up an installed app's APK
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no backup action present
+  - intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=...
+
+[GT031] Start the built-in FTP server
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - none
+
+[GT032] Configure the FTP server
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - none
+
+[GT033] Connect to an SMB (Windows) share
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - none
+
+[GT034] Connect over SFTP/SSH
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-CANCEL
+
+[GT035] Connect to a cloud storage account
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch TextView 'Since Android 11, Google requests File Managers to reques...'
+
+[GT036] Enable root explorer mode
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch TextView 'Since Android 11, Google requests File Managers to reques...'
+
+[GT037] View recent files
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Tap 'Recent files' but navigation drawer not opened
+  - touch TextView 'Since Android 11, Google requests File Managers to reques...'
+
+[GT038] Browse files by category
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No category selection or file review
+  - intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=...
+
+[GT039] Change the theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No theme selection or settings interaction
+  - touch MainActivity/TextView-GRANT
+
+[GT040] Change the accent and colour scheme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions
+
+[GT041] Configure behaviour settings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions
+
+[GT042] Enable the encrypted folder/hidden files protection
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions
+
+[GT043] Add a shortcut to a folder on the home screen
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - long_touch
+  - no overflow menu
+  - no add shortcut
+
+[GT044] Copy a file path to the clipboard
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - long_touch
+  - no copy path
+
+[GT045] View storage usage
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - long_touch
+  - no storage entries
+  - no volume browse
+
+[GT046] Open the about screen and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No navigation drawer or 'About' screen interaction.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 46 features covered
+3 / 46 features partial
+Feature Coverage = COVERED / Total = 2.17%
+Weighted Feature Coverage = mean(completion_ratio) = 4.63%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 46 (completeness ratio 0.304)
+
+Feature-inference P/R/F1: 1.00 / 0.30 / 0.47 (false not_present=0)
+
+GT GT001 'Browse internal storage and the SD card' | journal=G001 'Browse internal storage' (sim=0.5, name) status=covered | offline=not_covered
+GT GT002 'Create a new folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Create a new empty file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Copy files and folders' | journal=G002 'Copy files' (sim=0.5, name) status=partial | offline=partial
+GT GT005 'Move (cut) files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Rename a file or folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Delete files and folders' | journal=G003 'Delete files' (sim=0.5, name) status=partial | offline=not_covered
+GT GT008 'Select multiple items' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Search for files in the current folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Run a deep search across subfolders' | journal=G004 'Run a deep search' (sim=0.6, name) status=covered | offline=not_covered
+GT GT011 'Sort the file list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Switch between list and grid view' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Show or hide hidden files' | journal=G005 'Show' (sim=0.357, name) status=covered | offline=not_covered
+GT GT014 'Open a file with an external app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Share files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'View file properties' | journal=G006 'View file properties' (sim=1.0, name) status=partial | offline=not_covered
+GT GT017 'Change file permissions (root)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Compress files into an archive' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Extract an archive' | journal=G007 'Extract an archive' (sim=1.0, name) status=partial | offline=not_covered
+GT GT020 'Browse inside an archive without extracting it' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Encrypt a file' | journal=G008 'Decrypt a file' (sim=0.333, name) status=covered | offline=not_covered
+GT GT022 'Decrypt a file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Edit a text file in the built-in editor' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Add a folder to the bookmarks' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Edit or remove a bookmark' | journal=G009 'Edit' (sim=0.333, name) status=partial | offline=partial
+GT GT026 'Open a second tab / use the dual pane' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Set a folder as the home directory' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Open the app manager' | journal=G010 'Open the app manager' (sim=1.0, name) status=covered | offline=covered
+GT GT029 'Uninstall an application from the app manager' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 "Back up an installed app's APK" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Start the built-in FTP server' | journal=G011 'Start the built-in FTP' (sim=0.8, name) status=covered | offline=not_covered
+GT GT032 'Configure the FTP server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Connect to an SMB (Windows) share' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Connect over SFTP/SSH' | journal=G012 'Connect over SFTP/SSH' (sim=1.0, name) status=partial | offline=not_covered
+GT GT035 'Connect to a cloud storage account' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Enable root explorer mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'View recent files' | journal=G013 'View recent files' (sim=1.0, name) status=partial | offline=partial
+GT GT038 'Browse files by category' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Change the theme' | journal=G014 'Change the accent' (sim=0.5, name) status=partial | offline=not_covered
+GT GT040 'Change the accent and colour scheme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT041 'Configure behaviour settings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Enable the encrypted folder/hidden files protection' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT043 'Add a shortcut to a folder on the home screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT044 'Copy a file path to the clipboard' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT045 'View storage usage' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'Open the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

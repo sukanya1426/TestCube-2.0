@@ -1,0 +1,415 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Loop Habit Tracker
+
+Total Actions    : 136
+
+Total Features   : 38
+Covered Features : 0
+Partial          : 13
+Uncovered        : 25
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 11.05%  (mean completion ratio; partial steps count)
+Exercised        : 13  (covered 0 + partial 13)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a yes/no habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tap 'Yes or No' but no question entered
+  - touch MainActivity/TextView-Yes or No
+
+[GT002] Create a measurable habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tap 'Measurable' but no question entered
+  - touch MainActivity/TextView-Yes or No
+
+[GT003] Set a habit frequency
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No frequency selection or save action
+
+[GT004] Set a habit reminder
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial steps attempted, but not all required actions were completed.
+  - touch MainActivity/TextView-You have n
+  - touch MainActivity/TextView-You have n
+  - touch MainActivity/ImageView-
+  - touch MainActivity/CheckBox-
+  - touch ListHabitsActivity/TextView-You have n
+  - touch ListHabitsActivity/TextView-You have n
+
+[GT005] Add notes to a habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial steps attempted, but not all required actions were completed.
+  - touch MainActivity/TextView-Habits
+  - touch MainActivity/TextView-Habits
+  - touch MainActivity/ImageView-
+  - touch MainActivity/CheckBox-
+  - touch ListHabitsActivity/Button-
+  - touch ListHabitsActivity/TextView-Yes or No
+
+[GT006] Check off a habit for today
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions taken to check off a habit.
+  - nav (screen already shows this destination)
+
+[GT007] Enter a value for a measurable habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Some steps were attempted but not fully completed.
+  - touch MainActivity/View-
+
+[GT008] Check off a habit for an earlier day
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT009] Mark a day as skipped
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT010] Add a note to a specific day's entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch Button 'Add habit'
+
+[GT011] View a habit's detailed statistics
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-
+
+[GT012] View the score/strength chart
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/Button-
+
+[GT013] View the history calendar
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Partial because only opened habit detail, not scrolled to History card.
+  - touch MainActivity/Button-
+
+[GT014] View the streaks chart
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Partial because only opened habit detail, not scrolled to Streaks card.
+  - touch MainActivity/Button-
+
+[GT015] View the frequency (weekday/time) chart
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Partial because only opened habit detail, not scrolled to Frequency card.
+  - touch MainActivity/Button-
+
+[GT016] Edit a habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-pressed but no edit actions
+  - long_touch MainActivity/TextView-You have n
+
+[GT017] Archive a habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-pressed but no archive action
+  - long_touch MainActivity/TextView-You have n
+
+[GT018] Unarchive a habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-pressed but no unarchive action
+  - long_touch MainActivity/TextView-You have n
+
+[GT019] Delete a habit
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 60% of gold steps
+Evidence   :
+  - Long-press and delete steps attempted but not fully completed.
+  - long_touch MainActivity/TextView-You have n
+
+[GT020] Reorder habits manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to reordering habits manually.
+
+[GT021] Sort the habit list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to sorting the habit list.
+
+[GT022] Filter the habit list
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partially covered, some steps missing
+  - touch MainActivity/TextView-Yes or No
+
+[GT023] Change the number of days shown in the list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT024] Snooze or dismiss a habit reminder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT025] Enable persistent (sticky) reminder notifications
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing to enable sticky notifications
+  - touch MainActivity/TextView-Settings
+
+[GT026] Add a habit widget to the home screen
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing to add a habit widget
+  - touch Button "Got it"
+
+[GT027] Check off a habit directly from a widget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT028] Export habit data as CSV
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no export steps found
+
+[GT029] Create a full database backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no backup steps found
+
+[GT030] Restore a full backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no restore steps found
+
+[GT031] Import data from another habit app
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed
+  - touch Button 'Add habit'
+
+[GT032] Repair the database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed
+  - touch Button 'Add habit'
+
+[GT033] Change the app theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed
+  - touch SettingsActivity/TextView-Settings
+
+[GT034] Set the first day of the week
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - touch Button "Add habit"
+
+[GT035] Set the hour the day starts (day offset)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - touch Button "Add habit"
+
+[GT036] Enable or disable the check-mark reverse order and skip days
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - actions do not match gold steps
+  - touch Button "Got it"
+
+[GT037] Open the help and FAQ
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No navigation to Help/FAQ.
+
+[GT038] View the about screen
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No navigation to About screen.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 38 features covered
+13 / 38 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 11.05%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 38 (completeness ratio 0.368)
+
+Feature-inference P/R/F1: 1.00 / 0.37 / 0.54 (false not_present=0)
+
+GT GT001 'Create a yes/no habit' | journal=G001 'Create a yes/no habit' (sim=1.0, name) status=partial | offline=partial
+GT GT002 'Create a measurable habit' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Set a habit frequency' | journal=G002 'Set a habit frequency' (sim=1.0, name) status=partial | offline=not_covered
+GT GT004 'Set a habit reminder' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Add notes to a habit' | journal=G003 'Add notes' (sim=0.667, name) status=partial | offline=partial
+GT GT006 'Check off a habit for today' | journal=G014 'Check off a habit' (sim=0.6, name) status=partial | offline=not_covered
+GT GT007 'Enter a value for a measurable habit' | journal=G004 'Enter a value' (sim=0.4, name) status=partial | offline=partial
+GT GT008 'Check off a habit for an earlier day' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Mark a day as skipped' | journal=G005 'Mark a day' (sim=0.667, name) status=partial | offline=not_covered
+GT GT010 "Add a note to a specific day's entry" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 "View a habit's detailed statistics" | journal=G006 "View a habit's detailed" (sim=0.75, name) status=covered | offline=not_covered
+GT GT012 'View the score/strength chart' | journal=G008 'View the frequency chart' (sim=0.5, name) status=partial | offline=not_covered
+GT GT013 'View the history calendar' | journal=G007 'View the history calendar' (sim=1.0, name) status=partial | offline=partial
+GT GT014 'View the streaks chart' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'View the frequency (weekday/time) chart' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Edit a habit' | journal=G009 'Archive a habit' (sim=0.333, name) status=partial | offline=partial
+GT GT017 'Archive a habit' | journal=G010 'Delete a habit' (sim=0.333, name) status=partial | offline=partial
+GT GT018 'Unarchive a habit' | journal=missing (no name match) status=missing | offline=partial
+GT GT019 'Delete a habit' | journal=missing (no name match) status=missing | offline=partial
+GT GT020 'Reorder habits manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Sort the habit list' | journal=G011 'Sort the habit list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT022 'Filter the habit list' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Change the number of days shown in the list' | journal=G012 'Change the number of' (sim=0.5, name) status=partial | offline=not_covered
+GT GT024 'Snooze or dismiss a habit reminder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Enable persistent (sticky) reminder notifications' | journal=G013 'Enable persistent reminder notifications' (sim=0.8, name) status=partial | offline=not_covered
+GT GT026 'Add a habit widget to the home screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Check off a habit directly from a widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Export habit data as CSV' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Create a full database backup' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Restore a full backup' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Import data from another habit app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Repair the database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Change the app theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Set the first day of the week' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'Set the hour the day starts (day offset)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Enable or disable the check-mark reverse order and skip days' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Open the help and FAQ' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'View the about screen' | journal=missing (no name match) status=missing | offline=not_covered

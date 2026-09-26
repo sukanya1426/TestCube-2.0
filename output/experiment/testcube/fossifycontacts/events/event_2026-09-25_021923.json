@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_021923",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          137,
+          1108
+        ],
+        [
+          806,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_number",
+      "checked": false,
+      "text": "1234567890",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "669*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number[text]1234567890[desc]None[enabled,,]",
+      "view_str": "b0b3a45486bbd5baf249d96709bf9709",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<input bound_box=137,1108,806,1220>1234567890</input>"
+    },
+    "text": "1234567890",
+    "skip_oracle": true
+  },
+  "start_state": "9144152e6ee4d619e0f8e18353750e20",
+  "stop_state": "9144152e6ee4d619e0f8e18353750e20",
+  "event_str": "CustomSetTextEvent(state=9144152e6ee4d619e0f8e18353750e20, view=b0b3a45486bbd5baf249d96709bf9709(EditContactActivity/EditText-1234567890), text=)"
+}

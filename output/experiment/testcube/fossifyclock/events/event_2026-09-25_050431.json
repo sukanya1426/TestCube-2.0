@@ -1,0 +1,58 @@
+{
+  "tag": "2026-09-25_050431",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          102,
+          1795
+        ],
+        [
+          168,
+          1857
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/tab_item_label",
+      "checked": false,
+      "text": "Clock",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 44,
+      "size": "66*62",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/tab_item_label[text]Clock[desc]None[enabled,,selected]",
+      "view_str": "9c98f47a0506a0ff2552b84018cca005",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/tab_item_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "4",
+      "desc": "<p bound_box=102,1795,168,1857>Clock</p>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "12d8b21e01b69cc5d9700cdbbd4da05a",
+  "stop_state": "bdd54680efd6175f17d995c5a9221dd2",
+  "event_str": "CustomTouchEvent(state=12d8b21e01b69cc5d9700cdbbd4da05a, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock))"
+}

@@ -1,0 +1,2255 @@
+{
+  "tag": "2026-09-25_021854",
+  "state_str": "77694319650cf5fd0f1dc3015fe6679c",
+  "state_str_content_free": "c53ab375e6e90c876d5927604b39361d",
+  "foreground_activity": "org.fossify.contacts/.activities.EditContactActivity",
+  "activity_stack": [
+    "org.fossify.contacts/.activities.EditContactActivity",
+    "org.fossify.contacts/.activities.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.inputmethod.latin/com.android.inputmethod.latin.spellcheck.AndroidSpellCheckerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "291bef7e859d6b9a19e7b630ea341918",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3ba7109613fa974548d858fbe2549266",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "839882538b32e9e9b89a445a5b4caa87",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.contacts:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "c4c0e0ce224f0854249e831b1a2cc96f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.contacts:id/action_bar_root"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "521daa580bc3324efe7ece780bb850d0",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        47,
+        48
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_wrapper",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_wrapper[text]None[desc]None[enabled,,]",
+      "view_str": "a70122648fb505a67c5d7a5d8320156a",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_wrapper"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_scrollview",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.fossify.contacts:id/contact_scrollview[text]None[desc]None[enabled,,]",
+      "view_str": "b7af342ca6970094546902582a8c96f6",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.fossify.contacts:id/contact_scrollview",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<scrollbar bound_box=0,0,1080,1920></scrollbar>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 25,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        25,
+        26,
+        27,
+        31,
+        32,
+        33,
+        37,
+        38,
+        39,
+        40,
+        41,
+        44,
+        45,
+        46
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_holder[text]None[desc]None[enabled,,]",
+      "view_str": "5231f242dd8634e83c4443d176603e57",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Change photo",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          788
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_photo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*788",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_photo[text]None[desc]Change photo[enabled,,]",
+      "view_str": "776cb7ac2b9f9326ca2278f1ba0b3aeb",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_photo",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button text='Change photo' bound_box=0,0,1080,788></button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Toggle favorite",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          21,
+          641
+        ],
+        [
+          147,
+          767
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_toggle_favorite",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 7,
+      "temp_id": 9,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_toggle_favorite[text]None[desc]Toggle favorite[enabled,,]",
+      "view_str": "214b9576b1861cb2ada4c6d9cce8b0de",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_toggle_favorite",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Toggle favorite' bound_box=21,641,147,767></button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Change photo",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          933,
+          641
+        ],
+        [
+          1059,
+          767
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_change_photo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 7,
+      "temp_id": 10,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_change_photo[text]None[desc]Change photo[enabled,,]",
+      "view_str": "24bc6ad97632a18c5fdcbf92c96a2044",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_change_photo",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Change photo' bound_box=933,641,1059,767></button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          820
+        ],
+        [
+          137,
+          925
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_name_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 11,
+      "size": "105*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_name_image[text]None[desc]None[enabled,,]",
+      "view_str": "cda8ec7ba557104f0c1c875b1c54eafd",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_name_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          137,
+          820
+        ],
+        [
+          1038,
+          932
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_first_name",
+      "checked": false,
+      "text": "Rivera",
+      "class": "android.widget.AutoCompleteTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 7,
+      "temp_id": 12,
+      "size": "901*112",
+      "signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.fossify.contacts:id/contact_first_name[text]Rivera[desc]None[enabled,,]",
+      "view_str": "435d8e596a7b57f0792189e0b82db3a6",
+      "content_free_signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.fossify.contacts:id/contact_first_name",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<input bound_box=137,820,1038,932>Rivera</input>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          964
+        ],
+        [
+          1038,
+          1076
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_surname",
+      "checked": false,
+      "text": "Surname",
+      "class": "android.widget.AutoCompleteTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 7,
+      "temp_id": 13,
+      "size": "901*112",
+      "signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.fossify.contacts:id/contact_surname[text]Surname[desc]None[enabled,,]",
+      "view_str": "439dfdb3cc0765cabed5de0aceb14508",
+      "content_free_signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.fossify.contacts:id/contact_surname",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<input bound_box=137,964,1038,1076>Surname</input>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1108
+        ],
+        [
+          137,
+          1213
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_numbers_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 14,
+      "size": "105*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_numbers_image[text]None[desc]None[enabled,,]",
+      "view_str": "e22dc61e35a2c0ec5595db54cb41f7f0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_numbers_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1108
+        ],
+        [
+          1080,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_numbers_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 15,
+      "size": "943*112",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_numbers_holder[text]None[desc]None[enabled,,]",
+      "view_str": "95908740020d2c091dd2a500031ed7c9",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_numbers_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17,
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1108
+        ],
+        [
+          1080,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_number_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "943*112",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_number_holder[text]None[desc]None[enabled,,]",
+      "view_str": "44310d1bf7551a4140b6904b892a95dd",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_number_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1108
+        ],
+        [
+          806,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_number",
+      "checked": false,
+      "text": "Number",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "669*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number[text]Number[desc]None[enabled,,]",
+      "view_str": "85f91a9b0332e27dfc11133559270814",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_number",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<input bound_box=137,1108,806,1220>Number</input>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          806,
+          1108
+        ],
+        [
+          1038,
+          1220
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_number_type",
+      "checked": false,
+      "text": "Home Fax",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 18,
+      "size": "232*112",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_number_type[text]Home Fax[desc]None[enabled,,]",
+      "view_str": "b36610db46b16eb4288e3374900d27da",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_number_type",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=806,1108,1038,1220>Home Fax</button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          466,
+          1231
+        ],
+        [
+          613,
+          1336
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_numbers_add_new",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 19,
+      "size": "147*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_numbers_add_new[text]None[desc]None[enabled,,]",
+      "view_str": "3d8fdc89e3bfbd8646c68fd796db1288",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_numbers_add_new"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1357
+        ],
+        [
+          137,
+          1462
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_emails_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 20,
+      "size": "105*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_emails_image[text]None[desc]None[enabled,,]",
+      "view_str": "7cf851b94ba0f40ad1f207b351e45617",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_emails_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1357
+        ],
+        [
+          1080,
+          1469
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_emails_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 21,
+      "size": "943*112",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_emails_holder[text]None[desc]None[enabled,,]",
+      "view_str": "1ce2c9409dd46dd624d904c1426aeb65",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_emails_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        23,
+        24
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1357
+        ],
+        [
+          1080,
+          1469
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_email_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 21,
+      "temp_id": 22,
+      "size": "943*112",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_email_holder[text]None[desc]None[enabled,,]",
+      "view_str": "010290911e999039c67739090a07b06a",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_email_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1357
+        ],
+        [
+          883,
+          1469
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_email",
+      "checked": false,
+      "text": "Email",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "746*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_email[text]Email[desc]None[enabled,,]",
+      "view_str": "6ab01751f5d9aa94f0c6f5b163ef6e7a",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_email",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<input bound_box=137,1357,883,1469>Email</input>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          883,
+          1357
+        ],
+        [
+          1038,
+          1469
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_email_type",
+      "checked": false,
+      "text": "Home",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 24,
+      "size": "155*112",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_email_type[text]Home[desc]None[enabled,,]",
+      "view_str": "36fc3fe99d31afc5c5a845a5d7c5230b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_email_type",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button bound_box=883,1357,1038,1469>Home</button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          466,
+          1480
+        ],
+        [
+          613,
+          1585
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_emails_add_new",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 25,
+      "size": "147*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_emails_add_new[text]None[desc]None[enabled,,]",
+      "view_str": "dcc3eda97ce46cce32acfa4fe029ed0b",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_emails_add_new"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1606
+        ],
+        [
+          137,
+          1711
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_addresses_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 26,
+      "size": "105*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_addresses_image[text]None[desc]None[enabled,,]",
+      "view_str": "832c30cd199ec870e48a1156624651f8",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_addresses_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        28
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1606
+        ],
+        [
+          1080,
+          1718
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_addresses_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 27,
+      "size": "943*112",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_addresses_holder[text]None[desc]None[enabled,,]",
+      "view_str": "540caa9d1ff32208e2cca39ef68c9a00",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_addresses_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29,
+        30
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1606
+        ],
+        [
+          1080,
+          1718
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_address_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 28,
+      "size": "943*112",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_address_holder[text]None[desc]None[enabled,,]",
+      "view_str": "1a0a57c1b3102e8e6eb58769760a9a8b",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_address_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1606
+        ],
+        [
+          883,
+          1718
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_address",
+      "checked": false,
+      "text": "Address",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "746*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_address[text]Address[desc]None[enabled,,]",
+      "view_str": "199dd7b8130e8e515032bef32db2e6d9",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_address",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<input bound_box=137,1606,883,1718>Address</input>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          883,
+          1606
+        ],
+        [
+          1038,
+          1718
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_address_type",
+      "checked": false,
+      "text": "Home",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 30,
+      "size": "155*112",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_address_type[text]Home[desc]None[enabled,,]",
+      "view_str": "8bdb67e0e302dce8526b361e43b8bafa",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_address_type",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button bound_box=883,1606,1038,1718>Home</button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          466,
+          1729
+        ],
+        [
+          613,
+          1834
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_addresses_add_new",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 31,
+      "size": "147*105",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_addresses_add_new[text]None[desc]None[enabled,,]",
+      "view_str": "f10ac85c6c34624f12b2a26354c29bfc",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_addresses_add_new"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1855
+        ],
+        [
+          137,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_events_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 32,
+      "size": "105*65",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_events_image[text]None[desc]None[enabled,,]",
+      "view_str": "ae4ac57d07b6cebdaac966978dec3f76",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_events_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        34
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1855
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_events_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 33,
+      "size": "943*65",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_events_holder[text]None[desc]None[enabled,,]",
+      "view_str": "1b03c85dcbb3249ec04d7f7c990896ab",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_events_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35,
+        36
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1855
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_event_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 33,
+      "temp_id": 34,
+      "size": "943*65",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_event_holder[text]None[desc]None[enabled,,]",
+      "view_str": "39c5ae03198c1eae1d4089701b00b25a",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_event_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1855
+        ],
+        [
+          841,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_event",
+      "checked": false,
+      "text": "Unknown",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "704*65",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_event[text]Unknown[desc]None[enabled,,]",
+      "view_str": "550c1ff8967998d1201f9e51306906df",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_event"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          841,
+          1855
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_event_type",
+      "checked": false,
+      "text": "Birthday",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 36,
+      "size": "197*65",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_event_type[text]Birthday[desc]None[enabled,,]",
+      "view_str": "639fd38725397d2916a3ab50d5f92026",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_event_type"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          466,
+          1987
+        ],
+        [
+          613,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_events_add_new",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 37,
+      "size": "147*-67",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_events_add_new[text]None[desc]None[enabled,,]",
+      "view_str": "e5a8065e1f9e8a606019f3f9b9eec818",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_events_add_new"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          2124
+        ],
+        [
+          137,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_notes_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 38,
+      "size": "105*-204",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_notes_image[text]None[desc]None[enabled,,]",
+      "view_str": "1013e216c0c380f62abc1b395b9a477d",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_notes_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          2124
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_notes",
+      "checked": false,
+      "text": "Notes",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 7,
+      "temp_id": 39,
+      "size": "901*-204",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_notes[text]Notes[desc]None[enabled,,]",
+      "view_str": "7f533f3826674b5a71ddef752fb7f3b7",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_notes"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          2257
+        ],
+        [
+          137,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_groups_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 40,
+      "size": "105*-337",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_groups_image[text]None[desc]None[enabled,,]",
+      "view_str": "eb57698907cef552e1980e22d0b3d67d",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_groups_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        42
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          2257
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_groups_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 41,
+      "size": "943*-337",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_groups_holder[text]None[desc]None[enabled,,]",
+      "view_str": "bb4ac0652fb52a2ad785e18402ba0104",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_groups_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        43
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          2257
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_group_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 41,
+      "temp_id": 42,
+      "size": "943*-337",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_group_holder[text]None[desc]None[enabled,,]",
+      "view_str": "cde7e76ffc5512d9531ae0d44116e56b",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.contacts:id/contact_group_holder"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          2257
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_group",
+      "checked": false,
+      "text": "No groups",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 43,
+      "size": "901*-337",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_group[text]No groups[desc]None[enabled,,]",
+      "view_str": "ea72634fb71d551c4b7544341623b5ce",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_group"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          466,
+          2389
+        ],
+        [
+          613,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_groups_add_new",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 44,
+      "size": "147*-469",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_groups_add_new[text]None[desc]None[enabled,,]",
+      "view_str": "8a99094ed1ce9ce539a1defef457e97e",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_groups_add_new"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          2515
+        ],
+        [
+          137,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_source_image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 45,
+      "size": "105*-595",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_source_image[text]None[desc]None[enabled,,]",
+      "view_str": "007d72bdc5bb252878f2bae7118c6e60",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_source_image"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          2515
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_source",
+      "checked": false,
+      "text": "Phone storage",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 46,
+      "size": "943*-595",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_source[text]Phone storage[desc]None[enabled,,]",
+      "view_str": "d896781ae1598529d9482974765e701c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.contacts:id/contact_source"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          263
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_photo_top_shadow",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 47,
+      "size": "1080*263",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_photo_top_shadow[text]None[desc]None[enabled,,]",
+      "view_str": "7435c31b0dbb7c0bfce14ee81fb92d11",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.contacts:id/contact_photo_top_shadow"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        49
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          231
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_appbar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 48,
+      "size": "1080*231",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_appbar[text]None[desc]None[enabled,,]",
+      "view_str": "f5bd6d72ae1dba7b0dac2a3be5185acb",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.contacts:id/contact_appbar"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        50,
+        51
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          231
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_toolbar",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 48,
+      "temp_id": 49,
+      "size": "1080*168",
+      "signature": "[class]android.view.ViewGroup[resource_id]org.fossify.contacts:id/contact_toolbar[text]None[desc]None[enabled,,]",
+      "view_str": "e5873e3dcbe5a348387945b73c865f09",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]org.fossify.contacts:id/contact_toolbar"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          73
+        ],
+        [
+          147,
+          220
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 50,
+      "size": "147*147",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "23f4134d07f462f1e9fe57a942536af1",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        52,
+        53
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          848,
+          73
+        ],
+        [
+          1080,
+          220
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 51,
+      "size": "232*147",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ce8cc13c7659173ec060a933acd41f94",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Save",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          848,
+          83
+        ],
+        [
+          975,
+          209
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/save",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 51,
+      "temp_id": 52,
+      "size": "127*126",
+      "signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/save[text]None[desc]Save[enabled,,]",
+      "view_str": "69cbe8b0a46a5ec34835d19a03d82702",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/save",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button text='Save' bound_box=848,83,975,209></button>"
+    },
+    {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "More options",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          975,
+          83
+        ],
+        [
+          1080,
+          209
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 51,
+      "temp_id": 53,
+      "size": "105*126",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[desc]More options[enabled,,]",
+      "view_str": "1712875040d64192903cb822dfd3f6d9",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button text='More options' bound_box=975,83,1080,209></button>"
+    }
+  ]
+}

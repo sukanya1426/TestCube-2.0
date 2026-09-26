@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-24_223233",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Search",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          73
+        ],
+        [
+          975,
+          199
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/action_search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "126*126",
+      "signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/action_search[text]None[desc]Search[enabled,,]",
+      "view_str": "68428886113891027a7af430bc9d0761",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/action_search",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Search' bound_box=849,73,975,199></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "17f41017c3c70346c6ee7cfdef983366",
+  "stop_state": "1ce4c3cd0f1456a83ca943667cf9fdb4",
+  "event_str": "CustomTouchEvent(state=17f41017c3c70346c6ee7cfdef983366, view=68428886113891027a7af430bc9d0761(MainActivity/Button-))"
+}

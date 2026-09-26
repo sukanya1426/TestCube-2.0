@@ -1,0 +1,381 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: NoNonsense Notes
+
+Total Actions    : 139
+
+Total Features   : 34
+Covered Features : 2
+Partial          : 8
+Uncovered        : 24
+
+Feature Coverage : 5.88%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 14.41%  (mean completion ratio; partial steps count)
+Exercised        : 10  (covered 2 + partial 8)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a task list
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - All steps followed in order.
+  - touch ActivityMain_/ImageButton-
+  - set_text ActivityMain_/EditText-Title
+  - touch ActivityMain_/Button-OK
+  - Completed by later features: G002
+
+[GT002] Rename a task list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps not followed in order.
+  - touch ActivityMain_/ImageButton-
+  - set_text ActivityMain_/EditText-Title
+  - touch ActivityMain_/Button-OK
+
+[GT003] Delete a task list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps not followed in order.
+  - touch ActivityMain_/ListView-
+  - touch ActivityMain_/Button-
+  - touch ActivityMain_/ListView-
+  - touch ActivityMain_/TextView-Tasks
+  - touch ActivityMain_/TextView-Tasks
+  - touch ActivityMain_/ListView-
+  - touch ActivityMain_/ImageView-
+
+[GT004] Set the default list
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Did not complete all steps
+  - touch ActivityMain_/ListView-
+
+[GT005] Create a task
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Did not complete all steps
+  - touch ActivityMain_/ListView-
+
+[GT006] Edit a task
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Did not complete all steps
+  - touch ActivityMain_/ListView-
+
+[GT007] Mark a task as completed
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tapped checkbox, task was struck through but not hidden.
+  - touch ActivityMain_/CheckBox-
+
+[GT008] Show or hide completed tasks
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tapped overflow menu, selected 'Delete all completed tasks'.
+  - touch ActivityMain_/Button-
+
+[GT009] Delete all completed tasks in a list
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Tapped overflow menu, selected 'Delete all completed tasks'.
+  - touch ActivityMain_/Button-
+
+[GT010] Create sub-tasks by indenting
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT011] Reorder tasks manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT012] Set a due date on a task
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT013] Set a time-based reminder
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Partial steps completed, lacks time selection and confirmation.
+  - touch ActivityMain_/TextView-Tasks
+
+[GT014] Set a repeating reminder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting a repeating reminder.
+  - touch ActivityMain_/TextView-Tasks
+
+[GT015] Set a location-based reminder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting a location-based reminder.
+  - touch ActivityMain_/TextView-Tasks
+
+[GT016] Remove a reminder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to removing a reminder.
+
+[GT017] Move a task to a different list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to moving a task to a different list.
+
+[GT018] Delete a task
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to deleting a task.
+
+[GT019] Sort a list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal indicates 'Tap 'OK'' instead of 'Sort'.
+  - touch ActivityMain_/Button-
+
+[GT020] Switch between lists by swiping
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No swipe actions or list navigation.
+  - touch ActivityMain_/Button-
+
+[GT021] View all tasks from all lists together
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Journal and actions match gold steps.
+  - touch ActivityMain_/Button-
+
+[GT022] Search tasks
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT023] Share a task
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT024] Create a task from text shared by another app
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT025] Add the task list home screen widget
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Long-press and create task list, but no configuration of widget appearance.
+  - touch ImageButton 'Open navigation drawer'
+  - touch Button 'Close app'
+  - touch ImageButton 'Open navigation drawer'
+  - touch Button 'Start new list'
+  - set_text EditText 'Title'
+  - touch Button 'OK'
+
+[GT026] Configure widget appearance
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to configuring widget appearance.
+  - touch ActivityMain_/ImageView-
+  - touch ActivityMain_/TextView-Settings
+  - touch PrefsActivity/TextView-About
+  - touch PrefsActivity/TextView-Settings
+  - touch PrefsActivity/TextView-Settings
+  - scroll PrefsActivity/ScrollView-
+  - touch PrefsActivity/ImageButton-
+
+[GT027] Change the app theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT028] Change the list and font sizes
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to appearance settings.
+
+[GT029] Enable synchronisation with a storage folder (SD card sync)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to synchronization settings.
+
+[GT030] Configure notification behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to notification settings.
+
+[GT031] Back up the task database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to backup task database.
+
+[GT032] Restore the task database from a backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to restoring task database.
+
+[GT033] Configure the swipe gesture on list items
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to configuring swipe gesture.
+
+[GT034] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to viewing about screen or licences.
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+2 / 34 features covered
+8 / 34 features partial
+Feature Coverage = COVERED / Total = 5.88%
+Weighted Feature Coverage = mean(completion_ratio) = 14.41%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 34 (completeness ratio 0.412)
+
+Feature-inference P/R/F1: 1.00 / 0.41 / 0.58 (false not_present=0)
+
+GT GT001 'Create a task list' | journal=G001 'Create a task list' (sim=1.0, name) status=covered | offline=covered
+GT GT002 'Rename a task list' | journal=G002 'Delete a task list' (sim=0.5, name) status=partial | offline=not_covered
+GT GT003 'Delete a task list' | journal=G013 'Add the task list' (sim=0.4, name) status=partial | offline=not_covered
+GT GT004 'Set the default list' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Create a task' | journal=G003 'Create a task' (sim=1.0, name) status=partial | offline=partial
+GT GT006 'Edit a task' | journal=G004 'Mark a task' (sim=0.333, name) status=partial | offline=partial
+GT GT007 'Mark a task as completed' | journal=missing (no name match) status=missing | offline=partial
+GT GT008 'Show or hide completed tasks' | journal=G005 'Delete all completed tasks' (sim=0.333, name) status=partial | offline=partial
+GT GT009 'Delete all completed tasks in a list' | journal=G011 'View all tasks' (sim=0.333, name) status=covered | offline=partial
+GT GT010 'Create sub-tasks by indenting' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Reorder tasks manually' | journal=G006 'Reorder tasks manually' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Set a due date on a task' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Set a time-based reminder' | journal=G007 'Set a time-based reminder' (sim=1.0, name) status=partial | offline=partial
+GT GT014 'Set a repeating reminder' | journal=G008 'Set a location-based reminder' (sim=0.4, name) status=partial | offline=not_covered
+GT GT015 'Set a location-based reminder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Remove a reminder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Move a task to a different list' | journal=G009 'Move a task' (sim=0.5, name) status=partial | offline=not_covered
+GT GT018 'Delete a task' | journal=G012 'Share a task' (sim=0.333, name) status=partial | offline=not_covered
+GT GT019 'Sort a list' | journal=G010 'Sort a list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT020 'Switch between lists by swiping' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'View all tasks from all lists together' | journal=missing (no name match) status=missing | offline=covered
+GT GT022 'Search tasks' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Share a task' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Create a task from text shared by another app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Add the task list home screen widget' | journal=missing (no name match) status=missing | offline=partial
+GT GT026 'Configure widget appearance' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Change the app theme' | journal=G014 'Change the app theme' (sim=1.0, name) status=partial | offline=not_covered
+GT GT028 'Change the list and font sizes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Enable synchronisation with a storage folder (SD card sync)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Configure notification behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Back up the task database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Restore the task database from a backup' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Configure the swipe gesture on list items' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

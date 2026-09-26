@@ -1,0 +1,511 @@
+{
+  "app": "RadioDroid",
+  "source": "guide",
+  "url": "Official RadioDroid repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-32 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse popular radio stations",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap on the 'Stations' screen",
+        "Scroll down to find the 'Browse popular radio stations' section",
+        "Tap on the 'Browse popular radio stations' option",
+        "Select a popular radio station from the list"
+      ],
+      "keywords": [
+        "browse",
+        "popular",
+        "radio",
+        "stations"
+      ],
+      "nav_hints": [
+        "stations",
+        "browse",
+        "popular"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "open the \"Stations\" screen"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Search stations",
+      "description": "Open the search screen",
+      "actions": [
+        "Tap on the search icon in the navigation bar",
+        "Enter the name of the station in the search bar",
+        "Press the search button to execute the search",
+        "Select the desired station from the search results",
+        "Tap on the station to open its details"
+      ],
+      "keywords": [
+        "search",
+        "stations",
+        "tag",
+        "country"
+      ],
+      "nav_hints": [
+        "search",
+        "stations",
+        "tag"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the search screen",
+        "switch to the advanced/category search"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Stop playback",
+      "description": "Tap the stop control in the player bar, the expanded player or the notification",
+      "actions": [
+        "Tap the stop control in the player bar",
+        "Tap the stop control in the expanded player",
+        "Tap the stop control in the notification"
+      ],
+      "keywords": [
+        "stop",
+        "playback",
+        "control",
+        "player"
+      ],
+      "nav_hints": [
+        "stop",
+        "playback"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the stop control in the player bar, the expanded player or the notification"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Remove a station",
+      "description": "Open the Favourites screen",
+      "actions": [
+        "Tap on the 'Favourites' screen",
+        "Long-press the station you want to remove",
+        "Select 'Remove' from the context menu",
+        "Confirm the removal by selecting 'Yes' if prompted"
+      ],
+      "keywords": [
+        "remove",
+        "station",
+        "favourites",
+        "long-press"
+      ],
+      "nav_hints": [
+        "remove",
+        "station",
+        "favourites"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Favourites screen",
+        "long-press the station"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "View station details",
+      "description": "Tap a station",
+      "actions": [
+        "Tap a station",
+        "open its detail page"
+      ],
+      "keywords": [
+        "station",
+        "details",
+        "detail",
+        "page"
+      ],
+      "nav_hints": [
+        "station",
+        "details"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "Open a station's homepage",
+      "description": "Open the station detail page",
+      "actions": [
+        "Tap on the station detail page",
+        "Tap on the homepage/website link",
+        "Select the station's homepage link"
+      ],
+      "keywords": [
+        "station's",
+        "homepage",
+        "station",
+        "detail"
+      ],
+      "nav_hints": [
+        "station's",
+        "homepage"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the station detail page",
+        "tap the homepage/website link"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Record the stream",
+      "description": "Start playing a station",
+      "actions": [
+        "Tap the 'Stream' button in the navigation bar.",
+        "Select the 'Record the stream' feature from the menu.",
+        "Tap the 'Start playing a station' button to begin playing a station.",
+        "Tap the record button in the player interface to start recording the stream.",
+        "Wait for the recording to complete and then stop the recording by tapping the stop button."
+      ],
+      "keywords": [
+        "record",
+        "stream",
+        "file",
+        "start"
+      ],
+      "nav_hints": [
+        "record",
+        "stream",
+        "file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Start playing a station",
+        "tap the record button in the player (or the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "View the played-track history",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "Scroll down to find 'History'",
+        "Tap on 'History'",
+        "Wait for the track history to load",
+        "Verify the track history is displayed"
+      ],
+      "keywords": [
+        "played-track",
+        "history",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "history",
+        "played-track"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"History\"/the track history"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Set a radio alarm",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "Tap 'Alarm'",
+        "Enter the desired time for the alarm",
+        "Select the desired radio station",
+        "Tap 'Set' to confirm the alarm"
+      ],
+      "keywords": [
+        "radio",
+        "alarm",
+        "clock",
+        "navigation"
+      ],
+      "nav_hints": [
+        "alarm",
+        "radio",
+        "clock"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"Alarm\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Import favourite stations",
+      "description": "Open the navigation drawer or the Favourites overflow menu",
+      "actions": [
+        "Open the navigation drawer or the Favourites overflow menu",
+        "tap the import option"
+      ],
+      "keywords": [
+        "import",
+        "favourite",
+        "stations",
+        "m3u"
+      ],
+      "nav_hints": [
+        "import",
+        "favourite",
+        "stations"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G011",
+      "name": "Cast a station",
+      "description": "Ensure the phone and the Chromecast are on the same network",
+      "actions": [
+        "Open the RadioDroid app",
+        "Tap on the 'Station' option in the navigation drawer",
+        "Select the 'Cast' option from the station menu",
+        "Tap the cast icon in the toolbar",
+        "Ensure the phone and the Chromecast are on the same network",
+        "Tap the cast icon in the toolbar to confirm the station is cast"
+      ],
+      "keywords": [
+        "cast",
+        "station",
+        "chromecast",
+        "device"
+      ],
+      "nav_hints": [
+        "cast",
+        "station",
+        "chromecast"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Ensure the phone and the Chromecast are on the same network",
+        "tap the cast icon in the toolbar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Control playback",
+      "description": "Start a station",
+      "actions": [
+        "Tap on the 'control' option in the navigation menu.",
+        "Select 'playback' from the dropdown menu.",
+        "Tap on the 'Start a station' option.",
+        "Pull down the notification shade to reveal the control panel.",
+        "Select the desired station from the list."
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "notification",
+        "start"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "notification"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Start a station",
+        "pull down the notification shade"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Adjust the streaming buffer",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on 'Settings'",
+        "Scroll to 'Playback'",
+        "Select 'Adjust the streaming buffer'",
+        "Enter the desired buffer size",
+        "Tap on 'Save' to apply changes"
+      ],
+      "keywords": [
+        "adjust",
+        "streaming",
+        "buffer",
+        "resume"
+      ],
+      "nav_hints": [
+        "adjust",
+        "streaming",
+        "buffer"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "playback section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Restrict playback",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll down to find the network/metered connection option",
+        "Select the network/metered connection option",
+        "Scroll down to find the playback restrictions",
+        "Select the playback restrictions",
+        "Confirm the changes"
+      ],
+      "keywords": [
+        "restrict",
+        "playback",
+        "downloads",
+        "wi-fi"
+      ],
+      "nav_hints": [
+        "restrict",
+        "playback",
+        "downloads"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "find the network/metered connection option"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Browse popular radio stations",
+    "Search stations",
+    "Stop playback",
+    "Remove a station",
+    "Open a station's homepage",
+    "Record the stream",
+    "View the played-track history",
+    "Set a radio alarm",
+    "Cast a station",
+    "Control playback",
+    "Adjust the streaming buffer",
+    "Restrict playback"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 10,
+    "both": [
+      {
+        "guide_id": "G002",
+        "guide_name": "Search stations",
+        "readme_id": "F006",
+        "readme_name": "Search",
+        "name_similarity": 0.5
+      },
+      {
+        "guide_id": "G003",
+        "guide_name": "Stop playback",
+        "readme_id": "F008",
+        "readme_name": "Playback controls",
+        "name_similarity": 0.333
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse popular radio stations"
+      },
+      {
+        "id": "G004",
+        "name": "Remove a station"
+      },
+      {
+        "id": "G005",
+        "name": "View station details"
+      },
+      {
+        "id": "G006",
+        "name": "Open a station's homepage"
+      },
+      {
+        "id": "G007",
+        "name": "Record the stream"
+      },
+      {
+        "id": "G008",
+        "name": "View the played-track history"
+      },
+      {
+        "id": "G009",
+        "name": "Set a radio alarm"
+      },
+      {
+        "id": "G010",
+        "name": "Import favourite stations"
+      },
+      {
+        "id": "G011",
+        "name": "Cast a station"
+      },
+      {
+        "id": "G012",
+        "name": "Control playback"
+      },
+      {
+        "id": "G013",
+        "name": "Adjust the streaming buffer"
+      },
+      {
+        "id": "G014",
+        "name": "Restrict playback"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F007",
+        "name": "Download for offline use"
+      },
+      {
+        "id": "F009",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F010",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

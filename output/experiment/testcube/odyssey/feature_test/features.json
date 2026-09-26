@@ -1,0 +1,507 @@
+{
+  "app": "Odyssey",
+  "source": "guide",
+  "url": "Official Odyssey repository documentation and F-Droid/store listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-33 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the music library",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap on 'Browse' in the navigation bar",
+        "Select 'Browse the music library'"
+      ],
+      "keywords": [
+        "browse",
+        "music",
+        "library",
+        "album"
+      ],
+      "nav_hints": [
+        "albums",
+        "browse",
+        "music"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "grant the media permission"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Browse all tracks",
+      "description": "Open the \"All tracks\"/Tracks tab",
+      "actions": [
+        "Tap on the 'All tracks' tab in the top navigation bar.",
+        "Select the 'Tracks' tab from the dropdown menu.",
+        "Scroll through the alphabetical list of tracks until the desired track is visible."
+      ],
+      "keywords": [
+        "browse",
+        "all",
+        "tracks",
+        "tab"
+      ],
+      "nav_hints": [
+        "all tracks",
+        "browse",
+        "all"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the \"All tracks\"/Tracks tab",
+        "scroll the alphabetical list"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Browse the file system",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "Tap on 'Files' in the navigation drawer",
+        "Tap on 'Browse' to open the file browser"
+      ],
+      "keywords": [
+        "browse",
+        "file",
+        "system",
+        "browser"
+      ],
+      "nav_hints": [
+        "files",
+        "browse",
+        "file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"Files\"/the file browser"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Control playback",
+      "description": "Drag up the now-playing bar",
+      "actions": [
+        "Tap on the now-playing bar at the bottom of the screen",
+        "Drag up the now-playing bar to adjust the playback controls",
+        "Release the now-playing bar to finalize the adjustment"
+      ],
+      "keywords": [
+        "control",
+        "playback",
+        "full",
+        "player"
+      ],
+      "nav_hints": [
+        "control",
+        "playback",
+        "full"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Drag up the now-playing bar",
+        "use play/pause, previous and next"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "View",
+      "description": "Open the full player",
+      "actions": [
+        "Tap on the 'queue/playlist view' option in the navigation hints.",
+        "Select the 'Open the full player' option from the navigation hints.",
+        "Tap on the 'queue/playlist view' option in the navigation hints.",
+        "Select the 'Open the full player' option from the navigation hints.",
+        "Tap on the 'queue/playlist view' option in the navigation hints."
+      ],
+      "keywords": [
+        "edit",
+        "play",
+        "queue",
+        "full"
+      ],
+      "nav_hints": [
+        "edit",
+        "play",
+        "queue"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the full player",
+        "switch to the queue/playlist view"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Clear the play queue",
+      "description": "Open the full player or the queue view",
+      "actions": [
+        "Open the full player or the queue view",
+        "Tap the overflow menu",
+        "Select 'Clear playlist'"
+      ],
+      "keywords": [
+        "clear",
+        "play",
+        "queue",
+        "full"
+      ],
+      "nav_hints": [
+        "clear playlist",
+        "clear",
+        "play"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the full player or the queue view",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Browse",
+      "description": "Open the \"Playlists\" tab",
+      "actions": [
+        "Open the \"Playlists\" tab",
+        "tap a playlist to see its tracks"
+      ],
+      "keywords": [
+        "browse",
+        "play",
+        "saved",
+        "playlists"
+      ],
+      "nav_hints": [
+        "playlists",
+        "browse",
+        "play"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G008",
+      "name": "Create a bookmark",
+      "description": "While playing",
+      "actions": [
+        "Tap on the full player or the overflow menu",
+        "Select 'Create bookmark'",
+        "Enter the bookmark name",
+        "Tap 'Save' to confirm the bookmark"
+      ],
+      "keywords": [
+        "create",
+        "bookmark",
+        "resume",
+        "audiobook"
+      ],
+      "nav_hints": [
+        "create bookmark",
+        "create",
+        "bookmark"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "While playing",
+        "open the full player or the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Delete a bookmark",
+      "description": "Open the Bookmarks view",
+      "actions": [
+        "Open the Bookmarks view",
+        "Scroll to the bookmark you want to delete",
+        "Long-press the bookmark",
+        "Select the delete option from the context menu",
+        "Confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "bookmark",
+        "bookmarks",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "bookmark"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Bookmarks view",
+        "long-press the bookmark"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Jump",
+      "description": "Long-press a track (or open the player overflow menu)",
+      "actions": [
+        "Long-press a track in the music library",
+        "Tap 'Show album' in the overflow menu",
+        "Select the desired album from the list",
+        "Tap the 'Jump' option in the album view",
+        "Confirm the jump to the album by tapping the album name"
+      ],
+      "keywords": [
+        "jump",
+        "track",
+        "album",
+        "artist"
+      ],
+      "nav_hints": [
+        "show album",
+        "show artist",
+        "jump"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press a track (or open the player overflow menu)",
+        "tap \"Show album\" or \"Show artist\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Download artwork",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' icon in the app's main menu.",
+        "Scroll down to the 'Artwork' section in the Settings menu.",
+        "Select the 'Download artwork' option from the 'Artwork' section."
+      ],
+      "keywords": [
+        "download",
+        "artwork",
+        "artists",
+        "albums"
+      ],
+      "nav_hints": [
+        "download",
+        "artwork",
+        "artists"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "the artwork section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Restrict artwork downloads",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll",
+        "Select",
+        "the artwork section",
+        "Scroll",
+        "Select"
+      ],
+      "keywords": [
+        "restrict",
+        "artwork",
+        "downloads",
+        "wi-fi"
+      ],
+      "nav_hints": [
+        "restrict",
+        "artwork",
+        "downloads"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "the artwork section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Add the Odyssey home",
+      "description": "Long-press an empty area of the Android home screen",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "Tap Widgets",
+        "Scroll down to find and select the Odyssey app",
+        "Tap Odyssey",
+        "Select Add the Odyssey home",
+        "Tap Add"
+      ],
+      "keywords": [
+        "add",
+        "odyssey",
+        "home",
+        "widget"
+      ],
+      "nav_hints": [
+        "add",
+        "odyssey",
+        "home"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Open the system equaliser",
+      "description": "Open the navigation drawer or the player overflow menu",
+      "actions": [
+        "Open the navigation drawer or the player overflow menu",
+        "tap the equaliser entry"
+      ],
+      "keywords": [
+        "system",
+        "equaliser",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "system",
+        "equaliser"
+      ],
+      "source": "guide"
+    }
+  ],
+  "enriched_features": [
+    "Browse the music library",
+    "Browse all tracks",
+    "Browse the file system",
+    "Control playback",
+    "View",
+    "Clear the play queue",
+    "Create a bookmark",
+    "Delete a bookmark",
+    "Jump",
+    "Download artwork",
+    "Restrict artwork downloads",
+    "Add the Odyssey home"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/odyssey/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/odyssey/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 10,
+    "both": [
+      {
+        "guide_id": "G004",
+        "guide_name": "Control playback",
+        "readme_id": "F009",
+        "readme_name": "Playback controls",
+        "name_similarity": 0.333
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse the music library"
+      },
+      {
+        "id": "G002",
+        "name": "Browse all tracks"
+      },
+      {
+        "id": "G003",
+        "name": "Browse the file system"
+      },
+      {
+        "id": "G005",
+        "name": "View"
+      },
+      {
+        "id": "G006",
+        "name": "Clear the play queue"
+      },
+      {
+        "id": "G007",
+        "name": "Browse"
+      },
+      {
+        "id": "G008",
+        "name": "Create a bookmark"
+      },
+      {
+        "id": "G009",
+        "name": "Delete a bookmark"
+      },
+      {
+        "id": "G010",
+        "name": "Jump"
+      },
+      {
+        "id": "G011",
+        "name": "Download artwork"
+      },
+      {
+        "id": "G012",
+        "name": "Restrict artwork downloads"
+      },
+      {
+        "id": "G013",
+        "name": "Add the Odyssey home"
+      },
+      {
+        "id": "G014",
+        "name": "Open the system equaliser"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F006",
+        "name": "Search"
+      },
+      {
+        "id": "F007",
+        "name": "Create or open a playlist"
+      },
+      {
+        "id": "F008",
+        "name": "Download for offline use"
+      },
+      {
+        "id": "F010",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

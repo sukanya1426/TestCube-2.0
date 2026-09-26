@@ -1,0 +1,508 @@
+{
+  "app": "Amaze File Manager",
+  "source": "guide",
+  "url": "Official Amaze File Manager repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-46 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse internal storage",
+      "description": "Open the app",
+      "actions": [
+        "Tap on the hamburger icon to open the navigation drawer",
+        "Select 'Browse internal storage' from the navigation drawer",
+        "Tap on the 'Internal' option to proceed",
+        "Tap on the 'Storage' option to view the internal storage",
+        "Select the desired folder or file to browse"
+      ],
+      "keywords": [
+        "browse",
+        "internal",
+        "storage",
+        "card"
+      ],
+      "nav_hints": [
+        "browse",
+        "internal",
+        "storage"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "open the navigation drawer (hamburger icon)"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Copy files",
+      "description": "Long-press the item(s) to select them",
+      "actions": [
+        "Open the Amaze File Manager app",
+        "Navigate to the folder containing the files you want to copy",
+        "Long-press the item(s) to select them",
+        "Tap the copy icon in the contextual toolbar",
+        "Select the destination folder where you want to copy the files",
+        "Tap the 'Copy' option in the contextual menu"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item(s) to select them",
+        "tap the copy icon in the contextual toolbar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Delete files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Open the Amaze File Manager app",
+        "Navigate to the folder containing the files you want to delete",
+        "Long-press the item(s) you want to delete",
+        "Tap the delete (bin) icon",
+        "Confirm the deletion by tapping 'Delete'"
+      ],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item(s)",
+        "tap the delete (bin) icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Run a deep search",
+      "description": "Tap the search icon",
+      "actions": [
+        "Tap the search icon",
+        "Enter the query text",
+        "Press the search button"
+      ],
+      "keywords": [
+        "run",
+        "deep",
+        "search",
+        "across"
+      ],
+      "nav_hints": [
+        "run",
+        "deep",
+        "search"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the search icon",
+        "type the query"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Show",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "toggle \"Show hidden files\""
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G006",
+      "name": "View file properties",
+      "description": "Long-press the file",
+      "actions": [
+        "Long-press the file",
+        "Tap the overflow menu",
+        "Select 'Properties' from the overflow menu",
+        "Review the file properties in the dialog",
+        "Close the properties dialog"
+      ],
+      "keywords": [
+        "file",
+        "properties",
+        "long-press",
+        "overflow"
+      ],
+      "nav_hints": [
+        "properties",
+        "file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the file",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Extract an archive",
+      "description": "Tap an archive file (ZIP, RAR, TAR, TAR.GZ, 7Z)",
+      "actions": [
+        "Tap an archive file (ZIP, RAR, TAR, TAR.GZ, 7Z)",
+        "The archive viewer opens",
+        "Select the 'Extract' option from the menu",
+        "Choose the desired extraction location",
+        "Confirm the extraction process"
+      ],
+      "keywords": [
+        "extract",
+        "archive",
+        "file",
+        "zip"
+      ],
+      "nav_hints": [
+        "extract",
+        "archive"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap an archive file (ZIP, RAR, TAR, TAR.GZ, 7Z)",
+        "the archive viewer opens"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Decrypt a file",
+      "description": "Tap the encrypted (.aze) file",
+      "actions": [
+        "Tap the encrypted (.aze) file",
+        "Enter the password or authenticate with the fingerprint",
+        "Tap the 'Decrypt' button",
+        "Wait for the decryption process to complete",
+        "Verify the decrypted file by opening it"
+      ],
+      "keywords": [
+        "decrypt",
+        "file",
+        "encrypted",
+        "aze"
+      ],
+      "nav_hints": [
+        "decrypt",
+        "file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the encrypted (.aze) file",
+        "enter the password or authenticate with the fingerprint"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Edit",
+      "description": "Open the drawer",
+      "actions": [
+        "Tap the drawer icon in the top left corner of the screen.",
+        "Long-press the bookmark to edit it.",
+        "Select the 'edit' option from the dropdown menu.",
+        "Enter the desired changes to the bookmark.",
+        "Tap the checkmark or save icon to confirm the changes."
+      ],
+      "keywords": [
+        "edit",
+        "remove",
+        "bookmark",
+        "drawer"
+      ],
+      "nav_hints": [
+        "edit",
+        "remove",
+        "bookmark"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the drawer",
+        "long-press the bookmark"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Open the app manager",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Tap the navigation drawer icon to open the navigation drawer",
+        "Scroll to the 'Apps' section in the navigation drawer",
+        "Tap 'Apps' to open the app manager"
+      ],
+      "keywords": [
+        "manager",
+        "navigation",
+        "drawer",
+        "apps"
+      ],
+      "nav_hints": [
+        "apps",
+        "manager"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"Apps\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Start the built-in FTP",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "Tap on 'FTP' in the navigation drawer",
+        "Tap 'Start' to begin the built-in FTP"
+      ],
+      "keywords": [
+        "start",
+        "built-in",
+        "ftp",
+        "server"
+      ],
+      "nav_hints": [
+        "ftp",
+        "start",
+        "built-in"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"FTP\"/FTP server"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Connect over SFTP/SSH",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "Tap the '+' beside the network section",
+        "Select 'SCP/SFTP connection'",
+        "Enter the SFTP/SSH server address",
+        "Enter the username",
+        "Enter the password"
+      ],
+      "keywords": [
+        "connect",
+        "over",
+        "sftp",
+        "ssh"
+      ],
+      "nav_hints": [
+        "scp/sftp connection",
+        "connect",
+        "over"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the drawer",
+        "tap the \"+\" beside the network section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "View recent files",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "Tap 'Recent files' on the home screen",
+        "Select the desired file from the recent files list"
+      ],
+      "keywords": [
+        "recent",
+        "files",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "recent files",
+        "recent",
+        "files"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"Recent files\"/the recent section on the home screen"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Change the accent",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll down to find 'Appearance'",
+        "Tap 'Appearance'",
+        "Tap 'Accent'",
+        "Select a new accent color",
+        "Tap 'Done'"
+      ],
+      "keywords": [
+        "change",
+        "accent",
+        "colour",
+        "scheme"
+      ],
+      "nav_hints": [
+        "change",
+        "accent",
+        "colour"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap the colours entry"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Browse internal storage",
+    "Copy files",
+    "Delete files",
+    "Run a deep search",
+    "View file properties",
+    "Extract an archive",
+    "Decrypt a file",
+    "Edit",
+    "Open the app manager",
+    "Start the built-in FTP",
+    "Connect over SFTP/SSH",
+    "View recent files",
+    "Change the accent"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/amaze/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/amaze/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 7,
+    "both": [
+      {
+        "guide_id": "G004",
+        "guide_name": "Run a deep search",
+        "readme_id": "F006",
+        "readme_name": "Search",
+        "name_similarity": 0.333
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse internal storage"
+      },
+      {
+        "id": "G002",
+        "name": "Copy files"
+      },
+      {
+        "id": "G003",
+        "name": "Delete files"
+      },
+      {
+        "id": "G005",
+        "name": "Show"
+      },
+      {
+        "id": "G006",
+        "name": "View file properties"
+      },
+      {
+        "id": "G007",
+        "name": "Extract an archive"
+      },
+      {
+        "id": "G008",
+        "name": "Decrypt a file"
+      },
+      {
+        "id": "G009",
+        "name": "Edit"
+      },
+      {
+        "id": "G010",
+        "name": "Open the app manager"
+      },
+      {
+        "id": "G011",
+        "name": "Start the built-in FTP"
+      },
+      {
+        "id": "G012",
+        "name": "Connect over SFTP/SSH"
+      },
+      {
+        "id": "G013",
+        "name": "View recent files"
+      },
+      {
+        "id": "G014",
+        "name": "Change the accent"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F007",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

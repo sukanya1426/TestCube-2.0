@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_051533",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          758,
+          1068
+        ],
+        [
+          926,
+          1194
+        ]
+      ],
+      "resource_id": "android:id/button1",
+      "checked": false,
+      "text": "OK",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "168*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button1[text]OK[desc]None[enabled,,]",
+      "view_str": "d4f2e2e7923ba38f0c040c37a41af3d2",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button1",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=758,1068,926,1194>OK</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "e08263d086997e1fe6527a03ab39aa1c",
+  "stop_state": "b797d6df4a67ce94b4d0613b5835cac8",
+  "event_str": "CustomTouchEvent(state=e08263d086997e1fe6527a03ab39aa1c, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK))"
+}

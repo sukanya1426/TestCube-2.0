@@ -1,0 +1,752 @@
+{
+  "application": "Fossify Clock",
+  "total_features": 26,
+  "covered_features": 4,
+  "uncovered_features": 17,
+  "partial_features": 5,
+  "coverage": 0.15384615384615385,
+  "coverage_percentage": 15.38,
+  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifyclock",
+  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyclock/README.md",
+  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyclock/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "View the current time on the clock tab",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because the current time is not fully displayed.",
+        "touch MainActivity/TextView-Clock"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT002",
+      "name": "Add a time zone to the clock",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because the time zones are not fully managed.",
+        "touch MainActivity/TextView-Clock"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT003",
+      "name": "Remove or reorder time zones",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Partial because the time zones are not fully managed.",
+        "touch MainActivity/TextView-Clock"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT004",
+      "name": "Open the full-screen (screensaver) clock",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "All steps in gold path completed.",
+        "touch CustomTouchEvent(state=574adc003d9f8ff478c66398e6730ffc, x=80, y=1100)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT005",
+      "name": "Create an alarm",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Steps up to setting the alarm time completed.",
+        "touch CustomTouchEvent(state=ace9ba9d6433ab7181388b0c08c7626f, x=255, y=1102)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT006",
+      "name": "Enable or disable an alarm",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT007",
+      "name": "Edit an alarm",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.8,
+      "evidence": [
+        "Edited alarm time and label; evidence: changed text.",
+        "touch CustomTouchEvent(state=3945eab62dd50a392bb12c407d1b4cc6, x=255, y=1100)",
+        "Completed by later features: G002"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT008",
+      "name": "Delete an alarm",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.5,
+      "evidence": [
+        "Long-press action not observed; evidence: no delete bin interaction.",
+        "touch CustomTouchEvent(state=a36e59140ccf15c609dc7c3450a93505, x=258, y=1099)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Set the alarm sound and vibration",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Snooze or dismiss a ringing alarm",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Snooze option selected, but duration not extended.",
+        "touch CustomTouchEvent(state=88c36b89fd1591540237c9a5a6b200a9, x=255, y=1102)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.3
+    },
+    {
+      "id": "GT011",
+      "name": "Configure the snooze duration and maximum ring time",
+      "status": "covered",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "Settings opened, snooze duration configured.",
+        "touch CustomTouchEvent(state=a1a21e8964c03799bb8b5b8680d9f2f9, x=960, y=1772)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT012",
+      "name": "Make the alarm volume increase gradually",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Use the stopwatch",
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.6,
+      "evidence": [
+        "Start and stop actions missing; reset not attempted.",
+        "touch CustomTouchEvent(state=61db1d91852528c3460874d30f6d0295, x=420, y=1100)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.6
+    },
+    {
+      "id": "GT014",
+      "name": "Sort the recorded stopwatch laps",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "Sort control not tapped; laps not confirmed.",
+        "touch CustomTouchEvent(state=bb0bcbf91d955ddab9e4455827d0010f, x=480, y=1839)"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT015",
+      "name": "Create a timer",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "LLM batch omitted this feature."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Label a timer and set its sound",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards labeling timer or setting sound."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Pause, resume, reset or delete a timer",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards pausing, resuming, resetting, or deleting a timer."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Add the digital clock home screen widget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "No steps towards adding a clock widget to the home screen."
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Set the time format",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.3,
+      "evidence": [
+        "Journal lacks relevant actions for setting time format.",
+        "none"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Set the first day of the week",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.2,
+      "evidence": [
+        "Journal lacks relevant actions for setting first day of the week.",
+        "none"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Keep the screen on in the clock tab",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.4,
+      "evidence": [
+        "Journal lacks relevant actions for keeping the screen on in the clock tab.",
+        "none"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Choose which tabs are visible",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Make alarms ignore silent mode",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Customise the app colours and theme",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "steps not aligned with gold",
+        "one action"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Change the app language and font size",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no actions related to language or font size"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "View the about screen, FAQ and licences",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [
+        "no actions related to about screen, FAQ, or licenses"
+      ],
+      "matched_path": null,
+      "matcher": "vlm",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "View the current time on the clock tab",
+      "journal_id": "G001",
+      "journal_name": "View the current time",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Add a time zone to the clock",
+      "journal_id": "G002",
+      "journal_name": "Add a time zone",
+      "name_similarity": 0.6,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Remove or reorder time zones",
+      "journal_id": "G003",
+      "journal_name": "Remove",
+      "name_similarity": 0.545,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Open the full-screen (screensaver) clock",
+      "journal_id": "G004",
+      "journal_name": "Open the full-screen clock",
+      "name_similarity": 0.833,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Create an alarm",
+      "journal_id": "G005",
+      "journal_name": "Create an alarm",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Enable or disable an alarm",
+      "journal_id": "G006",
+      "journal_name": "Enable",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Edit an alarm",
+      "journal_id": "G007",
+      "journal_name": "Edit an alarm",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Delete an alarm",
+      "journal_id": "G008",
+      "journal_name": "Delete an alarm",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Set the alarm sound and vibration",
+      "journal_id": "G009",
+      "journal_name": "Set the alarm sound",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Snooze or dismiss a ringing alarm",
+      "journal_id": "G010",
+      "journal_name": "Snooze",
+      "name_similarity": 0.417,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Configure the snooze duration and maximum ring time",
+      "journal_id": "G011",
+      "journal_name": "Configure the snooze duration",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Make the alarm volume increase gradually",
+      "journal_id": "G012",
+      "journal_name": "Make the alarm volume",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Use the stopwatch",
+      "journal_id": "G013",
+      "journal_name": "Use the stopwatch",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Sort the recorded stopwatch laps",
+      "journal_id": "G014",
+      "journal_name": "Sort the recorded stopwatch",
+      "name_similarity": 0.8,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Create a timer",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Label a timer and set its sound",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Pause, resume, reset or delete a timer",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Add the digital clock home screen widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Set the time format",
+      "journal_id": "F015",
+      "journal_name": "Set the timer duration",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Set the first day of the week",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Keep the screen on in the clock tab",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.429,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Choose which tabs are visible",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.059,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Make alarms ignore silent mode",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.133,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Customise the app colours and theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.188,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Change the app language and font size",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "View the about screen, FAQ and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.222,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 15,
+    "false_negatives": 11,
+    "false_positives": 2,
+    "precision": 0.8823529411764706,
+    "recall": 0.5769230769230769,
+    "f1": 0.6976744186046512,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 16,
+    "ground_truth_count": 26,
+    "feature_completeness_ratio": 0.615,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "ai",
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 9,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.25384615384615383,
+  "weighted_coverage_percentage": 25.38,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

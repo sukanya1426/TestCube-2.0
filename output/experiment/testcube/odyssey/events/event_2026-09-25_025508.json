@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_025508",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "android",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          902
+        ],
+        [
+          1010,
+          1028
+        ]
+      ],
+      "resource_id": "android:id/aerr_close",
+      "checked": false,
+      "text": "Close app",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "940*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/aerr_close[text]Close app[desc]None[enabled,,]",
+      "view_str": "59f10b84872607055abe92b226c71322",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/aerr_close",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=70,902,1010,1028>Close app</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "ff67637976f532b9afd60764d061ba24",
+  "stop_state": "7fb3a4fd90b3a1262c526d8d44d4b6d8",
+  "event_str": "CustomTouchEvent(state=ff67637976f532b9afd60764d061ba24, view=59f10b84872607055abe92b226c71322(OdysseyMainActivity/Button-Close app))"
+}

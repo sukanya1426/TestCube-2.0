@@ -1,0 +1,2019 @@
+{
+  "app": "Material Files",
+  "started_at": "2026-09-25 01:43:57",
+  "finished_at": "2026-09-25 01:46:35",
+  "total_features": 14,
+  "covered": 0,
+  "partial": 0,
+  "dropped": 2,
+  "not_present": 0,
+  "blocked": 0,
+  "coverage": 0.0,
+  "weighted_coverage": 0.0,
+  "unscored_discovered": 0,
+  "feature_source": "guide",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 3,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse local storage"
+      },
+      {
+        "id": "G002",
+        "name": "Copy files"
+      },
+      {
+        "id": "G003",
+        "name": "Delete items"
+      },
+      {
+        "id": "G004",
+        "name": "Sort the file list"
+      },
+      {
+        "id": "G005",
+        "name": "Show"
+      },
+      {
+        "id": "G006",
+        "name": "Create an archive"
+      },
+      {
+        "id": "G007",
+        "name": "Copy the path of"
+      },
+      {
+        "id": "G008",
+        "name": "View an image"
+      },
+      {
+        "id": "G009",
+        "name": "Bookmark a directory"
+      },
+      {
+        "id": "G010",
+        "name": "Connect"
+      },
+      {
+        "id": "G011",
+        "name": "Connect"
+      },
+      {
+        "id": "G012",
+        "name": "Configure the FTP server"
+      },
+      {
+        "id": "G013",
+        "name": "Change the theme"
+      },
+      {
+        "id": "G014",
+        "name": "Configure the standard directories"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Search"
+      },
+      {
+        "id": "F003",
+        "name": "Change app settings"
+      }
+    ]
+  },
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/materialfiles/guide_features.json",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse local storage",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap the hamburger icon to open the navigation drawer",
+        "Select 'Browse' from the navigation drawer",
+        "Select 'Local' from the navigation drawer",
+        "Select 'Storage' from the navigation drawer"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "browse",
+        "local",
+        "storage",
+        "navigation"
+      ],
+      "nav_hints": [
+        "browse",
+        "local",
+        "storage"
+      ],
+      "source": "guide",
+      "status": "dropped",
+      "reason": "Stuck in a repeating screen loop.",
+      "attempts": 1,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the app",
+        "Tap the hamburger icon to open the navigation drawer",
+        "Select 'Browse' from the navigation drawer",
+        "Select 'Local' from the navigation drawer",
+        "Select 'Storage' from the navigation drawer"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b8779817c6843ac06e121dd55959391c, view=90e000b992fa2cbe1fcbe7914822932e(FileListActivity/Button-OK))",
+          "reason": "Granting access is necessary to proceed with browsing local storage. Selecting 'OK' allows the app to manage all files, which is required to continue with the feature testing.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "me.zhanghai.android.files/.filelist.FileListActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014411.png",
+          "state": "b8779817c6843ac06e121dd55959391c",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button1",
+            "text": "OK",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button1|ok|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))",
+          "reason": "label overlap ['storage']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014426.png",
+          "state": "6fb9964ba7b151c9953e45f27d1f59c2",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+          "reason": "label overlap ['storage']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014438.png",
+          "state": "6fb9964ba7b151c9953e45f27d1f59c2",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=85f6502dd64da8f20b0cfcfac384e43d(SpaActivity/View-))",
+          "reason": "label overlap ['storage']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014450.png",
+          "state": "9de87d11a2efe4600a9d47d4db5725ca",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+          "reason": "label overlap ['storage']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014503.png",
+          "state": "6fb9964ba7b151c9953e45f27d1f59c2",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/.droidbot/temp/screen_2026-09-25_014516.png",
+          "state": "9de87d11a2efe4600a9d47d4db5725ca",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Allow access to manage all files",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|allow access to manage all files|textview"
+        }
+      ],
+      "completion_ratio": 0.0,
+      "completion_source": "executed"
+    },
+    {
+      "id": "G002",
+      "name": "Copy files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s) you want to copy",
+        "Tap the copy icon in the contextual toolbar",
+        "Select the destination folder where you want to copy the files",
+        "Tap the paste icon in the contextual toolbar to complete the copy operation"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "status": "dropped",
+      "reason": "Could not restart the app for this feature.",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Long-press the item(s) you want to copy",
+        "Tap the copy icon in the contextual toolbar",
+        "Select the destination folder where you want to copy the files",
+        "Tap the paste icon in the contextual toolbar to complete the copy operation"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0,
+      "completion_source": "executed"
+    },
+    {
+      "id": "G003",
+      "name": "Delete items",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the items you want to delete",
+        "Long-press the item(s) you want to delete",
+        "Tap the delete icon",
+        "Confirm the deletion if prompted"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "delete",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the items you want to delete",
+        "Long-press the item(s) you want to delete",
+        "Tap the delete icon",
+        "Confirm the deletion if prompted"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G004",
+      "name": "Sort the file list",
+      "description": "Tap the overflow menu (three dots)",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Directories first'",
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Name'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "sort by",
+        "directories first",
+        "sort"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Directories first'",
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Name'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G005",
+      "name": "Show",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "Scroll to the 'Show' option",
+        "Select 'Show'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the overflow menu",
+        "Scroll to the 'Show' option",
+        "Select 'Show'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G006",
+      "name": "Create an archive",
+      "description": "Long-press the item(s) to include",
+      "actions": [
+        "Long-press the item(s) to include",
+        "Tap the overflow menu",
+        "Select 'Create'",
+        "Select 'Archive'",
+        "Tap 'Create Archive'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "create",
+        "archive",
+        "long-press",
+        "include"
+      ],
+      "nav_hints": [
+        "compress",
+        "add to archive",
+        "create"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Long-press the item(s) to include",
+        "Tap the overflow menu",
+        "Select 'Create'",
+        "Select 'Archive'",
+        "Tap 'Create Archive'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G007",
+      "name": "Copy the path of",
+      "description": "Long-press the item",
+      "actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the file you want to copy the path of",
+        "Long-press the item",
+        "Tap the overflow menu",
+        "Select 'Copy Path'",
+        "The app will display the path of the selected file"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "copy",
+        "path",
+        "file",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy path",
+        "copy",
+        "path"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the file you want to copy the path of",
+        "Long-press the item",
+        "Tap the overflow menu",
+        "Select 'Copy Path'",
+        "The app will display the path of the selected file"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G008",
+      "name": "View an image",
+      "description": "Tap an image file",
+      "actions": [
+        "Tap an image file",
+        "The image viewer opens",
+        "Select the image",
+        "The image viewer displays the image"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "image",
+        "built-in",
+        "viewer",
+        "file"
+      ],
+      "nav_hints": [
+        "image",
+        "built-in",
+        "viewer"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap an image file",
+        "The image viewer opens",
+        "Select the image",
+        "The image viewer displays the image"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G009",
+      "name": "Bookmark a directory",
+      "description": "Navigate to the folder",
+      "actions": [
+        "Navigate to the folder",
+        "Tap the overflow menu",
+        "Select 'Bookmark'",
+        "Confirm the bookmark action"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "bookmark",
+        "directory",
+        "navigate",
+        "folder"
+      ],
+      "nav_hints": [
+        "add bookmark",
+        "bookmark",
+        "directory"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Navigate to the folder",
+        "Tap the overflow menu",
+        "Select 'Bookmark'",
+        "Confirm the bookmark action"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G010",
+      "name": "Connect",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Tap the navigation drawer icon in the top left corner of the Material Files app.",
+        "Select 'Add server' from the navigation drawer menu.",
+        "Enter the server details and tap 'Connect' to establish the connection."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "connect",
+        "ftp",
+        "ftps",
+        "server"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "ftp"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the navigation drawer icon in the top left corner of the Material Files app.",
+        "Select 'Add server' from the navigation drawer menu.",
+        "Enter the server details and tap 'Connect' to establish the connection."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G011",
+      "name": "Connect",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "Tap 'Add server'",
+        "Select 'WebDAV'",
+        "Enter server details",
+        "Tap 'Connect'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "connect",
+        "webdav",
+        "server",
+        "drawer"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "webdav"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the drawer",
+        "Tap 'Add server'",
+        "Select 'WebDAV'",
+        "Enter server details",
+        "Tap 'Connect'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G012",
+      "name": "Configure the FTP server",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Tap the FTP server section",
+        "Enter FTP server details",
+        "Tap the 'Save' button",
+        "Verify the FTP server configuration"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "configure",
+        "ftp",
+        "server",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "ftp",
+        "server"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open Settings",
+        "Tap the FTP server section",
+        "Enter FTP server details",
+        "Tap the 'Save' button",
+        "Verify the FTP server configuration"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G013",
+      "name": "Change the theme",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Tap 'Appearance'",
+        "Select 'Theme'",
+        "Tap 'Dark Theme'",
+        "Tap 'Done'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open Settings",
+        "Tap 'Appearance'",
+        "Select 'Theme'",
+        "Tap 'Dark Theme'",
+        "Tap 'Done'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G014",
+      "name": "Configure the standard directories",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' icon",
+        "Scroll down to find and select 'Standard directories'",
+        "Tap on 'Standard directories' to open the configuration screen",
+        "Enter the desired path for the standard directories",
+        "Tap on 'Save' to confirm the changes"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "configure",
+        "standard",
+        "directories",
+        "shown"
+      ],
+      "nav_hints": [
+        "standard directories",
+        "configure",
+        "standard"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Settings' icon",
+        "Scroll down to find and select 'Standard directories'",
+        "Tap on 'Standard directories' to open the configuration screen",
+        "Enter the desired path for the standard directories",
+        "Tap on 'Save' to confirm the changes"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    }
+  ],
+  "session_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/feature_test/session.json",
+  "log_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles/feature_test/log.md",
+  "exploration_bank": [
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b8779817c6843ac06e121dd55959391c, view=90e000b992fa2cbe1fcbe7914822932e(FileListActivity/Button-OK))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "me.zhanghai.android.files/.filelist.FileListActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b8779817c6843ac06e121dd55959391c, view=90e000b992fa2cbe1fcbe7914822932e(FileListActivity/Button-OK))  Granting access is necessary to proceed with browsing local storage. Selecting 'OK' allows the app to manage all files, which is required to continue with the feature testing. me.zhanghai.android.files/.filelist.FileListActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))  label overlap ['storage'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))  label overlap ['storage'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=85f6502dd64da8f20b0cfcfac384e43d(SpaActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=85f6502dd64da8f20b0cfcfac384e43d(SpaActivity/View-))  label overlap ['storage'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=6fb9964ba7b151c9953e45f27d1f59c2, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))  label overlap ['storage'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=9de87d11a2efe4600a9d47d4db5725ca, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))  Loop detected; trying an untried widget (backtrack 1/3). com.android.settings/.spa.SpaActivity  touch"
+    }
+  ],
+  "online_coverage": {
+    "covered": 0,
+    "total": 14,
+    "coverage": 0.0,
+    "partial": 0,
+    "weighted_coverage": 0.0,
+    "dropped": 2,
+    "not_present": 0,
+    "explanation": "Feature coverage is fully covered / total. Weighted coverage is the mean per-feature completion ratio so partial gold steps count."
+  },
+  "shared_flow_reuses": [],
+  "run_cost": {
+    "wall_clock_seconds": 171.09,
+    "llm_calls": {
+      "feature_extraction": 0,
+      "widget_scoring": 1,
+      "context_retrieval": 0,
+      "hybrid_discovery": 0,
+      "other": 0
+    },
+    "llm_calls_total": 1,
+    "vlm_fallbacks": 1,
+    "sparse_screens": [],
+    "mechanisms": [
+      {
+        "name": "non_idempotent",
+        "detail": "blocked touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview",
+        "t": 55.05221366882324
+      },
+      {
+        "name": "non_idempotent",
+        "detail": "blocked touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview",
+        "t": 67.66049003601074
+      },
+      {
+        "name": "non_idempotent",
+        "detail": "blocked touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview",
+        "t": 79.9663016796112
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 92.14020705223083
+      }
+    ],
+    "text_inputs": [],
+    "context_calls": [],
+    "field_fills": {
+      "credential": 0,
+      "vlm": 0,
+      "unresolved": 0,
+      "optional-blank": 0
+    },
+    "field_resolutions": []
+  },
+  "offline_coverage": {
+    "covered": 0,
+    "total": 42,
+    "coverage": 0.0,
+    "partial": 0,
+    "exercised": 0,
+    "coverage_formula": "covered / total",
+    "weighted_coverage": 0.0,
+    "weighted_coverage_percentage": 0.0,
+    "explanation": "Offline coverage is an LLM/VLM semantic judge vs ground-truth JSON. Feature Coverage = COVERED / Total. Weighted Coverage = mean(completion_ratio) so partial gold steps still count. Step order is not required. Later exploration can complete an earlier partial feature.",
+    "features": [
+      {
+        "id": "GT001",
+        "name": "Browse local storage",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal indicates no navigation or folder interaction.",
+          "touch FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT002",
+        "name": "Create a new folder",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal lacks folder creation steps.",
+          "intent intent=am start me.zhanghai.android.files"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT003",
+        "name": "Create a new empty file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal lacks file creation steps.",
+          "intent intent=am start me.zhanghai.android.files"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT004",
+        "name": "Copy files and folders",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal shows no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT005",
+        "name": "Move files and folders",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal shows no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT006",
+        "name": "Rename an item",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal shows no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT007",
+        "name": "Delete items",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "steps not aligned with gold",
+          "later SpaActivity/TextView-Allow this",
+          "later SpaActivity/View-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT008",
+        "name": "Select multiple items and use select all",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold",
+          "later SpaActivity/TextView-Allow this",
+          "later SpaActivity/View-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT009",
+        "name": "Search for files",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold",
+          "later SpaActivity/TextView-Allow this",
+          "later SpaActivity/View-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT010",
+        "name": "Sort the file list",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT011",
+        "name": "Remember the sort order per folder",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT012",
+        "name": "Switch between list and grid view",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT013",
+        "name": "Show or hide hidden files",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT014",
+        "name": "View and open an archive",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT015",
+        "name": "Extract an archive",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT016",
+        "name": "Create an archive",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT017",
+        "name": "Open a file with another app",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT018",
+        "name": "Share files",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT019",
+        "name": "Copy the path of a file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions match gold steps"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT020",
+        "name": "View file properties",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions match gold steps"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT021",
+        "name": "Change file permissions, owner and SELinux context (root)",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions match gold steps"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT022",
+        "name": "View an image in the built-in viewer",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold capability"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT023",
+        "name": "Edit a text file in the built-in editor",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold capability"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT024",
+        "name": "Change the text file encoding in the editor",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold capability"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT025",
+        "name": "Bookmark a directory",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT026",
+        "name": "Manage bookmark directories",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT027",
+        "name": "Add a shortcut to a folder on the home screen",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT028",
+        "name": "Connect to an FTP or FTPS server",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to FTP/FTPS server connection."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT029",
+        "name": "Connect to an SFTP server",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to SFTP server connection."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT030",
+        "name": "Connect to an SMB share",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to SMB share connection."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT031",
+        "name": "Connect to a WebDAV server",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT032",
+        "name": "Edit or remove a saved server",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "later SpaActivity/TextView-Allow this"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT033",
+        "name": "Start the built-in FTP server to share files with a computer",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT034",
+        "name": "Configure the FTP server settings",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT035",
+        "name": "Enable root access",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT036",
+        "name": "Show a \"root directory\" entry in the navigation",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT037",
+        "name": "Change the theme and colours",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "No settings or theme actions taken",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT038",
+        "name": "Change the app language",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "No settings or language actions taken",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT039",
+        "name": "Configure the file list behaviour",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "No settings or file list actions taken",
+          "later FileListActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT040",
+        "name": "Configure the standard directories shown in the navigation drawer",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT041",
+        "name": "Configure the storage volumes shown",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT042",
+        "name": "Open the about screen and licences",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No relevant actions found."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      }
+    ],
+    "confusion": [
+      {
+        "ground_truth_id": "GT001",
+        "ground_truth_name": "Browse local storage",
+        "journal_id": "G001",
+        "journal_name": "Browse local storage",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "dropped",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT002",
+        "ground_truth_name": "Create a new folder",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT003",
+        "ground_truth_name": "Create a new empty file",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT004",
+        "ground_truth_name": "Copy files and folders",
+        "journal_id": "G002",
+        "journal_name": "Copy files",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "dropped",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT005",
+        "ground_truth_name": "Move files and folders",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.308,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT006",
+        "ground_truth_name": "Rename an item",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.286,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT007",
+        "ground_truth_name": "Delete items",
+        "journal_id": "G003",
+        "journal_name": "Delete items",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT008",
+        "ground_truth_name": "Select multiple items and use select all",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.176,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT009",
+        "ground_truth_name": "Search for files",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT010",
+        "ground_truth_name": "Sort the file list",
+        "journal_id": "G004",
+        "journal_name": "Sort the file list",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT011",
+        "ground_truth_name": "Remember the sort order per folder",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT012",
+        "ground_truth_name": "Switch between list and grid view",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.143,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT013",
+        "ground_truth_name": "Show or hide hidden files",
+        "journal_id": "G005",
+        "journal_name": "Show",
+        "name_similarity": 0.417,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT014",
+        "ground_truth_name": "View and open an archive",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT015",
+        "ground_truth_name": "Extract an archive",
+        "journal_id": "G006",
+        "journal_name": "Create an archive",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT016",
+        "ground_truth_name": "Create an archive",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 1.0,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT017",
+        "ground_truth_name": "Open a file with another app",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT018",
+        "ground_truth_name": "Share files",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT019",
+        "ground_truth_name": "Copy the path of a file",
+        "journal_id": "G007",
+        "journal_name": "Copy the path of",
+        "name_similarity": 0.75,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT020",
+        "ground_truth_name": "View file properties",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT021",
+        "ground_truth_name": "Change file permissions, owner and SELinux context (root)",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.1,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT022",
+        "ground_truth_name": "View an image in the built-in viewer",
+        "journal_id": "G008",
+        "journal_name": "View an image",
+        "name_similarity": 0.417,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT023",
+        "ground_truth_name": "Edit a text file in the built-in editor",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT024",
+        "ground_truth_name": "Change the text file encoding in the editor",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.286,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT025",
+        "ground_truth_name": "Bookmark a directory",
+        "journal_id": "G009",
+        "journal_name": "Bookmark a directory",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT026",
+        "ground_truth_name": "Manage bookmark directories",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT027",
+        "ground_truth_name": "Add a shortcut to a folder on the home screen",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.214,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT028",
+        "ground_truth_name": "Connect to an FTP or FTPS server",
+        "journal_id": "G010",
+        "journal_name": "Connect",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT029",
+        "ground_truth_name": "Connect to an SFTP server",
+        "journal_id": "G011",
+        "journal_name": "Connect",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT030",
+        "ground_truth_name": "Connect to an SMB share",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT031",
+        "ground_truth_name": "Connect to a WebDAV server",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.364,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT032",
+        "ground_truth_name": "Edit or remove a saved server",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT033",
+        "ground_truth_name": "Start the built-in FTP server to share files with a computer",
+        "journal_id": "G012",
+        "journal_name": "Configure the FTP server",
+        "name_similarity": 0.3,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT034",
+        "ground_truth_name": "Configure the FTP server settings",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.8,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT035",
+        "ground_truth_name": "Enable root access",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.071,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT036",
+        "ground_truth_name": "Show a \"root directory\" entry in the navigation",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.188,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT037",
+        "ground_truth_name": "Change the theme and colours",
+        "journal_id": "G013",
+        "journal_name": "Change the theme",
+        "name_similarity": 0.6,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT038",
+        "ground_truth_name": "Change the app language",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.4,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT039",
+        "ground_truth_name": "Configure the file list behaviour",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.5,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT040",
+        "ground_truth_name": "Configure the standard directories shown in the navigation drawer",
+        "journal_id": "G014",
+        "journal_name": "Configure the standard directories",
+        "name_similarity": 0.571,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT041",
+        "ground_truth_name": "Configure the storage volumes shown",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.286,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT042",
+        "ground_truth_name": "Open the about screen and licences",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.235,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      }
+    ],
+    "feature_inference": {
+      "true_positives": 14,
+      "false_negatives": 28,
+      "false_positives": 0,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "false_not_present": 0,
+      "false_not_present_rate": 0.0,
+      "extracted_count": 14,
+      "ground_truth_count": 42,
+      "feature_completeness_ratio": 0.333,
+      "id_collisions": [],
+      "id_collisions_loud": false,
+      "prf1_withheld": false
+    }
+  },
+  "attempt_summary": {
+    "attempted": 1,
+    "never_attempted": 13,
+    "blocked_then_recovered": 0,
+    "blocked_still": 0
+  },
+  "ground_truth_source": "independent_labeled_set",
+  "ground_truth_addendum": null
+}

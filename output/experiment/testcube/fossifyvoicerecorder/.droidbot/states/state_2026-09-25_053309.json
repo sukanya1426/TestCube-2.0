@@ -1,0 +1,975 @@
+{
+  "tag": "2026-09-25_053309",
+  "state_str": "e9c18f0bbd755dffc68f9b509a886053",
+  "state_str_content_free": "1a8bc06a3e6f7b0f79512579ccb6c4a7",
+  "foreground_activity": "org.fossify.voicerecorder/.activities.MainActivity",
+  "activity_stack": [
+    "org.fossify.voicerecorder/.activities.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.android.chrome/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.apps.photos/com.google.android.libraries.social.mediamonitor.BackgroundThreadNotifierIntentService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "com.android.chrome/org.chromium.content.app.PrivilegedProcessService0",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "org.fossify.voicerecorder/.services.RecorderService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          28,
+          349
+        ],
+        [
+          1052,
+          1507
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1024*1158",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "cc9bc4ace06490d8c6ef9b8d17602ffb",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "898*738",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a444fa3d39b668bd37ac1124dab70cb2",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "898*738",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a18e45249489c966aebc398ca8a00d94",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "898*738",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "5c9d6e224a04f451ab7373764ecb15e0",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/action_bar_root"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "898*738",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "9d9325ec04dffd8598db36b696da885a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        9,
+        18
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/parentPanel",
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "898*738",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.fossify.voicerecorder:id/parentPanel[text]None[desc]None[enabled,,]",
+      "view_str": "77fcaf4726f182df11bac27b07e69253",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]org.fossify.voicerecorder:id/parentPanel"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          691
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/topPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "898*132",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/topPanel[text]None[desc]None[enabled,,]",
+      "view_str": "680faf475631bbd45d207de79916b95a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/topPanel"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          559
+        ],
+        [
+          989,
+          691
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/title_template",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "898*132",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/title_template[text]None[desc]None[enabled,,]",
+      "view_str": "e5e42215fd413e28ebf8c4d850ce4a56",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/title_template"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          154,
+          606
+        ],
+        [
+          647,
+          691
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/alertTitle",
+      "checked": false,
+      "text": "Create new folder",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "493*85",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.voicerecorder:id/alertTitle[text]Create new folder[desc]None[enabled,,]",
+      "view_str": "703f20fdb3ce9080f5974ae09bfc02b6",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.voicerecorder:id/alertTitle",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=154,606,647,691>Create new folder</p>"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          691
+        ],
+        [
+          989,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/customPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 9,
+      "size": "898*406",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/customPanel[text]None[desc]None[enabled,,]",
+      "view_str": "1047ccdb096ab5586af391936b234fa2",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/customPanel"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          691
+        ],
+        [
+          989,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/custom",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "898*406",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/custom[text]None[desc]None[enabled,,]",
+      "view_str": "45ac09cf6f40dd9fde7192b921183a9a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.voicerecorder:id/custom"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          691
+        ],
+        [
+          989,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/dialog_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "898*406",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/dialog_holder[text]None[desc]None[enabled,,]",
+      "view_str": "f880dc6e5360316f960fd854205dc99c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/dialog_holder"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          733
+        ],
+        [
+          947,
+          894
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_path_hint",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "814*161",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/folder_path_hint[text]None[desc]None[enabled,,]",
+      "view_str": "e0e8ffcf95e3799c8bd8aa9ca718ce12",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/folder_path_hint"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          747
+        ],
+        [
+          947,
+          894
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "814*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "1bdfef6afd246e2551e9ec18b1daae6a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          747
+        ],
+        [
+          947,
+          894
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_path",
+      "checked": false,
+      "text": "Internal/Music/Recordings/",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "814*147",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_path[text]Internal/Music/Recordings/[desc]None[enabled,,]",
+      "view_str": "03b861cfaff7ab64edc37428fbec776e",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_path",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<input bound_box=133,747,947,894>Internal/Music/Recordings/</input>"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          936
+        ],
+        [
+          947,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_name_hint",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 15,
+      "size": "814*161",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/folder_name_hint[text]None[desc]None[enabled,,]",
+      "view_str": "4793eb14fc80aeefdfe79339a91e3351",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.voicerecorder:id/folder_name_hint"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          950
+        ],
+        [
+          947,
+          1097
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "814*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ec82e792de68dda3dc4ae9f3b00801d2",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          133,
+          950
+        ],
+        [
+          947,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_name",
+      "checked": false,
+      "text": "Title",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "814*147",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_name[text]Title[desc]None[enabled,,]",
+      "view_str": "a80a6afab1f47e8b9a2a585e6cac8a2b",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_name",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input bound_box=133,950,947,1097>Title</input>"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          1097
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/buttonPanel",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 18,
+      "size": "898*200",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.fossify.voicerecorder:id/buttonPanel[text]None[desc]None[enabled,,]",
+      "view_str": "ace5714dd758d71169fe84c3b0ebc94c",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.fossify.voicerecorder:id/buttonPanel"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20,
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          91,
+          1097
+        ],
+        [
+          989,
+          1297
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 18,
+      "temp_id": 19,
+      "size": "898*200",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "6a9e7a0300f658d76fa64f45000a8959",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          558,
+          1134
+        ],
+        [
+          737,
+          1260
+        ]
+      ],
+      "resource_id": "android:id/button2",
+      "checked": false,
+      "text": "Cancel",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 20,
+      "size": "179*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button2[text]Cancel[desc]None[enabled,,]",
+      "view_str": "5e0f34ebb18164134b21cc18fab5134e",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button2",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=558,1134,737,1260>Cancel</button>"
+    },
+    {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          758,
+          1134
+        ],
+        [
+          926,
+          1260
+        ]
+      ],
+      "resource_id": "android:id/button1",
+      "checked": false,
+      "text": "OK",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 21,
+      "size": "168*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button1[text]OK[desc]None[enabled,,]",
+      "view_str": "2e7857795f96d7bf0e54e25eed1f3e93",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button1",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=758,1134,926,1260>OK</button>"
+    }
+  ]
+}

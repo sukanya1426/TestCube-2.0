@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_003552",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.isoron.uhabits",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Add habit",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          700,
+          73
+        ],
+        [
+          848,
+          199
+        ]
+      ],
+      "resource_id": "org.isoron.uhabits:id/actionCreateHabit",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "148*126",
+      "signature": "[class]android.widget.Button[resource_id]org.isoron.uhabits:id/actionCreateHabit[text]None[desc]Add habit[enabled,,]",
+      "view_str": "49d2b5f2e9ed92cab05e43a5f76b7428",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.isoron.uhabits:id/actionCreateHabit",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button text='Add habit' bound_box=700,73,848,199></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "765cf14783492b2d2ede396f9bf17799",
+  "stop_state": "5c0f2dcb6c2ff8982d9e1a9b6ae13ff3",
+  "event_str": "CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=49d2b5f2e9ed92cab05e43a5f76b7428(ListHabitsActivity/Button-))"
+}

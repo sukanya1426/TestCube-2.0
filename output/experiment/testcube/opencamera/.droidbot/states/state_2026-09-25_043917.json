@@ -1,0 +1,4296 @@
+{
+  "tag": "2026-09-25_043917",
+  "state_str": "a18524773edddb1ad28547e06a7e35b4",
+  "state_str_content_free": "8ee0bf4c09fda0d7b2cc3a5232733a9e",
+  "foreground_activity": "com.android.settings/.spa.SpaActivity",
+  "activity_stack": [
+    "com.android.settings/.spa.SpaActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.android.chrome/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.android.chrome/org.chromium.chrome.browser.usage_stats.UsageStatsBrowserServiceProvider",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.apps.photos/com.google.android.libraries.social.mediamonitor.BackgroundThreadNotifierIntentService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "com.android.chrome/org.chromium.content.app.PrivilegedProcessService0",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService",
+    "com.google.android.gms/.chimera.GmsIntentOperationService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "266ccab5b9d7dc576a85dbd6202f7f0f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a9d66a4898a890d9a9787f7540590a1a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f7bf552781ca82198c53c851d83a3a77",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.sourceforge.opencamera:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "c18375a3f7db3967035f1193b686b8f9",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.sourceforge.opencamera:id/action_bar_root"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5,
+        34,
+        89
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "713d3cf75b9997790d9a29ffc95fab53",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7431475aaf58b2cc7791236db8995d7e",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/list_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container[text]None[desc]None[enabled,,]",
+      "view_str": "0acfa08b22521dace90b4fe9ec4dcdc4",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        16,
+        22,
+        28
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/list",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ListView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.ListView[resource_id]android:id/list[text]None[desc]None[enabled,,]",
+      "view_str": "f9db5057d3df1876aaeac3b49708f432",
+      "content_free_signature": "[class]android.widget.ListView[resource_id]android:id/list"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9,
+        11,
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          235
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7823bc9f5d8b6c2c6b031b41adc5cdf4",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          43
+        ],
+        [
+          189,
+          191
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          54
+        ],
+        [
+          157,
+          180
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          0
+        ],
+        [
+          912,
+          235
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 11,
+      "size": "723*235",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "0645c914828cc4e8506000ce8b0787d5",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          42
+        ],
+        [
+          798,
+          99
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Store location data (Geotagging)",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "609*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Store location data (Geotagging)[desc]None[enabled,,]",
+      "view_str": "129189a6a89ff67b331b141421f895e6",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button bound_box=189,42,798,99>Store location data (Geotagging)</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          99
+        ],
+        [
+          912,
+          193
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "Store GPS location data in the photos/videos",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 13,
+      "size": "723*94",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]Store GPS location data in the photos/videos[desc]None[enabled,,]",
+      "view_str": "a72e3ee75cceed1476cfea7bf7ba5add",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=189,99,912,193>Store GPS location data in the photos/videos</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          0
+        ],
+        [
+          1038,
+          235
+        ]
+      ],
+      "resource_id": "android:id/widget_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 14,
+      "size": "126*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame[text]None[desc]None[enabled,,]",
+      "view_str": "0d49970d3423e92c357c850adc4fa583",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          954,
+          75
+        ],
+        [
+          1038,
+          159
+        ]
+      ],
+      "resource_id": "android:id/checkbox",
+      "checked": true,
+      "text": null,
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "84*84",
+      "signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox[text]None[desc]None[enabled,checked,]",
+      "view_str": "323d319ee92613eff0c8927c49c91875",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17,
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          238
+        ],
+        [
+          1080,
+          473
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 16,
+      "size": "1080*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ab4154527f641e78acbdfd193852e964",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        18,
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          238
+        ],
+        [
+          912,
+          473
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "870*235",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "9b8f70a5c032c13093e9245e368a5a11",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          280
+        ],
+        [
+          497,
+          337
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Store compass direction",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "455*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Store compass direction[desc]None[enabled,,]",
+      "view_str": "0e0c879fc6fb95622393d92d8c1245d2",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button bound_box=42,280,497,337>Store compass direction</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          337
+        ],
+        [
+          912,
+          431
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "Store GPS compass direction in the photos, for non-RAW (JPEG/etc) images only",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 19,
+      "size": "870*94",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]None[desc]None[enabled,,]",
+      "view_str": "a4f3180dc763c3943bcb368edfe5111f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=42,337,912,431>Store GPS compass direction in the photos, for non-RAW (JPEG/etc) images only</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          238
+        ],
+        [
+          1038,
+          473
+        ]
+      ],
+      "resource_id": "android:id/widget_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 20,
+      "size": "126*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame[text]None[desc]None[enabled,,]",
+      "view_str": "46dc40393dd664c789b490b858131f86",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          954,
+          313
+        ],
+        [
+          1038,
+          397
+        ]
+      ],
+      "resource_id": "android:id/checkbox",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "84*84",
+      "signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox[text]None[desc]None[enabled,,]",
+      "view_str": "83c245fb2f7e580efd20fbc108420df9",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        23,
+        26
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          476
+        ],
+        [
+          1080,
+          754
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 22,
+      "size": "1080*278",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ab4154527f641e78acbdfd193852e964",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24,
+        25
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          476
+        ],
+        [
+          912,
+          754
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "870*278",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d8a3f66ce883000d109c5fa7e2c1ea1d",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          518
+        ],
+        [
+          481,
+          575
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Store yaw, pitch and roll",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "439*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Store yaw, pitch and roll[desc]None[enabled,,]",
+      "view_str": "0bbe9c452c941363332c6e81435bd21a",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=42,518,481,575>Store yaw, pitch and roll</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          575
+        ],
+        [
+          912,
+          712
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "Store the yaw, pitch and roll of the device in the photo's Exif user comment, for non-RAW (JPEG/etc) images only",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 25,
+      "size": "870*137",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]None[desc]None[enabled,,]",
+      "view_str": "a4f3180dc763c3943bcb368edfe5111f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=42,575,912,712>Store the yaw, pitch and roll of the device in the photo's Exif user comment, for non-RAW (JPEG/etc) images only</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        27
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          476
+        ],
+        [
+          1038,
+          754
+        ]
+      ],
+      "resource_id": "android:id/widget_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 26,
+      "size": "126*278",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame[text]None[desc]None[enabled,,]",
+      "view_str": "46dc40393dd664c789b490b858131f86",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          954,
+          573
+        ],
+        [
+          1038,
+          657
+        ]
+      ],
+      "resource_id": "android:id/checkbox",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 27,
+      "size": "84*84",
+      "signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox[text]None[desc]None[enabled,,]",
+      "view_str": "83c245fb2f7e580efd20fbc108420df9",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29,
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          757
+        ],
+        [
+          1080,
+          992
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 28,
+      "size": "1080*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ab4154527f641e78acbdfd193852e964",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        30,
+        31
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          757
+        ],
+        [
+          912,
+          992
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "870*235",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4f076477e9c9d92bc3eceb8233a4897c",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          799
+        ],
+        [
+          437,
+          856
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Require location data",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 30,
+      "size": "395*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Require location data[desc]None[enabled,,]",
+      "view_str": "728b17154d25572d0ec90d46c171c1b5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button bound_box=42,799,437,856>Require location data</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          856
+        ],
+        [
+          912,
+          950
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "If location data is enabled, only take photo/video if location data is available",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 31,
+      "size": "870*94",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]None[desc]None[enabled,,]",
+      "view_str": "a4f3180dc763c3943bcb368edfe5111f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=42,856,912,950>If location data is enabled, only take photo/video if location data is available</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        33
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          912,
+          757
+        ],
+        [
+          1038,
+          992
+        ]
+      ],
+      "resource_id": "android:id/widget_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 32,
+      "size": "126*235",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame[text]None[desc]None[enabled,,]",
+      "view_str": "46dc40393dd664c789b490b858131f86",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          954,
+          832
+        ],
+        [
+          1038,
+          916
+        ]
+      ],
+      "resource_id": "android:id/checkbox",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 32,
+      "temp_id": 33,
+      "size": "84*84",
+      "signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox[text]None[desc]None[enabled,,]",
+      "view_str": "83c245fb2f7e580efd20fbc108420df9",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]android:id/checkbox"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 34,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7431475aaf58b2cc7791236db8995d7e",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        36
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/list_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container[text]None[desc]None[enabled,,]",
+      "view_str": "0acfa08b22521dace90b4fe9ec4dcdc4",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 12,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        37,
+        38,
+        44,
+        50,
+        54,
+        58,
+        63,
+        68,
+        73,
+        74,
+        79,
+        84
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/list",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ListView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 35,
+      "temp_id": 36,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.ListView[resource_id]android:id/list[text]None[desc]None[enabled,,]",
+      "view_str": "6e07f8878ecb60ff77b75364b364b554",
+      "content_free_signature": "[class]android.widget.ListView[resource_id]android:id/list",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<scrollbar bound_box=0,0,1080,1857></scrollbar>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          93
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Camera Controls",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 37,
+      "size": "1080*93",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Camera Controls[desc]None[enabled,,]",
+      "view_str": "a544b50c5569abad7a5aa03bd20025ab",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<p bound_box=0,0,1080,93>Camera Controls</p>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        39,
+        42
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          96
+        ],
+        [
+          1080,
+          288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 38,
+      "size": "1080*192",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ab4154527f641e78acbdfd193852e964",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        40,
+        41
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          96
+        ],
+        [
+          874,
+          288
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 39,
+      "size": "832*192",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "0ccbb6a9a8f1b7b9e720e268c7352db5",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          138
+        ],
+        [
+          317,
+          195
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Face detection",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 39,
+      "temp_id": 40,
+      "size": "275*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Face detection[desc]None[enabled,,]",
+      "view_str": "70263bc407e7ccc8ea245807598d0c90",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button bound_box=42,138,317,195>Face detection</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          195
+        ],
+        [
+          724,
+          246
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "Use face detection instead of focus areas",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 39,
+      "temp_id": 41,
+      "size": "682*51",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]Use face detection instead of focus areas[desc]None[enabled,,]",
+      "view_str": "37bf89652cb2552b9da2ef693bc995e7",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button bound_box=42,195,724,246>Use face detection instead of focus areas</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        43
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          874,
+          96
+        ],
+        [
+          1038,
+          288
+        ]
+      ],
+      "resource_id": "android:id/widget_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 42,
+      "size": "164*192",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame[text]None[desc]None[enabled,,]",
+      "view_str": "bd986edea1740a34a96b785b00375098",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/widget_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          916,
+          156
+        ],
+        [
+          1038,
+          227
+        ]
+      ],
+      "resource_id": "android:id/switch_widget",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 43,
+      "size": "122*71",
+      "signature": "[class]android.widget.Switch[resource_id]android:id/switch_widget[text]None[desc]None[enabled,,]",
+      "view_str": "00316d9de780a85b9032d0b5ae1d4f46",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]android:id/switch_widget"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        45,
+        47
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          291
+        ],
+        [
+          1080,
+          483
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 44,
+      "size": "1080*192",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        46
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          313
+        ],
+        [
+          189,
+          461
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 44,
+      "temp_id": 45,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          324
+        ],
+        [
+          157,
+          450
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 45,
+      "temp_id": 46,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        48,
+        49
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          291
+        ],
+        [
+          1038,
+          483
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 44,
+      "temp_id": 47,
+      "size": "849*192",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4f49bba0a583587abea74b280dc4c70b",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          333
+        ],
+        [
+          297,
+          390
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Timer",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 47,
+      "temp_id": 48,
+      "size": "108*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Timer[desc]None[enabled,,]",
+      "view_str": "0d07dbbb5c06d61354af91598b6cf05b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button bound_box=189,333,297,390>Timer</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          390
+        ],
+        [
+          229,
+          441
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "1s",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 47,
+      "temp_id": 49,
+      "size": "40*51",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]1s[desc]None[enabled,,]",
+      "view_str": "f96f69321925a0c250e97551a9c38a66",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button bound_box=189,390,229,441>1s</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        51
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          486
+        ],
+        [
+          1080,
+          678
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 50,
+      "size": "1080*192",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d582515f9d4b391b3431aa9f10c7b89f",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        52,
+        53
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          486
+        ],
+        [
+          1038,
+          678
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 50,
+      "temp_id": 51,
+      "size": "996*192",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2bdade3753f900c249089d687d6e5f7a",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          528
+        ],
+        [
+          173,
+          585
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Repeat",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 51,
+      "temp_id": 52,
+      "size": "131*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Repeat[desc]None[enabled,,]",
+      "view_str": "6259c9084f6c241feadf7b96a21dac12",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button bound_box=42,528,173,585>Repeat</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          585
+        ],
+        [
+          93,
+          636
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "Off",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 51,
+      "temp_id": 53,
+      "size": "51*51",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]Off[desc]None[enabled,,]",
+      "view_str": "a2a2f1895759f158fb7620b6a3f7babd",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<button bound_box=42,585,93,636>Off</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        55
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          681
+        ],
+        [
+          1080,
+          873
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 54,
+      "size": "1080*192",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d582515f9d4b391b3431aa9f10c7b89f",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        56,
+        57
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          681
+        ],
+        [
+          1038,
+          873
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 55,
+      "size": "996*192",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "eae1c9fa7f7a550527edcca801e0d535",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          723
+        ],
+        [
+          437,
+          780
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Repeat mode interval",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 55,
+      "temp_id": 56,
+      "size": "395*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Repeat mode interval[desc]None[enabled,,]",
+      "view_str": "751d83bbdbf487f7604eace7ec1e711d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<button bound_box=42,723,437,780>Repeat mode interval</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          780
+        ],
+        [
+          186,
+          831
+        ]
+      ],
+      "resource_id": "android:id/summary",
+      "checked": false,
+      "text": "No delay",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 55,
+      "temp_id": 57,
+      "size": "144*51",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/summary[text]No delay[desc]None[enabled,,]",
+      "view_str": "3e3c295e25ca964173beed2e9ceaf9b0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/summary",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "17",
+      "desc": "<button bound_box=42,780,186,831>No delay</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        59,
+        61
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          876
+        ],
+        [
+          1080,
+          1024
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 58,
+      "size": "1080*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        60
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          876
+        ],
+        [
+          189,
+          1024
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 59,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          887
+        ],
+        [
+          157,
+          1013
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 59,
+      "temp_id": 60,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        62
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          879
+        ],
+        [
+          1038,
+          1020
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 61,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2452a7b9781cb3793ec36600db9b8cb2",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          921
+        ],
+        [
+          627,
+          978
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "More camera controls\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 61,
+      "temp_id": 62,
+      "size": "438*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]More camera controls\u2026[desc]None[enabled,,]",
+      "view_str": "7b86ac540f77071b75b91f015815dc19",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "18",
+      "desc": "<button bound_box=189,921,627,978>More camera controls\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        64,
+        66
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1027
+        ],
+        [
+          1080,
+          1175
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 63,
+      "size": "1080*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        65
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1027
+        ],
+        [
+          189,
+          1175
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 63,
+      "temp_id": 64,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1038
+        ],
+        [
+          157,
+          1164
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 64,
+      "temp_id": 65,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        67
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1030
+        ],
+        [
+          1038,
+          1171
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 63,
+      "temp_id": 66,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "309508ba6d176ec2774455ced216d32b",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1072
+        ],
+        [
+          513,
+          1129
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Camera preview\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 66,
+      "temp_id": 67,
+      "size": "324*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Camera preview\u2026[desc]None[enabled,,]",
+      "view_str": "ad2ffb93de2824f77502715736b37af8",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "19",
+      "desc": "<button bound_box=189,1072,513,1129>Camera preview\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        69,
+        71
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1178
+        ],
+        [
+          1080,
+          1326
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 68,
+      "size": "1080*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        70
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1178
+        ],
+        [
+          189,
+          1326
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 68,
+      "temp_id": 69,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1189
+        ],
+        [
+          157,
+          1315
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 69,
+      "temp_id": 70,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        72
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1181
+        ],
+        [
+          1038,
+          1322
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 68,
+      "temp_id": 71,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e39e1cb32bb24d8e71a9c58e05cfb56f",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1223
+        ],
+        [
+          481,
+          1280
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "On screen GUI\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 71,
+      "temp_id": 72,
+      "size": "292*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]On screen GUI\u2026[desc]None[enabled,,]",
+      "view_str": "a6a81fbad3e3f0eb08ac24738ee73d58",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "20",
+      "desc": "<button bound_box=189,1223,481,1280>On screen GUI\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1329
+        ],
+        [
+          1080,
+          1422
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Photo and Video Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 73,
+      "size": "1080*93",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Photo and Video Settings[desc]None[enabled,,]",
+      "view_str": "b72711b8cf0d5c8f22146f13cee6517c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "21",
+      "desc": "<p bound_box=0,1329,1080,1422>Photo and Video Settings</p>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        75,
+        77
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1425
+        ],
+        [
+          1080,
+          1573
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 74,
+      "size": "1080*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        76
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1425
+        ],
+        [
+          189,
+          1573
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 74,
+      "temp_id": 75,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1436
+        ],
+        [
+          157,
+          1562
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 75,
+      "temp_id": 76,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        78
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1428
+        ],
+        [
+          1038,
+          1569
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 74,
+      "temp_id": 77,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4797a6e6c7bb4eacefefed7134a5ba5e",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1470
+        ],
+        [
+          490,
+          1527
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Photo settings\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 78,
+      "size": "301*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Photo settings\u2026[desc]None[enabled,,]",
+      "view_str": "7ddf5a0efea9ed760a8062dc7f54c73d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "22",
+      "desc": "<button bound_box=189,1470,490,1527>Photo settings\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        80,
+        82
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1576
+        ],
+        [
+          1080,
+          1724
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 79,
+      "size": "1080*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        81
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1576
+        ],
+        [
+          189,
+          1724
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 79,
+      "temp_id": 80,
+      "size": "158*148",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1587
+        ],
+        [
+          157,
+          1713
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 80,
+      "temp_id": 81,
+      "size": "126*126",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        83
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1579
+        ],
+        [
+          1038,
+          1720
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 79,
+      "temp_id": 82,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "5b9f33903f3bfed77f61c01910d48fef",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1621
+        ],
+        [
+          485,
+          1678
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Video settings\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 82,
+      "temp_id": 83,
+      "size": "296*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Video settings\u2026[desc]None[enabled,,]",
+      "view_str": "5c379b169fbf96ee4766052f8cd0e5e0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "23",
+      "desc": "<button bound_box=189,1621,485,1678>Video settings\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        85,
+        87
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1727
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 84,
+      "size": "1080*130",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "edeba85c0d91d407ac5d5c8f0d6be1d1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        86
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1727
+        ],
+        [
+          189,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 85,
+      "size": "158*130",
+      "signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "83a9d32f922120116e4991b4ed09cdee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]android:id/icon_frame"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          31,
+          1738
+        ],
+        [
+          157,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 85,
+      "temp_id": 86,
+      "size": "126*119",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "aca851d5dc5ec5f7dcd75e2a6b4f0eb6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        88
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1730
+        ],
+        [
+          1038,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 87,
+      "size": "849*127",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "bc589ed1908c456f09647c13f0618add",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1772
+        ],
+        [
+          541,
+          1829
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Location settings\u2026",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 87,
+      "temp_id": 88,
+      "size": "352*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Location settings\u2026[desc]None[enabled,,]",
+      "view_str": "5c622621dc2650a17c76466c7c33151c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "24",
+      "desc": "<button bound_box=189,1772,541,1829>Location settings\u2026</button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 12,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        101,
+        102,
+        103
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 89,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e6a4645ec73a152aa4afd7fc08a157d1",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/popup_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 90,
+      "size": "0*0",
+      "signature": "[class]android.widget.ScrollView[resource_id]net.sourceforge.opencamera:id/popup_container[text]None[desc]None[enabled,,]",
+      "view_str": "6765685e279dfd51ec492dee1bd77f31",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]net.sourceforge.opencamera:id/popup_container"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/locker",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 91,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.sourceforge.opencamera:id/locker[text]None[desc]None[enabled,,]",
+      "view_str": "f44c24addab56c980a58aaf0a3a30f20",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.sourceforge.opencamera:id/locker"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/hide_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 92,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.ScrollView[resource_id]net.sourceforge.opencamera:id/hide_container[text]None[desc]None[enabled,,]",
+      "view_str": "e72d1d60d55137873aaf683d8dfc1a64",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]net.sourceforge.opencamera:id/hide_container"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Unlock exposure",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          4,
+          32
+        ],
+        [
+          162,
+          190
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/exposure_lock",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 93,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/exposure_lock[text]None[desc]Unlock exposure[enabled,,]",
+      "view_str": "cba9c139af5f6670062741aef7fa9b57",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/exposure_lock",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "25",
+      "desc": "<button text='Unlock exposure' bound_box=4,32,162,190></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Exposure",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          310,
+          32
+        ],
+        [
+          468,
+          190
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/exposure",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 94,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/exposure[text]None[desc]Exposure[enabled,,]",
+      "view_str": "3911a5c17f8cc97ec24983830795168f",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/exposure",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "26",
+      "desc": "<button text='Exposure' bound_box=310,32,468,190></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Popup settings",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          616,
+          32
+        ],
+        [
+          774,
+          190
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/popup",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 95,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/popup[text]None[desc]Popup settings[enabled,,]",
+      "view_str": "a5791aab26825b1575b73dedb1f78d7f",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/popup",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "27",
+      "desc": "<button text='Popup settings' bound_box=616,32,774,190></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Settings",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          922,
+          32
+        ],
+        [
+          1080,
+          190
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/settings",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 96,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/settings[text]None[desc]Settings[enabled,,]",
+      "view_str": "0b4a35d63e8d38e009c0486170432191",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/settings",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "28",
+      "desc": "<button text='Settings' bound_box=922,32,1080,190></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Zoom",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1,
+          1411
+        ],
+        [
+          132,
+          1805
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/zoom_seekbar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.SeekBar",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 97,
+      "size": "131*394",
+      "signature": "[class]android.widget.SeekBar[resource_id]net.sourceforge.opencamera:id/zoom_seekbar[text]None[desc]Zoom[enabled,,]",
+      "view_str": "2561b14ad7007bb8423729105c239c4c",
+      "content_free_signature": "[class]android.widget.SeekBar[resource_id]net.sourceforge.opencamera:id/zoom_seekbar",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "29",
+      "desc": "<p text='Zoom' bound_box=1,1411,132,1805></p>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        99,
+        100
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          240
+        ],
+        [
+          1080,
+          1680
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/preview",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 98,
+      "size": "1080*1440",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.sourceforge.opencamera:id/preview[text]None[desc]None[enabled,,]",
+      "view_str": "73c487cdb1a96596954f5c8540fe22ce",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.sourceforge.opencamera:id/preview"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          240
+        ],
+        [
+          1080,
+          1680
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 98,
+      "temp_id": 99,
+      "size": "1080*1440",
+      "signature": "[class]android.view.View[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "99202b7460b7d899fbd0e70459ac84cc",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          240
+        ],
+        [
+          1080,
+          1680
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 98,
+      "temp_id": 100,
+      "size": "1080*1440",
+      "signature": "[class]android.view.View[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "99202b7460b7d899fbd0e70459ac84cc",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Switch to video mode",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          250,
+          1699
+        ],
+        [
+          408,
+          1857
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/switch_video",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 101,
+      "size": "158*158",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/switch_video[text]None[desc]Switch to video mode[enabled,,]",
+      "view_str": "05388f9c7371dc8d040de9ffef47cbd9",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/switch_video",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "30",
+      "desc": "<button text='Switch to video mode' bound_box=250,1699,408,1857></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Take Photo",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          408,
+          1594
+        ],
+        [
+          671,
+          1857
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/take_photo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 89,
+      "temp_id": 102,
+      "size": "263*263",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/take_photo[text]None[desc]Take Photo[enabled,,]",
+      "view_str": "f8573308cbd1cfbf05bd33016274e902",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/take_photo",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "31",
+      "desc": "<button text='Take Photo' bound_box=408,1594,671,1857></button>"
+    },
+    {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Gallery",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          901,
+          1678
+        ],
+        [
+          1017,
+          1794
+        ]
+      ],
+      "resource_id": "net.sourceforge.opencamera:id/gallery",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 89,
+      "temp_id": 103,
+      "size": "116*116",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/gallery[text]None[desc]Gallery[enabled,,]",
+      "view_str": "11281df527958fdd533be3db7f760bff",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.sourceforge.opencamera:id/gallery",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "32",
+      "desc": "<button text='Gallery' bound_box=901,1678,1017,1794></button>"
+    }
+  ]
+}

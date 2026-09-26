@@ -1,0 +1,146 @@
+{
+  "app": "NewPipe",
+  "source": "local_readme",
+  "features": [
+    {
+      "name": "Complete first-run setup",
+      "description": "Pass welcome, skip/login, or create-database screens and reach the main UI.",
+      "actions": [
+        "Close or skip the tutorial",
+        "Leave any first-run analytics or settings screen",
+        "Tap Create Database or Open Database if shown",
+        "Enter a file name if asked and confirm Save",
+        "Reach the home or main screen"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "onboarding",
+        "get started",
+        "skip",
+        "database",
+        "home"
+      ],
+      "nav_hints": [
+        "skip",
+        "create database",
+        "next"
+      ],
+      "id": "F001",
+      "granularity_flag": "needs_split"
+    },
+    {
+      "name": "Log in",
+      "description": "Exercise the 'Log in' capability described in the app documentation.",
+      "actions": [
+        "Tap Log in or Sign in",
+        "Enter username or email",
+        "Enter password",
+        "Tap Log In and grant permission if asked"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "login",
+        "password",
+        "email"
+      ],
+      "nav_hints": [
+        "log in",
+        "sign in"
+      ],
+      "id": "F002"
+    },
+    {
+      "name": "Search",
+      "description": "Exercise the 'Search' capability described in the app documentation.",
+      "actions": [
+        "Tap Search",
+        "Type a query",
+        "Open a result"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search",
+        "query"
+      ],
+      "nav_hints": [
+        "search"
+      ],
+      "id": "F003"
+    },
+    {
+      "name": "Create or open a playlist",
+      "description": "Exercise the 'Create or open a playlist' capability described in the app documentation.",
+      "actions": [
+        "Open Library or Playlists",
+        "Create or open a playlist",
+        "Add or view a track"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "playlist"
+      ],
+      "nav_hints": [
+        "library",
+        "playlist"
+      ],
+      "id": "F004"
+    },
+    {
+      "name": "Download for offline use",
+      "description": "Exercise the 'Download for offline use' capability described in the app documentation.",
+      "actions": [
+        "Find an item",
+        "Tap Download",
+        "Confirm download UI or progress"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "download",
+        "offline"
+      ],
+      "nav_hints": [
+        "download"
+      ],
+      "id": "F005"
+    },
+    {
+      "name": "Playback controls",
+      "description": "Exercise the 'Playback controls' capability described in the app documentation.",
+      "actions": [
+        "Select a playable item",
+        "Tap play",
+        "Use pause, next, or previous"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "play",
+        "pause"
+      ],
+      "nav_hints": [
+        "play",
+        "player"
+      ],
+      "id": "F006"
+    },
+    {
+      "name": "Change app settings",
+      "description": "Exercise the 'Change app settings' capability described in the app documentation.",
+      "actions": [
+        "Open Settings",
+        "Open a settings category",
+        "Toggle or select an option"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "settings"
+      ],
+      "nav_hints": [
+        "settings"
+      ],
+      "id": "F007"
+    }
+  ],
+  "granularity_flags": [
+    "Complete first-run setup"
+  ]
+}

@@ -1,0 +1,478 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Omni Notes
+
+Total Actions    : 154
+
+Total Features   : 48
+Covered Features : 0
+Partial          : 8
+Uncovered        : 40
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 4.79%  (mean completion ratio; partial steps count)
+Exercised        : 8  (covered 0 + partial 8)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a text note
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - some steps attempted but incomplete
+  - touch IntroActivity/ImageButton-
+
+[GT002] Create a checklist note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no checklist creation steps attempted
+
+[GT003] Tick and untick checklist items
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no checklist item interaction steps attempted
+
+[GT004] Convert a note between text and checklist
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partially covered, missing conversion steps
+  - touch MainActivity/ImageButton-
+
+[GT005] Attach a photo from the camera
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards camera attachment
+  - touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed
+
+[GT006] Attach an image or video from the gallery
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards gallery attachment
+  - touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed
+
+[GT007] Record and attach an audio note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - touch MainActivity/Button-
+
+[GT008] Create and attach a sketch
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - touch MainActivity/Button-
+
+[GT009] Attach an arbitrary file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - touch MainActivity/Button-
+
+[GT010] Add a location to a note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding a location to a note
+
+[GT011] Set a reminder on a note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting a reminder on a note
+
+[GT012] Set a recurring reminder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting a recurring reminder
+
+[GT013] View all notes that have reminders
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partially opened navigation drawer, but no further steps
+  - touch CustomTouchEvent(state=c06c74e36ef057d0a9676a96c63f0e36, x=54, y=36)
+
+[GT014] Create a category
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards creating a category
+  - touch CustomTouchEvent(state=0db419bcb7fecd31acf4c3bc0aa8ccdb, x=54, y=192)
+
+[GT015] Edit or delete a category
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards editing or deleting a category
+  - touch ImageButton "drawer open" activity=MainActivity state_changed | activity=MainActivity screen=drawer open; Note...
+
+[GT016] Assign a category to a note
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partially opened note, tapped overflow, but no category selection
+  - touch MainActivity/ImageView-
+
+[GT017] Filter notes by category
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partially opened navigation drawer, tapped 'Tags' but no filtering
+  - touch MainActivity/ImageButton-
+
+[GT018] Tag notes with hashtags
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT019] Filter notes by tag
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Tap 'Tags' but did not select tags or confirm.
+  - touch MainActivity/ImageButton-
+
+[GT020] Search notes
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Did not tap search icon or type text.
+  - touch MainActivity/ImageButton-
+
+[GT021] Archive a note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Did not swipe or tap 'Archive'.
+  - touch MainActivity/ImageButton-
+
+[GT022] Restore a note from the archive
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - partial steps attempted, but not all required
+  - touch MainActivity/ImageButton-
+  - touch MainActivity/TextView-Notes
+
+[GT023] Move a note to the trash
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold capability
+
+[GT024] Restore or permanently delete notes from the trash
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold capability
+
+[GT025] Pin a note to the top of the list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-Text note
+
+[GT026] Lock a note with a password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-Text note
+
+[GT027] Unlock a locked note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch MainActivity/TextView-Text note
+
+[GT028] Merge several notes into one
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Tap 'Merge' button; Tap 'Merge' option.
+  - touch MainActivity/ImageButton-
+  - touch MainActivity/ImageButton-
+
+[GT029] Duplicate a note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards duplication.
+
+[GT030] Share a note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards sharing.
+
+[GT031] Add a note from another app via the share sheet
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps do not align with the gold capability
+  - touch TextView 'Notes'
+
+[GT032] Sort the note list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps do not align with the gold capability
+  - touch MainActivity/ImageButton
+
+[GT033] Reorder notes manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Steps do not align with the gold capability
+  - touch TextView 'Notes'
+
+[GT034] Switch the note list between list and grid layout
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT035] View note details and statistics
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT036] Add the Omni Notes home screen widget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT037] Export a full backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps related to export backup
+
+[GT038] Import data from a backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps related to import backup
+
+[GT039] Schedule automatic backups
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps related to schedule automatic backups
+
+[GT040] Delete an existing backup
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards deleting backup
+  - none
+
+[GT041] Change the interface language
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards changing language
+  - none
+
+[GT042] Change the app colours and theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards changing app colours and theme
+  - none
+
+[GT043] Change the text size in the note list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT044] Configure the swipe gesture action
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT045] Configure checklist behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT046] Configure notification behaviour for reminders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT047] Set the password and recovery question
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT048] View the app version, changelog and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 48 features covered
+8 / 48 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 4.79%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 48 (completeness ratio 0.292)
+
+Feature-inference P/R/F1: 0.93 / 0.29 / 0.44 (false not_present=0)
+
+GT GT001 'Create a text note' | journal=G001 'Create a text note' (sim=1.0, name) status=partial | offline=partial
+GT GT002 'Create a checklist note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Tick and untick checklist items' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Convert a note between text and checklist' | journal=G002 'Convert a note between' (sim=0.5, name) status=partial | offline=partial
+GT GT005 'Attach a photo from the camera' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Attach an image or video from the gallery' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Record and attach an audio note' | journal=G003 'Record' (sim=0.364, name) status=partial | offline=not_covered
+GT GT008 'Create and attach a sketch' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Attach an arbitrary file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Add a location to a note' | journal=G004 'Add a location' (sim=0.667, name) status=partial | offline=not_covered
+GT GT011 'Set a reminder on a note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Set a recurring reminder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'View all notes that have reminders' | journal=G005 'View all notes' (sim=0.5, name) status=partial | offline=partial
+GT GT014 'Create a category' | journal=G006 'Assign a category' (sim=0.333, name) status=partial | offline=not_covered
+GT GT015 'Edit or delete a category' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Assign a category to a note' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Filter notes by category' | journal=G007 'Filter notes' (sim=0.667, name) status=partial | offline=partial
+GT GT018 'Tag notes with hashtags' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Filter notes by tag' | journal=missing (no name match) status=missing | offline=partial
+GT GT020 'Search notes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Archive a note' | journal=G008 'Restore a note' (sim=0.333, name) status=partial | offline=not_covered
+GT GT022 'Restore a note from the archive' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Move a note to the trash' | journal=G010 'Merge several notes' (sim=0.357, name) status=partial | offline=not_covered
+GT GT024 'Restore or permanently delete notes from the trash' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Pin a note to the top of the list' | journal=G009 'Pin a note' (sim=0.538, name) status=partial | offline=not_covered
+GT GT026 'Lock a note with a password' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Unlock a locked note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Merge several notes into one' | journal=missing (no name match) status=missing | offline=partial
+GT GT029 'Duplicate a note' | journal=G011 'Add a note' (sim=0.333, name) status=partial | offline=not_covered
+GT GT030 'Share a note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Add a note from another app via the share sheet' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Sort the note list' | journal=G012 'Switch the note list' (sim=0.6, name) status=covered | offline=not_covered
+GT GT033 'Reorder notes manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Switch the note list between list and grid layout' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'View note details and statistics' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Add the Omni Notes home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Export a full backup' | journal=G013 'Export a full backup' (sim=1.0, name) status=dropped | offline=not_covered
+GT GT038 'Import data from a backup' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Schedule automatic backups' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Delete an existing backup' | journal=G014 'Delete an existing backup' (sim=1.0, name) status=partial | offline=not_covered
+GT GT041 'Change the interface language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Change the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT043 'Change the text size in the note list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT044 'Configure the swipe gesture action' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT045 'Configure checklist behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'Configure notification behaviour for reminders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT047 'Set the password and recovery question' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT048 'View the app version, changelog and licences' | journal=missing (no name match) status=missing | offline=not_covered

@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_055403",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          133,
+          950
+        ],
+        [
+          947,
+          1097
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_name",
+      "checked": false,
+      "text": "test",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "814*147",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_name[text]test[desc]None[enabled,,]",
+      "view_str": "521e112fcaa065e8f82fcdaf73edfd1f",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_name",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input bound_box=133,950,947,1097>test</input>"
+    },
+    "text": "TestCube",
+    "skip_oracle": true
+  },
+  "start_state": "0d562f155aacc98ed3d18d0093272995",
+  "stop_state": "e9ac2a6c7c47a849666f84d145a7fe06",
+  "event_str": "CustomSetTextEvent(state=0d562f155aacc98ed3d18d0093272995, view=521e112fcaa065e8f82fcdaf73edfd1f(MainActivity/EditText-test), text=TestCube)"
+}

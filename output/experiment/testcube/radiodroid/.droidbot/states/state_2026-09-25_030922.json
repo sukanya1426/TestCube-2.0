@@ -1,0 +1,4418 @@
+{
+  "tag": "2026-09-25_030922",
+  "state_str": "295a9021806f9725356f2c3f1b41457f",
+  "state_str_content_free": "8b521cec80c5a45967db481faa83c9b5",
+  "foreground_activity": "net.programmierecke.radiodroid2/.ActivityMain",
+  "activity_stack": [
+    "net.programmierecke.radiodroid2/.ActivityMain"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "net.programmierecke.radiodroid2/.service.PlayerService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1,
+        106,
+        107
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "74b15d6ff448b6af49c47681427c11d4",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2ed56b9d400610c73807ccdc81578bba",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1668",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "8e44ee97cedfe0d9e82a5659d5ec830e",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1668",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "32eab484c47b23754e87f81f66c83ebb",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/action_bar_root"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5,
+        99
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1668",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "f185d4221d034ce01f083baf47bb987a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        76
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/main_content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1668",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/main_content[text]None[desc]None[enabled,,]",
+      "view_str": "ec01aa1d5596b60d287e02deb670e7fb",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/main_content"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/drawerLayout",
+      "checked": false,
+      "text": null,
+      "class": "androidx.drawerlayout.widget.DrawerLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1521",
+      "signature": "[class]androidx.drawerlayout.widget.DrawerLayout[resource_id]net.programmierecke.radiodroid2:id/drawerLayout[text]None[desc]None[enabled,,]",
+      "view_str": "30968c8ec3754cb7ca0a753d34c46d54",
+      "content_free_signature": "[class]androidx.drawerlayout.widget.DrawerLayout[resource_id]net.programmierecke.radiodroid2:id/drawerLayout"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        14,
+        68
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/coordinatorLayout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1521",
+      "signature": "[class]android.widget.ScrollView[resource_id]net.programmierecke.radiodroid2:id/coordinatorLayout[text]None[desc]None[enabled,,]",
+      "view_str": "47a6be0c27b0d9c14fc1879a1451aec8",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]net.programmierecke.radiodroid2:id/coordinatorLayout",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<scrollbar bound_box=0,63,1080,1584></scrollbar>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/app_bar_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*147",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/app_bar_layout[text]None[desc]None[enabled,,]",
+      "view_str": "2b6357a1a054ead543a17001ab6bcd94",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/app_bar_layout"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/collapsible_toolbar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "1080*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/collapsible_toolbar[text]None[desc]None[enabled,,]",
+      "view_str": "b7de3e0287cd443a3a9d295aaff077d7",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/collapsible_toolbar"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "1080*147",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "5df70209d7e7e2c15cb3fdbfee80823d",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/my_awesome_toolbar",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "1080*147",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/my_awesome_toolbar[text]None[desc]None[enabled,,]",
+      "view_str": "c036d6a578210439e40b6c9af6aa7e6d",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/my_awesome_toolbar"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          101
+        ],
+        [
+          244,
+          172
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "202*71",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Settings[desc]None[enabled,,]",
+      "view_str": "9e2adc813054de53e386b66c27529365",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=42,101,244,172>Settings</p>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 13,
+      "size": "0*147",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "05851a786ee200c4d021417e467f9ae0",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/containerView",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 14,
+      "size": "1080*1374",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/containerView[text]None[desc]None[enabled,,]",
+      "view_str": "0e3491004bdaa3ea3f68d2f0a422dd53",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/containerView"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "1080*1374",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f96e694c1c1bc43a8485c07b5fb5f919",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "android:id/list_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "1080*1374",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container[text]None[desc]None[enabled,,]",
+      "view_str": "bb1a12b7903da25a4218e45674a60551",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/list_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 10,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        18,
+        23,
+        28,
+        33,
+        38,
+        43,
+        48,
+        53,
+        58,
+        63
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/recycler_view",
+      "checked": false,
+      "text": null,
+      "class": "androidx.recyclerview.widget.RecyclerView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "1080*1374",
+      "signature": "[class]androidx.recyclerview.widget.RecyclerView[resource_id]net.programmierecke.radiodroid2:id/recycler_view[text]None[desc]None[enabled,,]",
+      "view_str": "bbdcc01d946ddc3d67474ce87901f393",
+      "content_free_signature": "[class]androidx.recyclerview.widget.RecyclerView[resource_id]net.programmierecke.radiodroid2:id/recycler_view",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<scrollbar bound_box=0,210,1080,1584></scrollbar>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          378
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "1080*168",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4c06b342c5a2cb886aea76d283afe35c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          21,
+          231
+        ],
+        [
+          1059,
+          357
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search_card",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 18,
+      "temp_id": 19,
+      "size": "1038*126",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/search_card[text]None[desc]None[enabled,,]",
+      "view_str": "0838a53581aec3a6ddc5085984f0c046",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/search_card"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21,
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          21,
+          231
+        ],
+        [
+          1059,
+          357
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 20,
+      "size": "1038*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b9107015f8f281b3ff580b597c0dc5ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Search\u2026",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          262
+        ],
+        [
+          126,
+          325
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[desc]Search\u2026[enabled,,]",
+      "view_str": "bc1f2fe2fb0faecfec1156a0f3fc74ea",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Search\u2026' bound_box=63,262,126,325></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          262
+        ],
+        [
+          1038,
+          325
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search",
+      "checked": false,
+      "text": "Search\u2026",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 20,
+      "temp_id": 22,
+      "size": "849*63",
+      "signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search[text]Search\u2026[desc]None[enabled,,]",
+      "view_str": "b014bc2bcf669a4a683f2ffad7f1781d",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<input bound_box=189,262,1038,325>Search\u2026</input>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24,
+        26
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          378
+        ],
+        [
+          1080,
+          519
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 23,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        25
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          406
+        ],
+        [
+          189,
+          491
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          417
+        ],
+        [
+          105,
+          480
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 24,
+      "temp_id": 25,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        27
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          378
+        ],
+        [
+          1038,
+          519
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 26,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "651f20dfd1faa4690ea2cdee3ea0c28d",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          420
+        ],
+        [
+          413,
+          477
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Appearance",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 27,
+      "size": "224*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Appearance[desc]None[enabled,,]",
+      "view_str": "c43801f589c21655ed4987ccbfc058b5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=189,420,413,477>Appearance</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29,
+        31
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          519
+        ],
+        [
+          1080,
+          660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 28,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        30
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          547
+        ],
+        [
+          189,
+          632
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          558
+        ],
+        [
+          105,
+          621
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 30,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          519
+        ],
+        [
+          1038,
+          660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 31,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "1a658cbe41b3cb13b313af62e1582ff3",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          561
+        ],
+        [
+          452,
+          618
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Start Behavior",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 31,
+      "temp_id": 32,
+      "size": "263*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Start Behavior[desc]None[enabled,,]",
+      "view_str": "2e7be440ceef76fbf5e4b5e39a82b274",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button bound_box=189,561,452,618>Start Behavior</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        34,
+        36
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          660
+        ],
+        [
+          1080,
+          801
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 33,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          688
+        ],
+        [
+          189,
+          773
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 33,
+      "temp_id": 34,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          699
+        ],
+        [
+          105,
+          762
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        37
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          660
+        ],
+        [
+          1038,
+          801
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 33,
+      "temp_id": 36,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "22adc7d96567b7e500abd33d8b4f645b",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          702
+        ],
+        [
+          389,
+          759
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Interaction",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 37,
+      "size": "200*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Interaction[desc]None[enabled,,]",
+      "view_str": "fd4ee0c7615ca6db3c8e5cebfbd4cbff",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=189,702,389,759>Interaction</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        39,
+        41
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          801
+        ],
+        [
+          1080,
+          942
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 38,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        40
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          829
+        ],
+        [
+          189,
+          914
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 39,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          840
+        ],
+        [
+          105,
+          903
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 39,
+      "temp_id": 40,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        42
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          801
+        ],
+        [
+          1038,
+          942
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 41,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7865b2533e65acb630cf2d28782752f4",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          843
+        ],
+        [
+          305,
+          900
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Player",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 41,
+      "temp_id": 42,
+      "size": "116*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Player[desc]None[enabled,,]",
+      "view_str": "9d66accf53a321d4d029df3d0b20b9bb",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<button bound_box=189,843,305,900>Player</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        44,
+        46
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          942
+        ],
+        [
+          1080,
+          1083
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 43,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        45
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          970
+        ],
+        [
+          189,
+          1055
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 43,
+      "temp_id": 44,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          981
+        ],
+        [
+          105,
+          1044
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 44,
+      "temp_id": 45,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        47
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          942
+        ],
+        [
+          1038,
+          1083
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 43,
+      "temp_id": 46,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "62d58ba2b533c0c9642efead0b657022",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          984
+        ],
+        [
+          300,
+          1041
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Alarm",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 46,
+      "temp_id": 47,
+      "size": "111*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Alarm[desc]None[enabled,,]",
+      "view_str": "8a8c4997d348ef212c2d60c0952fb0e0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button bound_box=189,984,300,1041>Alarm</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        49,
+        51
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1083
+        ],
+        [
+          1080,
+          1224
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 48,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        50
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1111
+        ],
+        [
+          189,
+          1196
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 48,
+      "temp_id": 49,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1122
+        ],
+        [
+          105,
+          1185
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 50,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        52
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1083
+        ],
+        [
+          1038,
+          1224
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 48,
+      "temp_id": 51,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a747005b014cd2e1321e0a16eef8181a",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1125
+        ],
+        [
+          400,
+          1182
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Recordings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 51,
+      "temp_id": 52,
+      "size": "211*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Recordings[desc]None[enabled,,]",
+      "view_str": "705be0ed63a936db5df2a747bfc7a759",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button bound_box=189,1125,400,1182>Recordings</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        54,
+        56
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1224
+        ],
+        [
+          1080,
+          1365
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 53,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        55
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1252
+        ],
+        [
+          189,
+          1337
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 53,
+      "temp_id": 54,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1263
+        ],
+        [
+          105,
+          1326
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 55,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        57
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1224
+        ],
+        [
+          1038,
+          1365
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 53,
+      "temp_id": 56,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "dcf1315b0e46ce987a3d71ef04551720",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1266
+        ],
+        [
+          596,
+          1323
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Music Player Daemon",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 56,
+      "temp_id": 57,
+      "size": "407*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Music Player Daemon[desc]None[enabled,,]",
+      "view_str": "62523d54dbc2bf005566bafbdbe763d0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button bound_box=189,1266,596,1323>Music Player Daemon</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        59,
+        61
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1365
+        ],
+        [
+          1080,
+          1506
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 58,
+      "size": "1080*141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        60
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1393
+        ],
+        [
+          189,
+          1478
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 59,
+      "size": "147*85",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1404
+        ],
+        [
+          105,
+          1467
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 59,
+      "temp_id": 60,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        62
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1365
+        ],
+        [
+          1038,
+          1506
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 61,
+      "size": "849*141",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ac4c9f1d8249e6a9f13d0fb0682dad89",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1407
+        ],
+        [
+          418,
+          1464
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Connectivity",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 61,
+      "temp_id": 62,
+      "size": "229*57",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Connectivity[desc]None[enabled,,]",
+      "view_str": "936aa16d7b801189398fba4d4663cbd3",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button bound_box=189,1407,418,1464>Connectivity</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        64,
+        66
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1506
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 63,
+      "size": "1080*78",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e645e4f9672ab7f0d822a93b1c910c31",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        65
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1534
+        ],
+        [
+          189,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/icon_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 63,
+      "temp_id": 64,
+      "size": "147*50",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame[text]None[desc]None[enabled,,]",
+      "view_str": "8cbd083ab5c2775d4e384ae5b59359ad",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/icon_frame"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1545
+        ],
+        [
+          105,
+          1584
+        ]
+      ],
+      "resource_id": "android:id/icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 64,
+      "temp_id": 65,
+      "size": "63*39",
+      "signature": "[class]android.widget.ImageView[resource_id]android:id/icon[text]None[desc]None[enabled,,]",
+      "view_str": "3614a2689ab85fb8533f6497e2c1def0",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]android:id/icon"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        67
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1506
+        ],
+        [
+          1038,
+          1584
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 63,
+      "temp_id": 66,
+      "size": "849*78",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "26b8c2ed84b200543bc356d1ca0a6a03",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          1548
+        ],
+        [
+          291,
+          1584
+        ]
+      ],
+      "resource_id": "android:id/title",
+      "checked": false,
+      "text": "Other",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 66,
+      "temp_id": 67,
+      "size": "102*36",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/title[text]Other[desc]None[enabled,,]",
+      "view_str": "05c0562ce8d6745fba2b6ea6dd35968a",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button bound_box=189,1548,291,1584>Other</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        69,
+        75
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1437
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/bottom_sheet",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 68,
+      "size": "1080*147",
+      "signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/bottom_sheet[text]None[desc]None[enabled,,]",
+      "view_str": "5640df88617492dafdfbd8532b43fb0a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]net.programmierecke.radiodroid2:id/bottom_sheet"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        70
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1437
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/fragment_player_small",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 68,
+      "temp_id": 69,
+      "size": "1080*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/fragment_player_small[text]None[desc]None[enabled,,]",
+      "view_str": "5d895b89b19738fd460ec42b0e5353c9",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/fragment_player_small"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        71,
+        72,
+        73,
+        74
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1437
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 69,
+      "temp_id": 70,
+      "size": "1080*147",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "0a533db24321163b78d5a729fc09a351",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1437
+        ],
+        [
+          1080,
+          1440
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 71,
+      "size": "1080*3",
+      "signature": "[class]android.view.View[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "88e5dfcbfec5606b5480941b73c3a96e",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          11,
+          1463
+        ],
+        [
+          106,
+          1558
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/playerRadioImage",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 72,
+      "size": "95*95",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/playerRadioImage[text]None[desc]None[enabled,,]",
+      "view_str": "0cc9a49a8a94336a52eda1c773863023",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/playerRadioImage"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          127,
+          1489
+        ],
+        [
+          964,
+          1532
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/textViewStationName",
+      "checked": false,
+      "text": "Radio Paradise Main Mix (EU) 320k AAC",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 73,
+      "size": "837*43",
+      "signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/textViewStationName[text]Radio Paradise Main Mix (EU) 320k AAC[desc]None[enabled,,]",
+      "view_str": "5700b8558847a3d721a3ef36c3b05329",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/textViewStationName",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button bound_box=127,1489,964,1532>Radio Paradise Main Mix (EU) 320k AAC</button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Play",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          964,
+          1463
+        ],
+        [
+          1059,
+          1558
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/buttonPlay",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 74,
+      "size": "95*95",
+      "signature": "[class]android.widget.ImageButton[resource_id]net.programmierecke.radiodroid2:id/buttonPlay[text]None[desc]Play[enabled,,]",
+      "view_str": "1f6cabbf994952fdbe65e406c8db357e",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]net.programmierecke.radiodroid2:id/buttonPlay",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<button text='Play' bound_box=964,1463,1059,1558></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1584
+        ],
+        [
+          1080,
+          1584
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/fragment_player_full",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 68,
+      "temp_id": 75,
+      "size": "1080*0",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/fragment_player_full[text]None[desc]None[enabled,,]",
+      "view_str": "30616d05afc9f88af18173f291e94d57",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/fragment_player_full"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        77
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1584
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/bottom_navigation",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 76,
+      "size": "1080*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/bottom_navigation[text]None[desc]None[enabled,,]",
+      "view_str": "7bc8de4aa1a103c40a510a884058ae03",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/bottom_navigation"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        78,
+        82,
+        86,
+        90,
+        94
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1584
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 76,
+      "temp_id": 77,
+      "size": "1080*147",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "71b38e3a9def1db99f896f3a31af95dc",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Stations",
+      "children": [
+        79,
+        80
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1584
+        ],
+        [
+          207,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/nav_item_stations",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 78,
+      "size": "207*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_stations[text]None[desc]Stations[enabled,,]",
+      "view_str": "175a8a86e5904cbf72aa7355c4533f47",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_stations",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<button text='Stations' bound_box=0,1584,207,1731></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          40,
+          1688
+        ],
+        [
+          167,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 78,
+      "temp_id": 79,
+      "size": "127*43",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group[text]None[desc]None[enabled,,]",
+      "view_str": "45255800d03504c19b8dae175b87c184",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        81
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          72,
+          1626
+        ],
+        [
+          135,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 78,
+      "temp_id": 80,
+      "size": "63*63",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container[text]None[desc]None[enabled,,]",
+      "view_str": "e9deed2a11bc02b025015762d4c819eb",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          72,
+          1626
+        ],
+        [
+          135,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 80,
+      "temp_id": 81,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view[text]None[desc]None[enabled,,]",
+      "view_str": "cae25761d9daf18626735ea91a7c7b57",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Favorites",
+      "children": [
+        83,
+        84
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          207,
+          1584
+        ],
+        [
+          414,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/nav_item_starred",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 82,
+      "size": "207*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_starred[text]None[desc]Favorites[enabled,,]",
+      "view_str": "ca1b52bdb9775816cf0669803cc7a518",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_starred",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "17",
+      "desc": "<button text='Favorites' bound_box=207,1584,414,1731></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          240,
+          1688
+        ],
+        [
+          381,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 82,
+      "temp_id": 83,
+      "size": "141*43",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group[text]None[desc]None[enabled,,]",
+      "view_str": "cdf7bacd8203e0efaf7228c3bcd86ef8",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        85
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          279,
+          1626
+        ],
+        [
+          342,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 82,
+      "temp_id": 84,
+      "size": "63*63",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container[text]None[desc]None[enabled,,]",
+      "view_str": "7b3fbc89faa86d70b2e469b77627f488",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          279,
+          1626
+        ],
+        [
+          342,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 85,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view[text]None[desc]None[enabled,,]",
+      "view_str": "d5d5a00cd1fc86ebcca213441cfabf3f",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "History",
+      "children": [
+        87,
+        88
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          414,
+          1584
+        ],
+        [
+          621,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/nav_item_history",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 86,
+      "size": "207*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_history[text]None[desc]History[enabled,,]",
+      "view_str": "a22342903b599fb35cd36d55b7b555be",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_history",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "18",
+      "desc": "<button text='History' bound_box=414,1584,621,1731></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          462,
+          1688
+        ],
+        [
+          573,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 86,
+      "temp_id": 87,
+      "size": "111*43",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group[text]None[desc]None[enabled,,]",
+      "view_str": "44f19fc14506e26a1e24370e01860701",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        89
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          486,
+          1626
+        ],
+        [
+          549,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 86,
+      "temp_id": 88,
+      "size": "63*63",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container[text]None[desc]None[enabled,,]",
+      "view_str": "06076c256edc426fc6e67f2a55c1481a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          486,
+          1626
+        ],
+        [
+          549,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 88,
+      "temp_id": 89,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view[text]None[desc]None[enabled,,]",
+      "view_str": "e63a1de6d2b95fe14dfd083098320725",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Alarm",
+      "children": [
+        91,
+        92
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          621,
+          1584
+        ],
+        [
+          828,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/nav_item_alarm",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 90,
+      "size": "207*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_alarm[text]None[desc]Alarm[enabled,,]",
+      "view_str": "b7fe8c21f7740880e3f16555519b3439",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_alarm",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "19",
+      "desc": "<button text='Alarm' bound_box=621,1584,828,1731></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          678,
+          1688
+        ],
+        [
+          770,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 90,
+      "temp_id": 91,
+      "size": "92*43",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group[text]None[desc]None[enabled,,]",
+      "view_str": "05c365b3c3ef027f8572676a4975fef1",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        93
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          693,
+          1626
+        ],
+        [
+          756,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 90,
+      "temp_id": 92,
+      "size": "63*63",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container[text]None[desc]None[enabled,,]",
+      "view_str": "0b3d0660296f88f8486ca74fa095d3d1",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          693,
+          1626
+        ],
+        [
+          756,
+          1689
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 92,
+      "temp_id": 93,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view[text]None[desc]None[enabled,,]",
+      "view_str": "941278d31a2c82787d9f28dc40811dd4",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Settings",
+      "children": [
+        95,
+        97
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          828,
+          1584
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/nav_item_settings",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 94,
+      "size": "252*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_settings[text]None[desc]Settings[enabled,,selected]",
+      "view_str": "4e7b3be688c9654c88cbb359a0fc12d1",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/nav_item_settings",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "20",
+      "desc": "<p text='Settings' bound_box=828,1584,1080,1731></p>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        96
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          922,
+          1605
+        ],
+        [
+          985,
+          1668
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 94,
+      "temp_id": 95,
+      "size": "63*63",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container[text]None[desc]None[enabled,,selected]",
+      "view_str": "a8241ea94a804fefc1f41eee487cece0",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_container"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          922,
+          1605
+        ],
+        [
+          985,
+          1668
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 95,
+      "temp_id": 96,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view[text]None[desc]None[enabled,,selected]",
+      "view_str": "4a376050becf08a0dda3b2244334d295",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_icon_view"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        98
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          890,
+          1671
+        ],
+        [
+          1017,
+          1731
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 94,
+      "temp_id": 97,
+      "size": "127*60",
+      "signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group[text]None[desc]None[enabled,,selected]",
+      "view_str": "d9a7431c8c8a40129b4dfaeef4521ee6",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_labels_group"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          890,
+          1671
+        ],
+        [
+          1017,
+          1714
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/navigation_bar_item_large_label_view",
+      "checked": false,
+      "text": "Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": false,
+      "parent": 97,
+      "temp_id": 98,
+      "size": "127*43",
+      "signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_large_label_view[text]Settings[desc]None[enabled,,selected]",
+      "view_str": "e57823816b20ba6494f92a1dfcb2c24e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/navigation_bar_item_large_label_view",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "21",
+      "desc": "<p bound_box=890,1671,1017,1714>Settings</p>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        100,
+        105
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1731
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 99,
+      "size": "1080*1668",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b6b36b2260bb819d4caccfc987e10ffa",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        101
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          21,
+          84
+        ],
+        [
+          1059,
+          210
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search_card",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 99,
+      "temp_id": 100,
+      "size": "1038*126",
+      "signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/search_card[text]None[desc]None[enabled,,]",
+      "view_str": "fb9221505c3db232f2ab696365d1e38f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]net.programmierecke.radiodroid2:id/search_card"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        102,
+        103,
+        104
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          21,
+          84
+        ],
+        [
+          1059,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 100,
+      "temp_id": 101,
+      "size": "1038*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b94dcabaaf13af49510469260d04db4e",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": "Search\u2026",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          115
+        ],
+        [
+          126,
+          178
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 101,
+      "temp_id": 102,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[desc]Search\u2026[enabled,,]",
+      "view_str": "5042eaaf1928adf3c7befd20108912a6",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "22",
+      "desc": "<p text='Search\u2026' bound_box=63,115,126,178></p>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          189,
+          115
+        ],
+        [
+          953,
+          178
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search",
+      "checked": false,
+      "text": "Search\u2026",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 101,
+      "temp_id": 103,
+      "size": "764*63",
+      "signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search[text]Search\u2026[desc]None[enabled,,]",
+      "view_str": "d556c765e6351ccc41fd479a43f0e0ac",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]net.programmierecke.radiodroid2:id/search",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "23",
+      "desc": "<input bound_box=189,115,953,178>Search\u2026</input>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "More",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          953,
+          104
+        ],
+        [
+          1038,
+          189
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/more",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 101,
+      "temp_id": 104,
+      "size": "85*85",
+      "signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/more[text]None[desc]More[enabled,,]",
+      "view_str": "04a4c890ec9b59a0e359b92e946f044c",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]net.programmierecke.radiodroid2:id/more",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "24",
+      "desc": "<button text='More' bound_box=953,104,1038,189></button>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          513
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/no_results",
+      "checked": false,
+      "text": "No results",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 99,
+      "temp_id": 105,
+      "size": "1080*303",
+      "signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/no_results[text]No results[desc]None[enabled,,]",
+      "view_str": "7942a55330ba9eb66e0842a17c8c6f58",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]net.programmierecke.radiodroid2:id/no_results",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "25",
+      "desc": "<p bound_box=0,210,1080,513>No results</p>"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          63
+        ]
+      ],
+      "resource_id": "android:id/statusBarBackground",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 106,
+      "size": "1080*63",
+      "signature": "[class]android.view.View[resource_id]android:id/statusBarBackground[text]None[desc]None[enabled,,]",
+      "view_str": "ac378aab140897094ad2511c9b6c817d",
+      "content_free_signature": "[class]android.view.View[resource_id]android:id/statusBarBackground"
+    },
+    {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1857
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/navigationBarBackground",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 107,
+      "size": "1080*63",
+      "signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground[text]None[desc]None[enabled,,]",
+      "view_str": "5144a7a56960d7e183a1414593d51911",
+      "content_free_signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground"
+    }
+  ]
+}

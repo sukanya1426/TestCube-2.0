@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-24_223936",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          810,
+          1151
+        ],
+        [
+          978,
+          1277
+        ]
+      ],
+      "resource_id": "android:id/button1",
+      "checked": false,
+      "text": "OK",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 18,
+      "size": "168*126",
+      "signature": "[class]android.widget.Button[resource_id]android:id/button1[text]OK[desc]None[enabled,,]",
+      "view_str": "6337a738be96648f84bb3dfecd4bb6ba",
+      "content_free_signature": "[class]android.widget.Button[resource_id]android:id/button1",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=810,1151,978,1277>OK</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "4492094f04df051be30763eedb33f8d4",
+  "stop_state": "dca01089ff41fa943b32d2624fc2292a",
+  "event_str": "CustomTouchEvent(state=4492094f04df051be30763eedb33f8d4, view=6337a738be96648f84bb3dfecd4bb6ba(MainActivity/Button-OK))"
+}

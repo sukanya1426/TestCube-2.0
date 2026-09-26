@@ -1,0 +1,502 @@
+{
+  "app": "Markor",
+  "source": "guide",
+  "url": "Official Markor repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-46 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the notebook folder",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap on the 'Files' tab",
+        "Select the 'Browse' option",
+        "Select the 'notebook' folder",
+        "Select the 'folder' option"
+      ],
+      "keywords": [
+        "browse",
+        "notebook",
+        "folder",
+        "files"
+      ],
+      "nav_hints": [
+        "browse",
+        "notebook",
+        "folder"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "the Files tab opens at the configured notebook root"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Create a folder",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the '+' button",
+        "Select 'Create'",
+        "Select 'Folder'",
+        "Enter the folder name",
+        "Tap 'Create'"
+      ],
+      "keywords": [
+        "create",
+        "folder",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folder",
+        "create"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "tap the \"+\" button"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Apply Markdown formatting",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "Select the text you want to format",
+        "Tap the 'Apply Markdown formatting' option in the action toolbar",
+        "Choose the desired Markdown formatting from the dropdown menu",
+        "The document will now display the formatted text"
+      ],
+      "keywords": [
+        "apply",
+        "markdown",
+        "formatting",
+        "action"
+      ],
+      "nav_hints": [
+        "apply",
+        "markdown",
+        "formatting"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open a Markdown document",
+        "place the cursor or select text"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Insert an image",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "Tap the image/attachment action in the action bar",
+        "Select 'pick from gallery'",
+        "Choose an image from the gallery",
+        "Tap 'Insert' to add the image to the document"
+      ],
+      "keywords": [
+        "insert",
+        "image",
+        "gallery",
+        "camera"
+      ],
+      "nav_hints": [
+        "take a picture",
+        "pick from gallery",
+        "select a file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open a document",
+        "tap the image/attachment action in the action bar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Insert a table",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "Tap the table action in the action bar",
+        "Select the table option from the dropdown menu",
+        "Enter the number of rows and columns for the table",
+        "Tap the 'Insert' button to confirm the table insertion"
+      ],
+      "keywords": [
+        "insert",
+        "table",
+        "markdown",
+        "document"
+      ],
+      "nav_hints": [
+        "insert",
+        "table"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open a Markdown document",
+        "tap the table action in the action bar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Search across all files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the search icon in the toolbar",
+        "Enter 'search' in the search bar",
+        "Tap the 'across' button",
+        "Tap the 'all' button",
+        "Tap the search result to view the file content"
+      ],
+      "keywords": [
+        "search",
+        "across",
+        "all",
+        "files"
+      ],
+      "nav_hints": [
+        "search",
+        "across",
+        "all"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "tap the search icon in the toolbar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Manage a todo.txt file",
+      "description": "Open or create a .txt file in todo.txt format",
+      "actions": [
+        "Open the Markor app",
+        "Tap on the 'todo' option in the navigation drawer",
+        "Enter the path to the todo.txt file or tap 'Create' to create a new file",
+        "Tap on the 'todo.txt' action bar to view and manage the todo.txt file",
+        "Perform the necessary operations to manage the todo.txt file"
+      ],
+      "keywords": [
+        "manage",
+        "todo",
+        "txt",
+        "file"
+      ],
+      "nav_hints": [
+        "manage",
+        "todo",
+        "txt"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open or create a .txt file in todo.txt format",
+        "the todo.txt action bar appears"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Preview a CSV file",
+      "description": "Open a .csv file",
+      "actions": [
+        "Open a .csv file",
+        "tap the preview/eye icon"
+      ],
+      "keywords": [
+        "preview",
+        "csv",
+        "file",
+        "table"
+      ],
+      "nav_hints": [
+        "preview",
+        "csv",
+        "file"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Share the document",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "Tap the overflow menu",
+        "Select 'Share' from the overflow menu",
+        "Enter the desired sharing method (e.g., 'Email', 'Message', 'Social Media')",
+        "Tap the 'Send' button to share the document"
+      ],
+      "keywords": [
+        "share",
+        "document",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "share",
+        "document",
+        "plain"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open a document",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Delete files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap on the 'Files' tab",
+        "Long-press the items to select them",
+        "Select the 'delete' option",
+        "Confirm the deletion",
+        "The app state changes to reflect the deleted files"
+      ],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "tab"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "long-press the items to select them"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Sort the file list",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the sort icon (or the overflow menu)",
+        "Select 'folders first'",
+        "Select 'sort'",
+        "Select 'file'"
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folders first",
+        "sort",
+        "file"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "tap the sort icon (or the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "View recent",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap the 'Files' tab",
+        "Select 'Go to' menu",
+        "Select 'recent documents'"
+      ],
+      "keywords": [
+        "recent",
+        "popular",
+        "documents",
+        "files"
+      ],
+      "nav_hints": [
+        "go to",
+        "recent documents",
+        "popular documents"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "tap the \"Go to\" menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Open a file",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap the navigation drawer icon to open the navigation drawer",
+        "Select the 'Files' tab from the navigation drawer",
+        "Tap on the file you want to open"
+      ],
+      "keywords": [
+        "file",
+        "another",
+        "application",
+        "files"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Files tab",
+        "long-press a file"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Change the notebook directory",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find and select the 'Notebook' / root folder entry.",
+        "Tap on the 'Notebook' / root folder entry to open the directory settings.",
+        "Tap on the 'Change' option to modify the notebook directory.",
+        "Enter the new directory path in the input field.",
+        "Tap the 'Save' button to apply the changes."
+      ],
+      "keywords": [
+        "change",
+        "notebook",
+        "root",
+        "directory"
+      ],
+      "nav_hints": [
+        "notebook",
+        "change",
+        "root"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap the \"Notebook\" / root folder entry"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Browse the notebook folder",
+    "Create a folder",
+    "Apply Markdown formatting",
+    "Insert an image",
+    "Insert a table",
+    "Search across all files",
+    "Manage a todo.txt file",
+    "Share the document",
+    "Delete files",
+    "Sort the file list",
+    "View recent",
+    "Open a file",
+    "Change the notebook directory"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/markor/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/markor/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 4,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse the notebook folder"
+      },
+      {
+        "id": "G002",
+        "name": "Create a folder"
+      },
+      {
+        "id": "G003",
+        "name": "Apply Markdown formatting"
+      },
+      {
+        "id": "G004",
+        "name": "Insert an image"
+      },
+      {
+        "id": "G005",
+        "name": "Insert a table"
+      },
+      {
+        "id": "G006",
+        "name": "Search across all files"
+      },
+      {
+        "id": "G007",
+        "name": "Manage a todo.txt file"
+      },
+      {
+        "id": "G008",
+        "name": "Preview a CSV file"
+      },
+      {
+        "id": "G009",
+        "name": "Share the document"
+      },
+      {
+        "id": "G010",
+        "name": "Delete files"
+      },
+      {
+        "id": "G011",
+        "name": "Sort the file list"
+      },
+      {
+        "id": "G012",
+        "name": "View recent"
+      },
+      {
+        "id": "G013",
+        "name": "Open a file"
+      },
+      {
+        "id": "G014",
+        "name": "Change the notebook directory"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Search"
+      },
+      {
+        "id": "F003",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F004",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

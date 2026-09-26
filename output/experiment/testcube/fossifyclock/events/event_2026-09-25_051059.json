@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_051059",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "android",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          792
+        ],
+        [
+          947,
+          863
+        ]
+      ],
+      "resource_id": "android:id/alertTitle",
+      "checked": false,
+      "text": "Clock isn't responding",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "814*71",
+      "signature": "[class]android.widget.TextView[resource_id]android:id/alertTitle[text]Clock isn't responding[desc]None[enabled,,]",
+      "view_str": "ee0486985041b70e3a9ad02a6af9b0e6",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]android:id/alertTitle",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=133,792,947,863>Clock isn't responding</p>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "002525ce9c22275a9e434fa17eaeda0e",
+  "stop_state": "002525ce9c22275a9e434fa17eaeda0e",
+  "event_str": "CustomTouchEvent(state=002525ce9c22275a9e434fa17eaeda0e, view=ee0486985041b70e3a9ad02a6af9b0e6(MainActivity/TextView-Clock isn'))"
+}

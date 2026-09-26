@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_042918",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "net.sourceforge.opencamera",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          70,
+          219
+        ],
+        [
+          1010,
+          345
+        ]
+      ],
+      "resource_id": "android:id/text1",
+      "checked": true,
+      "text": "Don't restart",
+      "class": "android.widget.CheckedTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "940*126",
+      "signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1[text]Don't restart[desc]None[enabled,checked,]",
+      "view_str": "c3b1edc2d189a99d3d5236c67442dafc",
+      "content_free_signature": "[class]android.widget.CheckedTextView[resource_id]android:id/text1",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "1",
+      "desc": "<checkbox bound_box=70,219,1010,345>Don't restart</checkbox>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "7fb6290fe86e1de5a5156a9d579544e5",
+  "stop_state": "2e370324de4cfaffd35b33bc58722182",
+  "event_str": "CustomTouchEvent(state=7fb6290fe86e1de5a5156a9d579544e5, view=c3b1edc2d189a99d3d5236c67442dafc(MainActivity/CheckedTextView-Don't rest))"
+}

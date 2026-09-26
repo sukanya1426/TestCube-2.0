@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_033227",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "net.programmierecke.radiodroid2",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          135,
+          88
+        ],
+        [
+          828,
+          183
+        ]
+      ],
+      "resource_id": "net.programmierecke.radiodroid2:id/search_src_text",
+      "checked": false,
+      "text": "Search\u2026",
+      "class": "android.widget.AutoCompleteTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "693*95",
+      "signature": "[class]android.widget.AutoCompleteTextView[resource_id]net.programmierecke.radiodroid2:id/search_src_text[text]Search\u2026[desc]None[enabled,,]",
+      "view_str": "7ce7e11cbcb86fd33860ead61f4ba498",
+      "content_free_signature": "[class]android.widget.AutoCompleteTextView[resource_id]net.programmierecke.radiodroid2:id/search_src_text",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input bound_box=135,88,828,183>Search\u2026</input>"
+    },
+    "text": "test",
+    "skip_oracle": true
+  },
+  "start_state": "9d464aa8412b15679ec455567af86384",
+  "stop_state": "d93be0b984616c87ead2ba852f1f4d03",
+  "event_str": "CustomSetTextEvent(state=9d464aa8412b15679ec455567af86384, view=7ce7e11cbcb86fd33860ead61f4ba498(ActivityMain/AutoCompleteTextView-Search\u2026), text=)"
+}

@@ -1,0 +1,57 @@
+{
+  "tag": "2026-09-25_011254",
+  "event": {
+    "event_type": "long_touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          74,
+          606
+        ],
+        [
+          1006,
+          1312
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/md_content",
+      "checked": false,
+      "text": "Since Android 11, Google requests File Managers to request user permission for managing all files on the device. Details available at https://developer.android.com/training/data-storage/manage-all-files.\n\nAmaze File Manager needs this permission too. After pressing 'Grant', please select Allow access to manage all files option on the next screen.\n\nCanceling this dialog will exit the app. ",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "932*706",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/md_content[text]None[desc]None[enabled,,]",
+      "view_str": "6777e80a63ef098ef8ee723768003574",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/md_content",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=74,606,1006,1312>Since Android 11, Google requests File Managers to request user permission for managing all files on the device. Details available at https://developer.android.com/training/data-storage/manage-all-files.\n\nAmaze File Manager needs this permission too. After pressing 'Grant', please select Allow access to manage all files option on the next screen.\n\nCanceling this dialog will exit the app. </p>"
+    },
+    "duration": 1500,
+    "skip_oracle": true
+  },
+  "start_state": "58ff11f37a9cac3066f593473b3f808b",
+  "stop_state": "58ff11f37a9cac3066f593473b3f808b",
+  "event_str": "LongTouchEvent(state=58ff11f37a9cac3066f593473b3f808b, view=6777e80a63ef098ef8ee723768003574(MainActivity/TextView-Since Andr))"
+}

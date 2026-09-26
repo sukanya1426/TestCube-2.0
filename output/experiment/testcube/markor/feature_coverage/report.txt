@@ -1,0 +1,475 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Markor
+
+Total Actions    : 41
+
+Total Features   : 46
+Covered Features : 0
+Partial          : 1
+Uncovered        : 45
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 0.43%  (mean completion ratio; partial steps count)
+Exercised        : 1  (covered 0 + partial 1)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the notebook folder
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - opened app, tapped 'Files', but did not enter folder
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/Button-DONE
+  - touch StoragePermissionActivity/Button-OK
+  - touch StoragePermissionActivity/Button-OK
+
+[GT002] Create a new plain text or Markdown document
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - did not create a new document
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/ImageButton-
+  - touch IntroActivity/Button-DONE
+  - touch StoragePermissionActivity/Button-OK
+  - touch StoragePermissionActivity/Button-OK
+
+[GT003] Create a document from a template
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT004] Create a folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing; no folder creation
+  - touch StoragePermissionActivity/Button-EXIT
+
+[GT005] Edit a document in the text editor
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing; no document editing
+  - touch IntroActivity/Button-DONE
+
+[GT006] Switch between edit mode and rendered preview
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT007] Apply Markdown formatting with the action toolbar
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to Markdown formatting.
+
+[GT008] Insert bullet, numbered and checkbox lists
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to list insertion.
+
+[GT009] Insert a link
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to link insertion.
+
+[GT010] Insert an image from the gallery or camera
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT011] Record and insert an audio note
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT012] Insert the current date or time
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+
+[GT013] Insert a table
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to table insertion
+
+[GT014] Undo and redo edits
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to undo/redo edits
+
+[GT015] Search inside the open document
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to document search
+
+[GT016] Search across all files in the notebook
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to searching across files.
+
+[GT017] Open the QuickNote file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to opening QuickNote file.
+
+[GT018] Open the To-Do file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to opening To-Do file.
+
+[GT019] Manage a todo.txt file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no todo.txt file management actions
+  - later IntroActivity/ImageButton-
+
+[GT020] Edit a Zim Wiki page
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no Zim Wiki file editing actions
+  - later IntroActivity/ImageButton-
+
+[GT021] Edit AsciiDoc, Org-Mode, CSV and plain text files
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no file editing actions for AsciiDoc, Org-Mode, CSV, or plain text
+  - later IntroActivity/ImageButton-
+
+[GT022] Preview a CSV file as a table
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No CSV file opened or previewed.
+  - later IntroActivity/ImageButton-
+
+[GT023] Create a Markdown presentation
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No Markdown file created or previewed.
+  - later IntroActivity/ImageButton-
+
+[GT024] Export the document as a PDF or print it
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No document opened or exported.
+  - later IntroActivity/ImageButton-
+
+[GT025] Share the document as plain text or rendered HTML
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing for sharing document
+  - later IntroActivity/ImageButton-
+
+[GT026] Rename a file or folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing for renaming file or folder
+  - later IntroActivity/ImageButton-
+
+[GT027] Move or copy files and folders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing for moving or copying files and folders
+  - later IntroActivity/ImageButton-
+
+[GT028] Delete files and folders
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT029] Select multiple files at once
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT030] Mark a file or folder as a favourite
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT031] Sort the file list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - later IntroActivity/ImageButton-
+
+[GT032] Show or hide hidden files
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - later IntroActivity/ImageButton-
+
+[GT033] Jump to a specific folder path
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not followed
+  - later IntroActivity/ImageButton-
+
+[GT034] View recent and popular documents
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/Button-DONE
+  - later StoragePermissionActivity/Button-OK
+
+[GT035] View file information
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/Button-DONE
+  - later StoragePermissionActivity/Button-OK
+
+[GT036] Encrypt and open password-protected notes
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/Button-DONE
+  - later StoragePermissionActivity/Button-OK
+
+[GT037] Open a file with another application
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal indicates no relevant actions
+
+[GT038] Add a launcher shortcut to a document
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal indicates no relevant actions
+
+[GT039] Add the Markor home screen widget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal indicates no relevant actions
+
+[GT040] Change the notebook (root) directory
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/ImageButton-
+  - later IntroActivity/Button-DONE
+  - later StoragePermissionActivity/Button-OK
+
+[GT041] Change the theme and colours
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT042] Change the editor font family and size
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT043] Configure editor behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - none of the steps match the gold steps
+
+[GT044] Configure the format action bar buttons
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - none of the steps match the gold steps
+
+[GT045] Change the app language
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - none of the steps match the gold steps
+
+[GT046] Review the changelog, help and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 46 features covered
+1 / 46 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 0.43%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 46 (completeness ratio 0.304)
+
+Feature-inference P/R/F1: 1.00 / 0.30 / 0.47 (false not_present=0)
+
+GT GT001 'Browse the notebook folder' | journal=G001 'Browse the notebook folder' (sim=1.0, name) status=partial | offline=partial
+GT GT002 'Create a new plain text or Markdown document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Create a document from a template' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Create a folder' | journal=G002 'Create a folder' (sim=1.0, name) status=partial | offline=not_covered
+GT GT005 'Edit a document in the text editor' | journal=G009 'Share the document' (sim=0.333, name) status=pending | offline=not_covered
+GT GT006 'Switch between edit mode and rendered preview' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Apply Markdown formatting with the action toolbar' | journal=G003 'Apply Markdown formatting' (sim=0.429, name) status=dropped | offline=not_covered
+GT GT008 'Insert bullet, numbered and checkbox lists' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Insert a link' | journal=G004 'Insert an image' (sim=0.333, name) status=pending | offline=not_covered
+GT GT010 'Insert an image from the gallery or camera' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Record and insert an audio note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Insert the current date or time' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Insert a table' | journal=G005 'Insert a table' (sim=1.0, name) status=pending | offline=not_covered
+GT GT014 'Undo and redo edits' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Search inside the open document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Search across all files in the notebook' | journal=G006 'Search across all files' (sim=0.667, name) status=pending | offline=not_covered
+GT GT017 'Open the QuickNote file' | journal=G013 'Open a file' (sim=0.5, name) status=pending | offline=not_covered
+GT GT018 'Open the To-Do file' | journal=G011 'Sort the file list' (sim=0.4, name) status=pending | offline=not_covered
+GT GT019 'Manage a todo.txt file' | journal=G007 'Manage a todo.txt file' (sim=1.0, name) status=pending | offline=not_covered
+GT GT020 'Edit a Zim Wiki page' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Edit AsciiDoc, Org-Mode, CSV and plain text files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Preview a CSV file as a table' | journal=G008 'Preview a CSV file' (sim=0.75, name) status=pending | offline=not_covered
+GT GT023 'Create a Markdown presentation' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Export the document as a PDF or print it' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Share the document as plain text or rendered HTML' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Rename a file or folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Move or copy files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Delete files and folders' | journal=G010 'Delete files' (sim=0.5, name) status=pending | offline=not_covered
+GT GT029 'Select multiple files at once' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Mark a file or folder as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Sort the file list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Show or hide hidden files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Jump to a specific folder path' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'View recent and popular documents' | journal=G012 'View recent' (sim=0.5, name) status=pending | offline=not_covered
+GT GT035 'View file information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Encrypt and open password-protected notes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Open a file with another application' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Add a launcher shortcut to a document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Add the Markor home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Change the notebook (root) directory' | journal=G014 'Change the notebook directory' (sim=0.8, name) status=pending | offline=not_covered
+GT GT041 'Change the theme and colours' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Change the editor font family and size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT043 'Configure editor behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT044 'Configure the format action bar buttons' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT045 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'Review the changelog, help and licences' | journal=missing (no name match) status=missing | offline=not_covered

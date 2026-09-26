@@ -1,0 +1,501 @@
+{
+  "app": "Fossify Contacts",
+  "source": "guide",
+  "url": "Official Fossify repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-38 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a contact",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap the '+' floating action button",
+        "Enter the contact's name",
+        "Enter the contact's phone number",
+        "Tap the 'Save' button"
+      ],
+      "keywords": [
+        "create",
+        "contact",
+        "floating",
+        "action"
+      ],
+      "nav_hints": [
+        "create",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "tap the \"+\" floating action button"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Add multiple phone numbers",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the phone section"
+      ],
+      "keywords": [
+        "add",
+        "multiple",
+        "phone",
+        "numbers"
+      ],
+      "nav_hints": [
+        "add",
+        "multiple",
+        "phone"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G003",
+      "name": "Add postal addresses",
+      "description": "Open the contact editor",
+      "actions": [
+        "Open the contact editor",
+        "tap the \"+\" beside the address section"
+      ],
+      "keywords": [
+        "add",
+        "postal",
+        "addresses",
+        "contact"
+      ],
+      "nav_hints": [
+        "add",
+        "postal",
+        "addresses"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Add the organisation",
+      "description": "Open the contact editor",
+      "actions": [
+        "Tap on the 'Add' button to start creating a new contact.",
+        "Select the 'organisation' option from the dropdown menu.",
+        "Enter the name of the organisation in the text field.",
+        "Tap on the 'job' option to add the job title.",
+        "Enter the job title in the text field.",
+        "Tap on the 'Save' button to add the organisation to the contact."
+      ],
+      "keywords": [
+        "add",
+        "organisation",
+        "job",
+        "title"
+      ],
+      "nav_hints": [
+        "add",
+        "organisation",
+        "job"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact editor",
+        "scroll to the organisation section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Add notes",
+      "description": "Open the contact editor",
+      "actions": [
+        "Tap on the contact you want to add notes to",
+        "Tap on the 'Edit' button to open the contact editor",
+        "Scroll to the 'Notes' field",
+        "Enter the notes you want to add",
+        "Tap on the 'Save' button to update the contact"
+      ],
+      "keywords": [
+        "add",
+        "notes",
+        "contact",
+        "editor"
+      ],
+      "nav_hints": [
+        "add",
+        "notes",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact editor",
+        "scroll to the notes field"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Edit a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "Tap the edit (pencil) icon",
+        "Enter the new information",
+        "Tap the save icon",
+        "Verify the changes in the contact list"
+      ],
+      "keywords": [
+        "edit",
+        "contact",
+        "pencil"
+      ],
+      "nav_hints": [
+        "edit",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact",
+        "tap the edit (pencil) icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Mark a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "Tap the star icon in the toolbar",
+        "Select the contact",
+        "Tap the star icon in the contact details",
+        "Confirm the marking as a favourite"
+      ],
+      "keywords": [
+        "mark",
+        "contact",
+        "favourite",
+        "star"
+      ],
+      "nav_hints": [
+        "add to favourites",
+        "mark",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact",
+        "tap the star icon in the toolbar; or long-press the contact in the list"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Call a contact",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "tap the phone number (or the call icon beside it); the dialler is opened with the number"
+      ],
+      "keywords": [
+        "call",
+        "contact",
+        "phone",
+        "number"
+      ],
+      "nav_hints": [
+        "call",
+        "contact"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G009",
+      "name": "Send an email",
+      "description": "Open the contact",
+      "actions": [
+        "Open the contact",
+        "Tap the email address",
+        "Enter the recipient's email address",
+        "Tap the send button",
+        "Confirm the email is sent"
+      ],
+      "keywords": [
+        "send",
+        "email",
+        "contact",
+        "address"
+      ],
+      "nav_hints": [
+        "send",
+        "email",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact",
+        "tap the email address"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Add contacts",
+      "description": "Open the Groups tab",
+      "actions": [
+        "Open the Groups tab",
+        "Tap the group",
+        "Enter contact details",
+        "Tap the '+' icon",
+        "Select the contact type",
+        "Save the contact"
+      ],
+      "keywords": [
+        "add",
+        "contacts",
+        "group",
+        "groups"
+      ],
+      "nav_hints": [
+        "add",
+        "contacts",
+        "group"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Groups tab",
+        "tap the group"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Send a message",
+      "description": "Open the Groups tab",
+      "actions": [
+        "Open the Contacts app",
+        "Navigate to the Groups tab",
+        "Tap the group to which you want to send a message",
+        "Tap the 'Send' button",
+        "Enter the message content",
+        "Tap the 'Send' button to send the message"
+      ],
+      "keywords": [
+        "send",
+        "message",
+        "email",
+        "whole"
+      ],
+      "nav_hints": [
+        "send",
+        "message",
+        "email"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the Groups tab",
+        "tap the group"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Sort the contact list",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "Select 'Sort by'",
+        "Select 'Name'",
+        "Tap 'Done'"
+      ],
+      "keywords": [
+        "sort",
+        "contact",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort by",
+        "sort",
+        "contact"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the overflow menu",
+        "tap \"Sort by\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Choose",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll to 'Manage shown contact fields'",
+        "Tap 'Manage shown contact fields'",
+        "Select 'Visible' from the dropdown",
+        "Tap 'Done' to save changes"
+      ],
+      "keywords": [
+        "which",
+        "fields",
+        "visible",
+        "contact"
+      ],
+      "nav_hints": [
+        "which",
+        "fields",
+        "visible"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap \"Manage shown contact fields\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Merge duplicate contacts",
+      "description": "Open the contact list",
+      "actions": [
+        "Open the contact list",
+        "Long-press the contacts to select them",
+        "Select the contacts to be merged",
+        "Navigate to the 'Merge' option",
+        "Select the contacts to merge",
+        "Confirm the merge action"
+      ],
+      "keywords": [
+        "merge",
+        "duplicate",
+        "contacts",
+        "contact"
+      ],
+      "nav_hints": [
+        "merge",
+        "duplicate",
+        "contacts"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the contact list",
+        "long-press the contacts to select them"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Create a contact",
+    "Add the organisation",
+    "Add notes",
+    "Edit a contact",
+    "Mark a contact",
+    "Send an email",
+    "Add contacts",
+    "Send a message",
+    "Sort the contact list",
+    "Choose",
+    "Merge duplicate contacts"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 8,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create a contact"
+      },
+      {
+        "id": "G002",
+        "name": "Add multiple phone numbers"
+      },
+      {
+        "id": "G003",
+        "name": "Add postal addresses"
+      },
+      {
+        "id": "G004",
+        "name": "Add the organisation"
+      },
+      {
+        "id": "G005",
+        "name": "Add notes"
+      },
+      {
+        "id": "G006",
+        "name": "Edit a contact"
+      },
+      {
+        "id": "G007",
+        "name": "Mark a contact"
+      },
+      {
+        "id": "G008",
+        "name": "Call a contact"
+      },
+      {
+        "id": "G009",
+        "name": "Send an email"
+      },
+      {
+        "id": "G010",
+        "name": "Add contacts"
+      },
+      {
+        "id": "G011",
+        "name": "Send a message"
+      },
+      {
+        "id": "G012",
+        "name": "Sort the contact list"
+      },
+      {
+        "id": "G013",
+        "name": "Choose"
+      },
+      {
+        "id": "G014",
+        "name": "Merge duplicate contacts"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F006",
+        "name": "Search"
+      },
+      {
+        "id": "F007",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F008",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_004340",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.isoron.uhabits",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          22,
+          256
+        ],
+        [
+          848,
+          397
+        ]
+      ],
+      "resource_id": "org.isoron.uhabits:id/nameInput",
+      "checked": false,
+      "text": "e.g. Exercise",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "826*141",
+      "signature": "[class]android.widget.EditText[resource_id]org.isoron.uhabits:id/nameInput[text]e.g. Exercise[desc]None[enabled,,]",
+      "view_str": "ea6266e53fe46e96fd06981374f34d48",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.isoron.uhabits:id/nameInput",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=22,256,848,397>e.g. Exercise</input>"
+    },
+    "text": "test",
+    "skip_oracle": true
+  },
+  "start_state": "4c5085db92fa4e2eec38001c1ef3e16e",
+  "stop_state": "44f3db739c0f46a03884645f191d1c2c",
+  "event_str": "CustomSetTextEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=ea6266e53fe46e96fd06981374f34d48(EditHabitActivity/EditText-e.g. Exerc), text=test)"
+}

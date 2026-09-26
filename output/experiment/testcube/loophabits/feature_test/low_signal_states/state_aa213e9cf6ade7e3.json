@@ -1,0 +1,71 @@
+{
+  "state_str": "aa213e9cf6ade7e37dc6f839ea4444b4",
+  "activity": "org.isoron.uhabits/.MainActivity",
+  "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/loophabits/.droidbot/temp/screen_2026-09-25_004018.png",
+  "signal": {
+    "low_signal": true,
+    "ratio": 1.0,
+    "unlabeled": 1,
+    "total": 1,
+    "unlabeled_nav": 0,
+    "destination_missing": false,
+    "force_visual": true
+  },
+  "semantics_note": "content_description present means Flutter semantics are on for that node. Empty text/content-description/resource-id on a clickable View means the app did not expose a label (typical for icon-only bottom navigation).",
+  "clickable_or_editable": [
+    {
+      "class": "Button",
+      "text": "",
+      "content_description": "Add habit",
+      "resource_id": "org.isoron.uhabits:id/actionCreateHabit",
+      "editable": false,
+      "bounds": [
+        [
+          700,
+          73
+        ],
+        [
+          848,
+          199
+        ]
+      ],
+      "view_str": "86dda9cf49b1cc84f1157a5c09bd2c02"
+    },
+    {
+      "class": "Button",
+      "text": "",
+      "content_description": "Filter",
+      "resource_id": "org.isoron.uhabits:id/action_filter",
+      "editable": false,
+      "bounds": [
+        [
+          848,
+          73
+        ],
+        [
+          975,
+          199
+        ]
+      ],
+      "view_str": "9958377056a609aa8129627129fb8100"
+    },
+    {
+      "class": "ImageView",
+      "text": "",
+      "content_description": "More options",
+      "resource_id": "",
+      "editable": false,
+      "bounds": [
+        [
+          975,
+          73
+        ],
+        [
+          1080,
+          199
+        ]
+      ],
+      "view_str": "434ac7c8c71405ad45422218e9a814fe"
+    }
+  ]
+}

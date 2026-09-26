@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_021952",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          137,
+          1606
+        ],
+        [
+          883,
+          1718
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/contact_address",
+      "checked": false,
+      "text": "Address",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "746*112",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_address[text]Address[desc]None[enabled,,]",
+      "view_str": "199dd7b8130e8e515032bef32db2e6d9",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.contacts:id/contact_address",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<input bound_box=137,1606,883,1718>Address</input>"
+    },
+    "text": "123 Main St, Anytown, USA",
+    "skip_oracle": true
+  },
+  "start_state": "806b8a8c17c38e5b77563af813c325ab",
+  "stop_state": "2f39cb70fc3dac10120b69fdbb550d29",
+  "event_str": "CustomSetTextEvent(state=806b8a8c17c38e5b77563af813c325ab, view=199dd7b8130e8e515032bef32db2e6d9(EditContactActivity/EditText-Address), text=)"
+}

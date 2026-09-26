@@ -1,0 +1,640 @@
+Activity Resolver Table:
+  Full MIME Types:
+      application/x-kdb:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+      */*:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter 5785b0e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      text/plain:
+        5296f28 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.activity.EntrySelectionLauncherActivity filter 372b441
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+      application/x-kdbx:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+      application/octet-stream:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+      application/x-keepass:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+
+  Base MIME Types:
+      text:
+        5296f28 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.activity.EntrySelectionLauncherActivity filter 372b441
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+      application:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+
+  Wild MIME Types:
+      *:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter 5785b0e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Schemes:
+      otpauth:
+        5296f28 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.activity.EntrySelectionLauncherActivity filter 608bde6
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "otpauth"
+          Authority: "totp": -1
+          Authority: "hotp": -1
+      file:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter 5785b0e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+      content:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter 5785b0e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        15f42d3 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDatabaseSelectActivity filter e1dee10
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        ee31a1a com.kunzisoft.keepass.libre/com.kunzisoft.keepass.settings.MagikeyboardSettingsActivity filter 2c2394b
+          Action: "android.intent.action.MAIN"
+      android.intent.action.SEARCH:
+        3dbdb3c com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.GroupActivity filter dd0d0c5
+          Action: "android.intent.action.SEARCH"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.intent.action.SEND:
+        5296f28 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.activity.EntrySelectionLauncherActivity filter 372b441
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+      android.intent.action.VIEW:
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter 5785b0e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdb}"
+          Path: "PatternMatcher{GLOB: .*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx}"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+        1a76d09 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.MainCredentialActivity filter ad1392f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "file"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Path: "PatternMatcher{GLOB: .*}"
+          Path: "PatternMatcher{GLOB: .*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          Path: "PatternMatcher{GLOB: .*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.*}"
+          StaticType: "application/octet-stream"
+          StaticType: "application/x-kdb"
+          StaticType: "application/x-kdbx"
+          StaticType: "application/x-keepass"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.app.action.ENTER_KNOX_DESKTOP_MODE:
+        1791f27 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.receivers.DexModeReceiver filter 73a55d4
+          Action: "android.app.action.ENTER_KNOX_DESKTOP_MODE"
+          Action: "android.app.action.EXIT_KNOX_DESKTOP_MODE"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        ff5537d com.kunzisoft.keepass.libre/androidx.profileinstaller.ProfileInstallReceiver filter cd0fb40
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      android.app.action.EXIT_KNOX_DESKTOP_MODE:
+        1791f27 com.kunzisoft.keepass.libre/com.kunzisoft.keepass.receivers.DexModeReceiver filter 73a55d4
+          Action: "android.app.action.ENTER_KNOX_DESKTOP_MODE"
+          Action: "android.app.action.EXIT_KNOX_DESKTOP_MODE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        ff5537d com.kunzisoft.keepass.libre/androidx.profileinstaller.ProfileInstallReceiver filter a92d272
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        ff5537d com.kunzisoft.keepass.libre/androidx.profileinstaller.ProfileInstallReceiver filter 2ce86c3
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        ff5537d com.kunzisoft.keepass.libre/androidx.profileinstaller.ProfileInstallReceiver filter 508aa79
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.service.autofill.AutofillService:
+        b37a3be com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.autofill.KeeAutofillService filter d88cc1f permission android.permission.BIND_AUTOFILL_SERVICE
+          Action: "android.service.autofill.AutofillService"
+      android.view.InputMethod:
+        6a8b6c com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.magikeyboard.MagikeyboardService filter 5607535 permission android.permission.BIND_INPUT_METHOD
+          Action: "android.view.InputMethod"
+      android.service.credentials.CredentialProviderService:
+        9c63dca com.kunzisoft.keepass.libre/com.kunzisoft.keepass.credentialprovider.passkey.PasskeyProviderService filter 4780b3b permission android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE
+          Action: "android.service.credentials.CredentialProviderService"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.kunzisoft.keepass.libre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (630692a):
+    sourcePackage=com.kunzisoft.keepass.libre
+    uid=10235 gids=[] type=0 prot=signature
+    perm=PermissionInfo{323c31b com.kunzisoft.keepass.libre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.kunzisoft.keepass.libre/androidx.startup.InitializationProvider:
+    Provider{d8e7cb8 com.kunzisoft.keepass.libre/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.kunzisoft.keepass.libre.androidx-startup]:
+    Provider{d8e7cb8 com.kunzisoft.keepass.libre/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{dfb5a91 com.kunzisoft.keepass.libre}
+
+Key Set Manager:
+  [com.kunzisoft.keepass.libre]
+      Signing KeySets: 85
+
+Packages:
+  Package [com.kunzisoft.keepass.libre] (6c3edf6):
+    appId=10235
+    pkg=Package{63175f7 com.kunzisoft.keepass.libre}
+    codePath=/data/app/~~oEU0rkI0DzqRGdOepUmC9w==/com.kunzisoft.keepass.libre-5hRUz_R0KpcP3cPd8_lbSw==
+    resourcePath=/data/app/~~oEU0rkI0DzqRGdOepUmC9w==/com.kunzisoft.keepass.libre-5hRUz_R0KpcP3cPd8_lbSw==
+    legacyNativeLibraryDir=/data/app/~~oEU0rkI0DzqRGdOepUmC9w==/com.kunzisoft.keepass.libre-5hRUz_R0KpcP3cPd8_lbSw==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=45400 minSdk=21 targetSdk=36
+    minExtensionVersions=[]
+    versionName=4.5.4
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[com.google.android.gms]
+    queriesIntents=[Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] }, Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=http:/... }, Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=https:/... }, Intent { act=com.android.keyboard.SWITCH_KEYBOARD }, Intent { act=android.yubikey.intent.action.CHALLENGE_RESPONSE }, Intent { act=android.intent.action.CREATE_DOCUMENT dat=content://*/... typ=application/octet-stream }]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+    usesLibraryFiles:
+      /system_ext/framework/androidx.window.extensions.jar
+      /system_ext/framework/androidx.window.sidecar.jar
+    timeStamp=2026-09-25 03:53:14
+    lastUpdateTime=2026-09-25 03:53:14
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{90aac64 version:3, signatures:[39dd705e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE LARGE_HEAP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.kunzisoft.keepass.libre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.POST_NOTIFICATIONS
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+      com.kunzisoft.keepass.libre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC
+      android.permission.USE_FINGERPRINT
+      android.permission.SCHEDULE_EXACT_ALARM
+      android.permission.VIBRATE
+      android.permission.USE_BIOMETRIC
+    install permissions:
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.FOREGROUND_SERVICE_SPECIAL_USE: granted=true
+      com.kunzisoft.keepass.libre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.USE_BIOMETRIC: granted=true
+    User 0: ceDataInode=360471 deDataInode=90704 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/com.kunzisoft.keepass.libre
+      firstInstallTime=2026-09-25 03:53:14
+      uninstallReason=0
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=true
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      com.kunzisoft.keepass.libre
+    com.google.android.apps.messaging:
+      com.kunzisoft.keepass.libre
+    com.google.android.settings.intelligence:
+      com.kunzisoft.keepass.libre
+    [com.google.android.gms,com.google.android.gsf]:
+      com.kunzisoft.keepass.libre
+    com.google.android.apps.maps:
+      com.kunzisoft.keepass.libre
+    com.google.android.inputmethod.latin:
+      com.kunzisoft.keepass.libre
+    com.google.android.apps.youtube.music:
+      com.kunzisoft.keepass.libre
+    com.google.android.apps.docs:
+      com.kunzisoft.keepass.libre
+    com.google.android.gm:
+      com.kunzisoft.keepass.libre
+    com.google.android.contacts:
+      com.kunzisoft.keepass.libre
+    com.google.android.calendar:
+      com.kunzisoft.keepass.libre
+    com.google.android.youtube:
+      com.kunzisoft.keepass.libre
+    com.google.android.apps.photos:
+      com.kunzisoft.keepass.libre
+    com.google.android.permissioncontroller:
+      com.kunzisoft.keepass.libre
+    com.kunzisoft.keepass.libre:
+      com.google.android.documentsui
+      com.google.android.apps.safetyhub
+      com.google.android.dialer
+      com.google.android.projection.gearhead
+      com.google.android.apps.messaging
+      com.google.android.googlequicksearchbox
+      com.android.chrome
+      com.google.android.deskclock
+      com.google.android.apps.maps
+      com.google.android.inputmethod.latin
+      com.google.android.apps.youtube.music
+      com.android.camera2
+      com.google.android.apps.docs
+      com.google.android.gm
+      com.google.android.contacts
+      com.google.android.calendar
+      com.google.android.youtube
+      com.google.android.apps.photos
+      com.google.android.cellbroadcastreceiver
+      io.github.ylimit.droidbotapp
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [com.kunzisoft.keepass.libre]
+    path: /data/app/~~oEU0rkI0DzqRGdOepUmC9w==/com.kunzisoft.keepass.libre-5hRUz_R0KpcP3cPd8_lbSw==/base.apk
+      x86_64: [status=run-from-apk] [reason=unknown] [primary-abi]
+        [location is error]
+
+Compiler stats:
+  [com.kunzisoft.keepass.libre]
+     base.apk - 9325

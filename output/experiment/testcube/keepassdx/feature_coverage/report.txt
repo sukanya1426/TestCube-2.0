@@ -1,0 +1,469 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: KeePassDX
+
+Total Actions    : 136
+
+Total Features   : 47
+Covered Features : 0
+Partial          : 2
+Uncovered        : 45
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 1.40%  (mean completion ratio; partial steps count)
+Exercised        : 2  (covered 0 + partial 2)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards creating a database.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT002] Open an existing database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards opening an existing database.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT003] Unlock a database with a key file
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Partial steps towards unlocking with a key file.
+  - touch FileDatabaseSelectActivity/View-
+
+[GT004] Unlock a database with a hardware key (challenge-response)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards hardware key unlock.
+  - touch FrameLayout
+
+[GT005] Unlock with biometrics or the device credential
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards biometric or device credential unlock.
+  - touch FrameLayout
+
+[GT006] Create an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards creating an entry.
+  - touch FrameLayout
+
+[GT007] Generate a password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT008] Add custom fields to an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT009] Add an attachment to an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT010] Download or open an attachment
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Tap the attachment name, but no further actions.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT011] Set an expiration date on an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting an expiration date.
+
+[GT012] Configure a one-time password (OTP) token for an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards configuring an OTP token.
+
+[GT013] Copy a username or password to the clipboard
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT014] Reveal a hidden password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+  - touch FrameLayout rid=content activity=FileDatabaseSelectActivity
+
+[GT015] Open the entry URL in the browser
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT016] Edit an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT017] View an entry's history
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+  - touch FrameLayout rid=content activity=FileDatabaseSelectActivity
+
+[GT018] Duplicate an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions match gold steps
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT019] Move an entry to another group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No long press or move action detected.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT020] Delete an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No long press or delete action detected.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT021] Create a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No group creation actions detected.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT022] Edit, move or delete a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press action not observed.
+  - long_touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT023] Use the recycle bin
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Recycle bin functionality not tested.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT024] Change an entry or group icon
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to changing an entry or group icon.
+  - intent intent=am start com.kunzisoft.keepass.libre
+
+[GT025] Search the database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+  - touch FrameLayout
+
+[GT026] Configure search behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+  - touch FrameLayout
+
+[GT027] Sort the entry list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps match gold capability
+  - touch FrameLayout
+
+[GT028] Use the KeePassDX autofill service
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT029] Use the Magikeyboard to type credentials
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch FrameLayout rid=content activity=FileDatabaseSelectActivity
+
+[GT030] Save changes to the database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not followed.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT031] Open a database in read-only mode
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No read-only mode enabled
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT032] Lock the database manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No lock action performed
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT033] Configure automatic locking
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No settings configuration performed
+  - touch FrameLayout rid=content activity=FileDatabaseSelectActivity
+
+[GT034] Configure clipboard timeout
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal indicates partial but not relevant to feature
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT035] Block screenshots
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal and actions do not match feature gold steps
+  - touch FrameLayout rid=content activity=FileDatabaseSelectActivity
+
+[GT036] Change the master key of a database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal and actions do not match feature gold steps
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT037] Change the database encryption settings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to database encryption settings.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT038] Edit the database name, description and default username
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to editing database name, description, default username.
+  - key key=BACK activity=FileDatabaseSelectActivity state_changed
+
+[GT039] Configure history and compression settings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to configuring history and compression settings.
+  - touch Button "SAVE" rid=button1 state_changed
+
+[GT040] Use entry templates
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+  - touch FileDatabaseSelectActivity/Button-Cancel
+
+[GT041] Merge/synchronise changes from another copy of the database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT042] Save a copy of the database (Save as)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps match the gold capability.
+  - touch FileDatabaseSelectActivity/FrameLayout-
+
+[GT043] Add a database to the recent list and pin it
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT044] Change the app theme and appearance
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT045] Change the app language
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT046] Configure keyboard and form-filling behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - did not open Settings or configure keyboard behavior
+  - touch Button 'SAVE'
+
+[GT047] View the about screen, contribution and licence information
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - did not open 'About' screen or view contribution/licence information
+  - intent to start activity
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 47 features covered
+2 / 47 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 1.40%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 47 (completeness ratio 0.298)
+
+Feature-inference P/R/F1: 1.00 / 0.30 / 0.46 (false not_present=0)
+
+GT GT001 'Create a database' | journal=G001 'Create a database' (sim=1.0, name) status=dropped | offline=not_covered
+GT GT002 'Open an existing database' | journal=G011 'Open a database' (sim=0.667, name) status=pending | offline=not_covered
+GT GT003 'Unlock a database with a key file' | journal=G002 'Unlock a database' (sim=0.4, name) status=partial | offline=partial
+GT GT004 'Unlock a database with a hardware key (challenge-response)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Unlock with biometrics or the device credential' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Create an entry' | journal=G006 'Edit an entry' (sim=0.333, name) status=pending | offline=not_covered
+GT GT007 'Generate a password' | journal=G003 'Generate a password' (sim=1.0, name) status=pending | offline=not_covered
+GT GT008 'Add custom fields to an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Add an attachment to an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Download or open an attachment' | journal=G004 'Download' (sim=0.556, name) status=partial | offline=partial
+GT GT011 'Set an expiration date on an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Configure a one-time password (OTP) token for an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Copy a username or password to the clipboard' | journal=G005 'Copy a username' (sim=0.545, name) status=pending | offline=not_covered
+GT GT014 'Reveal a hidden password' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Open the entry URL in the browser' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Edit an entry' | journal=G007 'Move an entry' (sim=0.333, name) status=pending | offline=not_covered
+GT GT017 "View an entry's history" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Duplicate an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Move an entry to another group' | journal=G008 'Edit, move' (sim=0.308, name) status=pending | offline=not_covered
+GT GT020 'Delete an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Create a group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Edit, move or delete a group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Use the recycle bin' | journal=G010 'Use the KeePassDX autofill' (sim=0.333, name) status=pending | offline=not_covered
+GT GT024 'Change an entry or group icon' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Search the database' | journal=G009 'Search the database' (sim=1.0, name) status=pending | offline=not_covered
+GT GT026 'Configure search behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Sort the entry list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Use the KeePassDX autofill service' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Use the Magikeyboard to type credentials' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Save changes to the database' | journal=G013 'Change the database encryption' (sim=0.333, name) status=pending | offline=not_covered
+GT GT031 'Open a database in read-only mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Lock the database manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Configure automatic locking' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Configure clipboard timeout' | journal=G012 'Configure clipboard timeout' (sim=1.0, name) status=partial | offline=not_covered
+GT GT035 'Block screenshots' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Change the master key of a database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Change the database encryption settings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Edit the database name, description and default username' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Configure history and compression settings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Use entry templates' | journal=G014 'Use entry templates' (sim=1.0, name) status=pending | offline=not_covered
+GT GT041 'Merge/synchronise changes from another copy of the database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Save a copy of the database (Save as)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT043 'Add a database to the recent list and pin it' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT044 'Change the app theme and appearance' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT045 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'Configure keyboard and form-filling behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT047 'View the about screen, contribution and licence information' | journal=missing (no name match) status=missing | offline=not_covered

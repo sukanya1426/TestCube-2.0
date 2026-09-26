@@ -1,0 +1,294 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Clock
+
+Total Actions    : 143
+
+Total Features   : 26
+Covered Features : 4
+Partial          : 5
+Uncovered        : 17
+
+Feature Coverage : 15.38%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 25.38%  (mean completion ratio; partial steps count)
+Exercised        : 9  (covered 4 + partial 5)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] View the current time on the clock tab
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Partial because the current time is not fully displayed.
+  - touch MainActivity/TextView-Clock
+
+[GT002] Add a time zone to the clock
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Partial because the time zones are not fully managed.
+  - touch MainActivity/TextView-Clock
+
+[GT003] Remove or reorder time zones
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 50% of gold steps
+Evidence   :
+  - Partial because the time zones are not fully managed.
+  - touch MainActivity/TextView-Clock
+
+[GT004] Open the full-screen (screensaver) clock
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - All steps in gold path completed.
+  - touch CustomTouchEvent(state=574adc003d9f8ff478c66398e6730ffc, x=80, y=1100)
+
+[GT005] Create an alarm
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Steps up to setting the alarm time completed.
+  - touch CustomTouchEvent(state=ace9ba9d6433ab7181388b0c08c7626f, x=255, y=1102)
+
+[GT006] Enable or disable an alarm
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT007] Edit an alarm
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Edited alarm time and label; evidence: changed text.
+  - touch CustomTouchEvent(state=3945eab62dd50a392bb12c407d1b4cc6, x=255, y=1100)
+  - Completed by later features: G002
+
+[GT008] Delete an alarm
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-press action not observed; evidence: no delete bin interaction.
+  - touch CustomTouchEvent(state=a36e59140ccf15c609dc7c3450a93505, x=258, y=1099)
+
+[GT009] Set the alarm sound and vibration
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT010] Snooze or dismiss a ringing alarm
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Snooze option selected, but duration not extended.
+  - touch CustomTouchEvent(state=88c36b89fd1591540237c9a5a6b200a9, x=255, y=1102)
+
+[GT011] Configure the snooze duration and maximum ring time
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.90
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Settings opened, snooze duration configured.
+  - touch CustomTouchEvent(state=a1a21e8964c03799bb8b5b8680d9f2f9, x=960, y=1772)
+
+[GT012] Make the alarm volume increase gradually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT013] Use the stopwatch
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 60% of gold steps
+Evidence   :
+  - Start and stop actions missing; reset not attempted.
+  - touch CustomTouchEvent(state=61db1d91852528c3460874d30f6d0295, x=420, y=1100)
+
+[GT014] Sort the recorded stopwatch laps
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Sort control not tapped; laps not confirmed.
+  - touch CustomTouchEvent(state=bb0bcbf91d955ddab9e4455827d0010f, x=480, y=1839)
+
+[GT015] Create a timer
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT016] Label a timer and set its sound
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards labeling timer or setting sound.
+
+[GT017] Pause, resume, reset or delete a timer
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards pausing, resuming, resetting, or deleting a timer.
+
+[GT018] Add the digital clock home screen widget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards adding a clock widget to the home screen.
+
+[GT019] Set the time format
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions for setting time format.
+  - none
+
+[GT020] Set the first day of the week
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions for setting first day of the week.
+  - none
+
+[GT021] Keep the screen on in the clock tab
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Journal lacks relevant actions for keeping the screen on in the clock tab.
+  - none
+
+[GT022] Choose which tabs are visible
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT023] Make alarms ignore silent mode
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT024] Customise the app colours and theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps not aligned with gold
+  - one action
+
+[GT025] Change the app language and font size
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to language or font size
+
+[GT026] View the about screen, FAQ and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to about screen, FAQ, or licenses
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+4 / 26 features covered
+5 / 26 features partial
+Feature Coverage = COVERED / Total = 15.38%
+Weighted Feature Coverage = mean(completion_ratio) = 25.38%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 16 / 26 (completeness ratio 0.615)
+
+Feature-inference P/R/F1: 0.88 / 0.58 / 0.70 (false not_present=0)
+
+GT GT001 'View the current time on the clock tab' | journal=G001 'View the current time' (sim=0.667, name) status=partial | offline=partial
+GT GT002 'Add a time zone to the clock' | journal=G002 'Add a time zone' (sim=0.6, name) status=partial | offline=partial
+GT GT003 'Remove or reorder time zones' | journal=G003 'Remove' (sim=0.545, name) status=covered | offline=partial
+GT GT004 'Open the full-screen (screensaver) clock' | journal=G004 'Open the full-screen clock' (sim=0.833, name) status=covered | offline=covered
+GT GT005 'Create an alarm' | journal=G005 'Create an alarm' (sim=1.0, name) status=covered | offline=covered
+GT GT006 'Enable or disable an alarm' | journal=G006 'Enable' (sim=0.333, name) status=covered | offline=not_covered
+GT GT007 'Edit an alarm' | journal=G007 'Edit an alarm' (sim=1.0, name) status=covered | offline=covered
+GT GT008 'Delete an alarm' | journal=G008 'Delete an alarm' (sim=1.0, name) status=covered | offline=not_covered
+GT GT009 'Set the alarm sound and vibration' | journal=G009 'Set the alarm sound' (sim=0.667, name) status=covered | offline=not_covered
+GT GT010 'Snooze or dismiss a ringing alarm' | journal=G010 'Snooze' (sim=0.417, name) status=partial | offline=partial
+GT GT011 'Configure the snooze duration and maximum ring time' | journal=G011 'Configure the snooze duration' (sim=0.5, name) status=covered | offline=covered
+GT GT012 'Make the alarm volume increase gradually' | journal=G012 'Make the alarm volume' (sim=0.667, name) status=covered | offline=not_covered
+GT GT013 'Use the stopwatch' | journal=G013 'Use the stopwatch' (sim=1.0, name) status=covered | offline=partial
+GT GT014 'Sort the recorded stopwatch laps' | journal=G014 'Sort the recorded stopwatch' (sim=0.8, name) status=covered | offline=not_covered
+GT GT015 'Create a timer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Label a timer and set its sound' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Pause, resume, reset or delete a timer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Add the digital clock home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Set the time format' | journal=F015 'Set the timer duration' (sim=0.333, name) status=covered | offline=not_covered
+GT GT020 'Set the first day of the week' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Keep the screen on in the clock tab' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Choose which tabs are visible' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Make alarms ignore silent mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=not_covered

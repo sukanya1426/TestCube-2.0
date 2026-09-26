@@ -1,0 +1,4018 @@
+{
+  "tag": "2026-09-25_021327",
+  "state_str": "c0080d59525ce1b643b4dcb68d4405a6",
+  "state_str_content_free": "d30387a76d0415ea049acd3f77a3bdbc",
+  "foreground_activity": "com.google.android.dialer/com.android.dialer.main.impl.MainActivity",
+  "activity_stack": [
+    "com.google.android.dialer/com.android.dialer.main.impl.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.googlequicksearchbox/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.gms/.nearby.sharing.SharingTileService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1,
+        95
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "006a9dac03e22b25ea62e84ddb19dfa6",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1857",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d2983de5548c4c31f3aca3afd387062c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "21de57b73d941d9ec10a8e4499e03e30",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "d7babda3cde10cd5ced83c0fe85e2eee",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/action_bar_root"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "9ac4c85033f5944b566890dcf3100da6",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/outer_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/outer_layout[text]None[desc]None[enabled,,]",
+      "view_str": "18dbc13e0130cf14f31e78ccf8bdd959",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/outer_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7,
+        84,
+        94
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/root_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1794",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/root_layout[text]None[desc]None[enabled,,]",
+      "view_str": "207a928ee4f48b7caa36ed9f1f93f2fc",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/root_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_fragment_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/dialpad_fragment_container[text]None[desc]None[enabled,,]",
+      "view_str": "85b3a72e974e5347286a9e206300e548",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/dialpad_fragment_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9,
+        10,
+        82
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*1794",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "1f0855be2a109501b31343f858a34f6a",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          690
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/spacer",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "1080*627",
+      "signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/spacer[text]None[desc]None[enabled,,]",
+      "view_str": "34bc8afb30f8e42398088a8610e7443e",
+      "content_free_signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/spacer"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11,
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          690
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_view_vertical",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 10,
+      "size": "1080*1167",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_view_vertical[text]None[desc]None[enabled,,]",
+      "view_str": "b2ba1dbe196275913c8afc09c84f328f",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_view_vertical"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          690
+        ],
+        [
+          1080,
+          716
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_shadow",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "1080*26",
+      "signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/dialpad_shadow[text]None[desc]None[enabled,,]",
+      "view_str": "78b56dcc72ec4a7d2bbb5e869fba25b2",
+      "content_free_signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/dialpad_shadow"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          716
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 12,
+      "size": "1080*1141",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a7742d3ff23c6bab2f905ee44c1cf824",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        14,
+        18,
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          716
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_view",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "1080*1141",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_view[text]None[desc]None[enabled,,]",
+      "view_str": "51c81e599c577e8a0e24ee9081d50888",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_view"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          716
+        ],
+        [
+          1080,
+          860
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "1080*144",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "4b64b54b8282bd8a4d9d3ca161698c45",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          716
+        ],
+        [
+          1080,
+          860
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/digits_container",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "1080*144",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/digits_container[text]None[desc]None[enabled,,]",
+      "view_str": "14cd8e9bafb4ba4b30f3dc1d03d44a6f",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/digits_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          147,
+          716
+        ],
+        [
+          933,
+          860
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/digits",
+      "checked": false,
+      "text": "Phone Number",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": true,
+      "long_clickable": true,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "786*144",
+      "signature": "[class]android.widget.EditText[resource_id]com.google.android.dialer:id/digits[text]Phone Number[desc]None[enabled,,selected]",
+      "view_str": "4ffd2149631474556b5a9b1a956b8d55",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.google.android.dialer:id/digits",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "0",
+      "desc": "<input bound_box=147,716,933,860>Phone Number</input>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": false,
+      "content_description": "backspace",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          933,
+          716
+        ],
+        [
+          1080,
+          860
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/deleteButton",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 15,
+      "temp_id": 17,
+      "size": "147*144",
+      "signature": "[class]android.widget.ImageButton[resource_id]com.google.android.dialer:id/deleteButton[text]None[desc]backspace[,,]",
+      "view_str": "919e302bd1c776aa79df4aa95de80f4a",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]com.google.android.dialer:id/deleteButton",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button text='backspace' bound_box=933,716,1080,860></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          860
+        ],
+        [
+          1080,
+          863
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/divider_line",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 18,
+      "size": "1080*3",
+      "signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/divider_line[text]None[desc]None[enabled,,]",
+      "view_str": "2ce8f7c7a404f37231b880a5ff946218",
+      "content_free_signature": "[class]android.view.View[resource_id]com.google.android.dialer:id/divider_line"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          884
+        ],
+        [
+          1080,
+          1841
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 13,
+      "temp_id": 19,
+      "size": "1080*957",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "5c210d25735e7195bbff2ea66fb03b8e",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21,
+        38,
+        54,
+        70
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          884
+        ],
+        [
+          1080,
+          1841
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 20,
+      "size": "1080*957",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad[text]None[desc]None[enabled,,]",
+      "view_str": "d2e664ee2aa250bdd4bf56e56def280c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        22,
+        28,
+        33
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          884
+        ],
+        [
+          1080,
+          1074
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "1080*190",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "c8f216f769fafddae13c7c2634ea7537",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "1,",
+      "children": [
+        23
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          895
+        ],
+        [
+          355,
+          1063
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/one",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 21,
+      "temp_id": 22,
+      "size": "323*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/one[text]None[desc]1,[enabled,,]",
+      "view_str": "f7dde44cc48c76b071d288f56afb22fe",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/one",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='1,' bound_box=32,895,355,1063></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24,
+        25
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          162,
+          915
+        ],
+        [
+          225,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "63*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "eb53c09c3e3b3781c757a03efb80eb7b",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          181,
+          915
+        ],
+        [
+          205,
+          984
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "1",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "24*69",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]1[desc]None[enabled,,]",
+      "view_str": "eae057c8907cbd9d9cb3a6aa93ba3899",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=181,915,205,984>1</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        26,
+        27
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          162,
+          992
+        ],
+        [
+          225,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 25,
+      "size": "63*50",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "90d0966350f3d297a7b0c72388bfd936",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          162,
+          992
+        ],
+        [
+          225,
+          995
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 25,
+      "temp_id": 26,
+      "size": "63*3",
+      "signature": "[class]android.view.View[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b1038600397dcc40d94ec4fb24ffdf9f",
+      "content_free_signature": "[class]android.view.View[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          162,
+          995
+        ],
+        [
+          225,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_voicemail",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 25,
+      "temp_id": 27,
+      "size": "63*47",
+      "signature": "[class]android.widget.ImageView[resource_id]com.google.android.dialer:id/dialpad_key_voicemail[text]None[desc]None[enabled,,]",
+      "view_str": "dad01f004a1ad3121b978cfdaf6d3441",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.google.android.dialer:id/dialpad_key_voicemail"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "2,ABC",
+      "children": [
+        29
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          377,
+          895
+        ],
+        [
+          701,
+          1063
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/two",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 21,
+      "temp_id": 28,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/two[text]None[desc]2,ABC[enabled,,]",
+      "view_str": "140f6ac28ef8e2105b2bdfb390a49c6f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/two",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button text='2,ABC' bound_box=377,895,701,1063></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        30,
+        31
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          507,
+          915
+        ],
+        [
+          570,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "63*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "cbb3bc79ea884d2c2bdc7a6a9c4935fa",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          517,
+          915
+        ],
+        [
+          559,
+          985
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "2",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 30,
+      "size": "42*70",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]2[desc]None[enabled,,]",
+      "view_str": "7a268c803fc39c54e8f4f46108a0e1c3",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=517,915,559,985>2</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          507,
+          993
+        ],
+        [
+          570,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 31,
+      "size": "63*49",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "eff7253afe2e1e8ec2bfe3fa3715484c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          507,
+          1005
+        ],
+        [
+          570,
+          1030
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "ABC",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 31,
+      "temp_id": 32,
+      "size": "63*25",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]ABC[desc]None[enabled,,]",
+      "view_str": "62be10d5f7aa82c133dc30e652e46432",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button bound_box=507,1005,570,1030>ABC</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "3,DEF",
+      "children": [
+        34
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          895
+        ],
+        [
+          1047,
+          1063
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/three",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 21,
+      "temp_id": 33,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/three[text]None[desc]3,DEF[enabled,,]",
+      "view_str": "7573d368cac9f725824820c0b83e28ff",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/three",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button text='3,DEF' bound_box=723,895,1047,1063></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35,
+        36
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          857,
+          915
+        ],
+        [
+          913,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 33,
+      "temp_id": 34,
+      "size": "56*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "b4f1c2068bd672efa981384d345b4f86",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          863,
+          915
+        ],
+        [
+          906,
+          987
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "3",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "43*72",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]3[desc]None[enabled,,]",
+      "view_str": "7e2238405bb7469f58ce464688d42cc1",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<button bound_box=863,915,906,987>3</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        37
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          857,
+          995
+        ],
+        [
+          913,
+          1042
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 36,
+      "size": "56*47",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "d23b528b2b097af310ff4ed60a209448",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          857,
+          1007
+        ],
+        [
+          913,
+          1030
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "DEF",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 36,
+      "temp_id": 37,
+      "size": "56*23",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]DEF[desc]None[enabled,,]",
+      "view_str": "8baf1729bd04d3dc264e419c005d7f74",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button bound_box=857,1007,913,1030>DEF</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        39,
+        44,
+        49
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1074
+        ],
+        [
+          1080,
+          1264
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 38,
+      "size": "1080*190",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ca48412283a57b5dd7723d22982f7d12",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "4,GHI",
+      "children": [
+        40
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1085
+        ],
+        [
+          355,
+          1253
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/four",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 39,
+      "size": "323*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/four[text]None[desc]4,GHI[enabled,,]",
+      "view_str": "c7df37a9fb02f5192130ced1e1a6c370",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/four",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button text='4,GHI' bound_box=32,1085,355,1253></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        41,
+        42
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          1105
+        ],
+        [
+          219,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 39,
+      "temp_id": 40,
+      "size": "51*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "09e3cf93600d8df3a6bd202fe44aa5aa",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          170,
+          1105
+        ],
+        [
+          217,
+          1174
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "4",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 40,
+      "temp_id": 41,
+      "size": "47*69",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]4[desc]None[enabled,,]",
+      "view_str": "68762505350ef2b095e50dfd79b6b46c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button bound_box=170,1105,217,1174>4</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        43
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          1182
+        ],
+        [
+          219,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 40,
+      "temp_id": 42,
+      "size": "51*50",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "7bf33060256a8246457093d7e8b30e77",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          1194
+        ],
+        [
+          219,
+          1219
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "GHI",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 43,
+      "size": "51*25",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]GHI[desc]None[enabled,,]",
+      "view_str": "e4cd4c773bd8313522d296b2fa22ebd6",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button bound_box=168,1194,219,1219>GHI</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "5,JKL",
+      "children": [
+        45
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          377,
+          1085
+        ],
+        [
+          701,
+          1253
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/five",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 44,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/five[text]None[desc]5,JKL[enabled,,]",
+      "view_str": "645fec31edf2cb780669c9d38965fc71",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/five",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button text='5,JKL' bound_box=377,1085,701,1253></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        46,
+        47
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1105
+        ],
+        [
+          566,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 44,
+      "temp_id": 45,
+      "size": "54*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "d32bf5223646b1e8777ed20fd639ee3c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          516,
+          1105
+        ],
+        [
+          561,
+          1176
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "5",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 45,
+      "temp_id": 46,
+      "size": "45*71",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]5[desc]None[enabled,,]",
+      "view_str": "80da8bbf79f2f3286e5454780e3a938a",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "14",
+      "desc": "<button bound_box=516,1105,561,1176>5</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        48
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1184
+        ],
+        [
+          566,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 45,
+      "temp_id": 47,
+      "size": "54*48",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "d02b51cde2fb47da579ef7fbdfffa226",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1196
+        ],
+        [
+          566,
+          1220
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "JKL",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 47,
+      "temp_id": 48,
+      "size": "54*24",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]JKL[desc]None[enabled,,]",
+      "view_str": "021b2efb7404f267dbae7710f425eca4",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<button bound_box=512,1196,566,1220>JKL</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "6,MNO",
+      "children": [
+        50
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          1085
+        ],
+        [
+          1047,
+          1253
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/six",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 49,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/six[text]None[desc]6,MNO[enabled,,]",
+      "view_str": "6e4c492201fd26cb7419cf297a859efc",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/six",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<button text='6,MNO' bound_box=723,1085,1047,1253></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        51,
+        52
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          1105
+        ],
+        [
+          921,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 49,
+      "temp_id": 50,
+      "size": "72*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "d212e6333dcd77824933f40727ea6dd0",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          862,
+          1105
+        ],
+        [
+          908,
+          1176
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "6",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 50,
+      "temp_id": 51,
+      "size": "46*71",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]6[desc]None[enabled,,]",
+      "view_str": "0c48cf00fa0218246729dfa2c096fbea",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "17",
+      "desc": "<button bound_box=862,1105,908,1176>6</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        53
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          1184
+        ],
+        [
+          921,
+          1232
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 50,
+      "temp_id": 52,
+      "size": "72*48",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "a125d01fa0d76fb0afb9d4d30ba34eda",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          1195
+        ],
+        [
+          921,
+          1220
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "MNO",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 52,
+      "temp_id": 53,
+      "size": "72*25",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]MNO[desc]None[enabled,,]",
+      "view_str": "bcbaccee4f15da9317bd68010fe32ee5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "18",
+      "desc": "<button bound_box=849,1195,921,1220>MNO</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        55,
+        60,
+        65
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1264
+        ],
+        [
+          1080,
+          1454
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 54,
+      "size": "1080*190",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "fd12729ff71f4d2fcad087075526cd38",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "7,PQRS",
+      "children": [
+        56
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1275
+        ],
+        [
+          355,
+          1443
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/seven",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 55,
+      "size": "323*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/seven[text]None[desc]7,PQRS[enabled,,]",
+      "view_str": "83d683c7fe560f8f0152f018107b731f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/seven",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "19",
+      "desc": "<button text='7,PQRS' bound_box=32,1275,355,1443></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        57,
+        58
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          154,
+          1295
+        ],
+        [
+          233,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 55,
+      "temp_id": 56,
+      "size": "79*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "45702245d82ced5cce4162aaaf94699d",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          172,
+          1295
+        ],
+        [
+          214,
+          1364
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "7",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 56,
+      "temp_id": 57,
+      "size": "42*69",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]7[desc]None[enabled,,]",
+      "view_str": "92617e5875b62aafc1bd01518ae2e9dd",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "20",
+      "desc": "<button bound_box=172,1295,214,1364>7</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        59
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          154,
+          1372
+        ],
+        [
+          233,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 56,
+      "temp_id": 58,
+      "size": "79*50",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "5bc471454bbf6dd3e2f2e8eef779fd99",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          154,
+          1384
+        ],
+        [
+          233,
+          1410
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "PQRS",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 58,
+      "temp_id": 59,
+      "size": "79*26",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]PQRS[desc]None[enabled,,]",
+      "view_str": "5dd610ad983996aa278c35dad4b17157",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "21",
+      "desc": "<button bound_box=154,1384,233,1410>PQRS</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "8,TUV",
+      "children": [
+        61
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          377,
+          1275
+        ],
+        [
+          701,
+          1443
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/eight",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 60,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/eight[text]None[desc]8,TUV[enabled,,]",
+      "view_str": "173aa785006385b3875019b8b1a176eb",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/eight",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "22",
+      "desc": "<button text='8,TUV' bound_box=377,1275,701,1443></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        62,
+        63
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          509,
+          1295
+        ],
+        [
+          569,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 60,
+      "temp_id": 61,
+      "size": "60*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "8b5aa65d71c7fff7e27f34c934c940c8",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          517,
+          1295
+        ],
+        [
+          561,
+          1367
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "8",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 61,
+      "temp_id": 62,
+      "size": "44*72",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]8[desc]None[enabled,,]",
+      "view_str": "8c9e1ae024579cbd0a4ad36cc8e6ab7c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "23",
+      "desc": "<button bound_box=517,1295,561,1367>8</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        64
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          509,
+          1375
+        ],
+        [
+          569,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 61,
+      "temp_id": 63,
+      "size": "60*47",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "e787257673268b3b0f683a38cd1d6c2b",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          509,
+          1386
+        ],
+        [
+          569,
+          1410
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "TUV",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 63,
+      "temp_id": 64,
+      "size": "60*24",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]TUV[desc]None[enabled,,]",
+      "view_str": "df37f7603bf375cf4432f33c79e1163b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "24",
+      "desc": "<button bound_box=509,1386,569,1410>TUV</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "9,WXYZ",
+      "children": [
+        66
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          1275
+        ],
+        [
+          1047,
+          1443
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/nine",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 65,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/nine[text]None[desc]9,WXYZ[enabled,,]",
+      "view_str": "e6aeb1526f495335e97de957cde3fb0d",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/nine",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "25",
+      "desc": "<button text='9,WXYZ' bound_box=723,1275,1047,1443></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        67,
+        68
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          843,
+          1295
+        ],
+        [
+          927,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 65,
+      "temp_id": 66,
+      "size": "84*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "58dc09df000f11c6b884e6bedd4ae5e9",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          862,
+          1295
+        ],
+        [
+          908,
+          1366
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "9",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 66,
+      "temp_id": 67,
+      "size": "46*71",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]9[desc]None[enabled,,]",
+      "view_str": "c51fbaa8205404266e6bf8bc193348bd",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "26",
+      "desc": "<button bound_box=862,1295,908,1366>9</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        69
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          843,
+          1374
+        ],
+        [
+          927,
+          1422
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 66,
+      "temp_id": 68,
+      "size": "84*48",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "8de24bc9cd68dd64a797c1891fc33bf5",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          843,
+          1386
+        ],
+        [
+          927,
+          1409
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "WXYZ",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 68,
+      "temp_id": 69,
+      "size": "84*23",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]WXYZ[desc]None[enabled,,]",
+      "view_str": "ec0c1cdecf746be83aede29daae36f9b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "27",
+      "desc": "<button bound_box=843,1386,927,1409>WXYZ</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        71,
+        74,
+        79
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1454
+        ],
+        [
+          1080,
+          1644
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 70,
+      "size": "1080*190",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "8375cf26de93273f85ba3bcf12c6ef8c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "*",
+      "children": [
+        72
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          32,
+          1465
+        ],
+        [
+          355,
+          1633
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/star",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 71,
+      "size": "323*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/star[text]None[desc]*[enabled,,]",
+      "view_str": "8267977c2b33f1576607a795bd8a161a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/star",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "28",
+      "desc": "<button text='*' bound_box=32,1465,355,1633></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        73
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          175,
+          1514
+        ],
+        [
+          211,
+          1583
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 71,
+      "temp_id": 72,
+      "size": "36*69",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "ee6e657302c4698fcf8061b7bb12dd6e",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          175,
+          1514
+        ],
+        [
+          211,
+          1549
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "*",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 72,
+      "temp_id": 73,
+      "size": "36*35",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]*[desc]None[enabled,,]",
+      "view_str": "70c763173b0bc41c49f585fec672256e",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "29",
+      "desc": "<button bound_box=175,1514,211,1549>*</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "0",
+      "children": [
+        75
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          377,
+          1465
+        ],
+        [
+          701,
+          1633
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/zero",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 70,
+      "temp_id": 74,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/zero[text]None[desc]0[enabled,,]",
+      "view_str": "c36b6b7f997cb9bb2458c33d3c8b3281",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/zero",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "30",
+      "desc": "<button text='0' bound_box=377,1465,701,1633></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        76,
+        77
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1485
+        ],
+        [
+          566,
+          1612
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 74,
+      "temp_id": 75,
+      "size": "54*127",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "56c0492d37961a8f8ddc4abdfdd62a15",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1485
+        ],
+        [
+          566,
+          1557
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "0",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 75,
+      "temp_id": 76,
+      "size": "54*72",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]0[desc]None[enabled,,]",
+      "view_str": "71d66a5ca639a14c82132aa17b64f034",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "31",
+      "desc": "<button bound_box=512,1485,566,1557>0</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        78
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          531,
+          1565
+        ],
+        [
+          546,
+          1612
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_icon_or_letters_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 75,
+      "temp_id": 77,
+      "size": "15*47",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout[text]None[desc]None[enabled,,]",
+      "view_str": "7fa08b0cdfbd02783655b7e4aa6f85c7",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_icon_or_letters_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          531,
+          1581
+        ],
+        [
+          546,
+          1596
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_letters",
+      "checked": false,
+      "text": "+",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 77,
+      "temp_id": 78,
+      "size": "15*15",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters[text]+[desc]None[enabled,,]",
+      "view_str": "4c2869e33730dcf64f070440ef0091a5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_letters",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "32",
+      "desc": "<button bound_box=531,1581,546,1596>+</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "#",
+      "children": [
+        80
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          1465
+        ],
+        [
+          1047,
+          1633
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/pound",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 70,
+      "temp_id": 79,
+      "size": "324*168",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/pound[text]None[desc]#[enabled,,]",
+      "view_str": "7be09a6e94c0b5a6ac8c3a6bd3ef0713",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/pound",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "33",
+      "desc": "<button text='#' bound_box=723,1465,1047,1633></button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        81
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          866,
+          1510
+        ],
+        [
+          903,
+          1587
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 79,
+      "temp_id": 80,
+      "size": "37*77",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout[text]None[desc]None[enabled,,]",
+      "view_str": "f7ba436205d8bf25d9f64e8cffa54dd1",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/dialpad_key_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          866,
+          1510
+        ],
+        [
+          903,
+          1553
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_key_number",
+      "checked": false,
+      "text": "#",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 80,
+      "temp_id": 81,
+      "size": "37*43",
+      "signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number[text]#[desc]None[enabled,,]",
+      "view_str": "c2ec751ac99066b5f57f7e847a7fe73b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.google.android.dialer:id/dialpad_key_number",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "34",
+      "desc": "<button bound_box=866,1510,903,1553>#</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        83
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1678
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_call_buttons",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 82,
+      "size": "1080*179",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/dialpad_call_buttons[text]None[desc]None[enabled,,]",
+      "view_str": "f258b26baaae881c042a616e0d9f0478",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/dialpad_call_buttons"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "dial",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          413,
+          1678
+        ],
+        [
+          667,
+          1825
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/dialpad_voice_call_button",
+      "checked": false,
+      "text": "Call",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 82,
+      "temp_id": 83,
+      "size": "254*147",
+      "signature": "[class]android.widget.Button[resource_id]com.google.android.dialer:id/dialpad_voice_call_button[text]Call[desc]dial[enabled,,]",
+      "view_str": "e806cb083eae9ec8794448935b66d0f0",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.google.android.dialer:id/dialpad_voice_call_button",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "35",
+      "desc": "<button text='dial' bound_box=413,1678,667,1825>Call</button>"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        85,
+        92,
+        93
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/main_screen_coordinator_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 84,
+      "size": "1080*1794",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/main_screen_coordinator_layout[text]None[desc]None[enabled,,]",
+      "view_str": "ad3bda76359aa201e57350590724bf2a",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.google.android.dialer:id/main_screen_coordinator_layout"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        86
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/search_fragment_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 85,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/search_fragment_container[text]None[desc]None[enabled,,]",
+      "view_str": "fc6ca08d595f69960501c3b2b91e30db",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/search_fragment_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        87,
+        88
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 85,
+      "temp_id": 86,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "5534215d4d724314f71cc020035c1b2f",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          63
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/top_app_bar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 86,
+      "temp_id": 87,
+      "size": "1080*0",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/top_app_bar[text]None[desc]None[enabled,,]",
+      "view_str": "05c84ffbea30d495e10a7182e658a67c",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/top_app_bar"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        89
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 86,
+      "temp_id": 88,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "c50583afba6602371c2aff15465cb086",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        90
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/result_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 88,
+      "temp_id": 89,
+      "size": "1080*1794",
+      "signature": "[class]android.widget.ScrollView[resource_id]com.google.android.dialer:id/result_container[text]None[desc]None[enabled,,]",
+      "view_str": "619f2740bb57a0c1a2caa9fda06a93cc",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]com.google.android.dialer:id/result_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        91
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          716
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 89,
+      "temp_id": 90,
+      "size": "1080*653",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "6c24fa0661252d458e51eec56d8c4f1d",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          716
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/search_recycler_view",
+      "checked": false,
+      "text": null,
+      "class": "android.support.v7.widget.RecyclerView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 90,
+      "temp_id": 91,
+      "size": "1080*653",
+      "signature": "[class]android.support.v7.widget.RecyclerView[resource_id]com.google.android.dialer:id/search_recycler_view[text]None[desc]None[enabled,,]",
+      "view_str": "0988b43b6c87f49b3dfd31bf310af74f",
+      "content_free_signature": "[class]android.support.v7.widget.RecyclerView[resource_id]com.google.android.dialer:id/search_recycler_view"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          954,
+          1731
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/fab_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 92,
+      "size": "126*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/fab_container[text]None[desc]None[enabled,,]",
+      "view_str": "287d56b3fc1af4b02106f59be62d16a6",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.google.android.dialer:id/fab_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          1857
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/survey_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 84,
+      "temp_id": 93,
+      "size": "0*0",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/survey_container[text]None[desc]None[enabled,,]",
+      "view_str": "e599ff7d8d0f74411ca4e1137f146efb",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/survey_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1857
+        ],
+        [
+          1080,
+          1857
+        ]
+      ],
+      "resource_id": "com.google.android.dialer:id/navigation_bar_fragment_container",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 94,
+      "size": "1080*0",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/navigation_bar_fragment_container[text]None[desc]None[enabled,,]",
+      "view_str": "dc0cbd6cea6561b0b5181502fb989ea9",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.google.android.dialer:id/navigation_bar_fragment_container"
+    },
+    {
+      "package": "com.google.android.dialer",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1857
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/navigationBarBackground",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 95,
+      "size": "1080*63",
+      "signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground[text]None[desc]None[enabled,,]",
+      "view_str": "7c7ea94cdf4084c77b44e54b6b5037d8",
+      "content_free_signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground"
+    }
+  ]
+}

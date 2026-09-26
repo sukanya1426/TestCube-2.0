@@ -1,0 +1,2682 @@
+{
+  "app": "Markor",
+  "started_at": "2026-09-24 22:51:11",
+  "finished_at": "2026-09-24 22:58:09",
+  "total_features": 14,
+  "covered": 0,
+  "partial": 2,
+  "dropped": 1,
+  "not_present": 0,
+  "blocked": 0,
+  "coverage": 0.0,
+  "weighted_coverage": 0.05238095238095238,
+  "unscored_discovered": 0,
+  "feature_source": "guide",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 4,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse the notebook folder"
+      },
+      {
+        "id": "G002",
+        "name": "Create a folder"
+      },
+      {
+        "id": "G003",
+        "name": "Apply Markdown formatting"
+      },
+      {
+        "id": "G004",
+        "name": "Insert an image"
+      },
+      {
+        "id": "G005",
+        "name": "Insert a table"
+      },
+      {
+        "id": "G006",
+        "name": "Search across all files"
+      },
+      {
+        "id": "G007",
+        "name": "Manage a todo.txt file"
+      },
+      {
+        "id": "G008",
+        "name": "Preview a CSV file"
+      },
+      {
+        "id": "G009",
+        "name": "Share the document"
+      },
+      {
+        "id": "G010",
+        "name": "Delete files"
+      },
+      {
+        "id": "G011",
+        "name": "Sort the file list"
+      },
+      {
+        "id": "G012",
+        "name": "View recent"
+      },
+      {
+        "id": "G013",
+        "name": "Open a file"
+      },
+      {
+        "id": "G014",
+        "name": "Change the notebook directory"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Search"
+      },
+      {
+        "id": "F003",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F004",
+        "name": "Change app settings"
+      }
+    ]
+  },
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/markor/guide_features.json",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the notebook folder",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap on the 'Files' tab",
+        "Select the 'Browse' option",
+        "Select the 'notebook' folder",
+        "Select the 'folder' option"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "browse",
+        "notebook",
+        "folder",
+        "files"
+      ],
+      "nav_hints": [
+        "browse",
+        "notebook",
+        "folder"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open the app",
+        "Tap on the 'Files' tab"
+      ],
+      "remaining_actions": [
+        "Select the 'Browse' option",
+        "Select the 'notebook' folder",
+        "Select the 'folder' option"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=d0f71577bb35f8eea2fcebd7612566f2, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225128.png",
+          "state": "d0f71577bb35f8eea2fcebd7612566f2",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/next",
+            "text": "",
+            "content_description": "NEXT",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|next|next|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c7e0613eb6c0770b55d431d5c26b2853, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/states/screen_2026-09-24_225138.png",
+          "state": "c7e0613eb6c0770b55d431d5c26b2853",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/next",
+            "text": "",
+            "content_description": "NEXT",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|next|next|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=e61dee17bfee5c6653bb948969e5b083, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/states/screen_2026-09-24_225143.png",
+          "state": "e61dee17bfee5c6653bb948969e5b083",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/next",
+            "text": "",
+            "content_description": "NEXT",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|next|next|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=3df10bddda23df842d8bcc4c87603376, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/states/screen_2026-09-24_225153.png",
+          "state": "3df10bddda23df842d8bcc4c87603376",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/next",
+            "text": "",
+            "content_description": "NEXT",
+            "class": "android.widget.ImageButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|next|next|imagebutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c5a3411e94d5b81924d5a7b23537f604, view=02b1944a6ed43f71450736cac5b0bcd3(IntroActivity/Button-DONE))",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/states/screen_2026-09-24_225159.png",
+          "state": "c5a3411e94d5b81924d5a7b23537f604",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/done",
+            "text": "DONE",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|done|done|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+          "reason": "Granting storage permission is necessary to proceed with the feature, and the 'OK' button is the correct choice to continue.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/states/screen_2026-09-24_225209.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button1",
+            "text": "OK",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button1|ok|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+          "reason": "Granting storage permission is necessary to proceed with browsing the notebook folder.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225234.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button1",
+            "text": "OK",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button1|ok|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))",
+          "reason": "Granting storage permission is necessary to proceed with browsing the notebook folder.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225254.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/textSpacerNoTitle",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|textspacernotitle|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Granting storage permission is necessary to proceed with the feature",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225300.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))",
+          "reason": "Granting storage permission is necessary to proceed with browsing the notebook folder.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225337.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "net.gsantner.markor:id/textSpacerNoTitle",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|textspacernotitle|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Granting storage permission is necessary to proceed with the feature",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225343.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))",
+          "reason": "Granting storage permission is necessary to proceed with the feature",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225359.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/message",
+            "text": "Storage permission required to read and write files",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|message|storage permission required to read and write files|textview"
+        }
+      ],
+      "completion_ratio": 0.4,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "G002"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G002",
+          "matched_step": "Open the app",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))"
+        },
+        {
+          "from_feature": "G002",
+          "matched_step": "Tap on the 'Files' tab",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))"
+        }
+      ]
+    },
+    {
+      "id": "G002",
+      "name": "Create a folder",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the '+' button",
+        "Select 'Create'",
+        "Select 'Folder'",
+        "Enter the folder name",
+        "Tap 'Create'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "create",
+        "folder",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folder",
+        "create"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open the Files tab",
+        "Tap the '+' button"
+      ],
+      "remaining_actions": [
+        "Select 'Create'",
+        "Select 'Folder'",
+        "Enter the folder name",
+        "Tap 'Create'"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))",
+          "reason": "visible label matches the remaining step",
+          "matched_step": "Open the Files tab",
+          "source": "heuristic",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225423.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/message",
+            "text": "Storage permission required to read and write files",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|message|storage permission required to read and write files|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225431.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Granting storage permission is necessary to proceed with the feature, and the OK button is the correct action to take to continue.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225450.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Granting storage permission is necessary to proceed with creating a folder.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225507.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+          "reason": "Granting storage permission is necessary to proceed with creating a folder. The OK button should be tapped to continue.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225527.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button2",
+            "text": "EXIT",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button2|exit|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+          "reason": "Granting storage permission is necessary to proceed with creating a folder.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225547.png",
+          "state": "b132829a1d080b8cfc5587906635feec",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "android:id/button1",
+            "text": "OK",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|button1|ok|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))",
+          "reason": "label overlap ['files']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225601.png",
+          "state": "8c223f2b0df51825229aee69d3d4041d",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+          "reason": "label overlap ['files']",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225630.png",
+          "state": "8c223f2b0df51825229aee69d3d4041d",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=e3604b710debb0b1885eaff8f574a7fe, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.android.settings/.spa.SpaActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/.droidbot/temp/screen_2026-09-24_225652.png",
+          "state": "e3604b710debb0b1885eaff8f574a7fe",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Allow access to manage all files",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|allow access to manage all files|textview"
+        }
+      ],
+      "completion_ratio": 0.3333333333333333,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "G001"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G001",
+          "matched_step": "Tap the '+' button",
+          "event": "CustomTouchEvent(state=c5a3411e94d5b81924d5a7b23537f604, view=02b1944a6ed43f71450736cac5b0bcd3(IntroActivity/Button-DONE))"
+        }
+      ]
+    },
+    {
+      "id": "G003",
+      "name": "Apply Markdown formatting",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "Select the text you want to format",
+        "Tap the 'Apply Markdown formatting' option in the action toolbar",
+        "Choose the desired Markdown formatting from the dropdown menu",
+        "The document will now display the formatted text"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "apply",
+        "markdown",
+        "formatting",
+        "action"
+      ],
+      "nav_hints": [
+        "apply",
+        "markdown",
+        "formatting"
+      ],
+      "source": "guide",
+      "status": "dropped",
+      "reason": "Could not restart the app for this feature.",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open a Markdown document",
+        "Select the text you want to format",
+        "Tap the 'Apply Markdown formatting' option in the action toolbar",
+        "Choose the desired Markdown formatting from the dropdown menu",
+        "The document will now display the formatted text"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0,
+      "completion_source": "executed"
+    },
+    {
+      "id": "G004",
+      "name": "Insert an image",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "Tap the image/attachment action in the action bar",
+        "Select 'pick from gallery'",
+        "Choose an image from the gallery",
+        "Tap 'Insert' to add the image to the document"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "insert",
+        "image",
+        "gallery",
+        "camera"
+      ],
+      "nav_hints": [
+        "take a picture",
+        "pick from gallery",
+        "select a file"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open a document",
+        "Tap the image/attachment action in the action bar",
+        "Select 'pick from gallery'",
+        "Choose an image from the gallery",
+        "Tap 'Insert' to add the image to the document"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G005",
+      "name": "Insert a table",
+      "description": "Open a Markdown document",
+      "actions": [
+        "Open a Markdown document",
+        "Tap the table action in the action bar",
+        "Select the table option from the dropdown menu",
+        "Enter the number of rows and columns for the table",
+        "Tap the 'Insert' button to confirm the table insertion"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "insert",
+        "table",
+        "markdown",
+        "document"
+      ],
+      "nav_hints": [
+        "insert",
+        "table"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open a Markdown document",
+        "Tap the table action in the action bar",
+        "Select the table option from the dropdown menu",
+        "Enter the number of rows and columns for the table",
+        "Tap the 'Insert' button to confirm the table insertion"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G006",
+      "name": "Search across all files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the search icon in the toolbar",
+        "Enter 'search' in the search bar",
+        "Tap the 'across' button",
+        "Tap the 'all' button",
+        "Tap the search result to view the file content"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search",
+        "across",
+        "all",
+        "files"
+      ],
+      "nav_hints": [
+        "search",
+        "across",
+        "all"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Files tab",
+        "Tap the search icon in the toolbar",
+        "Enter 'search' in the search bar",
+        "Tap the 'across' button",
+        "Tap the 'all' button",
+        "Tap the search result to view the file content"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G007",
+      "name": "Manage a todo.txt file",
+      "description": "Open or create a .txt file in todo.txt format",
+      "actions": [
+        "Open the Markor app",
+        "Tap on the 'todo' option in the navigation drawer",
+        "Enter the path to the todo.txt file or tap 'Create' to create a new file",
+        "Tap on the 'todo.txt' action bar to view and manage the todo.txt file",
+        "Perform the necessary operations to manage the todo.txt file"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "manage",
+        "todo",
+        "txt",
+        "file"
+      ],
+      "nav_hints": [
+        "manage",
+        "todo",
+        "txt"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Markor app",
+        "Tap on the 'todo' option in the navigation drawer",
+        "Enter the path to the todo.txt file or tap 'Create' to create a new file",
+        "Tap on the 'todo.txt' action bar to view and manage the todo.txt file",
+        "Perform the necessary operations to manage the todo.txt file"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G008",
+      "name": "Preview a CSV file",
+      "description": "Open a .csv file",
+      "actions": [
+        "Open a .csv file",
+        "tap the preview/eye icon"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "preview",
+        "csv",
+        "file",
+        "table"
+      ],
+      "nav_hints": [
+        "preview",
+        "csv",
+        "file"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open a .csv file",
+        "tap the preview/eye icon"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G009",
+      "name": "Share the document",
+      "description": "Open a document",
+      "actions": [
+        "Open a document",
+        "Tap the overflow menu",
+        "Select 'Share' from the overflow menu",
+        "Enter the desired sharing method (e.g., 'Email', 'Message', 'Social Media')",
+        "Tap the 'Send' button to share the document"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "share",
+        "document",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "share",
+        "document",
+        "plain"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open a document",
+        "Tap the overflow menu",
+        "Select 'Share' from the overflow menu",
+        "Enter the desired sharing method (e.g., 'Email', 'Message', 'Social Media')",
+        "Tap the 'Send' button to share the document"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G010",
+      "name": "Delete files",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap on the 'Files' tab",
+        "Long-press the items to select them",
+        "Select the 'delete' option",
+        "Confirm the deletion",
+        "The app state changes to reflect the deleted files"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "tab"
+      ],
+      "nav_hints": [
+        "delete",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Files' tab",
+        "Long-press the items to select them",
+        "Select the 'delete' option",
+        "Confirm the deletion",
+        "The app state changes to reflect the deleted files"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G011",
+      "name": "Sort the file list",
+      "description": "Open the Files tab",
+      "actions": [
+        "Open the Files tab",
+        "Tap the sort icon (or the overflow menu)",
+        "Select 'folders first'",
+        "Select 'sort'",
+        "Select 'file'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "sort",
+        "file",
+        "files",
+        "tab"
+      ],
+      "nav_hints": [
+        "folders first",
+        "sort",
+        "file"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Files tab",
+        "Tap the sort icon (or the overflow menu)",
+        "Select 'folders first'",
+        "Select 'sort'",
+        "Select 'file'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G012",
+      "name": "View recent",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap the 'Files' tab",
+        "Select 'Go to' menu",
+        "Select 'recent documents'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "recent",
+        "popular",
+        "documents",
+        "files"
+      ],
+      "nav_hints": [
+        "go to",
+        "recent documents",
+        "popular documents"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the 'Files' tab",
+        "Select 'Go to' menu",
+        "Select 'recent documents'"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G013",
+      "name": "Open a file",
+      "description": "Open the Files tab",
+      "actions": [
+        "Tap the navigation drawer icon to open the navigation drawer",
+        "Select the 'Files' tab from the navigation drawer",
+        "Tap on the file you want to open"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "file",
+        "another",
+        "application",
+        "files"
+      ],
+      "nav_hints": [
+        "open with",
+        "file",
+        "another"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the navigation drawer icon to open the navigation drawer",
+        "Select the 'Files' tab from the navigation drawer",
+        "Tap on the file you want to open"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G014",
+      "name": "Change the notebook directory",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find and select the 'Notebook' / root folder entry.",
+        "Tap on the 'Notebook' / root folder entry to open the directory settings.",
+        "Tap on the 'Change' option to modify the notebook directory.",
+        "Enter the new directory path in the input field.",
+        "Tap the 'Save' button to apply the changes."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "change",
+        "notebook",
+        "root",
+        "directory"
+      ],
+      "nav_hints": [
+        "notebook",
+        "change",
+        "root"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find and select the 'Notebook' / root folder entry.",
+        "Tap on the 'Notebook' / root folder entry to open the directory settings.",
+        "Tap on the 'Change' option to modify the notebook directory.",
+        "Enter the new directory path in the input field.",
+        "Tap the 'Save' button to apply the changes."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    }
+  ],
+  "session_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/feature_test/session.json",
+  "log_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor/feature_test/log.md",
+  "exploration_bank": [
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=d0f71577bb35f8eea2fcebd7612566f2, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=d0f71577bb35f8eea2fcebd7612566f2, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))  Finish first-run / tutorial. net.gsantner.markor/.activity.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=c7e0613eb6c0770b55d431d5c26b2853, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c7e0613eb6c0770b55d431d5c26b2853, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))  Finish first-run / tutorial. net.gsantner.markor/.activity.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=e61dee17bfee5c6653bb948969e5b083, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=e61dee17bfee5c6653bb948969e5b083, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))  Finish first-run / tutorial. net.gsantner.markor/.activity.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=3df10bddda23df842d8bcc4c87603376, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=3df10bddda23df842d8bcc4c87603376, view=405a6d80860c4824508a6706ea71fb38(IntroActivity/ImageButton-))  Finish first-run / tutorial. net.gsantner.markor/.activity.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=c5a3411e94d5b81924d5a7b23537f604, view=02b1944a6ed43f71450736cac5b0bcd3(IntroActivity/Button-DONE))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c5a3411e94d5b81924d5a7b23537f604, view=02b1944a6ed43f71450736cac5b0bcd3(IntroActivity/Button-DONE))  Finish first-run / tutorial. net.gsantner.markor/.activity.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))  Granting storage permission is necessary to proceed with the feature, and the 'OK' button is the correct choice to continue. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))  Granting storage permission is necessary to proceed with browsing the notebook folder. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))  Granting storage permission is necessary to proceed with browsing the notebook folder. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Granting storage permission is necessary to proceed with the feature net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=f20577cd148b856cb5d4408db7195e2c(StoragePermissionActivity/View-))  Granting storage permission is necessary to proceed with browsing the notebook folder. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Granting storage permission is necessary to proceed with the feature net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))  Granting storage permission is necessary to proceed with the feature net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe))",
+      "event_type": "touch",
+      "matched_step": "Open the Files tab",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=7fd7d5a9c7b89971d15935f536b0caf2(StoragePermissionActivity/TextView-Storage pe)) Open the Files tab visible label matches the remaining step net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Current screen is not the feature yet; navigating inside the app. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Granting storage permission is necessary to proceed with the feature, and the OK button is the correct action to take to continue. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Granting storage permission is necessary to proceed with creating a folder. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=bde25c2ada76bb47743cf500dd884367(StoragePermissionActivity/Button-EXIT))  Granting storage permission is necessary to proceed with creating a folder. The OK button should be tapped to continue. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "net.gsantner.markor/.activity.StoragePermissionActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=b132829a1d080b8cfc5587906635feec, view=9e4029fc05acebd1bbe1e21767619dbf(StoragePermissionActivity/Button-OK))  Granting storage permission is necessary to proceed with creating a folder. net.gsantner.markor/.activity.StoragePermissionActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=c4f394b95c30e536f4a34343146d81ed(SpaActivity/TextView-Allow this))  label overlap ['files'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=8c223f2b0df51825229aee69d3d4041d, view=f645993944622276fec39ccf90b3005f(SpaActivity/View-))  label overlap ['files'] com.android.settings/.spa.SpaActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=e3604b710debb0b1885eaff8f574a7fe, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.android.settings/.spa.SpaActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=e3604b710debb0b1885eaff8f574a7fe, view=e536926440a2b96e7035d03c513fb032(SpaActivity/TextView-Allow acce))  Loop detected; trying an untried widget (backtrack 1/3). com.android.settings/.spa.SpaActivity  touch"
+    }
+  ],
+  "online_coverage": {
+    "covered": 0,
+    "total": 14,
+    "coverage": 0.0,
+    "partial": 2,
+    "weighted_coverage": 0.05238095238095238,
+    "dropped": 1,
+    "not_present": 0,
+    "explanation": "Feature coverage is fully covered / total. Weighted coverage is the mean per-feature completion ratio so partial gold steps count."
+  },
+  "shared_flow_reuses": [],
+  "run_cost": {
+    "wall_clock_seconds": 430.25,
+    "llm_calls": {
+      "feature_extraction": 0,
+      "widget_scoring": 9,
+      "context_retrieval": 0,
+      "hybrid_discovery": 0,
+      "other": 0
+    },
+    "llm_calls_total": 9,
+    "vlm_fallbacks": 9,
+    "sparse_screens": [],
+    "mechanisms": [
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 191.2820885181427
+      },
+      {
+        "name": "non_idempotent",
+        "detail": "blocked touch|allow this app to read, modify and delete all files on this device or any connected storage volumes. if granted, app may access files without your explicit knowledge.|textview",
+        "t": 333.40332412719727
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 355.7161409854889
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 355.7396581172943
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 367.95226526260376
+      }
+    ],
+    "text_inputs": [],
+    "context_calls": [],
+    "field_fills": {
+      "credential": 0,
+      "vlm": 0,
+      "unresolved": 0,
+      "optional-blank": 0
+    },
+    "field_resolutions": []
+  },
+  "offline_coverage": {
+    "covered": 0,
+    "total": 46,
+    "coverage": 0.0,
+    "partial": 1,
+    "exercised": 1,
+    "coverage_formula": "covered / total",
+    "weighted_coverage": 0.004347826086956522,
+    "weighted_coverage_percentage": 0.43,
+    "explanation": "Offline coverage is an LLM/VLM semantic judge vs ground-truth JSON. Feature Coverage = COVERED / Total. Weighted Coverage = mean(completion_ratio) so partial gold steps still count. Step order is not required. Later exploration can complete an earlier partial feature.",
+    "features": [
+      {
+        "id": "GT001",
+        "name": "Browse the notebook folder",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.5,
+        "evidence": [
+          "partially opened app, partially navigated to Files tab",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/Button-DONE",
+          "touch StoragePermissionActivity/Button-OK",
+          "touch StoragePermissionActivity/Button-OK",
+          "touch StoragePermissionActivity/View-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.2
+      },
+      {
+        "id": "GT002",
+        "name": "Create a new plain text or Markdown document",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.3,
+        "evidence": [
+          "no actions related to creating a new document",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/ImageButton-",
+          "touch IntroActivity/Button-DONE",
+          "touch StoragePermissionActivity/Button-OK",
+          "touch StoragePermissionActivity/Button-OK",
+          "touch StoragePermissionActivity/View-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT003",
+        "name": "Create a document from a template",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT004",
+        "name": "Create a folder",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "touch StoragePermissionActivity/Button-EXIT"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT005",
+        "name": "Edit a document in the text editor",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "later IntroActivity/Button-DONE"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT006",
+        "name": "Switch between edit mode and rendered preview",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "touch ImageButton \"NEXT\" rid=next activity=IntroActivity state_changed"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT007",
+        "name": "Apply Markdown formatting with the action toolbar",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps related to Markdown formatting."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT008",
+        "name": "Insert bullet, numbered and checkbox lists",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps related to list insertion."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT009",
+        "name": "Insert a link",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps related to link insertion."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT010",
+        "name": "Insert an image from the gallery or camera",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to image insertion",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT011",
+        "name": "Record and insert an audio note",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to audio recording",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT012",
+        "name": "Insert the current date or time",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to date/time insertion",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT013",
+        "name": "Insert a table",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards inserting a table",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT014",
+        "name": "Undo and redo edits",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards undo/redo edits",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT015",
+        "name": "Search inside the open document",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards searching inside a document",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT016",
+        "name": "Search across all files in the notebook",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal pending, actions do not match gold steps.",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/Button-DONE",
+          "later StoragePermissionActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT017",
+        "name": "Open the QuickNote file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Journal pending, actions do not match gold steps.",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/Button-DONE",
+          "later StoragePermissionActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT018",
+        "name": "Open the To-Do file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT019",
+        "name": "Manage a todo.txt file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No todo.txt file management actions observed.",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/ImageButton-",
+          "later IntroActivity/Button-DONE",
+          "later StoragePermissionActivity/Button-OK"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT020",
+        "name": "Edit a Zim Wiki page",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT021",
+        "name": "Edit AsciiDoc, Org-Mode, CSV and plain text files",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT022",
+        "name": "Preview a CSV file as a table",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No CSV file preview action",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT023",
+        "name": "Create a Markdown presentation",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No Markdown file creation",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT024",
+        "name": "Export the document as a PDF or print it",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No document export or print action",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT025",
+        "name": "Share the document as plain text or rendered HTML",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards sharing document",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT026",
+        "name": "Rename a file or folder",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards renaming file or folder",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT027",
+        "name": "Move or copy files and folders",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards moving or copying files/folders",
+          "later IntroActivity/ImageButton-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT028",
+        "name": "Delete files and folders",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT029",
+        "name": "Select multiple files at once",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT030",
+        "name": "Mark a file or folder as a favourite",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT031",
+        "name": "Sort the file list",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT032",
+        "name": "Show or hide hidden files",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT033",
+        "name": "Jump to a specific folder path",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT034",
+        "name": "View recent and popular documents",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Gold steps not followed.",
+          "later IntroActivity/Button-DONE"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT035",
+        "name": "View file information",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Gold steps not followed.",
+          "later IntroActivity/Button-DONE"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT036",
+        "name": "Encrypt and open password-protected notes",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Gold steps not followed.",
+          "later IntroActivity/Button-DONE"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT037",
+        "name": "Open a file with another application",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions match the gold steps."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT038",
+        "name": "Add a launcher shortcut to a document",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions match the gold steps."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT039",
+        "name": "Add the Markor home screen widget",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions match the gold steps."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT040",
+        "name": "Change the notebook (root) directory",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT041",
+        "name": "Change the theme and colours",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT042",
+        "name": "Change the editor font family and size",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps match gold"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT043",
+        "name": "Configure editor behaviour",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards configuring editor behavior."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT044",
+        "name": "Configure the format action bar buttons",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards configuring format action bar buttons."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT045",
+        "name": "Change the app language",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No steps towards changing the app language."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT046",
+        "name": "Review the changelog, help and licences",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no actions related to reviewing changelog, help, or licences"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      }
+    ],
+    "confusion": [
+      {
+        "ground_truth_id": "GT001",
+        "ground_truth_name": "Browse the notebook folder",
+        "journal_id": "G001",
+        "journal_name": "Browse the notebook folder",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT002",
+        "ground_truth_name": "Create a new plain text or Markdown document",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT003",
+        "ground_truth_name": "Create a document from a template",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT004",
+        "ground_truth_name": "Create a folder",
+        "journal_id": "G002",
+        "journal_name": "Create a folder",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT005",
+        "ground_truth_name": "Edit a document in the text editor",
+        "journal_id": "G009",
+        "journal_name": "Share the document",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT006",
+        "ground_truth_name": "Switch between edit mode and rendered preview",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.111,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT007",
+        "ground_truth_name": "Apply Markdown formatting with the action toolbar",
+        "journal_id": "G003",
+        "journal_name": "Apply Markdown formatting",
+        "name_similarity": 0.429,
+        "matched_by": "name",
+        "journal_status": "dropped",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT008",
+        "ground_truth_name": "Insert bullet, numbered and checkbox lists",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.154,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT009",
+        "ground_truth_name": "Insert a link",
+        "journal_id": "G004",
+        "journal_name": "Insert an image",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT010",
+        "ground_truth_name": "Insert an image from the gallery or camera",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.417,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT011",
+        "ground_truth_name": "Record and insert an audio note",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT012",
+        "ground_truth_name": "Insert the current date or time",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT013",
+        "ground_truth_name": "Insert a table",
+        "journal_id": "G005",
+        "journal_name": "Insert a table",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT014",
+        "ground_truth_name": "Undo and redo edits",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.0,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT015",
+        "ground_truth_name": "Search inside the open document",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT016",
+        "ground_truth_name": "Search across all files in the notebook",
+        "journal_id": "G006",
+        "journal_name": "Search across all files",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT017",
+        "ground_truth_name": "Open the QuickNote file",
+        "journal_id": "G013",
+        "journal_name": "Open a file",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT018",
+        "ground_truth_name": "Open the To-Do file",
+        "journal_id": "G011",
+        "journal_name": "Sort the file list",
+        "name_similarity": 0.4,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT019",
+        "ground_truth_name": "Manage a todo.txt file",
+        "journal_id": "G007",
+        "journal_name": "Manage a todo.txt file",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT020",
+        "ground_truth_name": "Edit a Zim Wiki page",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.077,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT021",
+        "ground_truth_name": "Edit AsciiDoc, Org-Mode, CSV and plain text files",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.125,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT022",
+        "ground_truth_name": "Preview a CSV file as a table",
+        "journal_id": "G008",
+        "journal_name": "Preview a CSV file",
+        "name_similarity": 0.75,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT023",
+        "ground_truth_name": "Create a Markdown presentation",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT024",
+        "ground_truth_name": "Export the document as a PDF or print it",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT025",
+        "ground_truth_name": "Share the document as plain text or rendered HTML",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.455,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT026",
+        "ground_truth_name": "Rename a file or folder",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT027",
+        "ground_truth_name": "Move or copy files and folders",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.214,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT028",
+        "ground_truth_name": "Delete files and folders",
+        "journal_id": "G010",
+        "journal_name": "Delete files",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT029",
+        "ground_truth_name": "Select multiple files at once",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT030",
+        "ground_truth_name": "Mark a file or folder as a favourite",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT031",
+        "ground_truth_name": "Sort the file list",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 1.0,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT032",
+        "ground_truth_name": "Show or hide hidden files",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT033",
+        "ground_truth_name": "Jump to a specific folder path",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT034",
+        "ground_truth_name": "View recent and popular documents",
+        "journal_id": "G012",
+        "journal_name": "View recent",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT035",
+        "ground_truth_name": "View file information",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.25,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT036",
+        "ground_truth_name": "Encrypt and open password-protected notes",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.143,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT037",
+        "ground_truth_name": "Open a file with another application",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.462,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT038",
+        "ground_truth_name": "Add a launcher shortcut to a document",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT039",
+        "ground_truth_name": "Add the Markor home screen widget",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.125,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT040",
+        "ground_truth_name": "Change the notebook (root) directory",
+        "journal_id": "G014",
+        "journal_name": "Change the notebook directory",
+        "name_similarity": 0.8,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT041",
+        "ground_truth_name": "Change the theme and colours",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.286,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT042",
+        "ground_truth_name": "Change the editor font family and size",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.222,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT043",
+        "ground_truth_name": "Configure editor behaviour",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.071,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT044",
+        "ground_truth_name": "Configure the format action bar buttons",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.133,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT045",
+        "ground_truth_name": "Change the app language",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT046",
+        "ground_truth_name": "Review the changelog, help and licences",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.125,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      }
+    ],
+    "feature_inference": {
+      "true_positives": 14,
+      "false_negatives": 32,
+      "false_positives": 0,
+      "precision": 1.0,
+      "recall": 0.30434782608695654,
+      "f1": 0.4666666666666667,
+      "false_not_present": 0,
+      "false_not_present_rate": 0.0,
+      "extracted_count": 14,
+      "ground_truth_count": 46,
+      "feature_completeness_ratio": 0.304,
+      "id_collisions": [],
+      "id_collisions_loud": false,
+      "prf1_withheld": false
+    }
+  },
+  "attempt_summary": {
+    "attempted": 2,
+    "never_attempted": 12,
+    "blocked_then_recovered": 0,
+    "blocked_still": 0
+  },
+  "ground_truth_source": "independent_labeled_set",
+  "ground_truth_addendum": null
+}

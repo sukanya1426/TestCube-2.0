@@ -1,0 +1,119 @@
+{
+  "feature_id": "F012",
+  "name": "Content settings",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "",
+        "content_description": "",
+        "class": "android.widget.ImageView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.schabi.newpipe:id/menu_item_feed_help",
+        "text": "",
+        "content_description": "Fast mode",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/message",
+        "text": "Do you think feed loading is too slow? If so, try enabling fast loading (you can change it in settings or by pressing the button below). \n \nNewPipe offers two feed loading strategies: \n\u2022 Fetching the whole subscription channel, which is slow but complete. \n\u2022 Using a dedicated service endpoint, which is fast but usually not complete. \n \nThe difference between the two is that the fast one usually lacks some information, like the item's duration or type (can't distinguish between live videos and normal ones) and it may return less items. \n \nYouTube is an example of a service that offers this fast method with its RSS feed. \n \nSo the choice boils down to what you prefer: speed or precise information.",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/message",
+        "text": "Do you think feed loading is too slow? If so, try enabling fast loading (you can change it in settings or by pressing the button below). \n \nNewPipe offers two feed loading strategies: \n\u2022 Fetching the whole subscription channel, which is slow but complete. \n\u2022 Using a dedicated service endpoint, which is fast but usually not complete. \n \nThe difference between the two is that the fast one usually lacks some information, like the item's duration or type (can't distinguish between live videos and normal ones) and it may return less items. \n \nYouTube is an example of a service that offers this fast method with its RSS feed. \n \nSo the choice boils down to what you prefer: speed or precise information.",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/button1",
+        "text": "OK",
+        "content_description": "",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.schabi.newpipe:id/menu_item_feed_toggle_played_items",
+        "text": "",
+        "content_description": "Show/Hide streams",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "",
+        "content_description": "",
+        "class": "",
+        "name": "",
+        "direction": "",
+        "x": 789,
+        "y": 665
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "android:id/button1",
+        "text": "OK",
+        "content_description": "",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.schabi.newpipe:id/menu_item_feed_toggle_played_items",
+        "text": "",
+        "content_description": "Show/Hide streams",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "partial",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/newpipe/feature_test",
+  "completion_source": "executed"
+}

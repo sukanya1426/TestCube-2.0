@@ -1,0 +1,56 @@
+{
+  "tag": "2026-09-25_020459",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.contacts",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Sort by",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          668,
+          84
+        ],
+        [
+          795,
+          210
+        ]
+      ],
+      "resource_id": "org.fossify.contacts:id/sort",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "127*126",
+      "signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/sort[text]None[desc]Sort by[enabled,,]",
+      "view_str": "ab689a902fec3d95f9ad72e4b66dd63c",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.fossify.contacts:id/sort",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Sort by' bound_box=668,84,795,210></button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "46ac1cbd5e80666829184c5238ef3854",
+  "stop_state": "beeb7a89182869582edf17385b8bd9eb",
+  "event_str": "CustomTouchEvent(state=46ac1cbd5e80666829184c5238ef3854, view=ab689a902fec3d95f9ad72e4b66dd63c(MainActivity/Button-))"
+}

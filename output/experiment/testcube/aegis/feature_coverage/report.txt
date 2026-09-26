@@ -1,0 +1,400 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Aegis Authenticator
+
+Total Actions    : 82
+
+Total Features   : 40
+Covered Features : 1
+Partial          : 3
+Uncovered        : 36
+
+Feature Coverage : 2.50%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 4.58%  (mean completion ratio; partial steps count)
+Exercised        : 4  (covered 1 + partial 3)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create and encrypt the vault on first launch
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 20% of gold steps
+Evidence   :
+  - Partial steps completed, but vault creation and encryption not fully covered.
+  - scroll IntroActivity/RecyclerView-
+  - touch IntroActivity/TextView-Want to im
+  - touch IntroActivity/Button-Import Aeg
+  - touch IntroActivity/TextView-Welcome
+
+[GT002] Unlock the vault with a password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to vault unlocking with a password.
+  - touch IntroActivity/TextView-Want to im
+  - touch IntroActivity/Button-
+  - scroll IntroActivity/RecyclerView-
+  - scroll IntroActivity/RecyclerView-
+  - scroll IntroActivity/RecyclerView-
+  - scroll IntroActivity/RecyclerView-
+  - touch IntroActivity/TextView-Aegis is a
+
+[GT003] Unlock the vault with biometrics
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - LLM batch omitted this feature.
+
+[GT004] Add an entry by scanning a QR code
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Tap '+' button; grant camera permission; point at QR code.
+  - touch IntroActivity/Button-
+  - set_text IntroActivity/EditText-Please ent
+
+[GT005] Add an entry from a QR code image
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to scanning image or gallery.
+
+[GT006] Add an entry manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to manual entry or shared secret.
+
+[GT007] Edit an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing for entry editing
+  - long_touch IntroActivity/TextView-Aegis is a
+
+[GT008] Set a custom icon for an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps missing for icon setting
+  - touch IntroActivity/TextView-Want to im
+
+[GT009] Import an icon pack
+Status     : COVERED
+Confidence : 0.50
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - steps missing for icon pack import
+  - touch IntroActivity/TextView-Want to im
+  - Completed by later features: G001, G002
+
+[GT010] Copy a code to the clipboard
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT011] Reveal a hidden code
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT012] Generate the next HOTP code
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT013] Search entries
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No search functionality observed.
+
+[GT014] Sort the entry list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No sort functionality observed.
+
+[GT015] Reorder entries manually
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No manual reordering functionality observed.
+
+[GT016] Create a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT017] Assign an entry to a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT018] Filter the list by group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT019] Rename or delete a group
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT020] Delete an entry
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT021] Select and act on multiple entries
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions found.
+
+[GT022] Export the vault as an encrypted file
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT023] Export the vault in plain text or as HTML
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT024] Import a vault from Aegis or another authenticator
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT025] Import entries by scanning a Google Authenticator transfer QR code
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps aligned with gold capability
+  - later IntroActivity/TextView-Want to im
+
+[GT026] Set or change the vault password
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.70
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - partial steps towards setting password
+  - touch IntroActivity/Button-
+
+[GT027] Add a second unlock method (password slot)
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps aligned with gold capability
+  - later IntroActivity/TextView-Want to im
+
+[GT028] Configure automatic locking
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards configuring automatic locking.
+
+[GT029] Set the lock timeout
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards setting the lock timeout.
+
+[GT030] Block screenshots and screen recording
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps towards blocking screenshots and screen recording.
+
+[GT031] Enable a panic trigger
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to enabling a panic trigger.
+
+[GT032] Enable automatic backups to a folder
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to enabling automatic backups.
+
+[GT033] Enable Android system backups
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to enabling Android system backups.
+
+[GT034] Change the theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards theme change
+  - intent start activity
+
+[GT035] Change the accent colour and dynamic colours
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards accent colour change
+  - intent start activity
+
+[GT036] Change the entry list view mode
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards view mode change
+  - intent start activity
+
+[GT037] Configure code display and copy behaviour
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT038] Highlight the entry whose code is about to expire
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT039] Change the app language
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT040] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to 'About' screen or licences
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 40 features covered
+3 / 40 features partial
+Feature Coverage = COVERED / Total = 2.50%
+Weighted Feature Coverage = mean(completion_ratio) = 4.58%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 40 (completeness ratio 0.35)
+
+Feature-inference P/R/F1: 1.00 / 0.35 / 0.52 (false not_present=0)
+
+GT GT001 'Create and encrypt the vault on first launch' | journal=G001 'Create' (sim=0.5, name) status=partial | offline=partial
+GT GT002 'Unlock the vault with a password' | journal=G002 'Unlock the vault' (sim=0.6, name) status=partial | offline=not_covered
+GT GT003 'Unlock the vault with biometrics' | journal=G012 'Export the vault' (sim=0.333, name) status=pending | offline=not_covered
+GT GT004 'Add an entry by scanning a QR code' | journal=G003 'Add an entry' (sim=0.5, name) status=partial | offline=partial
+GT GT005 'Add an entry from a QR code image' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Add an entry manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Edit an entry' | journal=G004 'Edit an entry' (sim=1.0, name) status=partial | offline=not_covered
+GT GT008 'Set a custom icon for an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Import an icon pack' | journal=G005 'Import an icon pack' (sim=1.0, name) status=covered | offline=covered
+GT GT010 'Copy a code to the clipboard' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Reveal a hidden code' | journal=G006 'Reveal a hidden code' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Generate the next HOTP code' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Search entries' | journal=G007 'Search entries' (sim=1.0, name) status=pending | offline=not_covered
+GT GT014 'Sort the entry list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Reorder entries manually' | journal=G008 'Reorder entries manually' (sim=1.0, name) status=pending | offline=not_covered
+GT GT016 'Create a group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Assign an entry to a group' | journal=G009 'Assign an entry' (sim=0.667, name) status=pending | offline=not_covered
+GT GT018 'Filter the list by group' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Rename or delete a group' | journal=G010 'Rename' (sim=0.333, name) status=pending | offline=not_covered
+GT GT020 'Delete an entry' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Select and act on multiple entries' | journal=G011 'Select' (sim=0.571, name) status=pending | offline=not_covered
+GT GT022 'Export the vault as an encrypted file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Export the vault in plain text or as HTML' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Import a vault from Aegis or another authenticator' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Import entries by scanning a Google Authenticator transfer QR code' | journal=G013 'Import entries' (sim=0.308, name) status=pending | offline=not_covered
+GT GT026 'Set or change the vault password' | journal=missing (no name match) status=missing | offline=partial
+GT GT027 'Add a second unlock method (password slot)' | journal=G014 'Add a second unlock' (sim=0.5, name) status=pending | offline=not_covered
+GT GT028 'Configure automatic locking' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Set the lock timeout' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Block screenshots and screen recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Enable a panic trigger' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Enable automatic backups to a folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Enable Android system backups' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Change the theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'Change the accent colour and dynamic colours' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Change the entry list view mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Configure code display and copy behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Highlight the entry whose code is about to expire' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

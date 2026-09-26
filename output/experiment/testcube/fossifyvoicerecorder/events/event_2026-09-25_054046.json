@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_054046",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.fossify.voicerecorder",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          747
+        ],
+        [
+          947,
+          894
+        ]
+      ],
+      "resource_id": "org.fossify.voicerecorder:id/folder_path",
+      "checked": false,
+      "text": "Internal/Music/Recordings/",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 13,
+      "temp_id": 14,
+      "size": "814*147",
+      "signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_path[text]Internal/Music/Recordings/[desc]None[enabled,,]",
+      "view_str": "03b861cfaff7ab64edc37428fbec776e",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]org.fossify.voicerecorder:id/folder_path",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<input bound_box=133,747,947,894>Internal/Music/Recordings/</input>"
+    },
+    "text": "TestCube List",
+    "skip_oracle": true
+  },
+  "start_state": "e9c18f0bbd755dffc68f9b509a886053",
+  "stop_state": "3ccf440894a86d2921220424bf48a616",
+  "event_str": "CustomSetTextEvent(state=e9c18f0bbd755dffc68f9b509a886053, view=03b861cfaff7ab64edc37428fbec776e(MainActivity/EditText-Internal/M), text=TestCube List)"
+}

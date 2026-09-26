@@ -1,0 +1,492 @@
+{
+  "app": "NoNonsense Notes",
+  "source": "guide",
+  "url": "Official NoNonsense Notes repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-34 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create a task list",
+      "description": "Open the navigation drawer (hamburger icon or left-edge swipe)",
+      "actions": [
+        "Open the navigation drawer (hamburger icon or left-edge swipe)",
+        "tap \"Create new list\"/the \"+\" beside the lists"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "navigation",
+        "drawer"
+      ],
+      "nav_hints": [
+        "create new list",
+        "create",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G002",
+      "name": "Delete a task list",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "Tap the overflow menu",
+        "Select 'Delete list'",
+        "Confirm the deletion"
+      ],
+      "keywords": [
+        "delete",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "delete list",
+        "delete",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Create a task",
+      "description": "Open the target list",
+      "actions": [
+        "Open the target list",
+        "tap the \"+\" floating action button"
+      ],
+      "keywords": [
+        "create",
+        "task",
+        "target",
+        "floating"
+      ],
+      "nav_hints": [
+        "create",
+        "task"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G004",
+      "name": "Mark a task",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "Select the task you want to mark as completed",
+        "Tap the checkbox beside the task",
+        "The task is struck through and hidden from the active list",
+        "Confirm the task is marked as completed"
+      ],
+      "keywords": [
+        "mark",
+        "task",
+        "completed",
+        "checkbox"
+      ],
+      "nav_hints": [
+        "mark",
+        "task",
+        "completed"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the list",
+        "tap the checkbox beside the task; the task is struck through and, depending on the settings, hidden from the active list"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Delete all completed tasks",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "Tap the overflow menu",
+        "Select 'Delete all completed tasks'",
+        "Confirm the deletion",
+        "Verify that all completed tasks are removed"
+      ],
+      "keywords": [
+        "delete",
+        "all",
+        "completed",
+        "tasks"
+      ],
+      "nav_hints": [
+        "delete completed tasks",
+        "delete",
+        "all"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Reorder tasks manually",
+      "description": "Set the list sort order to manual",
+      "actions": [
+        "Open the NoNonsense Notes app",
+        "Select the task list you want to reorder",
+        "Tap on the 'Sort' option in the task list settings",
+        "Select 'Manual' from the sort order options",
+        "Long-press a task to start reordering",
+        "Drag the task to a new position in the list"
+      ],
+      "keywords": [
+        "reorder",
+        "tasks",
+        "manually",
+        "sort"
+      ],
+      "nav_hints": [
+        "reorder",
+        "tasks",
+        "manually"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Set the list sort order to manual",
+        "long-press a task"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Set a time-based reminder",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "Tap the 'Add reminder' control",
+        "Select 'Time-based' from the reminder options",
+        "Enter the desired time in the time picker",
+        "Tap 'Set' to confirm the time-based reminder"
+      ],
+      "keywords": [
+        "time-based",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "time-based",
+        "reminder"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task",
+        "tap the \"Add reminder\" control"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "Set a location-based reminder",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "Tap 'Add reminder'",
+        "Select 'Location-based'",
+        "Enter the desired location",
+        "Set the reminder time",
+        "Tap 'Save'"
+      ],
+      "keywords": [
+        "location-based",
+        "reminder",
+        "task",
+        "add"
+      ],
+      "nav_hints": [
+        "add reminder",
+        "location-based",
+        "reminder"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task",
+        "tap \"Add reminder\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Move a task",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "Tap the overflow menu",
+        "Select 'Move'",
+        "Choose the destination list",
+        "Tap 'Move' to confirm"
+      ],
+      "keywords": [
+        "move",
+        "task",
+        "different",
+        "overflow"
+      ],
+      "nav_hints": [
+        "move to list",
+        "move",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Sort a list",
+      "description": "Open the list",
+      "actions": [
+        "Open the list",
+        "Tap the overflow menu",
+        "Select 'Sort'",
+        "Choose 'Sort by Title'",
+        "Tap 'OK'"
+      ],
+      "keywords": [
+        "sort",
+        "overflow"
+      ],
+      "nav_hints": [
+        "sort"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the list",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "View all tasks",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the \"All lists\"/combined view entry"
+      ],
+      "keywords": [
+        "all",
+        "tasks",
+        "lists",
+        "together"
+      ],
+      "nav_hints": [
+        "all lists",
+        "all",
+        "tasks"
+      ],
+      "source": "guide"
+    },
+    {
+      "id": "G012",
+      "name": "Share a task",
+      "description": "Open the task",
+      "actions": [
+        "Open the task",
+        "Tap the share icon (or the overflow menu)",
+        "Select the desired sharing option",
+        "Enter the recipient's email address",
+        "Tap the send button"
+      ],
+      "keywords": [
+        "share",
+        "task",
+        "overflow"
+      ],
+      "nav_hints": [
+        "share",
+        "task"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the task",
+        "tap the share icon (or the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Add the task list",
+      "description": "Long-press an empty area of the Android home screen",
+      "actions": [
+        "Long-press an empty area of the Android home screen",
+        "Tap Widgets",
+        "Select Add",
+        "Select Task",
+        "Tap Create Task List",
+        "Enter Task List Name"
+      ],
+      "keywords": [
+        "add",
+        "task",
+        "home",
+        "widget"
+      ],
+      "nav_hints": [
+        "add",
+        "task",
+        "home"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press an empty area of the Android home screen",
+        "tap Widgets"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Change the app theme",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the menu icon in the top left corner of the app.",
+        "Select 'Settings' from the menu options.",
+        "Tap on the 'Theme' entry in the Settings menu.",
+        "Select the desired theme from the theme options.",
+        "Tap on 'Save' to apply the new theme."
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "settings",
+        "entry"
+      ],
+      "nav_hints": [
+        "change",
+        "theme"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap the theme entry"
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Delete a task list",
+    "Mark a task",
+    "Delete all completed tasks",
+    "Reorder tasks manually",
+    "Set a time-based reminder",
+    "Set a location-based reminder",
+    "Move a task",
+    "Sort a list",
+    "Share a task",
+    "Add the task list",
+    "Change the app theme"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/nononsensenotes/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/nononsensenotes/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 7,
+    "both": [
+      {
+        "guide_id": "G014",
+        "guide_name": "Change the app theme",
+        "readme_id": "F007",
+        "readme_name": "Change app settings",
+        "name_similarity": 0.4
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create a task list"
+      },
+      {
+        "id": "G002",
+        "name": "Delete a task list"
+      },
+      {
+        "id": "G003",
+        "name": "Create a task"
+      },
+      {
+        "id": "G004",
+        "name": "Mark a task"
+      },
+      {
+        "id": "G005",
+        "name": "Delete all completed tasks"
+      },
+      {
+        "id": "G006",
+        "name": "Reorder tasks manually"
+      },
+      {
+        "id": "G007",
+        "name": "Set a time-based reminder"
+      },
+      {
+        "id": "G008",
+        "name": "Set a location-based reminder"
+      },
+      {
+        "id": "G009",
+        "name": "Move a task"
+      },
+      {
+        "id": "G010",
+        "name": "Sort a list"
+      },
+      {
+        "id": "G011",
+        "name": "View all tasks"
+      },
+      {
+        "id": "G012",
+        "name": "Share a task"
+      },
+      {
+        "id": "G013",
+        "name": "Add the task list"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F006",
+        "name": "Search"
+      }
+    ]
+  }
+}

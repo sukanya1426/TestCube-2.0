@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_001805",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.dmfs.tasks",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          168,
+          87
+        ],
+        [
+          849,
+          182
+        ]
+      ],
+      "resource_id": "org.dmfs.tasks:id/search_src_text",
+      "checked": false,
+      "text": "test",
+      "class": "android.widget.AutoCompleteTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "681*95",
+      "signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.dmfs.tasks:id/search_src_text[text]test[desc]None[enabled,,]",
+      "view_str": "f0eb811075ecfd89ca55e8914b864a96",
+      "content_free_signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.dmfs.tasks:id/search_src_text",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<input bound_box=168,87,849,182>test</input>"
+    },
+    "text": "test",
+    "skip_oracle": true
+  },
+  "start_state": "2e462b5b35dbf920f79423a40d97832c",
+  "stop_state": "2e462b5b35dbf920f79423a40d97832c",
+  "event_str": "CustomSetTextEvent(state=2e462b5b35dbf920f79423a40d97832c, view=f0eb811075ecfd89ca55e8914b864a96(TaskListActivity/AutoCompleteTextView-test), text=test)"
+}

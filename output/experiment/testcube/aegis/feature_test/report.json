@@ -1,0 +1,4009 @@
+{
+  "app": "Aegis Authenticator",
+  "started_at": "2026-09-25 03:35:29",
+  "finished_at": "2026-09-25 03:49:50",
+  "total_features": 14,
+  "covered": 0,
+  "partial": 6,
+  "dropped": 0,
+  "not_present": 0,
+  "blocked": 0,
+  "coverage": 0.0,
+  "weighted_coverage": 0.12738095238095237,
+  "unscored_discovered": 0,
+  "feature_source": "guide",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 8,
+    "both": [
+      {
+        "guide_id": "G007",
+        "guide_name": "Search entries",
+        "readme_id": "F006",
+        "readme_name": "Search",
+        "name_similarity": 0.5
+      }
+    ],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Create"
+      },
+      {
+        "id": "G002",
+        "name": "Unlock the vault"
+      },
+      {
+        "id": "G003",
+        "name": "Add an entry"
+      },
+      {
+        "id": "G004",
+        "name": "Edit an entry"
+      },
+      {
+        "id": "G005",
+        "name": "Import an icon pack"
+      },
+      {
+        "id": "G006",
+        "name": "Reveal a hidden code"
+      },
+      {
+        "id": "G008",
+        "name": "Reorder entries manually"
+      },
+      {
+        "id": "G009",
+        "name": "Assign an entry"
+      },
+      {
+        "id": "G010",
+        "name": "Rename"
+      },
+      {
+        "id": "G011",
+        "name": "Select"
+      },
+      {
+        "id": "G012",
+        "name": "Export the vault"
+      },
+      {
+        "id": "G013",
+        "name": "Import entries"
+      },
+      {
+        "id": "G014",
+        "name": "Add a second unlock"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Close or skip the tutorial"
+      },
+      {
+        "id": "F002",
+        "name": "Leave any first-run analytics or settings screen"
+      },
+      {
+        "id": "F003",
+        "name": "Tap Create Database or Open Database if shown"
+      },
+      {
+        "id": "F004",
+        "name": "Enter a file name if asked and confirm Save"
+      },
+      {
+        "id": "F005",
+        "name": "Reach the home or main screen"
+      },
+      {
+        "id": "F007",
+        "name": "Import or export data"
+      },
+      {
+        "id": "F008",
+        "name": "Change app settings"
+      }
+    ]
+  },
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/aegis/guide_features.json",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Create",
+      "description": "Install and open the app",
+      "actions": [
+        "Install and open the app",
+        "Tap through the welcome screens",
+        "Select 'Create' from the navigation menu",
+        "Enter a name for the vault",
+        "Tap 'Encrypt' to secure the vault",
+        "Enter a password to encrypt the vault"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "create",
+        "encrypt",
+        "vault",
+        "first"
+      ],
+      "nav_hints": [
+        "create",
+        "encrypt",
+        "vault"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stuck in a repeating screen loop.",
+      "attempts": 1,
+      "completed_actions": [
+        "Install and open the app"
+      ],
+      "remaining_actions": [
+        "Tap through the welcome screens",
+        "Select 'Create' from the navigation menu",
+        "Enter a name for the vault",
+        "Tap 'Encrypt' to secure the vault",
+        "Enter a password to encrypt the vault"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033541.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033617.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033626.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033636.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "Affordance search before drop (menu).",
+          "matched_step": "",
+          "source": "afford_search",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033645.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+          "reason": "The current screen is the welcome screen, and the next step is to tap through the welcome screens. The welcome screen is likely the first screen of the onboarding process.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033701.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnImport",
+            "text": "Import Aegis vault",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnimport|import aegis vault|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+          "reason": "nav hint vault",
+          "matched_step": "",
+          "source": "nav",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033745.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnImport",
+            "text": "Import Aegis vault",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnimport|import aegis vault|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033756.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/titleText",
+            "text": "Welcome",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|titletext|welcome|textview"
+        }
+      ],
+      "completion_ratio": 0.16666666666666666,
+      "completion_source": "executed",
+      "credited_from": [
+        "G005"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G005",
+          "matched_step": "Install and open the app",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))"
+        }
+      ]
+    },
+    {
+      "id": "G002",
+      "name": "Unlock the vault",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' icon",
+        "Select 'Security'",
+        "Tap on 'Unlock the vault' option",
+        "Enter the required password",
+        "Select 'Unlock vault with password' option",
+        "Tap on 'Unlock vault with biometrics' option"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "unlock",
+        "vault",
+        "biometrics",
+        "settings"
+      ],
+      "nav_hints": [
+        "unlock",
+        "vault",
+        "biometrics"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap on the 'Settings' icon"
+      ],
+      "remaining_actions": [
+        "Select 'Security'",
+        "Tap on 'Unlock the vault' option",
+        "Enter the required password",
+        "Select 'Unlock vault with password' option",
+        "Tap on 'Unlock vault with biometrics' option"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "menu/settings row",
+          "matched_step": "Tap on the 'Settings' icon",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033829.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033835.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnNext",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnnext|button"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/states/screen_2026-09-25_033842.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033850.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033856.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033904.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+          "reason": "Select 'Biometrics' option to progress towards the remaining steps.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033912.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|aegis is a security-focused 2fa app. tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. if an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password. we've preselected the option that we think would fit best for your device.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=9e17bbb1006fbfd5fbd7979229f1b1bb(IntroActivity/RadioButton-None))",
+          "reason": "Select 'Biometrics' option to proceed with the feature.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033918.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/rb_none",
+            "text": "None",
+            "content_description": "",
+            "class": "android.widget.RadioButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|rb_none|none|radiobutton"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/states/screen_2026-09-25_033927.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033935.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033941.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033948.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=e5695bcf4cd2a6e2094dd6dc677a6960(IntroActivity/RadioButton-None))",
+          "reason": "Select 'Biometrics' option to advance the feature",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_033955.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/rb_none",
+            "text": "None",
+            "content_description": "",
+            "class": "android.widget.RadioButton",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|rb_none|none|radiobutton"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+          "reason": "Select 'Biometrics' option to proceed towards the remaining steps.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034002.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|aegis is a security-focused 2fa app. tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. if an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password. we've preselected the option that we think would fit best for your device.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+          "reason": "Select 'Biometrics' option to advance the feature",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034010.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|aegis is a security-focused 2fa app. tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. if an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password. we've preselected the option that we think would fit best for your device.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=d1edef213a9c2677de4cb0e78d0cc1fe(IntroActivity/TextView-No passwor))",
+          "reason": "Select 'Unlock the vault with password' option",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034017.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "No password is needed to unlock the vault and it will not be encrypted. This option is not recommended.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|no password is needed to unlock the vault and it will not be encrypted. this option is not recommended.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=6959e350e2ab61a6af705e3e341e7890(IntroActivity/TextView-Security))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034024.png",
+          "state": "c3d2bd3e4df4de975093506555d86ba1",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Security",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|security|textview"
+        }
+      ],
+      "completion_ratio": 0.16666666666666666,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed"
+    },
+    {
+      "id": "G003",
+      "name": "Add an entry",
+      "description": "Tap the \"+\" button",
+      "actions": [
+        "Tap the '+' button",
+        "Tap 'Scan an image'/Scan image from gallery'",
+        "Select the image to scan",
+        "Tap 'Add Entry'",
+        "Enter the necessary details for the entry",
+        "Tap 'Save'"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "add",
+        "entry",
+        "code",
+        "image"
+      ],
+      "nav_hints": [
+        "scan an image",
+        "add",
+        "entry"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap the '+' button"
+      ],
+      "remaining_actions": [
+        "Tap 'Scan an image'/Scan image from gallery'",
+        "Select the image to scan",
+        "Tap 'Add Entry'",
+        "Enter the necessary details for the entry",
+        "Tap 'Save'"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034111.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnNext",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnnext|button"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+          "reason": "LLM action choice",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034122.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|aegis is a security-focused 2fa app. tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. if an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password. we've preselected the option that we think would fit best for your device.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+          "reason": "LLM action choice",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034130.png",
+          "state": "f66661ad45a365e1fc6400395193409f",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnNext",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnnext|button"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/states/screen_2026-09-25_034140.png",
+          "state": "211b6f67689cee838b39d2f9b7637321",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034146.png",
+          "state": "211b6f67689cee838b39d2f9b7637321",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034153.png",
+          "state": "211b6f67689cee838b39d2f9b7637321",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034200.png",
+          "state": "211b6f67689cee838b39d2f9b7637321",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=211b6f67689cee838b39d2f9b7637321, view=06ad702751d733bb1db8d54e9bdf524b(IntroActivity/EditText-Please ent), text=TestCube!2026)",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034207.png",
+          "state": "211b6f67689cee838b39d2f9b7637321",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/text_password",
+            "text": "Please enter a password",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "TestCube!2026",
+          "signature": "set_text|text_password|please enter a password|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/states/screen_2026-09-25_034243.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034250.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034258.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034303.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034311.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/text_password",
+            "text": "TestCube!2026",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "TestCube!2026",
+          "signature": "set_text|text_password|testcube!2026|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034321.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/text_password",
+            "text": "TestCube!2026",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "TestCube!2026",
+          "signature": "set_text|text_password|testcube!2026|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=68c4f462a2739d86d4b5db06712796ec(IntroActivity/EditText-Please con), text=TestCube!2026)",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "set_text",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034328.png",
+          "state": "ba53d20f46f4075f8c342807fa4e54fa",
+          "action_type": "set_text",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/text_password_confirm",
+            "text": "Please confirm the password",
+            "content_description": "",
+            "class": "android.widget.EditText",
+            "name": "",
+            "direction": ""
+          },
+          "value": "TestCube!2026",
+          "signature": "set_text|text_password_confirm|please confirm the password|edittext"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/states/screen_2026-09-25_034336.png",
+          "state": "249655217f3df850489e87f2d9e9f349",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034347.png",
+          "state": "249655217f3df850489e87f2d9e9f349",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034401.png",
+          "state": "249655217f3df850489e87f2d9e9f349",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+          "reason": "Finish first-run / tutorial.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034415.png",
+          "state": "249655217f3df850489e87f2d9e9f349",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "left"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|left"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=249655217f3df850489e87f2d9e9f349, view=719dc762ca17f4be0a22646765d5159f(IntroActivity/TextView-Warning: I))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034428.png",
+          "state": "249655217f3df850489e87f2d9e9f349",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "",
+            "text": "Warning: If you forget your password, you will permanently lose access to your tokens. There is no way to recover them without the password.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|warning: if you forget your password, you will permanently lose access to your tokens. there is no way to recover them without the password.|textview"
+        }
+      ],
+      "completion_ratio": 0.16666666666666666,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "G001"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G001",
+          "matched_step": "Tap the '+' button",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))"
+        }
+      ]
+    },
+    {
+      "id": "G004",
+      "name": "Edit an entry",
+      "description": "Tap the entry in the list (or long-press it)",
+      "actions": [
+        "Tap the entry in the list (or long-press it)",
+        "Tap the edit action",
+        "Enter the new information",
+        "Tap the save button",
+        "Verify the updated entry in the list"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "edit",
+        "entry",
+        "long-press",
+        "action"
+      ],
+      "nav_hints": [
+        "edit",
+        "entry"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink.",
+      "attempts": 1,
+      "completed_actions": [
+        "Tap the save button"
+      ],
+      "remaining_actions": [
+        "Tap the entry in the list (or long-press it)",
+        "Tap the edit action",
+        "Enter the new information",
+        "Verify the updated entry in the list"
+      ],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+          "reason": "long-press for context menu",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034451.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/slideIndicator",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|slideindicator|view"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+          "reason": "long-press for context menu",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034459.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/slideIndicator",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|slideindicator|view"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))",
+          "reason": "long-press for context menu",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034507.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/imgLogo",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|imglogo|imageview"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))",
+          "reason": "long-press for context menu",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034516.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/imgLogo",
+            "text": "",
+            "content_description": "",
+            "class": "android.widget.ImageView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|imglogo|imageview"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))",
+          "reason": "long-press for context menu",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034528.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/descriptionText",
+            "text": "Aegis is a free, secure and open source 2FA app",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|descriptiontext|aegis is a free, secure and open source 2fa app|textview"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034540.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/titleText",
+            "text": "Welcome",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|titletext|welcome|textview"
+        },
+        {
+          "decision": "act",
+          "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))",
+          "reason": "Current screen is not the feature yet; navigating inside the app.",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "long_touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034549.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/descriptionText",
+            "text": "Aegis is a free, secure and open source 2FA app",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "long_touch|descriptiontext|aegis is a free, secure and open source 2fa app|textview"
+        }
+      ],
+      "completion_ratio": 0.2,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "executed",
+      "credited_from": [
+        "G001"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G001",
+          "matched_step": "Tap the save button",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))"
+        }
+      ]
+    },
+    {
+      "id": "G005",
+      "name": "Import an icon pack",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Scroll down to find 'Icon packs'",
+        "Tap on 'Icon packs'",
+        "Tap on 'Import'",
+        "Select a desired icon pack",
+        "Confirm the import"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "import",
+        "pack",
+        "settings",
+        "packs"
+      ],
+      "nav_hints": [
+        "icon packs",
+        "import",
+        "pack"
+      ],
+      "source": "guide",
+      "status": "covered",
+      "reason": "Stagnation: novelty below threshold and remaining steps did not shrink. Later exploration completed remaining steps.",
+      "attempts": 1,
+      "completed_actions": [
+        "Open Settings",
+        "Tap on 'Import'",
+        "Confirm the import",
+        "Scroll down to find 'Icon packs'",
+        "Tap on 'Icon packs'",
+        "Select a desired icon pack"
+      ],
+      "remaining_actions": [],
+      "steps": [
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "menu/settings row",
+          "matched_step": "Open Settings",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034653.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "navigate to settings",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034701.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "navigate to settings",
+          "matched_step": "",
+          "source": "heuristic",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034712.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "Affordance search before drop (menu).",
+          "matched_step": "",
+          "source": "afford_search",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034738.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=up)",
+          "reason": "Affordance search before drop (scroll).",
+          "matched_step": "",
+          "source": "afford_search",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "scroll",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034748.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "scroll",
+          "selector": {
+            "resource_id": "",
+            "text": "",
+            "content_description": "",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "name": "",
+            "direction": "up"
+          },
+          "value": "",
+          "signature": "scroll|recyclerview|up"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+          "reason": "Navigate to the settings menu to proceed with importing an icon pack.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034756.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/slideIndicator",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|slideindicator|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+          "reason": "Navigate to the settings menu to proceed with importing an icon pack.",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034812.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/txtImportHelp",
+            "text": "Want to import from a different 2FA app? Complete the setup first and then head over to the settings menu.",
+            "content_description": "",
+            "class": "android.widget.TextView",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|txtimporthelp|want to import from a different 2fa app? complete the setup first and then head over to the settings menu.|textview"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+          "reason": "navigate to settings to find 'Icon packs'",
+          "matched_step": "",
+          "source": "llm",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034818.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/slideIndicator",
+            "text": "",
+            "content_description": "",
+            "class": "android.view.View",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|slideindicator|view"
+        },
+        {
+          "decision": "act",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+          "reason": "Loop detected; trying an untried widget (backtrack 1/3).",
+          "matched_step": "",
+          "source": "rule",
+          "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+          "event_type": "touch",
+          "text": "",
+          "screenshot": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/.droidbot/temp/screen_2026-09-25_034826.png",
+          "state": "44fb7984198392ecbe123dc1d95acb34",
+          "action_type": "touch",
+          "selector": {
+            "resource_id": "com.beemdevelopment.aegis:id/btnImport",
+            "text": "Import Aegis vault",
+            "content_description": "",
+            "class": "android.widget.Button",
+            "name": "",
+            "direction": ""
+          },
+          "value": "",
+          "signature": "touch|btnimport|import aegis vault|button"
+        }
+      ],
+      "completion_ratio": 1.0,
+      "stagnation_detected": true,
+      "blocked_no_progress": true,
+      "completion_source": "cross_feature",
+      "credited_from": [
+        "G001",
+        "G002"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G001",
+          "matched_step": "Tap on 'Import'",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))"
+        },
+        {
+          "from_feature": "G001",
+          "matched_step": "Confirm the import",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))"
+        },
+        {
+          "from_feature": "G002",
+          "matched_step": "Scroll down to find 'Icon packs'",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))"
+        },
+        {
+          "from_feature": "G002",
+          "matched_step": "Tap on 'Icon packs'",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))"
+        },
+        {
+          "from_feature": "G002",
+          "matched_step": "Select a desired icon pack",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))"
+        }
+      ]
+    },
+    {
+      "id": "G006",
+      "name": "Reveal a hidden code",
+      "description": "With the \"tap to reveal\" option enabled",
+      "actions": [
+        "Tap on the 'Reveal a hidden code' option in the settings menu.",
+        "Select the entry in the list that you want to reveal the hidden code for.",
+        "Tap the 'Tap to reveal' option next to the selected entry.",
+        "The hidden code will be displayed in the app's interface."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "reveal",
+        "hidden",
+        "code",
+        "enabled"
+      ],
+      "nav_hints": [
+        "tap to reveal",
+        "reveal",
+        "hidden"
+      ],
+      "source": "guide",
+      "status": "partial",
+      "reason": "Could not restart the app for this feature.",
+      "attempts": 0,
+      "completed_actions": [
+        "Tap on the 'Reveal a hidden code' option in the settings menu."
+      ],
+      "remaining_actions": [
+        "Select the entry in the list that you want to reveal the hidden code for.",
+        "Tap the 'Tap to reveal' option next to the selected entry.",
+        "The hidden code will be displayed in the app's interface."
+      ],
+      "steps": [],
+      "completion_ratio": 0.25,
+      "completion_source": "executed",
+      "credited_from": [
+        "G002"
+      ],
+      "credited_steps": [
+        {
+          "from_feature": "G002",
+          "matched_step": "Tap on the 'Reveal a hidden code' option in the settings menu.",
+          "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))"
+        }
+      ]
+    },
+    {
+      "id": "G007",
+      "name": "Search entries",
+      "description": "Tap the search icon in the toolbar",
+      "actions": [
+        "Tap the search icon in the toolbar",
+        "Type part of the issuer or account name",
+        "Press the Enter key to execute the search"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "search",
+        "entries",
+        "toolbar",
+        "part"
+      ],
+      "nav_hints": [
+        "search",
+        "entries"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the search icon in the toolbar",
+        "Type part of the issuer or account name",
+        "Press the Enter key to execute the search"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G008",
+      "name": "Reorder entries manually",
+      "description": "Set the sort order to custom",
+      "actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entries list",
+        "Select the 'Sort' option",
+        "Choose 'Custom' from the sort options",
+        "Long-press an entry to start reordering",
+        "Drag the entry to a new position in the list"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "reorder",
+        "entries",
+        "manually",
+        "sort"
+      ],
+      "nav_hints": [
+        "reorder",
+        "entries",
+        "manually"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entries list",
+        "Select the 'Sort' option",
+        "Choose 'Custom' from the sort options",
+        "Long-press an entry to start reordering",
+        "Drag the entry to a new position in the list"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G009",
+      "name": "Assign an entry",
+      "description": "Open the entry editor",
+      "actions": [
+        "Open the entry editor",
+        "Tap the group selector",
+        "Select the group to assign the entry to",
+        "Tap the 'Assign' button",
+        "Confirm the assignment"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "assign",
+        "entry",
+        "group",
+        "editor"
+      ],
+      "nav_hints": [
+        "assign",
+        "entry",
+        "group"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the entry editor",
+        "Tap the group selector",
+        "Select the group to assign the entry to",
+        "Tap the 'Assign' button",
+        "Confirm the assignment"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G010",
+      "name": "Rename",
+      "description": "Open the overflow menu",
+      "actions": [
+        "Tap on the overflow menu",
+        "Select 'Manage groups'",
+        "Tap on the group you want to rename",
+        "Enter the new name for the group",
+        "Tap the 'Rename' button to save the changes"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "rename",
+        "delete",
+        "group",
+        "overflow"
+      ],
+      "nav_hints": [
+        "manage groups",
+        "rename",
+        "delete"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the overflow menu",
+        "Select 'Manage groups'",
+        "Tap on the group you want to rename",
+        "Enter the new name for the group",
+        "Tap the 'Rename' button to save the changes"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G011",
+      "name": "Select",
+      "description": "Long-press the first entry",
+      "actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entry list",
+        "Long-press the first entry",
+        "Tap the further entries to add them",
+        "Verify the app state changes"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "act",
+        "multiple",
+        "entries",
+        "long-press"
+      ],
+      "nav_hints": [
+        "act",
+        "multiple",
+        "entries"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Open the Aegis Authenticator app",
+        "Navigate to the entry list",
+        "Long-press the first entry",
+        "Tap the further entries to add them",
+        "Verify the app state changes"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G012",
+      "name": "Export the vault",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find the 'Import and export' option and tap on it.",
+        "Select 'Export the vault' from the export options.",
+        "Wait for the export process to complete and confirm the export.",
+        "Check the exported vault file to ensure it is in the desired format."
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "export",
+        "vault",
+        "plain",
+        "text"
+      ],
+      "nav_hints": [
+        "export",
+        "vault",
+        "plain"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on the 'Settings' option in the main menu.",
+        "Scroll down to find the 'Import and export' option and tap on it.",
+        "Select 'Export the vault' from the export options.",
+        "Wait for the export process to complete and confirm the export.",
+        "Check the exported vault file to ensure it is in the desired format."
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G013",
+      "name": "Import entries",
+      "description": "Tap the \"+\" button",
+      "actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan a QR code\""
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "import",
+        "entries",
+        "scanning",
+        "google"
+      ],
+      "nav_hints": [
+        "import",
+        "entries",
+        "scanning"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap the \"+\" button",
+        "tap \"Scan a QR code\""
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "G014",
+      "name": "Add a second unlock",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on 'Settings'",
+        "Select 'Security'",
+        "Select 'Add second unlock'",
+        "Enter a name for the second unlock",
+        "Confirm the addition of the second unlock"
+      ],
+      "valid_paths": [],
+      "keywords": [
+        "add",
+        "second",
+        "unlock",
+        "method"
+      ],
+      "nav_hints": [
+        "add",
+        "second",
+        "unlock"
+      ],
+      "source": "guide",
+      "status": "pending",
+      "reason": "",
+      "attempts": 0,
+      "completed_actions": [],
+      "remaining_actions": [
+        "Tap on 'Settings'",
+        "Select 'Security'",
+        "Select 'Add second unlock'",
+        "Enter a name for the second unlock",
+        "Confirm the addition of the second unlock"
+      ],
+      "steps": [],
+      "completion_ratio": 0.0
+    }
+  ],
+  "session_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/feature_test/session.json",
+  "log_path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis/feature_test/log.md",
+  "exploration_bank": [
+    {
+      "feature_id": "G001",
+      "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G001",
+      "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G001",
+      "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G001",
+      "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))  Affordance search before drop (menu). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))  The current screen is the welcome screen, and the next step is to tap through the welcome screens. The welcome screen is likely the first screen of the onboarding process. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))  nav hint vault com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G001",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))  Loop detected; trying an untried widget (backtrack 1/3). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "Tap on the 'Settings' icon",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im)) Tap on the 'Settings' icon menu/settings row com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=f66661ad45a365e1fc6400395193409f, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))  Select 'Biometrics' option to progress towards the remaining steps. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=9e17bbb1006fbfd5fbd7979229f1b1bb(IntroActivity/RadioButton-None))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=9e17bbb1006fbfd5fbd7979229f1b1bb(IntroActivity/RadioButton-None))  Select 'Biometrics' option to proceed with the feature. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=3596372bf56a107fa6f4cc86f8ef84f0(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=e5695bcf4cd2a6e2094dd6dc677a6960(IntroActivity/RadioButton-None))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=e5695bcf4cd2a6e2094dd6dc677a6960(IntroActivity/RadioButton-None))  Select 'Biometrics' option to advance the feature com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))  Select 'Biometrics' option to proceed towards the remaining steps. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))  Select 'Biometrics' option to advance the feature com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=d1edef213a9c2677de4cb0e78d0cc1fe(IntroActivity/TextView-No passwor))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=d1edef213a9c2677de4cb0e78d0cc1fe(IntroActivity/TextView-No passwor))  Select 'Unlock the vault with password' option com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G002",
+      "event": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=6959e350e2ab61a6af705e3e341e7890(IntroActivity/TextView-Security))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=c3d2bd3e4df4de975093506555d86ba1, view=6959e350e2ab61a6af705e3e341e7890(IntroActivity/TextView-Security))  Loop detected; trying an untried widget (backtrack 1/3). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=57789aa8569fc95345f56e7ced7ae485(IntroActivity/TextView-Aegis is a))  LLM action choice com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=f66661ad45a365e1fc6400395193409f, view=5137e7fa52c6a1266c62228ccf950a6e(IntroActivity/Button-))  LLM action choice com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=211b6f67689cee838b39d2f9b7637321, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomSetTextEvent(state=211b6f67689cee838b39d2f9b7637321, view=06ad702751d733bb1db8d54e9bdf524b(IntroActivity/EditText-Please ent), text=TestCube!2026)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=211b6f67689cee838b39d2f9b7637321, view=06ad702751d733bb1db8d54e9bdf524b(IntroActivity/EditText-Please ent), text=TestCube!2026)  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  set_text"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  set_text"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=b73815771c4c5a5f87759443c44ba2b3(IntroActivity/EditText-TestCube!2), text=TestCube!2026)  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  set_text"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=68c4f462a2739d86d4b5db06712796ec(IntroActivity/EditText-Please con), text=TestCube!2026)",
+      "event_type": "set_text",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomSetTextEvent(state=ba53d20f46f4075f8c342807fa4e54fa, view=68c4f462a2739d86d4b5db06712796ec(IntroActivity/EditText-Please con), text=TestCube!2026)  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  set_text"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=249655217f3df850489e87f2d9e9f349, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=left)  Finish first-run / tutorial. com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G003",
+      "event": "CustomTouchEvent(state=249655217f3df850489e87f2d9e9f349, view=719dc762ca17f4be0a22646765d5159f(IntroActivity/TextView-Warning: I))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=249655217f3df850489e87f2d9e9f349, view=719dc762ca17f4be0a22646765d5159f(IntroActivity/TextView-Warning: I))  Loop detected; trying an untried widget (backtrack 1/3). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))  long-press for context menu com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))  long-press for context menu com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))  long-press for context menu com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=cf580c6cad60354bc9387fc9fc17e2cb(IntroActivity/ImageView-))  long-press for context menu com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))  long-press for context menu com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=689dfd14036420ff77e6af19d0ae3c77(IntroActivity/TextView-Welcome))  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G004",
+      "event": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))",
+      "event_type": "long_touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "LongTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=13d6575d07268296a7e155b264cfe72f(IntroActivity/TextView-Aegis is a))  Current screen is not the feature yet; navigating inside the app. com.beemdevelopment.aegis/.ui.IntroActivity  long_touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "Open Settings",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im)) Open Settings menu/settings row com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))  navigate to settings com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))  navigate to settings com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))  Affordance search before drop (menu). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=up)",
+      "event_type": "scroll",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "ScrollEvent(state=44fb7984198392ecbe123dc1d95acb34, view=464cf92bd53ed9c58b6d2126b6117fb7(IntroActivity/RecyclerView-), direction=up)  Affordance search before drop (scroll). com.beemdevelopment.aegis/.ui.IntroActivity  scroll"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))  Navigate to the settings menu to proceed with importing an icon pack. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=b88212f30494f2dbe103a308f389f102(IntroActivity/TextView-Want to im))  Navigate to the settings menu to proceed with importing an icon pack. com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=2d015328b167f450dea493e57a8d1fdd(IntroActivity/View-))  navigate to settings to find 'Icon packs' com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    },
+    {
+      "feature_id": "G005",
+      "event": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))",
+      "event_type": "touch",
+      "matched_step": "",
+      "activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+      "text": "",
+      "blob": "CustomTouchEvent(state=44fb7984198392ecbe123dc1d95acb34, view=83ac976539dbeb7dce82a0ba1527b518(IntroActivity/Button-Import Aeg))  Loop detected; trying an untried widget (backtrack 1/3). com.beemdevelopment.aegis/.ui.IntroActivity  touch"
+    }
+  ],
+  "online_coverage": {
+    "covered": 0,
+    "total": 14,
+    "coverage": 0.0,
+    "partial": 6,
+    "weighted_coverage": 0.12738095238095237,
+    "dropped": 0,
+    "not_present": 0,
+    "explanation": "Feature coverage is fully covered / total. Weighted coverage is the mean per-feature completion ratio so partial gold steps count."
+  },
+  "shared_flow_reuses": [],
+  "run_cost": {
+    "wall_clock_seconds": 875.93,
+    "llm_calls": {
+      "feature_extraction": 0,
+      "widget_scoring": 20,
+      "context_retrieval": 0,
+      "hybrid_discovery": 0,
+      "other": 0
+    },
+    "llm_calls_total": 20,
+    "vlm_fallbacks": 20,
+    "sparse_screens": [],
+    "mechanisms": [
+      {
+        "name": "afford_search",
+        "detail": "menu",
+        "t": 91.13624787330627
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 162.96553325653076
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 310.219868183136
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 310.3007016181946
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 317.70290517807007
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 554.6637120246887
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 557.627742767334
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 563.5695729255676
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 656.3335320949554
+      },
+      {
+        "name": "afford_search",
+        "detail": "menu",
+        "t": 744.8331372737885
+      },
+      {
+        "name": "afford_search",
+        "detail": "scroll",
+        "t": 756.6990942955017
+      },
+      {
+        "name": "backtrack",
+        "detail": "loop attempt 1",
+        "t": 792.7224364280701
+      },
+      {
+        "name": "stagnation",
+        "detail": "escalate",
+        "t": 793.2591867446899
+      },
+      {
+        "name": "stagnation",
+        "detail": "terminate",
+        "t": 820.1162130832672
+      }
+    ],
+    "text_inputs": [
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "Please enter a password",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "Please enter a password",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "Please confirm the password",
+        "accepted": null
+      },
+      {
+        "value": "TestCube!2026",
+        "source": "credential",
+        "field": "Please confirm the password",
+        "accepted": null
+      }
+    ],
+    "context_calls": [],
+    "field_fills": {
+      "credential": 8,
+      "vlm": 0,
+      "unresolved": 0,
+      "optional-blank": 0
+    },
+    "field_resolutions": [
+      {
+        "source": "credential",
+        "field": "Please enter a password",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "Please enter a password",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "TestCube!2026",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "TestCube!2026",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "TestCube!2026",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "TestCube!2026",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "Please confirm the password",
+        "value": "TestCube!2026",
+        "accepted": null
+      },
+      {
+        "source": "credential",
+        "field": "Please confirm the password",
+        "value": "TestCube!2026",
+        "accepted": null
+      }
+    ]
+  },
+  "offline_coverage": {
+    "covered": 1,
+    "total": 40,
+    "coverage": 0.025,
+    "partial": 2,
+    "exercised": 3,
+    "coverage_formula": "covered / total",
+    "weighted_coverage": 0.034999999999999996,
+    "weighted_coverage_percentage": 3.5,
+    "explanation": "Offline coverage is an LLM/VLM semantic judge vs ground-truth JSON. Feature Coverage = COVERED / Total. Weighted Coverage = mean(completion_ratio) so partial gold steps still count. Step order is not required. Later exploration can complete an earlier partial feature.",
+    "features": [
+      {
+        "id": "GT001",
+        "name": "Create and encrypt the vault on first launch",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.6,
+        "evidence": [
+          "Partially completed welcome screens; password entry not attempted.",
+          "scroll IntroActivity/RecyclerView-",
+          "touch IntroActivity/TextView-Want to im",
+          "touch IntroActivity/Button-Import Aeg",
+          "touch IntroActivity/TextView-Welcome"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.2
+      },
+      {
+        "id": "GT002",
+        "name": "Unlock the vault with a password",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.4,
+        "evidence": [
+          "No password entry or unlock button tap.",
+          "touch IntroActivity/TextView-Want to im",
+          "touch IntroActivity/Button-",
+          "scroll IntroActivity/RecyclerView-",
+          "scroll IntroActivity/RecyclerView-",
+          "scroll IntroActivity/RecyclerView-",
+          "scroll IntroActivity/RecyclerView-",
+          "touch IntroActivity/TextView-Aegis is a",
+          "touch IntroActivity/RadioButton-None"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT003",
+        "name": "Unlock the vault with biometrics",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "LLM batch omitted this feature."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT004",
+        "name": "Add an entry by scanning a QR code",
+        "status": "partial",
+        "test_cases": [
+          "test_001"
+        ],
+        "confidence": 0.7,
+        "evidence": [
+          "tap '+' button, scan QR code, but no save action",
+          "touch IntroActivity/Button-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.2
+      },
+      {
+        "id": "GT005",
+        "name": "Add an entry from a QR code image",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "no actions related to scanning an image or gallery"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT006",
+        "name": "Add an entry manually",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "no actions related to manual entry or shared secret paste"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT007",
+        "name": "Edit an entry",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "long_touch actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT008",
+        "name": "Set a custom icon for an entry",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "touch actions"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT009",
+        "name": "Import an icon pack",
+        "status": "covered",
+        "test_cases": [],
+        "confidence": 0.5,
+        "evidence": [
+          "steps not aligned with gold capability",
+          "touch actions",
+          "Completed by later features: G001, G002"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 1.0
+      },
+      {
+        "id": "GT010",
+        "name": "Copy a code to the clipboard",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT011",
+        "name": "Reveal a hidden code",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT012",
+        "name": "Generate the next HOTP code",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT013",
+        "name": "Search entries",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No search functionality tested."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT014",
+        "name": "Sort the entry list",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No sort functionality tested."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT015",
+        "name": "Reorder entries manually",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No manual reordering functionality tested."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT016",
+        "name": "Create a group",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT017",
+        "name": "Assign an entry to a group",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT018",
+        "name": "Filter the list by group",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT019",
+        "name": "Rename or delete a group",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT020",
+        "name": "Delete an entry",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT021",
+        "name": "Select and act on multiple entries",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no relevant actions found"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT022",
+        "name": "Export the vault as an encrypted file",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "steps not aligned with gold",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT023",
+        "name": "Export the vault in plain text or as HTML",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "steps not aligned with gold",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT024",
+        "name": "Import a vault from Aegis or another authenticator",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "steps not aligned with gold",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT025",
+        "name": "Import entries by scanning a Google Authenticator transfer QR code",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "no steps towards QR code scanning",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT026",
+        "name": "Set or change the vault password",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "no steps towards password change",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT027",
+        "name": "Add a second unlock method (password slot)",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.6,
+        "evidence": [
+          "no steps towards adding a second unlock method",
+          "later IntroActivity/RecyclerView-"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT028",
+        "name": "Configure automatic locking",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards configuring automatic locking"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT029",
+        "name": "Set the lock timeout",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards setting the lock timeout"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT030",
+        "name": "Block screenshots and screen recording",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "no steps towards blocking screenshots and screen recording"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT031",
+        "name": "Enable a panic trigger",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "actions do not match gold steps",
+          "intent intent=am start com.beemdevelopment.aegis/com.beemdevelopment.aegis.ui.MainActivity state_change..."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT032",
+        "name": "Enable automatic backups to a folder",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "actions do not match gold steps",
+          "intent intent=am start com.beemdevelopment.aegis/com.beemdevelopment.aegis.ui.MainActivity state_change..."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT033",
+        "name": "Enable Android system backups",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "actions do not match gold steps",
+          "intent intent=am start com.beemdevelopment.aegis/com.beemdevelopment.aegis.ui.MainActivity state_change..."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT034",
+        "name": "Change the theme",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "intent start activity"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT035",
+        "name": "Change the accent colour and dynamic colours",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "intent start activity"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT036",
+        "name": "Change the entry list view mode",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "steps not aligned with gold",
+          "intent start activity"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT037",
+        "name": "Configure code display and copy behaviour",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to configuring code display and copy behavior."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT038",
+        "name": "Highlight the entry whose code is about to expire",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to highlighting entries about to expire."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT039",
+        "name": "Change the app language",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "No actions related to changing the app language."
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      },
+      {
+        "id": "GT040",
+        "name": "View the about screen and licences",
+        "status": "not_covered",
+        "test_cases": [],
+        "confidence": 0.0,
+        "evidence": [
+          "Gold steps not attempted"
+        ],
+        "matched_path": null,
+        "matcher": "vlm",
+        "completion_ratio": 0.0
+      }
+    ],
+    "confusion": [
+      {
+        "ground_truth_id": "GT001",
+        "ground_truth_name": "Create and encrypt the vault on first launch",
+        "journal_id": "G001",
+        "journal_name": "Create",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT002",
+        "ground_truth_name": "Unlock the vault with a password",
+        "journal_id": "G002",
+        "journal_name": "Unlock the vault",
+        "name_similarity": 0.6,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT003",
+        "ground_truth_name": "Unlock the vault with biometrics",
+        "journal_id": "G012",
+        "journal_name": "Export the vault",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT004",
+        "ground_truth_name": "Add an entry by scanning a QR code",
+        "journal_id": "G003",
+        "journal_name": "Add an entry",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "partial",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT005",
+        "ground_truth_name": "Add an entry from a QR code image",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.4,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT006",
+        "ground_truth_name": "Add an entry manually",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.667,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT007",
+        "ground_truth_name": "Edit an entry",
+        "journal_id": "G004",
+        "journal_name": "Edit an entry",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT008",
+        "ground_truth_name": "Set a custom icon for an entry",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT009",
+        "ground_truth_name": "Import an icon pack",
+        "journal_id": "G005",
+        "journal_name": "Import an icon pack",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "covered",
+        "offline_status": "covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT010",
+        "ground_truth_name": "Copy a code to the clipboard",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.231,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT011",
+        "ground_truth_name": "Reveal a hidden code",
+        "journal_id": "G006",
+        "journal_name": "Reveal a hidden code",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "partial",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT012",
+        "ground_truth_name": "Generate the next HOTP code",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.143,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT013",
+        "ground_truth_name": "Search entries",
+        "journal_id": "G007",
+        "journal_name": "Search entries",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT014",
+        "ground_truth_name": "Sort the entry list",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT015",
+        "ground_truth_name": "Reorder entries manually",
+        "journal_id": "G008",
+        "journal_name": "Reorder entries manually",
+        "name_similarity": 1.0,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT016",
+        "ground_truth_name": "Create a group",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.5,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT017",
+        "ground_truth_name": "Assign an entry to a group",
+        "journal_id": "G009",
+        "journal_name": "Assign an entry",
+        "name_similarity": 0.667,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT018",
+        "ground_truth_name": "Filter the list by group",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT019",
+        "ground_truth_name": "Rename or delete a group",
+        "journal_id": "G010",
+        "journal_name": "Rename",
+        "name_similarity": 0.333,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT020",
+        "ground_truth_name": "Delete an entry",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT021",
+        "ground_truth_name": "Select and act on multiple entries",
+        "journal_id": "G011",
+        "journal_name": "Select",
+        "name_similarity": 0.571,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT022",
+        "ground_truth_name": "Export the vault as an encrypted file",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.6,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT023",
+        "ground_truth_name": "Export the vault in plain text or as HTML",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.5,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT024",
+        "ground_truth_name": "Import a vault from Aegis or another authenticator",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.154,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT025",
+        "ground_truth_name": "Import entries by scanning a Google Authenticator transfer QR code",
+        "journal_id": "G013",
+        "journal_name": "Import entries",
+        "name_similarity": 0.308,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT026",
+        "ground_truth_name": "Set or change the vault password",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.333,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT027",
+        "ground_truth_name": "Add a second unlock method (password slot)",
+        "journal_id": "G014",
+        "journal_name": "Add a second unlock",
+        "name_similarity": 0.5,
+        "matched_by": "name",
+        "journal_status": "pending",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT028",
+        "ground_truth_name": "Configure automatic locking",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.071,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT029",
+        "ground_truth_name": "Set the lock timeout",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT030",
+        "ground_truth_name": "Block screenshots and screen recording",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.062,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT031",
+        "ground_truth_name": "Enable a panic trigger",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.059,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT032",
+        "ground_truth_name": "Enable automatic backups to a folder",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.071,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT033",
+        "ground_truth_name": "Enable Android system backups",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.071,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT034",
+        "ground_truth_name": "Change the theme",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT035",
+        "ground_truth_name": "Change the accent colour and dynamic colours",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.125,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT036",
+        "ground_truth_name": "Change the entry list view mode",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.176,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT037",
+        "ground_truth_name": "Configure code display and copy behaviour",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.125,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT038",
+        "ground_truth_name": "Highlight the entry whose code is about to expire",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.2,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT039",
+        "ground_truth_name": "Change the app language",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.167,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      },
+      {
+        "ground_truth_id": "GT040",
+        "ground_truth_name": "View the about screen and licences",
+        "journal_id": null,
+        "journal_name": null,
+        "name_similarity": 0.133,
+        "matched_by": "none",
+        "journal_status": "missing",
+        "offline_status": "not_covered",
+        "exists_in_gt": true,
+        "predicted_not_present": false,
+        "false_not_present": false
+      }
+    ],
+    "feature_inference": {
+      "true_positives": 14,
+      "false_negatives": 26,
+      "false_positives": 0,
+      "precision": 1.0,
+      "recall": 0.35,
+      "f1": 0.5185185185185185,
+      "false_not_present": 0,
+      "false_not_present_rate": 0.0,
+      "extracted_count": 14,
+      "ground_truth_count": 40,
+      "feature_completeness_ratio": 0.35,
+      "id_collisions": [],
+      "id_collisions_loud": false,
+      "prf1_withheld": false
+    }
+  },
+  "attempt_summary": {
+    "attempted": 5,
+    "never_attempted": 9,
+    "blocked_then_recovered": 0,
+    "blocked_still": 0
+  },
+  "ground_truth_source": "independent_labeled_set",
+  "ground_truth_addendum": null
+}

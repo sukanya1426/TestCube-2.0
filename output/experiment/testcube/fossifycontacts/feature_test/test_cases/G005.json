@@ -1,0 +1,141 @@
+{
+  "feature_id": "G005",
+  "name": "Add notes",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/tab_item_label",
+        "text": "Contacts",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/tab_item_label",
+        "text": "Contacts",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/fragment_placeholder",
+        "text": "No contacts found",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "scroll",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/view_pager",
+        "text": "",
+        "content_description": "",
+        "class": "androidx.viewpager.widget.b",
+        "name": "",
+        "direction": "up"
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/fragment_placeholder",
+        "text": "No contacts found",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "set_text",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/top_toolbar_search",
+        "text": "Search",
+        "content_description": "",
+        "class": "android.widget.EditText",
+        "name": "",
+        "direction": ""
+      },
+      "value": "test"
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/fragment_fab",
+        "text": "",
+        "content_description": "Create new contact",
+        "class": "com.google.android.material.floatingactionbutton.FloatingActionButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/contact_emails_add_new",
+        "text": "",
+        "content_description": "",
+        "class": "android.widget.ImageView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/contact_address",
+        "text": "Address",
+        "content_description": "",
+        "class": "android.widget.EditText",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.fossify.contacts:id/contact_email_type",
+        "text": "Home",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "Home",
+        "content_description": "",
+        "class": "android.widget.RadioButton",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "partial",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifycontacts/feature_test",
+  "completion_source": "executed"
+}

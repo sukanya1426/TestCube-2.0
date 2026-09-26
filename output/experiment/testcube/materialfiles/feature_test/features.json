@@ -1,0 +1,501 @@
+{
+  "app": "Material Files",
+  "source": "guide",
+  "url": "Official Material Files repository documentation and F-Droid listing",
+  "note": "Short hints that drive live exploration. Deliberately a 14-of-42 subset in different wording from ground_truth.json - if the two name sets matched, the run would be graded against the list that drove it.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse local storage",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "Tap the hamburger icon to open the navigation drawer",
+        "Select 'Browse' from the navigation drawer",
+        "Select 'Local' from the navigation drawer",
+        "Select 'Storage' from the navigation drawer"
+      ],
+      "keywords": [
+        "browse",
+        "local",
+        "storage",
+        "navigation"
+      ],
+      "nav_hints": [
+        "browse",
+        "local",
+        "storage"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the app",
+        "open the navigation drawer (hamburger icon or left-edge swipe)"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G002",
+      "name": "Copy files",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Long-press the item(s) you want to copy",
+        "Tap the copy icon in the contextual toolbar",
+        "Select the destination folder where you want to copy the files",
+        "Tap the paste icon in the contextual toolbar to complete the copy operation"
+      ],
+      "keywords": [
+        "copy",
+        "files",
+        "folders",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy",
+        "files",
+        "folders"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item(s)",
+        "tap the copy icon in the contextual toolbar"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G003",
+      "name": "Delete items",
+      "description": "Long-press the item(s)",
+      "actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the items you want to delete",
+        "Long-press the item(s) you want to delete",
+        "Tap the delete icon",
+        "Confirm the deletion if prompted"
+      ],
+      "keywords": [
+        "delete",
+        "long-press"
+      ],
+      "nav_hints": [
+        "delete"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item(s)",
+        "tap the delete icon"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G004",
+      "name": "Sort the file list",
+      "description": "Tap the overflow menu (three dots)",
+      "actions": [
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Directories first'",
+        "Tap the overflow menu (three dots)",
+        "Select 'Sort by'",
+        "Select 'Name'"
+      ],
+      "keywords": [
+        "sort",
+        "file",
+        "overflow",
+        "three"
+      ],
+      "nav_hints": [
+        "sort by",
+        "directories first",
+        "sort"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the overflow menu (three dots)",
+        "tap \"Sort by\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G005",
+      "name": "Show",
+      "description": "Tap the overflow menu",
+      "actions": [
+        "Tap the overflow menu",
+        "Scroll to the 'Show' option",
+        "Select 'Show'"
+      ],
+      "keywords": [
+        "show",
+        "hide",
+        "hidden",
+        "files"
+      ],
+      "nav_hints": [
+        "show hidden files",
+        "show",
+        "hide"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap the overflow menu",
+        "toggle \"Show hidden files\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G006",
+      "name": "Create an archive",
+      "description": "Long-press the item(s) to include",
+      "actions": [
+        "Long-press the item(s) to include",
+        "Tap the overflow menu",
+        "Select 'Create'",
+        "Select 'Archive'",
+        "Tap 'Create Archive'"
+      ],
+      "keywords": [
+        "create",
+        "archive",
+        "long-press",
+        "include"
+      ],
+      "nav_hints": [
+        "compress",
+        "add to archive",
+        "create"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item(s) to include",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G007",
+      "name": "Copy the path of",
+      "description": "Long-press the item",
+      "actions": [
+        "Open the Material Files app",
+        "Navigate to the folder containing the file you want to copy the path of",
+        "Long-press the item",
+        "Tap the overflow menu",
+        "Select 'Copy Path'",
+        "The app will display the path of the selected file"
+      ],
+      "keywords": [
+        "copy",
+        "path",
+        "file",
+        "long-press"
+      ],
+      "nav_hints": [
+        "copy path",
+        "copy",
+        "path"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Long-press the item",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G008",
+      "name": "View an image",
+      "description": "Tap an image file",
+      "actions": [
+        "Tap an image file",
+        "The image viewer opens",
+        "Select the image",
+        "The image viewer displays the image"
+      ],
+      "keywords": [
+        "image",
+        "built-in",
+        "viewer",
+        "file"
+      ],
+      "nav_hints": [
+        "image",
+        "built-in",
+        "viewer"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Tap an image file",
+        "the image viewer opens"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G009",
+      "name": "Bookmark a directory",
+      "description": "Navigate to the folder",
+      "actions": [
+        "Navigate to the folder",
+        "Tap the overflow menu",
+        "Select 'Bookmark'",
+        "Confirm the bookmark action"
+      ],
+      "keywords": [
+        "bookmark",
+        "directory",
+        "navigate",
+        "folder"
+      ],
+      "nav_hints": [
+        "add bookmark",
+        "bookmark",
+        "directory"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Navigate to the folder",
+        "tap the overflow menu"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G010",
+      "name": "Connect",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Tap the navigation drawer icon in the top left corner of the Material Files app.",
+        "Select 'Add server' from the navigation drawer menu.",
+        "Enter the server details and tap 'Connect' to establish the connection."
+      ],
+      "keywords": [
+        "connect",
+        "ftp",
+        "ftps",
+        "server"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "ftp"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the navigation drawer",
+        "tap \"Add server\"/the \"+\" beside the network section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G011",
+      "name": "Connect",
+      "description": "Open the drawer",
+      "actions": [
+        "Open the drawer",
+        "Tap 'Add server'",
+        "Select 'WebDAV'",
+        "Enter server details",
+        "Tap 'Connect'"
+      ],
+      "keywords": [
+        "connect",
+        "webdav",
+        "server",
+        "drawer"
+      ],
+      "nav_hints": [
+        "add server",
+        "connect",
+        "webdav"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open the drawer",
+        "tap \"Add server\""
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G012",
+      "name": "Configure the FTP server",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Tap the FTP server section",
+        "Enter FTP server details",
+        "Tap the 'Save' button",
+        "Verify the FTP server configuration"
+      ],
+      "keywords": [
+        "configure",
+        "ftp",
+        "server",
+        "settings"
+      ],
+      "nav_hints": [
+        "configure",
+        "ftp",
+        "server"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap the FTP server section"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G013",
+      "name": "Change the theme",
+      "description": "Open Settings",
+      "actions": [
+        "Open Settings",
+        "Tap 'Appearance'",
+        "Select 'Theme'",
+        "Tap 'Dark Theme'",
+        "Tap 'Done'"
+      ],
+      "keywords": [
+        "change",
+        "theme",
+        "colours",
+        "settings"
+      ],
+      "nav_hints": [
+        "appearance",
+        "change",
+        "theme"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap \"Appearance\"/Theme"
+      ],
+      "granularity_flag": "auto_enriched"
+    },
+    {
+      "id": "G014",
+      "name": "Configure the standard directories",
+      "description": "Open Settings",
+      "actions": [
+        "Tap on the 'Settings' icon",
+        "Scroll down to find and select 'Standard directories'",
+        "Tap on 'Standard directories' to open the configuration screen",
+        "Enter the desired path for the standard directories",
+        "Tap on 'Save' to confirm the changes"
+      ],
+      "keywords": [
+        "configure",
+        "standard",
+        "directories",
+        "shown"
+      ],
+      "nav_hints": [
+        "standard directories",
+        "configure",
+        "standard"
+      ],
+      "source": "guide",
+      "original_actions": [
+        "Open Settings",
+        "tap \"Standard directories\""
+      ],
+      "granularity_flag": "auto_enriched"
+    }
+  ],
+  "enriched_features": [
+    "Browse local storage",
+    "Copy files",
+    "Delete items",
+    "Sort the file list",
+    "Show",
+    "Create an archive",
+    "Copy the path of",
+    "View an image",
+    "Bookmark a directory",
+    "Connect",
+    "Connect",
+    "Configure the FTP server",
+    "Change the theme",
+    "Configure the standard directories"
+  ],
+  "feature_source": "guide",
+  "guide_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/materialfiles/guide_features.json",
+  "live_features_path": "/home/iit-du/Documents/TestCube-2.0/feature/materialfiles/guide_features.json",
+  "guide_vs_readme": {
+    "guide_count": 14,
+    "readme_count": 3,
+    "both": [],
+    "guide_only": [
+      {
+        "id": "G001",
+        "name": "Browse local storage"
+      },
+      {
+        "id": "G002",
+        "name": "Copy files"
+      },
+      {
+        "id": "G003",
+        "name": "Delete items"
+      },
+      {
+        "id": "G004",
+        "name": "Sort the file list"
+      },
+      {
+        "id": "G005",
+        "name": "Show"
+      },
+      {
+        "id": "G006",
+        "name": "Create an archive"
+      },
+      {
+        "id": "G007",
+        "name": "Copy the path of"
+      },
+      {
+        "id": "G008",
+        "name": "View an image"
+      },
+      {
+        "id": "G009",
+        "name": "Bookmark a directory"
+      },
+      {
+        "id": "G010",
+        "name": "Connect"
+      },
+      {
+        "id": "G011",
+        "name": "Connect"
+      },
+      {
+        "id": "G012",
+        "name": "Configure the FTP server"
+      },
+      {
+        "id": "G013",
+        "name": "Change the theme"
+      },
+      {
+        "id": "G014",
+        "name": "Configure the standard directories"
+      }
+    ],
+    "readme_only": [
+      {
+        "id": "F001",
+        "name": "Complete first-run setup"
+      },
+      {
+        "id": "F002",
+        "name": "Search"
+      },
+      {
+        "id": "F003",
+        "name": "Change app settings"
+      }
+    ]
+  }
+}

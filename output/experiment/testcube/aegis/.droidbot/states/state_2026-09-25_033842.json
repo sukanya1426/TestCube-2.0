@@ -1,0 +1,1645 @@
+{
+  "tag": "2026-09-25_033842",
+  "state_str": "f66661ad45a365e1fc6400395193409f",
+  "state_str_content_free": "28ea9339b1806ecf8b0753578be451f6",
+  "foreground_activity": "com.beemdevelopment.aegis/.ui.IntroActivity",
+  "activity_stack": [
+    "com.beemdevelopment.aegis/.ui.IntroActivity",
+    "com.beemdevelopment.aegis/.ui.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "55cb51b185867f1350f031a47c54eb78",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "b859b9abba52d8ea4b6393a3bb20a1e8",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "7680d3f24a6d63f41a0b68ebfa224b27",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.beemdevelopment.aegis:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "8f8d57e32b4551c7051559b72fb3dff3",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.beemdevelopment.aegis:id/action_bar_root"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "320c7eb890595e9d4bb950713378b518",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        36,
+        37,
+        38
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1920",
+      "signature": "[class]android.view.ViewGroup[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "a703da250abbb98deb1c23e0dc75e491",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/pager",
+      "checked": false,
+      "text": null,
+      "class": "androidx.viewpager.widget.ViewPager",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1597",
+      "signature": "[class]androidx.viewpager.widget.ViewPager[resource_id]com.beemdevelopment.aegis:id/pager[text]None[desc]None[enabled,,]",
+      "view_str": "c1a51d8b0d3f209ff8b843cd9cc35a02",
+      "content_free_signature": "[class]androidx.viewpager.widget.ViewPager[resource_id]com.beemdevelopment.aegis:id/pager"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "androidx.recyclerview.widget.RecyclerView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1597",
+      "signature": "[class]androidx.recyclerview.widget.RecyclerView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3596372bf56a107fa6f4cc86f8ef84f0",
+      "content_free_signature": "[class]androidx.recyclerview.widget.RecyclerView[resource_id]None",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<scrollbar bound_box=0,63,1080,1660></scrollbar>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*1597",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3cccd6ee922b3ad04c5a80f03ec09f04",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "1080*1597",
+      "signature": "[class]android.widget.ScrollView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "6d7854e3832f2ae106fe5492a79e7070",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        11,
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          1537
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/main",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 10,
+      "size": "1080*1474",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/main[text]None[desc]None[enabled,,]",
+      "view_str": "19b30c1c602f8a1ebb2bb079340e9d7b",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/main"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          226
+        ],
+        [
+          996,
+          311
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Security",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 11,
+      "size": "912*85",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Security[desc]None[enabled,,]",
+      "view_str": "6959e350e2ab61a6af705e3e341e7890",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=84,226,996,311>Security</p>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13,
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          374
+        ],
+        [
+          996,
+          1453
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 10,
+      "temp_id": 12,
+      "size": "912*1079",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3bfa3baedf9aa309370f4e73ec61c18a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          374
+        ],
+        [
+          996,
+          726
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "912*352",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "57789aa8569fc95345f56e7ced7ae485",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<p bound_box=84,374,996,726>Aegis is a security-focused 2FA app. Tokens are stored in a vault, that can optionally be encrypted with a password of your choosing. If an attacker obtains your encrypted vault file, they will not be able to access the contents without knowing the password.\n\nWe've preselected the option that we think would fit best for your device.</p>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 6,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          789
+        ],
+        [
+          996,
+          1453
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/rg_authenticationMethod",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RadioGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 14,
+      "size": "912*664",
+      "signature": "[class]android.widget.RadioGroup[resource_id]com.beemdevelopment.aegis:id/rg_authenticationMethod[text]None[desc]None[enabled,,]",
+      "view_str": "a258887ce4dd2a0663c3f45148cfc835",
+      "content_free_signature": "[class]android.widget.RadioGroup[resource_id]com.beemdevelopment.aegis:id/rg_authenticationMethod"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          789
+        ],
+        [
+          270,
+          915
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/rb_none",
+      "checked": false,
+      "text": "None",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "186*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_none[text]None[desc]None[enabled,,]",
+      "view_str": "9e17bbb1006fbfd5fbd7979229f1b1bb",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_none",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<checkbox bound_box=84,789,270,915>None</checkbox>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          902
+        ],
+        [
+          996,
+          1039
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "No password is needed to unlock the vault and it will not be encrypted. This option is not recommended.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 16,
+      "size": "828*137",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d1edef213a9c2677de4cb0e78d0cc1fe",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<p bound_box=168,902,996,1039>No password is needed to unlock the vault and it will not be encrypted. This option is not recommended.</p>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          1039
+        ],
+        [
+          996,
+          1165
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/rb_password",
+      "checked": true,
+      "text": "Password",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 17,
+      "size": "912*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_password[text]Password[desc]None[enabled,checked,]",
+      "view_str": "ce8112435eb6d5cc1ac93449f40f91b0",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_password",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "5",
+      "desc": "<checkbox bound_box=84,1039,996,1165>Password</checkbox>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          1152
+        ],
+        [
+          996,
+          1203
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "A password is needed to unlock the vault.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 18,
+      "size": "828*51",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]A password is needed to unlock the vault.[desc]None[enabled,,]",
+      "view_str": "8700e6033910138e6a8625d3d5a2751c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<p bound_box=168,1152,996,1203>A password is needed to unlock the vault.</p>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": false,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          1203
+        ],
+        [
+          996,
+          1329
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/rb_biometrics",
+      "checked": false,
+      "text": "Biometrics",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 19,
+      "size": "912*126",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_biometrics[text]Biometrics[desc]None[,,]",
+      "view_str": "610686f8de8d52be5efc063b717ea811",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.beemdevelopment.aegis:id/rb_biometrics",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<checkbox bound_box=84,1203,996,1329>Biometrics</checkbox>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": false,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          168,
+          1316
+        ],
+        [
+          996,
+          1453
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_rb_biometrics",
+      "checked": false,
+      "text": "In addition to a password, biometrics registered on this device, like a fingerprint or your face, can be used to unlock the vault.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 20,
+      "size": "828*137",
+      "signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/text_rb_biometrics[text]None[desc]None[,,]",
+      "view_str": "b43fc29d4e79f49e437f28c3202f7f75",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/text_rb_biometrics",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<p bound_box=168,1316,996,1453>In addition to a password, biometrics registered on this device, like a fingerprint or your face, can be used to unlock the vault.</p>"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 21,
+      "size": "0*1597",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "3cccd6ee922b3ad04c5a80f03ec09f04",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        23
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          63
+        ],
+        [
+          1080,
+          1660
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 21,
+      "temp_id": 22,
+      "size": "0*1597",
+      "signature": "[class]android.widget.ScrollView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "6d7854e3832f2ae106fe5492a79e7070",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24,
+        25,
+        26
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          63
+        ],
+        [
+          1080,
+          1264
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/main",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "0*1201",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/main[text]None[desc]None[enabled,,]",
+      "view_str": "dfc420cac0f2a21d216b5c93a0061a67",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/main"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          226
+        ],
+        [
+          1080,
+          311
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/textView2",
+      "checked": false,
+      "text": "Security",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "-84*85",
+      "signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/textView2[text]Security[desc]None[enabled,,]",
+      "view_str": "9b4fc7ae1c2098bf23e08051eea70c62",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/textView2"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          374
+        ],
+        [
+          1080,
+          511
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Warning: If you forget your password, you will permanently lose access to your tokens. There is no way to recover them without the password.",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 25,
+      "size": "-84*137",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "719dc762ca17f4be0a22646765d5159f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        27,
+        30,
+        33,
+        34,
+        35
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          574
+        ],
+        [
+          1080,
+          1180
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 26,
+      "size": "-84*606",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "8e4e1d3e825fa18ada857aced0d47a91",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        28
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          574
+        ],
+        [
+          1080,
+          735
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_password_wrapper",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 27,
+      "size": "-84*161",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/text_password_wrapper[text]None[desc]None[enabled,,]",
+      "view_str": "144fad524a1abe689ff16084366d3896",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/text_password_wrapper"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          588
+        ],
+        [
+          1080,
+          735
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 27,
+      "temp_id": 28,
+      "size": "-84*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "822439711e4b60139c4f4b0a0b6a6aab",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          588
+        ],
+        [
+          1080,
+          735
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_password",
+      "checked": false,
+      "text": "Please enter a password",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "-84*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.beemdevelopment.aegis:id/text_password[text]Please enter a password[desc]None[enabled,,]",
+      "view_str": "06ad702751d733bb1db8d54e9bdf524b",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.beemdevelopment.aegis:id/text_password"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        31
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          761
+        ],
+        [
+          1080,
+          922
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_password_confirm_wrapper",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 30,
+      "size": "-84*161",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/text_password_confirm_wrapper[text]None[desc]None[enabled,,]",
+      "view_str": "68c4b1d278c21b8da6cf17a2f4e6cd01",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.beemdevelopment.aegis:id/text_password_confirm_wrapper"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          775
+        ],
+        [
+          1080,
+          922
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 30,
+      "temp_id": 31,
+      "size": "-84*147",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "2525df627309746cb4ef73e374343cc2",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          775
+        ],
+        [
+          1080,
+          922
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_password_confirm",
+      "checked": false,
+      "text": "Please confirm the password",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 31,
+      "temp_id": 32,
+      "size": "-84*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.beemdevelopment.aegis:id/text_password_confirm[text]Please confirm the password[desc]None[enabled,,]",
+      "view_str": "68c4f462a2739d86d4b5db06712796ec",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.beemdevelopment.aegis:id/text_password_confirm"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          948
+        ],
+        [
+          1080,
+          990
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/progressBar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ProgressBar",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 33,
+      "size": "-84*42",
+      "signature": "[class]android.widget.ProgressBar[resource_id]com.beemdevelopment.aegis:id/progressBar[text]None[desc]None[enabled,,]",
+      "view_str": "f3d196dfcb5978bcf1b95620f579ef02",
+      "content_free_signature": "[class]android.widget.ProgressBar[resource_id]com.beemdevelopment.aegis:id/progressBar"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          2076,
+          990
+        ],
+        [
+          1080,
+          1041
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/text_password_strength",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 34,
+      "size": "-996*51",
+      "signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/text_password_strength[text]None[desc]None[enabled,,]",
+      "view_str": "dda479e7a933b46cfcd935d61814a672",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.beemdevelopment.aegis:id/text_password_strength"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": false,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1164,
+          1054
+        ],
+        [
+          1080,
+          1180
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/check_toggle_visibility",
+      "checked": false,
+      "text": "Show password",
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 35,
+      "size": "-84*126",
+      "signature": "[class]android.widget.CheckBox[resource_id]com.beemdevelopment.aegis:id/check_toggle_visibility[text]Show password[desc]None[enabled,,]",
+      "view_str": "963f138b7bfb4d9311517bf03822fbfa",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]com.beemdevelopment.aegis:id/check_toggle_visibility"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          53,
+          1660
+        ],
+        [
+          224,
+          1831
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/btnPrevious",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 36,
+      "size": "171*171",
+      "signature": "[class]android.widget.Button[resource_id]com.beemdevelopment.aegis:id/btnPrevious[text]None[desc]None[enabled,,]",
+      "view_str": "da55a6a6dc10f4a5f5863aaa82c71a70",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.beemdevelopment.aegis:id/btnPrevious"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          224,
+          1660
+        ],
+        [
+          856,
+          1831
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/slideIndicator",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 37,
+      "size": "632*171",
+      "signature": "[class]android.view.View[resource_id]com.beemdevelopment.aegis:id/slideIndicator[text]None[desc]None[enabled,,]",
+      "view_str": "2d015328b167f450dea493e57a8d1fdd",
+      "content_free_signature": "[class]android.view.View[resource_id]com.beemdevelopment.aegis:id/slideIndicator"
+    },
+    {
+      "package": "com.beemdevelopment.aegis",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          856,
+          1660
+        ],
+        [
+          1027,
+          1831
+        ]
+      ],
+      "resource_id": "com.beemdevelopment.aegis:id/btnNext",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 38,
+      "size": "171*171",
+      "signature": "[class]android.widget.Button[resource_id]com.beemdevelopment.aegis:id/btnNext[text]None[desc]None[enabled,,]",
+      "view_str": "5137e7fa52c6a1266c62228ccf950a6e",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.beemdevelopment.aegis:id/btnNext"
+    }
+  ]
+}

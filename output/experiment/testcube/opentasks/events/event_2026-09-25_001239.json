@@ -1,0 +1,57 @@
+{
+  "tag": "2026-09-25_001239",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.dmfs.tasks",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          231
+        ],
+        [
+          912,
+          294
+        ]
+      ],
+      "resource_id": "org.dmfs.tasks:id/task_list_name",
+      "checked": false,
+      "text": "My tasks",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "870*63",
+      "signature": "[class]android.widget.TextView[resource_id]org.dmfs.tasks:id/task_list_name[text]My tasks[desc]None[enabled,,]",
+      "view_str": "dd79489014f43689e4bdce27209d8f34",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.dmfs.tasks:id/task_list_name",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=42,231,912,294>My tasks</button>"
+    },
+    "skip_oracle": true
+  },
+  "start_state": "30804cfa5efd19d6102a588d28768a70",
+  "stop_state": "3cc15677daefabfd5ecb882927783377",
+  "event_str": "CustomTouchEvent(state=30804cfa5efd19d6102a588d28768a70, view=dd79489014f43689e4bdce27209d8f34(EditTaskActivity/TextView-My tasks))"
+}

@@ -1,0 +1,59 @@
+{
+  "tag": "2026-09-25_024944",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.gateshipone.odyssey",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          168,
+          98
+        ],
+        [
+          966,
+          193
+        ]
+      ],
+      "resource_id": "org.gateshipone.odyssey:id/search_src_text",
+      "checked": false,
+      "text": "   ",
+      "class": "android.widget.AutoCompleteTextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "798*95",
+      "signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.gateshipone.odyssey:id/search_src_text[text]   [desc]None[enabled,,]",
+      "view_str": "15090521c2ce4d07e8d57d7704c5466f",
+      "content_free_signature": "[class]android.widget.AutoCompleteTextView[resource_id]org.gateshipone.odyssey:id/search_src_text",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input bound_box=168,98,966,193>   </input>"
+    },
+    "text": "test",
+    "skip_oracle": true
+  },
+  "start_state": "b2ca7d7a3d8a86c0bb32309a17b1e148",
+  "stop_state": "99a79d5d13cdd7b2116371fe52099d5f",
+  "event_str": "CustomSetTextEvent(state=b2ca7d7a3d8a86c0bb32309a17b1e148, view=15090521c2ce4d07e8d57d7704c5466f(OdysseyMainActivity/AutoCompleteTextView-   ), text=test)"
+}

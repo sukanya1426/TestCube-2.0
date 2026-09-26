@@ -1,0 +1,256 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Voice Recorder
+
+Total Actions    : 161
+
+Total Features   : 23
+Covered Features : 1
+Partial          : 2
+Uncovered        : 20
+
+Feature Coverage : 4.35%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 7.09%  (mean completion ratio; partial steps count)
+Exercised        : 3  (covered 1 + partial 2)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Record audio
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for recording audio.
+
+[GT002] Pause and resume a recording
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for pausing and resuming a recording.
+
+[GT003] Watch the live audio level while recording
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for watching live audio level.
+
+[GT004] Continue recording in the background
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to background recording.
+
+[GT005] Browse saved recordings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to browsing saved recordings.
+
+[GT006] Play a recording
+Status     : COVERED
+Test Cases : test_001
+Confidence : 0.80
+Matcher    : vlm
+Completion : 100% of gold steps
+Evidence   :
+  - Actions cover opening recordings and playing them.
+  - touch MainActivity/TextView-Recorder
+  - touch MainActivity/Button-OK
+  - touch MainActivity/Button-Cancel
+  - touch MainActivity/TextView-Player
+
+[GT007] Rename a recording
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 30% of gold steps
+Evidence   :
+  - Long-pressed recording but did not complete rename steps.
+  - long_touch MainActivity/TextView-Recordings
+
+[GT008] Delete a recording
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No delete or confirm actions.
+  - long_touch MainActivity/Button-OK
+
+[GT009] Restore or empty the recycle bin
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No restore or empty actions.
+  - long_touch MainActivity/TextView-Internal
+
+[GT010] Share a recording
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.60
+Matcher    : vlm
+Completion : 33% of gold steps
+Evidence   :
+  - Long-pressed recording, but share icon not tapped.
+  - long_touch MainActivity/FloatingActionButton-
+
+[GT011] View recording properties
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Long-pressed recording, but overflow menu not accessed.
+  - long_touch MainActivity/FloatingActionButton-
+
+[GT012] Search recordings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Search icon not tapped; no file name typed.
+  - touch MainActivity/TextView-Recordings
+
+[GT013] Sort the recordings list
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to sorting the recordings list.
+
+[GT014] Choose the recording audio format
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to choosing the recording audio format.
+
+[GT015] Set the recording bitrate and quality
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No steps related to setting the recording bitrate and quality.
+
+[GT016] Choose the folder where recordings are saved
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - intent start activity
+
+[GT017] Hide the recording notification
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - intent start activity
+
+[GT018] Keep the screen on while recording
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - steps do not match gold
+  - intent start activity
+
+[GT019] Add the quick-record home screen widget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to home screen widget addition.
+  - none
+
+[GT020] Protect the app with a PIN, pattern or fingerprint
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to app lock configuration.
+  - none
+
+[GT021] Customise the app colours and theme
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to customising app colours and theme.
+  - none
+
+[GT022] Change the app language and font size
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to settings or language/font size
+
+[GT023] View the about screen, FAQ and licences
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no actions related to settings or about/FAQ/licences
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 23 features covered
+2 / 23 features partial
+Feature Coverage = COVERED / Total = 4.35%
+Weighted Feature Coverage = mean(completion_ratio) = 7.09%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 17 / 23 (completeness ratio 0.739)
+
+Feature-inference P/R/F1: 0.82 / 0.61 / 0.70 (false not_present=0)
+
+GT GT001 'Record audio' | journal=G001 'Record audio' (sim=1.0, name) status=partial | offline=not_covered
+GT GT002 'Pause and resume a recording' | journal=G002 'Pause' (sim=0.364, name) status=partial | offline=not_covered
+GT GT003 'Watch the live audio level while recording' | journal=G003 'Watch the live audio' (sim=0.571, name) status=partial | offline=not_covered
+GT GT004 'Continue recording in the background' | journal=G004 'Continue recording' (sim=0.5, name) status=covered | offline=not_covered
+GT GT005 'Browse saved recordings' | journal=G005 'Browse saved recordings' (sim=1.0, name) status=partial | offline=not_covered
+GT GT006 'Play a recording' | journal=G006 'Play a recording' (sim=1.0, name) status=covered | offline=covered
+GT GT007 'Rename a recording' | journal=G007 'Rename a recording' (sim=1.0, name) status=partial | offline=partial
+GT GT008 'Delete a recording' | journal=G008 'Delete a recording' (sim=1.0, name) status=partial | offline=not_covered
+GT GT009 'Restore or empty the recycle bin' | journal=G009 'Restore' (sim=0.5, name) status=partial | offline=not_covered
+GT GT010 'Share a recording' | journal=G010 'Share a recording' (sim=1.0, name) status=partial | offline=partial
+GT GT011 'View recording properties' | journal=G011 'View recording properties' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Search recordings' | journal=G012 'Search recordings' (sim=1.0, name) status=partial | offline=not_covered
+GT GT013 'Sort the recordings list' | journal=G013 'Sort the recordings list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT014 'Choose the recording audio format' | journal=G014 'Choose the recording audio' (sim=0.8, name) status=partial | offline=not_covered
+GT GT015 'Set the recording bitrate and quality' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Choose the folder where recordings are saved' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Hide the recording notification' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Keep the screen on while recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Add the quick-record home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Protect the app with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=not_covered

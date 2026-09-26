@@ -1,0 +1,2339 @@
+{
+  "tag": "2026-09-25_052214",
+  "state_str": "c1470f0a2abc6837303cb9cfd4a64b6d",
+  "state_str_content_free": "367640dce7c2d01dd13dde0948c4b0ab",
+  "foreground_activity": "org.fossify.clock/.activities.SettingsActivity",
+  "activity_stack": [
+    "org.fossify.clock/.activities.SettingsActivity",
+    "org.fossify.clock/.activities.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.android.chrome/org.chromium.content.app.SandboxedProcessService0",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.textclassifier.service.QAiaiTextClassifierService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiSuperpacksService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.android.systemui/.wallpapers.ImageWallpaper",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.as/androidx.room.MultiInstanceInvalidationService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.apps.photos/com.google.android.libraries.social.mediamonitor.BackgroundThreadNotifierIntentService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "com.android.phone/com.android.internal.telephony.data.CellularDataService",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationListenerService",
+    "com.android.systemui/.SystemUIService",
+    "com.android.chrome/org.chromium.content.app.PrivilegedProcessService0",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService",
+    "com.google.android.bluetooth/com.android.bluetooth.btservice.AdapterService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.systemui/com.google.android.systemui.power.batteryevent.domain.BatteryEventService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.captions.downloadservice.CaptionsDownloadService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService",
+    "com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSearchUiService"
+  ],
+  "width": 1080,
+  "height": 1920,
+  "views": [
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "e63c4f416b03cf96bc56ad4c52d05cce",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "ee70afb2d43e9963d5de5925eb9328de",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "d09a77bf9e9238235beeb71ec4e8c49e",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.clock:id/action_bar_root[text]None[desc]None[enabled,,]",
+      "view_str": "1745f6672c9161a10eeebaa2b6182146",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]org.fossify.clock:id/action_bar_root"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[desc]None[enabled,,]",
+      "view_str": "dc44088a35bb1a22a63c36cd59e21b51",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6,
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_coordinator",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*1920",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.fossify.clock:id/settings_coordinator[text]None[desc]None[enabled,,]",
+      "view_str": "acca2aac77d4518dc4b5ba23601df987",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.fossify.clock:id/settings_coordinator"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          231
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_appbar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*231",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.clock:id/settings_appbar[text]None[desc]None[enabled,,]",
+      "view_str": "ca24da407cb3b36e8c4ae6839677876c",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.clock:id/settings_appbar"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        9,
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          231
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_toolbar",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*168",
+      "signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_toolbar[text]None[desc]None[enabled,,]",
+      "view_str": "62d9364c5cc27d6e75a906099d063fac",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_toolbar"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Back",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          73
+        ],
+        [
+          147,
+          220
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "147*147",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[desc]Back[enabled,,]",
+      "view_str": "a79af8e887dc82e5a451619f29cce92b",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button text='Back' bound_box=0,73,147,220></button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          157,
+          110
+        ],
+        [
+          357,
+          184
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Settings",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 9,
+      "size": "200*74",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Settings[desc]None[enabled,,]",
+      "view_str": "6dc5a469d44505301f248b9b8a58ae51",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=157,110,357,184>Settings</p>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1080,
+          73
+        ],
+        [
+          1080,
+          220
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 10,
+      "size": "0*147",
+      "signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None[text]None[desc]None[enabled,,]",
+      "view_str": "f82a52a403ffc99772efe68e7ff9d604",
+      "content_free_signature": "[class]androidx.appcompat.widget.LinearLayoutCompat[resource_id]None"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          231
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_nested_scrollview",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ScrollView",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 11,
+      "size": "1080*1689",
+      "signature": "[class]android.widget.ScrollView[resource_id]org.fossify.clock:id/settings_nested_scrollview[text]None[desc]None[enabled,,]",
+      "view_str": "ad4ecd2b5d23a1f1952af8a2c07a9287",
+      "content_free_signature": "[class]android.widget.ScrollView[resource_id]org.fossify.clock:id/settings_nested_scrollview",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<scrollbar bound_box=0,231,1080,1920></scrollbar>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 23,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13,
+        14,
+        16,
+        18,
+        19,
+        20,
+        23,
+        25,
+        28,
+        31,
+        33,
+        34,
+        35,
+        38,
+        40,
+        42,
+        45,
+        46,
+        47,
+        50,
+        51,
+        52,
+        54
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          231
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "1080*1689",
+      "signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.clock:id/settings_holder[text]None[desc]None[enabled,,]",
+      "view_str": "3cffcc9da10a56b1747ec30088a3e95a",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]org.fossify.clock:id/settings_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          231
+        ],
+        [
+          1080,
+          366
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_color_customization_section_label",
+      "checked": false,
+      "text": "Look & feel",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "1038*135",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_color_customization_section_label[text]Look & feel[desc]None[enabled,,]",
+      "view_str": "d9e4619b537ac6ab61d00317a85f748d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_color_customization_section_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<p bound_box=42,231,1080,366>Look & feel</p>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          366
+        ],
+        [
+          1080,
+          523
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_color_customization_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 14,
+      "size": "1080*157",
+      "signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_color_customization_holder[text]None[desc]None[enabled,,]",
+      "view_str": "55b3afcd8c35b0658f9d234f4988ef0a",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_color_customization_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          419
+        ],
+        [
+          419,
+          470
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_color_customization_label",
+      "checked": false,
+      "text": "Customize appearance",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 15,
+      "size": "377*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_color_customization_label[text]Customize appearance[desc]None[enabled,,]",
+      "view_str": "bbe9c64f0d06c1a72b3f0253318a5ff4",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_color_customization_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=42,419,419,470>Customize appearance</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          523
+        ],
+        [
+          1080,
+          680
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_widget_color_customization_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 16,
+      "size": "1080*157",
+      "signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_widget_color_customization_holder[text]None[desc]None[enabled,,]",
+      "view_str": "0d24b536ab6f7b6ca2bfb7ca1a461950",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]org.fossify.clock:id/settings_widget_color_customization_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          576
+        ],
+        [
+          448,
+          627
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_widget_color_customization_label",
+      "checked": false,
+      "text": "Customize widget colors",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 16,
+      "temp_id": 17,
+      "size": "406*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_widget_color_customization_label[text]Customize widget colors[desc]None[enabled,,]",
+      "view_str": "a50da15197ac7fb2bdce35c8d86dace8",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_widget_color_customization_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=42,576,448,627>Customize widget colors</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          680
+        ],
+        [
+          1080,
+          682
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_color_customization_divider",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 18,
+      "size": "1080*2",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_color_customization_divider[text]None[desc]None[enabled,,]",
+      "view_str": "bc14b755fbfb66ed5a2f5925ce891211",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_color_customization_divider"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          682
+        ],
+        [
+          1080,
+          817
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_general_settings_label",
+      "checked": false,
+      "text": "General",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 19,
+      "size": "1038*135",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_general_settings_label[text]General[desc]None[enabled,,]",
+      "view_str": "22b62aa242cf870512b5364f7d7669c1",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_general_settings_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<p bound_box=42,682,1080,817>General</p>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        21,
+        22
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          817
+        ],
+        [
+          1080,
+          1003
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_language_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 20,
+      "size": "1080*186",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_language_holder[text]None[desc]None[enabled,,]",
+      "view_str": "40a2b826ce0bf2ee5c3d77c29c7d6e7c",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_language_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          859
+        ],
+        [
+          204,
+          910
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_language_label",
+      "checked": false,
+      "text": "Language",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "162*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_language_label[text]Language[desc]None[enabled,,]",
+      "view_str": "4db5be1775211f16027f869a4a0f102a",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_language_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<button bound_box=42,859,204,910>Language</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          910
+        ],
+        [
+          159,
+          961
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_language",
+      "checked": false,
+      "text": "English",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 22,
+      "size": "117*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_language[text]English[desc]None[enabled,,]",
+      "view_str": "b75b6de6fcdc00386d9cdb0636b06ea3",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_language",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<button bound_box=42,910,159,961>English</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1003
+        ],
+        [
+          1080,
+          1171
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_hour_format_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 23,
+      "size": "1080*168",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_hour_format_holder[text]None[desc]None[enabled,,]",
+      "view_str": "ab606a96970084ff28ce634058faa5c4",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_hour_format_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1024
+        ],
+        [
+          1038,
+          1150
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_hour_format",
+      "checked": false,
+      "text": "Use 24-hour time format",
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "996*126",
+      "signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_hour_format[text]Use 24-hour time format[desc]None[enabled,,]",
+      "view_str": "4a05bd2e0c81b129b133061353aba88d",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_hour_format",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<checkbox bound_box=42,1024,1038,1150>Use 24-hour time format</checkbox>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        26,
+        27
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1171
+        ],
+        [
+          1080,
+          1357
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_default_tab_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 25,
+      "size": "1080*186",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_default_tab_holder[text]None[desc]None[enabled,,]",
+      "view_str": "51917e577460e7307631addf5eaf10ea",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_default_tab_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1213
+        ],
+        [
+          434,
+          1264
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_default_tab_label",
+      "checked": false,
+      "text": "Tab to open at app start",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 25,
+      "temp_id": 26,
+      "size": "392*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_default_tab_label[text]Tab to open at app start[desc]None[enabled,,]",
+      "view_str": "ac805aa6250eb8a2415f4a3292af7c0b",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_default_tab_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "10",
+      "desc": "<button bound_box=42,1213,434,1264>Tab to open at app start</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1264
+        ],
+        [
+          1038,
+          1315
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_default_tab",
+      "checked": false,
+      "text": "Last used one",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 25,
+      "temp_id": 27,
+      "size": "996*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_default_tab[text]Last used one[desc]None[enabled,,]",
+      "view_str": "b2dd793170b866fbd42860ec371877b5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_default_tab",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "11",
+      "desc": "<button bound_box=42,1264,1038,1315>Last used one</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        29,
+        30
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1357
+        ],
+        [
+          1080,
+          1543
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_start_week_on_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 28,
+      "size": "1080*186",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_start_week_on_holder[text]None[desc]None[enabled,,]",
+      "view_str": "6994360b4467f6a8c8feab0e78d01523",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_start_week_on_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1399
+        ],
+        [
+          268,
+          1450
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_start_week_on_label",
+      "checked": false,
+      "text": "Start week on",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 29,
+      "size": "226*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_start_week_on_label[text]Start week on[desc]None[enabled,,]",
+      "view_str": "f99ab0597d3c75879dc77f6d974a1b83",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_start_week_on_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<button bound_box=42,1399,268,1450>Start week on</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1450
+        ],
+        [
+          1038,
+          1501
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_start_week_on",
+      "checked": false,
+      "text": "Sunday",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 28,
+      "temp_id": 30,
+      "size": "996*51",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_start_week_on[text]Sunday[desc]None[enabled,,]",
+      "view_str": "b266e4579a1eb30c70936404fb7e95b5",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_start_week_on",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "13",
+      "desc": "<button bound_box=42,1450,1038,1501>Sunday</button>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1543
+        ],
+        [
+          1080,
+          1711
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_prevent_phone_from_sleeping_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 31,
+      "size": "1080*168",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_prevent_phone_from_sleeping_holder[text]None[desc]None[enabled,,]",
+      "view_str": "6d112b0440fc660da1c073828a18f6ca",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_prevent_phone_from_sleeping_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1564
+        ],
+        [
+          1038,
+          1690
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_prevent_phone_from_sleeping",
+      "checked": true,
+      "text": "Prevent phone from sleeping while the app is in foreground",
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 31,
+      "temp_id": 32,
+      "size": "996*126",
+      "signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_prevent_phone_from_sleeping[text]None[desc]None[enabled,checked,]",
+      "view_str": "40b66aef46313e9aefabdf8330d987bd",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_prevent_phone_from_sleeping",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "14",
+      "desc": "<checkbox bound_box=42,1564,1038,1690>Prevent phone from sleeping while the app is in foreground</checkbox>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1711
+        ],
+        [
+          1080,
+          1713
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_general_settings_divider",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 33,
+      "size": "1080*2",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_general_settings_divider[text]None[desc]None[enabled,,]",
+      "view_str": "bc4bc3051b375bfc2d91f80e2154b578",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_general_settings_divider"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1713
+        ],
+        [
+          1080,
+          1848
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_alarm_tab_label",
+      "checked": false,
+      "text": "Alarm tab",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 34,
+      "size": "1038*135",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_tab_label[text]Alarm tab[desc]None[enabled,,]",
+      "view_str": "f64c9ab28ad9ce26363e600fd1ea0d38",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_tab_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<p bound_box=42,1713,1080,1848>Alarm tab</p>"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        36,
+        37
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1848
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_alarm_max_reminder_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 35,
+      "size": "1080*72",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_alarm_max_reminder_holder[text]None[desc]None[enabled,,]",
+      "view_str": "232884373d1c563d43b0f3e40fb77cff",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_alarm_max_reminder_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1890
+        ],
+        [
+          413,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_alarm_max_reminder_label",
+      "checked": false,
+      "text": "Max reminder duration",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 35,
+      "temp_id": 36,
+      "size": "371*30",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_max_reminder_label[text]Max reminder duration[desc]None[enabled,,]",
+      "view_str": "1fe592f9d0c1c7d258e3973d4ba3dc9f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_max_reminder_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          1941
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_alarm_max_reminder",
+      "checked": false,
+      "text": "5 minutes",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 35,
+      "temp_id": 37,
+      "size": "996*-21",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_max_reminder[text]5 minutes[desc]None[enabled,,]",
+      "view_str": "612131e3da8ea0b9573de6277eca4f9d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_alarm_max_reminder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        39
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2034
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_increase_volume_gradually_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 38,
+      "size": "1080*-114",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_increase_volume_gradually_holder[text]None[desc]None[enabled,,]",
+      "view_str": "16068294b6ec16d0956a7647ac63bffe",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_increase_volume_gradually_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2055
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_increase_volume_gradually",
+      "checked": true,
+      "text": "Increase volume gradually",
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 38,
+      "temp_id": 39,
+      "size": "996*-135",
+      "signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_increase_volume_gradually[text]Increase volume gradually[desc]None[enabled,checked,]",
+      "view_str": "b58ac3a562f24b81eb0dd81c717319e5",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_increase_volume_gradually"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        41
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2202
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_use_same_snooze_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 40,
+      "size": "1080*-282",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_use_same_snooze_holder[text]None[desc]None[enabled,,]",
+      "view_str": "96e8fd2756a1112d0c1de9ede1ce17c1",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_use_same_snooze_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2223
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_use_same_snooze",
+      "checked": true,
+      "text": "Always use same snooze time",
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 40,
+      "temp_id": 41,
+      "size": "996*-303",
+      "signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_use_same_snooze[text]Always use same snooze time[desc]None[enabled,checked,]",
+      "view_str": "636327018998f4b42fbf8adbcb1f9e77",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]org.fossify.clock:id/settings_use_same_snooze"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        43,
+        44
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2370
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_snooze_time_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 42,
+      "size": "1080*-450",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_snooze_time_holder[text]None[desc]None[enabled,,]",
+      "view_str": "46471150612beb390308360cf6147a51",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_snooze_time_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2412
+        ],
+        [
+          246,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_snooze_time_label",
+      "checked": false,
+      "text": "Snooze time",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 43,
+      "size": "204*-492",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_snooze_time_label[text]Snooze time[desc]None[enabled,,]",
+      "view_str": "c5a5d3eab8d076156b6887059d75d4f7",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_snooze_time_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2463
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_snooze_time",
+      "checked": false,
+      "text": "10 minutes",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 42,
+      "temp_id": 44,
+      "size": "996*-543",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_snooze_time[text]10 minutes[desc]None[enabled,,]",
+      "view_str": "90e9a808071714ec152b42beeffa5ea2",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_snooze_time"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2556
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_alarm_tab_divider",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 45,
+      "size": "1080*-636",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_alarm_tab_divider[text]None[desc]None[enabled,,]",
+      "view_str": "a59fe53bded55de6dddcf7df35b9c86b",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_alarm_tab_divider"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2558
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_timer_tab_label",
+      "checked": false,
+      "text": "Timer tab",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 46,
+      "size": "1038*-638",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_tab_label[text]Timer tab[desc]None[enabled,,]",
+      "view_str": "7562b3e0f1707609ab69b70ccd1e7d14",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_tab_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        48,
+        49
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2693
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_timer_max_reminder_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 47,
+      "size": "1080*-773",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_timer_max_reminder_holder[text]None[desc]None[enabled,,]",
+      "view_str": "02df0a86b6b4681131a1bc17c1a9d346",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_timer_max_reminder_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2735
+        ],
+        [
+          413,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_timer_max_reminder_label",
+      "checked": false,
+      "text": "Max reminder duration",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 47,
+      "temp_id": 48,
+      "size": "371*-815",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_max_reminder_label[text]Max reminder duration[desc]None[enabled,,]",
+      "view_str": "e1cdff7613f4f31bf220723e9a723b4d",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_max_reminder_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2786
+        ],
+        [
+          1038,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_timer_max_reminder",
+      "checked": false,
+      "text": "1 minute",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 47,
+      "temp_id": 49,
+      "size": "996*-866",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_max_reminder[text]1 minute[desc]None[enabled,,]",
+      "view_str": "9405a776b5460ec854eae6d761c10971",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_timer_max_reminder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2879
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_migrating_divider",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 50,
+      "size": "1080*-959",
+      "signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_migrating_divider[text]None[desc]None[enabled,,]",
+      "view_str": "575d59fcfaf4e24fe41f0b74b124c0cc",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]org.fossify.clock:id/settings_migrating_divider"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          2881
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_migrating_label",
+      "checked": false,
+      "text": "Migrating",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 51,
+      "size": "1038*-961",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_migrating_label[text]Migrating[desc]None[enabled,,]",
+      "view_str": "53739093a389a3b65883502b03287112",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_migrating_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        53
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          3016
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_export_data_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 52,
+      "size": "1080*-1096",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_export_data_holder[text]None[desc]None[enabled,,]",
+      "view_str": "dce73ecaccbf19a5fbd82b986a387357",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_export_data_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          3069
+        ],
+        [
+          455,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_export_data_label",
+      "checked": false,
+      "text": "Export alarms and timers",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 52,
+      "temp_id": 53,
+      "size": "413*-1149",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_export_data_label[text]Export alarms and timers[desc]None[enabled,,]",
+      "view_str": "ac0cd30b9f1a0ac837f9a3c87b7af627",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_export_data_label"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        55
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          3173
+        ],
+        [
+          1080,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_import_data_holder",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 54,
+      "size": "1080*-1253",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_import_data_holder[text]None[desc]None[enabled,,]",
+      "view_str": "8de33964d0ac3be0f9fc30075aa8e7b3",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]org.fossify.clock:id/settings_import_data_holder"
+    },
+    {
+      "package": "org.fossify.clock",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          3226
+        ],
+        [
+          458,
+          1920
+        ]
+      ],
+      "resource_id": "org.fossify.clock:id/settings_import_data_label",
+      "checked": false,
+      "text": "Import alarms and timers",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 54,
+      "temp_id": 55,
+      "size": "416*-1306",
+      "signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_import_data_label[text]Import alarms and timers[desc]None[enabled,,]",
+      "view_str": "27da12045b46c31d9278aac494548425",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]org.fossify.clock:id/settings_import_data_label"
+    }
+  ]
+}

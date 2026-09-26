@@ -1,0 +1,742 @@
+Activity Resolver Table:
+  Full MIME Types:
+      vnd.android.cursor.dir/raw_contact:
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+      vnd.android.cursor.item/person:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      vnd.android.cursor.dir/group:
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 1f576d1
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/group"
+      vnd.android.cursor.dir/phone:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      vnd.android.cursor.dir/email_v2:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      vnd.android.cursor.dir/person:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      vnd.android.cursor.item/contact:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      text/x-vcard:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+      text/directory:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+      text/vcard:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+      vnd.android.cursor.item/group:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 16a61f8
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/group"
+      vnd.android.cursor.dir/contact:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      vnd.android.cursor.item/raw_contact:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      vnd.android.cursor.dir/phone_v2:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+
+  Base MIME Types:
+      vnd.android.cursor.dir:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 1f576d1
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/group"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      vnd.android.cursor.item:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 16a61f8
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/group"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      text:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+
+  Schemes:
+      mailto:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter dfa5a4
+          Action: "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          Scheme: "mailto"
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        26cbd5a org.fossify.contacts/.activities.SplashActivity.Grey_black filter 79a3b8b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        351e468 org.fossify.contacts/.activities.SplashActivity.Blue_grey filter de62081
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        da95526 org.fossify.contacts/.activities.SplashActivity.Brown filter a6f0567
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        994df14 org.fossify.contacts/.activities.SplashActivity.Deep_orange filter dd343bd
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        2c59db2 org.fossify.contacts/.activities.SplashActivity.Orange filter ddc9103
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        66ad880 org.fossify.contacts/.activities.SplashActivity.Amber filter c755eb9
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        cebe2fe org.fossify.contacts/.activities.SplashActivity.Yellow filter e0d3a5f
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        7e4fcac org.fossify.contacts/.activities.SplashActivity.Lime filter a842d75
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        d9f310a org.fossify.contacts/.activities.SplashActivity.Light_green filter 5751d7b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        9fb3798 org.fossify.contacts/.activities.SplashActivity.Green filter 2772bf1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        98753d6 org.fossify.contacts/.activities.SplashActivity.Teal filter 7ae1657
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        e383544 org.fossify.contacts/.activities.SplashActivity.Cyan filter 4c1962d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        5fcd762 org.fossify.contacts/.activities.SplashActivity.Light_blue filter e13c0f3
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        22561b0 org.fossify.contacts/.activities.SplashActivity.Blue filter bce6829
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        35507ae org.fossify.contacts/.activities.SplashActivity.Indigo filter 21f794f
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        76e8dc org.fossify.contacts/.activities.SplashActivity.Deep_purple filter 3bc5de5
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        fedf0ba org.fossify.contacts/.activities.SplashActivity.Purple filter 1845b6b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        8f7b6c8 org.fossify.contacts/.activities.SplashActivity.Pink filter 1d9f361
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        ffa5e86 org.fossify.contacts/.activities.SplashActivity.Red filter 80b4347
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.intent.action.APPLICATION_PREFERENCES:
+        b2ecce3 org.fossify.contacts/.activities.SettingsActivity filter fec96e0
+          Action: "android.intent.action.APPLICATION_PREFERENCES"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      com.android.contacts.action.QUICK_CONTACT:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+      android.intent.action.EDIT:
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f03fc6a
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          Authority: "contacts": -1
+          Authority: "com.android.contacts": -1
+          Authority: "com.android.contacts": -1
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 16a61f8
+          Action: "android.intent.action.EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/group"
+      android.intent.action.PICK:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter 489af0d
+          Action: "android.intent.action.PICK"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/phone_v2"
+          StaticType: "vnd.android.cursor.dir/phone"
+          StaticType: "vnd.android.cursor.dir/email_v2"
+      android.intent.action.SEND:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 60ddd12
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+      android.intent.action.VIEW:
+        b357774 org.fossify.contacts/.activities.MainActivity filter 7e1649d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/directory"
+          StaticType: "text/vcard"
+          StaticType: "text/x-vcard"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 868b85e
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.item/group"
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter 377543f
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      android.provider.action.QUICK_CONTACT:
+        ef4ad99 org.fossify.contacts/.activities.ViewContactActivity filter d34410c
+          Action: "com.android.contacts.action.QUICK_CONTACT"
+          Action: "android.provider.action.QUICK_CONTACT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/person"
+      android.intent.action.INSERT_OR_EDIT:
+        65d7536 org.fossify.contacts/.activities.InsertOrEditContactActivity filter d458c37
+          Action: "android.intent.action.INSERT_OR_EDIT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.item/person"
+          StaticType: "vnd.android.cursor.item/contact"
+          StaticType: "vnd.android.cursor.item/raw_contact"
+      android.intent.action.INSERT:
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter f96f55b
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/person"
+          StaticType: "vnd.android.cursor.dir/contact"
+          StaticType: "vnd.android.cursor.dir/raw_contact"
+        6598a55 org.fossify.contacts/.activities.EditContactActivity filter 1f576d1
+          Action: "android.intent.action.INSERT"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "vnd.android.cursor.dir/group"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.QUICKBOOT_POWERON:
+        303aec2 org.fossify.contacts/.receivers.BootCompletedReceiver filter 3dcb4d3
+          Action: "android.intent.action.QUICKBOOT_POWERON"
+          Action: "com.htc.intent.action.QUICKBOOT_POWERON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      com.htc.intent.action.QUICKBOOT_POWERON:
+        303aec2 org.fossify.contacts/.receivers.BootCompletedReceiver filter 3dcb4d3
+          Action: "android.intent.action.QUICKBOOT_POWERON"
+          Action: "com.htc.intent.action.QUICKBOOT_POWERON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        1e1f50e org.fossify.contacts/androidx.profileinstaller.ProfileInstallReceiver filter 392b2c5
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        1e1f50e org.fossify.contacts/androidx.profileinstaller.ProfileInstallReceiver filter cb3cb2f
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        1e1f50e org.fossify.contacts/androidx.profileinstaller.ProfileInstallReceiver filter 5d0053c
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        1e1f50e org.fossify.contacts/androidx.profileinstaller.ProfileInstallReceiver filter 14c541a
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        303aec2 org.fossify.contacts/.receivers.BootCompletedReceiver filter 3dcb4d3
+          Action: "android.intent.action.QUICKBOOT_POWERON"
+          Action: "com.htc.intent.action.QUICKBOOT_POWERON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      android.intent.action.MY_PACKAGE_REPLACED:
+        303aec2 org.fossify.contacts/.receivers.BootCompletedReceiver filter 3dcb4d3
+          Action: "android.intent.action.QUICKBOOT_POWERON"
+          Action: "com.htc.intent.action.QUICKBOOT_POWERON"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      org.fossify.android.GLOBAL_CONFIG_UPDATED:
+        2437810 org.fossify.contacts/org.fossify.commons.receivers.FossifyBroadcastReceiver filter 1af2f09
+          Action: "org.fossify.android.GLOBAL_CONFIG_UPDATED"
+
+Domain verification status:
+
+Permissions:
+  Permission [org.fossify.contacts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (72ed19c):
+    sourcePackage=org.fossify.contacts
+    uid=10227 gids=[] type=0 prot=signature
+    perm=PermissionInfo{d74f7a5 org.fossify.contacts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  org.fossify.contacts/.contentproviders.MyContactsContentProvider:
+    Provider{cdfe77a org.fossify.contacts/.contentproviders.MyContactsContentProvider}
+  org.fossify.contacts/androidx.core.content.FileProvider:
+    Provider{638eb2b org.fossify.contacts/androidx.core.content.FileProvider}
+  org.fossify.contacts/androidx.startup.InitializationProvider:
+    Provider{c256b88 org.fossify.contacts/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [org.fossify.commons.contactsprovider]:
+    Provider{cdfe77a org.fossify.contacts/.contentproviders.MyContactsContentProvider}
+      applicationInfo=ApplicationInfo{5e26921 org.fossify.contacts}
+  [org.fossify.contacts.androidx-startup]:
+    Provider{c256b88 org.fossify.contacts/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{df50146 org.fossify.contacts}
+  [org.fossify.contacts.provider]:
+    Provider{638eb2b org.fossify.contacts/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{9d90f07 org.fossify.contacts}
+
+Key Set Manager:
+  [org.fossify.contacts]
+      Signing KeySets: 77
+
+Packages:
+  Package [org.fossify.contacts] (a69b834):
+    appId=10227
+    pkg=Package{15b765d org.fossify.contacts}
+    codePath=/data/app/~~WwHwnDZdQZWVGdVhtsgFKQ==/org.fossify.contacts-xPoYvZNSxnlsVjkUkhehiA==
+    resourcePath=/data/app/~~WwHwnDZdQZWVGdVhtsgFKQ==/org.fossify.contacts-xPoYvZNSxnlsVjkUkhehiA==
+    legacyNativeLibraryDir=/data/app/~~WwHwnDZdQZWVGdVhtsgFKQ==/org.fossify.contacts-xPoYvZNSxnlsVjkUkhehiA==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=13 minSdk=26 targetSdk=36
+    minExtensionVersions=[]
+    versionName=1.6.0
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[org.fossify.contacts.debug, org.fossify.contacts, org.fossify.thankyou.debug, org.fossify.thankyou]
+    queriesIntents=[Intent { act=android.accounts.AccountAuthenticator }]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-09-25 01:51:22
+    lastUpdateTime=2026-09-25 01:51:22
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{aefebd2 version:3, signatures:[39dd705e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      org.fossify.contacts.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.CALL_PHONE
+      android.permission.WRITE_CONTACTS
+      org.fossify.android.permission.WRITE_GLOBAL_SETTINGS
+      android.permission.READ_SYNC_SETTINGS
+      android.permission.GET_ACCOUNTS
+      android.permission.WAKE_LOCK
+      android.permission.READ_CONTACTS
+    install permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=360574 deDataInode=90704 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/org.fossify.contacts
+      firstInstallTime=2026-09-25 01:51:22
+      uninstallReason=0
+      runtime permissions:
+        android.permission.CALL_PHONE: granted=true
+        android.permission.WRITE_CONTACTS: granted=true
+        android.permission.GET_ACCOUNTS: granted=true
+        android.permission.READ_CONTACTS: granted=true
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      org.fossify.contacts
+    com.google.android.apps.messaging:
+      org.fossify.contacts
+    com.google.android.settings.intelligence:
+      org.fossify.contacts
+    com.google.android.apps.maps:
+      org.fossify.contacts
+    com.google.android.apps.docs:
+      org.fossify.contacts
+    com.google.android.gm:
+      org.fossify.contacts
+    com.google.android.contacts:
+      org.fossify.contacts
+    com.google.android.calendar:
+      org.fossify.contacts
+    org.fossify.contacts:
+      [com.android.bluetooth,com.google.android.bluetooth]
+      com.google.android.gm
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [org.fossify.contacts]
+    path: /data/app/~~WwHwnDZdQZWVGdVhtsgFKQ==/org.fossify.contacts-xPoYvZNSxnlsVjkUkhehiA==/base.apk
+      x86_64: [status=run-from-apk] [reason=unknown] [primary-abi]
+        [location is error]
+
+Compiler stats:
+  [org.fossify.contacts]
+     base.apk - 1347

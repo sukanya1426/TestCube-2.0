@@ -1,0 +1,33 @@
+{
+  "feature_id": "G011",
+  "name": "Sort the habit list",
+  "steps": [
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "org.isoron.uhabits:id/actionCreateHabit",
+        "text": "",
+        "content_description": "Add habit",
+        "class": "android.widget.Button",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    },
+    {
+      "action_type": "touch",
+      "selector": {
+        "resource_id": "",
+        "text": "Yes or No",
+        "content_description": "",
+        "class": "android.widget.TextView",
+        "name": "",
+        "direction": ""
+      },
+      "value": ""
+    }
+  ],
+  "status": "partial",
+  "source_run": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/loophabits/feature_test",
+  "completion_source": "executed"
+}

@@ -1,0 +1,229 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        320f879 org.fossify.voicerecorder/.activities.SplashActivity.Grey_black filter 754d9be
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        6cca1f org.fossify.voicerecorder/.activities.SplashActivity.Blue_grey filter 6e1b16c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        7afa335 org.fossify.voicerecorder/.activities.SplashActivity.Brown filter 980d3ca
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        49de93b org.fossify.voicerecorder/.activities.SplashActivity.Deep_orange filter 2ee7858
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        4443db1 org.fossify.voicerecorder/.activities.SplashActivity.Orange filter 3c06296
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        cf7de17 org.fossify.voicerecorder/.activities.SplashActivity.Amber filter 7fec204
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        9ae03ed org.fossify.voicerecorder/.activities.SplashActivity.Yellow filter a981222
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        9244b3 org.fossify.voicerecorder/.activities.SplashActivity.Lime filter 4a7fa70
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        c73f1e9 org.fossify.voicerecorder/.activities.SplashActivity.Light_green filter 4492e6e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        662790f org.fossify.voicerecorder/.activities.SplashActivity.Green filter 96a4d9c
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        890c3a5 org.fossify.voicerecorder/.activities.SplashActivity.Teal filter 7ddc37a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        557972b org.fossify.voicerecorder/.activities.SplashActivity.Cyan filter c9ca788
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        4eef521 org.fossify.voicerecorder/.activities.SplashActivity.Light_blue filter f49d46
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        a367b07 org.fossify.voicerecorder/.activities.SplashActivity.Blue filter 118b434
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        2a4c25d org.fossify.voicerecorder/.activities.SplashActivity.Indigo filter 44d47d2
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        f35c0a3 org.fossify.voicerecorder/.activities.SplashActivity.Deep_purple filter ba6dfa0
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        3f02759 org.fossify.voicerecorder/.activities.SplashActivity.Purple filter 1140f1e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        159c3ff org.fossify.voicerecorder/.activities.SplashActivity.Pink filter 32a55cc
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        6f2e015 org.fossify.voicerecorder/.activities.SplashActivity.Red filter aedff2a
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.intent.action.APPLICATION_PREFERENCES:
+        2e6891 org.fossify.voicerecorder/.activities.SettingsActivity filter 8c4e3f6
+          Action: "android.intent.action.APPLICATION_PREFERENCES"
+          Category: "android.intent.category.DEFAULT"
+      android.provider.MediaStore.RECORD_SOUND:
+        f90a11b org.fossify.voicerecorder/.activities.MainActivity filter 78d02b8
+          Action: "android.provider.MediaStore.RECORD_SOUND"
+          Category: "android.intent.category.DEFAULT"
+      android.appwidget.action.APPWIDGET_CONFIGURE:
+        2cea4c3 org.fossify.voicerecorder/.activities.WidgetRecordDisplayConfigureActivity filter a01c140
+          Action: "android.appwidget.action.APPWIDGET_CONFIGURE"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        4681893 org.fossify.voicerecorder/androidx.profileinstaller.ProfileInstallReceiver filter 6707bce
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        4681893 org.fossify.voicerecorder/androidx.profileinstaller.ProfileInstallReceiver filter c8170d0
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        4681893 org.fossify.voicerecorder/androidx.profileinstaller.ProfileInstallReceiver filter 45c98c9
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        4681893 org.fossify.voicerecorder/androidx.profileinstaller.ProfileInstallReceiver filter 2f1aaef
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        f8e33f7 org.fossify.voicerecorder/.helpers.MyWidgetRecordDisplayProvider filter b6b9264
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      org.fossify.android.GLOBAL_CONFIG_UPDATED:
+        bffccd org.fossify.voicerecorder/org.fossify.commons.receivers.FossifyBroadcastReceiver filter 4534982
+          Action: "org.fossify.android.GLOBAL_CONFIG_UPDATED"
+
+Service Resolver Table:
+  Non-Data Actions:
+      org.fossify.voicerecorder.action.TOGGLE_PAUSE:
+        6d4c9fc org.fossify.voicerecorder/.services.RecorderService filter 30cf885
+          Action: "org.fossify.voicerecorder.action.TOGGLE_PAUSE"
+          Action: "org.fossify.voicerecorder.action.STOP_AMPLITUDE_UPDATE"
+          Action: "org.fossify.voicerecorder.action.GET_RECORDER_INFO"
+      org.fossify.voicerecorder.action.STOP_AMPLITUDE_UPDATE:
+        6d4c9fc org.fossify.voicerecorder/.services.RecorderService filter 30cf885
+          Action: "org.fossify.voicerecorder.action.TOGGLE_PAUSE"
+          Action: "org.fossify.voicerecorder.action.STOP_AMPLITUDE_UPDATE"
+          Action: "org.fossify.voicerecorder.action.GET_RECORDER_INFO"
+      org.fossify.voicerecorder.action.GET_RECORDER_INFO:
+        6d4c9fc org.fossify.voicerecorder/.services.RecorderService filter 30cf885
+          Action: "org.fossify.voicerecorder.action.TOGGLE_PAUSE"
+          Action: "org.fossify.voicerecorder.action.STOP_AMPLITUDE_UPDATE"
+          Action: "org.fossify.voicerecorder.action.GET_RECORDER_INFO"
+
+Domain verification status:
+
+Permissions:
+  Permission [org.fossify.voicerecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (5015f9b):
+    sourcePackage=org.fossify.voicerecorder
+    uid=10242 gids=[] type=0 prot=signature
+    perm=PermissionInfo{9991f38 org.fossify.voicerecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  org.fossify.voicerecorder/androidx.core.content.FileProvider:
+    Provider{b058b11 org.fossify.voicerecorder/androidx.core.content.FileProvider}
+  org.fossify.voicerecorder/androidx.startup.InitializationProvider:
+    Provider{1e19476 org.fossify.voicerecorder/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [org.fossify.voicerecorder.androidx-startup]:
+    Provider{1e19476 org.fossify.voicerecorder/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{18c5a77 org.fossify.voicerecorder}
+  [org.fossify.voicerecorder.provider]:
+    Provider{b058b11 org.fossify.voicerecorder/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{b5cf6e4 org.fossify.voicerecorder}
+
+Key Set Manager:
+  [org.fossify.voicerecorder]
+      Signing KeySets: 92
+
+Packages:
+  Package [org.fossify.voicerecorder] (ea21b9):
+    appId=10242
+    pkg=Package{226c74d org.fossify.voicerecorder}
+    codePath=/data/app/~~foUv_hi8mXOHy_HFwsxpNw==/org.fossify.voicerecorder-iuzIYNk-NDLMCLRL58wfzg==
+    resourcePath=/data/app/~~foUv_hi8mXOHy_HFwsxpNw==/org.fossify.voicerecorder-iuzIYNk-NDLMCLRL58wfzg==
+    legacyNativeLibraryDir=/data/app/~~foUv_hi8mXOHy_HFwsxpNw==/org.fossify.voicerecorder-iuzIYNk-NDLMCLRL58wfzg==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=18 minSdk=26 targetSdk=36
+    minExtensionVersions=[]
+    versionName=1.7.1
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_REQUEST_LEGACY_EXTERNAL_STORAGE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[org.fossify.thankyou.debug, org.fossify.thankyou]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-09-25 05:28:51
+    lastUpdateTime=2026-09-25 05:28:51
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{dca8202 version:3, signatures:[39dd705e], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_REQUEST_LEGACY_EXTERNAL_STORAGE PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      org.fossify.voicerecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.POST_NOTIFICATIONS
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_MICROPHONE
+      org.fossify.android.permission.WRITE_GLOBAL_SETTINGS
+      android.permission.RECORD_AUDIO
+      android.permission.WAKE_LOCK
+    install permissions:
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.FOREGROUND_SERVICE_MICROPHONE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=360471 deDataInode=90704 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/org.fossify.voicerecorder
+      firstInstallTime=2026-09-25 05:28:51
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-F6gz.frro
+        /data/resource-cache/com.android.systemui-accent-AmcD.frro
+        /data/resource-cache/com.android.systemui-dynamic-3oAu.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=true, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.RECORD_AUDIO: granted=true, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      org.fossify.voicerecorder
+    com.google.android.settings.intelligence:
+      org.fossify.voicerecorder
+    com.google.android.deskclock:
+      org.fossify.voicerecorder
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [org.fossify.voicerecorder]
+    path: /data/app/~~foUv_hi8mXOHy_HFwsxpNw==/org.fossify.voicerecorder-iuzIYNk-NDLMCLRL58wfzg==/base.apk
+      x86_64: [status=verify] [reason=install] [primary-abi]
+        [location is /data/app/~~foUv_hi8mXOHy_HFwsxpNw==/org.fossify.voicerecorder-iuzIYNk-NDLMCLRL58wfzg==/oat/x86_64/base.odex]
+
+Compiler stats:
+  [org.fossify.voicerecorder]
+     base.apk - 589
