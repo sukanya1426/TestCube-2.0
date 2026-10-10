@@ -156,11 +156,22 @@ def human(seconds):
     return "%dh%02dm%02ds" % (seconds // 3600, (seconds % 3600) // 60, seconds % 60)
 
 
-def run(command, cwd=None, log=None, env=None, timeout=None, label=""):
+# A tool that cannot read the screen makes no progress but still burns its whole
+# budget. aegis and keepassdx set FLAG_SECURE, so `screencap` fails and
+# LLMDroid's get_current_state() never succeeds: 678 failed captures and one
+# completed step in 30 minutes. Abort once the failures are this one-sided.
+STALL_MARKERS = ("Failed to get current state",)
+STALL_LIMIT = 60
+
+
+def run(command, cwd=None, log=None, env=None, timeout=None, label="",
+        stall_markers=None, stall_limit=STALL_LIMIT):
     """Run a command, stream it to the log, and return (rc, combined_output).
 
     Never raises on a non-zero exit: the caller decides whether that ends the
-    app or the experiment.
+    app or the experiment. With ``stall_markers``, the process is killed once a
+    marker has appeared ``stall_limit`` times, so a tool that is looping without
+    progress does not consume its entire budget.
     """
     if log:
         log.write(u"\n[%s] $ %s\n" % (stamp(), " ".join(command)))
@@ -201,12 +212,30 @@ def run(command, cwd=None, log=None, env=None, timeout=None, label=""):
     # then reading to EOF blocks forever on a command that already finished.
     lines = []
 
+    stalled = []
+
     def drain():
+        hits = 0
         try:
             for line in iter(proc.stdout.readline, ""):
                 lines.append(line)
                 if log:
                     log.write(line if line.endswith("\n") else line + "\n")
+                if stall_markers and not stalled:
+                    if any(marker in line for marker in stall_markers):
+                        hits += 1
+                        if hits >= stall_limit:
+                            stalled.append(hits)
+                            if log:
+                                log.write(
+                                    u"[%s] %s has failed to read the screen %d times "
+                                    u"and is not progressing; aborting it early rather "
+                                    u"than spending the rest of its budget.\n"
+                                    % (stamp(), label or command[0], hits))
+                            try:
+                                proc.kill()
+                            except Exception:
+                                pass
         except Exception:
             pass
 
@@ -240,6 +269,8 @@ def run(command, cwd=None, log=None, env=None, timeout=None, label=""):
                       u"(orphaned grandchild); continuing.\n" % (stamp(), label or command[0]))
     if killed and log:
         log.write(u"[%s] killed %s after %s\n" % (stamp(), label or command[0], human(timeout)))
+    if stalled:
+        return 125, "".join(lines)          # distinct from a timeout (124)
     return (124 if killed else proc.returncode), "".join(lines)
 
 
@@ -445,7 +476,10 @@ def run_llmdroid(app, cfg, log):
         "--code-coverage", "androlog",
     ]
     rc, out = run(command, log=log, label="llmdroid",
-                  timeout=cfg["budget_seconds"] + cfg["grace_seconds"] + 600)
+                  timeout=cfg["budget_seconds"] + cfg["grace_seconds"] + 600,
+                  stall_markers=STALL_MARKERS)
+    if rc == 125:
+        return rc, out_dir, ["stalled: could not read the screen (FLAG_SECURE window?)"]
     return rc, out_dir, (last_error_lines(out) if rc != 0 else [])
 
 
@@ -547,7 +581,8 @@ def do_app(app, cfg, log):
     if cfg.get("run_llmdroid", True) and ok:
         log.write(u"\n[%s] === LLMDroid: %s ===\n" % (stamp(), app["stem"]))
         rc2, ld_dir, why = run_llmdroid(app, cfg, log)
-        result["steps"]["llmdroid"] = "ok" if rc2 == 0 else "rc=%s" % rc2
+        result["steps"]["llmdroid"] = ("ok" if rc2 == 0 else
+                                       "stalled" if rc2 == 125 else "rc=%s" % rc2)
         result["llmdroid_output"] = os.path.relpath(ld_dir, REPO)
         if why:
             result["llmdroid_error"] = why

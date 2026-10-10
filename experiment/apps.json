@@ -6,7 +6,8 @@
     "actually been instrumented here. scripts/run_experiment.py updates this field as it goes.",
     "Place each binary at apks/<stem>.apk before running.",
     "'coverage_tag' is a starting guess only. run_experiment.py reads the real tag out of the instrumented APK and overrides this, because listening on the wrong tag yields a clean run reporting 0.00000% coverage with no error.",
-    "'pin_version_code' forces a specific F-Droid build. Set it whenever 'latest' would fetch a version that does not instrument, as with newpipe 0.29.1."
+    "'pin_version_code' forces a specific F-Droid build. Set it whenever 'latest' would fetch a version that does not instrument, as with newpipe 0.29.1.",
+    "'llmdroid_blocked' marks apps LLMDroid cannot explore for reasons unrelated to instrumentation, e.g. FLAG_SECURE windows that make screencap fail."
   ],
   "apps": [
     {
@@ -129,7 +130,8 @@
       "coverage_tag": "AMAZE_SUPER_LOG",
       "pool": "selected",
       "instrumentation_status": "verified_ok",
-      "reason": "Open source file manager, works on local storage with no account. 46 features; only the root-explorer and cloud items need extras."
+      "reason": "Open source file manager, works on local storage with no account. 46 features; only the root-explorer and cloud items need extras.",
+      "instrumentation_conflict": "fail_verify"
     },
     {
       "stem": "materialfiles",
@@ -261,7 +263,9 @@
       "coverage_tag": "AEGIS_SUPER_LOG",
       "pool": "selected",
       "instrumentation_status": "verified_ok",
-      "reason": "Open source, fully offline, no account. 40 features: vault setup, entry CRUD, groups, import/export, security and appearance settings."
+      "reason": "Open source, fully offline, no account. 40 features: vault setup, entry CRUD, groups, import/export, security and appearance settings.",
+      "llmdroid_blocked": "flag_secure",
+      "llmdroid_blocked_note": "Window is FLAG_SECURE, so `screencap` fails and LLMDroid's get_current_state() cannot build a state: 2034 screencap errors and 678 failed captures in 30 min, 1 completed step. TestCube is unaffected (reads the accessibility hierarchy). Measured 2026-10-10."
     },
     {
       "stem": "keepassdx",
@@ -272,7 +276,9 @@
       "coverage_tag": "KEEPASSDX_SUPER_LOG",
       "pool": "selected",
       "instrumentation_status": "verified_ok",
-      "reason": "Open source, fully offline, no account. 47 features: database create/open, entry and group CRUD, generator, settings."
+      "reason": "Open source, fully offline, no account. 47 features: database create/open, entry and group CRUD, generator, settings.",
+      "llmdroid_blocked": "flag_secure",
+      "llmdroid_blocked_note": "Window is FLAG_SECURE, so `screencap` fails and LLMDroid's get_current_state() cannot build a state: 2034 screencap errors and 678 failed captures in 30 min, 1 completed step. TestCube is unaffected (reads the accessibility hierarchy). Measured 2026-10-10."
     },
     {
       "stem": "opencamera",
