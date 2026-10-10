@@ -458,18 +458,33 @@ def run_compare(app, tc_dir, ld_dir, cfg, log):
     return rc, out_dir
 
 
-def run_feature_eval(app, tc_dir, cfg, log):
+def run_feature_eval(app, results_dir, cfg, log, tool="testcube"):
+    """Score feature coverage for one tool's run.
+
+    The evaluator is trace-based -- it reads events/, states/ and utg.js, which
+    both tools write -- so it scores LLMDroid exactly as it scores TestCube.
+    Only the TestCube journal and exploration bank are tool-specific, and those
+    are optional enrichment. Running it on one tool only is what made LLMDroid's
+    feature coverage look like 0%: it was never computed at all.
+
+    The same matcher must be used for both, or the two numbers are not
+    comparable.
+    """
     folder = os.path.join(REPO, "feature", app["stem"])
     truth = os.path.join(folder, "ground_truth.json")
     if not os.path.isfile(truth):
         return 0
+    if not os.path.isdir(os.path.join(results_dir, "events")):
+        log.write(u"[%s] %s has no events/; skipping feature eval\n" % (stamp(), tool))
+        return 0
     command = [sys.executable, "scripts/evaluate_features.py",
-               "--results", tc_dir, "--features", truth,
+               "--results", results_dir, "--features", truth,
                "--matcher", cfg.get("feature_matcher", "ai")]
     readme = os.path.join(folder, "README.md")
     if os.path.isfile(readme):
         command += ["--readme", readme]
-    rc, _ = run(command, log=log, label="evaluate", timeout=1800)
+    log.write(u"\n[%s] === feature coverage: %s (%s) ===\n" % (stamp(), app["stem"], tool))
+    rc, _ = run(command, log=log, label="evaluate:%s" % tool, timeout=1800)
     return rc
 
 
@@ -552,9 +567,14 @@ def do_app(app, cfg, log):
             except Exception:
                 pass
 
-    if cfg.get("run_feature_eval", True) and have_tc:
-        rc4 = run_feature_eval(app, tc_dir, cfg, log)
-        result["steps"]["feature_eval"] = "ok" if rc4 == 0 else "rc=%s" % rc4
+    if cfg.get("run_feature_eval", True):
+        if have_tc:
+            rc4 = run_feature_eval(app, tc_dir, cfg, log, tool="testcube")
+            result["steps"]["feature_eval"] = "ok" if rc4 == 0 else "rc=%s" % rc4
+        # Same evaluator, same ground truth, same matcher on LLMDroid's trace.
+        if ld_dir and os.path.isdir(os.path.join(ld_dir, "events")):
+            rc5 = run_feature_eval(app, ld_dir, cfg, log, tool="llmdroid")
+            result["steps"]["feature_eval_llmdroid"] = "ok" if rc5 == 0 else "rc=%s" % rc5
 
     # Zero coverage after real exploration is the vinyl failure mode: dex that
     # installs, launches and verifies while never executing a probe. Recording it

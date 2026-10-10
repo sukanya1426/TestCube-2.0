@@ -1,13 +1,13 @@
 [
   {
     "name": "newpipe",
-    "path": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/newpipe",
+    "path": "output/experiment/testcube/newpipe",
     "tag": "PIPE_SUPER_LOG",
     "total": 74478,
     "final": 16.16182,
     "methods_hit": 12037,
     "duration": 1638.65,
-    "total_actions": 152,
+    "total_actions": 241,
     "activity_coverage": 25.0,
     "activities_hit": 3,
     "total_activities": 12,
@@ -126,6 +126,683 @@
         "activities_hit": 3
       }
     ],
+    "feature_coverage": 17.65,
+    "feature_total": 17,
+    "feature_covered": 3,
+    "feature_partial": 3,
+    "feature_matcher": "ai",
     "tool": "TestCube"
+  },
+  {
+    "name": "newpipe",
+    "path": "output/experiment/llmdroid/newpipe",
+    "tag": "PIPE_SUPER_LOG",
+    "total": 74478,
+    "final": 14.58417,
+    "methods_hit": 10862,
+    "duration": 599.347876,
+    "total_actions": 130,
+    "activity_coverage": 25.0,
+    "activities_hit": 3,
+    "total_activities": 12,
+    "activity_source": "utg",
+    "samples": [
+      {
+        "coverage": 0.00134,
+        "methods_hit": 1,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 10.20704,
+        "methods_hit": 7602,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 10.68638,
+        "methods_hit": 7959,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 10.92403,
+        "methods_hit": 8136,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 10.92806,
+        "methods_hit": 8139,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 10.94014,
+        "methods_hit": 8148,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 11.61148,
+        "methods_hit": 8648,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 11.77797,
+        "methods_hit": 8772,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.4238,
+        "methods_hit": 9253,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.4238,
+        "methods_hit": 9253,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.4238,
+        "methods_hit": 9253,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.42649,
+        "methods_hit": 9255,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.42649,
+        "methods_hit": 9255,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.42649,
+        "methods_hit": 9255,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.42649,
+        "methods_hit": 9255,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.43454,
+        "methods_hit": 9261,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.43992,
+        "methods_hit": 9265,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.46408,
+        "methods_hit": 9283,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61178,
+        "methods_hit": 9393,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61715,
+        "methods_hit": 9397,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61715,
+        "methods_hit": 9397,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61715,
+        "methods_hit": 9397,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.61849,
+        "methods_hit": 9398,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.63595,
+        "methods_hit": 9411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.66549,
+        "methods_hit": 9433,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.68025,
+        "methods_hit": 9444,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 12.74068,
+        "methods_hit": 9489,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.13139,
+        "methods_hit": 9780,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.17973,
+        "methods_hit": 9816,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.20256,
+        "methods_hit": 9833,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21598,
+        "methods_hit": 9843,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21733,
+        "methods_hit": 9844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21733,
+        "methods_hit": 9844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21733,
+        "methods_hit": 9844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21733,
+        "methods_hit": 9844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21733,
+        "methods_hit": 9844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.21867,
+        "methods_hit": 9845,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.2227,
+        "methods_hit": 9848,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.2321,
+        "methods_hit": 9855,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.85778,
+        "methods_hit": 10321,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.86315,
+        "methods_hit": 10325,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.89404,
+        "methods_hit": 10348,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.89404,
+        "methods_hit": 10348,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.94237,
+        "methods_hit": 10384,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.95177,
+        "methods_hit": 10391,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.95177,
+        "methods_hit": 10391,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.95177,
+        "methods_hit": 10391,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.95177,
+        "methods_hit": 10391,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.96923,
+        "methods_hit": 10404,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97057,
+        "methods_hit": 10405,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.97862,
+        "methods_hit": 10411,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98534,
+        "methods_hit": 10416,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98534,
+        "methods_hit": 10416,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98534,
+        "methods_hit": 10416,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98534,
+        "methods_hit": 10416,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98668,
+        "methods_hit": 10417,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 13.98668,
+        "methods_hit": 10417,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.13706,
+        "methods_hit": 10529,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.17734,
+        "methods_hit": 10559,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.17734,
+        "methods_hit": 10559,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.17734,
+        "methods_hit": 10559,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.56,
+        "methods_hit": 10844,
+        "elapsed": 0.0
+      },
+      {
+        "coverage": 14.58417,
+        "methods_hit": 10862,
+        "elapsed": 0.0
+      }
+    ],
+    "feature_coverage": 0.0,
+    "feature_total": 17,
+    "feature_covered": 0,
+    "feature_partial": 0,
+    "feature_matcher": "ai",
+    "tool": "LLMDroid"
   }
 ]

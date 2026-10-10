@@ -1,0 +1,287 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Money Manager Ex
+
+Total Actions    : 138
+
+Total Features   : 28
+Covered Features : 0
+Partial          : 0
+Uncovered        : 28
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 0.00%  (mean completion ratio; partial steps count)
+Exercised        : 0  (covered 0 + partial 0)
+
+ground_truth_source: independent_labeled_set
+
+Matcher: VLM/Gemini semantic judge (not token overlap).
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a New Database
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT002] Create First/New Account
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT003] Add a Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions match the gold steps.
+
+[GT004] Edit / Delete / Modify a Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT005] Filter Transactions by Date Range
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT006] Search/Sort Transactions
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions found
+
+[GT007] Mark Account as Favorite
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Mark Account as Favorite
+
+[GT008] Manage Accounts
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Manage Accounts
+
+[GT009] Set Up a Budget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No relevant actions for Set Up a Budget
+
+[GT010] Set/Edit a Category Budget Amount
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - long_touch EditText
+  - set_text EditText
+
+[GT011] View Budget Details / Transactions
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - long_touch EditText
+  - set_text EditText
+
+[GT012] Delete a Budget
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - key key=BACK
+  - long_touch EditText
+  - key key=BACK
+
+[GT013] Configure Budget View Options
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT014] Create a Recurring/Scheduled Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT015] Respond to a Recurring Transaction Prompt
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions
+
+[GT016] Manage Payees
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to Manage Payees
+
+[GT017] Manage Categories
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to Manage Categories
+
+[GT018] View a Built-In Report
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - No actions related to View a Built-In Report
+
+[GT019] Run a General Report
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions for report run
+
+[GT020] Track Stock/Mutual Fund Investments
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions for investment tracking
+
+[GT021] Add a Stock Transaction
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no relevant actions for stock transaction
+
+[GT022] Track Fixed Assets
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - touch Button 'CREATE DATABASE'
+
+[GT023] Manage Currencies & Exchange Rates
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - set_text EditText 'Just for .emb file'
+
+[GT024] Set Up Data Sync
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - Gold steps not aligned with actions
+  - kill_app intent=am force-stop com.money.manager.ex
+
+[GT025] Set/Change Database Password
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards setting database password
+  - none
+
+[GT026] Enable Fingerprint/Biometric Lock
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards enabling fingerprint/biometric lock
+  - none
+
+[GT027] Import/Export via QIF or CSV
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps towards importing/exporting via QIF or CSV
+  - none
+
+[GT028] Configure App Settings
+Status     : NOT COVERED
+Matcher    : vlm
+Completion : 0% of gold steps
+Evidence   :
+  - no steps related to app settings configuration
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 28 features covered
+0 / 28 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 0.00%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 28 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Create a New Database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Create First/New Account' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Add a Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Edit / Delete / Modify a Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Filter Transactions by Date Range' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Search/Sort Transactions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Mark Account as Favorite' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Manage Accounts' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Set Up a Budget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Set/Edit a Category Budget Amount' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'View Budget Details / Transactions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Delete a Budget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Configure Budget View Options' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Create a Recurring/Scheduled Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Respond to a Recurring Transaction Prompt' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Manage Payees' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Manage Categories' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'View a Built-In Report' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Run a General Report' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Track Stock/Mutual Fund Investments' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Add a Stock Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Track Fixed Assets' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Manage Currencies & Exchange Rates' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Set Up Data Sync' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Set/Change Database Password' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Enable Fingerprint/Biometric Lock' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Import/Export via QIF or CSV' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Configure App Settings' | journal=missing (no name match) status=missing | offline=not_covered

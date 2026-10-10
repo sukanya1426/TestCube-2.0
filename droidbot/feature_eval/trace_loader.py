@@ -19,6 +19,51 @@ from .models import ExecutionTrace, ObservedAction, TestCaseTrace
 
 SESSION_SPLIT_TYPES = {"kill_app"}
 
+# LLMDroid serialises a state's view hierarchy as one HTML-ish string, e.g.
+#   <button id=20 class="TextView" content-desc="Messages" >Messages</button>
+# while TestCube writes a list of view dicts. Normalising LLMDroid's form into
+# the same dicts at load time is what lets one evaluator score both tools, so
+# the feature-coverage numbers stay comparable instead of one tool scoring zero.
+_MARKUP_TAG = re.compile(r"<\s*([A-Za-z_][\w-]*)([^>]*?)>([^<]*)")
+_MARKUP_ATTR = re.compile(r'([A-Za-z_][\w-]*)\s*=\s*"([^"]*)"')
+
+# LLMDroid attribute name -> the key TestCube's view dicts use.
+_ATTR_TO_VIEW_KEY = {
+    "content-desc": "content_description",
+    "content_desc": "content_description",
+    "resource-id": "resource_id",
+    "resource_id": "resource_id",
+    "class": "class",
+    "text": "text",
+}
+
+
+def views_from_markup(markup):
+    """Turn LLMDroid's view markup into TestCube-shaped view dicts."""
+    views = []
+    for tag, attrs, inner in _MARKUP_TAG.findall(markup or ""):
+        view = {"class": tag}
+        for name, value in _MARKUP_ATTR.findall(attrs or ""):
+            key = _ATTR_TO_VIEW_KEY.get(name.lower())
+            if key and value:
+                view[key] = value
+        inner = (inner or "").strip()
+        if inner:
+            view["text"] = inner
+        # Keep only views that carry something a matcher could read.
+        if view.get("text") or view.get("content_description") or view.get("resource_id"):
+            views.append(view)
+    return views
+
+
+def normalise_views(payload):
+    """Give a state payload a list-of-dicts ``views``, whatever tool wrote it."""
+    views = payload.get("views")
+    if isinstance(views, str):
+        payload = dict(payload)
+        payload["views"] = views_from_markup(views)
+    return payload
+
 
 class TraceLoader(object):
     def load(self, results_dir):
@@ -105,6 +150,7 @@ class TraceLoader(object):
                 continue
             if not isinstance(payload, dict):
                 continue
+            payload = normalise_views(payload)
             state_str = payload.get("state_str")
             if not state_str:
                 continue
@@ -207,7 +253,14 @@ class TraceLoader(object):
 
     def _visible_texts(self, state):
         texts = []
-        for view in state.get("views") or []:
+        views = state.get("views")
+        if isinstance(views, str):                 # a state that bypassed the loader
+            views = views_from_markup(views)
+        for view in views or []:
+            if not isinstance(view, dict):         # never crash on an unexpected shape
+                if view:
+                    texts.append(str(view))
+                continue
             for key in ("text", "content_description"):
                 value = view.get(key)
                 if value:

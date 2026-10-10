@@ -186,6 +186,27 @@ def load_run(run_dir):
         # parsed duration is 0.0 rather than absent — treat that as missing.
         if current is None or (key == "duration" and not current):
             run[key] = value
+
+    # Feature coverage, when the offline evaluator has scored this run. Both
+    # tools are scored by the same trace-based evaluator against the same
+    # ground truth, so these are comparable -- provided the same matcher was
+    # used, which is why matcher_mode is carried through and checked below.
+    feature = os.path.join(run_dir, "feature_coverage", "report.json")
+    if os.path.isfile(feature):
+        try:
+            with open(feature) as handle:
+                data = json.load(handle)
+            covered = data.get("covered_features")
+            partial = data.get("partial_features")
+            run["feature_coverage"] = data.get("coverage_percentage")
+            run["feature_total"] = data.get("total_features")
+            run["feature_covered"] = (covered if isinstance(covered, int)
+                                      else len(covered or []))
+            run["feature_partial"] = (partial if isinstance(partial, int)
+                                      else len(partial or []))
+            run["feature_matcher"] = data.get("matcher_mode")
+        except (OSError, ValueError):
+            pass
     return run
 
 
@@ -225,13 +246,14 @@ def main(argv=None):
     lines = ["# Code coverage comparison", ""]
     lines.append(
         "| Tool | Run | Tag | Actions | Methods hit | Total | Code cov. | "
-        "Activities | Activity cov. | Duration |"
+        "Activities | Activity cov. | Feature cov. | Duration |"
     )
-    lines.append("| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
+    lines.append("| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
     for run in groups:
         act = run.get("activity_coverage")
         marker = "*" if run.get("activity_source") == "utg" else ""
-        lines.append("| %s | %s | %s | %s | %s | %s | %.2f%% | %s | %s | %s |" % (
+        feat = run.get("feature_coverage")
+        lines.append("| %s | %s | %s | %s | %s | %s | %.2f%% | %s | %s | %s | %s |" % (
             run["tool"], run["name"], run.get("tag") or "—",
             run.get("total_actions") if run.get("total_actions") is not None else "—",
             run.get("methods_hit") if run.get("methods_hit") is not None else "—",
@@ -240,6 +262,8 @@ def main(argv=None):
             ("%s/%s" % (run.get("activities_hit"), run.get("total_activities")))
             if run.get("total_activities") else "—",
             ("%.2f%%%s" % (act, marker)) if act is not None else "—",
+            ("%.2f%% (%s/%s)" % (feat, run.get("feature_covered"), run.get("feature_total")))
+            if feat is not None else "—",
             ("%.0fs" % run["duration"]) if run.get("duration") is not None else "—",
         ))
     if any(r.get("activity_source") == "utg" for r in groups):
@@ -291,6 +315,34 @@ def main(argv=None):
                     )
                 )
                 lines.append("")
+            # Feature coverage, when both sides have been scored. Refuse a
+            # delta across different matchers: deterministic token overlap and
+            # the LLM judge disagree by design, so mixing them invents a gap.
+            ftc = [r for r in tc if r.get("feature_coverage") is not None]
+            fld = [r for r in ld if r.get("feature_coverage") is not None]
+            if ftc and fld:
+                matchers = set(r.get("feature_matcher") for r in ftc + fld)
+                if len(matchers) > 1:
+                    lines.append(
+                        "> **Feature coverage not comparable:** scored with different "
+                        "matchers (%s). Re-run the evaluator on both with the same "
+                        "`--matcher`." % ", ".join(sorted(str(m) for m in matchers)))
+                else:
+                    a = max(r["feature_coverage"] for r in ftc)
+                    b = max(r["feature_coverage"] for r in fld)
+                    lines.append(
+                        "**Feature coverage — TestCube %.2f%% vs LLMDroid %.2f%%: "
+                        "%+.2f pp** (matcher: %s, same ground truth and evaluator "
+                        "on both traces)." % (a, b, a - b, matchers.pop()))
+                lines.append("")
+            elif ftc or fld:
+                only = "TestCube" if ftc else "LLMDroid"
+                lines.append(
+                    "> **Feature coverage scored for %s only.** The evaluator is "
+                    "trace-based and works on either tool; score the other with "
+                    "scripts/evaluate_features.py to get a comparable number." % only)
+                lines.append("")
+
             best_tc = max(r["final"] for r in tc)
             best_ld = max(r["final"] for r in ld)
             delta = best_tc - best_ld
