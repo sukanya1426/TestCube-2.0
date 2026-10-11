@@ -1,62 +1,61 @@
 {
   "application": "Odyssey",
   "total_features": 33,
-  "covered_features": 2,
-  "uncovered_features": 26,
-  "partial_features": 5,
-  "coverage": 0.06060606060606061,
-  "coverage_percentage": 6.06,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/odyssey",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/odyssey/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/odyssey/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 16,
+  "partial_features": 17,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/odyssey",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/odyssey/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/odyssey/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Browse the music library by album",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_017",
+        "test_019",
+        "test_021"
       ],
-      "confidence": 0.6,
+      "confidence": 0.225,
       "evidence": [
-        "Selected 'Browse the music library', but did not complete album selection.",
-        "touch OdysseyMainActivity/TextView-No albums"
+        "tap the \"Albums\" tab in My Music: long_touch TextView \"My Music\" activity=OdysseyMainActivity (tokens=music,my)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "tap the \"Albums\" tab in My Music"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT002",
       "name": "Browse the music library by artist",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Selected 'Browse the music library', but did not complete artist selection.",
-        "touch OdysseyMainActivity/TextView-No albums"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Browse all tracks",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_021"
       ],
-      "confidence": 0.9,
+      "confidence": 0.3333,
       "evidence": [
-        "Successfully navigated to 'All tracks' tab and scrolled through list.",
-        "touch OdysseyMainActivity/TextView-Search"
+        "Open the \"All tracks\"/Tracks tab: touch TextView \"My Music\" activity=OdysseyMainActivity (tokens=tracks)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Open the \"All tracks\"/Tracks tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT004",
@@ -64,11 +63,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold capability."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -77,67 +74,113 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold capability."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT006",
       "name": "Play a track",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold capability."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_033",
+        "test_035",
+        "test_036",
+        "test_038",
+        "test_040",
+        "test_042",
+        "test_044",
+        "test_046"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Tap a track in any list: touch Button \"Add playlist\" rid=action_add_playlist_tracks activity=OdysseyMainActivity (tokens=track)",
+        "playback starts and the now-playing bar appears at the bottom: touch TextView \"Recent albums\" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=now,playback)"
+      ],
+      "matched_path": [
+        "Tap a track in any list",
+        "playback starts and the now-playing bar appears at the bottom"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT007",
       "name": "Control playback from the full player",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_021",
+        "test_023",
+        "test_027",
+        "test_031",
+        "test_033",
+        "test_040",
+        "test_042",
+        "test_044",
+        "test_046"
       ],
-      "confidence": 0.9,
+      "confidence": 0.4667,
       "evidence": [
-        "dragged now-playing bar, released, adjusted playback controls",
-        "touch OdysseyMainActivity/Button-"
+        "Drag up the now-playing bar: touch LinearLayout activity=OdysseyMainActivity state_changed (outcome tokens=now,up)",
+        "use play/pause, previous and next: touch ImageButton rid=now_playing_topPlayPauseButton activity=OdysseyMainActivity (tokens=pause,play)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Drag up the now-playing bar",
+        "use play/pause, previous and next"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT008",
       "name": "Use repeat and shuffle",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no actions related to repeat or shuffle"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT009",
       "name": "View and edit the play queue",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no actions related to queue/playlist view, reordering, or removing items"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "switch to the queue/playlist view: touch TextView \"Add directory to queue\" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=playlist,queue)"
+      ],
+      "matched_path": [
+        "switch to the queue/playlist view"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT010",
@@ -145,150 +188,180 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "Clear the play queue",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the full player or the queue view: touch TextView \"Add directory to queue\" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=queue)"
+      ],
+      "matched_path": [
+        "Open the full player or the queue view"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT012",
       "name": "Save the current queue as a playlist",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the full player or queue view: touch TextView \"Add directory to queue\" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=queue)"
+      ],
+      "matched_path": [
+        "Open the full player or queue view"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT013",
       "name": "Browse and play saved playlists",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_031"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Long press on playlist, but no delete action followed.",
-        "long_touch OdysseyMainActivity/TextView-My Music"
+        "Open the \"Playlists\" tab: touch TextView \"Playlists\" activity=OdysseyMainActivity (tokens=playlists)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open the \"Playlists\" tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT014",
       "name": "Delete a playlist",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No delete action or confirmation.",
-        "long_touch OdysseyMainActivity/TextView-My Music"
+      "status": "partial",
+      "test_cases": [
+        "test_031"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the Playlists tab: touch TextView \"Playlists\" activity=OdysseyMainActivity (tokens=playlists)"
+      ],
+      "matched_path": [
+        "Open the Playlists tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT015",
       "name": "Create a bookmark to resume an audiobook or podcast",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No create bookmark action or name entry.",
-        "touch OdysseyMainActivity/ImageView-"
+      "status": "partial",
+      "test_cases": [
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "tap \"Create bookmark\": touch TextView \"Bookmarks\" activity=OdysseyMainActivity (tokens=bookmark)"
+      ],
+      "matched_path": [
+        "tap \"Create bookmark\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT016",
       "name": "Resume from a bookmark",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "test_001"
+      "status": "partial",
+      "test_cases": [
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Bookmarks\": touch TextView \"Bookmarks\" activity=OdysseyMainActivity (tokens=bookmarks)"
+      ],
+      "matched_path": [
+        "tap \"Bookmarks\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT017",
       "name": "Delete a bookmark",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "long_touch"
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_027",
+        "test_031",
+        "test_036",
+        "test_038"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the Bookmarks view: touch ImageButton \"Open navigation drawer\" activity=OdysseyMainActivity state_changed (outcome tokens=bookmarks)"
+      ],
+      "matched_path": [
+        "Open the Bookmarks view"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT018",
       "name": "Search the library",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT019",
       "name": "Jump from a track to its album or artist",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Long-press a track (or open the player overflow menu): long_touch TextView \"My Music\" activity=OdysseyMainActivity (tokens=track)"
+      ],
+      "matched_path": [
+        "Long-press a track (or open the player overflow menu)"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT020",
       "name": "View track and album information",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Long-press a track: long_touch TextView \"My Music\" activity=OdysseyMainActivity (tokens=track)"
+      ],
+      "matched_path": [
+        "Long-press a track"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT021",
@@ -296,11 +369,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -308,13 +379,10 @@
       "name": "Clear the artwork cache",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch OdysseyMainActivity/ImageView-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -322,73 +390,83 @@
       "name": "Restrict artwork downloads to Wi-Fi",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch OdysseyMainActivity/ImageView-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT024",
       "name": "Control playback from the lock screen and the notification",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView \"No albums found.\" rid=empty_view_message activity=OdysseyMainActivity | activity=Odysse..."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_033",
+        "test_035",
+        "test_036",
+        "test_038",
+        "test_040",
+        "test_042",
+        "test_044",
+        "test_046"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2889,
+      "evidence": [
+        "use the play/pause, previous, next and stop controls shown with the album art: touch Button \"Cancel\" rid=button2 activity=OdysseyMainActivity state_changed (outcome tokens=album,controls,pause,play)"
+      ],
+      "matched_path": [
+        "use the play/pause, previous, next and stop controls shown with the album art"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT025",
       "name": "Add the Odyssey home screen widget",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-press and tap actions, but widget not added",
-        "Long-press an empty area of the Android home screen; Tap Add; Tap Odyssey"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT026",
       "name": "Scrobble to Last.fm through a scrobbler app",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No actions related to scrobbling or Last.fm"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT027",
       "name": "Open the system equaliser",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.4,
-      "evidence": [
-        "Navigation drawer opened, but no equaliser entry tapped",
-        "Open the navigation drawer or the player overflow menu"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT028",
@@ -396,29 +474,41 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards theme change",
-        "intent",
-        "start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT029",
       "name": "Change the library view style",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no steps towards view style change",
-        "intent",
-        "start activity"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_017",
+        "test_027",
+        "test_031",
+        "test_033",
+        "test_035",
+        "test_036",
+        "test_038",
+        "test_044"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.28,
+      "evidence": [
+        "choose whether albums and artists are shown as a grid or as a list: touch Button \"Cancel\" rid=button2 activity=OdysseyMainActivity state_changed (outcome tokens=albums,artists,grid)"
+      ],
+      "matched_path": [
+        "choose whether albums and artists are shown as a grid or as a list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT030",
@@ -426,13 +516,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards sort order change",
-        "intent",
-        "start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -441,27 +527,31 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for configuring playback behavior.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT032",
       "name": "Rescan the media library",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for rescanning the media library.",
-        "none"
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_027",
+        "test_031",
+        "test_036",
+        "test_038"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "the new files appear in the lists: touch ImageButton \"Open navigation drawer\" activity=OdysseyMainActivity state_changed (outcome tokens=files,lists)"
+      ],
+      "matched_path": [
+        "the new files appear in the lists"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT033",
@@ -469,12 +559,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for viewing the about screen and licenses.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -500,7 +587,7 @@
       "name_similarity": 0.8,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -513,7 +600,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -552,7 +639,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -565,7 +652,7 @@
       "name_similarity": 0.615,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -591,7 +678,7 @@
       "name_similarity": 0.538,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -617,7 +704,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -630,7 +717,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -656,7 +743,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -669,7 +756,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -682,7 +769,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -695,7 +782,7 @@
       "name_similarity": 1.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -721,7 +808,7 @@
       "name_similarity": 0.438,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -734,7 +821,7 @@
       "name_similarity": 0.211,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -786,7 +873,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -799,7 +886,7 @@
       "name_similarity": 0.692,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -825,7 +912,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -851,7 +938,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -890,7 +977,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -926,11 +1013,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 218,
+  "actions_with_widget": 158,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 7,
+  "exercised_features": 17,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.09696969696969696,
-  "weighted_coverage_percentage": 9.7,
+  "weighted_coverage": 0.1712121212121212,
+  "weighted_coverage_percentage": 17.12,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -2,8 +2,8 @@
   "application": "Money Manager Ex",
   "total_features": 28,
   "covered_features": 0,
-  "uncovered_features": 28,
-  "partial_features": 0,
+  "uncovered_features": 25,
+  "partial_features": 3,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/money",
@@ -13,15 +13,19 @@
     {
       "id": "GT001",
       "name": "Create a New Database",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
+      "status": "partial",
+      "test_cases": [
+        "test_002"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Tap Create Database: touch Button \"CREATE DATABASE\" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)"
+      ],
+      "matched_path": [
+        "Tap Create Database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT002",
@@ -29,11 +33,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -42,11 +44,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -55,11 +55,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -68,11 +66,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -81,11 +77,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -94,11 +88,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for Mark Account as Favorite"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -107,11 +99,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for Manage Accounts"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -120,11 +110,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for Set Up a Budget"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -133,13 +121,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "long_touch EditText",
-        "set_text EditText"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -148,13 +132,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "long_touch EditText",
-        "set_text EditText"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -163,14 +143,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "key key=BACK",
-        "long_touch EditText",
-        "key key=BACK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -179,11 +154,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -192,11 +165,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -205,11 +176,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -218,11 +187,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to Manage Payees"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -231,11 +198,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to Manage Categories"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -244,11 +209,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to View a Built-In Report"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -257,11 +220,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for report run"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -270,11 +231,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for investment tracking"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -283,11 +242,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for stock transaction"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -296,12 +253,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "touch Button 'CREATE DATABASE'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -310,41 +264,44 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "set_text EditText 'Just for .emb file'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT024",
       "name": "Set Up Data Sync",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not aligned with actions",
-        "kill_app intent=am force-stop com.money.manager.ex"
+      "status": "partial",
+      "test_cases": [
+        "test_002"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "On the create or open screen, tap Open Database: touch Button \"CREATE DATABASE\" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)"
+      ],
+      "matched_path": [
+        "On the create or open screen, tap Open Database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT025",
       "name": "Set/Change Database Password",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no steps towards setting database password",
-        "none"
+      "status": "partial",
+      "test_cases": [
+        "test_002"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Tap Set Password or Change Password: touch EditText \"\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\" rid=txtPassword activity=PasswordActivity (tokens=password)"
+      ],
+      "matched_path": [
+        "Tap Set Password or Change Password"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT026",
@@ -352,12 +309,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards enabling fingerprint/biometric lock",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -366,12 +320,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards importing/exporting via QIF or CSV",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -380,11 +331,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps related to app settings configuration"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -397,7 +346,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -696,7 +645,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -709,7 +658,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -771,11 +720,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 138,
+  "actions_with_widget": 25,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 0,
+  "exercised_features": 3,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.0,
-  "weighted_coverage_percentage": 0.0,
+  "weighted_coverage": 0.020833333333333332,
+  "weighted_coverage_percentage": 2.08,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -113,6 +113,42 @@ class ObservedAction:
         ]
         return " ".join(pieces)
 
+    def label_blob(self) -> str:
+        """The widget's human-visible name, plus its resource id.
+
+        Used as the denominator when checking that a step did not merely clip
+        one word out of a paragraph: an onboarding TextView carrying "Touch to
+        focus, and press the circular blue shutter button..." shares a token
+        with a great many steps without being any of them.
+        """
+        return " ".join(piece for piece in (
+            self.view_text or "",
+            self.content_description or "",
+            _local_resource_id(self.resource_id),
+        ) if piece)
+
+    def content_blob(self) -> str:
+        """Only what the action says about the widget the tool acted on.
+
+        ``token_blob`` carries metadata that a token matcher must never score
+        against: ``event_str`` embeds the state hash and tap coordinates, and
+        ``resource_id`` is fully qualified, so the package name leaks in. In a
+        Fossify Clock trace the token "clock" occurs in 65% of all actions and
+        "touch" (from ``CustomTouchEvent``) in 77%, which lets any step
+        mentioning either match almost any action. Event type is checked
+        separately by ``event_type_compatible`` and the widget class only
+        informs that check, so neither belongs here.
+        """
+        pieces = [
+            self.view_text or "",
+            self.content_description or "",
+            _local_resource_id(self.resource_id),
+            self.text_input or "",
+            self.key_name or "",
+            _intent_component(self.intent),
+        ]
+        return " ".join(piece for piece in pieces if piece)
+
 
 @dataclass
 class TestCaseTrace:
@@ -166,6 +202,11 @@ class CoverageReport:
     # is TestCube's self-assessment and is not comparable with LLMDroid, so the
     # mode has to travel with the number.
     trace_only: Optional[bool] = None
+    total_actions: Optional[int] = None
+    # Actions naming the widget they touched. Trace-based feature coverage can
+    # only see these, and the two tools differ sharply: TestCube issues many
+    # coordinate-only taps, so a like-for-like reading has to show this.
+    actions_with_widget: Optional[int] = None
     ground_truth_source: Optional[str] = None
     exercised_features: Optional[int] = None
     coverage_formula: Optional[str] = None
@@ -210,6 +251,10 @@ class CoverageReport:
             payload["matcher_mode"] = self.matcher_mode
         if self.trace_only is not None:
             payload["trace_only"] = self.trace_only
+        if self.total_actions is not None:
+            payload["total_actions"] = self.total_actions
+        if self.actions_with_widget is not None:
+            payload["actions_with_widget"] = self.actions_with_widget
         if self.ground_truth_source is not None:
             payload["ground_truth_source"] = self.ground_truth_source
         if self.exercised_features is not None:
@@ -236,6 +281,29 @@ def _clip(text, length):
     if len(text) <= length:
         return text
     return text[: length - 3] + "..."
+
+
+def _local_resource_id(resource_id):
+    """``org.fossify.clock:id/tab_item_label`` -> ``tab_item_label``."""
+    if not resource_id:
+        return ""
+    local = resource_id.split("/")[-1]
+    if ":" in local:
+        local = local.split(":")[-1]
+    return "" if local in ("id", "") else local
+
+
+def _intent_component(intent):
+    """Keep an intent's class name, drop the package and the am-start noise."""
+    if not intent:
+        return ""
+    parts = []
+    for token in str(intent).split():
+        if "/" in token:
+            parts.append(token.split("/")[-1].split(".")[-1])
+        elif token.startswith("android.intent."):
+            parts.append(token.rsplit(".", 1)[-1])
+    return " ".join(parts)
 
 
 def _short_activity(name):

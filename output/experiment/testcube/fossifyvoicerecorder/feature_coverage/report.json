@@ -1,14 +1,14 @@
 {
   "application": "Fossify Voice Recorder",
   "total_features": 23,
-  "covered_features": 1,
-  "uncovered_features": 20,
-  "partial_features": 2,
-  "coverage": 0.043478260869565216,
-  "coverage_percentage": 4.35,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifyvoicerecorder",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyvoicerecorder/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyvoicerecorder/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 22,
+  "partial_features": 1,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifyvoicerecorder",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyvoicerecorder/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyvoicerecorder/ground_truth.json",
   "features": [
     {
       "id": "GT001",
@@ -16,11 +16,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for recording audio."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -29,11 +27,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for pausing and resuming a recording."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -42,11 +38,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for watching live audio level."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -55,11 +49,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to background recording."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -68,60 +60,48 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to browsing saved recordings."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT006",
       "name": "Play a recording",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_011"
       ],
-      "confidence": 0.8,
+      "confidence": 0.18,
       "evidence": [
-        "Actions cover opening recordings and playing them.",
-        "touch MainActivity/TextView-Recorder",
-        "touch MainActivity/Button-OK",
-        "touch MainActivity/Button-Cancel",
-        "touch MainActivity/TextView-Player"
+        "use play/pause and the seek bar: touch ImageView \"Play / Pause\" rid=play_pause_btn activity=MainActivity (tokens=pause,play)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "use play/pause and the seek bar"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT007",
       "name": "Rename a recording",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-pressed recording but did not complete rename steps.",
-        "long_touch MainActivity/TextView-Recordings"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT008",
       "name": "Delete a recording",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No delete or confirm actions.",
-        "long_touch MainActivity/Button-OK"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -129,43 +109,32 @@
       "name": "Restore or empty the recycle bin",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No restore or empty actions.",
-        "long_touch MainActivity/TextView-Internal"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT010",
       "name": "Share a recording",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-pressed recording, but share icon not tapped.",
-        "long_touch MainActivity/FloatingActionButton-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "View recording properties",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Long-pressed recording, but overflow menu not accessed.",
-        "long_touch MainActivity/FloatingActionButton-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -173,13 +142,10 @@
       "name": "Search recordings",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "Search icon not tapped; no file name typed.",
-        "touch MainActivity/TextView-Recordings"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -188,11 +154,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps related to sorting the recordings list."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -201,11 +165,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps related to choosing the recording audio format."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -214,11 +176,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps related to setting the recording bitrate and quality."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -226,13 +186,10 @@
       "name": "Choose the folder where recordings are saved",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps do not match gold",
-        "intent start activity"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -240,13 +197,10 @@
       "name": "Hide the recording notification",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps do not match gold",
-        "intent start activity"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -254,13 +208,10 @@
       "name": "Keep the screen on while recording",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps do not match gold",
-        "intent start activity"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -269,12 +220,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to home screen widget addition.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -283,12 +231,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to app lock configuration.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -297,12 +242,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to customising app colours and theme.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -311,11 +253,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to settings or language/font size"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -324,11 +264,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to settings or about/FAQ/licences"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -406,7 +344,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -419,7 +357,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -458,7 +396,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -650,11 +588,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 161,
+  "actions_with_widget": 115,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 3,
+  "exercised_features": 1,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.07086956521739131,
-  "weighted_coverage_percentage": 7.09,
+  "weighted_coverage": 0.008695652173913044,
+  "weighted_coverage_percentage": 0.87,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

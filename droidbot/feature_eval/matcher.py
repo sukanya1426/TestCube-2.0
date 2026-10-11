@@ -7,6 +7,7 @@ state of those events (for outcome steps such as "results appear").
 
 import logging
 import re
+from math import ceil as _ceil
 
 from .models import (
     STATUS_COVERED,
@@ -20,6 +21,105 @@ LOGGER = logging.getLogger("TestCube.matcher")
 
 # Step/path matches below this do not count as evidence or PARTIAL credit.
 DEFAULT_MIN_STEP_CONFIDENCE = 0.5
+
+# Consecutive steps of one feature must be executed close together. Without
+# this a 729-action trace can "cover" a feature by matching step 1 at action 5
+# and step 2 at action 600, which is not an execution of the feature.
+MAX_STEP_GAP = 20
+
+# Ground-truth step order is written by hand and two adjacent steps are often
+# interchangeable ("enter the query" / "tap Search"). Allowing a step to match
+# just behind the cursor tolerates that without reopening the whole trace.
+STEP_BACKTRACK = 3
+
+# Steps and widget labels both name an operation. "Open the habit list" against
+# a button labelled "Add habit" shares the noun but the operations disagree, and
+# that disagreement is the only thing distinguishing them for a token matcher.
+VERB_GROUPS = [
+    {"tap", "click", "press", "touch", "select", "choose", "hit", "long"},
+    {"open", "launch", "goto", "navigate", "view", "show", "see", "display"},
+    {"create", "new", "add", "make", "insert"},
+    {"delete", "remove", "clear", "discard", "trash"},
+    {"edit", "change", "modify", "rename", "update"},
+    {"save", "store", "keep", "apply"},
+    {"cancel", "dismiss", "close", "exit"},
+    {"share", "export", "send"},
+    {"import", "restore", "load"},
+    {"search", "find", "filter", "query"},
+    {"archive", "unarchive"},
+    {"play", "pause", "stop", "resume"},
+    {"enable", "disable", "toggle"},
+]
+
+# Surfaces that are definitionally not the app under test. The home screen and
+# the status bar are excluded because a tap on the launcher's own "Settings"
+# label is not the app's settings. Other packages are kept: a contacts feature
+# legitimately hands off to the camera or the dialer, and a permission dialog
+# is part of the flow being exercised.
+NON_APP_SURFACES = (
+    "nexuslauncher",
+    "com.android.launcher",
+    "com.google.android.launcher",
+    "com.android.systemui",
+    "com.teslacoilsw.launcher",
+)
+
+# At least this share of a widget's own label tokens must be accounted for by
+# the step, or the step only clipped a word out of unrelated prose.
+MIN_LABEL_COVERAGE = 0.34
+
+# A token used by more than this share of an app's ground-truth features says
+# nothing about which feature is which -- "contact" in a contacts app. It is
+# measured over the ground truth, which both tools share, and never over a
+# trace: "contact" covers 35% of TestCube's actions but 7% of LLMDroid's, so a
+# per-trace rule would silently forbid TestCube from matching steps that
+# LLMDroid is allowed to match.
+UNINFORMATIVE_SHARE = 0.40
+
+# Control labels present on nearly every screen. Such a step may be matched
+# once its feature has been located, but may not be what locates it.
+GENERIC_CONTROLS = {
+    "save", "delete", "remove", "cancel", "close", "exit", "next",
+    "previous", "yes", "no", "accept", "allow", "deny", "continue",
+    "finish", "dismiss", "edit",
+}
+
+# Words that name a widget rather than a feature. "tap the + button" shares
+# "button" with every Button in the app, so these are excluded when deciding
+# whether a step matched something app-specific.
+UI_GENERIC = {
+    "button", "tab", "icon", "menu", "item", "items", "field", "label",
+    "dialog", "bar", "title", "option", "options", "toggle", "switch",
+    "entry", "widget", "header", "row", "cell", "card", "panel", "section",
+    "box", "area", "list", "listview", "text", "textview", "layout",
+    "activity", "fragment", "window", "popup", "sheet", "drawer", "checkbox",
+    "spinner", "slider", "picker", "prompt", "top", "bottom",
+    "left", "right", "corner", "center", "value", "values",
+}
+
+# Adjectives and quantifiers that carry no app-specific meaning. Counting
+# "current" in "view the current time" as a token the trace must contain makes
+# an otherwise matchable step unmatchable.
+FILLER = {
+    "current", "existing", "selected", "desired", "specific", "certain",
+    "any", "all", "some", "first", "last", "next", "previous", "same",
+    "other", "another", "given", "chosen", "available", "correct", "valid",
+    "proper", "whole", "full", "entire", "single", "multiple", "several",
+    "various", "one", "two", "its", "their", "your", "each", "every",
+    "optionally", "optional", "then", "also", "already", "just", "via",
+}
+
+# Verbs describing how a step is performed rather than what it acts on.
+STEP_VERBS = {
+    "tap", "click", "press", "touch", "select", "choose", "hit",
+    "input", "enter", "type", "fill", "write", "set",
+    "open", "launch", "goto", "navigate", "view", "show", "see",
+    "submit", "send", "confirm", "go", "done", "ok", "apply",
+    "create", "new", "add", "make", "back", "return",
+    "scroll", "swipe", "long", "tick", "untick", "check", "uncheck",
+    "use", "using", "perform", "do", "again",
+}
+
 
 
 STOPWORDS = {
@@ -93,6 +193,33 @@ class FeatureMatcher(object):
         if min_step_confidence is None:
             min_step_confidence = DEFAULT_MIN_STEP_CONFIDENCE
         self.min_step_confidence = float(min_step_confidence)
+        self.uninformative = set()
+
+    def _learn_uninformative(self, features):
+        """Ground-truth words too common in this app to identify a feature.
+
+        Derived from the feature list, which is the same file for both tools,
+        so the two are judged by an identical rule. A trace-derived version was
+        tried and rejected: token frequencies differ per run, which handed one
+        tool matches the other was refused.
+        """
+        self.uninformative = set()
+        items = list(features or [])
+        if len(items) < 5:
+            return
+        seen = {}
+        for feature in items:
+            words = set()
+            words |= tokenize(getattr(feature, "name", "") or "")
+            for path in (feature.paths() if hasattr(feature, "paths") else []) or []:
+                for step in path:
+                    words |= tokenize(step)
+            for word in words:
+                seen[word] = seen.get(word, 0) + 1
+        ceiling = UNINFORMATIVE_SHARE * len(items)
+        self.uninformative = set(
+            word for word, count in seen.items() if count > ceiling
+        )
 
     def match_all(self, features, trace):
         if self.matcher_mode == "ai" and self.llm_matcher and hasattr(self.llm_matcher, "judge_all"):
@@ -112,6 +239,7 @@ class FeatureMatcher(object):
                         )
                     results.append(result)
                 return results
+        self._learn_uninformative(features)
         return [self.match_feature(feature, trace) for feature in features]
 
     def match_feature(self, feature, trace):
@@ -191,9 +319,21 @@ class FeatureMatcher(object):
         )
 
     def _match_deterministic(self, feature, trace):
+        """Best strict path match for this feature, with where it happened.
+
+        Two passes. The per-session pass says which executed sessions
+        independently exercised the feature, which is what the report
+        attributes. The whole-trace pass then catches a feature whose steps
+        straddle a session boundary: how a trace is cut into sessions is a
+        property of the tool, not the app (TestCube's median session is 4
+        actions against LLMDroid's 14), so scoring only per session would score
+        identical behaviour differently for each tool. Ordering and
+        MAX_STEP_GAP carry the "these steps happened together" requirement in a
+        tool-neutral way instead.
+        """
+        from .models import TestCaseTrace
         sessions = list(trace.test_cases or [])
         if not sessions and trace.actions:
-            from .models import TestCaseTrace
             sessions = [TestCaseTrace(id="test_001", actions=list(trace.actions))]
         best = FeatureResult(
             id=feature.id,
@@ -207,14 +347,7 @@ class FeatureMatcher(object):
 
         paths = feature.paths()
         for session in sessions:
-            session_best = None
-            for path in paths:
-                result = self._match_path(feature, path, session.actions, session.id)
-                if session_best is None or STATUS_RANK_VALUE(result.status) > STATUS_RANK_VALUE(session_best.status):
-                    session_best = result
-                elif (session_best and result.status == session_best.status
-                      and result.confidence > session_best.confidence):
-                    session_best = result
+            session_best = self._best_over_paths(feature, paths, session.actions, session.id)
             if session_best is None:
                 continue
             if session_best.status == STATUS_COVERED:
@@ -227,6 +360,25 @@ class FeatureMatcher(object):
                     if (best.status != STATUS_PARTIAL
                             or session_best.confidence > best.confidence):
                         best = session_best
+
+        if not any(self.step_checkable(step) for path in paths for step in path):
+            best.status = STATUS_NOT_COVERED
+            best.completion_ratio = None   # unscorable: excluded from the totals
+            best.evidence = [
+                "Not scorable from a trace: no step names anything app-specific."
+            ]
+            best.checkable_steps = 0
+            return best
+
+        whole = self._best_over_paths(feature, paths, list(trace.actions or []), "trace")
+        if whole is not None and _is_better(whole, best):
+            whole.test_cases = self._sessions_for(trace, sessions,
+                                                  getattr(whole, "matched_indices", []))
+            best = whole
+            if whole.status == STATUS_COVERED and not covering:
+                covering = list(best.test_cases)
+            elif whole.status == STATUS_PARTIAL and not partial:
+                partial = list(best.test_cases)
 
         if covering:
             best.status = STATUS_COVERED
@@ -245,6 +397,32 @@ class FeatureMatcher(object):
             best.completion_ratio = 0.0
         return best
 
+    def _best_over_paths(self, feature, paths, actions, label):
+        """Highest-ranked match for any of the feature's valid paths."""
+        session_best = None
+        for path in paths:
+            result = self._match_path(feature, path, actions, label)
+            if session_best is None or _is_better(result, session_best):
+                session_best = result
+        return session_best
+
+    def _sessions_for(self, trace, sessions, indices):
+        """Session ids holding the actions a whole-trace match used."""
+        if not indices:
+            return []
+        owner = {}
+        for session in sessions:
+            for item in session.actions or []:
+                owner[id(item)] = session.id
+        actions = list(trace.actions or [])
+        found = []
+        for index in indices:
+            if 0 <= index < len(actions):
+                name = owner.get(id(actions[index]))
+                if name and name not in found:
+                    found.append(name)
+        return found
+
     def _match_path(self, feature, path, actions, test_case_id):
         if not path:
             return FeatureResult(
@@ -259,11 +437,27 @@ class FeatureMatcher(object):
         matched_steps = []
         evidence = []
         confidences = []
+        # Steps must be found in order and close together. Scanning the whole
+        # trace for each step independently, as this did before, let step 3
+        # match an action that ran before step 1 and let the steps of one
+        # feature be spread over hundreds of unrelated actions.
+        cursor = -1
         for step in path:
             best = None
-            for index, action in enumerate(actions):
+            if cursor < 0 and self._weak_anchor(step):
+                # "Tap Save" must not be what locates a feature in the trace:
+                # with no earlier step matched it would scan the whole run and
+                # settle on any Save button, on any screen.
+                continue
+            if cursor < 0:
+                start, limit = 0, len(actions)
+            else:
+                start = max(0, cursor - STEP_BACKTRACK + 1)
+                limit = min(len(actions), cursor + 1 + MAX_STEP_GAP)
+            for index in range(start, limit):
                 if index in used:
                     continue
+                action = actions[index]
                 matched, confidence, why = self.step_matches(step, action)
                 if not matched:
                     continue
@@ -279,11 +473,14 @@ class FeatureMatcher(object):
                 continue
             confidence, index, why, action = best
             used.add(index)
+            cursor = max(cursor, index)
             matched_steps.append(step)
             confidences.append(confidence)
             evidence.append("%s: %s (%s)" % (step, action.summary(), why))
 
-        if len(matched_steps) == len(path):
+        checkable = [step for step in path if self.step_checkable(step)]
+        denominator = len(checkable)
+        if denominator and len(matched_steps) >= denominator:
             status = STATUS_COVERED
         elif len(matched_steps) > 0:
             status = STATUS_PARTIAL
@@ -292,10 +489,10 @@ class FeatureMatcher(object):
 
         confidence = 0.0
         if confidences:
-            confidence = sum(confidences) / float(len(path))
+            confidence = sum(confidences) / float(max(1, denominator))
             if status == STATUS_COVERED:
                 confidence = max(confidence, 0.85)
-        return FeatureResult(
+        result = FeatureResult(
             id=feature.id,
             name=feature.name,
             status=status,
@@ -306,14 +503,70 @@ class FeatureMatcher(object):
             matcher="deterministic",
             completion_ratio=(
                 1.0 if status == STATUS_COVERED
-                else (float(len(matched_steps)) / float(len(path)) if path else 0.0)
+                else (float(len(matched_steps)) / float(denominator) if denominator else 0.0)
             ),
         )
+        result.checkable_steps = denominator
+        result.total_steps = len(path)
+        result.matched_indices = sorted(used)
+        return result
+
+    def _distinctive(self, content):
+        """What a step is about: not how it is done, not the widget it uses.
+
+        The ground-truth frequency filter is a tie-breaker, not a censor. If
+        dropping those words would leave the step with nothing to match on, the
+        words are kept, so a step never becomes unmatchable just because its
+        subject is what the app is about.
+        """
+        core = set(content) - STEP_VERBS - UI_GENERIC - FILLER
+        trimmed = core - self.uninformative
+        return trimmed or core
+
+    def _weak_anchor(self, step):
+        """True when a step names only ubiquitous controls."""
+        distinctive = self._distinctive(content_tokens(tokenize(step)))
+        return bool(distinctive) and distinctive <= GENERIC_CONTROLS
+
+    def step_checkable(self, expected):
+        """Can a trace evidence this step at all?
+
+        "tap the + button" contains no app-specific word: every Button in the
+        app matches it equally, so no trace can confirm or deny it. Such a step
+        is excluded from the denominator rather than counted as a failure,
+        otherwise one unwritable step makes a whole feature uncoverable and
+        every tool scores zero. This reads the ground-truth wording only -- not
+        the trace -- so the set of excluded steps is the same for both tools.
+        """
+        tokens = tokenize(expected)
+        if not tokens:
+            return False
+        content = content_tokens(tokens)
+        if is_outcome_step(tokens):
+            return bool(content - OUTCOME_HINTS - STEP_VERBS - UI_GENERIC - FILLER)
+        return bool(content - STEP_VERBS - UI_GENERIC - FILLER)
 
     def step_matches(self, expected, action):
+        """Best match for the step, trying each alternative it offers.
+
+        "Open Settings (or the overflow menu)" is one step with two ways to
+        perform it. Scored as a single bag of words it demanded "settings" and
+        "overflow" together and so matched neither.
+        """
+        best = (False, 0.0, "no alternative matched")
+        for alternative in _alternatives(expected):
+            matched, confidence, why = self._step_matches_one(alternative, action)
+            if matched and confidence > best[1]:
+                best = (matched, confidence, why)
+        return best
+
+    def _step_matches_one(self, expected, action):
         expected_tokens = tokenize(expected)
         if not expected_tokens:
             return False, 0.0, "empty expected step"
+
+        if _on_non_app_surface(action):
+            return False, 0.0, "action on the home screen or status bar"
 
         if is_outcome_step(expected_tokens):
             return self._match_outcome(expected_tokens, action)
@@ -322,73 +575,95 @@ class FeatureMatcher(object):
         if not type_ok:
             return False, 0.0, "event type mismatch"
 
-        observed_tokens = tokenize(action.token_blob())
+        # content_blob, not token_blob: see ObservedAction.content_blob for why
+        # scoring against event_str/resource-id metadata produced matches like
+        # "tap the + button" -> touch Button "OK".
+        observed_tokens = tokenize(action.content_blob())
         content = content_tokens(expected_tokens)
         if not content:
             content = expected_tokens
-        expanded_observed = expand_synonyms(observed_tokens)
+        expanded_observed = comparable(observed_tokens)
         matched = set()
         for token in content:
-            options = expand_synonyms({token})
+            options = comparable({token})
             if options & expanded_observed:
                 matched.add(token)
-        if not matched:
-            return False, 0.0, "no token overlap"
 
-        ratio = float(len(matched)) / float(len(content))
-        # Distinctive nouns (search, playlist, email) matter more than
-        # generic verbs. Require either all content tokens or a strong
-        # majority that includes a non-verb.
-        distinctive = content - {
-            "tap", "click", "press", "touch", "open", "enter", "input",
-            "type", "fill", "select", "view", "see", "go", "use",
-        }
-        distinctive_ok = True
+        # What the step is actually about: not how it is performed (STEP_VERBS),
+        # not the widget it happens to use (UI_GENERIC), and not a token this
+        # trace repeats everywhere (self.uninformative).
+        distinctive = self._distinctive(content)
         if distinctive:
-            distinctive_matched = set()
-            for token in distinctive:
-                if expand_synonyms({token}) & expanded_observed:
-                    distinctive_matched.add(token)
-            distinctive_ok = len(distinctive_matched) >= max(1, int(round(0.5 * len(distinctive))))
-            if not distinctive_ok:
+            distinctive_matched = set(
+                token for token in distinctive
+                if comparable({token}) & expanded_observed
+            )
+            need = _required_hits(len(distinctive))
+            if len(distinctive_matched) < need:
                 return False, 0.0, "missing distinctive tokens"
+            # The step must also account for a fair share of the widget's own
+            # label, which is what rules out matching one word of a paragraph.
+            # The label keeps its filler words -- discounting "first" let "Open
+            # the contact" match an EditText named "First name" -- but loses the
+            # app's own subject words, which otherwise pad every widget's id.
+            # "contact" sits in 68% of this app's features and in the id of
+            # every field, so counting it made contact_surname look half
+            # explained by a step that had only said "contact".
+            label = tokenize(action.label_blob()) - STOPWORDS - self.uninformative
+            if label:
+                expanded_expected = comparable(content)
+                explained = set(t for t in label if comparable({t}) & expanded_expected)
+                if float(len(explained)) / float(len(label)) < MIN_LABEL_COVERAGE:
+                    return False, 0.0, "step explains only %d/%d label tokens" % (
+                        len(explained), len(label))
+                conflict = _verb_conflict(content, label)
+                if conflict:
+                    return False, 0.0, "operation mismatch: step says %s, widget says %s" % conflict
 
-        if ratio < 0.5:
-            return False, 0.0, "weak overlap"
-        why = "tokens=%s" % ",".join(sorted(matched))
-        return True, min(1.0, 0.7 + 0.3 * ratio), why
+            ratio = float(len(distinctive_matched)) / float(len(distinctive))
+            why = "tokens=%s" % ",".join(sorted(distinctive_matched))
+            return True, min(1.0, 0.7 + 0.3 * ratio), why
+
+        # No app-specific words at all ("tap OK", "tap the + button"). Matching
+        # the widget class was tried here and rejected: tapping some Button is
+        # not evidence that the "+" button was tapped. Such a step is reported
+        # unmatched rather than guessed at, which costs both tools equally.
+        if matched:
+            return False, 0.45, "only generic tokens: %s" % ",".join(sorted(matched))
+        return False, 0.0, "no token overlap"
 
     def _match_outcome(self, expected_tokens, action):
-        observed = tokenize(action.token_blob() + " " + " ".join(action.stop_texts[:40]))
-        if action.state_changed:
-            observed.add("changed")
-            observed.add("navigation")
-        expanded_observed = expand_synonyms(observed)
+        """An outcome step ("the results appear") needs the thing on screen.
+
+        state_changed used to rescue any weak outcome, so every navigating
+        action satisfied almost every outcome step; and the observed text
+        included the action metadata, so "the full-screen clock is displayed"
+        matched an am-start intent on the token "clock". The destination screen
+        text is the only admissible evidence here.
+        """
+        screen = tokenize(" ".join(action.stop_texts[:60]))
+        observed = screen | tokenize(action.content_blob())
+        expanded_observed = comparable(observed)
         content = content_tokens(expected_tokens)
-        matched = set()
-        for token in content:
-            if expand_synonyms({token}) & expanded_observed:
-                matched.add(token)
-        if action.state_changed and (content & OUTCOME_HINTS or not content):
-            matched.add("changed")
-        if not matched:
-            return False, 0.0, "outcome not observed"
+        core = self._distinctive(content - OUTCOME_HINTS)
+        if not core:
+            # Nothing app-specific to look for; a state change is all that can
+            # be checked, which is too weak to count as covering a step.
+            return False, 0.0, "outcome has no checkable content"
+        core_matched = set(
+            token for token in core
+            if comparable({token}) & expanded_observed
+        )
+        need = _required_hits(len(core))
+        if len(core_matched) < need:
+            return False, 0.0, "outcome not observed on screen"
         success_tokens = {"successful", "success", "logged"}
         if expected_tokens & success_tokens and not action.state_changed:
             return False, 0.0, "success outcome without state change"
-        core = content - OUTCOME_HINTS
-        if core:
-            core_hit = False
-            for token in core:
-                if expand_synonyms({token}) & expanded_observed:
-                    core_hit = True
-                    break
-            if not core_hit and not action.state_changed:
-                return False, 0.0, "outcome missing core tokens"
-        ratio = float(len(matched)) / float(max(1, len(content)))
-        if ratio < 0.5 and not action.state_changed:
-            return False, 0.0, "outcome weak"
-        return True, min(1.0, 0.6 + 0.4 * ratio), "outcome tokens=%s" % ",".join(sorted(matched))
+        ratio = float(len(core_matched)) / float(len(core))
+        return True, min(1.0, 0.6 + 0.4 * ratio), "outcome tokens=%s" % ",".join(
+            sorted(core_matched)
+        )
 
     def _merge_llm(self, deterministic, llm_result, covering, partial):
         status = llm_result.get("status")
@@ -434,6 +709,83 @@ class FeatureMatcher(object):
         )
 
 
+def _on_non_app_surface(action):
+    """True when the action was performed on the launcher or the status bar."""
+    for activity in (action.start_activity, action.stop_activity):
+        if not activity:
+            continue
+        lowered = activity.lower()
+        if any(surface in lowered for surface in NON_APP_SURFACES):
+            return True
+    return False
+
+
+_OR_SPLIT = re.compile(r"\s+or\s+", re.I)
+
+
+def _alternatives(step):
+    """A step's interchangeable forms, split on "or".
+
+    Brackets are opened out first: in "Open Settings (or the overflow menu)"
+    the "or" is glued to a parenthesis, so the step read as one bag of words
+    demanded "settings" and "overflow" together.
+    """
+    opened = re.sub(r"[()\[\]]", " ", step or "")
+    parts = [part.strip() for part in _OR_SPLIT.split(opened) if part.strip()]
+    if len(parts) < 2:
+        return [step]
+    # The full wording stays in the list: "Pause, resume, reset or delete a
+    # timer" splits into fragments that each lose the noun.
+    return [step] + parts
+
+
+def _required_hits(total):
+    """How many of a step's key words the action must carry.
+
+    Capped, because a descriptive step such as "enable Touch to capture;
+    tapping anywhere on the preview takes a photo" has seven key words and no
+    single widget will ever carry five of them.
+    """
+    return max(1, min(int(_ceil(0.6 * total)), 3))
+
+
+def _verb_conflict(step_tokens, label_tokens):
+    """Operations named by the step and by the widget that cannot be the same.
+
+    Returns a (step_verb, label_verb) pair, or None when they are compatible.
+    Verbs in no known group, or absent from either side, never conflict.
+    """
+    def groups_for(tokens):
+        found = []
+        for index, group in enumerate(VERB_GROUPS):
+            if tokens & group:
+                found.append(index)
+        return found
+
+    step_groups = groups_for(step_tokens)
+    label_groups = groups_for(label_tokens)
+    if not step_groups or not label_groups:
+        return None
+    if set(step_groups) & set(label_groups):
+        return None
+    # Tapping is how nearly every step is performed, so it never conflicts.
+    if step_groups == [0] or label_groups == [0]:
+        return None
+    step_verb = sorted(step_tokens & VERB_GROUPS[step_groups[0]])[0]
+    label_verb = sorted(label_tokens & VERB_GROUPS[label_groups[0]])[0]
+    return step_verb, label_verb
+
+
+def _is_better(candidate, incumbent):
+    """Higher status wins; equal status breaks on confidence."""
+    if incumbent is None:
+        return True
+    rank = STATUS_RANK_VALUE(candidate.status) - STATUS_RANK_VALUE(incumbent.status)
+    if rank != 0:
+        return rank > 0
+    return candidate.confidence > incumbent.confidence
+
+
 def STATUS_RANK_VALUE(status):
     from .models import STATUS_RANK
     return STATUS_RANK.get(status, 0)
@@ -447,9 +799,15 @@ def unique(items):
     return seen
 
 
+_CAMEL = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
+
+
 def tokenize(text):
     if not text:
         return set()
+    # Split camelCase before lowercasing: resource ids such as
+    # actionCreateHabit otherwise survive as one unmatchable token.
+    text = _CAMEL.sub(" ", str(text))
     text = text.lower().replace("_", " ")
     text = re.sub(r"[^a-z0-9\s]", " ", text)
     tokens = set()
@@ -463,8 +821,58 @@ def tokenize(text):
     return tokens
 
 
+_BRITISH = (
+    ("isation", "ization"), ("isational", "izational"), ("ise", "ize"),
+    ("ising", "izing"), ("ised", "ized"), ("iser", "izer"),
+    ("our", "or"), ("ours", "ors"), ("oured", "ored"), ("ouring", "oring"),
+    ("logue", "log"), ("ogramme", "ogram"), ("yse", "yze"),
+)
+
+
+def stem(token):
+    """Fold spelling and inflection so ground truth and UI labels can meet.
+
+    Ground truth is written in British English by hand while apps ship
+    American identifiers: "Customise colours" has to reach
+    settings_color_customization_holder, and "contacts" has to reach
+    "contact". Deliberately crude -- it only has to make these two
+    vocabularies comparable, and it is applied to both sides equally.
+    """
+    word = token
+    for british, american in _BRITISH:
+        if word.endswith(british):
+            word = word[: -len(british)] + american
+            break
+    for suffix in ("ization", "isation"):
+        if word.endswith(suffix) and len(word) > len(suffix) + 2:
+            word = word[: -len(suffix)] + "ize"
+            break
+    if word.endswith("ies") and len(word) > 4:
+        word = word[:-3] + "y"
+    elif word.endswith("ses") and len(word) > 4:
+        word = word[:-2]
+    elif word.endswith("s") and not word.endswith("ss") and len(word) > 3:
+        word = word[:-1]
+    if word.endswith("ing") and len(word) > 6:
+        word = word[:-3]
+    elif word.endswith("ed") and len(word) > 5:
+        word = word[:-2]
+    if word.endswith("e") and len(word) > 4:
+        word = word[:-1]
+    return word
+
+
+def stems(tokens):
+    return set(stem(token) for token in tokens)
+
+
 def content_tokens(tokens):
     return set(tokens) - STOPWORDS
+
+
+def comparable(tokens):
+    """Synonym-expanded and stemmed, the form both sides are compared in."""
+    return stems(expand_synonyms(tokens))
 
 
 def expand_synonyms(tokens):
@@ -486,6 +894,12 @@ def is_outcome_step(tokens):
 
 def event_type_compatible(expected_tokens, event_type, key_name):
     event_type = (event_type or "").lower()
+    # "long-press the habit" is a different gesture from tapping it, and the
+    # generic press hint accepted both -- so an ordinary touch on a label
+    # reading "Habits" satisfied a step about long-pressing a habit.
+    if expected_tokens & {"long", "hold", "longpress"} and (
+            expected_tokens & {"press", "touch", "tap", "click", "hold"}):
+        return event_type == "long_touch"
     allowed = None
     for token in expected_tokens:
         hinted = EVENT_TYPE_HINTS.get(token)

@@ -1,166 +1,167 @@
 {
   "application": "RadioDroid",
   "total_features": 32,
-  "covered_features": 1,
-  "uncovered_features": 24,
-  "partial_features": 7,
-  "coverage": 0.03125,
-  "coverage_percentage": 3.12,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/radiodroid",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/radiodroid/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 14,
+  "partial_features": 18,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/radiodroid",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/radiodroid/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/radiodroid/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Browse popular radio stations",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_011",
+        "test_013",
+        "test_027"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Selected a station but did not switch between sub-lists or play it.",
-        "touch ActivityMain/TextView-Stations"
+        "open the \"Stations\" screen: touch TextView \"Stations\" activity=ActivityMain (tokens=stations)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "open the \"Stations\" screen"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT002",
       "name": "Search for a station by name",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Did not tap the search icon, type a station name, or tap a result.",
-        "touch ActivityMain/ImageView-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Search stations by tag, country, language or state",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Did not open the search screen or switch to advanced search.",
-        "touch ActivityMain/ImageView-"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "tap a station: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
+      ],
+      "matched_path": [
+        "tap a station"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT004",
       "name": "Play a station",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_027"
       ],
-      "confidence": 0.6,
+      "confidence": 0.6667,
       "evidence": [
-        "Long-press station; tap bar not expanded",
-        "long_touch ActivityMain/LinearLayout-"
+        "Tap the station in any list: touch TextView \"Stations\" activity=ActivityMain (tokens=station)",
+        "playback starts and the player bar appears at the bottom: touch ImageView rid=navigation_bar_item_icon_view activity=ActivityMain state_changed (outcome tokens=playback,player)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Tap the station in any list",
+        "playback starts and the player bar appears at the bottom"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT005",
       "name": "Stop playback",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Tap stop control; not in expanded player",
-        "touch ActivityMain/ImageView-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT006",
       "name": "Add a station to favourites",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Long-press station; no star action"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT007",
       "name": "Remove a station from favourites",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "Long-pressed station; tapped 'Favourites' screen.",
-        "long_touch ActivityMain/LinearLayout-",
-        "touch ActivityMain/LinearLayout-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT008",
       "name": "Reorder favourite stations",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No reorder action attempted.",
-        "touch ActivityMain/ViewGroup-",
-        "touch ActivityMain/TextView-Settings"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT009",
       "name": "View station details",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
         "test_001"
       ],
-      "confidence": 0.9,
+      "confidence": 0.3333,
       "evidence": [
-        "Tapped station; opened detail page.",
-        "touch ActivityMain/LinearLayout-",
-        "touch ActivityMain/TextView-Radio Para",
-        "Completed by later features: G006"
+        "Tap a station: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Tap a station"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT010",
       "name": "Vote for a station",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "long_touch actions"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -168,72 +169,87 @@
       "name": "Open a station's homepage",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "long_touch actions"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT012",
       "name": "Share a station",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "long_touch actions"
+      "status": "partial",
+      "test_cases": [
+        "test_001"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "choose whether to share the stream URL or the station page: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
+      ],
+      "matched_path": [
+        "choose whether to share the stream URL or the station page"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT013",
       "name": "Record the stream to a file",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_027"
       ],
-      "confidence": 0.6,
+      "confidence": 0.2,
       "evidence": [
-        "Partial steps completed, lacks record and stop actions.",
-        "touch ActivityMain/ImageButton-"
+        "Start playing a station: touch TextView \"Stations\" rid=navigation_bar_item_large_label_view activity=ActivityMain (outcome tokens=start)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Start playing a station"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT014",
       "name": "Browse and play saved recordings",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No actions related to browsing or playing saved recordings.",
-        "touch ActivityMain/TextView-History"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT015",
       "name": "View the played-track history",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No actions related to viewing played-track history.",
-        "touch ActivityMain/TextView-History"
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "tap an entry to search for it: touch ImageView \"Search\u2026\" activity=ActivityMain (tokens=search)"
+      ],
+      "matched_path": [
+        "tap an entry to search for it"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT016",
@@ -241,38 +257,44 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to setting a sleep timer."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT017",
       "name": "Set a radio alarm clock",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to setting a radio alarm clock."
+      "status": "partial",
+      "test_cases": [
+        "test_017"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1429,
+      "evidence": [
+        "tap \"Alarm\": touch TextView \"Alarm\" rid=title activity=ActivityMain state_changed (tokens=alarm)"
+      ],
+      "matched_path": [
+        "tap \"Alarm\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.14285714285714285
     },
     {
       "id": "GT018",
       "name": "Enable, edit or delete an alarm",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to enabling, editing or deleting an alarm."
+      "status": "partial",
+      "test_cases": [
+        "test_017"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Alarm screen: touch TextView \"Alarm\" rid=title activity=ActivityMain state_changed (tokens=alarm)"
+      ],
+      "matched_path": [
+        "Open the Alarm screen"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT019",
@@ -280,11 +302,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No import functionality found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -293,11 +313,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No export functionality found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -306,135 +324,181 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No cast functionality found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT022",
       "name": "Send playback to an MPD server",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT023",
       "name": "Control playback from the notification",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_019",
+        "test_021",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6133,
+      "evidence": [
+        "Start a station: touch ImageButton \"Play\" rid=buttonPlay state_changed (tokens=start)",
+        "use the play/stop and record controls displayed there: set_text EditText \"test\" rid=search text=test activity=ActivityMain (outcome tokens=play,record,stop)"
+      ],
+      "matched_path": [
+        "Start a station",
+        "use the play/stop and record controls displayed there"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT024",
       "name": "Choose the media player engine",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT025",
       "name": "Adjust the streaming buffer and resume behaviour",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_011",
+        "test_013",
+        "test_019",
+        "test_027"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Partial because only settings opened, buffer not adjusted.",
-        "touch ActivityMain/TextView-Settings"
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT026",
       "name": "Set the recordings folder and naming",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No relevant actions for setting recordings folder and naming."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT027",
       "name": "Restrict playback or downloads to Wi-Fi",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_019"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Partial because settings opened, Wi-Fi restriction not enabled.",
-        "touch ActivityMain/TextView-Settings"
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT028",
       "name": "Change the theme",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to theme change."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT029",
       "name": "Change the station list layout and icon display",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to station list layout or icon display."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT030",
       "name": "Select the radio-browser server or mirror",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to server or mirror selection."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT031",
@@ -442,12 +506,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no long press or shortcut addition action",
-        "touch TextView 'Stations'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -456,11 +517,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -499,7 +558,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -525,7 +584,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -551,7 +610,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -577,7 +636,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -616,7 +675,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -655,7 +714,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -681,7 +740,7 @@
       "name_similarity": 0.75,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -694,7 +753,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -746,7 +805,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -759,7 +818,7 @@
       "name_similarity": 0.455,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -772,7 +831,7 @@
       "name_similarity": 0.176,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -798,7 +857,7 @@
       "name_similarity": 0.125,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -824,7 +883,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -837,7 +896,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -850,7 +909,7 @@
       "name_similarity": 0.125,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -899,11 +958,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 154,
+  "actions_with_widget": 125,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 8,
+  "exercised_features": 18,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.09999999999999998,
-  "weighted_coverage_percentage": 10.0,
+  "weighted_coverage": 0.18363095238095234,
+  "weighted_coverage_percentage": 18.36,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

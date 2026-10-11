@@ -8,18 +8,21 @@ Total Actions    : 47
 
 Total Features   : 28
 Covered Features : 0
-Partial          : 6
-Uncovered        : 22
+Partial          : 11
+Uncovered        : 17
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 6.79%  (mean completion ratio; partial steps count)
-Exercised        : 6  (covered 0 + partial 6)
+Weighted Coverage: 9.44%  (mean completion ratio; partial steps count)
+Exercised        : 11  (covered 0 + partial 11)
 
 ground_truth_source: independent_labeled_set
 
-Matcher: VLM/Gemini semantic judge (not token overlap).
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
 
 ----------------------------------------
 FEATURE DETAILS
@@ -28,231 +31,198 @@ FEATURE DETAILS
 [GT001] Create a New Database
 Status     : PARTIAL
 Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 50% of gold steps
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - some steps completed but not fully.
-  - touch SelectDatabaseActivity/Button-CREATE DAT
+  - Tap Create Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
 
 [GT002] Create First/New Account
 Status     : PARTIAL
-Test Cases : test_001
+Test Cases : test_001, test_005, test_009
 Confidence : 0.50
-Matcher    : vlm
-Completion : 30% of gold steps
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - some steps completed but not fully.
-  - touch MainActivity/Button-CREATE NEW
+  - Tap Add Account (+): touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)
+  - Enter an Account Name: set_text EditText "Account name" rid=editTextAccountName text=testcube.mmb activity=AccountEditActivity (tokens=account,name)
+  - Select Currency: touch TextView "SELECT CURRENCY" activity=AccountEditActivity (tokens=currency)
+  - Set Opening Date: touch TextView "To Date" rid=textViewToDate activity=SearchActivity state_changed (tokens=date,opening)
 
 [GT003] Add a Transaction
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.70
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_011
+Confidence : 0.10
+Matcher    : deterministic
+Completion : 11% of gold steps
 Evidence   :
-  - some steps completed but not fully.
-  - touch AccountEditActivity/EditText-1
+  - Optionally enter Transaction Number and Note: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=number,transaction)
 
 [GT004] Edit / Delete / Modify a Transaction
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.70
-Matcher    : vlm
-Completion : 30% of gold steps
-Evidence   :
-  - Partial steps completed, but transaction not fully edited or deleted.
-  - touch MainActivity/TextView-All transa
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT005] Filter Transactions by Date Range
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 40% of gold steps
+Test Cases : test_001, test_005, test_007, test_009
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - Partial steps completed, but date range not fully set.
-  - touch SearchActivity/TextView-To Date
+  - View the updated filtered transaction list: touch Button "OK" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)
 
 [GT006] Search/Sort Transactions
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.50
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_007
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - Partial steps completed, but search term not fully entered.
-  - set_text SearchActivity/EditText-Transactio
+  - Or tap Sort and select a field: touch Button "Sort" rid=menu_sort activity=MainActivity state_changed (tokens=sort)
 
 [GT007] Mark Account as Favorite
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No actions related to Mark Account as Favorite.
 
 [GT008] Manage Accounts
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No actions related to Manage Accounts.
+  - Tap Add (+) to create a new account: touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)
 
 [GT009] Set Up a Budget
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No actions related to Set Up a Budget.
 
 [GT010] Set/Edit a Category Budget Amount
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to setting/editing a category budget amount
 
 [GT011] View Budget Details / Transactions
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_005, test_007, test_009
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - no actions related to viewing budget details/transactions
+  - View the filtered transaction list: touch Button "OK" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)
 
 [GT012] Delete a Budget
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to deleting a budget
 
 [GT013] Configure Budget View Options
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to budget view options
 
 [GT014] Create a Recurring/Scheduled Transaction
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to creating a recurring transaction
 
 [GT015] Respond to a Recurring Transaction Prompt
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to responding to a recurring transaction prompt
 
 [GT016] Manage Payees
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_011
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - no actions related to Manage Payees
+  - Open the Payee field while adding or editing a transaction, or navigate to Payees: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)
 
 [GT017] Manage Categories
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_011
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - no actions related to Manage Categories
+  - Open the Category field while adding or editing a transaction, or navigate to Categories: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)
 
 [GT018] View a Built-In Report
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no actions related to View a Built-In Report
 
 [GT019] Run a General Report
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold capability
-  - later GT001: Select the 'Create a database' option from the main menu.
 
 [GT020] Track Stock/Mutual Fund Investments
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold capability
-  - later GT001: Select the 'Create a database' option from the main menu.
 
 [GT021] Add a Stock Transaction
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold capability
-  - touch AccountEditActivity/EditText-1
 
 [GT022] Track Fixed Assets
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT023] Manage Currencies & Exchange Rates
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - no relevant actions found
+  - Add a currency: touch TextView "SELECT CURRENCY" activity=AccountEditActivity (tokens=currency)
 
 [GT024] Set Up Data Sync
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - no relevant actions found
+  - On the create or open screen, tap Open Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
 
 [GT025] Set/Change Database Password
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for setting database password
-  - later PasswordActivity/Button-OK
 
 [GT026] Enable Fingerprint/Biometric Lock
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for enabling fingerprint/biometric lock
-  - later GeneralSettingsActivity/ImageButton-
 
 [GT027] Import/Export via QIF or CSV
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for importing/exporting via QIF or CSV
-  - later SelectDatabaseActivity/Button-CREATE DAT
 
 [GT028] Configure App Settings
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 28 features covered
-6 / 28 features partial
+11 / 28 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 6.79%
+Weighted Feature Coverage = mean(completion_ratio) = 9.44%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -271,27 +241,27 @@ Feature-inference P/R/F1: 1.00 / 1.00 / 1.00 (false not_present=0)
 GT GT001 'Create a New Database' | journal=GT001 'New database' (sim=0.667, name) status=partial | offline=partial
 GT GT002 'Create First/New Account' | journal=GT002 'New account' (sim=0.5, name) status=partial | offline=partial
 GT GT003 'Add a Transaction' | journal=GT003 'Add transaction' (sim=1.0, name) status=partial | offline=partial
-GT GT004 'Edit / Delete / Modify a Transaction' | journal=GT004 'Edit transaction' (sim=0.5, name) status=partial | offline=partial
+GT GT004 'Edit / Delete / Modify a Transaction' | journal=GT004 'Edit transaction' (sim=0.5, name) status=partial | offline=not_covered
 GT GT005 'Filter Transactions by Date Range' | journal=GT005 'Filter by date' (sim=0.5, name) status=partial | offline=partial
 GT GT006 'Search/Sort Transactions' | journal=GT006 'Search transactions' (sim=0.667, name) status=partial | offline=partial
 GT GT007 'Mark Account as Favorite' | journal=GT007 'Favorite account' (sim=0.667, name) status=pending | offline=not_covered
-GT GT008 'Manage Accounts' | journal=GT008 'Manage accounts' (sim=1.0, name) status=pending | offline=not_covered
+GT GT008 'Manage Accounts' | journal=GT008 'Manage accounts' (sim=1.0, name) status=pending | offline=partial
 GT GT009 'Set Up a Budget' | journal=GT009 'Budget' (sim=0.5, name) status=pending | offline=not_covered
 GT GT010 'Set/Edit a Category Budget Amount' | journal=GT010 'Budget amount' (sim=0.4, name) status=pending | offline=not_covered
-GT GT011 'View Budget Details / Transactions' | journal=GT011 'Budget details' (sim=0.5, name) status=pending | offline=not_covered
+GT GT011 'View Budget Details / Transactions' | journal=GT011 'Budget details' (sim=0.5, name) status=pending | offline=partial
 GT GT012 'Delete a Budget' | journal=GT012 'Delete budget' (sim=1.0, name) status=pending | offline=not_covered
 GT GT013 'Configure Budget View Options' | journal=GT013 'Budget view options' (sim=0.75, name) status=pending | offline=not_covered
 GT GT014 'Create a Recurring/Scheduled Transaction' | journal=GT014 'Scheduled transaction' (sim=0.5, name) status=pending | offline=not_covered
 GT GT015 'Respond to a Recurring Transaction Prompt' | journal=GT015 'Recurring prompt' (sim=0.5, name) status=pending | offline=not_covered
-GT GT016 'Manage Payees' | journal=GT016 'Payees' (sim=0.5, name) status=pending | offline=not_covered
-GT GT017 'Manage Categories' | journal=GT017 'Categories' (sim=0.5, name) status=pending | offline=not_covered
+GT GT016 'Manage Payees' | journal=GT016 'Payees' (sim=0.5, name) status=pending | offline=partial
+GT GT017 'Manage Categories' | journal=GT017 'Categories' (sim=0.5, name) status=pending | offline=partial
 GT GT018 'View a Built-In Report' | journal=GT018 'Built-in report' (sim=0.667, name) status=pending | offline=not_covered
 GT GT019 'Run a General Report' | journal=GT019 'General report' (sim=0.667, name) status=pending | offline=not_covered
 GT GT020 'Track Stock/Mutual Fund Investments' | journal=GT020 'Investments' (sim=0.385, name) status=pending | offline=not_covered
 GT GT021 'Add a Stock Transaction' | journal=GT021 'Stock transaction' (sim=0.667, name) status=pending | offline=not_covered
 GT GT022 'Track Fixed Assets' | journal=GT022 'Fixed assets' (sim=0.667, name) status=pending | offline=not_covered
-GT GT023 'Manage Currencies & Exchange Rates' | journal=GT023 'Currencies' (sim=0.357, name) status=pending | offline=not_covered
-GT GT024 'Set Up Data Sync' | journal=GT024 'Sync' (sim=0.333, name) status=pending | offline=not_covered
+GT GT023 'Manage Currencies & Exchange Rates' | journal=GT023 'Currencies' (sim=0.357, name) status=pending | offline=partial
+GT GT024 'Set Up Data Sync' | journal=GT024 'Sync' (sim=0.333, name) status=pending | offline=partial
 GT GT025 'Set/Change Database Password' | journal=GT025 'Database password' (sim=0.625, name) status=pending | offline=not_covered
 GT GT026 'Enable Fingerprint/Biometric Lock' | journal=GT026 'Fingerprint lock' (sim=0.5, name) status=pending | offline=not_covered
 GT GT027 'Import/Export via QIF or CSV' | journal=GT027 'Import export' (sim=0.4, name) status=pending | offline=not_covered

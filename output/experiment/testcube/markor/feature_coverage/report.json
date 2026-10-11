@@ -6,52 +6,30 @@
   "partial_features": 1,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/markor",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/markor/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/markor/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/markor",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/markor/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/markor/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Browse the notebook folder",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "opened app, tapped 'Files', but did not enter folder",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/Button-DONE",
-        "touch StoragePermissionActivity/Button-OK",
-        "touch StoragePermissionActivity/Button-OK",
-        "touch StoragePermissionActivity/View-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
       "name": "Create a new plain text or Markdown document",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "did not create a new document",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/ImageButton-",
-        "touch IntroActivity/Button-DONE",
-        "touch StoragePermissionActivity/Button-OK",
-        "touch StoragePermissionActivity/Button-OK",
-        "touch StoragePermissionActivity/View-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -60,11 +38,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -73,12 +49,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps missing; no folder creation",
-        "touch StoragePermissionActivity/Button-EXIT"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -87,12 +60,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps missing; no document editing",
-        "touch IntroActivity/Button-DONE"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -101,11 +71,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -114,11 +82,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to Markdown formatting."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -127,11 +93,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to list insertion."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -140,11 +104,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to link insertion."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -153,11 +115,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -166,11 +126,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -179,11 +137,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -192,11 +148,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to table insertion"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -205,11 +159,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to undo/redo edits"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -218,11 +170,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to document search"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -231,11 +181,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to searching across files."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -244,11 +192,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to opening QuickNote file."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -257,26 +203,27 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to opening To-Do file."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT019",
       "name": "Manage a todo.txt file",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no todo.txt file management actions",
-        "later IntroActivity/ImageButton-"
+      "status": "partial",
+      "test_cases": [
+        "test_001"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "the todo.txt action bar appears: touch ImageButton \"NEXT\" rid=next activity=IntroActivity state_changed (outcome tokens=todo,txt)"
+      ],
+      "matched_path": [
+        "the todo.txt action bar appears"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT020",
@@ -284,12 +231,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no Zim Wiki file editing actions",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -298,12 +242,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no file editing actions for AsciiDoc, Org-Mode, CSV, or plain text",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -312,12 +253,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No CSV file opened or previewed.",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -326,12 +264,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No Markdown file created or previewed.",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -340,12 +275,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No document opened or exported.",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -354,12 +286,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps missing for sharing document",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -368,12 +297,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps missing for renaming file or folder",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -382,12 +308,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps missing for moving or copying files and folders",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -396,11 +319,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -409,11 +330,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -422,11 +341,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -435,12 +352,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -449,12 +363,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -463,12 +374,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "later IntroActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -477,17 +385,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/Button-DONE",
-        "later StoragePermissionActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -496,17 +396,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/Button-DONE",
-        "later StoragePermissionActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -515,17 +407,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/Button-DONE",
-        "later StoragePermissionActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -534,11 +418,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -547,11 +429,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -560,11 +440,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -572,18 +450,10 @@
       "name": "Change the notebook (root) directory",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no steps match gold",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/ImageButton-",
-        "later IntroActivity/Button-DONE",
-        "later StoragePermissionActivity/Button-OK"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -592,11 +462,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -605,11 +473,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -618,12 +484,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps do not match gold",
-        "none of the steps match the gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -632,12 +495,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps do not match gold",
-        "none of the steps match the gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -646,12 +506,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps do not match gold",
-        "none of the steps match the gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -660,11 +517,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -677,7 +532,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -911,7 +766,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1285,11 +1140,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 41,
+  "actions_with_widget": 20,
   "ground_truth_source": "independent_labeled_set",
   "exercised_features": 1,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.004347826086956522,
-  "weighted_coverage_percentage": 0.43,
+  "weighted_coverage": 0.005434782608695652,
+  "weighted_coverage_percentage": 0.54,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

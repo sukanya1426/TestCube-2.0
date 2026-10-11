@@ -1,96 +1,74 @@
 {
   "application": "Aegis Authenticator",
   "total_features": 40,
-  "covered_features": 1,
-  "uncovered_features": 36,
-  "partial_features": 3,
-  "coverage": 0.025,
-  "coverage_percentage": 2.5,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/aegis",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/aegis/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/aegis/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 32,
+  "partial_features": 8,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/aegis",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/aegis/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/aegis/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Create and encrypt the vault on first launch",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps completed, but vault creation and encryption not fully covered.",
-        "scroll IntroActivity/RecyclerView-",
-        "touch IntroActivity/TextView-Want to im",
-        "touch IntroActivity/Button-Import Aeg",
-        "touch IntroActivity/TextView-Welcome"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
       "name": "Unlock the vault with a password",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps related to vault unlocking with a password.",
-        "touch IntroActivity/TextView-Want to im",
-        "touch IntroActivity/Button-",
-        "scroll IntroActivity/RecyclerView-",
-        "scroll IntroActivity/RecyclerView-",
-        "scroll IntroActivity/RecyclerView-",
-        "scroll IntroActivity/RecyclerView-",
-        "touch IntroActivity/TextView-Aegis is a",
-        "touch IntroActivity/RadioButton-None"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Unlock the vault with biometrics",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
+      "status": "partial",
+      "test_cases": [
+        "test_004"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT004",
       "name": "Add an entry by scanning a QR code",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Tap '+' button; grant camera permission; point at QR code.",
-        "touch IntroActivity/Button-",
-        "set_text IntroActivity/EditText-Please ent"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Add an entry from a QR code image",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No actions related to scanning image or gallery."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -98,12 +76,10 @@
       "name": "Add an entry manually",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No actions related to manual entry or shared secret."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -111,13 +87,10 @@
       "name": "Edit an entry",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing for entry editing",
-        "long_touch IntroActivity/TextView-Aegis is a"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -125,29 +98,22 @@
       "name": "Set a custom icon for an entry",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing for icon setting",
-        "touch IntroActivity/TextView-Want to im"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT009",
       "name": "Import an icon pack",
-      "status": "covered",
+      "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing for icon pack import",
-        "touch IntroActivity/TextView-Want to im",
-        "Completed by later features: G001, G002"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT010",
@@ -155,11 +121,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -168,11 +132,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -181,11 +143,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -194,11 +154,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No search functionality observed."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -207,11 +165,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No sort functionality observed."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -220,11 +176,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No manual reordering functionality observed."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -233,11 +187,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -246,11 +198,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -259,11 +209,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -272,11 +220,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -285,11 +231,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -298,11 +242,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -310,12 +252,10 @@
       "name": "Export the vault as an encrypted file",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -323,39 +263,38 @@
       "name": "Export the vault in plain text or as HTML",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT024",
       "name": "Import a vault from Aegis or another authenticator",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_008"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1107,
+      "evidence": [
+        "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo): long_touch TextView \"Aegis is a free, secure and open source 2FA app\" rid=descriptionText activity=IntroActivity (tokens=2,aegis,free,source)"
+      ],
+      "matched_path": [
+        "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo)"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.14285714285714285
     },
     {
       "id": "GT025",
       "name": "Import entries by scanning a Google Authenticator transfer QR code",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no steps aligned with gold capability",
-        "later IntroActivity/TextView-Want to im"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -363,82 +302,115 @@
       "name": "Set or change the vault password",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_004",
+        "test_006"
       ],
-      "confidence": 0.7,
+      "confidence": 0.3333,
       "evidence": [
-        "partial steps towards setting password",
-        "touch IntroActivity/Button-"
+        "tap \"Security\": touch TextView \"Security\" activity=IntroActivity (tokens=security)",
+        "enter the current password: set_text EditText \"Please enter a password\" rid=text_password text=TestCube!2026 activity=IntroActivity state_changed (tokens=password)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "tap \"Security\"",
+        "enter the current password"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT027",
       "name": "Add a second unlock method (password slot)",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no steps aligned with gold capability",
-        "later IntroActivity/TextView-Want to im"
+      "status": "partial",
+      "test_cases": [
+        "test_004"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT028",
       "name": "Configure automatic locking",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards configuring automatic locking."
+      "status": "partial",
+      "test_cases": [
+        "test_004"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT029",
       "name": "Set the lock timeout",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards setting the lock timeout."
+      "status": "partial",
+      "test_cases": [
+        "test_004"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT030",
       "name": "Block screenshots and screen recording",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards blocking screenshots and screen recording."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_011",
+        "test_012",
+        "test_013",
+        "test_014",
+        "test_015",
+        "test_016",
+        "test_017",
+        "test_018",
+        "test_019"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT031",
       "name": "Enable a panic trigger",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to enabling a panic trigger."
+      "status": "partial",
+      "test_cases": [
+        "test_004"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+      ],
+      "matched_path": [
+        "Security"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT032",
@@ -446,11 +418,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to enabling automatic backups."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -459,11 +429,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to enabling Android system backups."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -472,12 +440,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards theme change",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -486,12 +451,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards accent colour change",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -500,12 +462,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps towards view mode change",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -514,11 +473,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -527,11 +484,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -540,11 +495,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -553,11 +506,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to 'About' screen or licences"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -570,7 +521,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -596,7 +547,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -609,7 +560,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -674,7 +625,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -869,7 +820,7 @@
       "name_similarity": 0.154,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -908,7 +859,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -921,7 +872,7 @@
       "name_similarity": 0.071,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -934,7 +885,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -947,7 +898,7 @@
       "name_similarity": 0.062,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -960,7 +911,7 @@
       "name_similarity": 0.059,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1100,11 +1051,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 82,
+  "actions_with_widget": 36,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 4,
+  "exercised_features": 8,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.04575,
-  "weighted_coverage_percentage": 4.58,
+  "weighted_coverage": 0.050238095238095234,
+  "weighted_coverage_percentage": 5.02,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

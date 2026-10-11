@@ -1,27 +1,24 @@
 {
   "application": "Amaze File Manager",
   "total_features": 46,
-  "covered_features": 1,
+  "covered_features": 0,
   "uncovered_features": 42,
-  "partial_features": 3,
-  "coverage": 0.021739130434782608,
-  "coverage_percentage": 2.17,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/amaze",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/amaze/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/amaze/ground_truth.json",
+  "partial_features": 4,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/amaze",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/amaze/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/amaze/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Browse internal storage and the SD card",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not followed correctly",
-        "touch MainActivity/TextView-GRANT"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -29,13 +26,10 @@
       "name": "Create a new folder",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not followed correctly",
-        "touch MainActivity/TextView-GRANT"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -43,44 +37,32 @@
       "name": "Create a new empty file",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not followed correctly",
-        "touch MainActivity/TextView-GRANT"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT004",
       "name": "Copy files and folders",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-press and copy actions missing",
-        "long_touch MainActivity/TextView-GRANT",
-        "touch MainActivity/ImageButton-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Move (cut) files and folders",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No cut/move actions found",
-        "intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=..."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -88,13 +70,10 @@
       "name": "Rename a file or folder",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No rename actions found",
-        "intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=..."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -102,13 +81,10 @@
       "name": "Delete files and folders",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "Long-press action not observed",
-        "long_touch MainActivity/TextView-CANCEL"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -116,14 +92,10 @@
       "name": "Select multiple items",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No selection of multiple items",
-        "touch TextView",
-        "touch TextView"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -132,25 +104,30 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT010",
       "name": "Run a deep search across subfolders",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
+      "status": "partial",
+      "test_cases": [
+        "test_022",
+        "test_059"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Tap the search icon: touch Button \"Search\" rid=search activity=MainActivity state_changed (tokens=search)",
+        "type the query: set_text EditText \"Type to search\u2026\" rid=search_edit_text text=test activity=MainActivity state_changed (tokens=query)"
+      ],
+      "matched_path": [
+        "Tap the search icon",
+        "type the query"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT011",
@@ -158,11 +135,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -171,11 +146,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -184,11 +157,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to showing or hiding hidden files."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -197,11 +168,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to opening a file with an external app."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -210,38 +179,46 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to sharing files."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT016",
       "name": "View file properties",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Long-press action not present."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "tap \"Properties\": touch ImageButton \"Properties\" rid=properties activity=MainActivity state_changed (tokens=properties)"
+      ],
+      "matched_path": [
+        "tap \"Properties\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT017",
       "name": "Change file permissions (root)",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Root access not enabled."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "tap Properties: touch ImageButton \"Properties\" rid=properties activity=MainActivity state_changed (tokens=properties)"
+      ],
+      "matched_path": [
+        "tap Properties"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT018",
@@ -249,11 +226,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Long-press and Compress actions not present."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -262,11 +237,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to extracting an archive."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -275,11 +248,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to browsing inside an archive."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -288,11 +259,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to encrypting a file."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -301,12 +270,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "missing steps: choose destination, confirm",
-        "Tap the 'Decrypt' button"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -315,55 +281,48 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "missing steps: choose editor, edit content, save, exit",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT024",
       "name": "Add a folder to the bookmarks",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "missing steps: open navigation drawer, add to bookmarks, confirm name, tap OK",
-        "touch TextView 'Add to Bookmarks'"
+      "status": "partial",
+      "test_cases": [
+        "test_002"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "\"Add to bookmarks\"): touch TextView \"Add to Bookmarks\" rid=title activity=MainActivity state_changed (tokens=bookmarks)"
+      ],
+      "matched_path": [
+        "\"Add to bookmarks\")"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT025",
       "name": "Edit or remove a bookmark",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-press action present, but no edit or delete confirmed.",
-        "long_touch MainActivity/TextView-Since Andr"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT026",
       "name": "Open a second tab / use the dual pane",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No actions related to opening a second tab or using dual pane."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -371,42 +330,32 @@
       "name": "Set a folder as the home directory",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No actions related to setting a folder as the home directory."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT028",
       "name": "Open the app manager",
-      "status": "covered",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "opened navigation drawer, navigated to apps, reviewed, tapped app",
-        "Tap the navigation drawer icon to open the navigation drawer; Scroll to the 'Apps' section in the navigation drawer; Tap 'Apps' to open the app manager"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT029",
       "name": "Uninstall an application from the app manager",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no uninstall action present",
-        "Tap the navigation drawer icon to open the navigation drawer; Scroll to the 'Apps' section in the navigation drawer; Tap 'Apps' to open the app manager"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -414,13 +363,10 @@
       "name": "Back up an installed app's APK",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "no backup action present",
-        "intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=..."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -429,12 +375,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -443,12 +386,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -457,12 +397,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -471,12 +408,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/TextView-CANCEL"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -485,12 +419,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch TextView 'Since Android 11, Google requests File Managers to reques...'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -499,42 +430,31 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch TextView 'Since Android 11, Google requests File Managers to reques...'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT037",
       "name": "View recent files",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Tap 'Recent files' but navigation drawer not opened",
-        "touch TextView 'Since Android 11, Google requests File Managers to reques...'"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT038",
       "name": "Browse files by category",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No category selection or file review",
-        "intent intent=am start com.amaze.filemanager/com.amaze.filemanager.ui.activities.MainActivity activity=..."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -542,13 +462,10 @@
       "name": "Change the theme",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No theme selection or settings interaction",
-        "touch MainActivity/TextView-GRANT"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -556,12 +473,10 @@
       "name": "Change the accent and colour scheme",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "Journal lacks relevant actions"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -569,12 +484,10 @@
       "name": "Configure behaviour settings",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "Journal lacks relevant actions"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -582,12 +495,10 @@
       "name": "Enable the encrypted folder/hidden files protection",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "Journal lacks relevant actions"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -595,15 +506,10 @@
       "name": "Add a shortcut to a folder on the home screen",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "actions do not match gold steps",
-        "long_touch",
-        "no overflow menu",
-        "no add shortcut"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -611,14 +517,10 @@
       "name": "Copy a file path to the clipboard",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "actions do not match gold steps",
-        "long_touch",
-        "no copy path"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -626,15 +528,10 @@
       "name": "View storage usage",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "actions do not match gold steps",
-        "long_touch",
-        "no storage entries",
-        "no volume browse"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -643,11 +540,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No navigation drawer or 'About' screen interaction."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -699,7 +594,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -777,7 +672,7 @@
       "name_similarity": 0.6,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -855,7 +750,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -868,7 +763,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -959,7 +854,7 @@
       "name_similarity": 0.267,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -972,7 +867,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1011,7 +906,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1128,7 +1023,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1268,11 +1163,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 175,
+  "actions_with_widget": 116,
   "ground_truth_source": "independent_labeled_set",
   "exercised_features": 4,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.04630434782608695,
-  "weighted_coverage_percentage": 4.63,
+  "weighted_coverage": 0.02608695652173913,
+  "weighted_coverage_percentage": 2.61,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -1,0 +1,749 @@
+{
+  "application": "Fossify Voice Recorder",
+  "total_features": 23,
+  "covered_features": 0,
+  "uncovered_features": 8,
+  "partial_features": 15,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/fossifyvoicerecorder",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyvoicerecorder/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyvoicerecorder/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Record audio",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT002",
+      "name": "Pause and resume a recording",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Watch the live audio level while recording",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Continue recording in the background",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT005",
+      "name": "Browse saved recordings",
+      "status": "partial",
+      "test_cases": [
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the \"Recordings\" tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
+      ],
+      "matched_path": [
+        "Open the \"Recordings\" tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT006",
+      "name": "Play a recording",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_015",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
+      ],
+      "matched_path": [
+        "Open the Recordings tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT007",
+      "name": "Rename a recording",
+      "status": "partial",
+      "test_cases": [
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
+      ],
+      "matched_path": [
+        "Open the Recordings tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT008",
+      "name": "Delete a recording",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Restore or empty the recycle bin",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.4625,
+      "evidence": [
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action: touch TextView \"The recycle bin is empty\" rid=trash_placeholder activity=MainActivity (tokens=bin,empty,recycle)"
+      ],
+      "matched_path": [
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT010",
+      "name": "Share a recording",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "View recording properties",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Search recordings",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_005",
+        "test_016",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the search icon: touch ImageView \"Search\" rid=top_toolbar_search_icon activity=MainActivity state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "tap the search icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT013",
+      "name": "Sort the recordings list",
+      "status": "partial",
+      "test_cases": [
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the Recordings tab: touch Switch \"Start recording automatically after launching the app\" rid=settings_record_after_launch activity=SettingsActivity state_changed (tokens=recordings)",
+        "tap \"Sort by\": touch TextView \"Sort by...\" rid=option_menu_sort activity=PickActivity state_changed (tokens=by,sort)"
+      ],
+      "matched_path": [
+        "Open the Recordings tab",
+        "tap \"Sort by\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT014",
+      "name": "Choose the recording audio format",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT015",
+      "name": "Set the recording bitrate and quality",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT016",
+      "name": "Choose the folder where recordings are saved",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.6667,
+      "evidence": [
+        "Open Settings: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=settings)",
+        "tap the \"Save recordings in\" entry: touch RelativeLayout rid=settings_save_recordings_holder activity=SettingsActivity state_changed (tokens=recordings,save)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "tap the \"Save recordings in\" entry"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
+    },
+    {
+      "id": "GT017",
+      "name": "Hide the recording notification",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_027",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT018",
+      "name": "Keep the screen on while recording",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT019",
+      "name": "Add the quick-record home screen widget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Protect the app with a PIN, pattern or fingerprint",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT021",
+      "name": "Customise the app colours and theme",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)",
+        "tap \"Customise colours\": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "tap \"Customise colours\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT022",
+      "name": "Change the app language and font size",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT023",
+      "name": "View the about screen, FAQ and licences",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_005",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_045"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Record audio",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Pause and resume a recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Watch the live audio level while recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Continue recording in the background",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Browse saved recordings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Play a recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Rename a recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Delete a recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Restore or empty the recycle bin",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Share a recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "View recording properties",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Search recordings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Sort the recordings list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Choose the recording audio format",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Set the recording bitrate and quality",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Choose the folder where recordings are saved",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Hide the recording notification",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Keep the screen on while recording",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Add the quick-record home screen widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Protect the app with a PIN, pattern or fingerprint",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Customise the app colours and theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Change the app language and font size",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "View the about screen, FAQ and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 0,
+    "false_negatives": 23,
+    "false_positives": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 0,
+    "ground_truth_count": 23,
+    "feature_completeness_ratio": 0.0,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 740,
+  "actions_with_widget": 589,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 15,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.2442028985507246,
+  "weighted_coverage_percentage": 24.42,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

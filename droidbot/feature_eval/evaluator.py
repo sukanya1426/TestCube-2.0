@@ -114,6 +114,9 @@ def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
     # Actions the tool issued to reach this coverage. Both tools write one
     # JSON per event, so this is comparable across TestCube and LLMDroid.
     report.total_actions = _count_actions(results_dir)
+    report.actions_with_widget = sum(
+        1 for action in (trace.actions or []) if action.label_blob().strip()
+    )
     _attach_confusion(report, loaded["features"], results_dir, journal_features)
     try:
         from droidbot.feature_tester.guide import classify_ground_truth_source

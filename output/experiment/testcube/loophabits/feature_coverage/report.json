@@ -2,113 +2,100 @@
   "application": "Loop Habit Tracker",
   "total_features": 38,
   "covered_features": 0,
-  "uncovered_features": 25,
-  "partial_features": 13,
+  "uncovered_features": 13,
+  "partial_features": 25,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/loophabits",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/loophabits/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/loophabits",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/loophabits/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/loophabits/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Create a yes/no habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005",
+        "test_013"
       ],
-      "confidence": 0.7,
+      "confidence": 0.1429,
       "evidence": [
-        "Tap 'Yes or No' but no question entered",
-        "touch MainActivity/TextView-Yes or No"
+        "set the frequency: touch TextView \"Frequency\" activity=EditHabitActivity (tokens=frequency)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matched_path": [
+        "set the frequency"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.14285714285714285
     },
     {
       "id": "GT002",
       "name": "Create a measurable habit",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.7,
-      "evidence": [
-        "Tap 'Measurable' but no question entered",
-        "touch MainActivity/TextView-Yes or No"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Set a habit frequency",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No frequency selection or save action"
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "tap the frequency row: touch TextView \"Frequency\" activity=EditHabitActivity (tokens=frequency)"
+      ],
+      "matched_path": [
+        "tap the frequency row"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT004",
       "name": "Set a habit reminder",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps attempted, but not all required actions were completed.",
-        "touch MainActivity/TextView-You have n",
-        "touch MainActivity/TextView-You have n",
-        "touch MainActivity/ImageView-",
-        "touch MainActivity/CheckBox-",
-        "touch ListHabitsActivity/TextView-You have n",
-        "touch ListHabitsActivity/TextView-You have n"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Add notes to a habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_005",
+        "test_013"
       ],
-      "confidence": 0.6,
+      "confidence": 0.25,
       "evidence": [
-        "Partial steps attempted, but not all required actions were completed.",
-        "touch MainActivity/TextView-Habits",
-        "touch MainActivity/TextView-Habits",
-        "touch MainActivity/ImageView-",
-        "touch MainActivity/CheckBox-",
-        "touch ListHabitsActivity/Button-",
-        "touch ListHabitsActivity/TextView-Yes or No"
+        "tap the notes field: touch TextView \"Notes\" activity=EditHabitActivity (tokens=notes)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap the notes field"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT006",
       "name": "Check off a habit for today",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No relevant actions taken to check off a habit.",
-        "nav (screen already shows this destination)"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -116,41 +103,45 @@
       "name": "Enter a value for a measurable habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Some steps were attempted but not fully completed.",
-        "touch MainActivity/View-"
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT008",
       "name": "Check off a habit for an earlier day",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
+      ],
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT009",
       "name": "Mark a day as skipped",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -158,41 +149,38 @@
       "name": "Add a note to a specific day's entry",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch Button 'Add habit'"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "View a habit's detailed statistics",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/TextView-\uf5c0"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
+      ],
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT012",
       "name": "View the score/strength chart",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/Button-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -200,166 +188,167 @@
       "name": "View the history calendar",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_015"
       ],
-      "confidence": 0.6,
+      "confidence": 0.25,
       "evidence": [
-        "Partial because only opened habit detail, not scrolled to History card.",
-        "touch MainActivity/Button-"
+        "tap a day to toggle or edit it: touch TextView \"days\" activity=EditHabitActivity (tokens=day)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "tap a day to toggle or edit it"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT014",
       "name": "View the streaks chart",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial because only opened habit detail, not scrolled to Streaks card.",
-        "touch MainActivity/Button-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT015",
       "name": "View the frequency (weekday/time) chart",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial because only opened habit detail, not scrolled to Frequency card.",
-        "touch MainActivity/Button-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT016",
       "name": "Edit a habit",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Long-pressed but no edit actions",
-        "long_touch MainActivity/TextView-You have n"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT017",
       "name": "Archive a habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Long-pressed but no archive action",
-        "long_touch MainActivity/TextView-You have n"
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT018",
       "name": "Unarchive a habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.2,
       "evidence": [
-        "Long-pressed but no unarchive action",
-        "long_touch MainActivity/TextView-You have n"
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT019",
       "name": "Delete a habit",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.25,
       "evidence": [
-        "Long-press and delete steps attempted but not fully completed.",
-        "long_touch MainActivity/TextView-You have n"
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.6
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT020",
       "name": "Reorder habits manually",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No steps related to reordering habits manually."
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
+      ],
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT021",
       "name": "Sort the habit list",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No steps related to sorting the habit list."
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)"
+      ],
+      "matched_path": [
+        "Open the habit list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT022",
       "name": "Filter the habit list",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005",
+        "test_007",
+        "test_011",
+        "test_027"
       ],
-      "confidence": 0.6,
+      "confidence": 0.5,
       "evidence": [
-        "partially covered, some steps missing",
-        "touch MainActivity/TextView-Yes or No"
+        "Open the habit list: touch TextView \"Habits\" activity=MainActivity (tokens=habit)",
+        "tap \"Filter\": touch Button \"Filter\" rid=action_filter activity=MainActivity state_changed (tokens=filter)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open the habit list",
+        "tap \"Filter\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT023",
       "name": "Change the number of days shown in the list",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -367,40 +356,39 @@
       "name": "Snooze or dismiss a habit reminder",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT025",
       "name": "Enable persistent (sticky) reminder notifications",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing to enable sticky notifications",
-        "touch MainActivity/TextView-Settings"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT026",
       "name": "Add a habit widget to the home screen",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing to add a habit widget",
-        "touch Button \"Got it\""
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -409,161 +397,213 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT028",
       "name": "Export habit data as CSV",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no export steps found"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT029",
       "name": "Create a full database backup",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no backup steps found"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT030",
       "name": "Restore a full backup",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no restore steps found"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT031",
       "name": "Import data from another habit app",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed",
-        "touch Button 'Add habit'"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT032",
       "name": "Repair the database",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed",
-        "touch Button 'Add habit'"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT033",
       "name": "Change the app theme",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed",
-        "touch SettingsActivity/TextView-Settings"
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6381,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)",
+        "choose the light theme, the dark theme or the pure black (AMOLED) variant: touch TextView \"Replaces gray backgrounds with pure black in dark theme. ...\" rid=summary activity=SettingsActivity (tokens=amoled,black,dark,pure,theme)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "choose the light theme, the dark theme or the pure black (AMOLED) variant"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT034",
       "name": "Set the first day of the week",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "touch Button \"Add habit\""
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT035",
       "name": "Set the hour the day starts (day offset)",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "touch Button \"Add habit\""
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT036",
       "name": "Enable or disable the check-mark reverse order and skip days",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "touch Button \"Got it\""
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT037",
       "name": "Open the help and FAQ",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No navigation to Help/FAQ."
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_011",
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the navigation drawer or Settings: touch ImageView \"More options\" activity=MainActivity state_changed (outcome tokens=settings)"
+      ],
+      "matched_path": [
+        "Open the navigation drawer or Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT038",
       "name": "View the about screen",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No navigation to About screen."
+      "status": "partial",
+      "test_cases": [
+        "test_025",
+        "test_027"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings or the drawer: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings or the drawer"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     }
   ],
   "confusion": [
@@ -588,7 +628,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -601,7 +641,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -614,7 +654,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -666,7 +706,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -705,7 +745,7 @@
       "name_similarity": 0.75,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -744,7 +784,7 @@
       "name_similarity": 0.6,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -757,7 +797,7 @@
       "name_similarity": 0.667,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -770,7 +810,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -822,7 +862,7 @@
       "name_similarity": 0.154,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -835,7 +875,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -887,7 +927,7 @@
       "name_similarity": 0.8,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -926,7 +966,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -939,7 +979,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -952,7 +992,7 @@
       "name_similarity": 0.074,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -965,7 +1005,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -978,7 +1018,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -991,7 +1031,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1004,7 +1044,7 @@
       "name_similarity": 0.188,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1017,7 +1057,7 @@
       "name_similarity": 0.176,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1030,7 +1070,7 @@
       "name_similarity": 0.138,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1043,7 +1083,7 @@
       "name_similarity": 0.188,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1056,7 +1096,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1079,11 +1119,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 136,
+  "actions_with_widget": 100,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 13,
+  "exercised_features": 25,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.1105263157894737,
-  "weighted_coverage_percentage": 11.05,
+  "weighted_coverage": 0.20068922305764408,
+  "weighted_coverage_percentage": 20.07,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

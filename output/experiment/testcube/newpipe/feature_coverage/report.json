@@ -1,145 +1,246 @@
 {
   "application": "NewPipe",
   "total_features": 17,
-  "covered_features": 3,
-  "uncovered_features": 11,
-  "partial_features": 3,
-  "coverage": 0.17647058823529413,
-  "coverage_percentage": 17.65,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/newpipe",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/newpipe/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/newpipe/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 6,
+  "partial_features": 11,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/newpipe",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/newpipe/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/newpipe/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "View the newest uploads feed",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "actions do not match gold steps",
-        "set_text",
-        "touch",
-        "scroll"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_037",
+        "test_039",
+        "test_056"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Select the What's New tab: touch LinearLayout \"What's New\" activity=MainActivity state_changed (tokens=s,what)"
+      ],
+      "matched_path": [
+        "Select the What's New tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT002",
       "name": "Look up content by keyword",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "actions do not match gold steps",
-        "touch",
-        "set_text",
-        "touch"
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_011",
+        "test_015",
+        "test_017",
+        "test_029",
+        "test_031",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_062",
+        "test_064"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.475,
+      "evidence": [
+        "Tap the search icon in the toolbar: touch ImageView \"Search\" rid=toolbar_search_clear_icon activity=MainActivity state_changed (tokens=search,toolbar)",
+        "Submit the query with the keyboard action: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=action,query)"
+      ],
+      "matched_path": [
+        "Tap the search icon in the toolbar",
+        "Submit the query with the keyboard action"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT003",
       "name": "Narrow results by content type",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "actions do not match gold steps",
-        "touch",
-        "touch",
-        "touch"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_027",
+        "test_029",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_048",
+        "test_054"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Choose a content type such as videos, channels or playlists: touch LinearLayout \"Bookmarked Playlists\" activity=MainActivity state_changed (tokens=playlists)"
+      ],
+      "matched_path": [
+        "Choose a content type such as videos, channels or playlists"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT004",
       "name": "Re-run a previous search",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_005",
+        "test_011",
+        "test_015",
+        "test_017",
+        "test_029",
+        "test_031",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_062",
+        "test_064"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Partial steps: Open Search, but no further actions.",
-        "touch MainActivity/Button-"
+        "Open the search screen: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=search)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open the search screen"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT005",
       "name": "Review saved downloads",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No relevant actions for review saved downloads."
+      "status": "partial",
+      "test_cases": [
+        "test_007",
+        "test_033"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Select Downloads: touch TextView \"Downloads\" activity=DownloadActivity (tokens=downloads)",
+        "Open the menu on a download entry: touch CheckedTextView \"Downloads\" rid=design_menu_item_text activity=DownloadActivity state_changed (tokens=download)"
+      ],
+      "matched_path": [
+        "Select Downloads",
+        "Open the menu on a download entry"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT006",
       "name": "Review followed channels",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No relevant actions for review followed channels."
+      "status": "partial",
+      "test_cases": [
+        "test_015",
+        "test_017",
+        "test_039",
+        "test_041",
+        "test_058"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Select Subscriptions: touch LinearLayout \"Subscriptions\" activity=MainActivity state_changed (tokens=subscriptions)"
+      ],
+      "matched_path": [
+        "Select Subscriptions"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT007",
       "name": "Open saved playlists",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_020",
+        "test_022",
+        "test_023",
+        "test_026",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_033",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_044",
+        "test_046",
+        "test_047",
+        "test_048",
+        "test_050",
+        "test_052",
+        "test_054",
+        "test_056",
+        "test_058",
+        "test_060",
+        "test_062",
+        "test_064"
       ],
-      "confidence": 0.8,
+      "confidence": 0.6667,
       "evidence": [
-        "Open drawer, select Bookmarked Playlists, review, open playlist.",
-        "touch MainActivity/ImageButton-"
+        "Select Bookmarked Playlists: touch LinearLayout \"Bookmarked Playlists\" activity=MainActivity state_changed (tokens=bookmarked,playlists)",
+        "Open one playlist to see its items: touch Button \"RETRY\" rid=error_retry_button activity=MainActivity (outcome tokens=playlist)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Select Bookmarked Playlists",
+        "Open one playlist to see its items"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT008",
       "name": "Review what was watched",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_060"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the history menu to clear or delete an entry: touch TextView \"Clear watch history\" rid=title activity=MainActivity state_changed (tokens=clear,history)"
+      ],
+      "matched_path": [
+        "Open the history menu to clear or delete an entry"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT009",
       "name": "Adjust the app's look",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -148,25 +249,28 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "Configure download behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_007",
+        "test_033"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the Downloads section: touch TextView \"Downloads\" activity=DownloadActivity (tokens=downloads)"
+      ],
+      "matched_path": [
+        "Open the Downloads section"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT012",
@@ -174,89 +278,99 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT013",
       "name": "Adjust content preferences",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "partially navigated to settings, but did not complete all steps",
-        "touch MainActivity/Button-OK"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT014",
       "name": "Manage stored history data",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_005",
+        "test_011",
+        "test_015",
+        "test_017",
+        "test_029",
+        "test_031",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_062",
+        "test_064"
       ],
-      "confidence": 0.9,
+      "confidence": 0.25,
       "evidence": [
-        "fully navigated to settings and cleared data",
-        "touch MainActivity/ImageButton-"
+        "Confirm the action: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=action)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Confirm the action"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT015",
       "name": "Control notification behaviour",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT016",
       "name": "Export or import app data",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps completed, missing export and import options",
-        "Open Search; Type a query; Tap the clear button"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT017",
       "name": "Reset a typed query",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_005",
+        "test_011",
+        "test_015",
+        "test_017",
+        "test_029",
+        "test_031",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_062",
+        "test_064"
       ],
-      "confidence": 0.9,
+      "confidence": 0.25,
       "evidence": [
-        "All steps completed as per gold",
-        "Open Search; Type a query; Tap the clear button"
+        "Open the search screen: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=search)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Open the search screen"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     }
   ],
   "confusion": [
@@ -268,7 +382,7 @@
       "name_similarity": 0.353,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -281,7 +395,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -294,7 +408,7 @@
       "name_similarity": 0.467,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -320,7 +434,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -333,7 +447,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -346,7 +460,7 @@
       "name_similarity": 0.417,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -359,7 +473,7 @@
       "name_similarity": 0.235,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -398,7 +512,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -424,7 +538,7 @@
       "name_similarity": 0.636,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -437,7 +551,7 @@
       "name_similarity": 0.889,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -463,7 +577,7 @@
       "name_similarity": 0.714,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -476,7 +590,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -499,11 +613,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 241,
+  "actions_with_widget": 161,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 6,
+  "exercised_features": 11,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.22705882352941179,
-  "weighted_coverage_percentage": 22.71,
+  "weighted_coverage": 0.24019607843137258,
+  "weighted_coverage_percentage": 24.02,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

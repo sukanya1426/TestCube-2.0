@@ -2,8 +2,8 @@
   "application": "Money Manager Ex",
   "total_features": 28,
   "covered_features": 0,
-  "uncovered_features": 22,
-  "partial_features": 6,
+  "uncovered_features": 17,
+  "partial_features": 11,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/money",
@@ -17,94 +17,105 @@
       "test_cases": [
         "test_001"
       ],
-      "confidence": 0.6,
+      "confidence": 0.1667,
       "evidence": [
-        "some steps completed but not fully.",
-        "touch SelectDatabaseActivity/Button-CREATE DAT"
+        "Tap Create Database: touch Button \"CREATE DATABASE\" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matched_path": [
+        "Tap Create Database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT002",
       "name": "Create First/New Account",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_005",
+        "test_009"
       ],
       "confidence": 0.5,
       "evidence": [
-        "some steps completed but not fully.",
-        "touch MainActivity/Button-CREATE NEW"
+        "Tap Add Account (+): touch Button \"CREATE NEW ACCOUNT\" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)",
+        "Enter an Account Name: set_text EditText \"Account name\" rid=editTextAccountName text=testcube.mmb activity=AccountEditActivity (tokens=account,name)",
+        "Select Currency: touch TextView \"SELECT CURRENCY\" activity=AccountEditActivity (tokens=currency)",
+        "Set Opening Date: touch TextView \"To Date\" rid=textViewToDate activity=SearchActivity state_changed (tokens=date,opening)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Tap Add Account (+)",
+        "Enter an Account Name",
+        "Select Currency",
+        "Set Opening Date"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT003",
       "name": "Add a Transaction",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_011"
       ],
-      "confidence": 0.7,
+      "confidence": 0.1,
       "evidence": [
-        "some steps completed but not fully.",
-        "touch AccountEditActivity/EditText-1"
+        "Optionally enter Transaction Number and Note: set_text EditText \"Transaction number\" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=number,transaction)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Optionally enter Transaction Number and Note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.1111111111111111
     },
     {
       "id": "GT004",
       "name": "Edit / Delete / Modify a Transaction",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.7,
-      "evidence": [
-        "Partial steps completed, but transaction not fully edited or deleted.",
-        "touch MainActivity/TextView-All transa"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Filter Transactions by Date Range",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_005",
+        "test_007",
+        "test_009"
       ],
-      "confidence": 0.6,
+      "confidence": 0.1733,
       "evidence": [
-        "Partial steps completed, but date range not fully set.",
-        "touch SearchActivity/TextView-To Date"
+        "View the updated filtered transaction list: touch Button \"OK\" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.4
+      "matched_path": [
+        "View the updated filtered transaction list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT006",
       "name": "Search/Sort Transactions",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_007"
       ],
-      "confidence": 0.5,
+      "confidence": 0.3333,
       "evidence": [
-        "Partial steps completed, but search term not fully entered.",
-        "set_text SearchActivity/EditText-Transactio"
+        "Or tap Sort and select a field: touch Button \"Sort\" rid=menu_sort activity=MainActivity state_changed (tokens=sort)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Or tap Sort and select a field"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT007",
@@ -112,25 +123,28 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to Mark Account as Favorite."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT008",
       "name": "Manage Accounts",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No actions related to Manage Accounts."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Tap Add (+) to create a new account: touch Button \"CREATE NEW ACCOUNT\" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)"
+      ],
+      "matched_path": [
+        "Tap Add (+) to create a new account"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT009",
@@ -138,11 +152,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to Set Up a Budget."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -151,25 +163,30 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to setting/editing a category budget amount"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "View Budget Details / Transactions",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no actions related to viewing budget details/transactions"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005",
+        "test_007",
+        "test_009"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "View the filtered transaction list: touch Button \"OK\" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)"
+      ],
+      "matched_path": [
+        "View the filtered transaction list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT012",
@@ -177,11 +194,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to deleting a budget"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -190,11 +205,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to budget view options"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -203,11 +216,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to creating a recurring transaction"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -216,38 +227,44 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to responding to a recurring transaction prompt"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT016",
       "name": "Manage Payees",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no actions related to Manage Payees"
+      "status": "partial",
+      "test_cases": [
+        "test_011"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Open the Payee field while adding or editing a transaction, or navigate to Payees: set_text EditText \"Transaction number\" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)"
+      ],
+      "matched_path": [
+        "Open the Payee field while adding or editing a transaction, or navigate to Payees"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT017",
       "name": "Manage Categories",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no actions related to Manage Categories"
+      "status": "partial",
+      "test_cases": [
+        "test_011"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Open the Category field while adding or editing a transaction, or navigate to Categories: set_text EditText \"Transaction number\" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)"
+      ],
+      "matched_path": [
+        "Open the Category field while adding or editing a transaction, or navigate to Categories"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT018",
@@ -255,11 +272,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to View a Built-In Report"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -268,12 +283,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "later GT001: Select the 'Create a database' option from the main menu."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -282,12 +294,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "later GT001: Select the 'Create a database' option from the main menu."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -296,12 +305,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "touch AccountEditActivity/EditText-1"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -310,51 +316,54 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT023",
       "name": "Manage Currencies & Exchange Rates",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Add a currency: touch TextView \"SELECT CURRENCY\" activity=AccountEditActivity (tokens=currency)"
+      ],
+      "matched_path": [
+        "Add a currency"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT024",
       "name": "Set Up Data Sync",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_001"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "On the create or open screen, tap Open Database: touch Button \"CREATE DATABASE\" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)"
+      ],
+      "matched_path": [
+        "On the create or open screen, tap Open Database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT025",
       "name": "Set/Change Database Password",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions for setting database password",
-        "later PasswordActivity/Button-OK"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -362,13 +371,10 @@
       "name": "Enable Fingerprint/Biometric Lock",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions for enabling fingerprint/biometric lock",
-        "later GeneralSettingsActivity/ImageButton-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -376,13 +382,10 @@
       "name": "Import/Export via QIF or CSV",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions for importing/exporting via QIF or CSV",
-        "later SelectDatabaseActivity/Button-CREATE DAT"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -391,11 +394,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -447,7 +448,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -499,7 +500,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -538,7 +539,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -603,7 +604,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -616,7 +617,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -694,7 +695,7 @@
       "name_similarity": 0.357,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -707,7 +708,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -782,11 +783,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 47,
+  "actions_with_widget": 35,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 6,
+  "exercised_features": 11,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.06785714285714287,
-  "weighted_coverage_percentage": 6.79,
+  "weighted_coverage": 0.09444444444444444,
+  "weighted_coverage_percentage": 9.44,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

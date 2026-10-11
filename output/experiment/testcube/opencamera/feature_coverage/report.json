@@ -1,85 +1,79 @@
 {
   "application": "Open Camera",
   "total_features": 55,
-  "covered_features": 2,
-  "uncovered_features": 46,
-  "partial_features": 7,
-  "coverage": 0.03636363636363636,
-  "coverage_percentage": 3.64,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/opencamera",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/opencamera/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/opencamera/ground_truth.json",
+  "covered_features": 0,
+  "uncovered_features": 9,
+  "partial_features": 46,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/opencamera",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/opencamera/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/opencamera/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Take a photo",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "partial steps attempted, not all required",
-        "touch MainActivity/ImageButton-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
       "name": "Record a video",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_007",
+        "test_015",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the photo/video mode toggle to switch to video: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo,video)"
+      ],
+      "matched_path": [
+        "tap the photo/video mode toggle to switch to video"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT003",
       "name": "Switch between the front and rear cameras",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT004",
       "name": "Zoom in and out",
-      "status": "covered",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "pinch and drag actions covered",
-        "touch MainActivity/SeekBar-",
-        "touch MainActivity/SeekBar-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Focus by tapping",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no focus actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -87,12 +81,10 @@
       "name": "Change the focus mode",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no focus mode change actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -101,12 +93,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No flash mode selection steps found.",
-        "touch MainActivity/ImageButton-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -115,12 +104,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No front screen flash option or camera switching steps found.",
-        "touch TextView \"Touch to focus, and press the circular blue shutter butto...\""
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -129,666 +115,1241 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No exposure compensation slider or drag steps found.",
-        "touch ImageButton \"Lock exposure\""
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT010",
       "name": "Set the ISO and shutter speed manually",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Journal: dropped, actions unrelated",
-        "touch MainActivity/ImageButton-"
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_005",
+        "test_021",
+        "test_039",
+        "test_041"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "tap the exposure icon: touch ImageButton \"Lock exposure\" rid=exposure_lock state_changed (tokens=exposure)"
+      ],
+      "matched_path": [
+        "tap the exposure icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT011",
       "name": "Set the white balance",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Journal: dropped, actions unrelated",
-        "touch MainActivity/ImageButton-"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT012",
       "name": "Choose a scene mode",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Journal: none, actions unrelated",
-        "touch TextView 'Touch to focus, and press the circular blue shutter butto...'"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT013",
       "name": "Apply a colour effect",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Partial steps attempted, but not all required.",
-        "touch MainActivity/ImageButton-"
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT014",
       "name": "Set the photo resolution",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No steps related to setting photo resolution."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT015",
       "name": "Set the image quality and format",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.1,
-      "evidence": [
-        "No steps related to setting image quality or format."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_020",
+        "test_021",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_049"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT016",
       "name": "Capture RAW (DNG) files",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch MainActivity/ImageButton-"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_020",
+        "test_021",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_049"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT017",
       "name": "Use the self-timer",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView",
-        "touch ImageButton"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT018",
       "name": "Take a repeated series of photos (auto-repeat)",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView",
-        "touch ImageButton"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Tap the popup settings icon: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT019",
       "name": "Take an HDR photo",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_007",
+        "test_015"
       ],
-      "confidence": 0.5,
+      "confidence": 0.225,
       "evidence": [
-        "Partial steps attempted, but not all required steps completed.",
-        "touch MainActivity/ImageButton-"
+        "Tap the photo mode selector in the popup settings: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "Tap the photo mode selector in the popup settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT020",
       "name": "Take a DRO (dynamic range optimised) photo",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No relevant steps attempted."
+      "status": "partial",
+      "test_cases": [
+        "test_007",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3,
+      "evidence": [
+        "Open the photo mode selector: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)"
+      ],
+      "matched_path": [
+        "Open the photo mode selector"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT021",
       "name": "Take an exposure bracketing series",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.1,
-      "evidence": [
-        "No relevant steps attempted."
+      "status": "partial",
+      "test_cases": [
+        "test_007",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.225,
+      "evidence": [
+        "Open the photo mode selector: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)"
+      ],
+      "matched_path": [
+        "Open the photo mode selector"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT022",
       "name": "Take a noise-reduction (low light) photo",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_007",
+        "test_015"
       ],
-      "confidence": 0.6,
+      "confidence": 0.225,
       "evidence": [
-        "Partial steps completed, lacks noise reduction and shutter tap.",
-        "touch MainActivity/ImageButton-"
+        "Open the photo mode selector: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "Open the photo mode selector"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT023",
       "name": "Capture a panorama",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No steps related to panorama capture."
+      "status": "partial",
+      "test_cases": [
+        "test_007",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.18,
+      "evidence": [
+        "Open the photo mode selector: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)"
+      ],
+      "matched_path": [
+        "Open the photo mode selector"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT024",
       "name": "Enable face detection",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.1,
-      "evidence": [
-        "No steps related to face detection."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT025",
       "name": "Enable auto-level (auto-stabilise)",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_020",
+        "test_021",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_049"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT026",
       "name": "Show composition guides and crop guides",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT027",
       "name": "Show the histogram, zebra stripes and focus peaking",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT028",
       "name": "Show the angle, level, battery and free-memory indicators",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Toggled settings but did not complete all necessary steps.",
-        "touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=43, y=77)"
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT029",
       "name": "Enable geotagging of photos and videos",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No relevant actions taken to enable geotagging."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.4,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "\"Location settings\": touch TextView \"Location settings\u2026\" rid=title activity=MainActivity state_changed (tokens=location)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "\"Location settings\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.4
     },
     {
       "id": "GT030",
       "name": "Store the compass direction with photos",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No relevant actions taken to store compass direction with photos."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "Location settings: touch TextView \"Location settings\u2026\" rid=title activity=MainActivity state_changed (tokens=location)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "Location settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT031",
       "name": "Stamp the date, time and location on photos",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing for setting stamp",
-        "touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=192)"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT032",
       "name": "Add a custom text stamp",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps missing for adding custom text",
-        "touch TextView \"Touch to focus, and press the circular blue shutter butto...\" rid=message activity=MainActivity state_changed | activity=MainActivity state_changed"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT033",
       "name": "Set the video resolution and frame rate",
-      "status": "not_covered",
-      "test_cases": [],
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
+      ],
       "confidence": 0.5,
       "evidence": [
-        "steps missing for setting video resolution and frame rate",
-        "touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed | activity=MainActivity state_changed"
+        "Switch to video mode: touch ImageButton \"Switch to video mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)",
+        "tap the popup settings icon: touch ImageButton \"Popup settings\" rid=popup activity=MainActivity state_changed (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "matched_path": [
+        "Switch to video mode",
+        "tap the popup settings icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT034",
       "name": "Record slow-motion or high-speed video",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_002",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "confidence": 0.8,
+      "confidence": 0.4,
       "evidence": [
-        "Switched to video mode, set slow-motion, recorded.",
-        "touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=634)"
+        "Switch to video mode: touch ImageButton \"Switch to video mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)",
+        "open the popup settings: touch ImageButton \"Popup settings\" rid=popup activity=MainActivity state_changed (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Switch to video mode",
+        "open the popup settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.4
     },
     {
       "id": "GT035",
       "name": "Record a time-lapse video",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "Journal indicates partial but no evidence of time-lapse setup."
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.4,
+      "evidence": [
+        "Switch to video mode: touch ImageButton \"Switch to video mode\" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)",
+        "open the popup settings: touch ImageButton \"Popup settings\" rid=popup activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Switch to video mode",
+        "open the popup settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.4
     },
     {
       "id": "GT036",
       "name": "Set the video bitrate",
-      "status": "not_covered",
-      "test_cases": [],
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
+      ],
       "confidence": 0.5,
       "evidence": [
-        "Journal indicates dropped, no evidence of bitrate setting."
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "\"Video settings\": touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (tokens=video)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "matched_path": [
+        "Open Settings",
+        "\"Video settings\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT037",
       "name": "Limit the video duration or file size",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "confidence": 0.6,
+      "confidence": 0.5,
       "evidence": [
-        "Partial steps towards setting video limits",
-        "touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=326)"
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "Video settings: touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (tokens=video)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT038",
       "name": "Enable video stabilisation",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps towards enabling video stabilisation"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "Video settings: touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT039",
       "name": "Choose the audio source and control audio recording",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps towards choosing audio source"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "Video settings: touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT040",
       "name": "Record GPS/time subtitles for videos",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "confidence": 0.6,
+      "confidence": 0.5,
       "evidence": [
-        "Partial steps towards enabling subtitles, but no GPS recording.",
-        "touch MainActivity/ImageButton-",
-        "touch MainActivity/TextView-Location s"
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "Video settings: touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (tokens=video)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open Settings",
+        "Video settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT041",
       "name": "Use voice control to take a photo",
-      "status": "not_covered",
-      "test_cases": [],
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
+      ],
       "confidence": 0.2,
       "evidence": [
-        "No steps towards enabling voice control or granting microphone permission.",
-        "touch MainActivity/ImageButton-",
-        "touch MainActivity/TextView-Location s"
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT042",
       "name": "Use audio (noise) triggering",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.1,
-      "evidence": [
-        "No steps towards enabling or using audio triggering.",
-        "touch MainActivity/ImageButton-",
-        "touch MainActivity/TextView-Location s"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT043",
       "name": "Use a Bluetooth LE remote control",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "intent intent=am start net.sourceforge.opencamera/net.sourceforge.opencamera.MainActivity"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT044",
       "name": "Configure the volume key behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView \"Touch to focus, and press the circular blue shutter butto...\""
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "\"More camera controls\": touch TextView \"More camera controls\u2026\" rid=title activity=MainActivity (tokens=camera,controls,more)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "\"More camera controls\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT045",
       "name": "Enable touch-to-capture",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView \"Touch to focus, and press the circular blue shutter butto...\""
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "More camera controls: touch TextView \"More camera controls\u2026\" rid=title activity=MainActivity (tokens=camera,controls,more)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "More camera controls"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT046",
       "name": "Lock the screen orientation",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView",
-        "touch ImageButton"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT047",
       "name": "Use immersive (full screen) mode",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView",
-        "touch ImageButton"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT048",
       "name": "Set the photo and video save location",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView",
-        "touch ImageButton"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.47,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "\"More camera controls\"/Save location: touch TextView \"More camera controls\u2026\" rid=title activity=MainActivity (tokens=camera,controls,more)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "\"More camera controls\"/Save location"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT049",
       "name": "Use the Storage Access Framework for saving",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "touch TextView",
-        "touch Button"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT050",
       "name": "Open the last photo in the gallery",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "touch TextView",
-        "touch Button"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT051",
       "name": "Pause the preview after taking a photo",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps not aligned with gold capability",
-        "touch TextView",
-        "touch Button"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_020",
+        "test_021",
+        "test_023",
+        "test_024",
+        "test_027",
+        "test_029",
+        "test_030",
+        "test_031",
+        "test_035",
+        "test_036",
+        "test_037",
+        "test_038",
+        "test_039",
+        "test_040",
+        "test_043",
+        "test_047",
+        "test_049"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5846,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "enable \"Pause after taking photo\"; the captured image is shown with share, delete and info options before returning to the preview: touch TextView \"Video settings\u2026\" rid=title activity=MainActivity state_changed (outcome tokens=after,enable,image,photo,preview)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "enable \"Pause after taking photo\"; the captured image is shown with share, delete and info options before returning to the preview"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT052",
       "name": "Enable or disable the shutter sound",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps do not align with gold steps",
-        "touch TextView, touch ImageButton, touch TextView"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "\"More camera controls\": touch TextView \"More camera controls\u2026\" rid=title activity=MainActivity (tokens=camera,controls,more)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "\"More camera controls\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT053",
       "name": "Enable the Camera2 API",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps do not align with gold steps",
-        "touch ImageButton, touch TextView"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT054",
       "name": "Reset all settings to the defaults",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps do not align with gold steps",
-        "touch TextView, touch ImageButton, touch TextView"
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT055",
       "name": "Read the built-in help and about information",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_002",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_027",
+        "test_029",
+        "test_031",
+        "test_035",
+        "test_037",
+        "test_039"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6333,
+      "evidence": [
+        "Open Settings: touch ImageButton \"Settings\" rid=settings activity=MainActivity state_changed (tokens=settings)",
+        "tap \"About\"/\"Online help\": touch Button \"ONLINE HELP\" rid=button2 state_changed (tokens=help,online)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "tap \"About\"/\"Online help\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     }
   ],
   "confusion": [
@@ -800,7 +1361,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -813,7 +1374,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -839,7 +1400,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -917,7 +1478,7 @@
       "name_similarity": 0.667,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -930,7 +1491,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -943,7 +1504,7 @@
       "name_similarity": 0.188,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -969,7 +1530,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -982,7 +1543,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -995,7 +1556,7 @@
       "name_similarity": 0.75,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1008,7 +1569,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1021,7 +1582,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1047,7 +1608,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1060,7 +1621,7 @@
       "name_similarity": 0.308,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1086,7 +1647,7 @@
       "name_similarity": 0.267,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1099,7 +1660,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1112,7 +1673,7 @@
       "name_similarity": 0.75,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1125,7 +1686,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1138,7 +1699,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1164,7 +1725,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1177,7 +1738,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "dropped",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1190,7 +1751,7 @@
       "name_similarity": 0.583,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1203,7 +1764,7 @@
       "name_similarity": 0.231,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1216,7 +1777,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1229,7 +1790,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1242,7 +1803,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1255,7 +1816,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1281,7 +1842,7 @@
       "name_similarity": 0.273,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1294,7 +1855,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1320,7 +1881,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1333,7 +1894,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1346,7 +1907,7 @@
       "name_similarity": 0.154,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1359,7 +1920,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1372,7 +1933,7 @@
       "name_similarity": 0.231,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1385,7 +1946,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1398,7 +1959,7 @@
       "name_similarity": 0.16,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1411,7 +1972,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1424,7 +1985,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1450,7 +2011,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1463,7 +2024,7 @@
       "name_similarity": 0.278,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1476,7 +2037,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1489,7 +2050,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1502,7 +2063,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1525,11 +2086,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 194,
+  "actions_with_widget": 110,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 9,
+  "exercised_features": 46,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.07254545454545455,
-  "weighted_coverage_percentage": 7.25,
+  "weighted_coverage": 0.29969696969696963,
+  "weighted_coverage_percentage": 29.97,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

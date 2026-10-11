@@ -8,18 +8,21 @@ Total Actions    : 160
 
 Total Features   : 31
 Covered Features : 0
-Partial          : 10
-Uncovered        : 21
+Partial          : 22
+Uncovered        : 9
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 8.77%  (mean completion ratio; partial steps count)
-Exercised        : 10  (covered 0 + partial 10)
+Weighted Coverage: 23.44%  (mean completion ratio; partial steps count)
+Exercised        : 22  (covered 0 + partial 22)
 
 ground_truth_source: independent_labeled_set
 
-Matcher: VLM/Gemini semantic judge (not token overlap).
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
 
 ----------------------------------------
 FEATURE DETAILS
@@ -27,268 +30,257 @@ FEATURE DETAILS
 
 [GT001] Create a task
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.70
-Matcher    : vlm
-Completion : 30% of gold steps
+Test Cases : test_001, test_003, test_005, test_007, test_015, test_017, test_019, test_021, test_023, test_026, test_032
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Partial steps completed, lacks save action
-  - touch EditTaskActivity/TextView-Create
+  - tap the "+" floating action button: touch ImageButton rid=floating_action_button state_changed (tokens=action,floating)
+  - choose the task list to create it in: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=task)
 
 [GT002] Set the task title and description
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No title or description entry
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT003] Set a due date and time
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005, test_015, test_026, test_032
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - No due date or time selection
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT004] Set a start date
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.50
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Partial due to missing steps
-  - touch TaskListActivity/TextView-Local
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT005] Set the task priority
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No relevant actions found
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT006] Set the classification/privacy level
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No relevant actions found
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT007] Set the task status
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.70
-Matcher    : vlm
-Completion : 33% of gold steps
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Partial steps attempted, but did not complete the task status change.
-  - touch CustomTouchEvent(state=6ba115282a4422dcce2af57319729b83, x=450, y=960)
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT008] Set the completion percentage
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No steps attempted to set the completion percentage.
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT009] Add a location to a task
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No steps attempted to add a location to a task.
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT010] Add a URL to a task
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView 'Local'
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT011] Add a checklist to a task
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch CustomTouchEvent
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT012] Set an alarm/reminder
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - LLM batch omitted this feature.
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT013] Create a recurring task
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
+Test Cases : test_005
+Confidence : 0.20
+Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - Partial steps completed, missing recurrence setup.
-  - touch TaskListActivity/TextView-0 tasks
+  - Open the task editor: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)
 
 [GT014] Complete a task
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_001, test_003, test_005, test_007, test_013, test_015, test_017, test_019, test_023, test_026, test_032
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Partial steps completed, missing task completion.
-  - touch TaskListActivity/TextView-0 tasks
+  - Open the task list: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=task)
 
 [GT015] Edit an existing task
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 20% of gold steps
-Evidence   :
-  - Partial steps completed, missing field changes and save.
-  - touch TaskListActivity/TextView-0 tasks
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT016] Delete a task
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
-Evidence   :
-  - Partial steps: Open app, tap 'Save', not delete task
-  - touch TaskListActivity/TextView-0 tasks
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT017] Browse tasks grouped by due date
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
+Test Cases : test_015, test_026, test_032
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Partial steps: Open app, select 'Due', not group tasks
-  - touch TaskListActivity/TextView-Next days
+  - select the "Due" tab: touch TextView "Tasks due" activity=TaskListActivity (tokens=due)
 
 [GT018] Browse tasks grouped by start date
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
-Evidence   :
-  - Partial steps: Open app, select 'Due', not group tasks
-  - touch TaskListActivity/TextView-Next days
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT019] Browse tasks grouped by list
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_011, test_015
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - Gold steps not followed.
-  - touch TaskListActivity/TextView-Next days
+  - select the "Lists" tab: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=lists)
 
 [GT020] Browse tasks grouped by priority
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - Gold steps not followed.
-  - touch TaskListActivity/TextView-Next days
 
 [GT021] Browse tasks grouped by progress
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_023
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Gold steps not followed.
-  - touch TaskListActivity/TextView-Next days
+  - select the "Progress" tab: touch TextView "Task progress" activity=TaskListActivity (tokens=progress)
 
 [GT022] Search for a task
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_021
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No search functionality attempted.
-  - none
+  - type the search text: set_text AutoCompleteTextView "Search" rid=search_src_text text=test activity=TaskListActivity state_changed (tokens=search)
 
 [GT023] Show or hide completed tasks
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_013
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - No overflow menu or completed tasks toggle attempted.
-  - none
+  - toggle the "Show completed tasks" option: touch TextView "Show completed tasks" rid=title activity=TaskListActivity state_changed (tokens=completed,tasks)
 
 [GT024] Choose which task lists are visible
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_023, test_025, test_026, test_028, test_030, test_032
+Confidence : 0.63
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - No overflow menu or visible lists selection attempted.
-  - none
+  - tap "Visible lists"/"Synchronised lists": touch CheckBox rid=visible_task_list_checked activity=SyncSettingsActivity state_changed (tokens=lists,visible)
+  - tick the lists to display: touch activity=TaskListActivity state_changed (outcome tokens=lists)
 
 [GT025] Create a local task list
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 30% of gold steps
+Test Cases : test_005
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - Partial steps executed, missing list name entry and color selection.
-  - touch CustomTouchEvent(state=0b001e45709cb306cb2ab5ab0d988ac3, x=975, y=73)
+  - tap the add action: touch TextView "SAVE" rid=editor_action_save activity=TaskListActivity state_changed (tokens=action)
 
 [GT026] Change a task list's name or colour
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_015
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No steps towards changing list name or color.
-  - touch TextView "Local" rid=task_list_account_name activity=EditTaskActivity state_changed
+  - change the name or colour: touch View rid=task_list_color activity=EditTaskActivity state_changed (tokens=colour)
 
 [GT027] Share a task
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - LLM batch omitted this feature.
 
 [GT028] Add the OpenTasks home screen widget
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for adding OpenTasks widget
 
 [GT029] Open a task from the widget
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for opening a task from the widget
 
 [GT030] Configure application settings
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions for configuring application settings
 
 [GT031] View the about screen and licences
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 31 features covered
-10 / 31 features partial
+22 / 31 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 8.77%
+Weighted Feature Coverage = mean(completion_ratio) = 23.44%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -305,31 +297,31 @@ Extracted vs ground truth: 14 / 31 (completeness ratio 0.452)
 Feature-inference P/R/F1: 0.88 / 0.45 / 0.60 (false not_present=0)
 
 GT GT001 'Create a task' | journal=G001 'Create a task' (sim=1.0, name) status=partial | offline=partial
-GT GT002 'Set the task title and description' | journal=G003 'Set the task priority' (sim=0.429, name) status=partial | offline=not_covered
-GT GT003 'Set a due date and time' | journal=G002 'Set a due date' (sim=0.6, name) status=partial | offline=not_covered
+GT GT002 'Set the task title and description' | journal=G003 'Set the task priority' (sim=0.429, name) status=partial | offline=partial
+GT GT003 'Set a due date and time' | journal=G002 'Set a due date' (sim=0.6, name) status=partial | offline=partial
 GT GT004 'Set a start date' | journal=G004 'Set the task status' (sim=0.333, name) status=partial | offline=partial
-GT GT005 'Set the task priority' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT006 'Set the classification/privacy level' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Set the task priority' | journal=missing (no name match) status=missing | offline=partial
+GT GT006 'Set the classification/privacy level' | journal=missing (no name match) status=missing | offline=partial
 GT GT007 'Set the task status' | journal=missing (no name match) status=missing | offline=partial
-GT GT008 'Set the completion percentage' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT009 'Add a location to a task' | journal=G005 'Add a location' (sim=0.667, name) status=partial | offline=not_covered
-GT GT010 'Add a URL to a task' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT011 'Add a checklist to a task' | journal=G006 'Add a checklist' (sim=0.667, name) status=partial | offline=not_covered
-GT GT012 'Set an alarm/reminder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Set the completion percentage' | journal=missing (no name match) status=missing | offline=partial
+GT GT009 'Add a location to a task' | journal=G005 'Add a location' (sim=0.667, name) status=partial | offline=partial
+GT GT010 'Add a URL to a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Add a checklist to a task' | journal=G006 'Add a checklist' (sim=0.667, name) status=partial | offline=partial
+GT GT012 'Set an alarm/reminder' | journal=missing (no name match) status=missing | offline=partial
 GT GT013 'Create a recurring task' | journal=G007 'Create a recurring task' (sim=1.0, name) status=partial | offline=partial
 GT GT014 'Complete a task' | journal=G014 'Share a task' (sim=0.333, name) status=partial | offline=partial
-GT GT015 'Edit an existing task' | journal=G008 'Edit an existing task' (sim=1.0, name) status=partial | offline=partial
-GT GT016 'Delete a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Edit an existing task' | journal=G008 'Edit an existing task' (sim=1.0, name) status=partial | offline=not_covered
+GT GT016 'Delete a task' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT017 'Browse tasks grouped by due date' | journal=G009 'Browse tasks grouped' (sim=0.6, name) status=partial | offline=partial
-GT GT018 'Browse tasks grouped by start date' | journal=G010 'Browse tasks grouped' (sim=0.6, name) status=partial | offline=partial
-GT GT019 'Browse tasks grouped by list' | journal=G011 'Browse tasks grouped' (sim=0.75, name) status=partial | offline=not_covered
+GT GT018 'Browse tasks grouped by start date' | journal=G010 'Browse tasks grouped' (sim=0.6, name) status=partial | offline=not_covered
+GT GT019 'Browse tasks grouped by list' | journal=G011 'Browse tasks grouped' (sim=0.75, name) status=partial | offline=partial
 GT GT020 'Browse tasks grouped by priority' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT021 'Browse tasks grouped by progress' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT022 'Search for a task' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT023 'Show or hide completed tasks' | journal=G012 'Show' (sim=0.4, name) status=partial | offline=not_covered
-GT GT024 'Choose which task lists are visible' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Browse tasks grouped by progress' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Search for a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Show or hide completed tasks' | journal=G012 'Show' (sim=0.4, name) status=partial | offline=partial
+GT GT024 'Choose which task lists are visible' | journal=missing (no name match) status=missing | offline=partial
 GT GT025 'Create a local task list' | journal=G013 'Create a local task' (sim=0.75, name) status=partial | offline=partial
-GT GT026 "Change a task list's name or colour" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 "Change a task list's name or colour" | journal=missing (no name match) status=missing | offline=partial
 GT GT027 'Share a task' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT028 'Add the OpenTasks home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT029 'Open a task from the widget' | journal=missing (no name match) status=missing | offline=not_covered

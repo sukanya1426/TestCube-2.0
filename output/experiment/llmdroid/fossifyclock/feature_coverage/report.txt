@@ -1,0 +1,271 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Clock
+
+Total Actions    : 729
+
+Total Features   : 26
+Covered Features : 0
+Partial          : 15
+Uncovered        : 11
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 19.49%  (mean completion ratio; partial steps count)
+Exercised        : 15  (covered 0 + partial 15)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] View the current time on the clock tab
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Add a time zone to the clock
+Status     : PARTIAL
+Test Cases : test_004, test_006, test_010, test_012, test_014, test_016
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)
+  - tick the time zones to display: touch RelativeLayout rid=add_time_zone_holder activity=MainActivity state_changed (outcome tokens=time,zones)
+
+[GT003] Remove or reorder time zones
+Status     : PARTIAL
+Test Cases : test_004, test_006, test_010, test_012, test_014, test_016
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Clock tab: touch RadioButton "Clock" activity=SettingsActivity state_changed (tokens=clock)
+
+[GT004] Open the full-screen (screensaver) clock
+Status     : PARTIAL
+Test Cases : test_004, test_006, test_010, test_012, test_014, test_016
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Clock tab: touch RadioButton "Clock" activity=SettingsActivity state_changed (tokens=clock)
+
+[GT005] Create an alarm
+Status     : PARTIAL
+Test Cases : test_008, test_016, test_018
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Open the Alarm tab: touch RadioButton "Alarm" activity=SettingsActivity state_changed (tokens=alarm)
+
+[GT006] Enable or disable an alarm
+Status     : PARTIAL
+Test Cases : test_008, test_016, test_018
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the Alarm tab: touch RadioButton "Alarm" activity=SettingsActivity state_changed (tokens=alarm)
+
+[GT007] Edit an alarm
+Status     : PARTIAL
+Test Cases : test_008, test_016, test_018
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Alarm tab: touch RadioButton "Alarm" activity=SettingsActivity state_changed (tokens=alarm)
+
+[GT008] Delete an alarm
+Status     : PARTIAL
+Test Cases : test_008, test_016, test_018
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the Alarm tab: touch RadioButton "Alarm" activity=SettingsActivity state_changed (tokens=alarm)
+
+[GT009] Set the alarm sound and vibration
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Snooze or dismiss a ringing alarm
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Configure the snooze duration and maximum ring time
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Make the alarm volume increase gradually
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Use the stopwatch
+Status     : PARTIAL
+Test Cases : test_012, test_018
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open the Stopwatch tab: touch RadioButton "Stopwatch" activity=SettingsActivity state_changed (tokens=stopwatch)
+
+[GT014] Sort the recorded stopwatch laps
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Create a timer
+Status     : PARTIAL
+Test Cases : test_010, test_014
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the Timer tab: touch ViewGroup rid=timer_frame activity=MainActivity state_changed (tokens=timer)
+
+[GT016] Label a timer and set its sound
+Status     : PARTIAL
+Test Cases : test_010, test_014
+Confidence : 0.63
+Matcher    : deterministic
+Completion : 67% of gold steps
+Evidence   :
+  - Open the Timer tab: touch ViewGroup rid=timer_frame activity=MainActivity state_changed (tokens=timer)
+  - tap the settings/edit control on the timer: touch RelativeLayout rid=edit_timer_vibrate_holder activity=MainActivity state_changed (tokens=edit,timer)
+
+[GT017] Pause, resume, reset or delete a timer
+Status     : PARTIAL
+Test Cases : test_010, test_014
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open the Timer tab: touch ViewGroup rid=timer_frame activity=MainActivity state_changed (tokens=timer)
+
+[GT018] Add the digital clock home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Set the time format
+Status     : PARTIAL
+Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
+Confidence : 0.41
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - toggle the "Use 24-hour time format" option (or follow the system setting): touch RelativeLayout rid=settings_hour_format_holder activity=SettingsActivity state_changed (tokens=format,hour,setting)
+
+[GT020] Set the first day of the week
+Status     : PARTIAL
+Test Cases : test_006, test_010, test_012, test_014, test_016
+Confidence : 0.30
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap the "Start week on"/Sunday-first option: touch RelativeLayout rid=settings_start_week_on_holder activity=SettingsActivity state_changed (tokens=start,week)
+
+[GT021] Keep the screen on in the clock tab
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Choose which tabs are visible
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Make alarms ignore silent mode
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Customise the app colours and theme
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap "Customise colours": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)
+
+[GT025] Change the app language and font size
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] View the about screen, FAQ and licences
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "About": touch TextView "About" rid=title activity=AboutActivity state_changed (tokens=about)
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 26 features covered
+15 / 26 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 19.49%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 26 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'View the current time on the clock tab' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Add a time zone to the clock' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Remove or reorder time zones' | journal=missing (no name match) status=missing | offline=partial
+GT GT004 'Open the full-screen (screensaver) clock' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Create an alarm' | journal=missing (no name match) status=missing | offline=partial
+GT GT006 'Enable or disable an alarm' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Edit an alarm' | journal=missing (no name match) status=missing | offline=partial
+GT GT008 'Delete an alarm' | journal=missing (no name match) status=missing | offline=partial
+GT GT009 'Set the alarm sound and vibration' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Snooze or dismiss a ringing alarm' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Configure the snooze duration and maximum ring time' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Make the alarm volume increase gradually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Use the stopwatch' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'Sort the recorded stopwatch laps' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Create a timer' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Label a timer and set its sound' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Pause, resume, reset or delete a timer' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Add the digital clock home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Set the time format' | journal=missing (no name match) status=missing | offline=partial
+GT GT020 'Set the first day of the week' | journal=missing (no name match) status=missing | offline=partial
+GT GT021 'Keep the screen on in the clock tab' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Choose which tabs are visible' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Make alarms ignore silent mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

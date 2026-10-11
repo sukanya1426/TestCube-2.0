@@ -2,13 +2,13 @@
   "application": "Material Files",
   "total_features": 42,
   "covered_features": 0,
-  "uncovered_features": 42,
-  "partial_features": 0,
+  "uncovered_features": 39,
+  "partial_features": 3,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/materialfiles",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/materialfiles/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/materialfiles/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/materialfiles",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/materialfiles/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/materialfiles/ground_truth.json",
   "features": [
     {
       "id": "GT001",
@@ -16,12 +16,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal: dropped, actions: none",
-        "touch FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -30,12 +27,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal: none, actions: none",
-        "intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileListActivity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -44,11 +38,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -57,12 +49,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates no actions related to copying files and folders",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -71,12 +60,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates no actions related to moving files and folders",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -85,11 +71,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -98,13 +82,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no long press or delete actions",
-        "later SpaActivity/TextView-Allow this",
-        "later SpaActivity/View-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -113,13 +93,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no long press or select-all actions",
-        "later SpaActivity/TextView-Allow this",
-        "later SpaActivity/View-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -128,13 +104,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no search icon or query actions",
-        "later SpaActivity/TextView-Allow this",
-        "later SpaActivity/View-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -143,11 +115,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -156,11 +126,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -169,11 +137,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -182,11 +148,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match gold capability"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -195,11 +159,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match gold capability"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -208,11 +170,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match gold capability"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -221,12 +181,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -235,12 +192,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -249,12 +203,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -263,12 +214,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -277,12 +225,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -291,12 +236,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -305,11 +247,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -318,11 +258,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -331,11 +269,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions match the gold steps."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -344,12 +280,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -358,12 +291,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -372,12 +302,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -385,12 +312,10 @@
       "name": "Connect to an FTP or FTPS server",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -398,12 +323,10 @@
       "name": "Connect to an SFTP server",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -411,12 +334,10 @@
       "name": "Connect to an SMB share",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -425,12 +346,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -439,12 +357,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -453,12 +368,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -467,12 +379,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for FTP server settings.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -481,27 +390,35 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for enabling root access.",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT036",
       "name": "Show a \"root directory\" entry in the navigation",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions for showing root directory entry.",
-        "later FileListActivity/Button-OK"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_004",
+        "test_005",
+        "test_006",
+        "test_007",
+        "test_008",
+        "test_009",
+        "test_010"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)"
+      ],
+      "matched_path": [
+        "return to the file list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT037",
@@ -509,11 +426,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -522,25 +437,35 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT039",
       "name": "Configure the file list behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_004",
+        "test_005",
+        "test_006",
+        "test_007",
+        "test_008",
+        "test_009",
+        "test_010"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)"
+      ],
+      "matched_path": [
+        "open the file list section"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT040",
@@ -548,12 +473,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -562,27 +484,36 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "later FileListActivity/Button-OK"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT042",
       "name": "Open the about screen and licences",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "later FileListActivity/Button-OK"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_002",
+        "test_003",
+        "test_004",
+        "test_005",
+        "test_006",
+        "test_007",
+        "test_008",
+        "test_009",
+        "test_010"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the navigation drawer or Settings: touch TextView \"Allow this app to read, modify and delete all files on th...\" activity=SpaActivity (outcome tokens=settings)"
+      ],
+      "matched_path": [
+        "Open the navigation drawer or Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     }
   ],
   "confusion": [
@@ -1049,7 +980,7 @@
       "name_similarity": 0.188,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1088,7 +1019,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1127,7 +1058,7 @@
       "name_similarity": 0.235,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1150,11 +1081,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 16,
+  "actions_with_widget": 3,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 0,
+  "exercised_features": 3,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.0,
-  "weighted_coverage_percentage": 0.0,
+  "weighted_coverage": 0.023809523809523808,
+  "weighted_coverage_percentage": 2.38,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -1,0 +1,254 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Voice Recorder
+
+Total Actions    : 740
+
+Total Features   : 23
+Covered Features : 0
+Partial          : 15
+Uncovered        : 8
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 24.42%  (mean completion ratio; partial steps count)
+Exercised        : 15  (covered 0 + partial 15)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Record audio
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Pause and resume a recording
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Watch the live audio level while recording
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Continue recording in the background
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Browse saved recordings
+Status     : PARTIAL
+Test Cases : test_021, test_023, test_025, test_045
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the "Recordings" tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+
+[GT006] Play a recording
+Status     : PARTIAL
+Test Cases : test_002, test_015, test_021, test_023, test_025, test_045
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+
+[GT007] Rename a recording
+Status     : PARTIAL
+Test Cases : test_021, test_023, test_025, test_045
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+
+[GT008] Delete a recording
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Restore or empty the recycle bin
+Status     : PARTIAL
+Test Cases : test_016
+Confidence : 0.46
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - long-press an item and tap Restore, or tap the "Empty recycle bin" action: touch TextView "The recycle bin is empty" rid=trash_placeholder activity=MainActivity (tokens=bin,empty,recycle)
+
+[GT010] Share a recording
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] View recording properties
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Search recordings
+Status     : PARTIAL
+Test Cases : test_002, test_005, test_016, test_021, test_023, test_025, test_045
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap the search icon: touch ImageView "Search" rid=top_toolbar_search_icon activity=MainActivity state_changed (tokens=search)
+
+[GT013] Sort the recordings list
+Status     : PARTIAL
+Test Cases : test_021, test_023, test_025, test_045
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the Recordings tab: touch Switch "Start recording automatically after launching the app" rid=settings_record_after_launch activity=SettingsActivity state_changed (tokens=recordings)
+  - tap "Sort by": touch TextView "Sort by..." rid=option_menu_sort activity=PickActivity state_changed (tokens=by,sort)
+
+[GT014] Choose the recording audio format
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT015] Set the recording bitrate and quality
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT016] Choose the folder where recordings are saved
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
+Evidence   :
+  - Open Settings: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=settings)
+  - tap the "Save recordings in" entry: touch RelativeLayout rid=settings_save_recordings_holder activity=SettingsActivity state_changed (tokens=recordings,save)
+
+[GT017] Hide the recording notification
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_027, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT018] Keep the screen on while recording
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT019] Add the quick-record home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Protect the app with a PIN, pattern or fingerprint
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT021] Customise the app colours and theme
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+  - tap "Customise colours": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)
+
+[GT022] Change the app language and font size
+Status     : PARTIAL
+Test Cases : test_002, test_021, test_023, test_025, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+[GT023] View the about screen, FAQ and licences
+Status     : PARTIAL
+Test Cases : test_002, test_005, test_021, test_023, test_025, test_045
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 23 features covered
+15 / 23 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 24.42%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 23 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Record audio' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Pause and resume a recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Watch the live audio level while recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Continue recording in the background' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Browse saved recordings' | journal=missing (no name match) status=missing | offline=partial
+GT GT006 'Play a recording' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Rename a recording' | journal=missing (no name match) status=missing | offline=partial
+GT GT008 'Delete a recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Restore or empty the recycle bin' | journal=missing (no name match) status=missing | offline=partial
+GT GT010 'Share a recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'View recording properties' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Search recordings' | journal=missing (no name match) status=missing | offline=partial
+GT GT013 'Sort the recordings list' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'Choose the recording audio format' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Set the recording bitrate and quality' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Choose the folder where recordings are saved' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Hide the recording notification' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Keep the screen on while recording' | journal=missing (no name match) status=missing | offline=partial
+GT GT019 'Add the quick-record home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Protect the app with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=partial
+GT GT021 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

@@ -6,9 +6,9 @@
   "partial_features": 2,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/keepassdx",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/keepassdx/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/keepassdx/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/keepassdx",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/keepassdx/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/keepassdx/ground_truth.json",
   "features": [
     {
       "id": "GT001",
@@ -16,12 +16,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards creating a database.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -30,29 +27,21 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards opening an existing database.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Unlock a database with a key file",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "Partial steps towards unlocking with a key file.",
-        "touch FileDatabaseSelectActivity/View-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT004",
@@ -60,12 +49,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards hardware key unlock.",
-        "touch FrameLayout"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -74,27 +60,34 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards biometric or device credential unlock.",
-        "touch FrameLayout"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT006",
       "name": "Create an entry",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards creating an entry.",
-        "touch FrameLayout"
+      "status": "partial",
+      "test_cases": [
+        "test_029",
+        "test_030",
+        "test_031",
+        "test_032",
+        "test_033",
+        "test_034",
+        "test_035",
+        "test_036"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)"
+      ],
+      "matched_path": [
+        "Open the database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT007",
@@ -102,11 +95,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -115,11 +106,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -128,40 +117,31 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT010",
       "name": "Download or open an attachment",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Tap the attachment name, but no further actions.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "Set an expiration date on an entry",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps towards setting an expiration date."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -169,12 +149,10 @@
       "name": "Configure a one-time password (OTP) token for an entry",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No steps towards configuring an OTP token."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -182,13 +160,10 @@
       "name": "Copy a username or password to the clipboard",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "no relevant actions found",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -196,13 +171,10 @@
       "name": "Reveal a hidden password",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "no relevant actions found",
-        "touch FrameLayout rid=content activity=FileDatabaseSelectActivity"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -210,13 +182,10 @@
       "name": "Open the entry URL in the browser",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "no relevant actions found",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -225,12 +194,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -239,12 +205,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps",
-        "touch FrameLayout rid=content activity=FileDatabaseSelectActivity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -253,12 +216,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions match gold steps",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -267,12 +227,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No long press or move action detected.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -281,27 +238,34 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No long press or delete action detected.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT021",
       "name": "Create a group",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No group creation actions detected.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
+      "status": "partial",
+      "test_cases": [
+        "test_029",
+        "test_030",
+        "test_031",
+        "test_032",
+        "test_033",
+        "test_034",
+        "test_035",
+        "test_036"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)"
+      ],
+      "matched_path": [
+        "Open the database"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT022",
@@ -309,12 +273,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Long-press action not observed.",
-        "long_touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -323,12 +284,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Recycle bin functionality not tested.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -337,12 +295,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to changing an entry or group icon.",
-        "intent intent=am start com.kunzisoft.keepass.libre"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -351,12 +306,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "touch FrameLayout"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -365,12 +317,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "touch FrameLayout"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -379,12 +328,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps match gold capability",
-        "touch FrameLayout"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -393,12 +339,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -407,12 +350,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch FrameLayout rid=content activity=FileDatabaseSelectActivity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -421,12 +361,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -434,13 +371,10 @@
       "name": "Open a database in read-only mode",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No read-only mode enabled",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -448,13 +382,10 @@
       "name": "Lock the database manually",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No lock action performed",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -462,13 +393,10 @@
       "name": "Configure automatic locking",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No settings configuration performed",
-        "touch FrameLayout rid=content activity=FileDatabaseSelectActivity"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -477,12 +405,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal indicates partial but not relevant to feature",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -491,12 +416,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal and actions do not match feature gold steps",
-        "touch FrameLayout rid=content activity=FileDatabaseSelectActivity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -505,12 +427,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Journal and actions do not match feature gold steps",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -519,12 +438,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to database encryption settings.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -533,12 +449,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to editing database name, description, default username.",
-        "key key=BACK activity=FileDatabaseSelectActivity state_changed"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -547,12 +460,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to configuring history and compression settings.",
-        "touch Button \"SAVE\" rid=button1 state_changed"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -561,12 +471,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "touch FileDatabaseSelectActivity/Button-Cancel"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -575,12 +482,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -589,12 +493,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability.",
-        "touch FileDatabaseSelectActivity/FrameLayout-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -603,11 +504,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -616,11 +515,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -629,11 +526,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -642,12 +537,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "did not open Settings or configure keyboard behavior",
-        "touch Button 'SAVE'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -656,12 +548,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "did not open 'About' screen or view contribution/licence information",
-        "intent to start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -700,7 +589,7 @@
       "name_similarity": 0.4,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -739,7 +628,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -791,7 +680,7 @@
       "name_similarity": 0.556,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -934,7 +823,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1295,11 +1184,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 136,
+  "actions_with_widget": 91,
   "ground_truth_source": "independent_labeled_set",
   "exercised_features": 2,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.014042553191489362,
-  "weighted_coverage_percentage": 1.4,
+  "weighted_coverage": 0.007801418439716313,
+  "weighted_coverage_percentage": 0.78,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

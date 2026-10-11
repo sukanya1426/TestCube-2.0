@@ -8,18 +8,21 @@ Total Actions    : 16
 
 Total Features   : 42
 Covered Features : 0
-Partial          : 0
-Uncovered        : 42
+Partial          : 3
+Uncovered        : 39
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 0.00%  (mean completion ratio; partial steps count)
-Exercised        : 0  (covered 0 + partial 0)
+Weighted Coverage: 2.38%  (mean completion ratio; partial steps count)
+Exercised        : 3  (covered 0 + partial 3)
 
 ground_truth_source: independent_labeled_set
 
-Matcher: VLM/Gemini semantic judge (not token overlap).
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
 
 ----------------------------------------
 FEATURE DETAILS
@@ -27,334 +30,234 @@ FEATURE DETAILS
 
 [GT001] Browse local storage
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - Journal: dropped, actions: none
-  - touch FileListActivity/Button-OK
 
 [GT002] Create a new folder
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - Journal: none, actions: none
-  - intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileListActivity
 
 [GT003] Create a new empty file
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - LLM batch omitted this feature.
 
 [GT004] Copy files and folders
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - Journal indicates no actions related to copying files and folders
-  - later FileListActivity/Button-OK
 
 [GT005] Move files and folders
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - Journal indicates no actions related to moving files and folders
-  - later FileListActivity/Button-OK
 
 [GT006] Rename an item
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - LLM batch omitted this feature.
 
 [GT007] Delete items
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no long press or delete actions
-  - later SpaActivity/TextView-Allow this
-  - later SpaActivity/View-
 
 [GT008] Select multiple items and use select all
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no long press or select-all actions
-  - later SpaActivity/TextView-Allow this
-  - later SpaActivity/View-
 
 [GT009] Search for files
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no search icon or query actions
-  - later SpaActivity/TextView-Allow this
-  - later SpaActivity/View-
 
 [GT010] Sort the file list
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT011] Remember the sort order per folder
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT012] Switch between list and grid view
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT013] Show or hide hidden files
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match gold capability
 
 [GT014] View and open an archive
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match gold capability
 
 [GT015] Extract an archive
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match gold capability
 
 [GT016] Create an archive
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT017] Open a file with another app
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT018] Share files
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT019] Copy the path of a file
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold capability
-  - later FileListActivity/Button-OK
 
 [GT020] View file properties
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold capability
-  - later FileListActivity/Button-OK
 
 [GT021] Change file permissions, owner and SELinux context (root)
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold capability
-  - later FileListActivity/Button-OK
 
 [GT022] View an image in the built-in viewer
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No actions match the gold steps.
 
 [GT023] Edit a text file in the built-in editor
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No actions match the gold steps.
 
 [GT024] Change the text file encoding in the editor
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No actions match the gold steps.
 
 [GT025] Bookmark a directory
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold
-  - later FileListActivity/Button-OK
 
 [GT026] Manage bookmark directories
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold
-  - later FileListActivity/Button-OK
 
 [GT027] Add a shortcut to a folder on the home screen
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no steps match gold
-  - later FileListActivity/Button-OK
 
 [GT028] Connect to an FTP or FTPS server
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT029] Connect to an SFTP server
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT030] Connect to an SMB share
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT031] Connect to a WebDAV server
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT032] Edit or remove a saved server
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT033] Start the built-in FTP server to share files with a computer
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No steps match the gold capability.
-  - later FileListActivity/Button-OK
 
 [GT034] Configure the FTP server settings
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No relevant actions for FTP server settings.
-  - later FileListActivity/Button-OK
 
 [GT035] Enable root access
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No relevant actions for enabling root access.
-  - later FileListActivity/Button-OK
 
 [GT036] Show a "root directory" entry in the navigation
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_004, test_005, test_006, test_007, test_008, test_009, test_010
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No relevant actions for showing root directory entry.
-  - later FileListActivity/Button-OK
+  - return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)
 
 [GT037] Change the theme and colours
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions
 
 [GT038] Change the app language
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions
 
 [GT039] Configure the file list behaviour
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_004, test_005, test_006, test_007, test_008, test_009, test_010
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - no relevant actions
+  - open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)
 
 [GT040] Configure the standard directories shown in the navigation drawer
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold
-  - later FileListActivity/Button-OK
 
 [GT041] Configure the storage volumes shown
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold
-  - later FileListActivity/Button-OK
 
 [GT042] Open the about screen and licences
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_002, test_003, test_004, test_005, test_006, test_007, test_008, test_009, test_010
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - later FileListActivity/Button-OK
+  - Open the navigation drawer or Settings: touch TextView "Allow this app to read, modify and delete all files on th..." activity=SpaActivity (outcome tokens=settings)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 42 features covered
-0 / 42 features partial
+3 / 42 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 2.38%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -405,10 +308,10 @@ GT GT032 'Edit or remove a saved server' | journal=missing (no name match) statu
 GT GT033 'Start the built-in FTP server to share files with a computer' | journal=G012 'Configure the FTP server' (sim=0.3, name) status=pending | offline=not_covered
 GT GT034 'Configure the FTP server settings' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT035 'Enable root access' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT036 'Show a "root directory" entry in the navigation' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Show a "root directory" entry in the navigation' | journal=missing (no name match) status=missing | offline=partial
 GT GT037 'Change the theme and colours' | journal=G013 'Change the theme' (sim=0.6, name) status=pending | offline=not_covered
 GT GT038 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT039 'Configure the file list behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Configure the file list behaviour' | journal=missing (no name match) status=missing | offline=partial
 GT GT040 'Configure the standard directories shown in the navigation drawer' | journal=G014 'Configure the standard directories' (sim=0.571, name) status=pending | offline=not_covered
 GT GT041 'Configure the storage volumes shown' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT042 'Open the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Open the about screen and licences' | journal=missing (no name match) status=missing | offline=partial

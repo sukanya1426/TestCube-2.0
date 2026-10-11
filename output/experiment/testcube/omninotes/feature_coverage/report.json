@@ -2,355 +2,460 @@
   "application": "Omni Notes",
   "total_features": 48,
   "covered_features": 0,
-  "uncovered_features": 40,
-  "partial_features": 8,
+  "uncovered_features": 22,
+  "partial_features": 26,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/omninotes",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/omninotes/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/omninotes/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/omninotes",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/omninotes/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/omninotes/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Create a text note",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_016",
+        "test_018",
+        "test_024",
+        "test_026",
+        "test_028"
       ],
-      "confidence": 0.7,
+      "confidence": 0.25,
       "evidence": [
-        "some steps attempted but incomplete",
-        "touch IntroActivity/ImageButton-"
+        "tap the text/note option: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "tap the text/note option"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT002",
       "name": "Create a checklist note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no checklist creation steps attempted"
+      "status": "partial",
+      "test_cases": [
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the checklist option (or open a note and use the overflow menu: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "tap the checklist option (or open a note and use the overflow menu"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT003",
       "name": "Tick and untick checklist items",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "no checklist item interaction steps attempted"
+      "status": "partial",
+      "test_cases": [
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a checklist note: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "Open a checklist note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT004",
       "name": "Convert a note between text and checklist",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "partially covered, missing conversion steps",
-        "touch MainActivity/ImageButton-"
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT005",
       "name": "Attach a photo from the camera",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no steps towards camera attachment",
-        "touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005",
+        "test_014",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" rid=title activity=MainActivity (tokens=note)",
+        "tap Camera: touch ImageButton rid=fab_camera state_changed (tokens=camera)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap Camera"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT006",
       "name": "Attach an image or video from the gallery",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no steps towards gallery attachment",
-        "touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_006",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the attachment icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT007",
       "name": "Record and attach an audio note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "touch MainActivity/Button-"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_006",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5714,
+      "evidence": [
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)",
+        "tap the recording option: touch TextView \"Record\" rid=recording activity=MainActivity state_changed (tokens=recording)",
+        "tap record: touch TextView \"Stop\" rid=recording activity=MainActivity state_changed (tokens=record)",
+        "tap stop: touch TextView \"Stop\" rid=recording activity=MainActivity state_changed (tokens=stop)"
+      ],
+      "matched_path": [
+        "tap the attachment icon",
+        "tap the recording option",
+        "tap record",
+        "tap stop"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5714285714285714
     },
     {
       "id": "GT008",
       "name": "Create and attach a sketch",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "touch MainActivity/Button-"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_006",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the attachment icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT009",
       "name": "Attach an arbitrary file",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "steps not followed",
-        "touch MainActivity/Button-"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_006",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the attachment icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT010",
       "name": "Add a location to a note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards adding a location to a note"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT011",
       "name": "Set a reminder on a note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards setting a reminder on a note"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT012",
       "name": "Set a recurring reminder",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards setting a recurring reminder"
+      "status": "partial",
+      "test_cases": [
+        "test_026"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the reminder dialog on a note: touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminder)"
+      ],
+      "matched_path": [
+        "Open the reminder dialog on a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT013",
       "name": "View all notes that have reminders",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_026"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "partially opened navigation drawer, but no further steps",
-        "touch CustomTouchEvent(state=c06c74e36ef057d0a9676a96c63f0e36, x=54, y=36)"
+        "tap \"Reminders\": touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminders)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap \"Reminders\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT014",
       "name": "Create a category",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no steps towards creating a category",
-        "touch CustomTouchEvent(state=0db419bcb7fecd31acf4c3bc0aa8ccdb, x=54, y=192)"
+      "status": "partial",
+      "test_cases": [
+        "test_022"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "tap \"Categories\" (or the manage-categories entry): long_touch Button \"Category\" rid=menu_category activity=MainActivity (tokens=categories)"
+      ],
+      "matched_path": [
+        "tap \"Categories\" (or the manage-categories entry)"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT015",
       "name": "Edit or delete a category",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no steps towards editing or deleting a category",
-        "touch ImageButton \"drawer open\" activity=MainActivity state_changed | activity=MainActivity screen=drawer open; Note..."
+      "status": "partial",
+      "test_cases": [
+        "test_022"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "long-press (or tap) the category: long_touch Button \"Category\" rid=menu_category activity=MainActivity (tokens=category)"
+      ],
+      "matched_path": [
+        "long-press (or tap) the category"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT016",
       "name": "Assign a category to a note",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_022",
+        "test_024"
       ],
-      "confidence": 0.8,
+      "confidence": 0.2,
       "evidence": [
-        "partially opened note, tapped overflow, but no category selection",
-        "touch MainActivity/ImageView-"
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT017",
       "name": "Filter notes by category",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "partially opened navigation drawer, tapped 'Tags' but no filtering",
-        "touch MainActivity/ImageButton-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT018",
       "name": "Tag notes with hashtags",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "no relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT019",
       "name": "Filter notes by tag",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_022"
       ],
-      "confidence": 0.6,
+      "confidence": 0.3333,
       "evidence": [
-        "Tap 'Tags' but did not select tags or confirm.",
-        "touch MainActivity/ImageButton-"
+        "tap \"Tags\": long_touch Button \"Add tags\" rid=menu_tag activity=MainActivity (tokens=tags)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap \"Tags\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT020",
       "name": "Search notes",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Did not tap search icon or type text.",
-        "touch MainActivity/ImageButton-"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT021",
       "name": "Archive a note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "Did not swipe or tap 'Archive'.",
-        "touch MainActivity/ImageButton-"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "On the note list: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "On the note list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT022",
       "name": "Restore a note from the archive",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.7,
-      "evidence": [
-        "partial steps attempted, but not all required",
-        "touch MainActivity/ImageButton-",
-        "touch MainActivity/TextView-Notes"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT023",
       "name": "Move a note to the trash",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "steps not aligned with gold capability"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "On the note list: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "On the note list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT024",
       "name": "Restore or permanently delete notes from the trash",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold capability"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -359,27 +464,30 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/TextView-Text note"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT026",
       "name": "Lock a note with a password",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/TextView-Text note"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.1667,
+      "evidence": [
+        "open the note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT027",
@@ -387,70 +495,79 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch MainActivity/TextView-Text note"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT028",
       "name": "Merge several notes into one",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.7,
-      "evidence": [
-        "Tap 'Merge' button; Tap 'Merge' option.",
-        "touch MainActivity/ImageButton-",
-        "touch MainActivity/ImageButton-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT029",
       "name": "Duplicate a note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No steps towards duplication."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT030",
       "name": "Share a note",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "No steps towards sharing."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024",
+        "test_028"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT031",
       "name": "Add a note from another app via the share sheet",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Steps do not align with the gold capability",
-        "touch TextView 'Notes'"
+      "status": "partial",
+      "test_cases": [
+        "test_028"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "tap Share: touch Button \"Share\" rid=menu_share state_changed (tokens=share)"
+      ],
+      "matched_path": [
+        "tap Share"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT032",
@@ -458,12 +575,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Steps do not align with the gold capability",
-        "touch MainActivity/ImageButton"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -472,12 +586,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Steps do not align with the gold capability",
-        "touch TextView 'Notes'"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -486,38 +597,48 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT035",
       "name": "View note details and statistics",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_016",
+        "test_018",
+        "test_024"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT036",
       "name": "Add the Omni Notes home screen widget",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No relevant actions found."
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.18,
+      "evidence": [
+        "find Omni Notes: touch AutoCompleteTextView \"Search in notes\" rid=search_src_text activity=MainActivity (tokens=find,notes)"
+      ],
+      "matched_path": [
+        "find Omni Notes"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT037",
@@ -525,11 +646,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps related to export backup"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -538,11 +657,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps related to import backup"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -551,11 +668,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no steps related to schedule automatic backups"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -564,12 +679,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards deleting backup",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -578,12 +690,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards changing language",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -592,12 +701,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards changing app colours and theme",
-        "none"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -605,12 +711,10 @@
       "name": "Change the text size in the note list",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -618,12 +722,10 @@
       "name": "Configure the swipe gesture action",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -631,12 +733,10 @@
       "name": "Configure checklist behaviour",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -645,11 +745,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -658,11 +756,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -671,11 +767,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions found"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -701,7 +795,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -714,7 +808,7 @@
       "name_similarity": 0.105,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -740,7 +834,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -753,7 +847,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -766,7 +860,7 @@
       "name_similarity": 0.364,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -779,7 +873,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -792,7 +886,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -805,7 +899,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -818,7 +912,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -831,7 +925,7 @@
       "name_similarity": 0.111,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -857,7 +951,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -870,7 +964,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -896,7 +990,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -909,7 +1003,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -948,7 +1042,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -961,7 +1055,7 @@
       "name_similarity": 0.455,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -974,7 +1068,7 @@
       "name_similarity": 0.357,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1013,7 +1107,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1039,7 +1133,7 @@
       "name_similarity": 0.6,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1052,7 +1146,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1065,7 +1159,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1078,7 +1172,7 @@
       "name_similarity": 0.294,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1130,7 +1224,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1143,7 +1237,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1322,11 +1416,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 154,
+  "actions_with_widget": 101,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 8,
+  "exercised_features": 26,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.04791666666666666,
-  "weighted_coverage_percentage": 4.79,
+  "weighted_coverage": 0.16641865079365079,
+  "weighted_coverage_percentage": 16.64,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

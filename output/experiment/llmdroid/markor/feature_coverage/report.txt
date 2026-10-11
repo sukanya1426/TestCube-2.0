@@ -1,0 +1,341 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Markor
+
+Total Actions    : 673
+
+Total Features   : 46
+Covered Features : 0
+Partial          : 3
+Uncovered        : 43
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 1.99%  (mean completion ratio; partial steps count)
+Exercised        : 3  (covered 0 + partial 3)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the notebook folder
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Create a new plain text or Markdown document
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Create a document from a template
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Create a folder
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Edit a document in the text editor
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Switch between edit mode and rendered preview
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT007] Apply Markdown formatting with the action toolbar
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Insert bullet, numbered and checkbox lists
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Insert a link
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Insert an image from the gallery or camera
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Record and insert an audio note
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Insert the current date or time
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Insert a table
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] Undo and redo edits
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Search inside the open document
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT016] Search across all files in the notebook
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - choose whether to search file names only or file contents: touch FrameLayout rid=content activity=StoragePermissionActivity (tokens=contents)
+
+[GT017] Open the QuickNote file
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.45
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Tap the QuickNote tab in the bottom navigation bar (or open it from the drawer): touch TextView "QuickNote" rid=title activity=IntroActivity (tokens=note,quick)
+
+[GT018] Open the To-Do file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Manage a todo.txt file
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - the todo.txt action bar appears: touch ImageButton "NEXT" rid=next activity=IntroActivity state_changed (outcome tokens=todo,txt)
+
+[GT020] Edit a Zim Wiki page
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Edit AsciiDoc, Org-Mode, CSV and plain text files
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Preview a CSV file as a table
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Create a Markdown presentation
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Export the document as a PDF or print it
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] Share the document as plain text or rendered HTML
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Rename a file or folder
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Move or copy files and folders
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Delete files and folders
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Select multiple files at once
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Mark a file or folder as a favourite
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT031] Sort the file list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT032] Show or hide hidden files
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT033] Jump to a specific folder path
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT034] View recent and popular documents
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT035] View file information
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT036] Encrypt and open password-protected notes
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT037] Open a file with another application
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT038] Add a launcher shortcut to a document
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT039] Add the Markor home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT040] Change the notebook (root) directory
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT041] Change the theme and colours
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT042] Change the editor font family and size
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT043] Configure editor behaviour
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT044] Configure the format action bar buttons
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT045] Change the app language
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT046] Review the changelog, help and licences
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 46 features covered
+3 / 46 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 1.99%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 46 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse the notebook folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Create a new plain text or Markdown document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Create a document from a template' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Create a folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Edit a document in the text editor' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Switch between edit mode and rendered preview' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Apply Markdown formatting with the action toolbar' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Insert bullet, numbered and checkbox lists' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Insert a link' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Insert an image from the gallery or camera' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Record and insert an audio note' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Insert the current date or time' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Insert a table' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Undo and redo edits' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Search inside the open document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Search across all files in the notebook' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Open the QuickNote file' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Open the To-Do file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Manage a todo.txt file' | journal=missing (no name match) status=missing | offline=partial
+GT GT020 'Edit a Zim Wiki page' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Edit AsciiDoc, Org-Mode, CSV and plain text files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Preview a CSV file as a table' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Create a Markdown presentation' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Export the document as a PDF or print it' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Share the document as plain text or rendered HTML' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Rename a file or folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Move or copy files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Delete files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Select multiple files at once' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Mark a file or folder as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Sort the file list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Show or hide hidden files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Jump to a specific folder path' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'View recent and popular documents' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'View file information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Encrypt and open password-protected notes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Open a file with another application' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Add a launcher shortcut to a document' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Add the Markor home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Change the notebook (root) directory' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT041 'Change the theme and colours' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Change the editor font family and size' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT043 'Configure editor behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT044 'Configure the format action bar buttons' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT045 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'Review the changelog, help and licences' | journal=missing (no name match) status=missing | offline=not_covered

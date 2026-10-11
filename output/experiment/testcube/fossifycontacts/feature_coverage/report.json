@@ -1,91 +1,99 @@
 {
   "application": "Fossify Contacts",
   "total_features": 38,
-  "covered_features": 0,
-  "uncovered_features": 31,
-  "partial_features": 7,
-  "coverage": 0.0,
-  "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifycontacts",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifycontacts/ground_truth.json",
+  "covered_features": 1,
+  "uncovered_features": 25,
+  "partial_features": 12,
+  "coverage": 0.02631578947368421,
+  "coverage_percentage": 2.63,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifycontacts",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifycontacts/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifycontacts/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Create a contact",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Some steps were partially completed but not in the correct order.",
-        "touch EditContactActivity/ImageView-",
-        "set_text EditContactActivity/AutoCompleteTextView-First name"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
       "name": "Add a photo to a contact",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps related to adding a photo were executed."
+      "status": "partial",
+      "test_cases": [
+        "test_029"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "choose \"Take photo\" or \"Choose photo\": touch ImageView \"Change photo\" rid=contact_photo activity=EditContactActivity state_changed (tokens=photo)"
+      ],
+      "matched_path": [
+        "choose \"Take photo\" or \"Choose photo\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT003",
       "name": "Add multiple phone numbers with types",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_003",
+        "test_008",
+        "test_012",
+        "test_014",
+        "test_030"
       ],
-      "confidence": 0.5,
+      "confidence": 0.1667,
       "evidence": [
-        "Some steps were partially completed but not in the correct order.",
-        "touch EditContactActivity/TextView-Home",
-        "touch EditContactActivity/RadioButton-Custom"
+        "tap the type selector and choose Mobile, Home, Work, Main, Fax, Pager or a custom label: touch RadioButton \"Custom\" activity=EditContactActivity state_changed (tokens=custom)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap the type selector and choose Mobile, Home, Work, Main, Fax, Pager or a custom label"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT004",
       "name": "Add email addresses",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards adding email addresses.",
-        "touch MainActivity/ImageView-",
-        "touch MainActivity/TextView-Settings"
+      "status": "partial",
+      "test_cases": [
+        "test_012",
+        "test_030"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "enter the address: set_text EditText \"Address\" rid=contact_address text=testcube.bench@example.com activity=EditContactActivity state_changed (tokens=address)"
+      ],
+      "matched_path": [
+        "enter the address"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT005",
       "name": "Add postal addresses",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps towards adding postal addresses.",
-        "touch MainActivity/ImageView-",
-        "touch MainActivity/TextView-Settings"
+      "status": "partial",
+      "test_cases": [
+        "test_012",
+        "test_030"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "enter the address: set_text EditText \"Address\" rid=contact_address text=testcube.bench@example.com activity=EditContactActivity state_changed (tokens=address)"
+      ],
+      "matched_path": [
+        "enter the address"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT006",
@@ -93,42 +101,31 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards adding important dates.",
-        "touch MainActivity/ImageView-",
-        "touch MainActivity/TextView-Settings"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT007",
       "name": "Add the organisation and job title",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Tapped 'Add' button but did not complete all steps.",
-        "touch CustomTouchEvent(state=46ac1cbd5e80666829184c5238ef3854, x=891, y=1647)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT008",
       "name": "Add websites and instant messaging handles",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No relevant actions for adding websites or IM handles."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -136,12 +133,10 @@
       "name": "Add notes to a contact",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "Actions do not match the gold steps for adding notes."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -149,13 +144,10 @@
       "name": "Set a custom ringtone for a contact",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -163,13 +155,10 @@
       "name": "Edit a contact",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -177,59 +166,44 @@
       "name": "Delete a contact",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT013",
       "name": "Mark a contact as a favourite",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "Tap star icon in contact details",
-        "touch EditContactActivity/ImageView-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT014",
       "name": "Remove a contact from favourites",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No relevant actions found"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT015",
       "name": "Call a contact",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "Tap phone number to open dialer",
-        "touch MainActivity/Button-"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT016",
@@ -237,165 +211,191 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT017",
       "name": "Send an email to a contact",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
+      "status": "partial",
+      "test_cases": [
+        "test_012"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "select the mail app: touch ImageView rid=contact_emails_image activity=EditContactActivity (tokens=mail)"
+      ],
+      "matched_path": [
+        "select the mail app"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT018",
       "name": "Create a contact group",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No steps match the gold capability."
+      "status": "covered",
+      "test_cases": [
+        "test_020"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 1.0,
+      "evidence": [
+        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)",
+        "enter the group name: set_text EditText \"Title\" rid=group_name text=TestCube Group activity=MainActivity state_changed (tokens=group,name)"
+      ],
+      "matched_path": [
+        "Open the Groups tab",
+        "tap the \"+\" button",
+        "enter the group name",
+        "tap OK"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 1.0
     },
     {
       "id": "GT019",
       "name": "Add contacts to a group",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions"
+      "status": "partial",
+      "test_cases": [
+        "test_020",
+        "test_022"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)"
+      ],
+      "matched_path": [
+        "Open the Groups tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT020",
       "name": "Rename or delete a group",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "no relevant actions"
+      "status": "partial",
+      "test_cases": [
+        "test_020",
+        "test_022"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)"
+      ],
+      "matched_path": [
+        "Open the Groups tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT021",
       "name": "Send a message or email to a whole group",
-      "status": "not_covered",
-      "test_cases": [],
+      "status": "partial",
+      "test_cases": [
+        "test_020",
+        "test_022"
+      ],
       "confidence": 0.2,
       "evidence": [
-        "no relevant actions"
+        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "matched_path": [
+        "Open the Groups tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT022",
       "name": "Search contacts",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No search functionality tested.",
-        "touch MainActivity/TextView-Contacts"
+      "status": "partial",
+      "test_cases": [
+        "test_012",
+        "test_014",
+        "test_030"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6667,
+      "evidence": [
+        "Tap the search icon in the toolbar: touch ImageView \"Search\" rid=top_toolbar_search_icon activity=MainActivity state_changed (tokens=search,toolbar)",
+        "type the name, number or email fragment: touch ImageView rid=contact_emails_image activity=EditContactActivity (tokens=email)"
+      ],
+      "matched_path": [
+        "Tap the search icon in the toolbar",
+        "type the name, number or email fragment"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT023",
       "name": "Sort the contact list",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No sort functionality tested.",
-        "touch MainActivity/TextView-Contacts"
+      "status": "partial",
+      "test_cases": [
+        "test_016",
+        "test_025"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "tap \"Sort by\": touch Button \"Sort by\" rid=sort activity=MainActivity state_changed (tokens=by,sort)"
+      ],
+      "matched_path": [
+        "tap \"Sort by\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT024",
       "name": "Filter which contact sources are shown",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No filter functionality tested.",
-        "touch MainActivity/TextView-Contacts"
+      "status": "partial",
+      "test_cases": [
+        "test_018"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2762,
+      "evidence": [
+        "tap \"Filter contacts by source\"/\"Manage shown contact fields\": touch RelativeLayout rid=filter_contact_source_holder activity=MainActivity state_changed (tokens=contacts,filter,source)"
+      ],
+      "matched_path": [
+        "tap \"Filter contacts by source\"/\"Manage shown contact fields\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT025",
       "name": "Choose which fields are visible in the contact detail",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "scroll to 'Manage shown contact fields' but did not complete selection",
-        "touch CustomTouchEvent(state=e47dc04b4e08f47b17e43a603d88679c, x=586, y=1100)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT026",
       "name": "Show only contacts with phone numbers",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "no relevant actions for toggling phone number filter",
-        "intent intent=am start org.fossify.contacts/org.fossify.contacts.activities.SplashActivity.... state_ch..."
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT027",
       "name": "Merge duplicate contacts",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.7,
-      "evidence": [
-        "long-pressed but did not complete merge action",
-        "long_touch EditContactActivity/TextView-Mobile"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT028",
@@ -403,11 +403,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards sharing a contact as a vCard."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -416,11 +414,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards exporting contacts to a vCard file."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -429,11 +425,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards importing contacts from a vCard file."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -442,12 +436,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch EditContactActivity/ImageView-"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -456,27 +447,38 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch FloatingActionButton",
-        "touch ImageView"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT033",
       "name": "Show or hide the individual tabs",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
+      "status": "partial",
+      "test_cases": [
+        "test_008",
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_016",
+        "test_018",
+        "test_020",
+        "test_022",
+        "test_023",
+        "test_025",
+        "test_027",
+        "test_029"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.28,
+      "evidence": [
+        "tick the tabs (Contacts, Favourites, Groups) to keep visible: touch activity=MainActivity (outcome tokens=contacts,groups,tabs)"
+      ],
+      "matched_path": [
+        "tick the tabs (Contacts, Favourites, Groups) to keep visible"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT034",
@@ -484,12 +486,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -498,12 +497,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -512,12 +508,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "actions do not match gold steps",
-        "intent start activity"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -526,11 +519,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to settings or contact thumbnails."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -539,11 +530,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No actions related to viewing the about screen, FAQ, or licences."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -556,7 +545,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -569,7 +558,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -595,7 +584,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -608,7 +597,7 @@
       "name_similarity": 1.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -634,7 +623,7 @@
       "name_similarity": 0.538,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -712,7 +701,7 @@
       "name_similarity": 0.667,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -738,7 +727,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -764,7 +753,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -777,7 +766,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -790,7 +779,7 @@
       "name_similarity": 0.667,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -803,7 +792,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -816,7 +805,7 @@
       "name_similarity": 0.4,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -829,7 +818,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -842,7 +831,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -855,7 +844,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -868,7 +857,7 @@
       "name_similarity": 0.429,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -894,7 +883,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -972,7 +961,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1060,11 +1049,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 167,
+  "actions_with_widget": 125,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 7,
+  "exercised_features": 13,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.05421052631578947,
-  "weighted_coverage_percentage": 5.42,
+  "weighted_coverage": 0.11535087719298244,
+  "weighted_coverage_percentage": 11.54,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

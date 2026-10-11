@@ -4,181 +4,170 @@ TestCube Feature Coverage Report
 
 Application: NewPipe
 
-Total Actions    : 152
+Total Actions    : 241
 
 Total Features   : 17
-Covered Features : 3
-Partial          : 3
-Uncovered        : 11
+Covered Features : 0
+Partial          : 11
+Uncovered        : 6
 
-Feature Coverage : 17.65%
+Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 22.71%  (mean completion ratio; partial steps count)
-Exercised        : 6  (covered 3 + partial 3)
+Weighted Coverage: 24.02%  (mean completion ratio; partial steps count)
+Exercised        : 11  (covered 0 + partial 11)
 
 ground_truth_source: independent_labeled_set
 
-Matcher: VLM/Gemini semantic judge (not token overlap).
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
 
 ----------------------------------------
 FEATURE DETAILS
 ----------------------------------------
 
 [GT001] View the newest uploads feed
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_011, test_013, test_027, test_037, test_039, test_056
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - actions do not match gold steps
-  - set_text
-  - touch
-  - scroll
+  - Select the What's New tab: touch LinearLayout "What's New" activity=MainActivity state_changed (tokens=s,what)
 
 [GT002] Look up content by keyword
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_011, test_015, test_017, test_029, test_031, test_037, test_039, test_041, test_062, test_064
+Confidence : 0.47
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - actions do not match gold steps
-  - touch
-  - set_text
-  - touch
+  - Tap the search icon in the toolbar: touch ImageView "Search" rid=toolbar_search_clear_icon activity=MainActivity state_changed (tokens=search,toolbar)
+  - Submit the query with the keyboard action: touch Button "Search" rid=action_search activity=MainActivity state_changed (tokens=action,query)
 
 [GT003] Narrow results by content type
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_009, test_011, test_013, test_015, test_017, test_027, test_029, test_035, test_037, test_039, test_041, test_048, test_054
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - actions do not match gold steps
-  - touch
-  - touch
-  - touch
+  - Choose a content type such as videos, channels or playlists: touch LinearLayout "Bookmarked Playlists" activity=MainActivity state_changed (tokens=playlists)
 
 [GT004] Re-run a previous search
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.50
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_003, test_005, test_011, test_015, test_017, test_029, test_031, test_037, test_039, test_041, test_062, test_064
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Partial steps: Open Search, but no further actions.
-  - touch MainActivity/Button-
+  - Open the search screen: touch Button "Search" rid=action_search activity=MainActivity state_changed (tokens=search)
 
 [GT005] Review saved downloads
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_007, test_033
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - No relevant actions for review saved downloads.
+  - Select Downloads: touch TextView "Downloads" activity=DownloadActivity (tokens=downloads)
+  - Open the menu on a download entry: touch CheckedTextView "Downloads" rid=design_menu_item_text activity=DownloadActivity state_changed (tokens=download)
 
 [GT006] Review followed channels
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_015, test_017, test_039, test_041, test_058
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No relevant actions for review followed channels.
+  - Select Subscriptions: touch LinearLayout "Subscriptions" activity=MainActivity state_changed (tokens=subscriptions)
 
 [GT007] Open saved playlists
-Status     : COVERED
-Test Cases : test_001
-Confidence : 0.80
-Matcher    : vlm
-Completion : 100% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_020, test_022, test_023, test_026, test_027, test_029, test_031, test_033, test_035, test_037, test_039, test_041, test_044, test_046, test_047, test_048, test_050, test_052, test_054, test_056, test_058, test_060, test_062, test_064
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - Open drawer, select Bookmarked Playlists, review, open playlist.
-  - touch MainActivity/ImageButton-
+  - Select Bookmarked Playlists: touch LinearLayout "Bookmarked Playlists" activity=MainActivity state_changed (tokens=bookmarked,playlists)
+  - Open one playlist to see its items: touch Button "RETRY" rid=error_retry_button activity=MainActivity (outcome tokens=playlist)
 
 [GT008] Review what was watched
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_060
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No relevant actions found.
+  - Open the history menu to clear or delete an entry: touch TextView "Clear watch history" rid=title activity=MainActivity state_changed (tokens=clear,history)
 
 [GT009] Adjust the app's look
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No relevant actions found.
 
 [GT010] Tune playback quality
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No relevant actions found.
 
 [GT011] Configure download behaviour
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_007, test_033
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No relevant actions found.
+  - Open the Downloads section: touch TextView "Downloads" activity=DownloadActivity (tokens=downloads)
 
 [GT012] Read the app information
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No relevant actions found.
 
 [GT013] Adjust content preferences
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
-Evidence   :
-  - partially navigated to settings, but did not complete all steps
-  - touch MainActivity/Button-OK
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT014] Manage stored history data
-Status     : COVERED
-Test Cases : test_001
-Confidence : 0.90
-Matcher    : vlm
-Completion : 100% of gold steps
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_011, test_015, test_017, test_029, test_031, test_037, test_039, test_041, test_062, test_064
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - fully navigated to settings and cleared data
-  - touch MainActivity/ImageButton-
+  - Confirm the action: touch Button "Search" rid=action_search activity=MainActivity state_changed (tokens=action)
 
 [GT015] Control notification behaviour
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT016] Export or import app data
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
-Evidence   :
-  - Partial steps completed, missing export and import options
-  - Open Search; Type a query; Tap the clear button
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT017] Reset a typed query
-Status     : COVERED
-Test Cases : test_001
-Confidence : 0.90
-Matcher    : vlm
-Completion : 100% of gold steps
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_011, test_015, test_017, test_029, test_031, test_037, test_039, test_041, test_062, test_064
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - All steps completed as per gold
-  - Open Search; Type a query; Tap the clear button
+  - Open the search screen: touch Button "Search" rid=action_search activity=MainActivity state_changed (tokens=search)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
-3 / 17 features covered
-3 / 17 features partial
-Feature Coverage = COVERED / Total = 17.65%
-Weighted Feature Coverage = mean(completion_ratio) = 22.71%
+0 / 17 features covered
+11 / 17 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 24.02%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -194,20 +183,20 @@ Extracted vs ground truth: 18 / 17 (completeness ratio 1.059)
 
 Feature-inference P/R/F1: 0.56 / 0.59 / 0.57 (false not_present=0)
 
-GT GT001 'View the newest uploads feed' | journal=F001 "Browse What's New" (sim=0.353, name) status=covered | offline=not_covered
-GT GT002 'Look up content by keyword' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT003 'Narrow results by content type' | journal=F003 'Filter search results' (sim=0.467, name) status=covered | offline=not_covered
+GT GT001 'View the newest uploads feed' | journal=F001 "Browse What's New" (sim=0.353, name) status=covered | offline=partial
+GT GT002 'Look up content by keyword' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Narrow results by content type' | journal=F003 'Filter search results' (sim=0.467, name) status=covered | offline=partial
 GT GT004 'Re-run a previous search' | journal=F017 'Search suggestion reuse' (sim=0.583, name) status=partial | offline=partial
-GT GT005 'Review saved downloads' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT006 'Review followed channels' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT007 'Open saved playlists' | journal=F006 'Bookmarked playlists' (sim=0.417, name) status=covered | offline=covered
-GT GT008 'Review what was watched' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Review saved downloads' | journal=missing (no name match) status=missing | offline=partial
+GT GT006 'Review followed channels' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Open saved playlists' | journal=F006 'Bookmarked playlists' (sim=0.417, name) status=covered | offline=partial
+GT GT008 'Review what was watched' | journal=missing (no name match) status=missing | offline=partial
 GT GT009 "Adjust the app's look" | journal=F009 'Change appearance' (sim=0.455, name) status=partial | offline=not_covered
 GT GT010 'Tune playback quality' | journal=F010 'Video and audio settings' (sim=0.636, name) status=partial | offline=not_covered
-GT GT011 'Configure download behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Configure download behaviour' | journal=missing (no name match) status=missing | offline=partial
 GT GT012 'Read the app information' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT013 'Adjust content preferences' | journal=F012 'Content settings' (sim=0.636, name) status=partial | offline=partial
-GT GT014 'Manage stored history data' | journal=F014 'History and cache settings' (sim=0.889, name) status=covered | offline=covered
+GT GT013 'Adjust content preferences' | journal=F012 'Content settings' (sim=0.636, name) status=partial | offline=not_covered
+GT GT014 'Manage stored history data' | journal=F014 'History and cache settings' (sim=0.889, name) status=covered | offline=partial
 GT GT015 'Control notification behaviour' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT016 'Export or import app data' | journal=F016 'Backup and restore' (sim=0.714, name) status=partial | offline=partial
-GT GT017 'Reset a typed query' | journal=F018 'Clear a search' (sim=0.5, name) status=covered | offline=covered
+GT GT016 'Export or import app data' | journal=F016 'Backup and restore' (sim=0.714, name) status=partial | offline=not_covered
+GT GT017 'Reset a typed query' | journal=F018 'Clear a search' (sim=0.5, name) status=covered | offline=partial

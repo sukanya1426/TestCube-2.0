@@ -2,195 +2,248 @@
   "application": "OpenTasks",
   "total_features": 31,
   "covered_features": 0,
-  "uncovered_features": 21,
-  "partial_features": 10,
+  "uncovered_features": 9,
+  "partial_features": 22,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/opentasks",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/opentasks/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/opentasks/ground_truth.json",
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/opentasks",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/opentasks/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/opentasks/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "Create a task",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_026",
+        "test_032"
       ],
-      "confidence": 0.7,
+      "confidence": 0.5,
       "evidence": [
-        "Partial steps completed, lacks save action",
-        "touch EditTaskActivity/TextView-Create"
+        "tap the \"+\" floating action button: touch ImageButton rid=floating_action_button state_changed (tokens=action,floating)",
+        "choose the task list to create it in: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=task)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap the \"+\" floating action button",
+        "choose the task list to create it in"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT002",
       "name": "Set the task title and description",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No title or description entry"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT003",
       "name": "Set a due date and time",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No due date or time selection"
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_015",
+        "test_026",
+        "test_032"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT004",
       "name": "Set a start date",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Partial due to missing steps",
-        "touch TaskListActivity/TextView-Local"
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT005",
       "name": "Set the task priority",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "No relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT006",
       "name": "Set the classification/privacy level",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "No relevant actions found"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT007",
       "name": "Set the task status",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.7,
+      "confidence": 0.25,
       "evidence": [
-        "Partial steps attempted, but did not complete the task status change.",
-        "touch CustomTouchEvent(state=6ba115282a4422dcce2af57319729b83, x=450, y=960)"
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT008",
       "name": "Set the completion percentage",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "No steps attempted to set the completion percentage."
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT009",
       "name": "Add a location to a task",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.6,
-      "evidence": [
-        "No steps attempted to add a location to a task."
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT010",
       "name": "Add a URL to a task",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch TextView 'Local'"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT011",
       "name": "Add a checklist to a task",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.8,
-      "evidence": [
-        "steps not aligned with gold",
-        "touch CustomTouchEvent"
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT012",
       "name": "Set an alarm/reminder",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
+      "status": "partial",
+      "test_cases": [
+        "test_005"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.2,
+      "evidence": [
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
+      ],
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
     },
     {
       "id": "GT013",
       "name": "Create a recurring task",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.2,
       "evidence": [
-        "Partial steps completed, missing recurrence setup.",
-        "touch TaskListActivity/TextView-0 tasks"
+        "Open the task editor: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=editor)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
+      "matched_path": [
+        "Open the task editor"
+      ],
+      "matcher": "deterministic",
       "completion_ratio": 0.2
     },
     {
@@ -198,94 +251,99 @@
       "name": "Complete a task",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_023",
+        "test_026",
+        "test_032"
       ],
-      "confidence": 0.6,
+      "confidence": 0.5,
       "evidence": [
-        "Partial steps completed, missing task completion.",
-        "touch TaskListActivity/TextView-0 tasks"
+        "Open the task list: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=task)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matched_path": [
+        "Open the task list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT015",
       "name": "Edit an existing task",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps completed, missing field changes and save.",
-        "touch TaskListActivity/TextView-0 tasks"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT016",
       "name": "Delete a task",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps: Open app, tap 'Save', not delete task",
-        "touch TaskListActivity/TextView-0 tasks"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT017",
       "name": "Browse tasks grouped by due date",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_015",
+        "test_026",
+        "test_032"
       ],
-      "confidence": 0.6,
+      "confidence": 0.5,
       "evidence": [
-        "Partial steps: Open app, select 'Due', not group tasks",
-        "touch TaskListActivity/TextView-Next days"
+        "select the \"Due\" tab: touch TextView \"Tasks due\" activity=TaskListActivity (tokens=due)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matched_path": [
+        "select the \"Due\" tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT018",
       "name": "Browse tasks grouped by start date",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial steps: Open app, select 'Due', not group tasks",
-        "touch TaskListActivity/TextView-Next days"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.33
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT019",
       "name": "Browse tasks grouped by list",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch TaskListActivity/TextView-Next days"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_011",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "select the \"Lists\" tab: touch Spinner rid=task_list_spinner activity=EditTaskActivity state_changed (tokens=lists)"
+      ],
+      "matched_path": [
+        "select the \"Lists\" tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT020",
@@ -293,99 +351,134 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch TaskListActivity/TextView-Next days"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT021",
       "name": "Browse tasks grouped by progress",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "Gold steps not followed.",
-        "touch TaskListActivity/TextView-Next days"
+      "status": "partial",
+      "test_cases": [
+        "test_023"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "select the \"Progress\" tab: touch TextView \"Task progress\" activity=TaskListActivity (tokens=progress)"
+      ],
+      "matched_path": [
+        "select the \"Progress\" tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT022",
       "name": "Search for a task",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No search functionality attempted.",
-        "none"
+      "status": "partial",
+      "test_cases": [
+        "test_021"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.25,
+      "evidence": [
+        "type the search text: set_text AutoCompleteTextView \"Search\" rid=search_src_text text=test activity=TaskListActivity state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "type the search text"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT023",
       "name": "Show or hide completed tasks",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No overflow menu or completed tasks toggle attempted.",
-        "none"
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_013"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "toggle the \"Show completed tasks\" option: touch TextView \"Show completed tasks\" rid=title activity=TaskListActivity state_changed (tokens=completed,tasks)"
+      ],
+      "matched_path": [
+        "toggle the \"Show completed tasks\" option"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT024",
       "name": "Choose which task lists are visible",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "No overflow menu or visible lists selection attempted.",
-        "none"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_023",
+        "test_025",
+        "test_026",
+        "test_028",
+        "test_030",
+        "test_032"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.6333,
+      "evidence": [
+        "tap \"Visible lists\"/\"Synchronised lists\": touch CheckBox rid=visible_task_list_checked activity=SyncSettingsActivity state_changed (tokens=lists,visible)",
+        "tick the lists to display: touch activity=TaskListActivity state_changed (outcome tokens=lists)"
+      ],
+      "matched_path": [
+        "tap \"Visible lists\"/\"Synchronised lists\"",
+        "tick the lists to display"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT025",
       "name": "Create a local task list",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_005"
       ],
-      "confidence": 0.6,
+      "confidence": 0.1667,
       "evidence": [
-        "Partial steps executed, missing list name entry and color selection.",
-        "touch CustomTouchEvent(state=0b001e45709cb306cb2ab5ab0d988ac3, x=975, y=73)"
+        "tap the add action: touch TextView \"SAVE\" rid=editor_action_save activity=TaskListActivity state_changed (tokens=action)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matched_path": [
+        "tap the add action"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT026",
       "name": "Change a task list's name or colour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "No steps towards changing list name or color.",
-        "touch TextView \"Local\" rid=task_list_account_name activity=EditTaskActivity state_changed"
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_015"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "change the name or colour: touch View rid=task_list_color activity=EditTaskActivity state_changed (tokens=colour)"
+      ],
+      "matched_path": [
+        "change the name or colour"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT027",
@@ -393,11 +486,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -406,11 +497,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for adding OpenTasks widget"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -419,11 +508,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for opening a task from the widget"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -432,11 +519,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions for configuring application settings"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -445,11 +530,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no relevant actions"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -475,7 +558,7 @@
       "name_similarity": 0.429,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -488,7 +571,7 @@
       "name_similarity": 0.6,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -514,7 +597,7 @@
       "name_similarity": 1.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -527,7 +610,7 @@
       "name_similarity": 0.385,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -553,7 +636,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -566,7 +649,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -579,7 +662,7 @@
       "name_similarity": 0.273,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -592,7 +675,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -605,7 +688,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -644,7 +727,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -657,7 +740,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -683,7 +766,7 @@
       "name_similarity": 0.6,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -696,7 +779,7 @@
       "name_similarity": 0.75,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -722,7 +805,7 @@
       "name_similarity": 0.75,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -735,7 +818,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -748,7 +831,7 @@
       "name_similarity": 0.4,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -761,7 +844,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -787,7 +870,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -875,11 +958,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 160,
+  "actions_with_widget": 92,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 10,
+  "exercised_features": 22,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.08774193548387096,
-  "weighted_coverage_percentage": 8.77,
+  "weighted_coverage": 0.23440860215053766,
+  "weighted_coverage_percentage": 23.44,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

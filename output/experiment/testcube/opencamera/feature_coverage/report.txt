@@ -7,482 +7,510 @@ Application: Open Camera
 Total Actions    : 194
 
 Total Features   : 55
-Covered Features : 2
-Partial          : 7
-Uncovered        : 46
+Covered Features : 0
+Partial          : 46
+Uncovered        : 9
 
-Feature Coverage : 3.64%
+Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 7.25%  (mean completion ratio; partial steps count)
-Exercised        : 9  (covered 2 + partial 7)
+Weighted Coverage: 29.97%  (mean completion ratio; partial steps count)
+Exercised        : 46  (covered 0 + partial 46)
 
 ground_truth_source: independent_labeled_set
 
-Matcher: VLM/Gemini semantic judge (not token overlap).
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
 
 ----------------------------------------
 FEATURE DETAILS
 ----------------------------------------
 
 [GT001] Take a photo
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 30% of gold steps
-Evidence   :
-  - partial steps attempted, not all required
-  - touch MainActivity/ImageButton-
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT002] Record a video
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_007, test_015, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - no relevant actions found
+  - tap the photo/video mode toggle to switch to video: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo,video)
 
 [GT003] Switch between the front and rear cameras
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no relevant actions found
 
 [GT004] Zoom in and out
-Status     : COVERED
-Test Cases : test_001
-Confidence : 0.80
-Matcher    : vlm
-Completion : 100% of gold steps
-Evidence   :
-  - pinch and drag actions covered
-  - touch MainActivity/SeekBar-
-  - touch MainActivity/SeekBar-
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT005] Focus by tapping
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no focus actions found
 
 [GT006] Change the focus mode
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - no focus mode change actions found
 
 [GT007] Set the flash mode
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No flash mode selection steps found.
-  - touch MainActivity/ImageButton-
 
 [GT008] Use the front screen flash for selfies
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No front screen flash option or camera switching steps found.
-  - touch TextView "Touch to focus, and press the circular blue shutter butto..."
 
 [GT009] Set exposure compensation
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - No exposure compensation slider or drag steps found.
-  - touch ImageButton "Lock exposure"
 
 [GT010] Set the ISO and shutter speed manually
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_004, test_005, test_021, test_039, test_041
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - Journal: dropped, actions unrelated
-  - touch MainActivity/ImageButton-
+  - tap the exposure icon: touch ImageButton "Lock exposure" rid=exposure_lock state_changed (tokens=exposure)
 
 [GT011] Set the white balance
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - Journal: dropped, actions unrelated
-  - touch MainActivity/ImageButton-
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT012] Choose a scene mode
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - Journal: none, actions unrelated
-  - touch TextView 'Touch to focus, and press the circular blue shutter butto...'
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT013] Apply a colour effect
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Partial steps attempted, but not all required.
-  - touch MainActivity/ImageButton-
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT014] Set the photo resolution
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No steps related to setting photo resolution.
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT015] Set the image quality and format
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_009, test_011, test_013, test_020, test_021, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039, test_049
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No steps related to setting image quality or format.
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT016] Capture RAW (DNG) files
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_009, test_011, test_013, test_020, test_021, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039, test_049
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch MainActivity/ImageButton-
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT017] Use the self-timer
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView
-  - touch ImageButton
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT018] Take a repeated series of photos (auto-repeat)
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView
-  - touch ImageButton
+  - Tap the popup settings icon: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT019] Take an HDR photo
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.50
-Matcher    : vlm
-Completion : 33% of gold steps
+Test Cases : test_007, test_015
+Confidence : 0.23
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Partial steps attempted, but not all required steps completed.
-  - touch MainActivity/ImageButton-
+  - Tap the photo mode selector in the popup settings: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)
 
 [GT020] Take a DRO (dynamic range optimised) photo
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_007, test_015
+Confidence : 0.30
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - No relevant steps attempted.
+  - Open the photo mode selector: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)
 
 [GT021] Take an exposure bracketing series
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_007, test_015
+Confidence : 0.23
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No relevant steps attempted.
+  - Open the photo mode selector: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)
 
 [GT022] Take a noise-reduction (low light) photo
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 33% of gold steps
+Test Cases : test_007, test_015
+Confidence : 0.23
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Partial steps completed, lacks noise reduction and shutter tap.
-  - touch MainActivity/ImageButton-
+  - Open the photo mode selector: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)
 
 [GT023] Capture a panorama
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_007, test_015
+Confidence : 0.18
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - No steps related to panorama capture.
+  - Open the photo mode selector: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,photo)
 
 [GT024] Enable face detection
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - No steps related to face detection.
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT025] Enable auto-level (auto-stabilise)
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_009, test_011, test_013, test_020, test_021, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039, test_049
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - no relevant actions found
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT026] Show composition guides and crop guides
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - no relevant actions found
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT027] Show the histogram, zebra stripes and focus peaking
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - no relevant actions found
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT028] Show the angle, level, battery and free-memory indicators
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.50
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - Toggled settings but did not complete all necessary steps.
-  - touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=43, y=77)
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT029] Enable geotagging of photos and videos
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.40
+Matcher    : deterministic
+Completion : 40% of gold steps
 Evidence   :
-  - No relevant actions taken to enable geotagging.
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - "Location settings": touch TextView "Location settings…" rid=title activity=MainActivity state_changed (tokens=location)
 
 [GT030] Store the compass direction with photos
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - No relevant actions taken to store compass direction with photos.
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - Location settings: touch TextView "Location settings…" rid=title activity=MainActivity state_changed (tokens=location)
 
 [GT031] Stamp the date, time and location on photos
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - steps missing for setting stamp
-  - touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=192)
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT032] Add a custom text stamp
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps missing for adding custom text
-  - touch TextView "Touch to focus, and press the circular blue shutter butto..." rid=message activity=MainActivity state_changed | activity=MainActivity state_changed
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT033] Set the video resolution and frame rate
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_007, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - steps missing for setting video resolution and frame rate
-  - touch ImageButton "Settings" rid=settings activity=MainActivity state_changed | activity=MainActivity state_changed
+  - Switch to video mode: touch ImageButton "Switch to video mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)
+  - tap the popup settings icon: touch ImageButton "Popup settings" rid=popup activity=MainActivity state_changed (tokens=settings)
 
 [GT034] Record slow-motion or high-speed video
-Status     : COVERED
-Test Cases : test_001
-Confidence : 0.80
-Matcher    : vlm
-Completion : 100% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_007, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.40
+Matcher    : deterministic
+Completion : 40% of gold steps
 Evidence   :
-  - Switched to video mode, set slow-motion, recorded.
-  - touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=634)
+  - Switch to video mode: touch ImageButton "Switch to video mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)
+  - open the popup settings: touch ImageButton "Popup settings" rid=popup activity=MainActivity state_changed (tokens=settings)
 
 [GT035] Record a time-lapse video
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_007, test_009, test_011, test_013, test_015, test_023, test_024, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.40
+Matcher    : deterministic
+Completion : 40% of gold steps
 Evidence   :
-  - Journal indicates partial but no evidence of time-lapse setup.
+  - Switch to video mode: touch ImageButton "Switch to video mode" rid=switch_video activity=MainActivity state_changed (tokens=mode,video)
+  - open the popup settings: touch ImageButton "Popup settings" rid=popup activity=MainActivity state_changed (tokens=settings)
 
 [GT036] Set the video bitrate
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Journal indicates dropped, no evidence of bitrate setting.
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - "Video settings": touch TextView "Video settings…" rid=title activity=MainActivity state_changed (tokens=video)
 
 [GT037] Limit the video duration or file size
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 20% of gold steps
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Partial steps towards setting video limits
-  - touch CustomTouchEvent(state=5923be02c543352dd2b8abb283364e55, x=54, y=326)
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - Video settings: touch TextView "Video settings…" rid=title activity=MainActivity state_changed (tokens=video)
 
 [GT038] Enable video stabilisation
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - No steps towards enabling video stabilisation
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - Video settings: touch TextView "Video settings…" rid=title activity=MainActivity state_changed (tokens=video)
 
 [GT039] Choose the audio source and control audio recording
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - No steps towards choosing audio source
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - Video settings: touch TextView "Video settings…" rid=title activity=MainActivity state_changed (tokens=video)
 
 [GT040] Record GPS/time subtitles for videos
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.60
-Matcher    : vlm
-Completion : 30% of gold steps
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - Partial steps towards enabling subtitles, but no GPS recording.
-  - touch MainActivity/ImageButton-
-  - touch MainActivity/TextView-Location s
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - Video settings: touch TextView "Video settings…" rid=title activity=MainActivity state_changed (tokens=video)
 
 [GT041] Use voice control to take a photo
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - No steps towards enabling voice control or granting microphone permission.
-  - touch MainActivity/ImageButton-
-  - touch MainActivity/TextView-Location s
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT042] Use audio (noise) triggering
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - No steps towards enabling or using audio triggering.
-  - touch MainActivity/ImageButton-
-  - touch MainActivity/TextView-Location s
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT043] Use a Bluetooth LE remote control
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_015, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - intent intent=am start net.sourceforge.opencamera/net.sourceforge.opencamera.MainActivity
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT044] Configure the volume key behaviour
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView "Touch to focus, and press the circular blue shutter butto..."
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - "More camera controls": touch TextView "More camera controls…" rid=title activity=MainActivity (tokens=camera,controls,more)
 
 [GT045] Enable touch-to-capture
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView "Touch to focus, and press the circular blue shutter butto..."
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - More camera controls: touch TextView "More camera controls…" rid=title activity=MainActivity (tokens=camera,controls,more)
 
 [GT046] Lock the screen orientation
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView
-  - touch ImageButton
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT047] Use immersive (full screen) mode
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView
-  - touch ImageButton
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT048] Set the photo and video save location
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.47
+Matcher    : deterministic
+Completion : 50% of gold steps
 Evidence   :
-  - steps not aligned with gold
-  - touch TextView
-  - touch ImageButton
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - "More camera controls"/Save location: touch TextView "More camera controls…" rid=title activity=MainActivity (tokens=camera,controls,more)
 
 [GT049] Use the Storage Access Framework for saving
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
 Evidence   :
-  - steps not aligned with gold capability
-  - touch TextView
-  - touch Button
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT050] Open the last photo in the gallery
 Status     : NOT COVERED
-Matcher    : vlm
+Matcher    : deterministic
 Completion : 0% of gold steps
-Evidence   :
-  - steps not aligned with gold capability
-  - touch TextView
-  - touch Button
 
 [GT051] Pause the preview after taking a photo
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_009, test_011, test_013, test_015, test_020, test_021, test_023, test_024, test_027, test_029, test_030, test_031, test_035, test_036, test_037, test_038, test_039, test_040, test_043, test_047, test_049
+Confidence : 0.58
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - steps not aligned with gold capability
-  - touch TextView
-  - touch Button
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - enable "Pause after taking photo"; the captured image is shown with share, delete and info options before returning to the preview: touch TextView "Video settings…" rid=title activity=MainActivity state_changed (outcome tokens=after,enable,image,photo,preview)
 
 [GT052] Enable or disable the shutter sound
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - steps do not align with gold steps
-  - touch TextView, touch ImageButton, touch TextView
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - "More camera controls": touch TextView "More camera controls…" rid=title activity=MainActivity (tokens=camera,controls,more)
 
 [GT053] Enable the Camera2 API
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
 Evidence   :
-  - steps do not align with gold steps
-  - touch ImageButton, touch TextView
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT054] Reset all settings to the defaults
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
 Evidence   :
-  - steps do not align with gold steps
-  - touch TextView, touch ImageButton, touch TextView
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
 
 [GT055] Read the built-in help and about information
-Status     : NOT COVERED
-Matcher    : vlm
-Completion : 0% of gold steps
+Status     : PARTIAL
+Test Cases : test_001, test_002, test_009, test_011, test_013, test_027, test_029, test_031, test_035, test_037, test_039
+Confidence : 0.63
+Matcher    : deterministic
+Completion : 67% of gold steps
 Evidence   :
-  - no relevant actions found
+  - Open Settings: touch ImageButton "Settings" rid=settings activity=MainActivity state_changed (tokens=settings)
+  - tap "About"/"Online help": touch Button "ONLINE HELP" rid=button2 state_changed (tokens=help,online)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
-2 / 55 features covered
-7 / 55 features partial
-Feature Coverage = COVERED / Total = 3.64%
-Weighted Feature Coverage = mean(completion_ratio) = 7.25%
+0 / 55 features covered
+46 / 55 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 29.97%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -498,58 +526,58 @@ Extracted vs ground truth: 19 / 55 (completeness ratio 0.345)
 
 Feature-inference P/R/F1: 0.79 / 0.27 / 0.41 (false not_present=0)
 
-GT GT001 'Take a photo' | journal=G001 'Take a photo' (sim=1.0, name) status=partial | offline=partial
-GT GT002 'Record a video' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT001 'Take a photo' | journal=G001 'Take a photo' (sim=1.0, name) status=partial | offline=not_covered
+GT GT002 'Record a video' | journal=missing (no name match) status=missing | offline=partial
 GT GT003 'Switch between the front and rear cameras' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT004 'Zoom in and out' | journal=G002 'Zoom' (sim=0.333, name) status=covered | offline=covered
+GT GT004 'Zoom in and out' | journal=G002 'Zoom' (sim=0.333, name) status=covered | offline=not_covered
 GT GT005 'Focus by tapping' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT006 'Change the focus mode' | journal=G003 'Set the flash mode' (sim=0.333, name) status=dropped | offline=not_covered
 GT GT007 'Set the flash mode' | journal=G004 'Set the ISO' (sim=0.4, name) status=dropped | offline=not_covered
 GT GT008 'Use the front screen flash for selfies' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT009 'Set exposure compensation' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT010 'Set the ISO and shutter speed manually' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT011 'Set the white balance' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT012 'Choose a scene mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Set the ISO and shutter speed manually' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Set the white balance' | journal=missing (no name match) status=missing | offline=partial
+GT GT012 'Choose a scene mode' | journal=missing (no name match) status=missing | offline=partial
 GT GT013 'Apply a colour effect' | journal=G005 'Apply a colour effect' (sim=1.0, name) status=partial | offline=partial
-GT GT014 'Set the photo resolution' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT015 'Set the image quality and format' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT016 'Capture RAW (DNG) files' | journal=G006 'Capture RAW files' (sim=0.75, name) status=partial | offline=not_covered
-GT GT017 'Use the self-timer' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT018 'Take a repeated series of photos (auto-repeat)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Set the photo resolution' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Set the image quality and format' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Capture RAW (DNG) files' | journal=G006 'Capture RAW files' (sim=0.75, name) status=partial | offline=partial
+GT GT017 'Use the self-timer' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Take a repeated series of photos (auto-repeat)' | journal=missing (no name match) status=missing | offline=partial
 GT GT019 'Take an HDR photo' | journal=G007 'Take an HDR photo' (sim=1.0, name) status=partial | offline=partial
-GT GT020 'Take a DRO (dynamic range optimised) photo' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT021 'Take an exposure bracketing series' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Take a DRO (dynamic range optimised) photo' | journal=missing (no name match) status=missing | offline=partial
+GT GT021 'Take an exposure bracketing series' | journal=missing (no name match) status=missing | offline=partial
 GT GT022 'Take a noise-reduction (low light) photo' | journal=G008 'Take a noise-reduction photo' (sim=0.667, name) status=partial | offline=partial
-GT GT023 'Capture a panorama' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT024 'Enable face detection' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT025 'Enable auto-level (auto-stabilise)' | journal=G009 'Enable auto-level' (sim=0.75, name) status=partial | offline=not_covered
-GT GT026 'Show composition guides and crop guides' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT027 'Show the histogram, zebra stripes and focus peaking' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Capture a panorama' | journal=missing (no name match) status=missing | offline=partial
+GT GT024 'Enable face detection' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Enable auto-level (auto-stabilise)' | journal=G009 'Enable auto-level' (sim=0.75, name) status=partial | offline=partial
+GT GT026 'Show composition guides and crop guides' | journal=missing (no name match) status=missing | offline=partial
+GT GT027 'Show the histogram, zebra stripes and focus peaking' | journal=missing (no name match) status=missing | offline=partial
 GT GT028 'Show the angle, level, battery and free-memory indicators' | journal=G010 'Show the angle, level,' (sim=0.444, name) status=partial | offline=partial
-GT GT029 'Enable geotagging of photos and videos' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT030 'Store the compass direction with photos' | journal=F017 'Store compass direction' (sim=0.5, name) status=dropped | offline=not_covered
-GT GT031 'Stamp the date, time and location on photos' | journal=G011 'Stamp the date, time' (sim=0.583, name) status=covered | offline=not_covered
-GT GT032 'Add a custom text stamp' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT033 'Set the video resolution and frame rate' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT034 'Record slow-motion or high-speed video' | journal=G012 'Record slow-motion' (sim=0.667, name) status=covered | offline=covered
-GT GT035 'Record a time-lapse video' | journal=G014 'Record GPS/time subtitles' (sim=0.333, name) status=partial | offline=not_covered
-GT GT036 'Set the video bitrate' | journal=G013 'Limit the video duration' (sim=0.333, name) status=partial | offline=not_covered
+GT GT029 'Enable geotagging of photos and videos' | journal=missing (no name match) status=missing | offline=partial
+GT GT030 'Store the compass direction with photos' | journal=F017 'Store compass direction' (sim=0.5, name) status=dropped | offline=partial
+GT GT031 'Stamp the date, time and location on photos' | journal=G011 'Stamp the date, time' (sim=0.583, name) status=covered | offline=partial
+GT GT032 'Add a custom text stamp' | journal=missing (no name match) status=missing | offline=partial
+GT GT033 'Set the video resolution and frame rate' | journal=missing (no name match) status=missing | offline=partial
+GT GT034 'Record slow-motion or high-speed video' | journal=G012 'Record slow-motion' (sim=0.667, name) status=covered | offline=partial
+GT GT035 'Record a time-lapse video' | journal=G014 'Record GPS/time subtitles' (sim=0.333, name) status=partial | offline=partial
+GT GT036 'Set the video bitrate' | journal=G013 'Limit the video duration' (sim=0.333, name) status=partial | offline=partial
 GT GT037 'Limit the video duration or file size' | journal=missing (no name match) status=missing | offline=partial
-GT GT038 'Enable video stabilisation' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT039 'Choose the audio source and control audio recording' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Enable video stabilisation' | journal=missing (no name match) status=missing | offline=partial
+GT GT039 'Choose the audio source and control audio recording' | journal=missing (no name match) status=missing | offline=partial
 GT GT040 'Record GPS/time subtitles for videos' | journal=missing (no name match) status=missing | offline=partial
-GT GT041 'Use voice control to take a photo' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT042 'Use audio (noise) triggering' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT043 'Use a Bluetooth LE remote control' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT044 'Configure the volume key behaviour' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT045 'Enable touch-to-capture' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT046 'Lock the screen orientation' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT047 'Use immersive (full screen) mode' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT048 'Set the photo and video save location' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT049 'Use the Storage Access Framework for saving' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT041 'Use voice control to take a photo' | journal=missing (no name match) status=missing | offline=partial
+GT GT042 'Use audio (noise) triggering' | journal=missing (no name match) status=missing | offline=partial
+GT GT043 'Use a Bluetooth LE remote control' | journal=missing (no name match) status=missing | offline=partial
+GT GT044 'Configure the volume key behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT045 'Enable touch-to-capture' | journal=missing (no name match) status=missing | offline=partial
+GT GT046 'Lock the screen orientation' | journal=missing (no name match) status=missing | offline=partial
+GT GT047 'Use immersive (full screen) mode' | journal=missing (no name match) status=missing | offline=partial
+GT GT048 'Set the photo and video save location' | journal=missing (no name match) status=missing | offline=partial
+GT GT049 'Use the Storage Access Framework for saving' | journal=missing (no name match) status=missing | offline=partial
 GT GT050 'Open the last photo in the gallery' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT051 'Pause the preview after taking a photo' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT052 'Enable or disable the shutter sound' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT053 'Enable the Camera2 API' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT054 'Reset all settings to the defaults' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT055 'Read the built-in help and about information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT051 'Pause the preview after taking a photo' | journal=missing (no name match) status=missing | offline=partial
+GT GT052 'Enable or disable the shutter sound' | journal=missing (no name match) status=missing | offline=partial
+GT GT053 'Enable the Camera2 API' | journal=missing (no name match) status=missing | offline=partial
+GT GT054 'Reset all settings to the defaults' | journal=missing (no name match) status=missing | offline=partial
+GT GT055 'Read the built-in help and about information' | journal=missing (no name match) status=missing | offline=partial

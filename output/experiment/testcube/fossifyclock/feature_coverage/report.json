@@ -1,183 +1,172 @@
 {
   "application": "Fossify Clock",
   "total_features": 26,
-  "covered_features": 4,
-  "uncovered_features": 17,
+  "covered_features": 0,
+  "uncovered_features": 21,
   "partial_features": 5,
-  "coverage": 0.15384615384615385,
-  "coverage_percentage": 15.38,
-  "results_dir": "/home/iit-du/Documents/TestCube-2.0/output/experiment/testcube/fossifyclock",
-  "readme_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyclock/README.md",
-  "features_path": "/home/iit-du/Documents/TestCube-2.0/feature/fossifyclock/ground_truth.json",
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifyclock",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyclock/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifyclock/ground_truth.json",
   "features": [
     {
       "id": "GT001",
       "name": "View the current time on the clock tab",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial because the current time is not fully displayed.",
-        "touch MainActivity/TextView-Clock"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
       "name": "Add a time zone to the clock",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial because the time zones are not fully managed.",
-        "touch MainActivity/TextView-Clock"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Remove or reorder time zones",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Partial because the time zones are not fully managed.",
-        "touch MainActivity/TextView-Clock"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.5
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT004",
       "name": "Open the full-screen (screensaver) clock",
-      "status": "covered",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.8,
-      "evidence": [
-        "All steps in gold path completed.",
-        "touch CustomTouchEvent(state=574adc003d9f8ff478c66398e6730ffc, x=80, y=1100)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT005",
       "name": "Create an alarm",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_012",
+        "test_018",
+        "test_030"
       ],
-      "confidence": 0.8,
+      "confidence": 0.1667,
       "evidence": [
-        "Steps up to setting the alarm time completed.",
-        "touch CustomTouchEvent(state=ace9ba9d6433ab7181388b0c08c7626f, x=255, y=1102)"
+        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Open the Alarm tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT006",
       "name": "Enable or disable an alarm",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
+      "status": "partial",
+      "test_cases": [
+        "test_012",
+        "test_030"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.5,
+      "evidence": [
+        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
+      ],
+      "matched_path": [
+        "Open the Alarm tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT007",
       "name": "Edit an alarm",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_012",
+        "test_030"
       ],
-      "confidence": 0.8,
+      "confidence": 0.5,
       "evidence": [
-        "Edited alarm time and label; evidence: changed text.",
-        "touch CustomTouchEvent(state=3945eab62dd50a392bb12c407d1b4cc6, x=255, y=1100)",
-        "Completed by later features: G002"
+        "Open the Alarm tab: touch TextView \"Alarm tab\" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)",
+        "tap the alarm row: touch TextView \"Alarm tab\" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matched_path": [
+        "Open the Alarm tab",
+        "tap the alarm row"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
     },
     {
       "id": "GT008",
       "name": "Delete an alarm",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.5,
-      "evidence": [
-        "Long-press action not observed; evidence: no delete bin interaction.",
-        "touch CustomTouchEvent(state=a36e59140ccf15c609dc7c3450a93505, x=258, y=1099)"
+      "status": "partial",
+      "test_cases": [
+        "test_012",
+        "test_030"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
+      ],
+      "matched_path": [
+        "Open the Alarm tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT009",
       "name": "Set the alarm sound and vibration",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
+      "status": "partial",
+      "test_cases": [
+        "test_018"
       ],
-      "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.0
+      "confidence": 0.225,
+      "evidence": [
+        "tap the alarm sound entry and select a tone (or a file from storage): touch TextView \"Default (Cesium)\" rid=edit_alarm_sound activity=MainActivity (tokens=alarm,sound)"
+      ],
+      "matched_path": [
+        "tap the alarm sound entry and select a tone (or a file from storage)"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
     },
     {
       "id": "GT010",
       "name": "Snooze or dismiss a ringing alarm",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Snooze option selected, but duration not extended.",
-        "touch CustomTouchEvent(state=88c36b89fd1591540237c9a5a6b200a9, x=255, y=1102)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.3
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT011",
       "name": "Configure the snooze duration and maximum ring time",
-      "status": "covered",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.9,
-      "evidence": [
-        "Settings opened, snooze duration configured.",
-        "touch CustomTouchEvent(state=a1a21e8964c03799bb8b5b8680d9f2f9, x=960, y=1772)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 1.0
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT012",
@@ -185,42 +174,32 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
       "id": "GT013",
       "name": "Use the stopwatch",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.6,
-      "evidence": [
-        "Start and stop actions missing; reset not attempted.",
-        "touch CustomTouchEvent(state=61db1d91852528c3460874d30f6d0295, x=420, y=1100)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.6
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT014",
       "name": "Sort the recorded stopwatch laps",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Sort control not tapped; laps not confirmed.",
-        "touch CustomTouchEvent(state=bb0bcbf91d955ddab9e4455827d0010f, x=480, y=1839)"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
-      "completion_ratio": 0.2
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
     },
     {
       "id": "GT015",
@@ -228,11 +207,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "LLM batch omitted this feature."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -241,11 +218,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards labeling timer or setting sound."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -254,11 +229,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards pausing, resuming, resetting, or deleting a timer."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -267,11 +240,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "No steps towards adding a clock widget to the home screen."
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -279,13 +250,10 @@
       "name": "Set the time format",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.3,
-      "evidence": [
-        "Journal lacks relevant actions for setting time format.",
-        "none"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -293,13 +261,10 @@
       "name": "Set the first day of the week",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.2,
-      "evidence": [
-        "Journal lacks relevant actions for setting first day of the week.",
-        "none"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -307,13 +272,10 @@
       "name": "Keep the screen on in the clock tab",
       "status": "not_covered",
       "test_cases": [],
-      "confidence": 0.4,
-      "evidence": [
-        "Journal lacks relevant actions for keeping the screen on in the clock tab.",
-        "none"
-      ],
+      "confidence": 0.0,
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -322,12 +284,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -336,12 +295,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -350,12 +306,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "steps not aligned with gold",
-        "one action"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -364,11 +317,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to language or font size"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     },
     {
@@ -377,11 +328,9 @@
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
-      "evidence": [
-        "no actions related to about screen, FAQ, or licenses"
-      ],
+      "evidence": [],
       "matched_path": null,
-      "matcher": "vlm",
+      "matcher": "deterministic",
       "completion_ratio": 0.0
     }
   ],
@@ -394,7 +343,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -407,7 +356,7 @@
       "name_similarity": 0.6,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -420,7 +369,7 @@
       "name_similarity": 0.545,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -433,7 +382,7 @@
       "name_similarity": 0.833,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -446,7 +395,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -459,7 +408,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -472,7 +421,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -485,7 +434,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -498,7 +447,7 @@
       "name_similarity": 0.667,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -511,7 +460,7 @@
       "name_similarity": 0.417,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -524,7 +473,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -550,7 +499,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -742,11 +691,14 @@
     "prf1_withheld": false
   },
   "matcher_min_confidence": 0.5,
-  "matcher_mode": "ai",
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 143,
+  "actions_with_widget": 71,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 9,
+  "exercised_features": 5,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.25384615384615383,
-  "weighted_coverage_percentage": 25.38,
+  "weighted_coverage": 0.0673076923076923,
+  "weighted_coverage_percentage": 6.73,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }
