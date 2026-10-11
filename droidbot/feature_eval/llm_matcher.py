@@ -236,7 +236,15 @@ class LLMMatcher(object):
 
     def _action_line(self, action):
         dest = _short(action.stop_activity)
-        texts = [item for item in (action.stop_texts or [])[:8] if item]
+        # Fall back to the screen the action started from. droidbot only dumps a
+        # state when its hash is new, and the two tools hit that differently:
+        # TestCube actions carry destination text 38% of the time against
+        # LLMDroid's 97%, so without this the judge sees TestCube's taps with no
+        # screen context and reports features it plainly exercised as uncovered.
+        texts = [item for item in (action.stop_texts or []) if item]
+        if not texts:
+            texts = [item for item in (getattr(action, "start_texts", None) or []) if item]
+        texts = [item for item in texts if not _is_state_blob(item)][:8]
         dest_txt = _clip("; ".join(texts), 80)
         extra = []
         if dest:
@@ -471,6 +479,19 @@ def _keyword_hits(blob_tokens, keywords):
 # the feature is scored not-covered. Dropping them is what makes selection work
 # on a long trace.
 UNINFORMATIVE_SHARE = 0.30
+
+_STATE_BLOB = re.compile(r"[0-9a-f]{32}")
+
+
+def _is_state_blob(text):
+    """True for a dumped state identifier rather than anything a user can read.
+
+    Some state dumps carry an empty view list, leaving only a blob like
+    "org.fossify.clock\n.activities.MainActivity\n601040290efea...". Feeding
+    that to the judge as screen content is worse than sending nothing.
+    """
+    value = str(text or "")
+    return bool(_STATE_BLOB.search(value)) and "\n" in value
 
 # Evidence lines shown to the judge per feature. This was 8, which sampled the
 # two tools very unevenly: 8 of ~150 TestCube actions is 5.6% of the trace, but

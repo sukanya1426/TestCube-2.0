@@ -110,6 +110,11 @@ def main(argv=None):
     parser.add_argument("--force", action="store_true", help="Re-score even if a report exists")
     parser.add_argument("--no-trace-only", dest="trace_only", action="store_false",
                         help="Let TestCube use its journal. Makes the two tools NOT comparable.")
+    # Accepted explicitly too, since it is the thing that makes the comparison
+    # valid and is worth being able to state on the command line.
+    parser.add_argument("--trace-only", dest="trace_only", action="store_true",
+                        help="Score both tools from the observed trace only (the default).")
+    parser.set_defaults(trace_only=True)
     parser.add_argument("--table-only", action="store_true", help="Print existing scores, score nothing")
     args = parser.parse_args(argv)
 
