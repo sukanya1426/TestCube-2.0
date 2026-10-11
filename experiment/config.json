@@ -2,7 +2,11 @@
   "_comment": [
     "Settings for scripts/run_experiment.py.",
     "WHICH APKS RUN IS *NOT* HERE -- it is APK_NAMES / NUM_APKS at the top of",
-    "scripts/run_experiment.py, so that choice lives in exactly one place."
+    "scripts/run_experiment.py, so that choice lives in exactly one place.",
+    "run_feature_eval is OFF by design: LLM scoring is offline post-processing and",
+    "must not sit inside a per-app budget. Inline, one TestCube eval took 6h24m and",
+    "turned a 1-hour app into 7.5 hours. Score afterwards with scripts/score_features.py,",
+    "which is the only way both tools get identical parameters anyway."
   ],
   "budget_seconds": 3600,
   "grace_seconds": 300,
@@ -22,7 +26,7 @@
   "run_testcube": true,
   "run_llmdroid": true,
   "run_compare": true,
-  "run_feature_eval": true,
+  "run_feature_eval": false,
   "feature_matcher": "ai",
   "skip_completed": true,
   "device_serial": null

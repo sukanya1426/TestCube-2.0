@@ -581,7 +581,12 @@ def do_app(app, cfg, log):
     if cfg.get("run_llmdroid", True) and ok:
         log.write(u"\n[%s] === LLMDroid: %s ===\n" % (stamp(), app["stem"]))
         rc2, ld_dir, why = run_llmdroid(app, cfg, log)
+        # rc 3 is the run-budget watchdog, not a failure: the run overran its
+        # soft deadline (LLMDroid retries unparseable LLM replies, ~2 min each)
+        # and was killed after the grace period, having already written valid
+        # coverage. Reporting that as a failure understates a usable result.
         result["steps"]["llmdroid"] = ("ok" if rc2 == 0 else
+                                       "hard_stop" if rc2 == EXIT_HARD_STOP else
                                        "stalled" if rc2 == 125 else "rc=%s" % rc2)
         result["llmdroid_output"] = os.path.relpath(ld_dir, REPO)
         if why:
@@ -628,10 +633,17 @@ def do_app(app, cfg, log):
         except Exception:
             pass
 
-    failures = [k for k, v in result["steps"].items() if v not in ("ok",)]
+    # hard_stop still produced coverage, so it is not a clean "ok" but not a
+    # failure either; the status line says which.
+    failures = [k for k, v in result["steps"].items() if v not in ("ok", "hard_stop")]
+    hard = [k for k, v in result["steps"].items() if v == "hard_stop"]
     if failures:
         result["status"] = "partial"
         result["reason"] = "steps not clean: " + ", ".join(sorted(failures))
+    elif hard:
+        result["status"] = "ok_hard_stop"
+        result["reason"] = ("%s overran its budget and was stopped by the watchdog; "
+                            "coverage was still written" % ", ".join(sorted(hard)))
     result["elapsed_seconds"] = round(time.time() - started, 1)
     return result
 

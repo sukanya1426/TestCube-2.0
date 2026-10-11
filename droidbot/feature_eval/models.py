@@ -162,6 +162,10 @@ class CoverageReport:
     feature_inference: Optional[dict] = None
     matcher_min_confidence: Optional[float] = None
     matcher_mode: Optional[str] = None
+    # Whether TestCube's journal was excluded. A number scored with the journal
+    # is TestCube's self-assessment and is not comparable with LLMDroid, so the
+    # mode has to travel with the number.
+    trace_only: Optional[bool] = None
     ground_truth_source: Optional[str] = None
     exercised_features: Optional[int] = None
     coverage_formula: Optional[str] = None
@@ -204,6 +208,8 @@ class CoverageReport:
             payload["matcher_min_confidence"] = self.matcher_min_confidence
         if self.matcher_mode is not None:
             payload["matcher_mode"] = self.matcher_mode
+        if self.trace_only is not None:
+            payload["trace_only"] = self.trace_only
         if self.ground_truth_source is not None:
             payload["ground_truth_source"] = self.ground_truth_source
         if self.exercised_features is not None:

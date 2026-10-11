@@ -33,6 +33,17 @@ def parse_args(argv=None):
         help="Report directory (default: <results>/feature_coverage)",
     )
     parser.add_argument(
+        "--trace-only",
+        dest="trace_only",
+        action="store_true",
+        help=(
+            "Score only from the observed trace: ignore TestCube's journal and "
+            "exploration bank. Required for a TestCube-vs-LLMDroid comparison, "
+            "because the journal puts TestCube's own verdict ('Journal: covered') "
+            "into the judge's prompt while LLMDroid has no such channel."
+        ),
+    )
+    parser.add_argument(
         "--matcher",
         choices=["ai", "deterministic", "hybrid"],
         default="ai",
@@ -65,6 +76,7 @@ def main(argv=None):
         features_path=os.path.abspath(args.features),
         readme_path=os.path.abspath(args.readme) if args.readme else None,
         output_dir=os.path.abspath(args.out) if args.out else None,
+        trace_only=args.trace_only,
         use_llm=matcher_mode != "deterministic",
         min_confidence=args.min_confidence,
         matcher_mode=matcher_mode,

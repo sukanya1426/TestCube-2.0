@@ -23,7 +23,8 @@ def _count_actions(results_dir):
 
 def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
                               output_dir=None, use_llm=True, journal_features=None,
-                              min_confidence=None, matcher_mode=None):
+                              min_confidence=None, matcher_mode=None,
+                              trace_only=False):
     """Evaluate feature coverage for an existing TestCube run.
 
     Parameters
@@ -63,8 +64,15 @@ def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
         min_confidence = DEFAULT_MIN_STEP_CONFIDENCE
     if matcher_mode is None:
         matcher_mode = "ai" if use_llm else "deterministic"
-    journal = _load_journal_features(results_dir, journal_features)
-    bank = _load_exploration_bank(results_dir)
+    # trace_only drops the journal and the exploration bank. They are TestCube's
+    # own records, and the journal's verdict is injected into the judge's prompt
+    # as "Journal: covered | ...". LLMDroid has no equivalent, so leaving them in
+    # tells the judge the answer for one tool only, which is not a comparison.
+    if trace_only:
+        journal, bank = None, None
+    else:
+        journal = _load_journal_features(results_dir, journal_features)
+        bank = _load_exploration_bank(results_dir)
     if journal and bank:
         try:
             from droidbot.feature_tester.journal import apply_bank_credit
@@ -102,6 +110,7 @@ def evaluate_feature_coverage(results_dir, features_path, readme_path=None,
     )
     report.matcher_min_confidence = float(min_confidence)
     report.matcher_mode = matcher_mode
+    report.trace_only = bool(trace_only)
     # Actions the tool issued to reach this coverage. Both tools write one
     # JSON per event, so this is comparable across TestCube and LLMDroid.
     report.total_actions = _count_actions(results_dir)

@@ -75,6 +75,11 @@ class ReportGenerator(object):
         elif gt_source:
             lines.append("ground_truth_source: %s" % gt_source)
             lines.append("")
+        if getattr(report, "trace_only", None):
+            lines.append("Evidence: observed trace only (TestCube's journal excluded, "
+                         "so both tools are judged on the same basis)")
+        elif getattr(report, "trace_only", None) is False:
+            lines.append("Evidence: includes TestCube's journal -- NOT comparable with LLMDroid")
         matcher_mode = getattr(report, "matcher_mode", None)
         if matcher_mode == "ai":
             lines.append("Matcher: VLM/Gemini semantic judge (not token overlap).")
