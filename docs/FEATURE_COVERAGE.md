@@ -119,11 +119,26 @@ place for when one is.
 ## Independent check on the result
 
 Step coverage and code coverage share no inputs: one is token matching over
-`events/`, the other is AndroLog bytecode probes read from logcat. On the six
-apps where both tools have both metrics, the two pick **the same winner on all
-six** (LLMDroid on fossifyclock, fossifycontacts, fossifyvoicerecorder and
-loophabits; TestCube on money and newpipe). That is the main reason to believe
-step coverage is measuring exploration and not noise.
+`events/`, the other is AndroLog bytecode probes read from logcat. On the eleven
+apps where both tools produced a valid run of both metrics, the two pick **the
+same winner on ten**. That is the main reason to believe step coverage is
+measuring exploration and not noise.
+
+The eleventh is opencamera, where both metrics are effectively tied (code 8.00
+against 8.40, step 29.97 against 28.61) and the direction of a tie carries no
+information.
+
+Three of the fourteen paired apps are excluded from that count, each for a
+reason visible in the run rather than in the scoring:
+
+| app | why excluded |
+|---|---|
+| nononsensenotes | TestCube code coverage reads 0.00% of 15514 methods, a probe/tag fault; its 139-action trace is healthy, so step coverage stands and only the code pair is void |
+| markor | the LLMDroid run never entered the app -- 377 of 759 actions in `StoragePermissionActivity` and 366 on the launcher |
+| radiodroid | the LLMDroid run was starved by repeated `llm_agent` JSON parse failures and managed 90 actions in the hour |
+
+Over the eleven valid pairs the means are code 12.47% (TestCube) against 19.01%
+(LLMDroid), and step 14.75% against 19.77%.
 
 ## Caveat worth stating in any writeup
 

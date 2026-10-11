@@ -1,0 +1,277 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: RadioDroid
+
+Total Actions    : 90
+
+Total Features   : 32
+Covered Features : 0
+Partial          : 8
+Uncovered        : 24
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 7.24%  (mean completion ratio; partial steps count)
+Exercised        : 8  (covered 0 + partial 8)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse popular radio stations
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap a station to play it: touch LinearLayout "Playing" activity=ActivityMain (tokens=play)
+
+[GT002] Search for a station by name
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Search stations by tag, country, language or state
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open the search screen: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (tokens=search)
+
+[GT004] Play a station
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - playback starts and the player bar appears at the bottom: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (outcome tokens=playback,player)
+
+[GT005] Stop playback
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Add a station to favourites
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT007] Remove a station from favourites
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Reorder favourite stations
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] View station details
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Vote for a station
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Open a station's homepage
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Share a station
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Record the stream to a file
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Start playing a station: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (outcome tokens=start)
+
+[GT014] Browse and play saved recordings
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] View the played-track history
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap an entry to search for it: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (tokens=search)
+
+[GT016] Set a sleep timer
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap "Sleep timer": touch Button "Sleep timer" rid=action_set_sleep_timer activity=ActivityMain state_changed (tokens=sleep,timer)
+
+[GT017] Set a radio alarm clock
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Enable, edit or delete an alarm
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Import favourite stations from an M3U file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Export favourite stations to an M3U file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Cast a station to a Chromecast device
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Send playback to an MPD server
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Control playback from the notification
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Start a station: touch LinearLayout "Playing" activity=ActivityMain (tokens=start)
+
+[GT024] Choose the media player engine
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] Adjust the streaming buffer and resume behaviour
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - playback section: touch LinearLayout "Playing" activity=ActivityMain (tokens=playback)
+
+[GT026] Set the recordings folder and naming
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Restrict playback or downloads to Wi-Fi
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Change the theme
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Change the station list layout and icon display
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Select the radio-browser server or mirror
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT031] Add the home screen shortcut for a station
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT032] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 32 features covered
+8 / 32 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 7.24%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 32 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse popular radio stations' | journal=missing (no name match) status=missing | offline=partial
+GT GT002 'Search for a station by name' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Search stations by tag, country, language or state' | journal=missing (no name match) status=missing | offline=partial
+GT GT004 'Play a station' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Stop playback' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Add a station to favourites' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Remove a station from favourites' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Reorder favourite stations' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'View station details' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Vote for a station' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 "Open a station's homepage" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Share a station' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Record the stream to a file' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'Browse and play saved recordings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'View the played-track history' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Set a sleep timer' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Set a radio alarm clock' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Enable, edit or delete an alarm' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Import favourite stations from an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Export favourite stations to an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Cast a station to a Chromecast device' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Send playback to an MPD server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Control playback from the notification' | journal=missing (no name match) status=missing | offline=partial
+GT GT024 'Choose the media player engine' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Adjust the streaming buffer and resume behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT026 'Set the recordings folder and naming' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Restrict playback or downloads to Wi-Fi' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Change the station list layout and icon display' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Select the radio-browser server or mirror' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Add the home screen shortcut for a station' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

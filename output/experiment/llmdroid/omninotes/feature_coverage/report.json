@@ -1,0 +1,1418 @@
+{
+  "application": "Omni Notes",
+  "total_features": 48,
+  "covered_features": 1,
+  "uncovered_features": 20,
+  "partial_features": 27,
+  "coverage": 0.020833333333333332,
+  "coverage_percentage": 2.08,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/omninotes",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/omninotes/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/omninotes/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a text note",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the text/note option: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "tap the text/note option"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT002",
+      "name": "Create a checklist note",
+      "status": "partial",
+      "test_cases": [
+        "test_011"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the checklist option (or open a note and use the overflow menu: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "tap the checklist option (or open a note and use the overflow menu"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT003",
+      "name": "Tick and untick checklist items",
+      "status": "partial",
+      "test_cases": [
+        "test_011"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a checklist note: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "Open a checklist note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT004",
+      "name": "Convert a note between text and checklist",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_011"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT005",
+      "name": "Attach a photo from the camera",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_011",
+        "test_017"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap Camera: touch TextView \"Camera\" rid=camera activity=CaptureActivity state_changed (tokens=camera)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap Camera"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT006",
+      "name": "Attach an image or video from the gallery",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008",
+        "test_011"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the attachment icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT007",
+      "name": "Record and attach an audio note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008",
+        "test_011"
+      ],
+      "confidence": 0.2857,
+      "evidence": [
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)",
+        "tap the recording option: touch TextView \"Record\" rid=recording activity=MainActivity state_changed (tokens=recording)"
+      ],
+      "matched_path": [
+        "tap the attachment icon",
+        "tap the recording option"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2857142857142857
+    },
+    {
+      "id": "GT008",
+      "name": "Create and attach a sketch",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008",
+        "test_011"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the attachment icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT009",
+      "name": "Attach an arbitrary file",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008",
+        "test_009",
+        "test_011"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap the attachment icon: touch Button \"Attachment\" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)",
+        "tap Files: touch TextView \"Files\" rid=files activity=PickActivity state_changed (tokens=files)"
+      ],
+      "matched_path": [
+        "tap the attachment icon",
+        "tap Files"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT010",
+      "name": "Add a location to a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT011",
+      "name": "Set a reminder on a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT012",
+      "name": "Set a recurring reminder",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_009"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the reminder dialog on a note: touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminder)"
+      ],
+      "matched_path": [
+        "Open the reminder dialog on a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT013",
+      "name": "View all notes that have reminders",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_008",
+        "test_009"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Reminders\": touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminders)"
+      ],
+      "matched_path": [
+        "tap \"Reminders\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT014",
+      "name": "Create a category",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_008"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"Categories\" (or the manage-categories entry): touch Button \"Category\" rid=menu_category activity=MainActivity state_changed (tokens=categories)",
+        "tap Save: touch Button \"OK\" rid=save activity=CategoryActivity (tokens=save)"
+      ],
+      "matched_path": [
+        "tap \"Categories\" (or the manage-categories entry)",
+        "tap Save"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT015",
+      "name": "Edit or delete a category",
+      "status": "covered",
+      "test_cases": [
+        "test_008"
+      ],
+      "confidence": 1.0,
+      "evidence": [
+        "open the categories list: touch Button \"Category\" rid=menu_category activity=MainActivity state_changed (tokens=categories)",
+        "long-press (or tap) the category: touch EditText \"Title\" rid=category_title activity=CategoryActivity (tokens=category)",
+        "tap Edit to change the name, description or colour, or tap Delete: touch ImageView rid=color_chooser activity=CategoryActivity state_changed (tokens=colour)"
+      ],
+      "matched_path": [
+        "Open the drawer",
+        "open the categories list",
+        "long-press (or tap) the category",
+        "tap Edit to change the name, description or colour, or tap Delete",
+        "confirm"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT016",
+      "name": "Assign a category to a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008"
+      ],
+      "confidence": 0.4,
+      "evidence": [
+        "tap \"Category\": touch Button \"Category\" rid=menu_category activity=MainActivity state_changed (tokens=category)",
+        "select the category from the list: touch EditText \"Title\" rid=category_title activity=CategoryActivity (tokens=category)"
+      ],
+      "matched_path": [
+        "tap \"Category\"",
+        "select the category from the list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.4
+    },
+    {
+      "id": "GT017",
+      "name": "Filter notes by category",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Tag notes with hashtags",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT019",
+      "name": "Filter notes by tag",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_008",
+        "test_009",
+        "test_019"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Tags\": touch Button \"Add tags\" rid=menu_tag activity=MainActivity (tokens=tags)"
+      ],
+      "matched_path": [
+        "tap \"Tags\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT020",
+      "name": "Search notes",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Archive a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "On the note list: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "On the note list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT022",
+      "name": "Restore a note from the archive",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Move a note to the trash",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "On the note list: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "On the note list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT024",
+      "name": "Restore or permanently delete notes from the trash",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Pin a note to the top of the list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Lock a note with a password",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.1667,
+      "evidence": [
+        "open the note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
+    },
+    {
+      "id": "GT027",
+      "name": "Unlock a locked note",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Merge several notes into one",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Duplicate a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT030",
+      "name": "Share a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_004",
+        "test_008"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)",
+        "tap the share icon: touch Button \"Share\" rid=menu_share activity=ChooserActivity state_changed (tokens=share)"
+      ],
+      "matched_path": [
+        "Open a note",
+        "tap the share icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT031",
+      "name": "Add a note from another app via the share sheet",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_008",
+        "test_009",
+        "test_011"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap Share: touch Button \"Share\" rid=menu_share activity=ChooserActivity state_changed (tokens=share)"
+      ],
+      "matched_path": [
+        "tap Share"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT032",
+      "name": "Sort the note list",
+      "status": "partial",
+      "test_cases": [
+        "test_011"
+      ],
+      "confidence": 0.3,
+      "evidence": [
+        "Tap the overflow menu (three dots) in the note list: touch ImageView \"Options\" rid=three_dots activity=CaptureActivity (tokens=dots,three)"
+      ],
+      "matched_path": [
+        "Tap the overflow menu (three dots) in the note list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT033",
+      "name": "Reorder notes manually",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT034",
+      "name": "Switch the note list between list and grid layout",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT035",
+      "name": "View note details and statistics",
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open a note: touch TextView \"Notes\" activity=MainActivity (tokens=note)"
+      ],
+      "matched_path": [
+        "Open a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT036",
+      "name": "Add the Omni Notes home screen widget",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_008"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "select the category or filter it should display: touch Button \"Category\" rid=menu_category activity=MainActivity state_changed (tokens=category)"
+      ],
+      "matched_path": [
+        "select the category or filter it should display"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT037",
+      "name": "Export a full backup",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT038",
+      "name": "Import data from a backup",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT039",
+      "name": "Schedule automatic backups",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "choose the interval: touch EditText \"1\" rid=interval activity=MainActivity (tokens=interval)"
+      ],
+      "matched_path": [
+        "choose the interval"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT040",
+      "name": "Delete an existing backup",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT041",
+      "name": "Change the interface language",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT042",
+      "name": "Change the app colours and theme",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT043",
+      "name": "Change the text size in the note list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT044",
+      "name": "Configure the swipe gesture action",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT045",
+      "name": "Configure checklist behaviour",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT046",
+      "name": "Configure notification behaviour for reminders",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT047",
+      "name": "Set the password and recovery question",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT048",
+      "name": "View the app version, changelog and licences",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Create a text note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Create a checklist note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Tick and untick checklist items",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Convert a note between text and checklist",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Attach a photo from the camera",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Attach an image or video from the gallery",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Record and attach an audio note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Create and attach a sketch",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Attach an arbitrary file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Add a location to a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Set a reminder on a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Set a recurring reminder",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "View all notes that have reminders",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Create a category",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Edit or delete a category",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Assign a category to a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Filter notes by category",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Tag notes with hashtags",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Filter notes by tag",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Search notes",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Archive a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Restore a note from the archive",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Move a note to the trash",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Restore or permanently delete notes from the trash",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Pin a note to the top of the list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Lock a note with a password",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Unlock a locked note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Merge several notes into one",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Duplicate a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Share a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "Add a note from another app via the share sheet",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "Sort the note list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT033",
+      "ground_truth_name": "Reorder notes manually",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT034",
+      "ground_truth_name": "Switch the note list between list and grid layout",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT035",
+      "ground_truth_name": "View note details and statistics",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT036",
+      "ground_truth_name": "Add the Omni Notes home screen widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT037",
+      "ground_truth_name": "Export a full backup",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT038",
+      "ground_truth_name": "Import data from a backup",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT039",
+      "ground_truth_name": "Schedule automatic backups",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT040",
+      "ground_truth_name": "Delete an existing backup",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT041",
+      "ground_truth_name": "Change the interface language",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT042",
+      "ground_truth_name": "Change the app colours and theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT043",
+      "ground_truth_name": "Change the text size in the note list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT044",
+      "ground_truth_name": "Configure the swipe gesture action",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT045",
+      "ground_truth_name": "Configure checklist behaviour",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT046",
+      "ground_truth_name": "Configure notification behaviour for reminders",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT047",
+      "ground_truth_name": "Set the password and recovery question",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT048",
+      "ground_truth_name": "View the app version, changelog and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 0,
+    "false_negatives": 48,
+    "false_positives": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 0,
+    "ground_truth_count": 48,
+    "feature_completeness_ratio": 0.0,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 749,
+  "actions_with_widget": 699,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 28,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.2010912698412698,
+  "weighted_coverage_percentage": 20.11,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

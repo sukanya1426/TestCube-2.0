@@ -1,0 +1,355 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Material Files
+
+Total Actions    : 731
+
+Total Features   : 42
+Covered Features : 0
+Partial          : 12
+Uncovered        : 30
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 9.64%  (mean completion ratio; partial steps count)
+Exercised        : 12  (covered 0 + partial 12)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse local storage
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Create a new folder
+Status     : PARTIAL
+Test Cases : test_016, test_021, test_024, test_026
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - tap "Create folder": touch TextView "New folder" rid=alertTitle activity=FileListActivity (tokens=folder)
+  - enter the name: set_text EditText rid=nameEdit text=Hello World activity=FileListActivity state_changed (tokens=name)
+
+[GT003] Create a new empty file
+Status     : PARTIAL
+Test Cases : test_002, test_012, test_019, test_024, test_026, test_028, test_034
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "Create file": touch TextView "Files" activity=FileListActivity (tokens=file)
+
+[GT004] Copy files and folders
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Move files and folders
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Rename an item
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT007] Delete items
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Select multiple items and use select all
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Search for files
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Sort the file list
+Status     : PARTIAL
+Test Cases : test_010
+Confidence : 0.40
+Matcher    : deterministic
+Completion : 40% of gold steps
+Evidence   :
+  - choose name, last modified, type or size: touch TextView "Size" rid=title activity=FileListActivity state_changed (tokens=size)
+  - choose ascending or descending: touch TextView "Ascending" rid=title activity=FileListActivity state_changed (tokens=ascending)
+
+[GT011] Remember the sort order per folder
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Switch between list and grid view
+Status     : PARTIAL
+Test Cases : test_010
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap the view/grid toggle: touch TextView "Grid" rid=title activity=FileListActivity state_changed (tokens=grid)
+
+[GT013] Show or hide hidden files
+Status     : PARTIAL
+Test Cases : test_010
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - toggle "Show hidden files": touch TextView "Show hidden files" rid=title activity=FileListActivity state_changed (tokens=files,hidden)
+
+[GT014] View and open an archive
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Extract an archive
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT016] Create an archive
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT017] Open a file with another app
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Share files
+Status     : PARTIAL
+Test Cases : test_010, test_036
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap the share icon: touch TextView "Share" rid=title activity=ChooserActivity state_changed (tokens=share)
+
+[GT019] Copy the path of a file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] View file properties
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Change file permissions, owner and SELinux context (root)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] View an image in the built-in viewer
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Edit a text file in the built-in editor
+Status     : PARTIAL
+Test Cases : test_002, test_012, test_024, test_028
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Tap a text file: touch TextView "Files" activity=FileListActivity (tokens=file)
+
+[GT024] Change the text file encoding in the editor
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] Bookmark a directory
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Manage bookmark directories
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Add a shortcut to a folder on the home screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Connect to an FTP or FTPS server
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Connect to an SFTP server
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Connect to an SMB share
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT031] Connect to a WebDAV server
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT032] Edit or remove a saved server
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT033] Start the built-in FTP server to share files with a computer
+Status     : PARTIAL
+Test Cases : test_036
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - note the ftp:// URL shown: touch LinearLayout rid=itemLayout activity=FtpServerActivity state_changed (outcome tokens=ftp,url)
+
+[GT034] Configure the FTP server settings
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT035] Enable root access
+Status     : PARTIAL
+Test Cases : test_002, test_024, test_036
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap the root section: touch TextView "Root" rid=text activity=FileListActivity (tokens=root)
+
+[GT036] Show a "root directory" entry in the navigation
+Status     : PARTIAL
+Test Cases : test_002, test_011, test_012, test_024, test_028
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - return to the file list: touch TextView "Files" activity=FileListActivity (tokens=file)
+
+[GT037] Change the theme and colours
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT038] Change the app language
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT039] Configure the file list behaviour
+Status     : PARTIAL
+Test Cases : test_002, test_010, test_011, test_012, test_024, test_028
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - open the file list section: touch TextView "Files" activity=FileListActivity (tokens=file)
+
+[GT040] Configure the standard directories shown in the navigation drawer
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT041] Configure the storage volumes shown
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT042] Open the about screen and licences
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_005, test_007, test_009, test_010, test_011, test_012, test_014, test_019, test_026, test_028, test_030, test_034, test_036, test_038
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the navigation drawer or Settings: touch ImageButton "Open navigation drawer" activity=FileListActivity state_changed (outcome tokens=settings)
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 42 features covered
+12 / 42 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 9.64%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 42 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse local storage' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Create a new folder' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Create a new empty file' | journal=missing (no name match) status=missing | offline=partial
+GT GT004 'Copy files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Move files and folders' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Rename an item' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Delete items' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Select multiple items and use select all' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Search for files' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Sort the file list' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Remember the sort order per folder' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Switch between list and grid view' | journal=missing (no name match) status=missing | offline=partial
+GT GT013 'Show or hide hidden files' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'View and open an archive' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Extract an archive' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Create an archive' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Open a file with another app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Share files' | journal=missing (no name match) status=missing | offline=partial
+GT GT019 'Copy the path of a file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'View file properties' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Change file permissions, owner and SELinux context (root)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'View an image in the built-in viewer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Edit a text file in the built-in editor' | journal=missing (no name match) status=missing | offline=partial
+GT GT024 'Change the text file encoding in the editor' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Bookmark a directory' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Manage bookmark directories' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Add a shortcut to a folder on the home screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Connect to an FTP or FTPS server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Connect to an SFTP server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Connect to an SMB share' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'Connect to a WebDAV server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Edit or remove a saved server' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Start the built-in FTP server to share files with a computer' | journal=missing (no name match) status=missing | offline=partial
+GT GT034 'Configure the FTP server settings' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'Enable root access' | journal=missing (no name match) status=missing | offline=partial
+GT GT036 'Show a "root directory" entry in the navigation' | journal=missing (no name match) status=missing | offline=partial
+GT GT037 'Change the theme and colours' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Configure the file list behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT040 'Configure the standard directories shown in the navigation drawer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT041 'Configure the storage volumes shown' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT042 'Open the about screen and licences' | journal=missing (no name match) status=missing | offline=partial

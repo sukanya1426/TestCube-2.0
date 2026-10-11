@@ -1,0 +1,311 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: NoNonsense Notes
+
+Total Actions    : 675
+
+Total Features   : 34
+Covered Features : 1
+Partial          : 12
+Uncovered        : 21
+
+Feature Coverage : 2.94%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 14.71%  (mean completion ratio; partial steps count)
+Exercised        : 13  (covered 1 + partial 12)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a task list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Rename a task list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Delete a task list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Set the default list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Create a task
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Edit a task
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT007] Mark a task as completed
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Show or hide completed tasks
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Delete all completed tasks in a list
+Status     : PARTIAL
+Test Cases : test_002, test_006, test_008, test_015
+Confidence : 0.45
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - tap "Delete completed tasks": touch CheckBox rid=taskCompleted activity=ActivityMain_ state_changed (tokens=completed,tasks)
+
+[GT010] Create sub-tasks by indenting
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Reorder tasks manually
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Set a due date on a task
+Status     : COVERED
+Test Cases : test_006
+Confidence : 1.00
+Matcher    : deterministic
+Completion : 100% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+  - tap the due-date field: touch Button "Due date" rid=dueDateBox activity=ActivityMain_ state_changed (tokens=date,due)
+  - select the date in the picker: touch TextView "2026" rid=date_picker_header_year activity=ActivityMain_ state_changed (tokens=date)
+
+[GT013] Set a time-based reminder
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT014] Set a repeating reminder
+Status     : PARTIAL
+Test Cases : test_006, test_008, test_014
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT015] Set a location-based reminder
+Status     : PARTIAL
+Test Cases : test_006, test_008, test_014, test_015
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT016] Remove a reminder
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT017] Move a task to a different list
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT018] Delete a task
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT019] Sort a list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Switch between lists by swiping
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] View all tasks from all lists together
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_010, test_012, test_014, test_015, test_017
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - the tasks from every list are shown in one screen: touch ViewGroup activity=ActivityMain_ state_changed (outcome tokens=tasks)
+
+[GT022] Search tasks
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Share a task
+Status     : PARTIAL
+Test Cases : test_006, test_014
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the task: touch TextView "TASKS" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
+
+[GT024] Create a task from text shared by another app
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] Add the task list home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Configure widget appearance
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Change the app theme
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Change the list and font sizes
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Enable synchronisation with a storage folder (SD card sync)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Configure notification behaviour
+Status     : PARTIAL
+Test Cases : test_008, test_014
+Confidence : 0.27
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - set the notification sound, vibration and whether persistent notifications are used for reminders: touch TextView "Add a reminder" rid=notificationAdd state_changed (tokens=notification,notifications,reminders)
+
+[GT031] Back up the task database
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT032] Restore the task database from a backup
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT033] Configure the swipe gesture on list items
+Status     : PARTIAL
+Test Cases : test_015, test_017
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - choose what a horizontal swipe does to a task (for example complete or delete): touch Button "Delete" rid=menu_delete activity=ActivityMain_ state_changed (tokens=delete)
+
+[GT034] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+1 / 34 features covered
+12 / 34 features partial
+Feature Coverage = COVERED / Total = 2.94%
+Weighted Feature Coverage = mean(completion_ratio) = 14.71%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 34 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Create a task list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Rename a task list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Delete a task list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Set the default list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Create a task' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Edit a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Mark a task as completed' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Show or hide completed tasks' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Delete all completed tasks in a list' | journal=missing (no name match) status=missing | offline=partial
+GT GT010 'Create sub-tasks by indenting' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Reorder tasks manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Set a due date on a task' | journal=missing (no name match) status=missing | offline=covered
+GT GT013 'Set a time-based reminder' | journal=missing (no name match) status=missing | offline=partial
+GT GT014 'Set a repeating reminder' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Set a location-based reminder' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Remove a reminder' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Move a task to a different list' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Delete a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT019 'Sort a list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Switch between lists by swiping' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'View all tasks from all lists together' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Search tasks' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Share a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT024 'Create a task from text shared by another app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Add the task list home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Configure widget appearance' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Change the app theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Change the list and font sizes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Enable synchronisation with a storage folder (SD card sync)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Configure notification behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT031 'Back up the task database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Restore the task database from a backup' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT033 'Configure the swipe gesture on list items' | journal=missing (no name match) status=missing | offline=partial
+GT GT034 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered
