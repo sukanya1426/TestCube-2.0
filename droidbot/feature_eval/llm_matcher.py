@@ -123,7 +123,8 @@ class LLMMatcher(object):
         gold = []
         for path in feature.paths()[:1]:
             gold = [_clip(step, 80) for step in path[:6]]
-        observed = [_clip(self._short_observed(line), 120) for line in self._observed_lines(feature, trace)[:8]]
+        observed = [_clip(self._short_observed(line), 120)
+                    for line in self._observed_lines(feature, trace)[:EVIDENCE_LINES]]
         item = _closest_journal_feature(feature, self.journal_features)
         live = "none"
         if item:
@@ -330,13 +331,17 @@ class LLMMatcher(object):
     def _select_actions(self, feature, trace):
         actions = list(trace.actions or [])
         keywords = _informative_keywords(feature)
+        # Rank on words that actually separate these actions, not on the app
+        # name that every action carries.
+        blob_token_sets = [_tokens(action.token_blob()) for action in actions]
+        keywords = discriminating_keywords(keywords, blob_token_sets)
         # Rank by how well each action matches the feature, then keep the best
         # max_actions and restore chronological order. Previously this kept the
         # FIRST max_actions matches, so on a long trace the judge only ever saw
         # app startup and scored real coverage as 0.
         scored = []
         for index, action in enumerate(actions):
-            blob_tokens = _tokens(action.token_blob())
+            blob_tokens = blob_token_sets[index]
             hits = _keyword_hits(blob_tokens, keywords)
             if action.text_input:
                 # Typed input is strong evidence; always outrank plain taps.
@@ -456,6 +461,48 @@ def _keyword_hits(blob_tokens, keywords):
     Substring matching is what let "and" match "android.widget.Button".
     """
     return len(blob_tokens & keywords)
+
+
+# A keyword present in most of a run's actions cannot discriminate between them.
+# The app's own name is the usual culprit: every action's token blob carries the
+# package, so on Fossify Clock "fossify" and "clock" each hit ~55% of 729
+# actions while "alarm" hits 2%. Ranking by raw hit count then puts two noise
+# words above the one real signal, the judge receives unrelated evidence, and
+# the feature is scored not-covered. Dropping them is what makes selection work
+# on a long trace.
+UNINFORMATIVE_SHARE = 0.30
+
+# Evidence lines shown to the judge per feature. This was 8, which sampled the
+# two tools very unevenly: 8 of ~150 TestCube actions is 5.6% of the trace, but
+# 8 of ~730 LLMDroid actions is 1.1%. The tool that issues more actions per hour
+# was therefore judged on proportionally less of what it did. Raising the window
+# narrows that gap; it cannot close it, because a 7B judge degrades on long
+# prompts (see the batch size of 3 below), so a window proportional to trace
+# length is not available. Tune with TESTCUBE_JUDGE_EVIDENCE.
+EVIDENCE_LINES = max(1, int(os.environ.get("TESTCUBE_JUDGE_EVIDENCE", "24")))
+
+
+def discriminating_keywords(keywords, blob_token_sets, max_share=UNINFORMATIVE_SHARE):
+    """Keywords that appear in at most ``max_share`` of the run's actions.
+
+    Falls back to the original set when the filter would leave nothing, so a
+    feature whose every word is common still gets ranked rather than ignored.
+    """
+    total = len(blob_token_sets or [])
+    if not total or not keywords:
+        return set(keywords or ())
+    limit = max(1, int(total * max_share))
+    kept = set()
+    for word in keywords:
+        hits = 0
+        for tokens in blob_token_sets:
+            if word in tokens:
+                hits += 1
+                if hits > limit:
+                    break
+        if hits <= limit:
+            kept.add(word)
+    return kept or set(keywords)
 
 
 def _short(name):
