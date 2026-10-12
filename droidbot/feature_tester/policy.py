@@ -95,6 +95,14 @@ MIN_STEPS_BEFORE_ABSENT = 16
 MAX_CONSECUTIVE_ERRORS = 5
 MAX_SWITCH_DEPTH = 5
 MAX_SWITCH_RESTART_TRIES = 3
+# How many times a run may force a clean restart after the app proved
+# unreachable, before giving up on the run itself.
+MAX_RESTART_RECOVERIES = 4
+# Extra passes over uncovered features once the first pass is done. Bounded so
+# a run still ends on its own, and stopped near the end of the budget because a
+# feature opened then could not be attempted anyway.
+MAX_RETRY_ROUNDS = 8
+RETRY_BUDGET_CEILING = 0.92
 
 FILE_PICKER_MARKERS = (
     "documentsui",
@@ -324,7 +332,8 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if switched is not None:
                 return switched
 
-        if self.journal.all_done() and not self._hybrid_still_pending():
+        if (self.journal.all_done() and not self._hybrid_still_pending()
+                and not self._start_retry_pass()):
             self._set_stop_reason("all_features_done")
             self._finish_run("All features processed.")
             raise InputInterruptedException("Feature testing complete.")
@@ -414,6 +423,12 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 nxt = self._next_work_feature()
                 if nxt is not None:
                     started = self._start_or_restart_next(nxt)
+                    if started is not None:
+                        return started
+            if self._current is None:
+                if self._start_retry_pass():
+                    nxt = self._next_work_feature()
+                    started = self._start_or_restart_next(nxt) if nxt is not None else None
                     if started is not None:
                         return started
             if self._current is None:
@@ -611,7 +626,8 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
     def _begin_feature(self, feature):
         # Retry passes re-queue blocked features; without a cap the same
         # feature can be re-entered indefinitely.
-        if int(feature.get("attempts") or 0) >= self.cfg.max_feature_attempts:
+        allowed = self.cfg.max_feature_attempts + getattr(self, "_attempt_bonus", 0)
+        if int(feature.get("attempts") or 0) >= allowed:
             self.journal.finish_feature(
                 feature,
                 STATUS_PARTIAL if feature.get("completed_actions") else STATUS_DROPPED,
@@ -959,6 +975,33 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._restart_attempts = getattr(self, "_restart_attempts", 0) + 1
         _cfg = getattr(self, "cfg", None) or get_config()
         if self._restart_attempts > _cfg.max_restart_attempts:
+            # Try to recover before writing off the rest of the budget. The app
+            # being unreachable now usually means one screen wedged it, not that
+            # the device is broken, and ending here threw away most of the hour.
+            self._restart_recoveries = getattr(self, "_restart_recoveries", 0) + 1
+            budget_left = self._budget_used() < 0.95
+            if self._restart_recoveries <= MAX_RESTART_RECOVERIES and budget_left:
+                line = (
+                    "App could not be kept running; forcing a clean restart "
+                    "(recovery %d/%d) rather than ending the run."
+                    % (self._restart_recoveries, MAX_RESTART_RECOVERIES)
+                )
+                self.logger.info(line)
+                if self.journal:
+                    self.journal._append_log(line)
+                if self._current:
+                    self._drop_current(
+                        STATUS_PARTIAL if self._current.get("completed_actions")
+                        else STATUS_DROPPED,
+                        "App would not stay in the foreground.",
+                    )
+                self._restart_attempts = 0
+                self._restarts = 0
+                self._outside_steps = 0
+                self._sent_home = False
+                self._last_event_trace = ""
+                self._await_dialog = True
+                return IntentEvent(intent=self.app.get_stop_intent())
             self._set_stop_reason("restart_loop")
             self._finish_run("App could not be kept running.")
             raise InputInterruptedException("App could not be kept running.")
@@ -1057,6 +1100,15 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._feature_switch_restart = False
             self._restart_phase = None
             self._switch_restart_tries = 0
+            # Giving up on ONE feature switch is recoverable; the run goes on to
+            # the next feature. The start attempts it just spent must therefore
+            # be forgotten, or they accumulate across switches into the
+            # restart_loop abort that ends the whole run. At
+            # MAX_SWITCH_RESTART_TRIES=3 each failure spends 4 attempts, so with
+            # max_restart_attempts=8 two unlucky switches killed the run -- which
+            # is what ended 6 of 17 runs, materialfiles after 3 of its 60 minutes.
+            self._restart_attempts = 0
+            self._restarts = 0
             if nxt is not None:
                 self.journal.finish_feature(
                     nxt, STATUS_DROPPED, "Could not restart the app for this feature."
@@ -2197,22 +2249,56 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         )
 
     def _start_retry_pass(self):
-        if self._retry_pass_started or not self.journal:
+        """Re-open features that are not covered, while budget remains.
+
+        The first round re-attempts blocked features only, which is what this
+        did before. Later rounds also re-open dropped and partial ones, because
+        ending at the end of the first pass left most of the budget unspent:
+        across 17 apps TestCube used a mean of 26 minutes of its 60, stopping
+        with `all_features_done` on 10 of them while its coverage was still
+        climbing. A feature that failed early is worth another try once later
+        features have opened up the app.
+        """
+        if not self.journal:
             return False
-        blocked = [
+        if self._budget_used() >= RETRY_BUDGET_CEILING:
+            return False
+        rounds = getattr(self, "_retry_rounds", 0)
+        if rounds >= MAX_RETRY_ROUNDS:
+            return False
+
+        if not self._retry_pass_started:
+            statuses = (STATUS_BLOCKED,)
+            marker = "retry_attempted"
+        else:
+            statuses = (STATUS_BLOCKED, STATUS_DROPPED, STATUS_PARTIAL)
+            marker = "retry_round_%d" % (rounds + 1)
+        reopened = [
             item for item in self.journal.features()
-            if item.get("status") == STATUS_BLOCKED and not item.get("retry_attempted")
+            if item.get("status") in statuses and not item.get(marker)
         ]
-        if not blocked:
+        if not reopened:
             return False
+
         self._retry_pass_started = True
-        for item in blocked:
-            item["retry_attempted"] = True
+        self._retry_rounds = rounds + 1
+        # Every feature here has already used its attempt budget, so the round
+        # has to grant a fresh attempt or _begin_feature would drop each one
+        # again immediately.
+        self._attempt_bonus = getattr(self, "_attempt_bonus", 0) + 1
+        for item in reopened:
+            item[marker] = True
             item["status"] = "pending"
-            item["reason"] = "Retry after later features discovered new states."
-        line = "Retry pass: re-attempting %d blocked feature(s): %s" % (
-            len(blocked),
-            ", ".join(item.get("id") for item in blocked),
+            item["reason"] = (
+                "Retry after later features discovered new states."
+                if self._retry_rounds == 1
+                else "Retry round %d; budget remains." % self._retry_rounds
+            )
+        line = "Retry pass %d: re-attempting %d feature(s) with %d%% of budget left: %s" % (
+            self._retry_rounds,
+            len(reopened),
+            int(round(100 * (1.0 - self._budget_used()))),
+            ", ".join(item.get("id") for item in reopened),
         )
         self.logger.info(line)
         self.journal._append_log(line)

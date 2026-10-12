@@ -1,5 +1,6 @@
 """Regression tests for first-run, file-picker, and README feature extraction."""
 
+import logging
 import os
 import unittest
 from types import SimpleNamespace
@@ -23,7 +24,11 @@ from droidbot.feature_tester.journal import (
     _is_file_related_matched,
     _match_remaining_action,
 )
-from droidbot.feature_tester.policy import FeatureGuidedPolicy
+from droidbot.feature_tester.policy import (
+    MAX_RETRY_ROUNDS,
+    MAX_SWITCH_RESTART_TRIES,
+    FeatureGuidedPolicy,
+)
 from droidbot.feature_tester.specs import apply_run_paths, resolve_output_dir
 from droidbot.input_event import KeyEvent
 
@@ -910,3 +915,129 @@ class RevisitProgressTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class _FakeJournal(object):
+    """Minimal journal: just the feature list and the calls the policy makes."""
+
+    def __init__(self, features):
+        self._features = features
+        self.logs = []
+        self.saved = 0
+
+    def features(self):
+        return self._features
+
+    def _append_log(self, line):
+        self.logs.append(line)
+
+    def save(self):
+        self.saved += 1
+
+    def finish_feature(self, feature, status, reason="", **extra):
+        feature["status"] = status
+        feature["reason"] = reason
+
+
+def _policy_shell(features, budget_used=0.1):
+    """A FeatureGuidedPolicy with only the fields these paths touch."""
+    policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+    policy.journal = _FakeJournal(features)
+    policy.logger = logging.getLogger("test.policy")
+    policy._retry_pass_started = False
+    policy._retry_rounds = 0
+    policy._attempt_bonus = 0
+    policy._budget_used = lambda: budget_used
+    return policy
+
+
+class RestartRecoveryTests(unittest.TestCase):
+    """A failed feature switch is recoverable and must not end the run.
+
+    MAX_SWITCH_RESTART_TRIES=3 spends 4 start attempts per failed switch, so
+    with max_restart_attempts=8 two unlucky switches used to trip the
+    restart_loop abort. That ended 6 of 17 runs, materialfiles after 3 of its
+    60 minutes.
+    """
+
+    def test_giving_up_on_one_switch_clears_the_restart_counters(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.journal = _FakeJournal([])
+        policy.logger = logging.getLogger("test.policy")
+        policy._restart_phase = "start"
+        policy._switch_restart_tries = MAX_SWITCH_RESTART_TRIES + 1
+        policy._restart_between_features = True
+        policy._feature_switch_restart = True
+        policy._pending_next_feature = {"id": "G002", "status": "pending"}
+        policy._restart_attempts = 7
+        policy._restarts = 3
+
+        state = SimpleNamespace(get_app_activity_depth=lambda app: -1)
+        policy.app = None
+        self.assertIsNone(policy._advance_feature_restart(state))
+
+        self.assertEqual(policy._restart_attempts, 0)
+        self.assertEqual(policy._restarts, 0)
+        self.assertEqual(policy._pending_next_feature, None)
+
+
+class RetryRoundTests(unittest.TestCase):
+    """Unspent budget must be used, not handed back.
+
+    Across 17 apps TestCube used a mean of 26 minutes of its 60 and stopped
+    with all_features_done on 10 of them, while its coverage was still rising.
+    """
+
+    def _features(self):
+        return [
+            {"id": "G001", "status": "covered", "attempts": 1},
+            {"id": "G002", "status": "dropped", "attempts": 2},
+            {"id": "G003", "status": "partial", "attempts": 2},
+            {"id": "G004", "status": "blocked", "attempts": 1},
+            {"id": "G005", "status": "not_present", "attempts": 1},
+        ]
+
+    def test_first_round_takes_blocked_only(self):
+        policy = _policy_shell(self._features())
+        self.assertTrue(policy._start_retry_pass())
+        by_id = {f["id"]: f for f in policy.journal.features()}
+        self.assertEqual(by_id["G004"]["status"], "pending")
+        self.assertEqual(by_id["G002"]["status"], "dropped")
+        self.assertEqual(by_id["G003"]["status"], "partial")
+
+    def test_later_rounds_reopen_dropped_and_partial(self):
+        policy = _policy_shell(self._features())
+        self.assertTrue(policy._start_retry_pass())    # blocked
+        self.assertTrue(policy._start_retry_pass())    # dropped + partial
+        by_id = {f["id"]: f for f in policy.journal.features()}
+        self.assertEqual(by_id["G002"]["status"], "pending")
+        self.assertEqual(by_id["G003"]["status"], "pending")
+        # A feature the app does not have is never worth retrying.
+        self.assertEqual(by_id["G005"]["status"], "not_present")
+        # Covered work is left alone.
+        self.assertEqual(by_id["G001"]["status"], "covered")
+
+    def test_each_round_grants_an_attempt_so_features_are_not_dropped_at_once(self):
+        policy = _policy_shell(self._features())
+        policy._start_retry_pass()
+        self.assertEqual(policy._attempt_bonus, 1)
+        policy._start_retry_pass()
+        self.assertEqual(policy._attempt_bonus, 2)
+
+    def test_no_new_round_near_the_end_of_the_budget(self):
+        policy = _policy_shell(self._features(), budget_used=0.95)
+        self.assertFalse(policy._start_retry_pass())
+        self.assertEqual(
+            [f["status"] for f in policy.journal.features()],
+            ["covered", "dropped", "partial", "blocked", "not_present"],
+        )
+
+    def test_rounds_are_bounded_so_a_run_still_ends(self):
+        policy = _policy_shell(self._features())
+        for _ in range(MAX_RETRY_ROUNDS + 4):
+            policy._start_retry_pass()
+        self.assertLessEqual(policy._retry_rounds, MAX_RETRY_ROUNDS)
+
+    def test_nothing_to_reopen_reports_no_round(self):
+        policy = _policy_shell([{"id": "G001", "status": "covered", "attempts": 1}])
+        self.assertFalse(policy._start_retry_pass())
