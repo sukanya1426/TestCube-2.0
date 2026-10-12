@@ -406,7 +406,10 @@ class KeyEvent(InputEvent):
         return True
 
     def get_event_str(self, state):
-        return "%s(state=%s, name=%s)" % (self.__class__.__name__, state.state_str, self.name)
+        # state is None whenever the screen could not be read; describing the
+        # event must not be what crashes the run.
+        state_str = getattr(state, "state_str", None)
+        return "%s(state=%s, name=%s)" % (self.__class__.__name__, state_str, self.name)
 
 
 class UIEvent(InputEvent):

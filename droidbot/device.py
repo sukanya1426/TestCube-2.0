@@ -846,7 +846,18 @@ class Device(object):
             foreground_activity = self.get_top_activity_name()
             activity_stack = self.get_current_activity_stack()
             background_services = self.get_service_names()
-            screenshot_path = self.take_screenshot()
+            # A FLAG_SECURE window makes screencap exit non-zero. That used to
+            # abort this whole block and return None, throwing away the view
+            # hierarchy, the activity and the services that were just read
+            # successfully -- so on Aegis every state came back empty and the
+            # run could not explore at all. The screenshot is optional context;
+            # the view tree is the state.
+            try:
+                screenshot_path = self.take_screenshot()
+            except Exception as exc:
+                screenshot_path = None
+                self.logger.warning(
+                    "screenshot unavailable (FLAG_SECURE window?): %s" % exc)
             self.logger.debug("finish getting current device state...")
             from .device_state import DeviceState
             current_state = DeviceState(self,
