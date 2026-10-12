@@ -1131,3 +1131,46 @@ class ViewAtTests(unittest.TestCase):
 
     def test_no_views_is_none(self):
         self.assertIsNone(self._policy()._view_at(SimpleNamespace(views=None), 1, 1))
+
+
+class RecoveryCounterTests(unittest.TestCase):
+    """The recovery cap means "cannot be brought back", not "dropped out often".
+
+    materialfiles leaves for the system storage-permission screen repeatedly; a
+    lifetime cap of 4 was spent by the half-hour mark of a run that was making
+    progress the whole time.
+    """
+
+    def test_the_app_coming_back_clears_the_recovery_count(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.app = object()
+        policy._restarts = 3
+        policy._restart_attempts = 7
+        policy._restart_recoveries = 4
+        state = SimpleNamespace(get_app_activity_depth=lambda app: 0)
+
+        self.assertIsNone(policy._maybe_start_app(state))
+
+        self.assertEqual(policy._restart_recoveries, 0)
+        self.assertEqual(policy._restart_attempts, 0)
+        self.assertEqual(policy._restarts, 0)
+
+    def test_the_app_still_missing_does_not_clear_it(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.app = object()
+        policy._restart_recoveries = 2
+        policy._restart_attempts = 1
+        policy._restarts = 0
+        policy._last_event_trace = ""
+        policy._await_dialog = False
+        policy._outside_steps = 0
+        policy.logger = logging.getLogger("test.policy")
+        policy.journal = None
+        policy._current = None
+        policy.cfg = SimpleNamespace(max_restart_attempts=8)
+        policy.app = SimpleNamespace(get_start_intent=lambda: "start")
+        state = SimpleNamespace(get_app_activity_depth=lambda app: -1)
+
+        policy._maybe_start_app(state)
+
+        self.assertEqual(policy._restart_recoveries, 2)

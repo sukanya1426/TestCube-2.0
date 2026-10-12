@@ -968,6 +968,12 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._restarts = 0
             # The app came up, so preceding starts were not a failing loop.
             self._restart_attempts = 0
+            # Nor were the recoveries. The cap has to mean "the app cannot be
+            # brought back", not "the app has dropped out this many times in an
+            # hour": materialfiles leaves for the system storage-permission
+            # screen repeatedly, and a lifetime count of 4 was spent by the
+            # half-hour mark on a run that was making progress throughout.
+            self._restart_recoveries = 0
             self._sent_home = False
             self._outside_steps = 0
             return None
