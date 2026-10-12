@@ -1205,3 +1205,32 @@ class PermissionEscapeTests(unittest.TestCase):
         # A normal runtime dialog is granted in one or two steps, so the cap
         # must sit above that or ordinary permission handling would break.
         self.assertGreaterEqual(MAX_PERMISSION_SCREEN_STEPS, 3)
+
+
+class RetryWithoutBlockedTests(unittest.TestCase):
+    """An app with no blocked features must still get retry rounds.
+
+    Gating the first round on blocked features alone meant _retry_pass_started
+    stayed False when there were none, so the general rounds were unreachable.
+    markor ended its pass with 3 covered and 11 partial, no blocked, and
+    stopped with 18 of its 60 minutes unspent having retried nothing.
+    """
+
+    def test_partial_features_are_reopened_when_nothing_is_blocked(self):
+        features = [
+            {"id": "G001", "status": "covered", "attempts": 1},
+            {"id": "G002", "status": "partial", "attempts": 2},
+            {"id": "G003", "status": "partial", "attempts": 2},
+        ]
+        policy = _policy_shell(features)
+        self.assertTrue(policy._start_retry_pass())
+        self.assertEqual(
+            [f["status"] for f in features], ["covered", "pending", "pending"])
+        self.assertEqual(policy._attempt_bonus, 1)
+
+    def test_a_fully_covered_app_still_reports_no_round(self):
+        policy = _policy_shell([
+            {"id": "G001", "status": "covered", "attempts": 1},
+            {"id": "G002", "status": "not_present", "attempts": 1},
+        ])
+        self.assertFalse(policy._start_retry_pass())

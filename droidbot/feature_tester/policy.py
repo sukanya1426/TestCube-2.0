@@ -2361,16 +2361,25 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         if rounds >= MAX_RETRY_ROUNDS:
             return False
 
+        def pick(statuses, marker):
+            return [
+                item for item in self.journal.features()
+                if item.get("status") in statuses and not item.get(marker)
+            ], marker
+
+        reopened, marker = [], "retry_attempted"
         if not self._retry_pass_started:
-            statuses = (STATUS_BLOCKED,)
-            marker = "retry_attempted"
-        else:
-            statuses = (STATUS_BLOCKED, STATUS_DROPPED, STATUS_PARTIAL)
-            marker = "retry_round_%d" % (rounds + 1)
-        reopened = [
-            item for item in self.journal.features()
-            if item.get("status") in statuses and not item.get(marker)
-        ]
+            reopened, marker = pick((STATUS_BLOCKED,), "retry_attempted")
+        if not reopened:
+            # Falling through matters: gating the first round on blocked
+            # features alone meant an app with none never reached the general
+            # rounds at all, because _retry_pass_started stayed False. markor
+            # finished its pass with 3 covered and 11 partial, no blocked, and
+            # so stopped with 18 of its 60 minutes unspent and no retry at all.
+            reopened, marker = pick(
+                (STATUS_BLOCKED, STATUS_DROPPED, STATUS_PARTIAL),
+                "retry_round_%d" % (rounds + 1),
+            )
         if not reopened:
             return False
 
