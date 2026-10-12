@@ -15,6 +15,22 @@ STATUS_NOT_PRESENT = "not_present"
 STATUS_BLOCKED = "blocked"
 
 
+def _in_run_coverage_enabled():
+    """Whether to score feature coverage inside the run. Off by default.
+
+    _compute_offline_coverage calls the LLM judge (matcher_mode="ai") once the
+    exploration has finished. That costs a lot of wall clock -- over 70 minutes
+    on loophabits, against about 5 on other apps -- and it is wasted twice
+    over: the "ai" judge is the one rejected for false negatives, and
+    scripts/score_features.py overwrites its report.json afterwards anyway,
+    scoring both tools deterministically with identical arguments.
+
+    Set TESTCUBE_IN_RUN_COVERAGE=1 to restore it.
+    """
+    import os
+    return os.environ.get("TESTCUBE_IN_RUN_COVERAGE", "") not in ("", "0", "false", "False")
+
+
 class FeatureJournal(object):
     def __init__(self, output_dir, app_name=None):
         self.root = os.path.join(output_dir or ".", "feature_test")
@@ -388,7 +404,7 @@ class FeatureJournal(object):
         except Exception:
             report["run_cost"] = extra.get("run_cost") or {}
         report["offline_coverage"] = extra.get("offline_coverage")
-        if report["offline_coverage"] is None:
+        if report["offline_coverage"] is None and _in_run_coverage_enabled():
             report["offline_coverage"] = self._compute_offline_coverage()
         report["attempt_summary"] = self._attempt_summary()
         report["ground_truth_source"] = self._ground_truth_source_label()

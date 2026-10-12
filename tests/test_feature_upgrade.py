@@ -679,10 +679,37 @@ class InterruptFinalizeTests(unittest.TestCase):
             raise KeyboardInterrupt()
 
         policy._commit_discovery = boom
-        policy._finalize_journal(run_discovery=False)
+        # Scoring feature coverage inside the run is opt-in: it calls the "ai"
+        # judge, which was rejected for false negatives, and took over 70
+        # minutes on loophabits before scripts/score_features.py overwrote its
+        # output anyway. The guarantee under test -- an interrupt still writes
+        # what the run had -- is checked on the path that still produces it.
+        previous = os.environ.get("TESTCUBE_IN_RUN_COVERAGE")
+        os.environ["TESTCUBE_IN_RUN_COVERAGE"] = "1"
+        try:
+            policy._finalize_journal(run_discovery=False)
+        finally:
+            if previous is None:
+                os.environ.pop("TESTCUBE_IN_RUN_COVERAGE", None)
+            else:
+                os.environ["TESTCUBE_IN_RUN_COVERAGE"] = previous
         self.assertFalse(called)
         self.assertTrue(os.path.isfile(os.path.join(tmpdir, "feature_test", "report.json")))
         self.assertTrue(os.path.isdir(os.path.join(tmpdir, "feature_coverage")))
+
+    def test_in_run_coverage_is_off_by_default(self):
+        from droidbot.feature_tester.journal import _in_run_coverage_enabled
+        previous = os.environ.pop("TESTCUBE_IN_RUN_COVERAGE", None)
+        try:
+            self.assertFalse(_in_run_coverage_enabled())
+            os.environ["TESTCUBE_IN_RUN_COVERAGE"] = "1"
+            self.assertTrue(_in_run_coverage_enabled())
+            os.environ["TESTCUBE_IN_RUN_COVERAGE"] = "0"
+            self.assertFalse(_in_run_coverage_enabled())
+        finally:
+            os.environ.pop("TESTCUBE_IN_RUN_COVERAGE", None)
+            if previous is not None:
+                os.environ["TESTCUBE_IN_RUN_COVERAGE"] = previous
 
 
 class DroidBotImeConnectTests(unittest.TestCase):
