@@ -748,7 +748,15 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if self._coord_repeat_blocked(x, y):
                 self.logger.info("Ignoring repeated screenshot tap (%s, %s)." % (x, y))
             else:
-                event = CustomTouchEvent(x=x, y=y)
+                # Record which widget the coordinate landed on. The tap itself
+                # is unchanged -- _tap_xy returns (x, y) untouched when both are
+                # set, and skip_oracle keeps send() on the same code path -- but
+                # the event is no longer coordinates with no identity. Half of
+                # TestCube's actions named no widget at all (71 of 142 on
+                # fossifyclock), which hid work it had really done from anything
+                # reading the trace.
+                event = CustomTouchEvent(x=x, y=y, view=self._view_at(state, x, y))
+                event.skip_oracle = True
                 if remaining and _is_typing_step(remaining[0]):
                     decision.matched_step = ""
                 self.logger.info(
@@ -1059,6 +1067,34 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             return started
         self._await_dialog = False
         return IntentEvent(intent=self.app.get_start_intent())
+
+    def _view_at(self, state, x, y):
+        """Smallest identifiable view containing (x, y), or None.
+
+        Used only to label a screenshot-driven tap. Prefers a view that carries
+        text, a content description or a resource id, since a bare container
+        says no more than the coordinates already did.
+        """
+        views = getattr(state, "views", None) or []
+        best = None
+        best_area = None
+        for view in views:
+            if not isinstance(view, dict):
+                continue
+            bounds = view.get("bounds")
+            try:
+                (left, top), (right, bottom) = bounds[0], bounds[1]
+            except Exception:
+                continue
+            if not (left <= x <= right and top <= y <= bottom):
+                continue
+            if not (view.get("text") or view.get("content_description")
+                    or view.get("resource_id")):
+                continue
+            area = max(0, right - left) * max(0, bottom - top)
+            if best_area is None or area < best_area:
+                best, best_area = view, area
+        return best
 
     def _already_at_a_clean_start(self, possible=None, state=None):
         """True when the app is already on its hub, so a restart buys nothing.

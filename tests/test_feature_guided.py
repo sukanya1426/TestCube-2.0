@@ -1083,3 +1083,51 @@ class CleanStartTests(unittest.TestCase):
 
         policy.current_state = SimpleNamespace(get_app_activity_depth=boom)
         self.assertFalse(policy._already_at_a_clean_start())
+
+
+class ViewAtTests(unittest.TestCase):
+    """A screenshot-driven tap records the widget it landed on.
+
+    Half of TestCube's actions named no widget at all -- 71 of 142 on
+    fossifyclock -- so work it had really done was invisible to anything
+    reading the trace. The tap location is unaffected.
+    """
+
+    def _state(self, views):
+        return SimpleNamespace(views=views)
+
+    def _policy(self):
+        return FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+
+    def test_picks_the_smallest_identifiable_view_containing_the_point(self):
+        state = self._state([
+            {"bounds": [[0, 0], [1000, 2000]], "resource_id": "root"},
+            {"bounds": [[0, 100], [500, 300]], "text": "Alarm"},
+            {"bounds": [[0, 100], [500, 200]], "text": "Alarm tab"},
+        ])
+        hit = self._policy()._view_at(state, 100, 150)
+        self.assertEqual(hit["text"], "Alarm tab")
+
+    def test_containers_without_identity_are_not_used(self):
+        state = self._state([
+            {"bounds": [[0, 0], [100, 100]], "class": "android.widget.FrameLayout"},
+            {"bounds": [[0, 0], [900, 900]], "text": "Settings"},
+        ])
+        hit = self._policy()._view_at(state, 50, 50)
+        self.assertEqual(hit["text"], "Settings")
+
+    def test_a_point_outside_every_view_is_none(self):
+        state = self._state([{"bounds": [[0, 0], [10, 10]], "text": "x"}])
+        self.assertIsNone(self._policy()._view_at(state, 500, 500))
+
+    def test_malformed_bounds_are_skipped_not_raised(self):
+        state = self._state([
+            {"bounds": None, "text": "bad"},
+            {"bounds": [[0, 0]], "text": "short"},
+            {"bounds": [[0, 0], [50, 50]], "text": "good"},
+            "not-a-dict",
+        ])
+        self.assertEqual(self._policy()._view_at(state, 10, 10)["text"], "good")
+
+    def test_no_views_is_none(self):
+        self.assertIsNone(self._policy()._view_at(SimpleNamespace(views=None), 1, 1))
