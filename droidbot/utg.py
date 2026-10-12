@@ -156,7 +156,14 @@ class UTG(object):
             utg_node = {
                 "id": state_str,
                 "shape": "image",
-                "image": os.path.relpath(state.screenshot_path, self.device.output_dir),
+                # A FLAG_SECURE window leaves no screenshot, and relpath(None)
+                # raises "no path specified". That exception reached the policy's
+                # error counter and stopped Aegis after 5 consecutive failures
+                # with 1 action to its name.
+                "image": (
+                    os.path.relpath(state.screenshot_path, self.device.output_dir)
+                    if state.screenshot_path else None
+                ),
                 "label": short_activity_name,
                 # "group": state.foreground_activity,
                 "package": package_name,
