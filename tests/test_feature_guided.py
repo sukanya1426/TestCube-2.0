@@ -1041,3 +1041,45 @@ class RetryRoundTests(unittest.TestCase):
     def test_nothing_to_reopen_reports_no_round(self):
         policy = _policy_shell([{"id": "G001", "status": "covered", "attempts": 1}])
         self.assertFalse(policy._start_retry_pass())
+
+
+class CleanStartTests(unittest.TestCase):
+    """Restarting between features is skipped when the app is already home.
+
+    Stop plus start intents were 23% of every action TestCube issued across 17
+    runs (564 of 2361) and 62% on materialfiles, and the restart only exists to
+    reach a known starting point the hub already is.
+    """
+
+    def _policy(self, depth, hub):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.app = object()
+        policy.current_state = SimpleNamespace(
+            get_app_activity_depth=lambda app: depth,
+            foreground_activity="pkg/.MainActivity",
+        )
+        policy._looks_like_hub = lambda events, state=None: hub
+        return policy
+
+    def test_on_the_hub_no_restart_is_needed(self):
+        self.assertTrue(self._policy(0, True)._already_at_a_clean_start())
+
+    def test_not_on_the_hub_still_restarts(self):
+        self.assertFalse(self._policy(0, False)._already_at_a_clean_start())
+
+    def test_app_in_the_background_still_restarts(self):
+        self.assertFalse(self._policy(-1, True)._already_at_a_clean_start())
+
+    def test_no_state_still_restarts(self):
+        policy = self._policy(0, True)
+        policy.current_state = None
+        self.assertFalse(policy._already_at_a_clean_start())
+
+    def test_a_broken_state_object_still_restarts(self):
+        policy = self._policy(0, True)
+
+        def boom(app):
+            raise RuntimeError("no depth")
+
+        policy.current_state = SimpleNamespace(get_app_activity_depth=boom)
+        self.assertFalse(policy._already_at_a_clean_start())

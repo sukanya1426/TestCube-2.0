@@ -401,7 +401,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             return KeyEvent(name="BACK")
         if self._current is None:
             nxt = self._next_work_feature()
-            started = self._start_or_restart_next(nxt) if nxt is not None else None
+            started = self._start_or_restart_next(nxt, possible, state) if nxt is not None else None
             if started is not None:
                 return started
         self._note_screen_kind(state, possible)
@@ -415,20 +415,20 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         if self._current is None:
             nxt = self._next_work_feature()
             if nxt is not None:
-                started = self._start_or_restart_next(nxt)
+                started = self._start_or_restart_next(nxt, possible, state)
                 if started is not None:
                     return started
             elif self._hybrid_still_pending():
                 self._commit_discovery("no-candidate")
                 nxt = self._next_work_feature()
                 if nxt is not None:
-                    started = self._start_or_restart_next(nxt)
+                    started = self._start_or_restart_next(nxt, possible, state)
                     if started is not None:
                         return started
             if self._current is None:
                 if self._start_retry_pass():
                     nxt = self._next_work_feature()
-                    started = self._start_or_restart_next(nxt) if nxt is not None else None
+                    started = self._start_or_restart_next(nxt, possible, state) if nxt is not None else None
                     if started is not None:
                         return started
             if self._current is None:
@@ -1060,12 +1060,37 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._await_dialog = False
         return IntentEvent(intent=self.app.get_start_intent())
 
-    def _start_or_restart_next(self, nxt):
+    def _already_at_a_clean_start(self, possible=None, state=None):
+        """True when the app is already on its hub, so a restart buys nothing.
+
+        The restart between features exists only to put the next feature at a
+        known starting point. Being on the hub with the app in the foreground
+        already is that point, and the restart is not free: stop plus start
+        intents accounted for 23% of every action TestCube issued across 17
+        runs (564 of 2361), reaching 62% on materialfiles. It is also the path
+        that failed and aborted 6 of those runs.
+        """
+        if state is None:
+            state = getattr(self, "current_state", None)
+        if state is None:
+            return False
+        try:
+            if state.get_app_activity_depth(self.app) != 0:
+                return False
+        except Exception:
+            return False
+        try:
+            return bool(self._looks_like_hub(possible or [], state))
+        except Exception:
+            return False
+
+    def _start_or_restart_next(self, nxt, possible=None, state=None):
         if nxt is None:
             return None
         if (
             getattr(self, "_features_finished", 0) > 0
             and getattr(getattr(self, "cfg", None), "restart_between_features", True)
+            and not self._already_at_a_clean_start(possible, state)
         ):
             self._pending_next_feature = nxt
             self._restart_between_features = True
@@ -1161,7 +1186,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._set_stop_reason("switch_loop")
             self._finish_run("Feature switching did not converge.")
             raise InputInterruptedException("Feature switching did not converge.")
-        started = self._start_or_restart_next(nxt)
+        started = self._start_or_restart_next(nxt, possible, state)
         if started is not None:
             return started
         if self._skip_satisfied_feature(state, possible):
