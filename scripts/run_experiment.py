@@ -424,8 +424,41 @@ def write_llmdroid_config(app, total, log):
     return True, ""
 
 
+def archive_previous_run(out_dir, log, tool):
+    """Move an earlier run of this app aside so the new trace stands alone.
+
+    events/ and states/ are named by wall-clock time, so a re-run lands beside
+    the old files instead of replacing them: a second pass over
+    fossifyvoicerecorder left 161 events from September next to 9 from today in
+    one directory. Anything reading the trace -- feature coverage above all --
+    would then score the two runs as one.
+
+    The previous run is kept under output/experiment/_prev/<tool>/<app>, which
+    the report globs do not match, rather than deleted.
+    """
+    if not os.path.isdir(out_dir):
+        return None
+    if not os.listdir(out_dir):
+        return None
+    stem = os.path.basename(out_dir.rstrip(os.sep))
+    prev_root = os.path.join(REPO, "output", "experiment", "_prev", tool)
+    prev = os.path.join(prev_root, stem)
+    try:
+        if os.path.isdir(prev):
+            shutil.rmtree(prev)
+        os.makedirs(prev_root, exist_ok=True)
+        shutil.move(out_dir, prev)
+    except OSError as exc:
+        log.write(u"[%s] could not archive the previous run: %s\n" % (stamp(), exc))
+        return None
+    log.write(u"[%s] previous %s run moved to %s\n"
+              % (stamp(), tool, os.path.relpath(prev, REPO)))
+    return prev
+
+
 def run_testcube(app, apk, cfg, log):
     out_dir = os.path.join(REPO, cfg["testcube_output"], app["stem"])
+    archive_previous_run(out_dir, log, "testcube")
     command = [
         sys.executable, "start.py",
         "-a", apk,
@@ -466,6 +499,7 @@ def last_error_lines(output, limit=3):
 
 def run_llmdroid(app, cfg, log):
     out_dir = os.path.join(REPO, cfg["llmdroid_output"], app["stem"])
+    archive_previous_run(out_dir, log, "llmdroid")
     command = [
         sys.executable, "scripts/run_llmdroid.py",
         "--app", app["stem"],
