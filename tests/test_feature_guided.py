@@ -25,6 +25,7 @@ from droidbot.feature_tester.journal import (
     _match_remaining_action,
 )
 from droidbot.feature_tester.policy import (
+    MAX_PERMISSION_SCREEN_STEPS,
     MAX_RETRY_ROUNDS,
     MAX_SWITCH_RESTART_TRIES,
     FeatureGuidedPolicy,
@@ -1174,3 +1175,33 @@ class RecoveryCounterTests(unittest.TestCase):
         policy._maybe_start_app(state)
 
         self.assertEqual(policy._restart_recoveries, 2)
+
+
+class PermissionEscapeTests(unittest.TestCase):
+    """A permission screen that will not resolve is abandoned, not explored.
+
+    The "manage all files" grant is a page in system Settings with a toggle,
+    and MANAGE_EXTERNAL_STORAGE is an appop that adb pm grant cannot set.
+    _outside_kind returns None for any permission screen, which cleared
+    _outside_steps and disabled the escape, so the run explored Settings
+    instead of the app: 70 of materialfiles' 134 actions were in
+    com.android.settings against 54 in the app.
+    """
+
+    def test_the_counter_clears_when_the_app_is_back_in_front(self):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.app = object()
+        policy._restarts = 1
+        policy._restart_attempts = 1
+        policy._restart_recoveries = 1
+        policy._permission_steps = 3
+        state = SimpleNamespace(get_app_activity_depth=lambda app: 0)
+
+        policy._maybe_start_app(state)
+
+        self.assertEqual(policy._permission_steps, 0)
+
+    def test_the_escape_threshold_leaves_room_for_a_real_dialog(self):
+        # A normal runtime dialog is granted in one or two steps, so the cap
+        # must sit above that or ordinary permission handling would break.
+        self.assertGreaterEqual(MAX_PERMISSION_SCREEN_STEPS, 3)

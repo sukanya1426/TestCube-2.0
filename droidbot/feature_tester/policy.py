@@ -89,6 +89,9 @@ SKIP_CTA = (
 MAX_STEPS_PER_FEATURE = 60
 MAX_NO_PROGRESS = 12
 MAX_OUTSIDE_STEPS = 6
+# Steps spent on a permission screen that will not resolve before the run stops
+# trying to grant it and navigates away.
+MAX_PERMISSION_SCREEN_STEPS = 4
 MAX_FILE_PICKER_STEPS = 8
 MAX_RESTARTS = 5
 MIN_STEPS_BEFORE_ABSENT = 16
@@ -373,11 +376,34 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self.current_state = state
             allow_event = make_allow_event(state)
             if allow_event is not None:
+                self._permission_steps = 0
                 return self._emit(
                     allow_event,
                     "Allow the system permission dialog.",
                     matched="Dismiss permission or login prompts that block the home screen",
                 )
+            # Still unresolved. Some of these are not dialogs at all: the
+            # "manage all files" grant is a page in system Settings with a
+            # toggle, and MANAGE_EXTERNAL_STORAGE is an appop that
+            # _grant_permissions cannot set. _outside_kind returns None for any
+            # permission screen, which cleared _outside_steps and disabled the
+            # escape, so the run explored Settings instead of the app: 70 of
+            # materialfiles' 134 actions were in com.android.settings against 54
+            # in the app. Give up on the grant and leave.
+            self._permission_steps = getattr(self, "_permission_steps", 0) + 1
+            if self._permission_steps > MAX_PERMISSION_SCREEN_STEPS:
+                activity = state.foreground_activity or "?"
+                line = ("Permission screen %s did not resolve after %d steps; "
+                        "leaving it." % (activity, self._permission_steps))
+                self.logger.info(line)
+                if self.journal:
+                    self.journal._append_log(line)
+                if self._permission_steps > MAX_PERMISSION_SCREEN_STEPS + 2:
+                    self._permission_steps = 0
+                    return IntentEvent(intent=self.app.get_start_intent())
+                return KeyEvent(name="BACK")
+        else:
+            self._permission_steps = 0
 
         outside = self._outside_kind(state)
         if outside == "unrelated":
@@ -974,6 +1000,7 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             # screen repeatedly, and a lifetime count of 4 was spent by the
             # half-hour mark on a run that was making progress throughout.
             self._restart_recoveries = 0
+            self._permission_steps = 0
             self._sent_home = False
             self._outside_steps = 0
             return None
