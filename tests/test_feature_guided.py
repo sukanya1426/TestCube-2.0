@@ -25,6 +25,7 @@ from droidbot.feature_tester.journal import (
     _match_remaining_action,
 )
 from droidbot.feature_tester.policy import (
+    EVICT_AFTER_TRIPS,
     MAX_PERMISSION_SCREEN_STEPS,
     MAX_RETRY_ROUNDS,
     MAX_SWITCH_RESTART_TRIES,
@@ -1234,3 +1235,53 @@ class RetryWithoutBlockedTests(unittest.TestCase):
             {"id": "G002", "status": "not_present", "attempts": 1},
         ])
         self.assertFalse(policy._start_retry_pass())
+
+
+class ForeignAppEvictionTests(unittest.TestCase):
+    """An app that keeps stealing the foreground is force-stopped.
+
+    Open Camera's gallery button hands the screen to Google Photos. BACK and
+    HOME did not win it back and the start intent lost the race every time: 62
+    of the run's 70 actions were inside Photos, 51 of them start intents, and
+    feature coverage fell from 29.97% to 0.61%.
+    """
+
+    def _policy(self, own="net.sourceforge.opencamera"):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy.logger = logging.getLogger("test.policy")
+        policy.journal = None
+        policy.app = SimpleNamespace(get_package_name=lambda: own)
+        policy.shelled = []
+        policy.device = SimpleNamespace(
+            adb=SimpleNamespace(shell=lambda cmd: policy.shelled.append(cmd)))
+        return policy
+
+    def test_a_foreign_app_is_stopped(self):
+        policy = self._policy()
+        self.assertTrue(policy._evict_foreign_app("com.google.android.apps.photos"))
+        self.assertEqual(policy.shelled, ["am force-stop com.google.android.apps.photos"])
+
+    def test_the_app_under_test_is_never_stopped(self):
+        policy = self._policy()
+        self.assertFalse(policy._evict_foreign_app("net.sourceforge.opencamera"))
+        self.assertEqual(policy.shelled, [])
+
+    def test_the_launcher_and_system_ui_are_never_stopped(self):
+        policy = self._policy()
+        for package in ("com.google.android.apps.nexuslauncher",
+                        "com.android.systemui", "android"):
+            self.assertFalse(policy._evict_foreign_app(package))
+        self.assertEqual(policy.shelled, [])
+
+    def test_a_failing_shell_is_reported_not_raised(self):
+        policy = self._policy()
+
+        def boom(cmd):
+            raise RuntimeError("adb gone")
+
+        policy.device.adb.shell = boom
+        self.assertFalse(policy._evict_foreign_app("com.google.android.apps.photos"))
+
+    def test_eviction_waits_for_a_repeat_trip(self):
+        # BACK and HOME get a chance first; one excursion must not force-stop.
+        self.assertGreaterEqual(EVICT_AFTER_TRIPS, 2)

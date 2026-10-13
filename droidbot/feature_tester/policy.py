@@ -92,6 +92,9 @@ MAX_OUTSIDE_STEPS = 6
 # Steps spent on a permission screen that will not resolve before the run stops
 # trying to grant it and navigates away.
 MAX_PERMISSION_SCREEN_STEPS = 4
+# Trips into the same foreign app before it is force-stopped rather than asked
+# to yield. BACK and HOME are tried first on every trip.
+EVICT_AFTER_TRIPS = 2
 MAX_FILE_PICKER_STEPS = 8
 MAX_RESTARTS = 5
 MIN_STEPS_BEFORE_ABSENT = 16
@@ -167,6 +170,9 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._feature_steps = 0
         self._no_progress = 0
         self._outside_steps = 0
+        self._permission_steps = 0
+        # Trips into each foreign package that stole the foreground, per run.
+        self._outside_trips = {}
         self._restarts = 0
         self._last_state_str = None
         self._last_event_trace = ""
@@ -411,11 +417,21 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             if self._is_launcher(activity):
                 return self._start_app_event("Launcher is in front; starting the app.")
             self._outside_steps += 1
+            package = activity.split("/")[0]
+            self._outside_trips[package] = self._outside_trips.get(package, 0) + 1
             self.logger.info("Left the app (%s). Returning." % activity)
             if self._outside_steps <= MAX_OUTSIDE_STEPS - 2:
                 return KeyEvent(name="BACK")
             if self._outside_steps <= MAX_OUTSIDE_STEPS + 1:
                 return KeyEvent(name="HOME")
+            # BACK and HOME did not give the screen back. Opening Open Camera's
+            # gallery hands the foreground to Google Photos, and asking politely
+            # lost: 62 of the run's 70 actions were inside Photos and 51 of them
+            # were start intents that Photos immediately won back. Evict it.
+            if self._outside_trips.get(package, 0) >= EVICT_AFTER_TRIPS:
+                evicted = self._evict_foreign_app(package)
+                if evicted:
+                    return IntentEvent(intent=self.app.get_start_intent())
             return IntentEvent(intent=self.app.get_start_intent())
         if outside is None:
             self._outside_steps = 0
@@ -1784,6 +1800,36 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         possible = self._filter_banned(possible, state)
         possible = self._augment_events(possible, self._current)
         return possible
+
+    def _evict_foreign_app(self, package):
+        """Force-stop another app that has taken the foreground.
+
+        Only ever another package: never the app under test, never the launcher
+        or the system UI. Returns True when the stop command was issued.
+        """
+        own = ""
+        try:
+            own = self.app.get_package_name() or ""
+        except Exception:
+            own = ""
+        if not package or package == own or package.startswith(own):
+            return False
+        lowered = package.lower()
+        if any(surface in lowered for surface in ("launcher", "systemui", "android.systemui")):
+            return False
+        if lowered in ("android", "system"):
+            return False
+        try:
+            self.device.adb.shell("am force-stop %s" % package)
+        except Exception as exc:
+            self.logger.warning("could not force-stop %s: %s" % (package, exc))
+            return False
+        line = ("%s kept taking the foreground; force-stopped it to get back to "
+                "the app under test." % package)
+        self.logger.info(line)
+        if self.journal:
+            self.journal._append_log(line)
+        return True
 
     def _is_launcher(self, activity):
         return "launcher" in (activity or "").lower()
