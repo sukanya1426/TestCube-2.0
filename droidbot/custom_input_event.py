@@ -43,6 +43,12 @@ def _tap_xy(view, x, y):
     return cx, cy
 
 
+def _tap_oracle_enabled():
+    """Whether to run the screenshot-comparison oracle around each Button tap."""
+    import os
+    return os.environ.get("TESTCUBE_TAP_ORACLE", "") not in ("", "0", "false", "False")
+
+
 class CustomTouchEvent(TouchEvent):
 
     def send(self, device):
@@ -52,8 +58,16 @@ class CustomTouchEvent(TouchEvent):
             view_class = self.view.get("class") or ""
 
         from .GeminiAI import GeminiAi
+        # The oracle only prints what it finds: the tap is sent either way and
+        # the comparison never reaches the policy or the return value. What it
+        # does cost is two screenshots, a 1.5s sleep and an image-comparison
+        # VLM call on every clickable Button -- at least 90s each on the local
+        # backend. Open Camera managed 3 actions in its 63-minute budget
+        # because of it, and its feature coverage fell from 29.97% to 0.
+        # Opt in with TESTCUBE_TAP_ORACLE=1.
         use_oracle = (
-            self.view
+            _tap_oracle_enabled()
+            and self.view
             and "Button" in view_class
             and self.view.get("clickable")
             and not GeminiAi.is_disabled()

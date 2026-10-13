@@ -1285,3 +1285,41 @@ class ForeignAppEvictionTests(unittest.TestCase):
     def test_eviction_waits_for_a_repeat_trip(self):
         # BACK and HOME get a chance first; one excursion must not force-stop.
         self.assertGreaterEqual(EVICT_AFTER_TRIPS, 2)
+
+
+class TapOracleTests(unittest.TestCase):
+    """The screenshot-comparison oracle around each tap is opt-in.
+
+    It only prints its verdict -- the tap is sent either way and the result
+    reaches neither the policy nor the return value -- while costing two
+    screenshots, a 1.5s sleep and an image-comparison VLM call per clickable
+    Button, at least 90s each on the local backend. Open Camera managed 3
+    actions in its 63-minute budget and scored 0 feature coverage.
+    """
+
+    def test_off_by_default_and_switchable(self):
+        from droidbot.custom_input_event import _tap_oracle_enabled
+        previous = os.environ.pop("TESTCUBE_TAP_ORACLE", None)
+        try:
+            self.assertFalse(_tap_oracle_enabled())
+            os.environ["TESTCUBE_TAP_ORACLE"] = "1"
+            self.assertTrue(_tap_oracle_enabled())
+            os.environ["TESTCUBE_TAP_ORACLE"] = "0"
+            self.assertFalse(_tap_oracle_enabled())
+        finally:
+            os.environ.pop("TESTCUBE_TAP_ORACLE", None)
+            if previous is not None:
+                os.environ["TESTCUBE_TAP_ORACLE"] = previous
+
+    def test_the_tap_is_still_sent_without_the_oracle(self):
+        from droidbot.custom_input_event import CustomTouchEvent
+        taps = []
+        device = SimpleNamespace(
+            view_long_touch=lambda x, y, duration=2000: taps.append((x, y, duration)),
+            take_screenshot=lambda: self.fail("no screenshot without the oracle"),
+        )
+        event = CustomTouchEvent(x=120, y=340, view={
+            "class": "android.widget.Button", "clickable": True, "bounds": [[0, 0], [240, 680]],
+        })
+        self.assertTrue(event.send(device))
+        self.assertEqual(taps, [(120, 340, 200)])
