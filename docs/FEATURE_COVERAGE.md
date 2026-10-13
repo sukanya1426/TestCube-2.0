@@ -86,24 +86,58 @@ so the parameters that matter are fixed from shared inputs:
 
 ## Validation
 
-The matcher is token-based, so its error rate was measured by hand rather than
-assumed. Samples were drawn at random across apps and both tools; the figures
-below are from samples drawn *after* the last change, so they are not the
-samples the rules were tuned on.
+The matcher is token-based, so its error rate is measured by hand rather than
+assumed. Samples are drawn at random across apps, by an identical procedure for
+each tool, and judged one pair at a time against the trace.
 
-- **Precision** (is a reported match real?): **20/25** on the final sample.
-  Two earlier independent samples gave 24/30 and 24/30. Before this work it was
-  17/40.
-- **Recall** (is an unmatched step really absent?): **12/12** correctly
-  unmatched on the final sample. An earlier sample found 5 misses in 14, all
-  from three causes since fixed ("or" read as "and", no spelling normalisation,
-  long steps needing too many words).
+**Precision is tool-dependent, and that is the single most important fact about
+this metric.** On samples of 20 drawn the same way from each tool's runs:
 
-So roughly **one reported match in five is spurious**, and step coverage should
-be read as an estimate with that error attached, not as an exact quantity.
-Residual error modes, in descending frequency: outcome steps matched through
-destination screen text; "Open the X tab" matching a widget named X elsewhere;
-and a step matching a widget that shares its noun but names another operation.
+| | precision | 95% CI |
+|---|---|---|
+| TestCube traces | 12/20 = 60% | 39-81% |
+| LLMDroid traces | 17/20 = 85% | 69-101% |
+
+So roughly two in five matches reported on a TestCube trace are spurious,
+against roughly one in seven on an LLMDroid trace. The asymmetry is not a bug
+in one tool's favour, it follows from what the traces contain: LLMDroid taps
+labelled controls and names a widget in about 91% of its actions, while
+TestCube issues more coordinate-driven and outcome-matched actions, which are
+the two residual error modes.
+
+### What this metric may and may not be used for
+
+**May**: before-and-after on a single tool. Both sides are scored by the same
+code over traces of the same kind, so the precision factor is common and
+cancels. Measured this way the fixes in this repo moved TestCube's feature
+coverage by +6.17 pp (n=13 apps, 95% CI +3.64 to +8.70, 12 of 13 improved,
+sign test p=0.003).
+
+**May not**: a comparison between the two tools. Correcting each tool's score by
+its own measured precision reverses the sign of the difference -- TestCube
+15.58% x 0.60 = 9.35% against LLMDroid 12.04% x 0.85 = 10.24% -- and the
+plausible range for that corrected gap, -6.1 to +4.3 pp, spans zero. The
+uncorrected +3.54 pp difference is itself not significant (95% CI -0.32 to
++7.40, sign test p=1.00). Any cross-tool claim from this metric would be
+reporting the measurement, not the tools.
+
+Code coverage carries no such caveat: it is read from AndroLog bytecode probes
+with no matcher in the path, and both tools are measured against the same
+instrumented APK (verified: identical method denominators on every app).
+
+### Error modes still present, in descending frequency
+
+Outcome steps matched through destination screen text; a step matched on a
+screen belonging to another feature; "Open the X tab" matching a widget named X
+that is not a tab; and a step matching a widget that shares its noun but names
+a different operation.
+
+Two modes were found and fixed during this audit, and both fixes are in
+`matcher.py`: a stem match must agree in grammatical number, so "Open a note"
+no longer matches a header reading "Notes"; and when a widget has visible text,
+the step's distinctive words must appear in that text rather than only in the
+resource id, so "Open the task editor" no longer matches a button reading
+"SAVE" whose id is `editor_action_save`.
 
 ### Why the local LLM judge is not used
 
