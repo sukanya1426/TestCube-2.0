@@ -594,10 +594,22 @@ class FeatureMatcher(object):
         # trace repeats everywhere (self.uninformative).
         distinctive = self._distinctive(content)
         if distinctive:
-            distinctive_matched = set(
-                token for token in distinctive
-                if comparable({token}) & expanded_observed
-            )
+            # The visible label carries the match when the widget has one. A
+            # resource id is an internal name and matching only there let
+            # "Open the task editor" match a button reading "SAVE" because its
+            # id happened to be editor_action_save.
+            visible = tokenize("%s %s" % (action.view_text or "",
+                                          action.content_description or ""))
+            distinctive_matched = set()
+            for token in distinctive:
+                options = comparable({token})
+                hits = [o for o in observed_tokens if options & comparable({o})]
+                hits = [o for o in hits if agrees_in_number(token, o)]
+                if not hits:
+                    continue
+                if visible and not any(o in visible for o in hits):
+                    continue
+                distinctive_matched.add(token)
             need = _required_hits(len(distinctive))
             if len(distinctive_matched) < need:
                 return False, 0.0, "missing distinctive tokens"
@@ -860,6 +872,25 @@ def stem(token):
     if word.endswith("e") and len(word) > 4:
         word = word[:-1]
     return word
+
+
+def _plural(token):
+    """Crude number test, enough to tell "note" from "notes"."""
+    return bool(token) and token.endswith("s") and not token.endswith("ss") and len(token) > 3
+
+
+def agrees_in_number(expected, observed):
+    """True when two tokens are the same word in the same grammatical number.
+
+    Stemming folds "notes" onto "note", which is wanted for spelling and
+    inflection but not here: a step that says "Open a note" matching a list
+    header labelled "Notes" is the collection, not an instance of it. That one
+    pattern produced 7 of the 22 false positives found by hand across both
+    tools.
+    """
+    if expected == observed:
+        return True
+    return _plural(expected) == _plural(observed)
 
 
 def stems(tokens):
