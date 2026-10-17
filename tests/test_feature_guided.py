@@ -26,6 +26,7 @@ from droidbot.feature_tester.journal import (
 )
 from droidbot.feature_tester.policy import (
     EVICT_AFTER_TRIPS,
+    RUN_WIDGET_TAP_CAP,
     MAX_PERMISSION_SCREEN_STEPS,
     MAX_RETRY_ROUNDS,
     MAX_SWITCH_RESTART_TRIES,
@@ -1323,3 +1324,44 @@ class TapOracleTests(unittest.TestCase):
         })
         self.assertTrue(event.send(device))
         self.assertEqual(taps, [(120, 340, 200)])
+
+
+class ExhaustedWidgetTests(unittest.TestCase):
+    """A widget that goes nowhere all run stops being offered.
+
+    max_widget_taps is cleared by _begin_feature, so each feature attempt hands
+    the same useless control another allowance. VLC spent its whole hour on a
+    permission dialog: touch_outside tapped 96 times, 20 distinct actions out
+    of 288, nothing covered.
+    """
+
+    def _policy(self, taps, productive=()):
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy._run_widget_taps = dict(taps)
+        policy._run_widget_productive = set(productive)
+        return policy
+
+    def test_a_widget_under_the_cap_is_kept(self):
+        p = self._policy({"w": RUN_WIDGET_TAP_CAP - 1})
+        self.assertFalse(p._widget_is_exhausted("w"))
+
+    def test_a_widget_at_the_cap_is_suppressed(self):
+        p = self._policy({"w": RUN_WIDGET_TAP_CAP})
+        self.assertTrue(p._widget_is_exhausted("w"))
+
+    def test_a_widget_that_ever_revealed_a_new_state_is_never_suppressed(self):
+        p = self._policy({"w": RUN_WIDGET_TAP_CAP * 5}, productive={"w"})
+        self.assertFalse(p._widget_is_exhausted("w"))
+
+    def test_an_unknown_or_missing_key_is_kept(self):
+        p = self._policy({})
+        self.assertFalse(p._widget_is_exhausted("never-seen"))
+        self.assertFalse(p._widget_is_exhausted(None))
+
+    def test_the_cap_survives_a_feature_switch(self):
+        # _begin_feature clears _widget_taps; the run-level tally must persist.
+        policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        policy._run_widget_taps = {"w": RUN_WIDGET_TAP_CAP}
+        policy._run_widget_productive = set()
+        policy._widget_taps = {}          # as _begin_feature leaves it
+        self.assertTrue(policy._widget_is_exhausted("w"))

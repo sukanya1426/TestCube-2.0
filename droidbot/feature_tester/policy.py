@@ -92,6 +92,12 @@ MAX_OUTSIDE_STEPS = 6
 # Steps spent on a permission screen that will not resolve before the run stops
 # trying to grant it and navigates away.
 MAX_PERMISSION_SCREEN_STEPS = 4
+# Run-level dead-end memory. max_widget_taps is cleared by _begin_feature, so
+# a widget that leads nowhere gets a fresh allowance on every feature attempt:
+# VLC spent its whole hour on a permission dialog, tapping touch_outside 96
+# times and issuing 20 distinct actions out of 288. A widget tapped this often
+# across the run without ever revealing a new state is not offered again.
+RUN_WIDGET_TAP_CAP = 10
 # Trips into the same foreign app before it is force-stopped rather than asked
 # to yield. BACK and HOME are tried first on every trip.
 EVICT_AFTER_TRIPS = 2
@@ -197,6 +203,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._tried_on_state = {}
         self._tried_widgets = set()
         self._seen_run_states = set()
+        # Run-level; deliberately NOT cleared by _begin_feature.
+        self._run_widget_taps = {}
+        self._run_widget_productive = set()
+        self._last_widget_key = None
         self._novelty_window = []
         self._remaining_window = []
         self._stagnation_last = None
@@ -899,6 +909,10 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 # therefore blind to a stepper/date widget that mutates the
                 # state hash on every tap.
                 self._widget_taps[widget_key] = self._widget_taps.get(widget_key, 0) + 1
+                if not hasattr(self, "_run_widget_taps"):
+                    self._run_widget_taps = {}
+                self._run_widget_taps[widget_key] = self._run_widget_taps.get(widget_key, 0) + 1
+                self._last_widget_key = widget_key
         if self._current:
             step = {
                 "decision": "act",
@@ -990,6 +1004,11 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             self._no_progress = 0
         self._last_state_str = state_str
         if state_str:
+            last_widget = getattr(self, "_last_widget_key", None)
+            if last_widget and state_str not in self._seen_run_states:
+                if not hasattr(self, "_run_widget_productive"):
+                    self._run_widget_productive = set()
+                self._run_widget_productive.add(last_widget)
             self._feature_seen_states.add(state_str)
             self._seen_run_states.add(state_str)
         if self._current and self._no_progress >= MAX_NO_PROGRESS:
@@ -1773,6 +1792,8 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 cfg = getattr(self, "cfg", None) or get_config()
                 if widget_taps.get(widget_key, 0) >= cfg.max_widget_taps:
                     continue
+                if self._widget_is_exhausted(widget_key):
+                    continue
             kept.append(event)
         if kept:
             return kept
@@ -1800,6 +1821,20 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         possible = self._filter_banned(possible, state)
         possible = self._augment_events(possible, self._current)
         return possible
+
+    def _widget_is_exhausted(self, widget_key):
+        """True for a widget tapped repeatedly across the run to no effect.
+
+        The per-feature cap cannot see this: _begin_feature clears it, so every
+        feature attempt hands the same useless control another allowance. A
+        widget that has revealed a new state at any point in the run is never
+        suppressed, however often it is used afterwards.
+        """
+        if not widget_key:
+            return False
+        if widget_key in getattr(self, "_run_widget_productive", ()):
+            return False
+        return getattr(self, "_run_widget_taps", {}).get(widget_key, 0) >= RUN_WIDGET_TAP_CAP
 
     def _evict_foreign_app(self, package):
         """Force-stop another app that has taken the foreground.
