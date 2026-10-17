@@ -1335,10 +1335,9 @@ class ExhaustedWidgetTests(unittest.TestCase):
     of 288, nothing covered.
     """
 
-    def _policy(self, taps, productive=()):
+    def _policy(self, taps):
         policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
         policy._run_widget_taps = dict(taps)
-        policy._run_widget_productive = set(productive)
         return policy
 
     def test_a_widget_under_the_cap_is_kept(self):
@@ -1349,8 +1348,10 @@ class ExhaustedWidgetTests(unittest.TestCase):
         p = self._policy({"w": RUN_WIDGET_TAP_CAP})
         self.assertTrue(p._widget_is_exhausted("w"))
 
-    def test_a_widget_that_ever_revealed_a_new_state_is_never_suppressed(self):
-        p = self._policy({"w": RUN_WIDGET_TAP_CAP * 5}, productive={"w"})
+    def test_revealing_a_new_state_zeroes_the_tally(self):
+        # The policy sets the count to 0 when the widget reveals a new state,
+        # so it has to earn the full cap again before being suppressed.
+        p = self._policy({"w": 0})
         self.assertFalse(p._widget_is_exhausted("w"))
 
     def test_an_unknown_or_missing_key_is_kept(self):
@@ -1362,6 +1363,5 @@ class ExhaustedWidgetTests(unittest.TestCase):
         # _begin_feature clears _widget_taps; the run-level tally must persist.
         policy = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
         policy._run_widget_taps = {"w": RUN_WIDGET_TAP_CAP}
-        policy._run_widget_productive = set()
         policy._widget_taps = {}          # as _begin_feature leaves it
         self.assertTrue(policy._widget_is_exhausted("w"))

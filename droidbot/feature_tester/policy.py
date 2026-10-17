@@ -96,7 +96,8 @@ MAX_PERMISSION_SCREEN_STEPS = 4
 # a widget that leads nowhere gets a fresh allowance on every feature attempt:
 # VLC spent its whole hour on a permission dialog, tapping touch_outside 96
 # times and issuing 20 distinct actions out of 288. A widget tapped this often
-# across the run without ever revealing a new state is not offered again.
+# tapped this many times in a row without revealing a new state is not offered
+# again; the count is zeroed whenever that widget does reveal one.
 RUN_WIDGET_TAP_CAP = 10
 # Trips into the same foreign app before it is force-stopped rather than asked
 # to yield. BACK and HOME are tried first on every trip.
@@ -205,7 +206,6 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         self._seen_run_states = set()
         # Run-level; deliberately NOT cleared by _begin_feature.
         self._run_widget_taps = {}
-        self._run_widget_productive = set()
         self._last_widget_key = None
         self._novelty_window = []
         self._remaining_window = []
@@ -1006,9 +1006,15 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         if state_str:
             last_widget = getattr(self, "_last_widget_key", None)
             if last_widget and state_str not in self._seen_run_states:
-                if not hasattr(self, "_run_widget_productive"):
-                    self._run_widget_productive = set()
-                self._run_widget_productive.add(last_widget)
+                # Zero the widget's tally rather than exempting it for good.
+                # Exempting on the first new state whitelisted everything,
+                # because early in a run every state is new -- VLC's
+                # touch_outside was cleared on its first tap and went on to be
+                # tapped 88 more times. What matters is taps since this widget
+                # last revealed anything.
+                if not hasattr(self, "_run_widget_taps"):
+                    self._run_widget_taps = {}
+                self._run_widget_taps[last_widget] = 0
             self._feature_seen_states.add(state_str)
             self._seen_run_states.add(state_str)
         if self._current and self._no_progress >= MAX_NO_PROGRESS:
@@ -1831,8 +1837,6 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         suppressed, however often it is used afterwards.
         """
         if not widget_key:
-            return False
-        if widget_key in getattr(self, "_run_widget_productive", ()):
             return False
         return getattr(self, "_run_widget_taps", {}).get(widget_key, 0) >= RUN_WIDGET_TAP_CAP
 
