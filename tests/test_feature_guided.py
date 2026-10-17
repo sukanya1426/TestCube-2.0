@@ -1365,3 +1365,61 @@ class ExhaustedWidgetTests(unittest.TestCase):
         policy._run_widget_taps = {"w": RUN_WIDGET_TAP_CAP}
         policy._widget_taps = {}          # as _begin_feature leaves it
         self.assertTrue(policy._widget_is_exhausted("w"))
+
+
+class ExhaustedScreenTests(unittest.TestCase):
+    """A screen whose every control is spent must be left, not re-tapped.
+
+    _filter_banned rebuilt its last-resort list from the original events, so
+    once every candidate was exhausted the dead ends were handed straight back.
+    That is what kept VLC tapping touch_outside: 103 taps, 19 distinct actions
+    out of 287, 0 features covered.
+    """
+
+    def _policy(self, run_taps):
+        from droidbot.feature_tester.config import FeatureTesterConfig, set_config
+        cfg = FeatureTesterConfig()
+        set_config(cfg)
+        p = FeatureGuidedPolicy.__new__(FeatureGuidedPolicy)
+        p.cfg = cfg
+        p._tap_counts = {}
+        p._tried_on_state = {}
+        p._banned_actions = set()
+        p._widget_taps = {}            # as _begin_feature leaves it
+        p._run_widget_taps = dict(run_taps)
+        p._seen_run_states = set()
+        p._last_widget_key = None
+        p._is_back = lambda e: getattr(e, "name", "") == "BACK"
+        p._action_key = lambda s, e: "k"
+        p._looks_like_hub = lambda e, s=None: True
+        p._back_would_leave_app = lambda s: False
+        p._looks_like_external_link = lambda e: False
+        return p
+
+    def _event(self):
+        return SimpleNamespace(
+            event_type="touch", name=None, nav_label=None, direction=None, text=None,
+            view={"resource_id": "android:id/touch_outside", "class": "android.view.View",
+                  "text": "dismiss", "content_description": "", "bounds": [[0, 0], [10, 10]]})
+
+    def test_a_fresh_widget_is_offered(self):
+        p = self._policy({})
+        kept = p._filter_banned([self._event()], SimpleNamespace(state_str="S"))
+        self.assertEqual([e.event_type for e in kept], ["touch"])
+
+    def test_an_exhausted_only_screen_yields_back(self):
+        p = self._policy({})
+        key = p._widget_try_key(self._event())
+        p._run_widget_taps = {key: RUN_WIDGET_TAP_CAP}
+        kept = p._filter_banned([self._event()], SimpleNamespace(state_str="S"))
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(getattr(kept[0], "name", None), "BACK")
+
+    def test_the_run_cap_applies_at_the_first_action_of_a_feature(self):
+        # _begin_feature clears _widget_taps; the guard must not depend on it.
+        p = self._policy({})
+        key = p._widget_try_key(self._event())
+        p._run_widget_taps = {key: RUN_WIDGET_TAP_CAP}
+        p._widget_taps = {}
+        kept = p._filter_banned([self._event()], SimpleNamespace(state_str="S"))
+        self.assertEqual(getattr(kept[0], "name", None), "BACK")

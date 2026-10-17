@@ -1794,9 +1794,13 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                 continue
             widget_key = self._widget_try_key(event)
             widget_taps = getattr(self, "_widget_taps", None) or {}
-            if widget_key and widget_taps and not self._is_back(event):
+            if widget_key and not self._is_back(event):
                 cfg = getattr(self, "cfg", None) or get_config()
-                if widget_taps.get(widget_key, 0) >= cfg.max_widget_taps:
+                # The per-feature cap needs a non-empty tally; the run-level
+                # one does not, and must be checked even at the first action of
+                # a feature, which is exactly when _begin_feature has cleared
+                # the per-feature dict.
+                if widget_taps and widget_taps.get(widget_key, 0) >= cfg.max_widget_taps:
                     continue
                 if self._widget_is_exhausted(widget_key):
                     continue
@@ -1817,8 +1821,19 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
             key = self._action_key(state, event)
             if key in self._banned_actions:
                 continue
+            # Exhausted widgets stay out of the last resort too. Re-admitting
+            # them here is what kept VLC tapping touch_outside: every candidate
+            # on its permission dialog was spent, kept came back empty, and
+            # this list handed the same dead ends straight back.
+            if self._widget_is_exhausted(self._widget_try_key(event)):
+                continue
             labeled.append(event)
-        return labeled
+        if labeled:
+            return labeled
+        # Nothing on this screen leads anywhere. Leaving is strictly better
+        # than tapping a known dead end again, even if BACK exits the app --
+        # _maybe_start_app brings it straight back.
+        return [KeyEvent(name="BACK")]
 
     def _prepare_events(self, events, state):
         possible = self._annotate_bottom_nav(list(events or []), state)
