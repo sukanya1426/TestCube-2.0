@@ -851,7 +851,13 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
                     decision.matched_step = ""
                     decision.text = ""
             if self._is_back(event) and self._back_would_leave_app(state):
-                event = self._fallback_in_app_event(possible, state)
+                # "or event" matches the two neighbours above and below: the
+                # fallback returns None when it finds nothing in-app, and
+                # without this the event becomes None and _apply_decision dies
+                # on skip_oracle below. It stayed hidden while every decision
+                # carried a VLM tap point, because grounded_tap was then true
+                # and this whole block was skipped.
+                event = self._fallback_in_app_event(possible, state) or event
             if self._looks_like_external_link(event):
                 event = self._fallback_in_app_event(possible, state) or event
             if self._is_unhelpful_scroll(event, remaining):
@@ -868,6 +874,13 @@ class FeatureGuidedPolicy(UtgBasedInputPolicy):
         blocked = self._swap_non_idempotent(event, possible, state)
         if blocked is not None:
             event = blocked
+        if event is None:
+            # Belt and braces: every branch above is meant to leave an event,
+            # but one returning None used to abort the run five exceptions
+            # later via MAX_CONSECUTIVE_ERRORS. Pressing BACK is a safe,
+            # recoverable choice and keeps the budget.
+            self.logger.info("No event survived the decision path; falling back to BACK.")
+            event = KeyEvent(name="BACK")
         event.skip_oracle = True
         self._switch_depth = 0
         return self._emit(
