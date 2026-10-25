@@ -907,13 +907,19 @@ class FeatureAdvisor(object):
         )
         parts = prompt
         use_screenshot = screenshot_path and os.path.isfile(screenshot_path)
-        prefer_vision = False
-        try:
-            from droidbot.local_vlm import LocalVLM
-            prefer_vision = LocalVLM.is_available()
-        except Exception:
-            prefer_vision = False
-        attach_image = use_screenshot and (prefer_vision or _sparse_ui(ui_text) or force_screenshot)
+        # A screenshot is attached only when the view hierarchy is too thin to
+        # decide from, or when the caller asked for vision.
+        #
+        # This condition used to start with LocalVLM.is_available(), which is
+        # true whenever Ollama is reachable, so every call carried a screenshot
+        # and the two tests beside it never ran.
+        # Encoding the image is the largest cost in a run: on one
+        # production-sized prompt, 1.8s without it against 21.0s with it, over
+        # 1098 recorded LLM calls. Resizing is not the lever -- 768px measured
+        # faster than 512px. With no image, used_vlm below is False and the
+        # model's tap point is ignored, so the choice comes from action_id
+        # against the control catalog the prompt already lists.
+        attach_image = bool(use_screenshot) and (_sparse_ui(ui_text) or force_screenshot)
         if attach_image:
             try:
                 from PIL import Image
