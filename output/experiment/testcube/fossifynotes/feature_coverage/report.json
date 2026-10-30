@@ -1,0 +1,993 @@
+{
+  "application": "Fossify Notes",
+  "total_features": 29,
+  "covered_features": 2,
+  "uncovered_features": 6,
+  "partial_features": 21,
+  "coverage": 0.06896551724137931,
+  "coverage_percentage": 6.9,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifynotes",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifynotes/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifynotes/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Create a text note",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT002",
+      "name": "Create a checklist note",
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"New note\": touch Button \"Create a new note\" rid=new_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "tap \"New note\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT003",
+      "name": "Tick and untick checklist items",
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the checklist note: touch RadioButton \"Checklist\" rid=type_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "Open the checklist note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT004",
+      "name": "Reorder or remove checklist items",
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the checklist note: touch RadioButton \"Checklist\" rid=type_checklist activity=MainActivity state_changed (tokens=checklist)"
+      ],
+      "matched_path": [
+        "Open the checklist note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT005",
+      "name": "Switch between notes",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "\"Open note\"): touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "\"Open note\")"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT006",
+      "name": "Rename a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.6667,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity (tokens=note)",
+        "tap \"Rename note\": touch TextView \"Rename note\" rid=title activity=MainActivity state_changed (tokens=rename)"
+      ],
+      "matched_path": [
+        "Open the note",
+        "tap \"Rename note\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
+    },
+    {
+      "id": "GT007",
+      "name": "Delete a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.6667,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)",
+        "tap \"Delete note\": touch TextView \"Delete note\" rid=title activity=MainActivity state_changed (tokens=delete)"
+      ],
+      "matched_path": [
+        "Open the note",
+        "tap \"Delete note\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
+    },
+    {
+      "id": "GT008",
+      "name": "Undo and redo edits",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Search inside a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "Open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT010",
+      "name": "Lock a note with a PIN, pattern or fingerprint",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.1667,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "Open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
+    },
+    {
+      "id": "GT011",
+      "name": "Unlock a protected note",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Export a note to a file",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)",
+        "tap \"Export as file\": touch TextView \"Export as file\" rid=title activity=PickActivity state_changed (tokens=as,export,file)"
+      ],
+      "matched_path": [
+        "Open the note",
+        "tap \"Export as file\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT013",
+      "name": "Export all notes at once",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT014",
+      "name": "Import a note from a file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "Keep a note synchronised with a file on disk",
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Import or create a note: touch Button \"Create a new note\" rid=new_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "Import or create a note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT016",
+      "name": "Share a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "Open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT017",
+      "name": "Print a note",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_009",
+        "test_012",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the note: touch Button \"Open note\" rid=open_note activity=MainActivity state_changed (tokens=note)"
+      ],
+      "matched_path": [
+        "Open the note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT018",
+      "name": "Add the note home screen widget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Change the editor font size and typeface",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT020",
+      "name": "Enable or disable line wrapping",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT021",
+      "name": "Set where the cursor is placed when a note is opened",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT022",
+      "name": "Configure checklist behaviour",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT023",
+      "name": "Show a word and character count",
+      "status": "covered",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)",
+        "enable the \"Show word count\" option; the counter is displayed while editing a text note: touch Switch \"Enable line wrap\" rid=settings_enable_line_wrap activity=SettingsActivity state_changed (outcome tokens=count,enable,word)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "enable the \"Show word count\" option; the counter is displayed while editing a text note"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT024",
+      "name": "Set the note text alignment",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT025",
+      "name": "Enable automatic saving",
+      "status": "covered",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.875,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)",
+        "toggle the automatic save option; with it off, a save icon appears in the toolbar and changes must be saved manually: touch Switch \"Enable line wrap\" rid=settings_enable_line_wrap activity=SettingsActivity state_changed (outcome tokens=automatic,save,toolbar)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "toggle the automatic save option; with it off, a save icon appears in the toolbar and changes must be saved manually"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 1.0
+    },
+    {
+      "id": "GT026",
+      "name": "Protect the whole app with a lock",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT027",
+      "name": "Customise the app colours and theme",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT028",
+      "name": "Change the app language",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT029",
+      "name": "View the about screen, FAQ and licences",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007",
+        "test_010",
+        "test_014",
+        "test_018",
+        "test_020",
+        "test_022"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Create a text note",
+      "journal_id": "G001",
+      "journal_name": "Create a text note",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Create a checklist note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Tick and untick checklist items",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Reorder or remove checklist items",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.133,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Switch between notes",
+      "journal_id": "G003",
+      "journal_name": "Switch between notes",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Rename a note",
+      "journal_id": "G004",
+      "journal_name": "Delete a note",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Delete a note",
+      "journal_id": "G009",
+      "journal_name": "Print a note",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Undo and redo edits",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.059,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Search inside a note",
+      "journal_id": "G005",
+      "journal_name": "Search inside a note",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Lock a note with a PIN, pattern or fingerprint",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.158,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Unlock a protected note",
+      "journal_id": "G006",
+      "journal_name": "Unlock a protected note",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Export a note to a file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Export all notes at once",
+      "journal_id": "G007",
+      "journal_name": "Export all notes at",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Import a note from a file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Keep a note synchronised with a file on disk",
+      "journal_id": "G008",
+      "journal_name": "Keep a note synchronised",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Share a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Print a note",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 1.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Add the note home screen widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Change the editor font size and typeface",
+      "journal_id": "G010",
+      "journal_name": "Change the editor font",
+      "name_similarity": 0.571,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Enable or disable line wrapping",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Set where the cursor is placed when a note is opened",
+      "journal_id": "G011",
+      "journal_name": "Set where the cursor",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Configure checklist behaviour",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.071,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Show a word and character count",
+      "journal_id": "G012",
+      "journal_name": "Show a word",
+      "name_similarity": 0.417,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Set the note text alignment",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Enable automatic saving",
+      "journal_id": "G013",
+      "journal_name": "Enable automatic saving",
+      "name_similarity": 1.0,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Protect the whole app with a lock",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Customise the app colours and theme",
+      "journal_id": "G014",
+      "journal_name": "Customise the app colours",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Change the app language",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "View the about screen, FAQ and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.118,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 13,
+    "false_negatives": 16,
+    "false_positives": 1,
+    "precision": 0.9285714285714286,
+    "recall": 0.4482758620689655,
+    "f1": 0.6046511627906977,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 14,
+    "ground_truth_count": 29,
+    "feature_completeness_ratio": 0.483,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 351,
+  "actions_with_widget": 310,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 23,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.3316091954022989,
+  "weighted_coverage_percentage": 33.16,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

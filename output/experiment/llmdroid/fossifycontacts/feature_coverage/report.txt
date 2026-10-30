@@ -7,15 +7,15 @@ Application: Fossify Contacts
 Total Actions    : 762
 
 Total Features   : 38
-Covered Features : 1
-Partial          : 21
-Uncovered        : 16
+Covered Features : 0
+Partial          : 18
+Uncovered        : 20
 
-Feature Coverage : 2.63%
+Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 25.26%  (mean completion ratio; partial steps count)
-Exercised        : 22  (covered 1 + partial 21)
+Weighted Coverage: 19.91%  (mean completion ratio; partial steps count)
+Exercised        : 18  (covered 0 + partial 18)
 
 ground_truth_source: independent_labeled_set
 
@@ -29,13 +29,9 @@ FEATURE DETAILS
 ----------------------------------------
 
 [GT001] Create a contact
-Status     : PARTIAL
-Test Cases : test_053
-Confidence : 0.20
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - add the phone number: touch CheckBox "Phone numbers" rid=manage_visible_fields_phone_numbers activity=SettingsActivity state_changed (tokens=number,phone)
+Completion : 0% of gold steps
 
 [GT002] Add a photo to a contact
 Status     : PARTIAL
@@ -92,13 +88,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT012] Delete a contact
-Status     : PARTIAL
-Test Cases : test_002
-Confidence : 0.23
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - tap the overflow menu (three dots): touch ImageView "Options" rid=three_dots activity=CaptureActivity (tokens=dots,three)
+Completion : 0% of gold steps
 
 [GT013] Mark a contact as a favourite
 Status     : NOT COVERED
@@ -111,13 +103,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT015] Call a contact
-Status     : PARTIAL
-Test Cases : test_053
-Confidence : 0.50
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 50% of gold steps
-Evidence   :
-  - tap the phone number (or the call icon beside it); the dialler is opened with the number: touch CheckBox "Phone numbers" rid=manage_visible_fields_phone_numbers activity=SettingsActivity state_changed (tokens=number,phone)
+Completion : 0% of gold steps
 
 [GT016] Send an SMS to a contact
 Status     : NOT COVERED
@@ -130,14 +118,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT018] Create a contact group
-Status     : COVERED
-Test Cases : test_009
-Confidence : 1.00
+Status     : PARTIAL
+Test Cases : test_009, test_010
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 100% of gold steps
+Completion : 50% of gold steps
 Evidence   :
   - Open the Groups tab: touch TextView "Groups" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)
-  - enter the group name: set_text EditText "Title" rid=group_name text=Hello World activity=MainActivity state_changed (tokens=group,name)
 
 [GT019] Add contacts to a group
 Status     : PARTIAL
@@ -167,13 +154,9 @@ Evidence   :
   - Open the Groups tab: touch TextView "Groups" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)
 
 [GT022] Search contacts
-Status     : PARTIAL
-Test Cases : test_002, test_006, test_009, test_010, test_011, test_014, test_016, test_053
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Tap the search icon in the toolbar: touch ImageView "Search" rid=top_toolbar_search_icon activity=MainActivity (tokens=search,toolbar)
+Completion : 0% of gold steps
 
 [GT023] Sort the contact list
 Status     : PARTIAL
@@ -187,7 +170,7 @@ Evidence   :
 
 [GT024] Filter which contact sources are shown
 Status     : PARTIAL
-Test Cases : test_002, test_014, test_019, test_031, test_051, test_053, test_055
+Test Cases : test_019, test_031
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -269,12 +252,11 @@ Evidence   :
 [GT034] Customise the app colours and theme
 Status     : PARTIAL
 Test Cases : test_009, test_014, test_051, test_053, test_055
-Confidence : 0.75
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 75% of gold steps
+Completion : 50% of gold steps
 Evidence   :
   - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
-  - tap "Customise colours": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)
   - tap the tick to save: touch Button "Save" rid=save activity=SettingsActivity state_changed (tokens=save)
 
 [GT035] Protect the app with a PIN, pattern or fingerprint
@@ -318,10 +300,10 @@ Evidence   :
 SUMMARY
 ----------------------------------------
 
-1 / 38 features covered
-21 / 38 features partial
-Feature Coverage = COVERED / Total = 2.63%
-Weighted Feature Coverage = mean(completion_ratio) = 25.26%
+0 / 38 features covered
+18 / 38 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 19.91%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -337,7 +319,7 @@ Extracted vs ground truth: 0 / 38 (completeness ratio 0.0)
 
 Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
 
-GT GT001 'Create a contact' | journal=missing (no name match) status=missing | offline=partial
+GT GT001 'Create a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT002 'Add a photo to a contact' | journal=missing (no name match) status=missing | offline=partial
 GT GT003 'Add multiple phone numbers with types' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT004 'Add email addresses' | journal=missing (no name match) status=missing | offline=not_covered
@@ -348,17 +330,17 @@ GT GT008 'Add websites and instant messaging handles' | journal=missing (no name
 GT GT009 'Add notes to a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT010 'Set a custom ringtone for a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT011 'Edit a contact' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT012 'Delete a contact' | journal=missing (no name match) status=missing | offline=partial
+GT GT012 'Delete a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT013 'Mark a contact as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT014 'Remove a contact from favourites' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT015 'Call a contact' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Call a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT016 'Send an SMS to a contact' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT017 'Send an email to a contact' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT018 'Create a contact group' | journal=missing (no name match) status=missing | offline=covered
+GT GT018 'Create a contact group' | journal=missing (no name match) status=missing | offline=partial
 GT GT019 'Add contacts to a group' | journal=missing (no name match) status=missing | offline=partial
 GT GT020 'Rename or delete a group' | journal=missing (no name match) status=missing | offline=partial
 GT GT021 'Send a message or email to a whole group' | journal=missing (no name match) status=missing | offline=partial
-GT GT022 'Search contacts' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Search contacts' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT023 'Sort the contact list' | journal=missing (no name match) status=missing | offline=partial
 GT GT024 'Filter which contact sources are shown' | journal=missing (no name match) status=missing | offline=partial
 GT GT025 'Choose which fields are visible in the contact detail' | journal=missing (no name match) status=missing | offline=partial

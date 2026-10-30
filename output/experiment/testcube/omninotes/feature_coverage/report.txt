@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: Omni Notes
 
-Total Actions    : 154
+Total Actions    : 303
 
 Total Features   : 48
 Covered Features : 0
-Partial          : 26
-Uncovered        : 22
+Partial          : 30
+Uncovered        : 18
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 16.64%  (mean completion ratio; partial steps count)
-Exercised        : 26  (covered 0 + partial 26)
+Weighted Coverage: 19.07%  (mean completion ratio; partial steps count)
+Exercised        : 30  (covered 0 + partial 30)
 
 ground_truth_source: independent_labeled_set
 
@@ -30,154 +30,138 @@ FEATURE DETAILS
 
 [GT001] Create a text note
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_016, test_018, test_024, test_026, test_028
+Test Cases : test_005
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - tap the text/note option: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - tap the text/note option: touch TextView "Text note" activity=MainActivity (tokens=note)
 
 [GT002] Create a checklist note
 Status     : PARTIAL
-Test Cases : test_024
+Test Cases : test_005, test_013
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap the checklist option (or open a note and use the overflow menu: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)
+  - tap the checklist option (or open a note and use the overflow menu: touch Button "Checklist" rid=menu_uncomplete_checklists activity=MainActivity (tokens=checklist)
 
 [GT003] Tick and untick checklist items
 Status     : PARTIAL
-Test Cases : test_024
+Test Cases : test_005, test_013
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open a checklist note: touch ImageButton rid=fab_checklist activity=MainActivity state_changed (tokens=checklist)
+  - Open a checklist note: touch Button "Checklist" rid=menu_uncomplete_checklists activity=MainActivity (tokens=checklist)
 
 [GT004] Convert a note between text and checklist
-Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+Completion : 0% of gold steps
 
 [GT005] Attach a photo from the camera
 Status     : PARTIAL
-Test Cases : test_001, test_005, test_014, test_016, test_018, test_024
-Confidence : 0.33
+Test Cases : test_002, test_005, test_007, test_014
+Confidence : 0.17
 Matcher    : deterministic
-Completion : 33% of gold steps
+Completion : 17% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" rid=title activity=MainActivity (tokens=note)
-  - tap Camera: touch ImageButton rid=fab_camera state_changed (tokens=camera)
+  - tap Camera: touch ImageButton rid=fab_camera activity=MainActivity (tokens=camera)
 
 [GT006] Attach an image or video from the gallery
 Status     : PARTIAL
-Test Cases : test_001, test_006, test_016, test_018, test_024
-Confidence : 0.50
+Test Cases : test_002, test_005, test_007, test_009, test_011
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 25% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
-  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)
+  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity (tokens=attachment)
 
 [GT007] Record and attach an audio note
 Status     : PARTIAL
-Test Cases : test_001, test_006, test_016, test_018, test_024
+Test Cases : test_002, test_005, test_007, test_009, test_011
 Confidence : 0.57
 Matcher    : deterministic
 Completion : 57% of gold steps
 Evidence   :
-  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)
+  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity (tokens=attachment)
   - tap the recording option: touch TextView "Record" rid=recording activity=MainActivity state_changed (tokens=recording)
-  - tap record: touch TextView "Stop" rid=recording activity=MainActivity state_changed (tokens=record)
-  - tap stop: touch TextView "Stop" rid=recording activity=MainActivity state_changed (tokens=stop)
+  - tap record: touch TextView "Record" rid=recording activity=MainActivity state_changed (tokens=record)
+  - tap stop: touch TextView "Stop" rid=recording activity=MainActivity (tokens=stop)
 
 [GT008] Create and attach a sketch
 Status     : PARTIAL
-Test Cases : test_001, test_006, test_016, test_018, test_024
+Test Cases : test_002, test_005, test_007, test_009, test_011
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
-  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)
+  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity (tokens=attachment)
+  - tap "Sketch": touch TextView "Sketch" rid=sketch state_changed (tokens=sketch)
 
 [GT009] Attach an arbitrary file
 Status     : PARTIAL
-Test Cases : test_001, test_006, test_016, test_018, test_024
+Test Cases : test_002, test_005, test_007, test_009, test_011
 Confidence : 0.50
 Matcher    : deterministic
 Completion : 50% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
-  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity state_changed (tokens=attachment)
+  - tap the attachment icon: touch Button "Attachment" rid=menu_attachment activity=MainActivity (tokens=attachment)
+  - tap Files: touch TextView "Files" rid=files state_changed (tokens=files)
 
 [GT010] Add a location to a note
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
+Test Cases : test_002, test_009
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - tap "Add location": touch TextView "Location" rid=location activity=ChromeTabbedActivity state_changed (tokens=location)
 
 [GT011] Set a reminder on a note
-Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
-Confidence : 0.20
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+Completion : 0% of gold steps
 
 [GT012] Set a recurring reminder
 Status     : PARTIAL
-Test Cases : test_026
+Test Cases : test_014
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open the reminder dialog on a note: touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminder)
+  - Open the reminder dialog on a note: touch LinearLayout rid=reminder_layout activity=MainActivity (tokens=reminder)
 
 [GT013] View all notes that have reminders
-Status     : PARTIAL
-Test Cases : test_026
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - tap "Reminders": touch LinearLayout rid=reminder_layout activity=MainActivity state_changed (tokens=reminders)
+Completion : 0% of gold steps
 
 [GT014] Create a category
-Status     : PARTIAL
-Test Cases : test_022
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - tap "Categories" (or the manage-categories entry): long_touch Button "Category" rid=menu_category activity=MainActivity (tokens=categories)
+Completion : 0% of gold steps
 
 [GT015] Edit or delete a category
 Status     : PARTIAL
-Test Cases : test_022
-Confidence : 0.33
+Test Cases : test_005, test_008, test_011, test_013, test_014
+Confidence : 0.67
 Matcher    : deterministic
-Completion : 33% of gold steps
+Completion : 67% of gold steps
 Evidence   :
-  - long-press (or tap) the category: long_touch Button "Category" rid=menu_category activity=MainActivity (tokens=category)
+  - long-press (or tap) the category: touch Button "Category" rid=menu_category activity=MainActivity (tokens=category)
+  - tap Edit to change the name, description or colour, or tap Delete: touch ImageView rid=color_chooser activity=CategoryActivity (tokens=colour)
 
 [GT016] Assign a category to a note
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_022, test_024
-Confidence : 0.20
+Test Cases : test_005, test_008, test_011, test_013, test_014
+Confidence : 0.40
 Matcher    : deterministic
-Completion : 20% of gold steps
+Completion : 40% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - tap "Category": touch Button "Category" rid=menu_category activity=MainActivity (tokens=category)
+  - select the category from the list: touch Button "Category" rid=menu_category activity=MainActivity (tokens=category)
 
 [GT017] Filter notes by category
 Status     : NOT COVERED
@@ -185,36 +169,32 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT018] Tag notes with hashtags
-Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
-Confidence : 0.33
-Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
-
-[GT019] Filter notes by tag
-Status     : PARTIAL
-Test Cases : test_022
-Confidence : 0.33
-Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - tap "Tags": long_touch Button "Add tags" rid=menu_tag activity=MainActivity (tokens=tags)
-
-[GT020] Search notes
 Status     : NOT COVERED
 Matcher    : deterministic
 Completion : 0% of gold steps
 
-[GT021] Archive a note
+[GT019] Filter notes by tag
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
+Test Cases : test_002, test_005, test_008, test_013, test_014
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - On the note list: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - tap "Tags": touch Button "Add tags" rid=menu_tag state_changed (tokens=tags)
+
+[GT020] Search notes
+Status     : PARTIAL
+Test Cases : test_002, test_005, test_011, test_013
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - type the search text: set_text AutoCompleteTextView "Search in notes" rid=search_src_text text=test activity=MainActivity state_changed (tokens=search)
+
+[GT021] Archive a note
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT022] Restore a note from the archive
 Status     : NOT COVERED
@@ -222,13 +202,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT023] Move a note to the trash
-Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - On the note list: touch TextView "Notes" activity=MainActivity (tokens=note)
+Completion : 0% of gold steps
 
 [GT024] Restore or permanently delete notes from the trash
 Status     : NOT COVERED
@@ -242,12 +218,12 @@ Completion : 0% of gold steps
 
 [GT026] Lock a note with a password
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
+Test Cases : test_003
 Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - open the note: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT027] Unlock a locked note
 Status     : NOT COVERED
@@ -260,31 +236,27 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT029] Duplicate a note
-Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+Completion : 0% of gold steps
 
 [GT030] Share a note
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024, test_028
+Test Cases : test_005, test_008, test_013, test_014
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - tap the share icon: long_touch Button "Share" rid=menu_share activity=MainActivity (tokens=share)
 
 [GT031] Add a note from another app via the share sheet
 Status     : PARTIAL
-Test Cases : test_028
+Test Cases : test_005, test_008, test_013, test_014
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - tap Share: touch Button "Share" rid=menu_share state_changed (tokens=share)
+  - tap Share: long_touch Button "Share" rid=menu_share activity=MainActivity (tokens=share)
 
 [GT032] Sort the note list
 Status     : NOT COVERED
@@ -302,91 +274,136 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT035] View note details and statistics
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT036] Add the Omni Notes home screen widget
 Status     : PARTIAL
-Test Cases : test_001, test_016, test_018, test_024
+Test Cases : test_001, test_002, test_005, test_008, test_011, test_013, test_014
+Confidence : 0.38
+Matcher    : deterministic
+Completion : 40% of gold steps
+Evidence   :
+  - find Omni Notes: set_text AutoCompleteTextView "Search in notes" rid=search_src_text text=test activity=MainActivity state_changed (tokens=find,notes)
+  - select the category or filter it should display: touch Button "Category" rid=menu_category activity=MainActivity state_changed (tokens=category)
+
+[GT037] Export a full backup
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
+
+[GT038] Import data from a backup
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
+
+[GT039] Schedule automatic backups
+Status     : PARTIAL
+Test Cases : test_003
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open a note: touch TextView "Notes" activity=MainActivity (tokens=note)
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
-[GT036] Add the Omni Notes home screen widget
+[GT040] Delete an existing backup
 Status     : PARTIAL
-Test Cases : test_001, test_005
-Confidence : 0.18
+Test Cases : test_003
+Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - find Omni Notes: touch AutoCompleteTextView "Search in notes" rid=search_src_text activity=MainActivity (tokens=find,notes)
-
-[GT037] Export a full backup
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
-
-[GT038] Import data from a backup
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
-
-[GT039] Schedule automatic backups
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
-
-[GT040] Delete an existing backup
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT041] Change the interface language
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT042] Change the app colours and theme
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT043] Change the text size in the note list
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT044] Configure the swipe gesture action
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT045] Configure checklist behaviour
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT046] Configure notification behaviour for reminders
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT047] Set the password and recovery question
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 [GT048] View the app version, changelog and licences
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch LinearLayout rid=settings_view state_changed (tokens=settings)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 48 features covered
-26 / 48 features partial
+30 / 48 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 16.64%
+Weighted Feature Coverage = mean(completion_ratio) = 19.07%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -405,48 +422,48 @@ Feature-inference P/R/F1: 0.93 / 0.29 / 0.44 (false not_present=0)
 GT GT001 'Create a text note' | journal=G001 'Create a text note' (sim=1.0, name) status=partial | offline=partial
 GT GT002 'Create a checklist note' | journal=missing (no name match) status=missing | offline=partial
 GT GT003 'Tick and untick checklist items' | journal=missing (no name match) status=missing | offline=partial
-GT GT004 'Convert a note between text and checklist' | journal=G002 'Convert a note between' (sim=0.5, name) status=partial | offline=partial
+GT GT004 'Convert a note between text and checklist' | journal=G002 'Convert a note between' (sim=0.5, name) status=partial | offline=not_covered
 GT GT005 'Attach a photo from the camera' | journal=missing (no name match) status=missing | offline=partial
 GT GT006 'Attach an image or video from the gallery' | journal=missing (no name match) status=missing | offline=partial
 GT GT007 'Record and attach an audio note' | journal=G003 'Record' (sim=0.364, name) status=partial | offline=partial
 GT GT008 'Create and attach a sketch' | journal=missing (no name match) status=missing | offline=partial
 GT GT009 'Attach an arbitrary file' | journal=missing (no name match) status=missing | offline=partial
 GT GT010 'Add a location to a note' | journal=G004 'Add a location' (sim=0.667, name) status=partial | offline=partial
-GT GT011 'Set a reminder on a note' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Set a reminder on a note' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT012 'Set a recurring reminder' | journal=missing (no name match) status=missing | offline=partial
-GT GT013 'View all notes that have reminders' | journal=G005 'View all notes' (sim=0.5, name) status=partial | offline=partial
-GT GT014 'Create a category' | journal=G006 'Assign a category' (sim=0.333, name) status=partial | offline=partial
+GT GT013 'View all notes that have reminders' | journal=G005 'View all notes' (sim=0.5, name) status=partial | offline=not_covered
+GT GT014 'Create a category' | journal=G006 'Assign a category' (sim=0.333, name) status=pending | offline=not_covered
 GT GT015 'Edit or delete a category' | journal=missing (no name match) status=missing | offline=partial
 GT GT016 'Assign a category to a note' | journal=missing (no name match) status=missing | offline=partial
-GT GT017 'Filter notes by category' | journal=G007 'Filter notes' (sim=0.667, name) status=partial | offline=not_covered
-GT GT018 'Tag notes with hashtags' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Filter notes by category' | journal=G007 'Filter notes' (sim=0.667, name) status=pending | offline=not_covered
+GT GT018 'Tag notes with hashtags' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT019 'Filter notes by tag' | journal=missing (no name match) status=missing | offline=partial
-GT GT020 'Search notes' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT021 'Archive a note' | journal=G008 'Restore a note' (sim=0.333, name) status=partial | offline=partial
+GT GT020 'Search notes' | journal=missing (no name match) status=missing | offline=partial
+GT GT021 'Archive a note' | journal=G008 'Restore a note' (sim=0.333, name) status=pending | offline=not_covered
 GT GT022 'Restore a note from the archive' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT023 'Move a note to the trash' | journal=G010 'Merge several notes' (sim=0.357, name) status=partial | offline=partial
+GT GT023 'Move a note to the trash' | journal=G010 'Merge several notes' (sim=0.357, name) status=pending | offline=not_covered
 GT GT024 'Restore or permanently delete notes from the trash' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT025 'Pin a note to the top of the list' | journal=G009 'Pin a note' (sim=0.538, name) status=partial | offline=not_covered
+GT GT025 'Pin a note to the top of the list' | journal=G009 'Pin a note' (sim=0.538, name) status=pending | offline=not_covered
 GT GT026 'Lock a note with a password' | journal=missing (no name match) status=missing | offline=partial
 GT GT027 'Unlock a locked note' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT028 'Merge several notes into one' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT029 'Duplicate a note' | journal=G011 'Add a note' (sim=0.333, name) status=partial | offline=partial
+GT GT029 'Duplicate a note' | journal=G011 'Add a note' (sim=0.333, name) status=covered | offline=not_covered
 GT GT030 'Share a note' | journal=missing (no name match) status=missing | offline=partial
 GT GT031 'Add a note from another app via the share sheet' | journal=missing (no name match) status=missing | offline=partial
-GT GT032 'Sort the note list' | journal=G012 'Switch the note list' (sim=0.6, name) status=covered | offline=not_covered
+GT GT032 'Sort the note list' | journal=G012 'Switch the note list' (sim=0.6, name) status=pending | offline=not_covered
 GT GT033 'Reorder notes manually' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT034 'Switch the note list between list and grid layout' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT035 'View note details and statistics' | journal=missing (no name match) status=missing | offline=partial
+GT GT035 'View note details and statistics' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT036 'Add the Omni Notes home screen widget' | journal=missing (no name match) status=missing | offline=partial
-GT GT037 'Export a full backup' | journal=G013 'Export a full backup' (sim=1.0, name) status=dropped | offline=not_covered
-GT GT038 'Import data from a backup' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT039 'Schedule automatic backups' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT040 'Delete an existing backup' | journal=G014 'Delete an existing backup' (sim=1.0, name) status=partial | offline=not_covered
-GT GT041 'Change the interface language' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT042 'Change the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT043 'Change the text size in the note list' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT044 'Configure the swipe gesture action' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT045 'Configure checklist behaviour' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT046 'Configure notification behaviour for reminders' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT047 'Set the password and recovery question' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT048 'View the app version, changelog and licences' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Export a full backup' | journal=G013 'Export a full backup' (sim=1.0, name) status=pending | offline=partial
+GT GT038 'Import data from a backup' | journal=missing (no name match) status=missing | offline=partial
+GT GT039 'Schedule automatic backups' | journal=missing (no name match) status=missing | offline=partial
+GT GT040 'Delete an existing backup' | journal=G014 'Delete an existing backup' (sim=1.0, name) status=pending | offline=partial
+GT GT041 'Change the interface language' | journal=missing (no name match) status=missing | offline=partial
+GT GT042 'Change the app colours and theme' | journal=missing (no name match) status=missing | offline=partial
+GT GT043 'Change the text size in the note list' | journal=missing (no name match) status=missing | offline=partial
+GT GT044 'Configure the swipe gesture action' | journal=missing (no name match) status=missing | offline=partial
+GT GT045 'Configure checklist behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT046 'Configure notification behaviour for reminders' | journal=missing (no name match) status=missing | offline=partial
+GT GT047 'Set the password and recovery question' | journal=missing (no name match) status=missing | offline=partial
+GT GT048 'View the app version, changelog and licences' | journal=missing (no name match) status=missing | offline=partial

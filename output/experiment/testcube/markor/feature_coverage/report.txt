@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: Markor
 
-Total Actions    : 41
+Total Actions    : 212
 
 Total Features   : 46
 Covered Features : 0
-Partial          : 1
-Uncovered        : 45
+Partial          : 18
+Uncovered        : 28
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 0.54%  (mean completion ratio; partial steps count)
-Exercised        : 1  (covered 0 + partial 1)
+Weighted Coverage: 11.34%  (mean completion ratio; partial steps count)
+Exercised        : 18  (covered 0 + partial 18)
 
 ground_truth_source: independent_labeled_set
 
@@ -69,9 +69,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT009] Insert a link
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - select the text to link (optional): touch ImageView "Insert link" activity=DocumentActivity (tokens=link)
 
 [GT010] Insert an image from the gallery or camera
 Status     : NOT COVERED
@@ -104,14 +108,22 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT016] Search across all files in the notebook
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_005
+Confidence : 0.17
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 17% of gold steps
+Evidence   :
+  - type the query: set_text EditText "Search" text=test activity=MainActivity (tokens=query)
 
 [GT017] Open the QuickNote file
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.45
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Tap the QuickNote tab in the bottom navigation bar (or open it from the drawer): touch TextView "QuickNote" rid=title activity=StoragePermissionActivity (tokens=note,quick)
 
 [GT018] Open the To-Do file
 Status     : NOT COVERED
@@ -120,12 +132,13 @@ Completion : 0% of gold steps
 
 [GT019] Manage a todo.txt file
 Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.25
+Test Cases : test_001, test_003, test_005, test_007
+Confidence : 0.47
 Matcher    : deterministic
-Completion : 25% of gold steps
+Completion : 50% of gold steps
 Evidence   :
-  - the todo.txt action bar appears: touch ImageButton "NEXT" rid=next activity=IntroActivity state_changed (outcome tokens=todo,txt)
+  - Open or create a .txt file in todo.txt format: touch TextView "todo.txt" rid=title state_changed (tokens=todo,txt)
+  - the todo.txt action bar appears: touch TextView "/storage/emulated/0/Documents" rid=opoc_filesystem_item__description activity=MainActivity (outcome tokens=todo,txt)
 
 [GT020] Edit a Zim Wiki page
 Status     : NOT COVERED
@@ -148,14 +161,22 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT024] Export the document as a PDF or print it
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - tap "Share" or the print/PDF option: touch TextView "Share" rid=title activity=DocumentActivity (tokens=share)
 
 [GT025] Share the document as plain text or rendered HTML
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - tap Share: touch TextView "Share" rid=title activity=DocumentActivity (tokens=share)
 
 [GT026] Rename a file or folder
 Status     : NOT COVERED
@@ -163,9 +184,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT027] Move or copy files and folders
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_005, test_007
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - long-press one or more items: touch ImageView "More options" activity=DocumentActivity (tokens=more)
 
 [GT028] Delete files and folders
 Status     : NOT COVERED
@@ -178,14 +203,23 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT030] Mark a file or folder as a favourite
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - open the favourites view from the drawer or the folder shortcuts to reach it quickly: touch CheckBox "List in recent files" rid=ui__fileinfodialog__recents activity=DocumentActivity state_changed (outcome tokens=favourites)
 
 [GT031] Sort the file list
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - tap the sort icon (or the overflow menu: long_touch ImageView "Sort by" activity=DocumentActivity (tokens=sort)
+  - Sort): long_touch ImageView "Sort by" activity=DocumentActivity (tokens=sort)
 
 [GT032] Show or hide hidden files
 Status     : NOT COVERED
@@ -203,14 +237,22 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT035] View file information
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - tap the info action: touch TextView "Info" rid=title activity=DocumentActivity (tokens=info)
 
 [GT036] Encrypt and open password-protected notes
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT037] Open a file with another application
 Status     : NOT COVERED
@@ -228,48 +270,76 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT040] Change the notebook (root) directory
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT041] Change the theme and colours
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT042] Change the editor font family and size
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT043] Configure editor behaviour
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT044] Configure the format action bar buttons
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT045] Change the app language
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 [GT046] Review the changelog, help and licences
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings or the overflow menu: touch TextView "File Settings" rid=title activity=DocumentActivity (tokens=settings)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 46 features covered
-1 / 46 features partial
+18 / 46 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 0.54%
+Weighted Feature Coverage = mean(completion_ratio) = 11.34%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -289,45 +359,45 @@ GT GT001 'Browse the notebook folder' | journal=G001 'Browse the notebook folder
 GT GT002 'Create a new plain text or Markdown document' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT003 'Create a document from a template' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT004 'Create a folder' | journal=G002 'Create a folder' (sim=1.0, name) status=partial | offline=not_covered
-GT GT005 'Edit a document in the text editor' | journal=G009 'Share the document' (sim=0.333, name) status=pending | offline=not_covered
+GT GT005 'Edit a document in the text editor' | journal=G009 'Share the document' (sim=0.333, name) status=partial | offline=not_covered
 GT GT006 'Switch between edit mode and rendered preview' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT007 'Apply Markdown formatting with the action toolbar' | journal=G003 'Apply Markdown formatting' (sim=0.429, name) status=dropped | offline=not_covered
+GT GT007 'Apply Markdown formatting with the action toolbar' | journal=G003 'Apply Markdown formatting' (sim=0.429, name) status=partial | offline=not_covered
 GT GT008 'Insert bullet, numbered and checkbox lists' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT009 'Insert a link' | journal=G004 'Insert an image' (sim=0.333, name) status=pending | offline=not_covered
+GT GT009 'Insert a link' | journal=G004 'Insert an image' (sim=0.333, name) status=partial | offline=partial
 GT GT010 'Insert an image from the gallery or camera' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT011 'Record and insert an audio note' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT012 'Insert the current date or time' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT013 'Insert a table' | journal=G005 'Insert a table' (sim=1.0, name) status=pending | offline=not_covered
+GT GT013 'Insert a table' | journal=G005 'Insert a table' (sim=1.0, name) status=partial | offline=not_covered
 GT GT014 'Undo and redo edits' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT015 'Search inside the open document' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT016 'Search across all files in the notebook' | journal=G006 'Search across all files' (sim=0.667, name) status=pending | offline=not_covered
-GT GT017 'Open the QuickNote file' | journal=G013 'Open a file' (sim=0.5, name) status=pending | offline=not_covered
-GT GT018 'Open the To-Do file' | journal=G011 'Sort the file list' (sim=0.4, name) status=pending | offline=not_covered
-GT GT019 'Manage a todo.txt file' | journal=G007 'Manage a todo.txt file' (sim=1.0, name) status=pending | offline=partial
+GT GT016 'Search across all files in the notebook' | journal=G006 'Search across all files' (sim=0.667, name) status=covered | offline=partial
+GT GT017 'Open the QuickNote file' | journal=G013 'Open a file' (sim=0.5, name) status=pending | offline=partial
+GT GT018 'Open the To-Do file' | journal=G011 'Sort the file list' (sim=0.4, name) status=partial | offline=not_covered
+GT GT019 'Manage a todo.txt file' | journal=G007 'Manage a todo.txt file' (sim=1.0, name) status=partial | offline=partial
 GT GT020 'Edit a Zim Wiki page' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'Edit AsciiDoc, Org-Mode, CSV and plain text files' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT022 'Preview a CSV file as a table' | journal=G008 'Preview a CSV file' (sim=0.75, name) status=pending | offline=not_covered
+GT GT022 'Preview a CSV file as a table' | journal=G008 'Preview a CSV file' (sim=0.75, name) status=partial | offline=not_covered
 GT GT023 'Create a Markdown presentation' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT024 'Export the document as a PDF or print it' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT025 'Share the document as plain text or rendered HTML' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Export the document as a PDF or print it' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Share the document as plain text or rendered HTML' | journal=missing (no name match) status=missing | offline=partial
 GT GT026 'Rename a file or folder' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT027 'Move or copy files and folders' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT028 'Delete files and folders' | journal=G010 'Delete files' (sim=0.5, name) status=pending | offline=not_covered
+GT GT027 'Move or copy files and folders' | journal=missing (no name match) status=missing | offline=partial
+GT GT028 'Delete files and folders' | journal=G010 'Delete files' (sim=0.5, name) status=partial | offline=not_covered
 GT GT029 'Select multiple files at once' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT030 'Mark a file or folder as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT031 'Sort the file list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Mark a file or folder as a favourite' | journal=missing (no name match) status=missing | offline=partial
+GT GT031 'Sort the file list' | journal=missing (no name match) status=missing | offline=partial
 GT GT032 'Show or hide hidden files' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT033 'Jump to a specific folder path' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT034 'View recent and popular documents' | journal=G012 'View recent' (sim=0.5, name) status=pending | offline=not_covered
-GT GT035 'View file information' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT036 'Encrypt and open password-protected notes' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'View recent and popular documents' | journal=G012 'View recent' (sim=0.5, name) status=partial | offline=not_covered
+GT GT035 'View file information' | journal=missing (no name match) status=missing | offline=partial
+GT GT036 'Encrypt and open password-protected notes' | journal=missing (no name match) status=missing | offline=partial
 GT GT037 'Open a file with another application' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT038 'Add a launcher shortcut to a document' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT039 'Add the Markor home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT040 'Change the notebook (root) directory' | journal=G014 'Change the notebook directory' (sim=0.8, name) status=pending | offline=not_covered
-GT GT041 'Change the theme and colours' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT042 'Change the editor font family and size' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT043 'Configure editor behaviour' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT044 'Configure the format action bar buttons' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT045 'Change the app language' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT046 'Review the changelog, help and licences' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Change the notebook (root) directory' | journal=G014 'Change the notebook directory' (sim=0.8, name) status=pending | offline=partial
+GT GT041 'Change the theme and colours' | journal=missing (no name match) status=missing | offline=partial
+GT GT042 'Change the editor font family and size' | journal=missing (no name match) status=missing | offline=partial
+GT GT043 'Configure editor behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT044 'Configure the format action bar buttons' | journal=missing (no name match) status=missing | offline=partial
+GT GT045 'Change the app language' | journal=missing (no name match) status=missing | offline=partial
+GT GT046 'Review the changelog, help and licences' | journal=missing (no name match) status=missing | offline=partial

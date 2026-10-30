@@ -48,12 +48,14 @@
       "name": "Set the default list",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
         "Open Settings"
@@ -66,7 +68,7 @@
       "name": "Create a task",
       "status": "partial",
       "test_cases": [
-        "test_008"
+        "test_009"
       ],
       "confidence": 0.2,
       "evidence": [
@@ -81,26 +83,13 @@
     {
       "id": "GT006",
       "name": "Edit a task",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "tap the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
-      ],
-      "matched_path": [
-        "tap the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT007",
@@ -129,12 +118,11 @@
       "name": "Delete all completed tasks in a list",
       "status": "partial",
       "test_cases": [
-        "test_008",
-        "test_024"
+        "test_078"
       ],
-      "confidence": 0.45,
+      "confidence": 0.5,
       "evidence": [
-        "tap \"Delete completed tasks\": touch CheckBox rid=taskCompleted activity=ActivityMain_ (tokens=completed,tasks)"
+        "tap \"Delete completed tasks\": touch TextView \"Delete all completed tasks?\" rid=message activity=ActivityMain_ (tokens=completed,delete,tasks)"
       ],
       "matched_path": [
         "tap \"Delete completed tasks\""
@@ -145,151 +133,159 @@
     {
       "id": "GT010",
       "name": "Create sub-tasks by indenting",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_015",
+        "test_046",
+        "test_052",
+        "test_056",
+        "test_064"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "drag it to the right (or use the indent control) to nest it under the task above: touch View rid=drag_handle activity=ActivityMain_ (tokens=drag)"
+      ],
+      "matched_path": [
+        "drag it to the right (or use the indent control) to nest it under the task above"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT011",
       "name": "Reorder tasks manually",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_046"
+      ],
+      "confidence": 0.225,
+      "evidence": [
+        "Set the list sort order to manual: touch TextView \"Default sorting order\" rid=title activity=PrefsActivity (tokens=order,sort)"
+      ],
+      "matched_path": [
+        "Set the list sort order to manual"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT012",
       "name": "Set a due date on a task",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
+        "test_009",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_038",
+        "test_044",
+        "test_052",
+        "test_056",
+        "test_066",
+        "test_068"
       ],
-      "confidence": 0.6667,
+      "confidence": 0.3333,
       "evidence": [
-        "Open the task: touch TextView \"Tasks\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)",
         "tap the due-date field: touch ImageButton \"Remove due date\" rid=dueCancelButton activity=ActivityMain_ (tokens=date,due)"
       ],
       "matched_path": [
-        "Open the task",
         "tap the due-date field"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT013",
       "name": "Set a time-based reminder",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT014",
       "name": "Set a repeating reminder",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018",
-        "test_022"
+        "test_009",
+        "test_013",
+        "test_015",
+        "test_036",
+        "test_038",
+        "test_044",
+        "test_058",
+        "test_066",
+        "test_072"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Open the task: touch TextView \"Tasks\" rid=text1 activity=ActivityMain_ (tokens=task)",
-        "add a reminder: touch TextView \"Add a reminder\" rid=notificationAdd activity=ActivityMain_ state_changed (tokens=reminder)"
+        "add a reminder: touch TextView \"Add a reminder\" rid=notificationAdd activity=ActivityMain_ (tokens=reminder)"
       ],
       "matched_path": [
-        "Open the task",
         "add a reminder"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.25
     },
     {
       "id": "GT015",
       "name": "Set a location-based reminder",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018",
-        "test_020",
-        "test_022",
-        "test_024"
+        "test_009",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_036",
+        "test_038",
+        "test_044",
+        "test_048",
+        "test_058",
+        "test_066",
+        "test_072",
+        "test_076",
+        "test_078",
+        "test_080",
+        "test_082"
       ],
-      "confidence": 0.3333,
+      "confidence": 0.1667,
       "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)",
-        "search for or pick the place on the map: touch Button \"Search\" rid=menu_search activity=ActivityMain_ state_changed (tokens=search)"
+        "tap \"Add reminder\": touch TextView \"Add a reminder\" rid=notificationAdd activity=ActivityMain_ (tokens=reminder)"
       ],
       "matched_path": [
-        "Open the task",
-        "search for or pick the place on the map"
+        "tap \"Add reminder\""
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT016",
       "name": "Remove a reminder",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
+        "test_013",
+        "test_015",
+        "test_036",
+        "test_038",
+        "test_044",
+        "test_052",
+        "test_058",
+        "test_066",
+        "test_072"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
+        "the reminder is removed: touch ImageButton \"Remove reminder\" rid=notificationRemove activity=ActivityMain_ state_changed (tokens=reminder,removed)"
       ],
       "matched_path": [
-        "Open the task"
+        "the reminder is removed"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
@@ -297,54 +293,6 @@
     {
       "id": "GT017",
       "name": "Move a task to a different list",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
-      "matcher": "deterministic",
-      "completion_ratio": 0.25
-    },
-    {
-      "id": "GT018",
-      "name": "Delete a task",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
-      "matcher": "deterministic",
-      "completion_ratio": 0.5
-    },
-    {
-      "id": "GT019",
-      "name": "Sort a list",
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
@@ -352,6 +300,35 @@
       "matched_path": null,
       "matcher": "deterministic",
       "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Delete a task",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Sort a list",
+      "status": "partial",
+      "test_cases": [
+        "test_019",
+        "test_044"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Sort\": touch TextView \"Sorting\" rid=title activity=ActivityMain_ (tokens=sort)"
+      ],
+      "matched_path": [
+        "tap \"Sort\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT020",
@@ -370,18 +347,52 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_002",
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018",
-        "test_020",
-        "test_022",
-        "test_024"
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_009",
+        "test_011",
+        "test_013",
+        "test_015",
+        "test_017",
+        "test_019",
+        "test_021",
+        "test_025",
+        "test_028",
+        "test_030",
+        "test_031",
+        "test_032",
+        "test_033",
+        "test_034",
+        "test_036",
+        "test_038",
+        "test_040",
+        "test_042",
+        "test_044",
+        "test_046",
+        "test_048",
+        "test_051",
+        "test_052",
+        "test_053",
+        "test_054",
+        "test_055",
+        "test_056",
+        "test_058",
+        "test_060",
+        "test_061",
+        "test_062",
+        "test_064",
+        "test_065",
+        "test_066",
+        "test_068",
+        "test_069",
+        "test_071",
+        "test_072",
+        "test_074",
+        "test_076",
+        "test_078",
+        "test_080",
+        "test_082"
       ],
       "confidence": 0.5,
       "evidence": [
@@ -396,6 +407,23 @@
     {
       "id": "GT022",
       "name": "Search tasks",
+      "status": "partial",
+      "test_cases": [
+        "test_048"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "type the search text: set_text AutoCompleteTextView \"Search\" rid=search_src_text text=test activity=ActivityMain_ state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "type the search text"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT023",
+      "name": "Share a task",
       "status": "not_covered",
       "test_cases": [],
       "confidence": 0.0,
@@ -405,39 +433,15 @@
       "completion_ratio": 0.0
     },
     {
-      "id": "GT023",
-      "name": "Share a task",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"Tasks\" activity=ActivityMain_ (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
-      "matcher": "deterministic",
-      "completion_ratio": 0.25
-    },
-    {
       "id": "GT024",
       "name": "Create a task from text shared by another app",
       "status": "partial",
       "test_cases": [
-        "test_008"
+        "test_042"
       ],
-      "confidence": 0.225,
+      "confidence": 0.25,
       "evidence": [
-        "choose NoNonsense Notes: set_text EditText \"Note\" rid=taskText text=no activity=ActivityMain_ state_changed (tokens=no,notes)"
+        "choose NoNonsense Notes: long_touch TextView \"NoNonsense Notes\" activity=PrefsActivity (tokens=no,nonsense,notes)"
       ],
       "matched_path": [
         "choose NoNonsense Notes"
@@ -448,13 +452,19 @@
     {
       "id": "GT025",
       "name": "Add the task list home screen widget",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_042"
+      ],
+      "confidence": 0.185,
+      "evidence": [
+        "find NoNonsense Notes: long_touch TextView \"NoNonsense Notes\" activity=PrefsActivity (tokens=no,nonsense,notes)"
+      ],
+      "matched_path": [
+        "find NoNonsense Notes"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT026",
@@ -472,12 +482,14 @@
       "name": "Change the app theme",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
         "Open Settings"
@@ -490,32 +502,34 @@
       "name": "Change the list and font sizes",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
-      "confidence": 0.6667,
+      "confidence": 0.3333,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)",
-        "open the appearance section: touch TextView \"Appearance\" rid=title activity=PrefsActivity state_changed (tokens=appearance)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
-        "Open Settings",
-        "open the appearance section"
+        "Open Settings"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT029",
       "name": "Enable synchronisation with a storage folder (SD card sync)",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
         "Open Settings"
@@ -528,34 +542,35 @@
       "name": "Configure notification behaviour",
       "status": "partial",
       "test_cases": [
-        "test_016",
-        "test_020",
-        "test_022",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046",
+        "test_072"
       ],
-      "confidence": 0.6042,
+      "confidence": 0.3333,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)",
-        "set the notification sound, vibration and whether persistent notifications are used for reminders: touch TextView \"Add a reminder\" rid=notificationAdd activity=ActivityMain_ (tokens=notification,notifications,reminders)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
-        "Open Settings",
-        "set the notification sound, vibration and whether persistent notifications are used for reminders"
+        "Open Settings"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT031",
       "name": "Back up the task database",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
         "Open Settings"
@@ -568,12 +583,14 @@
       "name": "Restore the task database from a backup",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)"
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
       ],
       "matched_path": [
         "Open Settings"
@@ -586,14 +603,19 @@
       "name": "Configure the swipe gesture on list items",
       "status": "partial",
       "test_cases": [
-        "test_018",
-        "test_020",
-        "test_024",
-        "test_028"
+        "test_003",
+        "test_009",
+        "test_017",
+        "test_021",
+        "test_025",
+        "test_026",
+        "test_036",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "choose what a horizontal swipe does to a task (for example complete or delete): touch Button \"Delete\" rid=menu_delete activity=ActivityMain_ state_changed (tokens=delete)"
+        "choose what a horizontal swipe does to a task (for example complete or delete): touch Button \"Delete\" rid=menu_delete activity=ActivityMain_ (tokens=delete)"
       ],
       "matched_path": [
         "choose what a horizontal swipe does to a task (for example complete or delete)"
@@ -606,13 +628,15 @@
       "name": "View the about screen and licences",
       "status": "partial",
       "test_cases": [
-        "test_020",
-        "test_028"
+        "test_025",
+        "test_026",
+        "test_042",
+        "test_046"
       ],
       "confidence": 0.6667,
       "evidence": [
-        "Open Settings (or the drawer): touch TextView \"Settings\" rid=title activity=PrefsActivity state_changed (tokens=settings)",
-        "tap \"About\": touch TextView \"About\" rid=title activity=PrefsActivity state_changed (tokens=about)"
+        "Open Settings (or the drawer): touch TextView \"Settings\" activity=PrefsActivity (tokens=settings)",
+        "tap \"About\": long_touch TextView \"About\" activity=PrefsActivity (tokens=about)"
       ],
       "matched_path": [
         "Open Settings (or the drawer)",
@@ -630,7 +654,7 @@
       "journal_name": "Create a task list",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -643,7 +667,7 @@
       "journal_name": "Delete a task list",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -656,7 +680,7 @@
       "journal_name": "Add the task list",
       "name_similarity": 0.4,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -695,8 +719,8 @@
       "journal_name": "Mark a task",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "partial",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -748,7 +772,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -761,7 +785,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -786,8 +810,8 @@
       "journal_name": "Set a time-based reminder",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "partial",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -838,8 +862,8 @@
       "journal_name": "Move a task",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "partial",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -851,8 +875,8 @@
       "journal_name": "Share a task",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "partial",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -864,8 +888,8 @@
       "journal_name": "Sort a list",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -904,7 +928,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -917,7 +941,7 @@
       "name_similarity": 1.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -943,7 +967,7 @@
       "name_similarity": 0.625,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -968,7 +992,7 @@
       "journal_name": "Change the app theme",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -1085,12 +1109,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 139,
-  "actions_with_widget": 108,
+  "total_actions": 388,
+  "actions_with_widget": 298,
   "ground_truth_source": "independent_labeled_set",
   "exercised_features": 22,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.2534313725490196,
-  "weighted_coverage_percentage": 25.34,
+  "weighted_coverage": 0.20539215686274506,
+  "weighted_coverage_percentage": 20.54,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

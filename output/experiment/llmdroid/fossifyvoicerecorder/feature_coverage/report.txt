@@ -8,14 +8,14 @@ Total Actions    : 740
 
 Total Features   : 23
 Covered Features : 0
-Partial          : 15
-Uncovered        : 8
+Partial          : 13
+Uncovered        : 10
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 24.42%  (mean completion ratio; partial steps count)
-Exercised        : 15  (covered 0 + partial 15)
+Weighted Coverage: 18.99%  (mean completion ratio; partial steps count)
+Exercised        : 13  (covered 0 + partial 13)
 
 ground_truth_source: independent_labeled_set
 
@@ -49,31 +49,23 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT005] Browse saved recordings
-Status     : PARTIAL
-Test Cases : test_021, test_023, test_025, test_045
-Confidence : 0.50
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 50% of gold steps
-Evidence   :
-  - Open the "Recordings" tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+Completion : 0% of gold steps
 
 [GT006] Play a recording
 Status     : PARTIAL
-Test Cases : test_002, test_015, test_021, test_023, test_025, test_045
-Confidence : 0.20
+Test Cases : test_002, test_015
+Confidence : 0.18
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+  - use play/pause and the seek bar: touch ImageView "Play / Pause" rid=play_pause_btn activity=MainActivity (tokens=pause,play)
 
 [GT007] Rename a recording
-Status     : PARTIAL
-Test Cases : test_021, test_023, test_025, test_045
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)
+Completion : 0% of gold steps
 
 [GT008] Delete a recording
 Status     : NOT COVERED
@@ -101,7 +93,7 @@ Completion : 0% of gold steps
 
 [GT012] Search recordings
 Status     : PARTIAL
-Test Cases : test_002, test_005, test_016, test_021, test_023, test_025, test_045
+Test Cases : test_002, test_005
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
@@ -110,12 +102,11 @@ Evidence   :
 
 [GT013] Sort the recordings list
 Status     : PARTIAL
-Test Cases : test_021, test_023, test_025, test_045
-Confidence : 0.50
+Test Cases : test_045
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 25% of gold steps
 Evidence   :
-  - Open the Recordings tab: touch Switch "Start recording automatically after launching the app" rid=settings_record_after_launch activity=SettingsActivity state_changed (tokens=recordings)
   - tap "Sort by": touch TextView "Sort by..." rid=option_menu_sort activity=PickActivity state_changed (tokens=by,sort)
 
 [GT014] Choose the recording audio format
@@ -181,12 +172,11 @@ Evidence   :
 [GT021] Customise the app colours and theme
 Status     : PARTIAL
 Test Cases : test_002, test_021, test_023, test_025, test_045
-Confidence : 0.50
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 25% of gold steps
 Evidence   :
   - Open Settings: touch TextView "Settings" rid=title activity=SettingsActivity state_changed (tokens=settings)
-  - tap "Customise colours": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)
 
 [GT022] Change the app language and font size
 Status     : PARTIAL
@@ -211,9 +201,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 23 features covered
-15 / 23 features partial
+13 / 23 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 24.42%
+Weighted Feature Coverage = mean(completion_ratio) = 18.99%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -233,9 +223,9 @@ GT GT001 'Record audio' | journal=missing (no name match) status=missing | offli
 GT GT002 'Pause and resume a recording' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT003 'Watch the live audio level while recording' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT004 'Continue recording in the background' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT005 'Browse saved recordings' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Browse saved recordings' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT006 'Play a recording' | journal=missing (no name match) status=missing | offline=partial
-GT GT007 'Rename a recording' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Rename a recording' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT008 'Delete a recording' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT009 'Restore or empty the recycle bin' | journal=missing (no name match) status=missing | offline=partial
 GT GT010 'Share a recording' | journal=missing (no name match) status=missing | offline=not_covered

@@ -15,20 +15,23 @@
       "name": "Browse popular radio stations",
       "status": "partial",
       "test_cases": [
-        "test_001",
+        "test_005",
+        "test_009",
         "test_011",
-        "test_013",
-        "test_027"
+        "test_017",
+        "test_022"
       ],
-      "confidence": 0.3333,
+      "confidence": 0.6667,
       "evidence": [
-        "open the \"Stations\" screen: touch TextView \"Stations\" activity=ActivityMain (tokens=stations)"
+        "open the \"Stations\" screen: touch TextView \"Show broken stations in lists\" rid=summary activity=ActivityMain state_changed (tokens=stations)",
+        "tap a station to play it: long_touch ImageButton \"Play\" rid=buttonPlay activity=ActivityMain (tokens=play)"
       ],
       "matched_path": [
-        "open the \"Stations\" screen"
+        "open the \"Stations\" screen",
+        "tap a station to play it"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT002",
@@ -47,15 +50,16 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_003",
-        "test_027"
+        "test_009",
+        "test_011",
+        "test_013"
       ],
       "confidence": 0.2,
       "evidence": [
-        "tap a station: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
+        "Open the search screen: touch ImageView \"Search\" rid=search_button activity=ActivityMain state_changed (tokens=search)"
       ],
       "matched_path": [
-        "tap a station"
+        "Open the search screen"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.2
@@ -75,22 +79,18 @@
         "test_015",
         "test_017",
         "test_019",
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_027"
+        "test_022",
+        "test_024"
       ],
-      "confidence": 0.6667,
+      "confidence": 0.3333,
       "evidence": [
-        "Tap the station in any list: touch TextView \"Stations\" activity=ActivityMain (tokens=station)",
-        "playback starts and the player bar appears at the bottom: touch ImageView rid=navigation_bar_item_icon_view activity=ActivityMain state_changed (outcome tokens=playback,player)"
+        "playback starts and the player bar appears at the bottom: touch TextView \"Stations\" rid=navigation_bar_item_large_label_view activity=ActivityMain (outcome tokens=playback,player)"
       ],
       "matched_path": [
-        "Tap the station in any list",
         "playback starts and the player bar appears at the bottom"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT005",
@@ -139,19 +139,13 @@
     {
       "id": "GT009",
       "name": "View station details",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "Tap a station: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
-      ],
-      "matched_path": [
-        "Tap a station"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT010",
@@ -178,19 +172,13 @@
     {
       "id": "GT012",
       "name": "Share a station",
-      "status": "partial",
-      "test_cases": [
-        "test_001"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "choose whether to share the stream URL or the station page: touch TextView \"Stations\" activity=ActivityMain (tokens=station)"
-      ],
-      "matched_path": [
-        "choose whether to share the stream URL or the station page"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT013",
@@ -207,43 +195,52 @@
         "test_015",
         "test_017",
         "test_019",
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_027"
+        "test_020",
+        "test_022",
+        "test_024"
       ],
-      "confidence": 0.2,
+      "confidence": 0.4,
       "evidence": [
-        "Start playing a station: touch TextView \"Stations\" rid=navigation_bar_item_large_label_view activity=ActivityMain (outcome tokens=start)"
+        "Start playing a station: touch LinearLayout rid=station_foreground activity=ActivityMain (outcome tokens=start)",
+        "Record): touch ImageButton \"Record\" rid=buttonRecord activity=ActivityMain (tokens=record)"
       ],
       "matched_path": [
-        "Start playing a station"
+        "Start playing a station",
+        "Record)"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.4
     },
     {
       "id": "GT014",
       "name": "Browse and play saved recordings",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_005"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Recordings\": touch TextView \"Recordings\" activity=ActivityMain (tokens=recordings)"
+      ],
+      "matched_path": [
+        "tap \"Recordings\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT015",
       "name": "View the played-track history",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_027"
+        "test_001",
+        "test_009",
+        "test_011",
+        "test_013"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "tap an entry to search for it: touch ImageView \"Search\u2026\" activity=ActivityMain (tokens=search)"
+        "tap an entry to search for it: touch ImageView \"Search\" rid=search_button activity=ActivityMain state_changed (tokens=search)"
       ],
       "matched_path": [
         "tap an entry to search for it"
@@ -254,13 +251,22 @@
     {
       "id": "GT016",
       "name": "Set a sleep timer",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_015",
+        "test_022",
+        "test_024"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap \"Sleep timer\": touch Button \"Sleep timer\" rid=action_set_sleep_timer activity=ActivityMain (tokens=sleep,timer)"
+      ],
+      "matched_path": [
+        "tap \"Sleep timer\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT017",
@@ -271,7 +277,7 @@
       ],
       "confidence": 0.1429,
       "evidence": [
-        "tap \"Alarm\": touch TextView \"Alarm\" rid=title activity=ActivityMain state_changed (tokens=alarm)"
+        "tap \"Alarm\": touch TextView \"Alarm\" activity=ActivityMain (tokens=alarm)"
       ],
       "matched_path": [
         "tap \"Alarm\""
@@ -288,7 +294,7 @@
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open the Alarm screen: touch TextView \"Alarm\" rid=title activity=ActivityMain state_changed (tokens=alarm)"
+        "Open the Alarm screen: touch TextView \"Alarm\" activity=ActivityMain (tokens=alarm)"
       ],
       "matched_path": [
         "Open the Alarm screen"
@@ -334,8 +340,7 @@
       "name": "Send playback to an MPD server",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -352,17 +357,20 @@
       "name": "Control playback from the notification",
       "status": "partial",
       "test_cases": [
+        "test_001",
+        "test_003",
+        "test_005",
         "test_009",
         "test_011",
         "test_013",
+        "test_017",
         "test_019",
-        "test_021",
-        "test_027"
+        "test_022"
       ],
-      "confidence": 0.6133,
+      "confidence": 0.64,
       "evidence": [
-        "Start a station: touch ImageButton \"Play\" rid=buttonPlay state_changed (tokens=start)",
-        "use the play/stop and record controls displayed there: set_text EditText \"test\" rid=search text=test activity=ActivityMain (outcome tokens=play,record,stop)"
+        "Start a station: touch ImageButton \"Play\" rid=buttonPlay activity=ActivityMain (tokens=start)",
+        "use the play/stop and record controls displayed there: touch ImageButton \"Record\" rid=buttonRecord activity=ActivityMain (outcome tokens=controls,play,record,there)"
       ],
       "matched_path": [
         "Start a station",
@@ -376,8 +384,7 @@
       "name": "Choose the media player engine",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -394,18 +401,18 @@
       "name": "Adjust the streaming buffer and resume behaviour",
       "status": "partial",
       "test_cases": [
-        "test_003",
+        "test_005",
+        "test_009",
         "test_011",
-        "test_013",
-        "test_019",
-        "test_027"
+        "test_017",
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+        "playback section: touch ImageButton \"Play\" rid=buttonPlay activity=ActivityMain (tokens=playback)"
       ],
       "matched_path": [
-        "Open Settings"
+        "playback section"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
@@ -415,15 +422,15 @@
       "name": "Set the recordings folder and naming",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_005",
+        "test_022"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" activity=ActivityMain (tokens=settings)"
+        "open the recordings section: touch RecyclerView rid=recyclerViewRecordings activity=ActivityMain state_changed (tokens=recordings)"
       ],
       "matched_path": [
-        "Open Settings"
+        "open the recordings section"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.25
@@ -433,8 +440,7 @@
       "name": "Restrict playback or downloads to Wi-Fi",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -451,8 +457,7 @@
       "name": "Change the theme",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -469,8 +474,7 @@
       "name": "Change the station list layout and icon display",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -487,8 +491,7 @@
       "name": "Select the radio-browser server or mirror",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_019"
+        "test_022"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -622,7 +625,7 @@
       "journal_name": "Import favourite stations",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -636,7 +639,7 @@
       "name_similarity": 1.0,
       "matched_by": "name",
       "journal_status": "covered",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -674,8 +677,8 @@
       "journal_name": "Cast a station",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "partial",
+      "journal_status": "pending",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -687,7 +690,7 @@
       "journal_name": "Record the stream",
       "name_similarity": 0.75,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -701,7 +704,7 @@
       "name_similarity": 0.125,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -713,7 +716,7 @@
       "journal_name": "View the played-track history",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -727,7 +730,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -739,7 +742,7 @@
       "journal_name": "Set a radio alarm",
       "name_similarity": 0.75,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -817,7 +820,7 @@
       "journal_name": "Control playback",
       "name_similarity": 0.455,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -843,7 +846,7 @@
       "journal_name": "Adjust the streaming buffer",
       "name_similarity": 0.571,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -869,7 +872,7 @@
       "journal_name": "Restrict playback",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -960,12 +963,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 154,
-  "actions_with_widget": 125,
+  "total_actions": 261,
+  "actions_with_widget": 234,
   "ground_truth_source": "independent_labeled_set",
   "exercised_features": 18,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.18363095238095234,
-  "weighted_coverage_percentage": 18.36,
+  "weighted_coverage": 0.18988095238095232,
+  "weighted_coverage_percentage": 18.99,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

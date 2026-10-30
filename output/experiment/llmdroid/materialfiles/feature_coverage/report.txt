@@ -8,14 +8,14 @@ Total Actions    : 731
 
 Total Features   : 42
 Covered Features : 0
-Partial          : 12
-Uncovered        : 30
+Partial          : 11
+Uncovered        : 31
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 9.64%  (mean completion ratio; partial steps count)
-Exercised        : 12  (covered 0 + partial 12)
+Weighted Coverage: 9.17%  (mean completion ratio; partial steps count)
+Exercised        : 11  (covered 0 + partial 11)
 
 ground_truth_source: independent_labeled_set
 
@@ -45,12 +45,12 @@ Evidence   :
 
 [GT003] Create a new empty file
 Status     : PARTIAL
-Test Cases : test_002, test_012, test_019, test_024, test_026, test_028, test_034
+Test Cases : test_019, test_024, test_026, test_034
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap "Create file": touch TextView "Files" activity=FileListActivity (tokens=file)
+  - tap "Create file": touch LinearLayout rid=action_create_file activity=FileListActivity state_changed (tokens=file)
 
 [GT004] Copy files and folders
 Status     : NOT COVERED
@@ -165,13 +165,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT023] Edit a text file in the built-in editor
-Status     : PARTIAL
-Test Cases : test_002, test_012, test_024, test_028
-Confidence : 0.20
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - Tap a text file: touch TextView "Files" activity=FileListActivity (tokens=file)
+Completion : 0% of gold steps
 
 [GT024] Change the text file encoding in the editor
 Status     : NOT COVERED
@@ -243,12 +239,12 @@ Evidence   :
 
 [GT036] Show a "root directory" entry in the navigation
 Status     : PARTIAL
-Test Cases : test_002, test_011, test_012, test_024, test_028
+Test Cases : test_011
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - return to the file list: touch TextView "Files" activity=FileListActivity (tokens=file)
+  - return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)
 
 [GT037] Change the theme and colours
 Status     : NOT COVERED
@@ -262,12 +258,12 @@ Completion : 0% of gold steps
 
 [GT039] Configure the file list behaviour
 Status     : PARTIAL
-Test Cases : test_002, test_010, test_011, test_012, test_024, test_028
+Test Cases : test_011
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - open the file list section: touch TextView "Files" activity=FileListActivity (tokens=file)
+  - open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)
 
 [GT040] Configure the standard directories shown in the navigation drawer
 Status     : NOT COVERED
@@ -293,9 +289,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 42 features covered
-12 / 42 features partial
+11 / 42 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 9.64%
+Weighted Feature Coverage = mean(completion_ratio) = 9.17%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -333,7 +329,7 @@ GT GT019 'Copy the path of a file' | journal=missing (no name match) status=miss
 GT GT020 'View file properties' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'Change file permissions, owner and SELinux context (root)' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT022 'View an image in the built-in viewer' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT023 'Edit a text file in the built-in editor' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Edit a text file in the built-in editor' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT024 'Change the text file encoding in the editor' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT025 'Bookmark a directory' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT026 'Manage bookmark directories' | journal=missing (no name match) status=missing | offline=not_covered

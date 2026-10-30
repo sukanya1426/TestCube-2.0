@@ -1,0 +1,403 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: VLC
+
+Total Actions    : 731
+
+Total Features   : 46
+Covered Features : 0
+Partial          : 18
+Uncovered        : 28
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 11.39%  (mean completion ratio; partial steps count)
+Exercised        : 18  (covered 0 + partial 18)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the video library
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap the Video tab: touch View rid=surface_video state_changed (tokens=video)
+
+[GT002] Browse the audio library
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_020, test_024, test_030, test_034
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap an item to open or play it: touch CheckedTextView "Play" rid=text1 activity=MainActivity state_changed (tokens=play)
+
+[GT003] Browse device folders and storage
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Browse network shares
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Add a network share manually
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Open a network stream from a URL
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_020, test_024, test_030, test_034
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap the play/go button: touch CheckedTextView "Play" rid=text1 activity=MainActivity state_changed (tokens=play)
+
+[GT007] Mark a folder or share as a favourite
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Search the media library
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Sort the media lists
+Status     : PARTIAL
+Test Cases : test_008
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - tap the sort icon (or the overflow menu: touch TextView "Sort by…" rid=sorts_title activity=MainActivity (tokens=sort)
+
+[GT010] Switch between list and grid display
+Status     : PARTIAL
+Test Cases : test_004, test_006
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap the display/"List or grid" toggle: touch ImageView rid=display_in_list_image activity=MainActivity state_changed (tokens=display)
+
+[GT011] Resume playback where you left off
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Video: touch View rid=surface_video state_changed (tokens=video)
+
+[GT012] Control video playback
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Use gesture controls for volume, brightness and seeking
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] Select an audio track
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_020, test_024, test_030, test_034
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Start playback: touch CheckedTextView "Play" rid=text1 activity=MainActivity state_changed (tokens=start)
+
+[GT015] Load and select subtitles
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_020, test_024, test_030, test_034
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Start playback: touch CheckedTextView "Play" rid=text1 activity=MainActivity state_changed (tokens=start)
+
+[GT016] Download subtitles
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT017] Adjust the subtitle delay
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Adjust the audio delay
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Change the playback speed
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Change the aspect ratio, crop and zoom
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Lock the screen orientation
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Jump to a specific time
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Set an A-B repeat loop
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Play video in picture-in-picture / a floating window
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] Play a video as audio only (background playback)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Use the equaliser
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Set a sleep timer
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Adjust video filters (brightness, contrast, hue, saturation, gamma)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Cast to a renderer (Chromecast or DLNA)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Create a playlist
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_022, test_034
+Confidence : 0.38
+Matcher    : deterministic
+Completion : 38% of gold steps
+Evidence   :
+  - Open the Audio tab: touch FrameLayout "Audio" rid=nav_audio activity=MainActivity state_changed (tokens=audio)
+  - Playlists: touch LinearLayout "Playlists" activity=MainActivity state_changed (tokens=playlists)
+  - select the tracks: touch LinearLayout "Tracks" activity=MainActivity state_changed (tokens=tracks)
+
+[GT031] Add media to an existing playlist
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Long-press a track, album or video: touch View rid=surface_video state_changed (tokens=video)
+
+[GT032] Manage the play queue
+Status     : PARTIAL
+Test Cases : test_002, test_004, test_006, test_008, test_016, test_020, test_024, test_030, test_034
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Start playback: touch CheckedTextView "Play" rid=text1 activity=MainActivity state_changed (tokens=start)
+
+[GT033] Use repeat and shuffle
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT034] Add media to the queue without interrupting playback
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Long-press a track or video: touch View rid=surface_video state_changed (tokens=video)
+
+[GT035] View media information
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT036] Delete a media file from the device
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT037] Share a media file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT038] View the playback history
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT039] Choose which folders the media library scans
+Status     : PARTIAL
+Test Cases : test_034
+Confidence : 0.23
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - tap "Media library"/"Directories": touch Button "SEARCH IN ALL MEDIA LIBRARY" rid=searchButton activity=SearchActivity state_changed (tokens=library,media)
+
+[GT040] Force a media library rescan
+Status     : PARTIAL
+Test Cases : test_034
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Media library: touch Button "SEARCH IN ALL MEDIA LIBRARY" rid=searchButton activity=SearchActivity state_changed (tokens=library,media)
+
+[GT041] Configure video playback settings
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "Video": touch View rid=surface_video state_changed (tokens=video)
+
+[GT042] Configure audio playback settings
+Status     : PARTIAL
+Test Cases : test_016, test_034
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "Audio": touch FrameLayout "Audio" rid=nav_audio activity=MainActivity state_changed (tokens=audio)
+
+[GT043] Configure subtitle appearance
+Status     : PARTIAL
+Test Cases : test_004, test_008, test_012, test_014, test_034
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "Subtitles": touch View rid=surface_subtitles state_changed (tokens=subtitles)
+
+[GT044] Change the interface settings
+Status     : PARTIAL
+Test Cases : test_030
+Confidence : 0.24
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - set the app theme (light, dark or system), the daily-night switch, the start-up screen, the visible tabs, the interface language and whether the TV interface is used: touch CardView "Favorite: Download, 6 subfolders" rid=browser_container activity=SecondaryActivity state_changed (outcome tokens=start,tabs,up)
+
+[GT045] Add the VLC home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT046] View the about screen and licences
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 46 features covered
+18 / 46 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 11.39%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 46 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse the video library' | journal=missing (no name match) status=missing | offline=partial
+GT GT002 'Browse the audio library' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Browse device folders and storage' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Browse network shares' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Add a network share manually' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Open a network stream from a URL' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Mark a folder or share as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Search the media library' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Sort the media lists' | journal=missing (no name match) status=missing | offline=partial
+GT GT010 'Switch between list and grid display' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Resume playback where you left off' | journal=missing (no name match) status=missing | offline=partial
+GT GT012 'Control video playback' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Use gesture controls for volume, brightness and seeking' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Select an audio track' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Load and select subtitles' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Download subtitles' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Adjust the subtitle delay' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Adjust the audio delay' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Change the playback speed' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Change the aspect ratio, crop and zoom' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Lock the screen orientation' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Jump to a specific time' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Set an A-B repeat loop' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Play video in picture-in-picture / a floating window' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Play a video as audio only (background playback)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Use the equaliser' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Set a sleep timer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Adjust video filters (brightness, contrast, hue, saturation, gamma)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Cast to a renderer (Chromecast or DLNA)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Create a playlist' | journal=missing (no name match) status=missing | offline=partial
+GT GT031 'Add media to an existing playlist' | journal=missing (no name match) status=missing | offline=partial
+GT GT032 'Manage the play queue' | journal=missing (no name match) status=missing | offline=partial
+GT GT033 'Use repeat and shuffle' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Add media to the queue without interrupting playback' | journal=missing (no name match) status=missing | offline=partial
+GT GT035 'View media information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Delete a media file from the device' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Share a media file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'View the playback history' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Choose which folders the media library scans' | journal=missing (no name match) status=missing | offline=partial
+GT GT040 'Force a media library rescan' | journal=missing (no name match) status=missing | offline=partial
+GT GT041 'Configure video playback settings' | journal=missing (no name match) status=missing | offline=partial
+GT GT042 'Configure audio playback settings' | journal=missing (no name match) status=missing | offline=partial
+GT GT043 'Configure subtitle appearance' | journal=missing (no name match) status=missing | offline=partial
+GT GT044 'Change the interface settings' | journal=missing (no name match) status=missing | offline=partial
+GT GT045 'Add the VLC home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT046 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

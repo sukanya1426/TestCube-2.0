@@ -8,14 +8,14 @@ Total Actions    : 747
 
 Total Features   : 38
 Covered Features : 1
-Partial          : 29
-Uncovered        : 8
+Partial          : 22
+Uncovered        : 15
 
 Feature Coverage : 2.63%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 28.13%  (mean completion ratio; partial steps count)
-Exercised        : 30  (covered 1 + partial 29)
+Weighted Coverage: 23.12%  (mean completion ratio; partial steps count)
+Exercised        : 23  (covered 1 + partial 22)
 
 ground_truth_source: independent_labeled_set
 
@@ -29,14 +29,9 @@ FEATURE DETAILS
 ----------------------------------------
 
 [GT001] Create a yes/no habit
-Status     : PARTIAL
-Test Cases : test_011, test_046, test_136
-Confidence : 0.29
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 29% of gold steps
-Evidence   :
-  - enter the habit name: set_text EditText "e.g. Exercise" rid=nameInput text=Exercise activity=EditHabitActivity state_changed (tokens=name)
-  - tap Save: touch Button "SAVE" rid=buttonSave activity=MainActivity state_changed (tokens=save)
+Completion : 0% of gold steps
 
 [GT002] Create a measurable habit
 Status     : PARTIAL
@@ -81,23 +76,19 @@ Evidence   :
   - Open the main habit list: intent intent=am start org.isoron.uhabits/org.isoron.uhabits.MainActivity activity=ShowHabitActivity state_changed (tokens=main)
 
 [GT007] Enter a value for a measurable habit
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT008] Check off a habit for an earlier day
 Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012, test_013, test_014, test_105
+Test Cases : test_011, test_012, test_013, test_014, test_105
 Confidence : 0.40
 Matcher    : deterministic
 Completion : 40% of gold steps
 Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
-  - open the calendar/history view: touch View activity=ShowHabitActivity state_changed (outcome tokens=calendar,history)
+  - open the calendar/history view: intent intent=am start org.isoron.uhabits/org.isoron.uhabits.MainActivity activity=ShowHabitActivity state_changed (outcome tokens=calendar,history)
+  - tap the day: touch TextView "Day" rid=text1 activity=ShowHabitActivity state_changed (tokens=day)
 
 [GT009] Mark a day as skipped
 Status     : NOT COVERED
@@ -115,13 +106,9 @@ Evidence   :
   - tap Save: touch Button "SAVE" rid=buttonSave activity=ShowHabitActivity state_changed (tokens=save)
 
 [GT011] View a habit's detailed statistics
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT012] View the score/strength chart
 Status     : NOT COVERED
@@ -153,59 +140,43 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT017] Archive a habit
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT018] Unarchive a habit
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.20
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT019] Delete a habit
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT020] Reorder habits manually
-Status     : PARTIAL
-Test Cases : test_002, test_003, test_011, test_012
-Confidence : 0.17
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 17% of gold steps
-Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+Completion : 0% of gold steps
 
 [GT021] Sort the habit list
 Status     : PARTIAL
-Test Cases : test_002, test_003, test_004, test_011, test_012
+Test Cases : test_004
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
+  - tap "Sort": touch TextView "Sort" rid=title activity=MainActivity state_changed (tokens=sort)
 
 [GT022] Filter the habit list
 Status     : PARTIAL
 Test Cases : test_002, test_003, test_004, test_011, test_012, test_084, test_105
-Confidence : 0.50
+Confidence : 0.47
 Matcher    : deterministic
 Completion : 50% of gold steps
 Evidence   :
-  - Open the habit list: touch TextView "Habits" activity=ListHabitsActivity (tokens=habit)
-  - tap "Filter": long_touch Button "Filter" rid=action_filter activity=MainActivity (tokens=filter)
+  - tap "Filter": touch Button "Filter" rid=action_filter activity=MainActivity state_changed (tokens=filter)
+  - toggle whether archived habits and completed habits are shown: touch Button "Filter" rid=action_filter activity=ListHabitsActivity state_changed (outcome tokens=archived,completed,habits)
 
 [GT023] Change the number of days shown in the list
 Status     : COVERED
@@ -309,7 +280,7 @@ Evidence   :
 
 [GT035] Set the hour the day starts (day offset)
 Status     : PARTIAL
-Test Cases : test_017, test_023, test_046
+Test Cases : test_017, test_023
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
@@ -350,9 +321,9 @@ SUMMARY
 ----------------------------------------
 
 1 / 38 features covered
-29 / 38 features partial
+22 / 38 features partial
 Feature Coverage = COVERED / Total = 2.63%
-Weighted Feature Coverage = mean(completion_ratio) = 28.13%
+Weighted Feature Coverage = mean(completion_ratio) = 23.12%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -368,26 +339,26 @@ Extracted vs ground truth: 0 / 38 (completeness ratio 0.0)
 
 Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
 
-GT GT001 'Create a yes/no habit' | journal=missing (no name match) status=missing | offline=partial
+GT GT001 'Create a yes/no habit' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT002 'Create a measurable habit' | journal=missing (no name match) status=missing | offline=partial
 GT GT003 'Set a habit frequency' | journal=missing (no name match) status=missing | offline=partial
 GT GT004 'Set a habit reminder' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT005 'Add notes to a habit' | journal=missing (no name match) status=missing | offline=partial
 GT GT006 'Check off a habit for today' | journal=missing (no name match) status=missing | offline=partial
-GT GT007 'Enter a value for a measurable habit' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Enter a value for a measurable habit' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT008 'Check off a habit for an earlier day' | journal=missing (no name match) status=missing | offline=partial
 GT GT009 'Mark a day as skipped' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT010 "Add a note to a specific day's entry" | journal=missing (no name match) status=missing | offline=partial
-GT GT011 "View a habit's detailed statistics" | journal=missing (no name match) status=missing | offline=partial
+GT GT011 "View a habit's detailed statistics" | journal=missing (no name match) status=missing | offline=not_covered
 GT GT012 'View the score/strength chart' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT013 'View the history calendar' | journal=missing (no name match) status=missing | offline=partial
 GT GT014 'View the streaks chart' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT015 'View the frequency (weekday/time) chart' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT016 'Edit a habit' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT017 'Archive a habit' | journal=missing (no name match) status=missing | offline=partial
-GT GT018 'Unarchive a habit' | journal=missing (no name match) status=missing | offline=partial
-GT GT019 'Delete a habit' | journal=missing (no name match) status=missing | offline=partial
-GT GT020 'Reorder habits manually' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Archive a habit' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Unarchive a habit' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Delete a habit' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Reorder habits manually' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'Sort the habit list' | journal=missing (no name match) status=missing | offline=partial
 GT GT022 'Filter the habit list' | journal=missing (no name match) status=missing | offline=partial
 GT GT023 'Change the number of days shown in the list' | journal=missing (no name match) status=missing | offline=covered

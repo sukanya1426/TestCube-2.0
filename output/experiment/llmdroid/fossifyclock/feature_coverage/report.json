@@ -2,8 +2,8 @@
   "application": "Fossify Clock",
   "total_features": 26,
   "covered_features": 0,
-  "uncovered_features": 11,
-  "partial_features": 15,
+  "uncovered_features": 13,
+  "partial_features": 13,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/fossifyclock",
@@ -308,26 +308,13 @@
     {
       "id": "GT019",
       "name": "Set the time format",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.4143,
-      "evidence": [
-        "toggle the \"Use 24-hour time format\" option (or follow the system setting): touch RelativeLayout rid=settings_hour_format_holder activity=SettingsActivity state_changed (tokens=format,hour,setting)"
-      ],
-      "matched_path": [
-        "toggle the \"Use 24-hour time format\" option (or follow the system setting)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT020",
@@ -386,27 +373,13 @@
     {
       "id": "GT024",
       "name": "Customise the app colours and theme",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_004",
-        "test_006",
-        "test_008",
-        "test_010",
-        "test_012",
-        "test_014",
-        "test_016",
-        "test_018"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "tap \"Customise colours\": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)"
-      ],
-      "matched_path": [
-        "tap \"Customise colours\""
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT025",
@@ -680,7 +653,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -745,7 +718,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -799,9 +772,9 @@
   "total_actions": 729,
   "actions_with_widget": 647,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 15,
+  "exercised_features": 13,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.19487179487179487,
-  "weighted_coverage_percentage": 19.49,
+  "weighted_coverage": 0.16602564102564105,
+  "weighted_coverage_percentage": 16.6,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

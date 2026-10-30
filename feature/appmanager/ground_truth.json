@@ -1,0 +1,431 @@
+{
+  "app": "App Manager",
+  "platform": "android",
+  "source": "Official App Manager documentation and F-Droid listing",
+  "url": "",
+  "description": "Package manager and inspector: browse installed packages, inspect their components and permissions, and operate on them.",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the list of installed applications",
+      "description": "Browse the list of installed applications as documented for App Manager.",
+      "actions": [
+        "Open the app",
+        "the Apps list loads",
+        "scroll the list of installed packages"
+      ]
+    },
+    {
+      "id": "GT002",
+      "name": "Search for an application by name",
+      "description": "Search for an application by name as documented for App Manager.",
+      "actions": [
+        "Open the app",
+        "tap the search icon in the toolbar",
+        "type part of the app name",
+        "tap a result"
+      ]
+    },
+    {
+      "id": "GT003",
+      "name": "Sort the application list",
+      "description": "Sort the application list as documented for App Manager.",
+      "actions": [
+        "Open the app",
+        "tap the overflow menu (three dots)",
+        "tap \"Sort by\"",
+        "choose the sort key (for example name, size, install date)"
+      ]
+    },
+    {
+      "id": "GT004",
+      "name": "Filter the application list",
+      "description": "Filter the application list as documented for App Manager.",
+      "actions": [
+        "Open the app",
+        "tap the filter icon",
+        "select the filters (for example user apps, system apps, disabled)",
+        "apply the filter"
+      ]
+    },
+    {
+      "id": "GT005",
+      "name": "Open an application's details screen",
+      "description": "Open an application's details screen as documented for App Manager.",
+      "actions": [
+        "Open the Apps list",
+        "tap an application row",
+        "the App Details screen opens"
+      ]
+    },
+    {
+      "id": "GT006",
+      "name": "View the App Info tab",
+      "description": "View the App Info tab as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "the App Info tab is selected",
+        "scroll to read the version, installer, data directories and sizes"
+      ]
+    },
+    {
+      "id": "GT007",
+      "name": "Browse an application's activities",
+      "description": "Browse an application's activities as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Activities tab",
+        "scroll the list of declared activities"
+      ]
+    },
+    {
+      "id": "GT008",
+      "name": "Launch an exported activity",
+      "description": "Launch an exported activity as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "open the Activities tab",
+        "tap an exported activity",
+        "tap the launch action"
+      ]
+    },
+    {
+      "id": "GT009",
+      "name": "Browse an application's services",
+      "description": "Browse an application's services as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Services tab",
+        "scroll the declared services"
+      ]
+    },
+    {
+      "id": "GT010",
+      "name": "Browse an application's broadcast receivers",
+      "description": "Browse an application's broadcast receivers as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Receivers tab",
+        "scroll the declared receivers"
+      ]
+    },
+    {
+      "id": "GT011",
+      "name": "Browse an application's content providers",
+      "description": "Browse an application's content providers as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Providers tab",
+        "scroll the declared providers"
+      ]
+    },
+    {
+      "id": "GT012",
+      "name": "Review an application's permissions",
+      "description": "Review an application's permissions as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Permissions tab",
+        "scroll the requested permissions",
+        "tap a permission to read its description"
+      ]
+    },
+    {
+      "id": "GT013",
+      "name": "Review app operations (App Ops)",
+      "description": "Review app operations (App Ops) as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the App Ops tab",
+        "scroll the operations list"
+      ]
+    },
+    {
+      "id": "GT014",
+      "name": "View an application's signatures",
+      "description": "View an application's signatures as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Signatures tab",
+        "read the certificate fingerprints"
+      ]
+    },
+    {
+      "id": "GT015",
+      "name": "View the shared libraries an application uses",
+      "description": "View the shared libraries an application uses as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "swipe to the Libraries tab",
+        "scroll the detected libraries"
+      ]
+    },
+    {
+      "id": "GT016",
+      "name": "Scan an application for trackers",
+      "description": "Scan an application for trackers as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap the scan/trackers action",
+        "read the reported trackers"
+      ]
+    },
+    {
+      "id": "GT017",
+      "name": "View an application's manifest",
+      "description": "View an application's manifest as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap \"View manifest\"",
+        "scroll the rendered AndroidManifest.xml"
+      ]
+    },
+    {
+      "id": "GT018",
+      "name": "Force-stop an application",
+      "description": "Force-stop an application as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the force-stop action",
+        "confirm"
+      ]
+    },
+    {
+      "id": "GT019",
+      "name": "Clear an application's data",
+      "description": "Clear an application's data as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap \"Clear data\"",
+        "confirm"
+      ]
+    },
+    {
+      "id": "GT020",
+      "name": "Clear an application's cache",
+      "description": "Clear an application's cache as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap \"Clear cache\"",
+        "confirm"
+      ]
+    },
+    {
+      "id": "GT021",
+      "name": "Uninstall an application",
+      "description": "Uninstall an application as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the uninstall action",
+        "confirm the system dialog"
+      ]
+    },
+    {
+      "id": "GT022",
+      "name": "Open an application's system settings page",
+      "description": "Open an application's system settings page as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap the open-in-settings action"
+      ]
+    },
+    {
+      "id": "GT023",
+      "name": "Share or export an application's APK",
+      "description": "Share or export an application's APK as documented for App Manager.",
+      "actions": [
+        "Open an application's details",
+        "tap the overflow menu (three dots)",
+        "tap the share/export APK action",
+        "choose the destination"
+      ]
+    },
+    {
+      "id": "GT024",
+      "name": "Select several applications for a batch operation",
+      "description": "Select several applications for a batch operation as documented for App Manager.",
+      "actions": [
+        "Open the Apps list",
+        "long-press an application row",
+        "tap further rows to add them to the selection",
+        "the batch action bar appears"
+      ]
+    },
+    {
+      "id": "GT025",
+      "name": "Run a batch operation on the selected applications",
+      "description": "Run a batch operation on the selected applications as documented for App Manager.",
+      "actions": [
+        "Select several applications",
+        "tap the batch action in the toolbar",
+        "choose the operation",
+        "confirm"
+      ]
+    },
+    {
+      "id": "GT026",
+      "name": "Open the running applications screen",
+      "description": "Open the running applications screen as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Running apps\"",
+        "scroll the running processes"
+      ]
+    },
+    {
+      "id": "GT027",
+      "name": "Inspect a running process",
+      "description": "Inspect a running process as documented for App Manager.",
+      "actions": [
+        "Open the Running apps screen",
+        "tap a process row",
+        "read its details"
+      ]
+    },
+    {
+      "id": "GT028",
+      "name": "Open the one-click operations screen",
+      "description": "Open the one-click operations screen as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"1-Click Ops\"",
+        "review the available operations"
+      ]
+    },
+    {
+      "id": "GT029",
+      "name": "Open the profiles screen",
+      "description": "Open the profiles screen as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Profiles\"",
+        "review the saved profiles"
+      ]
+    },
+    {
+      "id": "GT030",
+      "name": "Create a profile",
+      "description": "Create a profile as documented for App Manager.",
+      "actions": [
+        "Open the Profiles screen",
+        "tap the \"+\" action",
+        "enter a profile name",
+        "tap OK"
+      ]
+    },
+    {
+      "id": "GT031",
+      "name": "View application usage statistics",
+      "description": "View application usage statistics as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"App usage\"",
+        "grant the usage-access permission if prompted",
+        "review the usage figures"
+      ]
+    },
+    {
+      "id": "GT032",
+      "name": "Change the usage statistics time range",
+      "description": "Change the usage statistics time range as documented for App Manager.",
+      "actions": [
+        "Open the App usage screen",
+        "tap the period selector",
+        "choose the interval"
+      ]
+    },
+    {
+      "id": "GT033",
+      "name": "Install an APK from storage",
+      "description": "Install an APK from storage as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the installer/\"Install\" entry",
+        "pick the APK file",
+        "confirm the installation"
+      ]
+    },
+    {
+      "id": "GT034",
+      "name": "Open the application log viewer",
+      "description": "Open the application log viewer as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the log viewer entry",
+        "review the captured log output"
+      ]
+    },
+    {
+      "id": "GT035",
+      "name": "Open the intent interceptor",
+      "description": "Open the intent interceptor as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Interceptor\"",
+        "review the intent fields"
+      ]
+    },
+    {
+      "id": "GT036",
+      "name": "Open the settings screen",
+      "description": "Open the settings screen as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"Settings\"",
+        "review the available preferences"
+      ]
+    },
+    {
+      "id": "GT037",
+      "name": "Change the application theme",
+      "description": "Change the application theme as documented for App Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the appearance/theme entry",
+        "choose the theme",
+        "return"
+      ]
+    },
+    {
+      "id": "GT038",
+      "name": "Change the application language",
+      "description": "Change the application language as documented for App Manager.",
+      "actions": [
+        "Open Settings",
+        "tap the language entry",
+        "choose the language",
+        "return"
+      ]
+    },
+    {
+      "id": "GT039",
+      "name": "Enable or disable the screen lock for the app",
+      "description": "Enable or disable the screen lock for the app as documented for App Manager.",
+      "actions": [
+        "Open Settings",
+        "find the security/screen-lock option",
+        "toggle it",
+        "confirm"
+      ]
+    },
+    {
+      "id": "GT040",
+      "name": "Read the about and version information",
+      "description": "Read the about and version information as documented for App Manager.",
+      "actions": [
+        "Open the navigation drawer",
+        "tap \"About\"",
+        "read the version, licence and credits"
+      ]
+    }
+  ],
+  "id_scheme": "GT<nnn>",
+  "note": "Authored from the application's official documentation and F-Droid listing, following the same method as the rest of this benchmark. Independent of feature/<app>/guide_features.json.",
+  "package": "io.github.muntashirakon.AppManager",
+  "version_documented": "4.1.0"
+}

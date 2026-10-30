@@ -7,6 +7,7 @@ from concurrent.futures import Future
 import time
 from queue import Queue, Empty
 from typing import Optional, TYPE_CHECKING, TypedDict
+import urllib.request
 from openai import OpenAI
 
 from ..desc.action_type import ActionType
@@ -58,6 +59,12 @@ class LLMAgent:
 
     MODEL_STR = 'gpt-4o'
     BASE_URL = 'https://api.openai.com/v1'
+    # Matches droidbot/local_vlm.py on the TestCube side, so neither tool gets a
+    # larger context window than the other.
+    NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "8192"))
+    OLLAMA_TIMEOUT = 600
+    # Attempts to parse one answer as JSON before the question is abandoned.
+    JSON_RETRIES = 3
 
     def __init__(self, app: 'App', utg: 'UTG'):
         self.logger = get_logger()
@@ -110,6 +117,12 @@ class LLMAgent:
         # self.__client.api_key = ''
         self.__client.base_url = LLMAgent.BASE_URL
         self.__client.timeout = 30000
+        root = str(LLMAgent.BASE_URL).rstrip('/')
+        self.__use_native_ollama = root.endswith('/v1') and ':11434' in root
+        self.__ollama_root = root[:-len('/v1')] if self.__use_native_ollama else root
+        if self.__use_native_ollama:
+            self.logger.info(
+                f"Ollama detected at {self.__ollama_root}: using /api/chat with num_ctx={LLMAgent.NUM_CTX}")
 
     def is_child_thread_alive(self) -> bool:
         return self.__work_thread.is_alive()
@@ -158,9 +171,37 @@ class LLMAgent:
                     with self.__question_remained_lock:
                         self.__question_remained -= 1
             except Exception as e:
+                # A question that raises still has to be accounted for. The
+                # decrement above is the only one there used to be, so a single
+                # failed question left __question_remained above zero and
+                # wait_until_queue_empty() spun for the rest of the budget:
+                # appmanager sent 190 actions in its first 22 minutes and then
+                # nothing at all until the watchdog killed it at 3900s.
                 self.logger.error(f"Child thread error: {e}")
                 import traceback
                 traceback.print_exc()
+                self.__resolve_pending_future(payload)
+                if payload:
+                    with self.__question_remained_lock:
+                        self.__question_remained -= 1
+
+    def __resolve_pending_future(self, payload: Optional['QuestionPayload']):
+        """Settle the future a failed question would otherwise leave hanging.
+
+        utg_based_policy waits on Future.result() with no timeout, so a handler
+        that raises before set_result() deadlocks the main thread as surely as a
+        stuck counter does. The values used here are the ones the policy already
+        treats as "no guidance" and "no event".
+        """
+        if payload is None or self.__future is None or self.__future.done():
+            return
+        try:
+            if payload.mode == QuestionMode.GUIDE:
+                self.__future.set_result((-1, self.__target_func))
+            elif payload.mode == QuestionMode.TEST_FUNCTION:
+                self.__future.set_result(None)
+        except Exception as exc:
+            self.logger.warning(f"Could not settle the pending future: {exc}")
 
     def wait_until_queue_empty(self):
         self.logger.info(f"Wait until queue is empty...")
@@ -192,7 +233,7 @@ class LLMAgent:
             count = 0
             top5: dict[str, TopCluster] = {}
             for cluster in self.__top_valued_cluster:
-                if cluster.has_untested_function():
+                if cluster is not None and cluster.has_untested_function():
                     cluster.write_overview_top5_tojson(top5)
                     count += 1
                     if count == 5:
@@ -215,17 +256,27 @@ class LLMAgent:
             original_first5 = self.__top_valued_cluster[:5]
             # Replace the first 5 elements of _topValuedMergedState with elements from topList
             for i, elem in enumerate(top_list):
+                # find_cluster_by_id returns None for an id the model invented,
+                # and storing that None here is what later raised
+                # "'NoneType' object has no attribute 'has_untested_function'".
+                # A hallucinated id leaves the slot as it was instead.
                 if isinstance(elem, int):
                     cluster = self.__utg.find_cluster_by_id(elem)
-                    self.__top_valued_cluster[i] = cluster
                 elif isinstance(elem, str):
                     cluster = self.__utg.find_cluster_by_id(int(elem[5:]))
-                    self.__top_valued_cluster[i] = cluster
                 else:
                     self.logger.warning(f"LLM's response is neither an int list nor string list")
+                    continue
+                if cluster is None:
+                    self.logger.warning(f"LLM named Cluster{elem}, which does not exist; keeping the current entry")
+                    continue
+                self.__top_valued_cluster[i] = cluster
             # Find elements in originalFirstFive that are not in topList
             cluster_to_insert = []
             for cluster in original_first5:
+                if cluster is None:
+                    continue
+
                 def find_by_id(target) -> bool:
                     for elem in top_list:
                         if isinstance(elem, int):
@@ -249,13 +300,14 @@ class LLMAgent:
 
         cluster_info = {}
         for cluster in self.__top_valued_cluster[:self.__p2]:
-            if cluster.has_untested_function():
+            if cluster is not None and cluster.has_untested_function():
                 cluster.write_overview_top5_tojson(cluster_info)
         # if all clusters' functions are tested, just write five functions for each cluster
         if len(cluster_info) == 0:
             self.logger.warning("[Ask for guidance] all clusters' functions are tested")
             for cluster in self.__top_valued_cluster[:self.__p2]:
-                cluster.write_overview_top5_tojson(cluster_info, ignore_importance=True)
+                if cluster is not None:
+                    cluster.write_overview_top5_tojson(cluster_info, ignore_importance=True)
         prompt += f"\n```State Information\n{json.dumps(cluster_info, ensure_ascii=False, indent=4)}\n```\n"
 
         # tested functions
@@ -380,25 +432,52 @@ class LLMAgent:
         payload.cluster.update_from_reanalysis(json_resp, unique_widgets, widgets_dict)
         # TODO update top clusters
 
-    def __get_response(self, prompt: str) -> json:
+    def __chat(self, prompt: str) -> str:
+        """Ask the configured model once and return the reply text.
+
+        Against Ollama this goes to the native /api/chat rather than the
+        OpenAI-compatible /v1 route, for one reason: /v1 silently ignores
+        `options`, so the model loads at Ollama's own default context of 4096
+        tokens. TestCube asks for num_ctx=8192 over the native API, so the two
+        tools were being given different context windows -- and 4096 is what cut
+        radiodroid's station-list answer off mid-JSON. Confirmed with `ollama
+        ps`: 4096 either way over /v1, 8192 over /api/chat.
+
+        Any other base URL keeps the original OpenAI client untouched.
+        """
+        if not self.__use_native_ollama:
+            chat_completion = self.__client.chat.completions.create(
+                temperature=0,
+                messages=[{"role": "user", "content": prompt}],
+                model=LLMAgent.MODEL_STR,
+            )
+            return chat_completion.choices[0].message.content
+
+        payload = {
+            "model": LLMAgent.MODEL_STR,
+            "messages": [{"role": "user", "content": prompt}],
+            "stream": False,
+            "keep_alive": -1,
+            "options": {"temperature": 0, "num_ctx": LLMAgent.NUM_CTX},
+        }
+        request = urllib.request.Request(
+            self.__ollama_root + "/api/chat",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(request, timeout=LLMAgent.OLLAMA_TIMEOUT) as reply:
+            body = json.loads(reply.read().decode("utf-8"))
+        return body.get("message", {}).get("content", "")
+
+    def __get_response(self, prompt: str, attempt: int = 0) -> json:
         save_content_to_file(self.__QA_file, title='Prompt', content=prompt)
         begin_stamp = time.time()
         try_times = 0
-        chat_completion = None
+        response = None
         while try_times < 5:
             try:
-                chat_completion = self.__client.chat.completions.create(
-                    temperature=0,
-                    messages=[
-                        {
-                            "role": "user",
-                            "content": prompt,
-                        }
-                    ],
-                    model=LLMAgent.MODEL_STR,
-                    # other params
-                )
-                if chat_completion:
+                response = self.__chat(prompt)
+                if response:
                     break
             except Exception as e:
                 self.logger.warning(f"Exception:{e}, try to ask again in 3 seconds")
@@ -409,8 +488,6 @@ class LLMAgent:
             self.logger.error("Error when getting LLM's response, stop testing!")
             sys.exit()
 
-        # get response
-        response = chat_completion.choices[0].message.content
         end_stamp = time.time()
         with open(os.path.join(self.__app.output_dir, 'LLM-Interaction.txt'), 'a') as file:
             time_difference = round(end_stamp - begin_stamp, 5)
@@ -430,7 +507,17 @@ class LLMAgent:
             return json_resp
         except Exception as e:
             self.logger.warning(f"Exception({e}) occurred when transferring llm's response to json, try to get response again")
-            return self.__get_response(prompt)
+            # The retry used to be unbounded, and the call above runs at
+            # temperature=0: an answer the model truncates mid-JSON is
+            # reproduced byte for byte on every attempt. radiodroid sent 90
+            # actions in 9.6 minutes and then re-asked one question with the
+            # same parse error for the remaining 50. Past the cap the question
+            # is abandoned, which __work_loop accounts for and recovers from.
+            if attempt + 1 >= LLMAgent.JSON_RETRIES:
+                raise ValueError(
+                    "LLM's response was not valid JSON after %d attempts; abandoning this question"
+                    % LLMAgent.JSON_RETRIES)
+            return self.__get_response(prompt, attempt + 1)
 
     def set_future(self, future):
         self.__future = future

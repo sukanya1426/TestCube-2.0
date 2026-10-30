@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: Fossify Contacts
 
-Total Actions    : 167
+Total Actions    : 357
 
 Total Features   : 38
-Covered Features : 1
-Partial          : 12
-Uncovered        : 25
+Covered Features : 0
+Partial          : 22
+Uncovered        : 16
 
-Feature Coverage : 2.63%
+Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 11.54%  (mean completion ratio; partial steps count)
-Exercised        : 13  (covered 1 + partial 12)
+Weighted Coverage: 19.30%  (mean completion ratio; partial steps count)
+Exercised        : 22  (covered 0 + partial 22)
 
 ground_truth_source: independent_labeled_set
 
@@ -35,25 +35,25 @@ Completion : 0% of gold steps
 
 [GT002] Add a photo to a contact
 Status     : PARTIAL
-Test Cases : test_029
+Test Cases : test_033, test_041
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - choose "Take photo" or "Choose photo": touch ImageView "Change photo" rid=contact_photo activity=EditContactActivity state_changed (tokens=photo)
+  - choose "Take photo" or "Choose photo": touch ImageView "Change photo" rid=contact_photo activity=EditContactActivity (tokens=photo)
 
 [GT003] Add multiple phone numbers with types
 Status     : PARTIAL
-Test Cases : test_003, test_008, test_012, test_014, test_030
+Test Cases : test_001, test_010, test_018
 Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - tap the type selector and choose Mobile, Home, Work, Main, Fax, Pager or a custom label: touch RadioButton "Custom" activity=EditContactActivity state_changed (tokens=custom)
+  - tap the type selector and choose Mobile, Home, Work, Main, Fax, Pager or a custom label: touch RadioButton "Custom" activity=EditContactActivity (tokens=custom)
 
 [GT004] Add email addresses
 Status     : PARTIAL
-Test Cases : test_012, test_030
+Test Cases : test_014, test_037
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
@@ -62,7 +62,7 @@ Evidence   :
 
 [GT005] Add postal addresses
 Status     : PARTIAL
-Test Cases : test_012, test_030
+Test Cases : test_014, test_037
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
@@ -126,26 +126,25 @@ Completion : 0% of gold steps
 
 [GT017] Send an email to a contact
 Status     : PARTIAL
-Test Cases : test_012
+Test Cases : test_018
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - select the mail app: touch ImageView rid=contact_emails_image activity=EditContactActivity (tokens=mail)
+  - select the mail app: touch EditText "Email" rid=contact_email activity=EditContactActivity (tokens=mail)
 
 [GT018] Create a contact group
-Status     : COVERED
-Test Cases : test_020
-Confidence : 1.00
+Status     : PARTIAL
+Test Cases : test_020, test_025
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 100% of gold steps
+Completion : 50% of gold steps
 Evidence   :
   - Open the Groups tab: touch TextView "Groups" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)
-  - enter the group name: set_text EditText "Title" rid=group_name text=TestCube Group activity=MainActivity state_changed (tokens=group,name)
 
 [GT019] Add contacts to a group
 Status     : PARTIAL
-Test Cases : test_020, test_022
+Test Cases : test_020, test_025
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
@@ -154,7 +153,7 @@ Evidence   :
 
 [GT020] Rename or delete a group
 Status     : PARTIAL
-Test Cases : test_020, test_022
+Test Cases : test_020, test_025
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -163,50 +162,55 @@ Evidence   :
 
 [GT021] Send a message or email to a whole group
 Status     : PARTIAL
-Test Cases : test_020, test_022
-Confidence : 0.20
+Test Cases : test_020, test_025
+Confidence : 0.38
 Matcher    : deterministic
-Completion : 20% of gold steps
+Completion : 40% of gold steps
 Evidence   :
   - Open the Groups tab: touch TextView "Groups" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)
+  - tap "Send SMS to group"/"Send email to group": touch Button "Send email to group" rid=send_email_to_group activity=GroupContactsActivity (tokens=email,group)
 
 [GT022] Search contacts
 Status     : PARTIAL
-Test Cases : test_012, test_014, test_030
-Confidence : 0.67
-Matcher    : deterministic
-Completion : 67% of gold steps
-Evidence   :
-  - Tap the search icon in the toolbar: touch ImageView "Search" rid=top_toolbar_search_icon activity=MainActivity state_changed (tokens=search,toolbar)
-  - type the name, number or email fragment: touch ImageView rid=contact_emails_image activity=EditContactActivity (tokens=email)
-
-[GT023] Sort the contact list
-Status     : PARTIAL
-Test Cases : test_016, test_025
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - tap "Sort by": touch Button "Sort by" rid=sort activity=MainActivity state_changed (tokens=by,sort)
-
-[GT024] Filter which contact sources are shown
-Status     : PARTIAL
 Test Cases : test_018
-Confidence : 0.28
+Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap "Filter contacts by source"/"Manage shown contact fields": touch RelativeLayout rid=filter_contact_source_holder activity=MainActivity state_changed (tokens=contacts,filter,source)
+  - type the name, number or email fragment: touch EditText "Email" rid=contact_email activity=EditContactActivity (tokens=email)
+
+[GT023] Sort the contact list
+Status     : PARTIAL
+Test Cases : test_021, test_031, test_035, test_041, test_047
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - tap "Sort by": touch Button "Sort by" rid=sort activity=MainActivity (tokens=by,sort)
+  - choose first name, middle name, surname or date created: touch RadioButton "Date created" rid=sorting_dialog_radio_date_created activity=MainActivity state_changed (tokens=created,date)
+
+[GT024] Filter which contact sources are shown
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
 
 [GT025] Choose which fields are visible in the contact detail
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT026] Show only contacts with phone numbers
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT027] Merge duplicate contacts
 Status     : NOT COVERED
@@ -219,14 +223,22 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT029] Export contacts to a vCard (.vcf) file
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings (or the overflow menu): touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT030] Import contacts from a vCard file
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings (or the overflow menu): touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT031] Create a home screen shortcut to a contact
 Status     : NOT COVERED
@@ -234,52 +246,77 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT032] Choose the default tab shown at start-up
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
-
-[GT033] Show or hide the individual tabs
 Status     : PARTIAL
-Test Cases : test_008, test_010, test_012, test_014, test_016, test_018, test_020, test_022, test_023, test_025, test_027, test_029
-Confidence : 0.28
+Test Cases : test_006, test_012
+Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tick the tabs (Contacts, Favourites, Groups) to keep visible: touch activity=MainActivity (outcome tokens=contacts,groups,tabs)
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT033] Show or hide the individual tabs
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_006, test_009, test_010, test_012, test_014, test_016, test_018, test_020, test_021, test_023, test_025, test_027, test_029, test_031, test_033, test_035, test_037, test_039, test_041, test_043, test_045, test_047
+Confidence : 0.61
+Matcher    : deterministic
+Completion : 67% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+  - tick the tabs (Contacts, Favourites, Groups) to keep visible: touch ImageView "More options" activity=MainActivity (outcome tokens=contacts,groups,tabs)
 
 [GT034] Customise the app colours and theme
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT035] Protect the app with a PIN, pattern or fingerprint
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT036] Change the app language and font size
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT037] Show contact thumbnails and phone numbers in the list
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT038] View the about screen, FAQ and licences
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_006, test_012, test_027, test_031
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
-1 / 38 features covered
-12 / 38 features partial
-Feature Coverage = COVERED / Total = 2.63%
-Weighted Feature Coverage = mean(completion_ratio) = 11.54%
+0 / 38 features covered
+22 / 38 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 19.30%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -295,41 +332,41 @@ Extracted vs ground truth: 14 / 38 (completeness ratio 0.368)
 
 Feature-inference P/R/F1: 0.93 / 0.37 / 0.53 (false not_present=0)
 
-GT GT001 'Create a contact' | journal=G001 'Create a contact' (sim=1.0, name) status=partial | offline=not_covered
+GT GT001 'Create a contact' | journal=G001 'Create a contact' (sim=1.0, name) status=covered | offline=not_covered
 GT GT002 'Add a photo to a contact' | journal=missing (no name match) status=missing | offline=partial
-GT GT003 'Add multiple phone numbers with types' | journal=G002 'Add multiple phone numbers' (sim=0.667, name) status=partial | offline=partial
-GT GT004 'Add email addresses' | journal=G003 'Add postal addresses' (sim=0.5, name) status=partial | offline=partial
+GT GT003 'Add multiple phone numbers with types' | journal=G002 'Add multiple phone numbers' (sim=0.667, name) status=covered | offline=partial
+GT GT004 'Add email addresses' | journal=G003 'Add postal addresses' (sim=0.5, name) status=covered | offline=partial
 GT GT005 'Add postal addresses' | journal=missing (no name match) status=missing | offline=partial
 GT GT006 'Add important dates (birthday and anniversary)' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT007 'Add the organisation and job title' | journal=G004 'Add the organisation' (sim=0.538, name) status=partial | offline=not_covered
 GT GT008 'Add websites and instant messaging handles' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT009 'Add notes to a contact' | journal=G005 'Add notes' (sim=0.667, name) status=partial | offline=not_covered
 GT GT010 'Set a custom ringtone for a contact' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT011 'Edit a contact' | journal=G006 'Edit a contact' (sim=1.0, name) status=partial | offline=not_covered
+GT GT011 'Edit a contact' | journal=G006 'Edit a contact' (sim=1.0, name) status=covered | offline=not_covered
 GT GT012 'Delete a contact' | journal=G007 'Mark a contact' (sim=0.333, name) status=partial | offline=not_covered
 GT GT013 'Mark a contact as a favourite' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT014 'Remove a contact from favourites' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT015 'Call a contact' | journal=G008 'Call a contact' (sim=1.0, name) status=partial | offline=not_covered
+GT GT015 'Call a contact' | journal=G008 'Call a contact' (sim=1.0, name) status=covered | offline=not_covered
 GT GT016 'Send an SMS to a contact' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT017 'Send an email to a contact' | journal=G009 'Send an email' (sim=0.667, name) status=partial | offline=partial
-GT GT018 'Create a contact group' | journal=G010 'Add contacts' (sim=0.333, name) status=partial | offline=covered
+GT GT017 'Send an email to a contact' | journal=G009 'Send an email' (sim=0.667, name) status=covered | offline=partial
+GT GT018 'Create a contact group' | journal=G010 'Add contacts' (sim=0.333, name) status=covered | offline=partial
 GT GT019 'Add contacts to a group' | journal=missing (no name match) status=missing | offline=partial
 GT GT020 'Rename or delete a group' | journal=missing (no name match) status=missing | offline=partial
-GT GT021 'Send a message or email to a whole group' | journal=G011 'Send a message' (sim=0.4, name) status=partial | offline=partial
+GT GT021 'Send a message or email to a whole group' | journal=G011 'Send a message' (sim=0.4, name) status=covered | offline=partial
 GT GT022 'Search contacts' | journal=missing (no name match) status=missing | offline=partial
 GT GT023 'Sort the contact list' | journal=G012 'Sort the contact list' (sim=1.0, name) status=partial | offline=partial
-GT GT024 'Filter which contact sources are shown' | journal=missing (no name match) status=missing | offline=partial
-GT GT025 'Choose which fields are visible in the contact detail' | journal=G013 'Choose' (sim=0.429, name) status=partial | offline=not_covered
-GT GT026 'Show only contacts with phone numbers' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Filter which contact sources are shown' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Choose which fields are visible in the contact detail' | journal=G013 'Choose' (sim=0.429, name) status=partial | offline=partial
+GT GT026 'Show only contacts with phone numbers' | journal=missing (no name match) status=missing | offline=partial
 GT GT027 'Merge duplicate contacts' | journal=G014 'Merge duplicate contacts' (sim=1.0, name) status=partial | offline=not_covered
 GT GT028 'Share a contact as a vCard' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT029 'Export contacts to a vCard (.vcf) file' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT030 'Import contacts from a vCard file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Export contacts to a vCard (.vcf) file' | journal=missing (no name match) status=missing | offline=partial
+GT GT030 'Import contacts from a vCard file' | journal=missing (no name match) status=missing | offline=partial
 GT GT031 'Create a home screen shortcut to a contact' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT032 'Choose the default tab shown at start-up' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT032 'Choose the default tab shown at start-up' | journal=missing (no name match) status=missing | offline=partial
 GT GT033 'Show or hide the individual tabs' | journal=missing (no name match) status=missing | offline=partial
-GT GT034 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT035 'Protect the app with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT036 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT037 'Show contact thumbnails and phone numbers in the list' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT038 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT034 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=partial
+GT GT035 'Protect the app with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=partial
+GT GT036 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=partial
+GT GT037 'Show contact thumbnails and phone numbers in the list' | journal=missing (no name match) status=missing | offline=partial
+GT GT038 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

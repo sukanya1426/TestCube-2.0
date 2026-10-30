@@ -2,8 +2,8 @@
   "application": "Markor",
   "total_features": 46,
   "covered_features": 0,
-  "uncovered_features": 43,
-  "partial_features": 3,
+  "uncovered_features": 44,
+  "partial_features": 2,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/markor",
@@ -178,19 +178,13 @@
     {
       "id": "GT016",
       "name": "Search across all files in the notebook",
-      "status": "partial",
-      "test_cases": [
-        "test_003"
-      ],
-      "confidence": 0.1667,
-      "evidence": [
-        "choose whether to search file names only or file contents: touch FrameLayout rid=content activity=StoragePermissionActivity (tokens=contents)"
-      ],
-      "matched_path": [
-        "choose whether to search file names only or file contents"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.16666666666666666
+      "completion_ratio": 0.0
     },
     {
       "id": "GT017",
@@ -739,7 +733,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1157,9 +1151,9 @@
   "total_actions": 759,
   "actions_with_widget": 367,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 3,
+  "exercised_features": 2,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.019927536231884056,
-  "weighted_coverage_percentage": 1.99,
+  "weighted_coverage": 0.016304347826086956,
+  "weighted_coverage_percentage": 1.63,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

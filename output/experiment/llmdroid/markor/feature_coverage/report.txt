@@ -8,14 +8,14 @@ Total Actions    : 759
 
 Total Features   : 46
 Covered Features : 0
-Partial          : 3
-Uncovered        : 43
+Partial          : 2
+Uncovered        : 44
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 1.99%  (mean completion ratio; partial steps count)
-Exercised        : 3  (covered 0 + partial 3)
+Weighted Coverage: 1.63%  (mean completion ratio; partial steps count)
+Exercised        : 2  (covered 0 + partial 2)
 
 ground_truth_source: independent_labeled_set
 
@@ -104,13 +104,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT016] Search across all files in the notebook
-Status     : PARTIAL
-Test Cases : test_003
-Confidence : 0.17
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 17% of gold steps
-Evidence   :
-  - choose whether to search file names only or file contents: touch FrameLayout rid=content activity=StoragePermissionActivity (tokens=contents)
+Completion : 0% of gold steps
 
 [GT017] Open the QuickNote file
 Status     : PARTIAL
@@ -275,9 +271,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 46 features covered
-3 / 46 features partial
+2 / 46 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 1.99%
+Weighted Feature Coverage = mean(completion_ratio) = 1.63%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -308,7 +304,7 @@ GT GT012 'Insert the current date or time' | journal=missing (no name match) sta
 GT GT013 'Insert a table' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT014 'Undo and redo edits' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT015 'Search inside the open document' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT016 'Search across all files in the notebook' | journal=missing (no name match) status=missing | offline=partial
+GT GT016 'Search across all files in the notebook' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT017 'Open the QuickNote file' | journal=missing (no name match) status=missing | offline=partial
 GT GT018 'Open the To-Do file' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT019 'Manage a todo.txt file' | journal=missing (no name match) status=missing | offline=partial

@@ -2,8 +2,8 @@
   "application": "Fossify Voice Recorder",
   "total_features": 23,
   "covered_features": 0,
-  "uncovered_features": 22,
-  "partial_features": 1,
+  "uncovered_features": 11,
+  "partial_features": 12,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifyvoicerecorder",
@@ -70,11 +70,11 @@
       "name": "Play a recording",
       "status": "partial",
       "test_cases": [
-        "test_011"
+        "test_001"
       ],
       "confidence": 0.18,
       "evidence": [
-        "use play/pause and the seek bar: touch ImageView \"Play / Pause\" rid=play_pause_btn activity=MainActivity (tokens=pause,play)"
+        "use play/pause and the seek bar: touch ImageView \"Play / Pause\" rid=play_pause_btn state_changed (tokens=pause,play)"
       ],
       "matched_path": [
         "use play/pause and the seek bar"
@@ -107,13 +107,20 @@
     {
       "id": "GT009",
       "name": "Restore or empty the recycle bin",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_013"
+      ],
+      "confidence": 0.4625,
+      "evidence": [
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action: touch TextView \"The recycle bin is empty\" rid=trash_placeholder state_changed (tokens=bin,empty,recycle)"
+      ],
+      "matched_path": [
+        "long-press an item and tap Restore, or tap the \"Empty recycle bin\" action"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT010",
@@ -140,13 +147,19 @@
     {
       "id": "GT012",
       "name": "Search recordings",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the search icon: touch ImageView \"Search\" rid=top_toolbar_search_icon state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "tap the search icon"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT013",
@@ -162,57 +175,92 @@
     {
       "id": "GT014",
       "name": "Choose the recording audio format",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT015",
       "name": "Set the recording bitrate and quality",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT016",
       "name": "Choose the folder where recordings are saved",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT017",
       "name": "Hide the recording notification",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT018",
       "name": "Keep the screen on while recording",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT019",
@@ -228,46 +276,76 @@
     {
       "id": "GT020",
       "name": "Protect the app with a PIN, pattern or fingerprint",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT021",
       "name": "Customise the app colours and theme",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT022",
       "name": "Change the app language and font size",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT023",
       "name": "View the about screen, FAQ and licences",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003",
+        "test_007",
+        "test_009"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     }
   ],
   "confusion": [
@@ -278,7 +356,7 @@
       "journal_name": "Record audio",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -291,7 +369,7 @@
       "journal_name": "Pause",
       "name_similarity": 0.364,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "dropped",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -304,7 +382,7 @@
       "journal_name": "Watch the live audio",
       "name_similarity": 0.571,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -369,7 +447,7 @@
       "journal_name": "Delete a recording",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -382,8 +460,8 @@
       "journal_name": "Restore",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "pending",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -395,7 +473,7 @@
       "journal_name": "Share a recording",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -408,7 +486,7 @@
       "journal_name": "View recording properties",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -421,8 +499,8 @@
       "journal_name": "Search recordings",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -434,7 +512,7 @@
       "journal_name": "Sort the recordings list",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -447,8 +525,8 @@
       "journal_name": "Choose the recording audio",
       "name_similarity": 0.8,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "pending",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -461,7 +539,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -474,7 +552,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -487,7 +565,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -500,7 +578,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -526,7 +604,7 @@
       "name_similarity": 0.105,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -539,7 +617,7 @@
       "name_similarity": 0.118,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -552,7 +630,7 @@
       "name_similarity": 0.105,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -565,7 +643,7 @@
       "name_similarity": 0.111,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -574,15 +652,15 @@
   "feature_inference": {
     "true_positives": 14,
     "false_negatives": 9,
-    "false_positives": 3,
-    "precision": 0.8235294117647058,
+    "false_positives": 0,
+    "precision": 1.0,
     "recall": 0.6086956521739131,
-    "f1": 0.7,
+    "f1": 0.7567567567567568,
     "false_not_present": 0,
     "false_not_present_rate": 0.0,
-    "extracted_count": 17,
+    "extracted_count": 14,
     "ground_truth_count": 23,
-    "feature_completeness_ratio": 0.739,
+    "feature_completeness_ratio": 0.609,
     "id_collisions": [],
     "id_collisions_loud": false,
     "prf1_withheld": false
@@ -590,12 +668,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 161,
-  "actions_with_widget": 115,
+  "total_actions": 291,
+  "actions_with_widget": 262,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 1,
+  "exercised_features": 12,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.008695652173913044,
-  "weighted_coverage_percentage": 0.87,
+  "weighted_coverage": 0.1644927536231884,
+  "weighted_coverage_percentage": 16.45,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

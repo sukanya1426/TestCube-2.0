@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: Odyssey
 
-Total Actions    : 218
+Total Actions    : 251
 
 Total Features   : 33
 Covered Features : 0
-Partial          : 17
-Uncovered        : 16
+Partial          : 20
+Uncovered        : 13
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 17.12%  (mean completion ratio; partial steps count)
-Exercised        : 17  (covered 0 + partial 17)
+Weighted Coverage: 20.25%  (mean completion ratio; partial steps count)
+Exercised        : 20  (covered 0 + partial 20)
 
 ground_truth_source: independent_labeled_set
 
@@ -29,32 +29,32 @@ FEATURE DETAILS
 ----------------------------------------
 
 [GT001] Browse the music library by album
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Browse the music library by artist
 Status     : PARTIAL
-Test Cases : test_017, test_019, test_021
-Confidence : 0.23
+Test Cases : test_001
+Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - tap the "Albums" tab in My Music: long_touch TextView "My Music" activity=OdysseyMainActivity (tokens=music,my)
-
-[GT002] Browse the music library by artist
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
+  - Open the "Artists" tab: touch TextView "Only show album artists" rid=title activity=OdysseyMainActivity state_changed (tokens=artists)
 
 [GT003] Browse all tracks
-Status     : PARTIAL
-Test Cases : test_021
-Confidence : 0.33
-Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the "All tracks"/Tracks tab: touch TextView "My Music" activity=OdysseyMainActivity (tokens=tracks)
-
-[GT004] Browse recently added albums
 Status     : NOT COVERED
 Matcher    : deterministic
 Completion : 0% of gold steps
+
+[GT004] Browse recently added albums
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - tap an album to open or play it: touch TextView "Only show album artists" rid=title activity=OdysseyMainActivity state_changed (tokens=album)
 
 [GT005] Browse the file system with the file browser
 Status     : NOT COVERED
@@ -63,23 +63,21 @@ Completion : 0% of gold steps
 
 [GT006] Play a track
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_023, test_027, test_029, test_031, test_033, test_035, test_036, test_038, test_040, test_042, test_044, test_046
-Confidence : 0.67
+Test Cases : test_001
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 67% of gold steps
+Completion : 33% of gold steps
 Evidence   :
-  - Tap a track in any list: touch Button "Add playlist" rid=action_add_playlist_tracks activity=OdysseyMainActivity (tokens=track)
-  - playback starts and the now-playing bar appears at the bottom: touch TextView "Recent albums" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=now,playback)
+  - playback starts and the now-playing bar appears at the bottom: touch Button "Cancel" rid=button2 activity=OdysseyMainActivity state_changed (outcome tokens=now,playback)
 
 [GT007] Control playback from the full player
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_011, test_013, test_015, test_021, test_023, test_027, test_031, test_033, test_040, test_042, test_044, test_046
-Confidence : 0.47
+Test Cases : test_001
+Confidence : 0.22
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 25% of gold steps
 Evidence   :
-  - Drag up the now-playing bar: touch LinearLayout activity=OdysseyMainActivity state_changed (outcome tokens=now,up)
-  - use play/pause, previous and next: touch ImageButton rid=now_playing_topPlayPauseButton activity=OdysseyMainActivity (tokens=pause,play)
+  - Drag up the now-playing bar: touch TextView "Recent albums" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=now,up)
 
 [GT008] Use repeat and shuffle
 Status     : NOT COVERED
@@ -88,7 +86,7 @@ Completion : 0% of gold steps
 
 [GT009] View and edit the play queue
 Status     : PARTIAL
-Test Cases : test_005
+Test Cases : test_001
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
@@ -102,61 +100,53 @@ Completion : 0% of gold steps
 
 [GT011] Clear the play queue
 Status     : PARTIAL
-Test Cases : test_005
+Test Cases : test_001
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open the full player or the queue view: touch TextView "Add directory to queue" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=queue)
+  - Open the full player or the queue view: touch ImageView "More options" activity=OdysseyMainActivity state_changed (outcome tokens=queue)
 
 [GT012] Save the current queue as a playlist
 Status     : PARTIAL
-Test Cases : test_005
+Test Cases : test_001
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open the full player or queue view: touch TextView "Add directory to queue" rid=title activity=OdysseyMainActivity state_changed (outcome tokens=queue)
+  - Open the full player or queue view: touch ImageView "More options" activity=OdysseyMainActivity state_changed (outcome tokens=queue)
 
 [GT013] Browse and play saved playlists
-Status     : PARTIAL
-Test Cases : test_031
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the "Playlists" tab: touch TextView "Playlists" activity=OdysseyMainActivity (tokens=playlists)
+Completion : 0% of gold steps
 
 [GT014] Delete a playlist
-Status     : PARTIAL
-Test Cases : test_031
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the Playlists tab: touch TextView "Playlists" activity=OdysseyMainActivity (tokens=playlists)
+Completion : 0% of gold steps
 
 [GT015] Create a bookmark to resume an audiobook or podcast
 Status     : PARTIAL
-Test Cases : test_027
+Test Cases : test_001
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - tap "Create bookmark": touch TextView "Bookmarks" activity=OdysseyMainActivity (tokens=bookmark)
+  - While playing: touch CheckedTextView "Settings" rid=design_menu_item_text activity=OdysseyMainActivity state_changed (outcome tokens=while)
 
 [GT016] Resume from a bookmark
 Status     : PARTIAL
-Test Cases : test_027
+Test Cases : test_001
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap "Bookmarks": touch TextView "Bookmarks" activity=OdysseyMainActivity (tokens=bookmarks)
+  - tap "Bookmarks": touch LinearLayoutCompat rid=nav_bookmarks activity=OdysseyMainActivity state_changed (tokens=bookmarks)
 
 [GT017] Delete a bookmark
 Status     : PARTIAL
-Test Cases : test_005, test_027, test_031, test_036, test_038
+Test Cases : test_001
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -170,45 +160,53 @@ Completion : 0% of gold steps
 
 [GT019] Jump from a track to its album or artist
 Status     : PARTIAL
-Test Cases : test_017, test_019
+Test Cases : test_001
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Long-press a track (or open the player overflow menu): long_touch TextView "My Music" activity=OdysseyMainActivity (tokens=track)
+  - tap "Show album" or "Show artist": touch TextView "Only show album artists" rid=title activity=OdysseyMainActivity state_changed (tokens=album)
 
 [GT020] View track and album information
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Download artwork for artists and albums
 Status     : PARTIAL
-Test Cases : test_017, test_019
+Test Cases : test_001
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
+
+[GT022] Clear the artwork cache
+Status     : PARTIAL
+Test Cases : test_001
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Long-press a track: long_touch TextView "My Music" activity=OdysseyMainActivity (tokens=track)
-
-[GT021] Download artwork for artists and albums
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
-
-[GT022] Clear the artwork cache
-Status     : NOT COVERED
-Matcher    : deterministic
-Completion : 0% of gold steps
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
 
 [GT023] Restrict artwork downloads to Wi-Fi
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
 
 [GT024] Control playback from the lock screen and the notification
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_023, test_027, test_029, test_031, test_033, test_035, test_036, test_038, test_040, test_042, test_044, test_046
+Test Cases : test_001
 Confidence : 0.29
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - use the play/pause, previous, next and stop controls shown with the album art: touch Button "Cancel" rid=button2 activity=OdysseyMainActivity state_changed (outcome tokens=album,controls,pause,play)
+  - use the play/pause, previous, next and stop controls shown with the album art: set_text AutoCompleteTextView "" rid=search_src_text text=test activity=OdysseyMainActivity state_changed (outcome tokens=album,controls,pause,play)
 
 [GT025] Add the Odyssey home screen widget
 Status     : NOT COVERED
@@ -226,36 +224,51 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT028] Change the theme
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
+  - tap the theme entry: touch TextView "Theme" rid=title activity=OdysseyMainActivity (tokens=theme)
 
 [GT029] Change the library view style
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_017, test_027, test_031, test_033, test_035, test_036, test_038, test_044
-Confidence : 0.28
+Test Cases : test_001
+Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - choose whether albums and artists are shown as a grid or as a list: touch Button "Cancel" rid=button2 activity=OdysseyMainActivity state_changed (outcome tokens=albums,artists,grid)
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
 
 [GT030] Change the album and track sort order
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
+  - the library section: touch TextView "Library" rid=title activity=OdysseyMainActivity (tokens=library)
 
 [GT031] Configure playback behaviour
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
 
 [GT032] Rescan the media library
 Status     : PARTIAL
-Test Cases : test_005, test_027, test_031, test_036, test_038
-Confidence : 0.25
+Test Cases : test_001
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 25% of gold steps
+Completion : 50% of gold steps
 Evidence   :
+  - Open Settings (or the drawer): touch TextView "Settings" activity=OdysseyMainActivity (tokens=settings)
   - the new files appear in the lists: touch ImageButton "Open navigation drawer" activity=OdysseyMainActivity state_changed (outcome tokens=files,lists)
 
 [GT033] View the about screen and licences
@@ -268,9 +281,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 33 features covered
-17 / 33 features partial
+20 / 33 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 17.12%
+Weighted Feature Coverage = mean(completion_ratio) = 20.25%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -282,40 +295,40 @@ LLM/VLM semantic verdict, not string or token overlap.
 JOURNAL VS GROUND TRUTH
 ----------------------------------------
 
-Extracted vs ground truth: 21 / 33 (completeness ratio 0.636)
+Extracted vs ground truth: 14 / 33 (completeness ratio 0.424)
 
-Feature-inference P/R/F1: 0.67 / 0.42 / 0.52 (false not_present=0)
+Feature-inference P/R/F1: 1.00 / 0.42 / 0.60 (false not_present=0)
 
-GT GT001 'Browse the music library by album' | journal=G001 'Browse the music library' (sim=0.8, name) status=partial | offline=partial
-GT GT002 'Browse the music library by artist' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT003 'Browse all tracks' | journal=G002 'Browse all tracks' (sim=1.0, name) status=covered | offline=partial
-GT GT004 'Browse recently added albums' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT005 'Browse the file system with the file browser' | journal=G003 'Browse the file system' (sim=0.667, name) status=partial | offline=not_covered
+GT GT001 'Browse the music library by album' | journal=G001 'Browse the music library' (sim=0.8, name) status=covered | offline=not_covered
+GT GT002 'Browse the music library by artist' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Browse all tracks' | journal=G002 'Browse all tracks' (sim=1.0, name) status=partial | offline=not_covered
+GT GT004 'Browse recently added albums' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Browse the file system with the file browser' | journal=G003 'Browse the file system' (sim=0.667, name) status=covered | offline=not_covered
 GT GT006 'Play a track' | journal=missing (no name match) status=missing | offline=partial
 GT GT007 'Control playback from the full player' | journal=G004 'Control playback' (sim=0.615, name) status=covered | offline=partial
 GT GT008 'Use repeat and shuffle' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT009 'View and edit the play queue' | journal=G005 'View' (sim=0.538, name) status=partial | offline=partial
-GT GT010 'Add an album, artist or track to the queue' | journal=G010 'Jump' (sim=0.375, name) status=partial | offline=not_covered
-GT GT011 'Clear the play queue' | journal=G006 'Clear the play queue' (sim=1.0, name) status=partial | offline=partial
+GT GT009 'View and edit the play queue' | journal=G005 'View' (sim=0.538, name) status=covered | offline=partial
+GT GT010 'Add an album, artist or track to the queue' | journal=G010 'Jump' (sim=0.375, name) status=covered | offline=not_covered
+GT GT011 'Clear the play queue' | journal=G006 'Clear the play queue' (sim=1.0, name) status=covered | offline=partial
 GT GT012 'Save the current queue as a playlist' | journal=missing (no name match) status=missing | offline=partial
-GT GT013 'Browse and play saved playlists' | journal=G007 'Browse' (sim=0.417, name) status=covered | offline=partial
-GT GT014 'Delete a playlist' | journal=G009 'Delete a bookmark' (sim=0.333, name) status=partial | offline=partial
+GT GT013 'Browse and play saved playlists' | journal=G007 'Browse' (sim=0.417, name) status=covered | offline=not_covered
+GT GT014 'Delete a playlist' | journal=G009 'Delete a bookmark' (sim=0.333, name) status=partial | offline=not_covered
 GT GT015 'Create a bookmark to resume an audiobook or podcast' | journal=G008 'Create a bookmark' (sim=0.5, name) status=partial | offline=partial
 GT GT016 'Resume from a bookmark' | journal=missing (no name match) status=missing | offline=partial
 GT GT017 'Delete a bookmark' | journal=missing (no name match) status=missing | offline=partial
 GT GT018 'Search the library' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT019 'Jump from a track to its album or artist' | journal=missing (no name match) status=missing | offline=partial
-GT GT020 'View track and album information' | journal=missing (no name match) status=missing | offline=partial
-GT GT021 'Download artwork for artists and albums' | journal=G011 'Download artwork' (sim=0.455, name) status=partial | offline=not_covered
-GT GT022 'Clear the artwork cache' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT023 'Restrict artwork downloads to Wi-Fi' | journal=G012 'Restrict artwork downloads' (sim=1.0, name) status=partial | offline=not_covered
+GT GT020 'View track and album information' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Download artwork for artists and albums' | journal=G011 'Download artwork' (sim=0.455, name) status=covered | offline=partial
+GT GT022 'Clear the artwork cache' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Restrict artwork downloads to Wi-Fi' | journal=G012 'Restrict artwork downloads' (sim=1.0, name) status=partial | offline=partial
 GT GT024 'Control playback from the lock screen and the notification' | journal=missing (no name match) status=missing | offline=partial
 GT GT025 'Add the Odyssey home screen widget' | journal=G013 'Add the Odyssey home' (sim=0.692, name) status=partial | offline=not_covered
 GT GT026 'Scrobble to Last.fm through a scrobbler app' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT027 'Open the system equaliser' | journal=G014 'Open the system equaliser' (sim=1.0, name) status=partial | offline=not_covered
-GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=partial
 GT GT029 'Change the library view style' | journal=missing (no name match) status=missing | offline=partial
-GT GT030 'Change the album and track sort order' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT031 'Configure playback behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Change the album and track sort order' | journal=missing (no name match) status=missing | offline=partial
+GT GT031 'Configure playback behaviour' | journal=missing (no name match) status=missing | offline=partial
 GT GT032 'Rescan the media library' | journal=missing (no name match) status=missing | offline=partial
 GT GT033 'View the about screen and licences' | journal=missing (no name match) status=missing | offline=not_covered

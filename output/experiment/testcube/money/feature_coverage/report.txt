@@ -4,7 +4,7 @@ TestCube Feature Coverage Report
 
 Application: Money Manager Ex
 
-Total Actions    : 47
+Total Actions    : 252
 
 Total Features   : 28
 Covered Features : 0
@@ -14,7 +14,7 @@ Uncovered        : 17
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 9.44%  (mean completion ratio; partial steps count)
+Weighted Coverage: 9.69%  (mean completion ratio; partial steps count)
 Exercised        : 11  (covered 0 + partial 11)
 
 ground_truth_source: independent_labeled_set
@@ -35,28 +35,28 @@ Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - Tap Create Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
+  - Tap Create Database: touch Button "CREATE DATABASE" rid=createDatabaseButton state_changed (tokens=database)
 
 [GT002] Create First/New Account
 Status     : PARTIAL
-Test Cases : test_001, test_005, test_009
-Confidence : 0.50
+Test Cases : test_001, test_003, test_005, test_009
+Confidence : 0.38
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 38% of gold steps
 Evidence   :
-  - Tap Add Account (+): touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)
-  - Enter an Account Name: set_text EditText "Account name" rid=editTextAccountName text=testcube.mmb activity=AccountEditActivity (tokens=account,name)
+  - Tap Add Account (+): touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount state_changed (tokens=account)
+  - Enter an Account Name: set_text EditText "Account name" rid=editTextAccountName text=testcube.mmb activity=AccountEditActivity state_changed (tokens=account,name)
   - Select Currency: touch TextView "SELECT CURRENCY" activity=AccountEditActivity (tokens=currency)
-  - Set Opening Date: touch TextView "To Date" rid=textViewToDate activity=SearchActivity state_changed (tokens=date,opening)
 
 [GT003] Add a Transaction
 Status     : PARTIAL
-Test Cases : test_011
-Confidence : 0.10
+Test Cases : test_007, test_009, test_011
+Confidence : 0.22
 Matcher    : deterministic
-Completion : 11% of gold steps
+Completion : 22% of gold steps
 Evidence   :
-  - Optionally enter Transaction Number and Note: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=number,transaction)
+  - Select Status: touch TextView "STATUS" activity=SearchActivity (tokens=status)
+  - Select or create a Category: scroll Spinner rid=spinnerCategory activity=MainActivity state_changed (tokens=category)
 
 [GT004] Edit / Delete / Modify a Transaction
 Status     : NOT COVERED
@@ -65,21 +65,21 @@ Completion : 0% of gold steps
 
 [GT005] Filter Transactions by Date Range
 Status     : PARTIAL
-Test Cases : test_001, test_005, test_007, test_009
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011
 Confidence : 0.17
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - View the updated filtered transaction list: touch Button "OK" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)
+  - View the updated filtered transaction list: set_text EditText "Just for .emb file" rid=txtPassword text=your_password activity=MainActivity (outcome tokens=filtered,transaction)
 
 [GT006] Search/Sort Transactions
 Status     : PARTIAL
-Test Cases : test_007
+Test Cases : test_011
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Or tap Sort and select a field: touch Button "Sort" rid=menu_sort activity=MainActivity state_changed (tokens=sort)
+  - Or tap Sort and select a field: touch Button "Sort" rid=menu_sort activity=MainActivity (tokens=sort)
 
 [GT007] Mark Account as Favorite
 Status     : NOT COVERED
@@ -88,12 +88,12 @@ Completion : 0% of gold steps
 
 [GT008] Manage Accounts
 Status     : PARTIAL
-Test Cases : test_001, test_005
+Test Cases : test_001, test_003, test_005, test_009
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Tap Add (+) to create a new account: touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount activity=AccountEditActivity state_changed (tokens=account)
+  - Tap Add (+) to create a new account: touch Button "CREATE NEW ACCOUNT" rid=buttonAddAccount state_changed (tokens=account)
 
 [GT009] Set Up a Budget
 Status     : NOT COVERED
@@ -107,12 +107,12 @@ Completion : 0% of gold steps
 
 [GT011] View Budget Details / Transactions
 Status     : PARTIAL
-Test Cases : test_001, test_005, test_007, test_009
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - View the filtered transaction list: touch Button "OK" rid=btnSubmit activity=MainActivity state_changed (outcome tokens=filtered,transaction)
+  - View the filtered transaction list: set_text EditText "Just for .emb file" rid=txtPassword text=your_password activity=MainActivity (outcome tokens=filtered,transaction)
 
 [GT012] Delete a Budget
 Status     : NOT COVERED
@@ -135,13 +135,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT016] Manage Payees
-Status     : PARTIAL
-Test Cases : test_011
-Confidence : 0.17
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 17% of gold steps
-Evidence   :
-  - Open the Payee field while adding or editing a transaction, or navigate to Payees: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)
+Completion : 0% of gold steps
 
 [GT017] Manage Categories
 Status     : PARTIAL
@@ -150,7 +146,7 @@ Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - Open the Category field while adding or editing a transaction, or navigate to Categories: set_text EditText "Transaction number" rid=editTextTransNumber text=123456789 activity=SearchActivity state_changed (tokens=editing,transaction)
+  - Tap + to add a new category: touch Spinner rid=spinnerCategory activity=MainActivity state_changed (tokens=category)
 
 [GT018] View a Built-In Report
 Status     : NOT COVERED
@@ -179,7 +175,7 @@ Completion : 0% of gold steps
 
 [GT023] Manage Currencies & Exchange Rates
 Status     : PARTIAL
-Test Cases : test_005
+Test Cases : test_001
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
@@ -193,7 +189,7 @@ Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - On the create or open screen, tap Open Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
+  - On the create or open screen, tap Open Database: touch Button "CREATE DATABASE" rid=createDatabaseButton state_changed (tokens=database)
 
 [GT025] Set/Change Database Password
 Status     : NOT COVERED
@@ -206,9 +202,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT027] Import/Export via QIF or CSV
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_009
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Navigate to Settings or the account options menu: touch TextView "ACCOUNT" activity=SearchActivity (tokens=account)
 
 [GT028] Configure App Settings
 Status     : NOT COVERED
@@ -222,7 +222,7 @@ SUMMARY
 0 / 28 features covered
 11 / 28 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 9.44%
+Weighted Feature Coverage = mean(completion_ratio) = 9.69%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -234,35 +234,35 @@ LLM/VLM semantic verdict, not string or token overlap.
 JOURNAL VS GROUND TRUTH
 ----------------------------------------
 
-Extracted vs ground truth: 28 / 28 (completeness ratio 1.0)
+Extracted vs ground truth: 33 / 28 (completeness ratio 1.179)
 
-Feature-inference P/R/F1: 1.00 / 1.00 / 1.00 (false not_present=0)
+Feature-inference P/R/F1: 0.85 / 1.00 / 0.92 (false not_present=0)
 
 GT GT001 'Create a New Database' | journal=GT001 'New database' (sim=0.667, name) status=partial | offline=partial
 GT GT002 'Create First/New Account' | journal=GT002 'New account' (sim=0.5, name) status=partial | offline=partial
 GT GT003 'Add a Transaction' | journal=GT003 'Add transaction' (sim=1.0, name) status=partial | offline=partial
 GT GT004 'Edit / Delete / Modify a Transaction' | journal=GT004 'Edit transaction' (sim=0.5, name) status=partial | offline=not_covered
 GT GT005 'Filter Transactions by Date Range' | journal=GT005 'Filter by date' (sim=0.5, name) status=partial | offline=partial
-GT GT006 'Search/Sort Transactions' | journal=GT006 'Search transactions' (sim=0.667, name) status=partial | offline=partial
-GT GT007 'Mark Account as Favorite' | journal=GT007 'Favorite account' (sim=0.667, name) status=pending | offline=not_covered
-GT GT008 'Manage Accounts' | journal=GT008 'Manage accounts' (sim=1.0, name) status=pending | offline=partial
-GT GT009 'Set Up a Budget' | journal=GT009 'Budget' (sim=0.5, name) status=pending | offline=not_covered
-GT GT010 'Set/Edit a Category Budget Amount' | journal=GT010 'Budget amount' (sim=0.4, name) status=pending | offline=not_covered
-GT GT011 'View Budget Details / Transactions' | journal=GT011 'Budget details' (sim=0.5, name) status=pending | offline=partial
-GT GT012 'Delete a Budget' | journal=GT012 'Delete budget' (sim=1.0, name) status=pending | offline=not_covered
-GT GT013 'Configure Budget View Options' | journal=GT013 'Budget view options' (sim=0.75, name) status=pending | offline=not_covered
-GT GT014 'Create a Recurring/Scheduled Transaction' | journal=GT014 'Scheduled transaction' (sim=0.5, name) status=pending | offline=not_covered
-GT GT015 'Respond to a Recurring Transaction Prompt' | journal=GT015 'Recurring prompt' (sim=0.5, name) status=pending | offline=not_covered
-GT GT016 'Manage Payees' | journal=GT016 'Payees' (sim=0.5, name) status=pending | offline=partial
-GT GT017 'Manage Categories' | journal=GT017 'Categories' (sim=0.5, name) status=pending | offline=partial
-GT GT018 'View a Built-In Report' | journal=GT018 'Built-in report' (sim=0.667, name) status=pending | offline=not_covered
-GT GT019 'Run a General Report' | journal=GT019 'General report' (sim=0.667, name) status=pending | offline=not_covered
-GT GT020 'Track Stock/Mutual Fund Investments' | journal=GT020 'Investments' (sim=0.385, name) status=pending | offline=not_covered
-GT GT021 'Add a Stock Transaction' | journal=GT021 'Stock transaction' (sim=0.667, name) status=pending | offline=not_covered
-GT GT022 'Track Fixed Assets' | journal=GT022 'Fixed assets' (sim=0.667, name) status=pending | offline=not_covered
-GT GT023 'Manage Currencies & Exchange Rates' | journal=GT023 'Currencies' (sim=0.357, name) status=pending | offline=partial
-GT GT024 'Set Up Data Sync' | journal=GT024 'Sync' (sim=0.333, name) status=pending | offline=partial
-GT GT025 'Set/Change Database Password' | journal=GT025 'Database password' (sim=0.625, name) status=pending | offline=not_covered
-GT GT026 'Enable Fingerprint/Biometric Lock' | journal=GT026 'Fingerprint lock' (sim=0.5, name) status=pending | offline=not_covered
-GT GT027 'Import/Export via QIF or CSV' | journal=GT027 'Import export' (sim=0.4, name) status=pending | offline=not_covered
-GT GT028 'Configure App Settings' | journal=GT028 'Settings' (sim=0.333, name) status=pending | offline=not_covered
+GT GT006 'Search/Sort Transactions' | journal=GT006 'Search transactions' (sim=0.667, name) status=covered | offline=partial
+GT GT007 'Mark Account as Favorite' | journal=GT007 'Favorite account' (sim=0.667, name) status=partial | offline=not_covered
+GT GT008 'Manage Accounts' | journal=GT008 'Manage accounts' (sim=1.0, name) status=partial | offline=partial
+GT GT009 'Set Up a Budget' | journal=GT009 'Budget' (sim=0.5, name) status=partial | offline=not_covered
+GT GT010 'Set/Edit a Category Budget Amount' | journal=GT010 'Budget amount' (sim=0.4, name) status=partial | offline=not_covered
+GT GT011 'View Budget Details / Transactions' | journal=GT011 'Budget details' (sim=0.5, name) status=partial | offline=partial
+GT GT012 'Delete a Budget' | journal=GT012 'Delete budget' (sim=1.0, name) status=partial | offline=not_covered
+GT GT013 'Configure Budget View Options' | journal=GT013 'Budget view options' (sim=0.75, name) status=partial | offline=not_covered
+GT GT014 'Create a Recurring/Scheduled Transaction' | journal=GT014 'Scheduled transaction' (sim=0.5, name) status=partial | offline=not_covered
+GT GT015 'Respond to a Recurring Transaction Prompt' | journal=GT015 'Recurring prompt' (sim=0.5, name) status=partial | offline=not_covered
+GT GT016 'Manage Payees' | journal=GT016 'Payees' (sim=0.5, name) status=partial | offline=not_covered
+GT GT017 'Manage Categories' | journal=GT017 'Categories' (sim=0.5, name) status=partial | offline=partial
+GT GT018 'View a Built-In Report' | journal=GT018 'Built-in report' (sim=0.667, name) status=covered | offline=not_covered
+GT GT019 'Run a General Report' | journal=GT019 'General report' (sim=0.667, name) status=partial | offline=not_covered
+GT GT020 'Track Stock/Mutual Fund Investments' | journal=GT020 'Investments' (sim=0.385, name) status=partial | offline=not_covered
+GT GT021 'Add a Stock Transaction' | journal=GT021 'Stock transaction' (sim=0.667, name) status=partial | offline=not_covered
+GT GT022 'Track Fixed Assets' | journal=GT022 'Fixed assets' (sim=0.667, name) status=partial | offline=not_covered
+GT GT023 'Manage Currencies & Exchange Rates' | journal=GT023 'Currencies' (sim=0.357, name) status=partial | offline=partial
+GT GT024 'Set Up Data Sync' | journal=GT024 'Sync' (sim=0.333, name) status=partial | offline=partial
+GT GT025 'Set/Change Database Password' | journal=GT025 'Database password' (sim=0.625, name) status=partial | offline=not_covered
+GT GT026 'Enable Fingerprint/Biometric Lock' | journal=GT026 'Fingerprint lock' (sim=0.5, name) status=partial | offline=not_covered
+GT GT027 'Import/Export via QIF or CSV' | journal=GT027 'Import export' (sim=0.4, name) status=partial | offline=partial
+GT GT028 'Configure App Settings' | journal=GT028 'Settings' (sim=0.333, name) status=partial | offline=not_covered

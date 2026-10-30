@@ -35,16 +35,16 @@ Completion : 0% of gold steps
 
 [GT002] Record a video
 Status     : PARTIAL
-Test Cases : test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017
-Confidence : 0.33
+Test Cases : test_003, test_005, test_007, test_009, test_011, test_015, test_017
+Confidence : 0.30
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap the photo/video mode toggle to switch to video: touch ImageButton "Switch to photo mode" rid=switch_video activity=MainActivity (tokens=mode,photo,video)
+  - tap the photo/video mode toggle to switch to video: touch ImageButton "Switch to video mode" rid=switch_video activity=MainActivity (tokens=mode,video)
 
 [GT003] Switch between the front and rear cameras
 Status     : PARTIAL
-Test Cases : test_015, test_017
+Test Cases : test_017
 Confidence : 0.45
 Matcher    : deterministic
 Completion : 50% of gold steps

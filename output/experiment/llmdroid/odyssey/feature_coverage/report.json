@@ -2,8 +2,8 @@
   "application": "Odyssey",
   "total_features": 33,
   "covered_features": 0,
-  "uncovered_features": 13,
-  "partial_features": 20,
+  "uncovered_features": 15,
+  "partial_features": 18,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/odyssey",
@@ -35,55 +35,37 @@
     {
       "id": "GT002",
       "name": "Browse the music library by artist",
-      "status": "partial",
-      "test_cases": [
-        "test_008"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the \"Artists\" tab: touch TextView \"Show artist\" rid=title activity=OdysseyMainActivity state_changed (tokens=artists)"
-      ],
-      "matched_path": [
-        "Open the \"Artists\" tab"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT003",
       "name": "Browse all tracks",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_004",
-        "test_006",
-        "test_007",
-        "test_008",
-        "test_010",
-        "test_011",
-        "test_013",
-        "test_015",
-        "test_081"
+        "test_004"
       ],
-      "confidence": 0.6667,
+      "confidence": 0.3333,
       "evidence": [
-        "Open the \"All tracks\"/Tracks tab: touch TextView \"Music\" activity=OdysseyMainActivity (tokens=tracks)",
-        "tap a track to play it: touch TextView \"SoundHelix - Music\" rid=now_playing_track_subtitle activity=OdysseyMainActivity (tokens=play,track)"
+        "tap a track to play it: touch TextView \"Play song\" rid=title activity=OdysseyMainActivity state_changed (tokens=play,track)"
       ],
       "matched_path": [
-        "Open the \"All tracks\"/Tracks tab",
         "tap a track to play it"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT004",
       "name": "Browse recently added albums",
       "status": "partial",
       "test_cases": [
-        "test_006",
-        "test_011"
+        "test_006"
       ],
       "confidence": 0.5,
       "evidence": [
@@ -100,14 +82,7 @@
       "name": "Browse the file system with the file browser",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_007",
-        "test_008",
-        "test_010",
-        "test_013",
-        "test_015",
-        "test_081"
+        "test_004"
       ],
       "confidence": 0.3,
       "evidence": [
@@ -280,25 +255,17 @@
       "status": "partial",
       "test_cases": [
         "test_004",
-        "test_006",
-        "test_007",
-        "test_008",
-        "test_010",
-        "test_013",
-        "test_015",
-        "test_081"
+        "test_007"
       ],
-      "confidence": 0.6333,
+      "confidence": 0.3333,
       "evidence": [
-        "Open the \"Playlists\" tab: touch TextView \"Playlists\" activity=OdysseyMainActivity (tokens=playlists)",
-        "tap a track to play from that playlist, or use the overflow menu to play or enqueue the whole playlist: touch TextView \"SoundHelix - Music\" rid=now_playing_track_subtitle activity=OdysseyMainActivity (tokens=play,track)"
+        "Open the \"Playlists\" tab: touch TextView \"Playlists\" activity=OdysseyMainActivity (tokens=playlists)"
       ],
       "matched_path": [
-        "Open the \"Playlists\" tab",
-        "tap a track to play from that playlist, or use the overflow menu to play or enqueue the whole playlist"
+        "Open the \"Playlists\" tab"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT014",
@@ -320,19 +287,13 @@
     {
       "id": "GT015",
       "name": "Create a bookmark to resume an audiobook or podcast",
-      "status": "partial",
-      "test_cases": [
-        "test_008"
-      ],
-      "confidence": 0.2,
-      "evidence": [
-        "tap \"Create bookmark\": touch LinearLayoutCompat rid=nav_bookmarks activity=OdysseyMainActivity state_changed (tokens=bookmark)"
-      ],
-      "matched_path": [
-        "tap \"Create bookmark\""
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.0
     },
     {
       "id": "GT016",
@@ -489,14 +450,7 @@
       "name": "Scrobble to Last.fm through a scrobbler app",
       "status": "partial",
       "test_cases": [
-        "test_004",
-        "test_006",
-        "test_007",
-        "test_008",
-        "test_010",
-        "test_013",
-        "test_015",
-        "test_081"
+        "test_004"
       ],
       "confidence": 0.2708,
       "evidence": [
@@ -632,7 +586,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -801,7 +755,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1063,9 +1017,9 @@
   "total_actions": 766,
   "actions_with_widget": 409,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 20,
+  "exercised_features": 18,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.2242424242424242,
-  "weighted_coverage_percentage": 22.42,
+  "weighted_coverage": 0.19040404040404035,
+  "weighted_coverage_percentage": 19.04,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -1,0 +1,324 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Fossify Notes
+
+Total Actions    : 351
+
+Total Features   : 29
+Covered Features : 2
+Partial          : 21
+Uncovered        : 6
+
+Feature Coverage : 6.90%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 33.16%  (mean completion ratio; partial steps count)
+Exercised        : 23  (covered 2 + partial 21)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a text note
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Create a checklist note
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "New note": touch Button "Create a new note" rid=new_note activity=MainActivity state_changed (tokens=note)
+
+[GT003] Tick and untick checklist items
+Status     : PARTIAL
+Test Cases : test_001, test_005, test_009, test_012, test_020
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the checklist note: touch RadioButton "Checklist" rid=type_checklist activity=MainActivity state_changed (tokens=checklist)
+
+[GT004] Reorder or remove checklist items
+Status     : PARTIAL
+Test Cases : test_001, test_005, test_009, test_012, test_020
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the checklist note: touch RadioButton "Checklist" rid=type_checklist activity=MainActivity state_changed (tokens=checklist)
+
+[GT005] Switch between notes
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - "Open note"): touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+
+[GT006] Rename a note
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity (tokens=note)
+  - tap "Rename note": touch TextView "Rename note" rid=title activity=MainActivity state_changed (tokens=rename)
+
+[GT007] Delete a note
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.67
+Matcher    : deterministic
+Completion : 67% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+  - tap "Delete note": touch TextView "Delete note" rid=title activity=MainActivity state_changed (tokens=delete)
+
+[GT008] Undo and redo edits
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Search inside a note
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+
+[GT010] Lock a note with a PIN, pattern or fingerprint
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+
+[GT011] Unlock a protected note
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Export a note to a file
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+  - tap "Export as file": touch TextView "Export as file" rid=title activity=PickActivity state_changed (tokens=as,export,file)
+
+[GT013] Export all notes at once
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] Import a note from a file
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Keep a note synchronised with a file on disk
+Status     : PARTIAL
+Test Cases : test_001, test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.20
+Matcher    : deterministic
+Completion : 20% of gold steps
+Evidence   :
+  - Import or create a note: touch Button "Create a new note" rid=new_note activity=MainActivity state_changed (tokens=note)
+
+[GT016] Share a note
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+
+[GT017] Print a note
+Status     : PARTIAL
+Test Cases : test_003, test_005, test_009, test_012, test_020, test_022
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open the note: touch Button "Open note" rid=open_note activity=MainActivity state_changed (tokens=note)
+
+[GT018] Add the note home screen widget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Change the editor font size and typeface
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT020] Enable or disable line wrapping
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT021] Set where the cursor is placed when a note is opened
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT022] Configure checklist behaviour
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT023] Show a word and character count
+Status     : COVERED
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.90
+Matcher    : deterministic
+Completion : 100% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+  - enable the "Show word count" option; the counter is displayed while editing a text note: touch Switch "Enable line wrap" rid=settings_enable_line_wrap activity=SettingsActivity state_changed (outcome tokens=count,enable,word)
+
+[GT024] Set the note text alignment
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT025] Enable automatic saving
+Status     : COVERED
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.88
+Matcher    : deterministic
+Completion : 100% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+  - toggle the automatic save option; with it off, a save icon appears in the toolbar and changes must be saved manually: touch Switch "Enable line wrap" rid=settings_enable_line_wrap activity=SettingsActivity state_changed (outcome tokens=automatic,save,toolbar)
+
+[GT026] Protect the whole app with a lock
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT027] Customise the app colours and theme
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT028] Change the app language
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT029] View the about screen, FAQ and licences
+Status     : PARTIAL
+Test Cases : test_005, test_007, test_010, test_014, test_018, test_020, test_022
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+2 / 29 features covered
+21 / 29 features partial
+Feature Coverage = COVERED / Total = 6.90%
+Weighted Feature Coverage = mean(completion_ratio) = 33.16%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 14 / 29 (completeness ratio 0.483)
+
+Feature-inference P/R/F1: 0.93 / 0.45 / 0.60 (false not_present=0)
+
+GT GT001 'Create a text note' | journal=G001 'Create a text note' (sim=1.0, name) status=covered | offline=not_covered
+GT GT002 'Create a checklist note' | journal=missing (no name match) status=missing | offline=partial
+GT GT003 'Tick and untick checklist items' | journal=missing (no name match) status=missing | offline=partial
+GT GT004 'Reorder or remove checklist items' | journal=missing (no name match) status=missing | offline=partial
+GT GT005 'Switch between notes' | journal=G003 'Switch between notes' (sim=1.0, name) status=covered | offline=partial
+GT GT006 'Rename a note' | journal=G004 'Delete a note' (sim=0.333, name) status=covered | offline=partial
+GT GT007 'Delete a note' | journal=G009 'Print a note' (sim=0.333, name) status=covered | offline=partial
+GT GT008 'Undo and redo edits' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Search inside a note' | journal=G005 'Search inside a note' (sim=1.0, name) status=covered | offline=partial
+GT GT010 'Lock a note with a PIN, pattern or fingerprint' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Unlock a protected note' | journal=G006 'Unlock a protected note' (sim=1.0, name) status=partial | offline=not_covered
+GT GT012 'Export a note to a file' | journal=missing (no name match) status=missing | offline=partial
+GT GT013 'Export all notes at once' | journal=G007 'Export all notes at' (sim=0.75, name) status=partial | offline=not_covered
+GT GT014 'Import a note from a file' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Keep a note synchronised with a file on disk' | journal=G008 'Keep a note synchronised' (sim=0.5, name) status=covered | offline=partial
+GT GT016 'Share a note' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Print a note' | journal=missing (no name match) status=missing | offline=partial
+GT GT018 'Add the note home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Change the editor font size and typeface' | journal=G010 'Change the editor font' (sim=0.571, name) status=partial | offline=partial
+GT GT020 'Enable or disable line wrapping' | journal=missing (no name match) status=missing | offline=partial
+GT GT021 'Set where the cursor is placed when a note is opened' | journal=G011 'Set where the cursor' (sim=0.5, name) status=partial | offline=partial
+GT GT022 'Configure checklist behaviour' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Show a word and character count' | journal=G012 'Show a word' (sim=0.417, name) status=covered | offline=covered
+GT GT024 'Set the note text alignment' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Enable automatic saving' | journal=G013 'Enable automatic saving' (sim=1.0, name) status=partial | offline=covered
+GT GT026 'Protect the whole app with a lock' | journal=missing (no name match) status=missing | offline=partial
+GT GT027 'Customise the app colours and theme' | journal=G014 'Customise the app colours' (sim=0.667, name) status=covered | offline=partial
+GT GT028 'Change the app language' | journal=missing (no name match) status=missing | offline=partial
+GT GT029 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

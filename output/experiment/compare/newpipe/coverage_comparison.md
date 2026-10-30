@@ -2,18 +2,18 @@
 
 | Tool | Run | Tag | Actions | Methods hit | Total | Code cov. | Activities | Activity cov. | Feature cov. | Duration |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| TestCube | newpipe | PIPE_SUPER_LOG | 241 | 12037 | 74478 | 16.16% | 3/12 | 25.00% | 17.65% (3/17) | 1639s |
-| LLMDroid | newpipe | PIPE_SUPER_LOG | 130 | 10862 | 74478 | 14.58% | 3/12 | 25.00%* | 0.00% (0/17) | 599s |
+| TestCube | newpipe | PIPE_SUPER_LOG | 325 | 14453 | 74478 | 19.41% | 5/12 | 41.67% | 0.00% (0/17) | 3528s |
+| LLMDroid | newpipe | PIPE_SUPER_LOG | 534 | 18017 | 74478 | 24.19% | 5/12 | 41.67%* | — | 3587s |
 
 \* activity coverage taken from `utg.js` (screens the explorer reached), not from AndroLog `ACTIVITY=` probes — LLMDroid's AndroLog monitor tracks methods only. The two count slightly differently, so treat a mixed-source activity comparison as indicative rather than exact.
 
-> **Unequal run time:** TestCube 1639s, LLMDroid 599s. Coverage rises with time, so a delta between runs of different lengths is not a like-for-like result — check whether the shorter run stopped on its own or was cut short.
+Both tools were given the same 3600s budget. Durations below include each tool's own shutdown, so they differ slightly.
 
-**Feature coverage — TestCube 17.65% vs LLMDroid 0.00%: +17.65 pp** (matcher: ai, same ground truth and evaluator on both traces).
+> **Feature coverage scored for TestCube only.** The evaluator is trace-based and works on either tool; score the other with scripts/evaluate_features.py to get a comparable number.
 
-**Code coverage — TestCube 16.16% vs LLMDroid 14.58%: +1.58 pp (+10.8% relative).**
+**Code coverage — TestCube 19.41% vs LLMDroid 24.19%: -4.79 pp (-19.8% relative).**
 
-**Activity coverage — TestCube 25.00% vs LLMDroid 25.00% (+0.00 pp), but measured differently on each side (androlog, utg); compare like-for-like before quoting this.**
+**Activity coverage — TestCube 41.67% vs LLMDroid 41.67% (+0.00 pp), but measured differently on each side (androlog, utg); compare like-for-like before quoting this.**
 
-**Saturation** — TestCube reached 99% of its final coverage 88% of the way through (14/16 samples); LLMDroid reached 99% of its final coverage 99% of the way through (129/130 samples). A run that flattened early was not truncated by its budget.
+**Saturation** — TestCube reached 99% of its final coverage 88% of the way through (29/33 samples); LLMDroid reached 99% of its final coverage 65% of the way through (348/534 samples). A run that flattened early was not truncated by its budget.
 

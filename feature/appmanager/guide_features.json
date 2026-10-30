@@ -1,0 +1,228 @@
+{
+  "app": "App Manager",
+  "package": "io.github.muntashirakon.AppManager",
+  "source": "feature/appmanager/README.md",
+  "url": "",
+  "note": "Exploration guide derived from the app README, not from ground_truth.json.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse installed apps",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "scroll the package list"
+      ],
+      "keywords": [
+        "apps",
+        "list",
+        "packages"
+      ],
+      "nav_hints": [
+        "apps",
+        "installed"
+      ]
+    },
+    {
+      "id": "G002",
+      "name": "Open an app's details",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap an app row"
+      ],
+      "keywords": [
+        "details",
+        "info",
+        "app"
+      ],
+      "nav_hints": [
+        "app info",
+        "details"
+      ]
+    },
+    {
+      "id": "G003",
+      "name": "Inspect app components",
+      "description": "Open an app's details",
+      "actions": [
+        "Open an app's details",
+        "swipe to a component tab"
+      ],
+      "keywords": [
+        "activities",
+        "services",
+        "receivers",
+        "providers"
+      ],
+      "nav_hints": [
+        "activities",
+        "services"
+      ]
+    },
+    {
+      "id": "G004",
+      "name": "Review permissions",
+      "description": "Open an app's details",
+      "actions": [
+        "Open an app's details",
+        "swipe to the permissions tab"
+      ],
+      "keywords": [
+        "permissions",
+        "app ops"
+      ],
+      "nav_hints": [
+        "permissions"
+      ]
+    },
+    {
+      "id": "G005",
+      "name": "Scan for trackers",
+      "description": "Open an app's details",
+      "actions": [
+        "Open an app's details",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "trackers",
+        "scan"
+      ],
+      "nav_hints": [
+        "scan",
+        "trackers"
+      ]
+    },
+    {
+      "id": "G006",
+      "name": "Search for an app",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the search icon"
+      ],
+      "keywords": [
+        "search",
+        "find"
+      ],
+      "nav_hints": [
+        "search"
+      ]
+    },
+    {
+      "id": "G007",
+      "name": "Sort or filter the list",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the overflow menu (three dots)"
+      ],
+      "keywords": [
+        "sort",
+        "filter"
+      ],
+      "nav_hints": [
+        "sort by",
+        "filter"
+      ]
+    },
+    {
+      "id": "G008",
+      "name": "Run a batch operation",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "long-press an app row"
+      ],
+      "keywords": [
+        "batch",
+        "select",
+        "operation"
+      ],
+      "nav_hints": [
+        "select",
+        "batch"
+      ]
+    },
+    {
+      "id": "G009",
+      "name": "Open running apps",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the running apps entry"
+      ],
+      "keywords": [
+        "running",
+        "processes"
+      ],
+      "nav_hints": [
+        "running apps"
+      ]
+    },
+    {
+      "id": "G010",
+      "name": "View app usage",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the app usage entry"
+      ],
+      "keywords": [
+        "usage",
+        "statistics"
+      ],
+      "nav_hints": [
+        "app usage"
+      ]
+    },
+    {
+      "id": "G011",
+      "name": "Open profiles",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the profiles entry"
+      ],
+      "keywords": [
+        "profiles"
+      ],
+      "nav_hints": [
+        "profiles"
+      ]
+    },
+    {
+      "id": "G012",
+      "name": "Open settings",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap Settings"
+      ],
+      "keywords": [
+        "settings",
+        "theme",
+        "language"
+      ],
+      "nav_hints": [
+        "settings"
+      ]
+    },
+    {
+      "id": "G013",
+      "name": "Read about and version",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap About"
+      ],
+      "keywords": [
+        "about",
+        "version"
+      ],
+      "nav_hints": [
+        "about"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1311 @@
+{
+  "application": "VLC",
+  "total_features": 46,
+  "covered_features": 0,
+  "uncovered_features": 28,
+  "partial_features": 18,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/vlc",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/vlc/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/vlc/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the video library",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the Video tab: touch View rid=surface_video state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "tap the Video tab"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT002",
+      "name": "Browse the audio library",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_020",
+        "test_024",
+        "test_030",
+        "test_034"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap an item to open or play it: touch CheckedTextView \"Play\" rid=text1 activity=MainActivity state_changed (tokens=play)"
+      ],
+      "matched_path": [
+        "tap an item to open or play it"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT003",
+      "name": "Browse device folders and storage",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Browse network shares",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT005",
+      "name": "Add a network share manually",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT006",
+      "name": "Open a network stream from a URL",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_020",
+        "test_024",
+        "test_030",
+        "test_034"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the play/go button: touch CheckedTextView \"Play\" rid=text1 activity=MainActivity state_changed (tokens=play)"
+      ],
+      "matched_path": [
+        "tap the play/go button"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT007",
+      "name": "Mark a folder or share as a favourite",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT008",
+      "name": "Search the media library",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Sort the media lists",
+      "status": "partial",
+      "test_cases": [
+        "test_008"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap the sort icon (or the overflow menu: touch TextView \"Sort by\u2026\" rid=sorts_title activity=MainActivity (tokens=sort)"
+      ],
+      "matched_path": [
+        "tap the sort icon (or the overflow menu"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.2
+    },
+    {
+      "id": "GT010",
+      "name": "Switch between list and grid display",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_006"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the display/\"List or grid\" toggle: touch ImageView rid=display_in_list_image activity=MainActivity state_changed (tokens=display)"
+      ],
+      "matched_path": [
+        "tap the display/\"List or grid\" toggle"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT011",
+      "name": "Resume playback where you left off",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Video: touch View rid=surface_video state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "Video"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT012",
+      "name": "Control video playback",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Use gesture controls for volume, brightness and seeking",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT014",
+      "name": "Select an audio track",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_020",
+        "test_024",
+        "test_030",
+        "test_034"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Start playback: touch CheckedTextView \"Play\" rid=text1 activity=MainActivity state_changed (tokens=start)"
+      ],
+      "matched_path": [
+        "Start playback"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT015",
+      "name": "Load and select subtitles",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_020",
+        "test_024",
+        "test_030",
+        "test_034"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Start playback: touch CheckedTextView \"Play\" rid=text1 activity=MainActivity state_changed (tokens=start)"
+      ],
+      "matched_path": [
+        "Start playback"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT016",
+      "name": "Download subtitles",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Adjust the subtitle delay",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Adjust the audio delay",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Change the playback speed",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Change the aspect ratio, crop and zoom",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Lock the screen orientation",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT022",
+      "name": "Jump to a specific time",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Set an A-B repeat loop",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Play video in picture-in-picture / a floating window",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT025",
+      "name": "Play a video as audio only (background playback)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Use the equaliser",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Set a sleep timer",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Adjust video filters (brightness, contrast, hue, saturation, gamma)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Cast to a renderer (Chromecast or DLNA)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT030",
+      "name": "Create a playlist",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_022",
+        "test_034"
+      ],
+      "confidence": 0.375,
+      "evidence": [
+        "Open the Audio tab: touch FrameLayout \"Audio\" rid=nav_audio activity=MainActivity state_changed (tokens=audio)",
+        "Playlists: touch LinearLayout \"Playlists\" activity=MainActivity state_changed (tokens=playlists)",
+        "select the tracks: touch LinearLayout \"Tracks\" activity=MainActivity state_changed (tokens=tracks)"
+      ],
+      "matched_path": [
+        "Open the Audio tab",
+        "Playlists",
+        "select the tracks"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.375
+    },
+    {
+      "id": "GT031",
+      "name": "Add media to an existing playlist",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Long-press a track, album or video: touch View rid=surface_video state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "Long-press a track, album or video"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT032",
+      "name": "Manage the play queue",
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_016",
+        "test_020",
+        "test_024",
+        "test_030",
+        "test_034"
+      ],
+      "confidence": 0.1667,
+      "evidence": [
+        "Start playback: touch CheckedTextView \"Play\" rid=text1 activity=MainActivity state_changed (tokens=start)"
+      ],
+      "matched_path": [
+        "Start playback"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.16666666666666666
+    },
+    {
+      "id": "GT033",
+      "name": "Use repeat and shuffle",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT034",
+      "name": "Add media to the queue without interrupting playback",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Long-press a track or video: touch View rid=surface_video state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "Long-press a track or video"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT035",
+      "name": "View media information",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT036",
+      "name": "Delete a media file from the device",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT037",
+      "name": "Share a media file",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT038",
+      "name": "View the playback history",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT039",
+      "name": "Choose which folders the media library scans",
+      "status": "partial",
+      "test_cases": [
+        "test_034"
+      ],
+      "confidence": 0.225,
+      "evidence": [
+        "tap \"Media library\"/\"Directories\": touch Button \"SEARCH IN ALL MEDIA LIBRARY\" rid=searchButton activity=SearchActivity state_changed (tokens=library,media)"
+      ],
+      "matched_path": [
+        "tap \"Media library\"/\"Directories\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT040",
+      "name": "Force a media library rescan",
+      "status": "partial",
+      "test_cases": [
+        "test_034"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Media library: touch Button \"SEARCH IN ALL MEDIA LIBRARY\" rid=searchButton activity=SearchActivity state_changed (tokens=library,media)"
+      ],
+      "matched_path": [
+        "Media library"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT041",
+      "name": "Configure video playback settings",
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Video\": touch View rid=surface_video state_changed (tokens=video)"
+      ],
+      "matched_path": [
+        "tap \"Video\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT042",
+      "name": "Configure audio playback settings",
+      "status": "partial",
+      "test_cases": [
+        "test_016",
+        "test_034"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Audio\": touch FrameLayout \"Audio\" rid=nav_audio activity=MainActivity state_changed (tokens=audio)"
+      ],
+      "matched_path": [
+        "tap \"Audio\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT043",
+      "name": "Configure subtitle appearance",
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_008",
+        "test_012",
+        "test_014",
+        "test_034"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"Subtitles\": touch View rid=surface_subtitles state_changed (tokens=subtitles)"
+      ],
+      "matched_path": [
+        "tap \"Subtitles\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT044",
+      "name": "Change the interface settings",
+      "status": "partial",
+      "test_cases": [
+        "test_030"
+      ],
+      "confidence": 0.2364,
+      "evidence": [
+        "set the app theme (light, dark or system), the daily-night switch, the start-up screen, the visible tabs, the interface language and whether the TV interface is used: touch CardView \"Favorite: Download, 6 subfolders\" rid=browser_container activity=SecondaryActivity state_changed (outcome tokens=start,tabs,up)"
+      ],
+      "matched_path": [
+        "set the app theme (light, dark or system), the daily-night switch, the start-up screen, the visible tabs, the interface language and whether the TV interface is used"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT045",
+      "name": "Add the VLC home screen widget",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT046",
+      "name": "View the about screen and licences",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Browse the video library",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Browse the audio library",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Browse device folders and storage",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Browse network shares",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Add a network share manually",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "Open a network stream from a URL",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Mark a folder or share as a favourite",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Search the media library",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Sort the media lists",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Switch between list and grid display",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Resume playback where you left off",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Control video playback",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Use gesture controls for volume, brightness and seeking",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Select an audio track",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Load and select subtitles",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Download subtitles",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Adjust the subtitle delay",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Adjust the audio delay",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Change the playback speed",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Change the aspect ratio, crop and zoom",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Lock the screen orientation",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Jump to a specific time",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Set an A-B repeat loop",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Play video in picture-in-picture / a floating window",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Play a video as audio only (background playback)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Use the equaliser",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Set a sleep timer",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Adjust video filters (brightness, contrast, hue, saturation, gamma)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Cast to a renderer (Chromecast or DLNA)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Create a playlist",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "Add media to an existing playlist",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "Manage the play queue",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT033",
+      "ground_truth_name": "Use repeat and shuffle",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT034",
+      "ground_truth_name": "Add media to the queue without interrupting playback",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT035",
+      "ground_truth_name": "View media information",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT036",
+      "ground_truth_name": "Delete a media file from the device",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT037",
+      "ground_truth_name": "Share a media file",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT038",
+      "ground_truth_name": "View the playback history",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT039",
+      "ground_truth_name": "Choose which folders the media library scans",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT040",
+      "ground_truth_name": "Force a media library rescan",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT041",
+      "ground_truth_name": "Configure video playback settings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT042",
+      "ground_truth_name": "Configure audio playback settings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT043",
+      "ground_truth_name": "Configure subtitle appearance",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT044",
+      "ground_truth_name": "Change the interface settings",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT045",
+      "ground_truth_name": "Add the VLC home screen widget",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT046",
+      "ground_truth_name": "View the about screen and licences",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.0,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 0,
+    "false_negatives": 46,
+    "false_positives": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 0,
+    "ground_truth_count": 46,
+    "feature_completeness_ratio": 0.0,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 731,
+  "actions_with_widget": 660,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 18,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.11394927536231882,
+  "weighted_coverage_percentage": 11.39,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

@@ -4,7 +4,7 @@ TestCube Feature Coverage Report
 
 Application: RadioDroid
 
-Total Actions    : 154
+Total Actions    : 261
 
 Total Features   : 32
 Covered Features : 0
@@ -14,7 +14,7 @@ Uncovered        : 14
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 18.36%  (mean completion ratio; partial steps count)
+Weighted Coverage: 18.99%  (mean completion ratio; partial steps count)
 Exercised        : 18  (covered 0 + partial 18)
 
 ground_truth_source: independent_labeled_set
@@ -30,12 +30,13 @@ FEATURE DETAILS
 
 [GT001] Browse popular radio stations
 Status     : PARTIAL
-Test Cases : test_001, test_011, test_013, test_027
-Confidence : 0.33
+Test Cases : test_005, test_009, test_011, test_017, test_022
+Confidence : 0.67
 Matcher    : deterministic
-Completion : 33% of gold steps
+Completion : 67% of gold steps
 Evidence   :
-  - open the "Stations" screen: touch TextView "Stations" activity=ActivityMain (tokens=stations)
+  - open the "Stations" screen: touch TextView "Show broken stations in lists" rid=summary activity=ActivityMain state_changed (tokens=stations)
+  - tap a station to play it: long_touch ImageButton "Play" rid=buttonPlay activity=ActivityMain (tokens=play)
 
 [GT002] Search for a station by name
 Status     : NOT COVERED
@@ -44,22 +45,21 @@ Completion : 0% of gold steps
 
 [GT003] Search stations by tag, country, language or state
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_027
+Test Cases : test_001, test_009, test_011, test_013
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - tap a station: touch TextView "Stations" activity=ActivityMain (tokens=station)
+  - Open the search screen: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (tokens=search)
 
 [GT004] Play a station
 Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_023, test_025, test_027
-Confidence : 0.67
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_022, test_024
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 67% of gold steps
+Completion : 33% of gold steps
 Evidence   :
-  - Tap the station in any list: touch TextView "Stations" activity=ActivityMain (tokens=station)
-  - playback starts and the player bar appears at the bottom: touch ImageView rid=navigation_bar_item_icon_view activity=ActivityMain state_changed (outcome tokens=playback,player)
+  - playback starts and the player bar appears at the bottom: touch TextView "Stations" rid=navigation_bar_item_large_label_view activity=ActivityMain (outcome tokens=playback,player)
 
 [GT005] Stop playback
 Status     : NOT COVERED
@@ -82,13 +82,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT009] View station details
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Tap a station: touch TextView "Stations" activity=ActivityMain (tokens=station)
+Completion : 0% of gold steps
 
 [GT010] Vote for a station
 Status     : NOT COVERED
@@ -101,41 +97,46 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT012] Share a station
-Status     : PARTIAL
-Test Cases : test_001
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - choose whether to share the stream URL or the station page: touch TextView "Stations" activity=ActivityMain (tokens=station)
-
-[GT013] Record the stream to a file
-Status     : PARTIAL
-Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_023, test_025, test_027
-Confidence : 0.20
-Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - Start playing a station: touch TextView "Stations" rid=navigation_bar_item_large_label_view activity=ActivityMain (outcome tokens=start)
-
-[GT014] Browse and play saved recordings
 Status     : NOT COVERED
 Matcher    : deterministic
 Completion : 0% of gold steps
 
-[GT015] View the played-track history
+[GT013] Record the stream to a file
 Status     : PARTIAL
-Test Cases : test_003, test_027
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_020, test_022, test_024
+Confidence : 0.40
+Matcher    : deterministic
+Completion : 40% of gold steps
+Evidence   :
+  - Start playing a station: touch LinearLayout rid=station_foreground activity=ActivityMain (outcome tokens=start)
+  - Record): touch ImageButton "Record" rid=buttonRecord activity=ActivityMain (tokens=record)
+
+[GT014] Browse and play saved recordings
+Status     : PARTIAL
+Test Cases : test_005
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - tap an entry to search for it: touch ImageView "Search…" activity=ActivityMain (tokens=search)
+  - tap "Recordings": touch TextView "Recordings" activity=ActivityMain (tokens=recordings)
+
+[GT015] View the played-track history
+Status     : PARTIAL
+Test Cases : test_001, test_009, test_011, test_013
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap an entry to search for it: touch ImageView "Search" rid=search_button activity=ActivityMain state_changed (tokens=search)
 
 [GT016] Set a sleep timer
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001, test_015, test_022, test_024
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - tap "Sleep timer": touch Button "Sleep timer" rid=action_set_sleep_timer activity=ActivityMain (tokens=sleep,timer)
 
 [GT017] Set a radio alarm clock
 Status     : PARTIAL
@@ -144,7 +145,7 @@ Confidence : 0.14
 Matcher    : deterministic
 Completion : 14% of gold steps
 Evidence   :
-  - tap "Alarm": touch TextView "Alarm" rid=title activity=ActivityMain state_changed (tokens=alarm)
+  - tap "Alarm": touch TextView "Alarm" activity=ActivityMain (tokens=alarm)
 
 [GT018] Enable, edit or delete an alarm
 Status     : PARTIAL
@@ -153,7 +154,7 @@ Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open the Alarm screen: touch TextView "Alarm" rid=title activity=ActivityMain state_changed (tokens=alarm)
+  - Open the Alarm screen: touch TextView "Alarm" activity=ActivityMain (tokens=alarm)
 
 [GT019] Import favourite stations from an M3U file
 Status     : NOT COVERED
@@ -172,7 +173,7 @@ Completion : 0% of gold steps
 
 [GT022] Send playback to an MPD server
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
@@ -181,17 +182,17 @@ Evidence   :
 
 [GT023] Control playback from the notification
 Status     : PARTIAL
-Test Cases : test_009, test_011, test_013, test_019, test_021, test_027
-Confidence : 0.61
+Test Cases : test_001, test_003, test_005, test_009, test_011, test_013, test_017, test_019, test_022
+Confidence : 0.64
 Matcher    : deterministic
 Completion : 67% of gold steps
 Evidence   :
-  - Start a station: touch ImageButton "Play" rid=buttonPlay state_changed (tokens=start)
-  - use the play/stop and record controls displayed there: set_text EditText "test" rid=search text=test activity=ActivityMain (outcome tokens=play,record,stop)
+  - Start a station: touch ImageButton "Play" rid=buttonPlay activity=ActivityMain (tokens=start)
+  - use the play/stop and record controls displayed there: touch ImageButton "Record" rid=buttonRecord activity=ActivityMain (outcome tokens=controls,play,record,there)
 
 [GT024] Choose the media player engine
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -200,25 +201,25 @@ Evidence   :
 
 [GT025] Adjust the streaming buffer and resume behaviour
 Status     : PARTIAL
-Test Cases : test_003, test_011, test_013, test_019, test_027
+Test Cases : test_005, test_009, test_011, test_017, test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open Settings: touch TextView "Settings" activity=ActivityMain (tokens=settings)
+  - playback section: touch ImageButton "Play" rid=buttonPlay activity=ActivityMain (tokens=playback)
 
 [GT026] Set the recordings folder and naming
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_005, test_022
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open Settings: touch TextView "Settings" activity=ActivityMain (tokens=settings)
+  - open the recordings section: touch RecyclerView rid=recyclerViewRecordings activity=ActivityMain state_changed (tokens=recordings)
 
 [GT027] Restrict playback or downloads to Wi-Fi
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -227,7 +228,7 @@ Evidence   :
 
 [GT028] Change the theme
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -236,7 +237,7 @@ Evidence   :
 
 [GT029] Change the station list layout and icon display
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -245,7 +246,7 @@ Evidence   :
 
 [GT030] Select the radio-browser server or mirror
 Status     : PARTIAL
-Test Cases : test_003, test_019
+Test Cases : test_022
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -269,7 +270,7 @@ SUMMARY
 0 / 32 features covered
 18 / 32 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 18.36%
+Weighted Feature Coverage = mean(completion_ratio) = 18.99%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -292,26 +293,26 @@ GT GT004 'Play a station' | journal=G004 'Remove a station' (sim=0.333, name) st
 GT GT005 'Stop playback' | journal=G003 'Stop playback' (sim=1.0, name) status=partial | offline=not_covered
 GT GT006 'Add a station to favourites' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT007 'Remove a station from favourites' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT008 'Reorder favourite stations' | journal=G010 'Import favourite stations' (sim=0.5, name) status=covered | offline=not_covered
-GT GT009 'View station details' | journal=G005 'View station details' (sim=1.0, name) status=covered | offline=partial
+GT GT008 'Reorder favourite stations' | journal=G010 'Import favourite stations' (sim=0.5, name) status=pending | offline=not_covered
+GT GT009 'View station details' | journal=G005 'View station details' (sim=1.0, name) status=covered | offline=not_covered
 GT GT010 'Vote for a station' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT011 "Open a station's homepage" | journal=G006 "Open a station's homepage" (sim=1.0, name) status=partial | offline=not_covered
-GT GT012 'Share a station' | journal=G011 'Cast a station' (sim=0.333, name) status=partial | offline=partial
-GT GT013 'Record the stream to a file' | journal=G007 'Record the stream' (sim=0.75, name) status=partial | offline=partial
-GT GT014 'Browse and play saved recordings' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT015 'View the played-track history' | journal=G008 'View the played-track history' (sim=1.0, name) status=partial | offline=partial
-GT GT016 'Set a sleep timer' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT017 'Set a radio alarm clock' | journal=G009 'Set a radio alarm' (sim=0.75, name) status=partial | offline=partial
+GT GT012 'Share a station' | journal=G011 'Cast a station' (sim=0.333, name) status=pending | offline=not_covered
+GT GT013 'Record the stream to a file' | journal=G007 'Record the stream' (sim=0.75, name) status=pending | offline=partial
+GT GT014 'Browse and play saved recordings' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'View the played-track history' | journal=G008 'View the played-track history' (sim=1.0, name) status=pending | offline=partial
+GT GT016 'Set a sleep timer' | journal=missing (no name match) status=missing | offline=partial
+GT GT017 'Set a radio alarm clock' | journal=G009 'Set a radio alarm' (sim=0.75, name) status=covered | offline=partial
 GT GT018 'Enable, edit or delete an alarm' | journal=missing (no name match) status=missing | offline=partial
 GT GT019 'Import favourite stations from an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT020 'Export favourite stations to an M3U file' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'Cast a station to a Chromecast device' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT022 'Send playback to an MPD server' | journal=missing (no name match) status=missing | offline=partial
-GT GT023 'Control playback from the notification' | journal=G012 'Control playback' (sim=0.455, name) status=partial | offline=partial
+GT GT023 'Control playback from the notification' | journal=G012 'Control playback' (sim=0.455, name) status=pending | offline=partial
 GT GT024 'Choose the media player engine' | journal=missing (no name match) status=missing | offline=partial
-GT GT025 'Adjust the streaming buffer and resume behaviour' | journal=G013 'Adjust the streaming buffer' (sim=0.571, name) status=partial | offline=partial
+GT GT025 'Adjust the streaming buffer and resume behaviour' | journal=G013 'Adjust the streaming buffer' (sim=0.571, name) status=pending | offline=partial
 GT GT026 'Set the recordings folder and naming' | journal=missing (no name match) status=missing | offline=partial
-GT GT027 'Restrict playback or downloads to Wi-Fi' | journal=G014 'Restrict playback' (sim=0.667, name) status=partial | offline=partial
+GT GT027 'Restrict playback or downloads to Wi-Fi' | journal=G014 'Restrict playback' (sim=0.667, name) status=pending | offline=partial
 GT GT028 'Change the theme' | journal=missing (no name match) status=missing | offline=partial
 GT GT029 'Change the station list layout and icon display' | journal=missing (no name match) status=missing | offline=partial
 GT GT030 'Select the radio-browser server or mirror' | journal=missing (no name match) status=missing | offline=partial

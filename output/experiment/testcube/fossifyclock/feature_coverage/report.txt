@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: Fossify Clock
 
-Total Actions    : 143
+Total Actions    : 216
 
 Total Features   : 26
 Covered Features : 0
-Partial          : 5
-Uncovered        : 21
+Partial          : 8
+Uncovered        : 18
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 6.73%  (mean completion ratio; partial steps count)
-Exercised        : 5  (covered 0 + partial 5)
+Weighted Coverage: 9.94%  (mean completion ratio; partial steps count)
+Exercised        : 8  (covered 0 + partial 8)
 
 ground_truth_source: independent_labeled_set
 
@@ -34,65 +34,73 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT002] Add a time zone to the clock
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003, test_010, test_012
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)
+  - tick the time zones to display: touch RelativeLayout rid=add_time_zone_holder activity=MainActivity state_changed (outcome tokens=time,zones)
 
 [GT003] Remove or reorder time zones
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003, test_010
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)
 
 [GT004] Open the full-screen (screensaver) clock
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003, test_010
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)
 
 [GT005] Create an alarm
 Status     : PARTIAL
-Test Cases : test_012, test_018, test_030
+Test Cases : test_003, test_012
 Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)
+  - Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)
 
 [GT006] Enable or disable an alarm
 Status     : PARTIAL
-Test Cases : test_012, test_030
+Test Cases : test_003, test_012
 Confidence : 0.50
 Matcher    : deterministic
 Completion : 50% of gold steps
 Evidence   :
-  - Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)
+  - Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)
 
 [GT007] Edit an alarm
 Status     : PARTIAL
-Test Cases : test_012, test_030
-Confidence : 0.50
+Test Cases : test_003, test_012
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 50% of gold steps
+Completion : 25% of gold steps
 Evidence   :
-  - Open the Alarm tab: touch TextView "Alarm tab" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)
-  - tap the alarm row: touch TextView "Alarm tab" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)
+  - Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)
 
 [GT008] Delete an alarm
 Status     : PARTIAL
-Test Cases : test_012, test_030
+Test Cases : test_003, test_012
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)
+  - Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)
 
 [GT009] Set the alarm sound and vibration
-Status     : PARTIAL
-Test Cases : test_018
-Confidence : 0.23
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - tap the alarm sound entry and select a tone (or a file from storage): touch TextView "Default (Cesium)" rid=edit_alarm_sound activity=MainActivity (tokens=alarm,sound)
+Completion : 0% of gold steps
 
 [GT010] Snooze or dismiss a ringing alarm
 Status     : NOT COVERED
@@ -175,18 +183,22 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT026] View the about screen, FAQ and licences
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001, test_006, test_010
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - tap "About": touch TextView "About" rid=title activity=AboutActivity state_changed (tokens=about)
 
 ----------------------------------------
 SUMMARY
 ----------------------------------------
 
 0 / 26 features covered
-5 / 26 features partial
+8 / 26 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 6.73%
+Weighted Feature Coverage = mean(completion_ratio) = 9.94%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -198,33 +210,33 @@ LLM/VLM semantic verdict, not string or token overlap.
 JOURNAL VS GROUND TRUTH
 ----------------------------------------
 
-Extracted vs ground truth: 16 / 26 (completeness ratio 0.615)
+Extracted vs ground truth: 14 / 26 (completeness ratio 0.538)
 
-Feature-inference P/R/F1: 0.88 / 0.58 / 0.70 (false not_present=0)
+Feature-inference P/R/F1: 1.00 / 0.54 / 0.70 (false not_present=0)
 
-GT GT001 'View the current time on the clock tab' | journal=G001 'View the current time' (sim=0.667, name) status=partial | offline=not_covered
-GT GT002 'Add a time zone to the clock' | journal=G002 'Add a time zone' (sim=0.6, name) status=partial | offline=not_covered
-GT GT003 'Remove or reorder time zones' | journal=G003 'Remove' (sim=0.545, name) status=covered | offline=not_covered
-GT GT004 'Open the full-screen (screensaver) clock' | journal=G004 'Open the full-screen clock' (sim=0.833, name) status=covered | offline=not_covered
+GT GT001 'View the current time on the clock tab' | journal=G001 'View the current time' (sim=0.667, name) status=covered | offline=not_covered
+GT GT002 'Add a time zone to the clock' | journal=G002 'Add a time zone' (sim=0.6, name) status=partial | offline=partial
+GT GT003 'Remove or reorder time zones' | journal=G003 'Remove' (sim=0.545, name) status=partial | offline=partial
+GT GT004 'Open the full-screen (screensaver) clock' | journal=G004 'Open the full-screen clock' (sim=0.833, name) status=partial | offline=partial
 GT GT005 'Create an alarm' | journal=G005 'Create an alarm' (sim=1.0, name) status=covered | offline=partial
 GT GT006 'Enable or disable an alarm' | journal=G006 'Enable' (sim=0.333, name) status=covered | offline=partial
-GT GT007 'Edit an alarm' | journal=G007 'Edit an alarm' (sim=1.0, name) status=covered | offline=partial
-GT GT008 'Delete an alarm' | journal=G008 'Delete an alarm' (sim=1.0, name) status=covered | offline=partial
-GT GT009 'Set the alarm sound and vibration' | journal=G009 'Set the alarm sound' (sim=0.667, name) status=covered | offline=partial
-GT GT010 'Snooze or dismiss a ringing alarm' | journal=G010 'Snooze' (sim=0.417, name) status=partial | offline=not_covered
-GT GT011 'Configure the snooze duration and maximum ring time' | journal=G011 'Configure the snooze duration' (sim=0.5, name) status=covered | offline=not_covered
-GT GT012 'Make the alarm volume increase gradually' | journal=G012 'Make the alarm volume' (sim=0.667, name) status=covered | offline=not_covered
-GT GT013 'Use the stopwatch' | journal=G013 'Use the stopwatch' (sim=1.0, name) status=covered | offline=not_covered
-GT GT014 'Sort the recorded stopwatch laps' | journal=G014 'Sort the recorded stopwatch' (sim=0.8, name) status=covered | offline=not_covered
+GT GT007 'Edit an alarm' | journal=G007 'Edit an alarm' (sim=1.0, name) status=partial | offline=partial
+GT GT008 'Delete an alarm' | journal=G008 'Delete an alarm' (sim=1.0, name) status=partial | offline=partial
+GT GT009 'Set the alarm sound and vibration' | journal=G009 'Set the alarm sound' (sim=0.667, name) status=partial | offline=not_covered
+GT GT010 'Snooze or dismiss a ringing alarm' | journal=G010 'Snooze' (sim=0.417, name) status=covered | offline=not_covered
+GT GT011 'Configure the snooze duration and maximum ring time' | journal=G011 'Configure the snooze duration' (sim=0.5, name) status=partial | offline=not_covered
+GT GT012 'Make the alarm volume increase gradually' | journal=G012 'Make the alarm volume' (sim=0.667, name) status=partial | offline=not_covered
+GT GT013 'Use the stopwatch' | journal=G013 'Use the stopwatch' (sim=1.0, name) status=partial | offline=not_covered
+GT GT014 'Sort the recorded stopwatch laps' | journal=G014 'Sort the recorded stopwatch' (sim=0.8, name) status=pending | offline=not_covered
 GT GT015 'Create a timer' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT016 'Label a timer and set its sound' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT017 'Pause, resume, reset or delete a timer' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT018 'Add the digital clock home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT019 'Set the time format' | journal=F015 'Set the timer duration' (sim=0.333, name) status=covered | offline=not_covered
+GT GT019 'Set the time format' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT020 'Set the first day of the week' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'Keep the screen on in the clock tab' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT022 'Choose which tabs are visible' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT023 'Make alarms ignore silent mode' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT024 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT025 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT026 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

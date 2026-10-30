@@ -2,8 +2,8 @@
   "application": "Aegis Authenticator",
   "total_features": 40,
   "covered_features": 0,
-  "uncovered_features": 32,
-  "partial_features": 8,
+  "uncovered_features": 38,
+  "partial_features": 2,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/aegis",
@@ -35,19 +35,13 @@
     {
       "id": "GT003",
       "name": "Unlock the vault with biometrics",
-      "status": "partial",
-      "test_cases": [
-        "test_004"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
-      ],
-      "matched_path": [
-        "Security"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT004",
@@ -274,11 +268,11 @@
       "name": "Import a vault from Aegis or another authenticator",
       "status": "partial",
       "test_cases": [
-        "test_008"
+        "test_005"
       ],
       "confidence": 0.1107,
       "evidence": [
-        "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo): long_touch TextView \"Aegis is a free, secure and open source 2FA app\" rid=descriptionText activity=IntroActivity (tokens=2,aegis,free,source)"
+        "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo): touch TextView \"Aegis is a free, secure and open source 2FA app\" rid=descriptionText activity=IntroActivity (tokens=2,aegis,free,source)"
       ],
       "matched_path": [
         "choose the source application format (for example Aegis, andOTP, FreeOTP, FreeOTP+, Authy, Google Authenticator, Microsoft Authenticator, 2FAS, Bitwarden, Steam, WinAuth or Duo)"
@@ -300,81 +294,55 @@
     {
       "id": "GT026",
       "name": "Set or change the vault password",
-      "status": "partial",
-      "test_cases": [
-        "test_004",
-        "test_006"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "tap \"Security\": touch TextView \"Security\" activity=IntroActivity (tokens=security)",
-        "enter the current password: set_text EditText \"Please enter a password\" rid=text_password text=TestCube!2026 activity=IntroActivity state_changed (tokens=password)"
-      ],
-      "matched_path": [
-        "tap \"Security\"",
-        "enter the current password"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT027",
       "name": "Add a second unlock method (password slot)",
-      "status": "partial",
-      "test_cases": [
-        "test_004"
-      ],
-      "confidence": 0.2,
-      "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
-      ],
-      "matched_path": [
-        "Security"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.0
     },
     {
       "id": "GT028",
       "name": "Configure automatic locking",
-      "status": "partial",
-      "test_cases": [
-        "test_004"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
-      ],
-      "matched_path": [
-        "Security"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT029",
       "name": "Set the lock timeout",
-      "status": "partial",
-      "test_cases": [
-        "test_004"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
-      ],
-      "matched_path": [
-        "Security"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT030",
       "name": "Block screenshots and screen recording",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_004",
+        "test_001",
+        "test_009",
+        "test_010",
         "test_011",
         "test_012",
         "test_013",
@@ -383,14 +351,53 @@
         "test_016",
         "test_017",
         "test_018",
-        "test_019"
+        "test_019",
+        "test_020",
+        "test_021",
+        "test_022",
+        "test_023",
+        "test_024",
+        "test_025",
+        "test_026",
+        "test_027",
+        "test_028",
+        "test_029",
+        "test_030",
+        "test_031",
+        "test_032",
+        "test_033",
+        "test_034",
+        "test_035",
+        "test_036",
+        "test_037",
+        "test_038",
+        "test_039",
+        "test_040",
+        "test_041",
+        "test_042",
+        "test_043",
+        "test_044",
+        "test_045",
+        "test_046",
+        "test_047",
+        "test_048",
+        "test_049",
+        "test_050",
+        "test_051",
+        "test_052",
+        "test_053",
+        "test_054",
+        "test_055",
+        "test_056",
+        "test_057",
+        "test_058"
       ],
-      "confidence": 0.3333,
+      "confidence": 0.24,
       "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
+        "enable the \"Secure screen\"/screenshot-blocking option; the entry list no longer appears in screenshots or in the recent-apps preview: touch Button \"Import Aegis vault\" rid=btnImport activity=PickActivity state_changed (outcome tokens=apps,preview,recent)"
       ],
       "matched_path": [
-        "Security"
+        "enable the \"Secure screen\"/screenshot-blocking option; the entry list no longer appears in screenshots or in the recent-apps preview"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
@@ -398,19 +405,13 @@
     {
       "id": "GT031",
       "name": "Enable a panic trigger",
-      "status": "partial",
-      "test_cases": [
-        "test_004"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Security: touch TextView \"Security\" activity=IntroActivity (tokens=security)"
-      ],
-      "matched_path": [
-        "Security"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT032",
@@ -547,7 +548,7 @@
       "name_similarity": 0.333,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -598,7 +599,7 @@
       "journal_name": "Edit an entry",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "dropped",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -624,7 +625,7 @@
       "journal_name": "Import an icon pack",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -676,7 +677,7 @@
       "journal_name": "Search entries",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "dropped",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -702,7 +703,7 @@
       "journal_name": "Reorder entries manually",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "dropped",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -728,7 +729,7 @@
       "journal_name": "Assign an entry",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -754,7 +755,7 @@
       "journal_name": "Rename",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "dropped",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -780,7 +781,7 @@
       "journal_name": "Select",
       "name_similarity": 0.571,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -846,7 +847,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -859,7 +860,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -872,7 +873,7 @@
       "name_similarity": 0.071,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -885,7 +886,7 @@
       "name_similarity": 0.167,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -911,7 +912,7 @@
       "name_similarity": 0.059,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1053,12 +1054,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 82,
-  "actions_with_widget": 36,
+  "total_actions": 112,
+  "actions_with_widget": 39,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 8,
+  "exercised_features": 2,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.050238095238095234,
-  "weighted_coverage_percentage": 5.02,
+  "weighted_coverage": 0.011904761904761904,
+  "weighted_coverage_percentage": 1.19,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

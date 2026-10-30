@@ -31,13 +31,12 @@
         "test_007",
         "test_009",
         "test_011",
-        "test_013",
         "test_015",
         "test_017"
       ],
-      "confidence": 0.3333,
+      "confidence": 0.3,
       "evidence": [
-        "tap the photo/video mode toggle to switch to video: touch ImageButton \"Switch to photo mode\" rid=switch_video activity=MainActivity (tokens=mode,photo,video)"
+        "tap the photo/video mode toggle to switch to video: touch ImageButton \"Switch to video mode\" rid=switch_video activity=MainActivity (tokens=mode,video)"
       ],
       "matched_path": [
         "tap the photo/video mode toggle to switch to video"
@@ -50,7 +49,6 @@
       "name": "Switch between the front and rear cameras",
       "status": "partial",
       "test_cases": [
-        "test_015",
         "test_017"
       ],
       "confidence": 0.45,

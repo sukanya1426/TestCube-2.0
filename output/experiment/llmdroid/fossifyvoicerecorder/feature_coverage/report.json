@@ -2,8 +2,8 @@
   "application": "Fossify Voice Recorder",
   "total_features": 23,
   "covered_features": 0,
-  "uncovered_features": 8,
-  "partial_features": 15,
+  "uncovered_features": 10,
+  "partial_features": 13,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/fossifyvoicerecorder",
@@ -57,22 +57,13 @@
     {
       "id": "GT005",
       "name": "Browse saved recordings",
-      "status": "partial",
-      "test_cases": [
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_045"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "Open the \"Recordings\" tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
-      ],
-      "matched_path": [
-        "Open the \"Recordings\" tab"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT006",
@@ -80,18 +71,14 @@
       "status": "partial",
       "test_cases": [
         "test_002",
-        "test_015",
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_045"
+        "test_015"
       ],
-      "confidence": 0.2,
+      "confidence": 0.18,
       "evidence": [
-        "Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
+        "use play/pause and the seek bar: touch ImageView \"Play / Pause\" rid=play_pause_btn activity=MainActivity (tokens=pause,play)"
       ],
       "matched_path": [
-        "Open the Recordings tab"
+        "use play/pause and the seek bar"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.2
@@ -99,22 +86,13 @@
     {
       "id": "GT007",
       "name": "Rename a recording",
-      "status": "partial",
-      "test_cases": [
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_045"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the Recordings tab: touch RelativeLayout rid=settings_record_after_launch_holder activity=SettingsActivity state_changed (tokens=recordings)"
-      ],
-      "matched_path": [
-        "Open the Recordings tab"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT008",
@@ -172,12 +150,7 @@
       "status": "partial",
       "test_cases": [
         "test_002",
-        "test_005",
-        "test_016",
-        "test_021",
-        "test_023",
-        "test_025",
-        "test_045"
+        "test_005"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -194,22 +167,17 @@
       "name": "Sort the recordings list",
       "status": "partial",
       "test_cases": [
-        "test_021",
-        "test_023",
-        "test_025",
         "test_045"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Open the Recordings tab: touch Switch \"Start recording automatically after launching the app\" rid=settings_record_after_launch activity=SettingsActivity state_changed (tokens=recordings)",
         "tap \"Sort by\": touch TextView \"Sort by...\" rid=option_menu_sort activity=PickActivity state_changed (tokens=by,sort)"
       ],
       "matched_path": [
-        "Open the Recordings tab",
         "tap \"Sort by\""
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.25
     },
     {
       "id": "GT014",
@@ -362,17 +330,15 @@
         "test_025",
         "test_045"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)",
-        "tap \"Customise colours\": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)"
+        "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)"
       ],
       "matched_path": [
-        "Open Settings",
-        "tap \"Customise colours\""
+        "Open Settings"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.25
     },
     {
       "id": "GT022",
@@ -479,7 +445,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -505,7 +471,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -741,9 +707,9 @@
   "total_actions": 740,
   "actions_with_widget": 589,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 15,
+  "exercised_features": 13,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.2442028985507246,
-  "weighted_coverage_percentage": 24.42,
+  "weighted_coverage": 0.1898550724637681,
+  "weighted_coverage_percentage": 18.99,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -2,8 +2,8 @@
   "application": "NewPipe",
   "total_features": 17,
   "covered_features": 0,
-  "uncovered_features": 6,
-  "partial_features": 11,
+  "uncovered_features": 3,
+  "partial_features": 14,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/newpipe",
@@ -16,12 +16,8 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_011",
-        "test_013",
-        "test_027",
-        "test_037",
-        "test_039",
-        "test_056"
+        "test_004",
+        "test_006"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -36,32 +32,13 @@
     {
       "id": "GT002",
       "name": "Look up content by keyword",
-      "status": "partial",
-      "test_cases": [
-        "test_003",
-        "test_005",
-        "test_011",
-        "test_015",
-        "test_017",
-        "test_029",
-        "test_031",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_062",
-        "test_064"
-      ],
-      "confidence": 0.475,
-      "evidence": [
-        "Tap the search icon in the toolbar: touch ImageView \"Search\" rid=toolbar_search_clear_icon activity=MainActivity state_changed (tokens=search,toolbar)",
-        "Submit the query with the keyboard action: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=action,query)"
-      ],
-      "matched_path": [
-        "Tap the search icon in the toolbar",
-        "Submit the query with the keyboard action"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT003",
@@ -69,20 +46,10 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_003",
-        "test_009",
-        "test_011",
-        "test_013",
-        "test_015",
-        "test_017",
-        "test_027",
-        "test_029",
-        "test_035",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_048",
-        "test_054"
+        "test_004",
+        "test_006",
+        "test_010",
+        "test_012"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -99,18 +66,11 @@
       "name": "Re-run a previous search",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_005",
-        "test_011",
-        "test_015",
-        "test_017",
-        "test_029",
-        "test_031",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_062",
-        "test_064"
+        "test_001",
+        "test_004",
+        "test_006",
+        "test_010",
+        "test_016"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -125,33 +85,21 @@
     {
       "id": "GT005",
       "name": "Review saved downloads",
-      "status": "partial",
-      "test_cases": [
-        "test_007",
-        "test_033"
-      ],
-      "confidence": 0.6667,
-      "evidence": [
-        "Select Downloads: touch TextView \"Downloads\" activity=DownloadActivity (tokens=downloads)",
-        "Open the menu on a download entry: touch CheckedTextView \"Downloads\" rid=design_menu_item_text activity=DownloadActivity state_changed (tokens=download)"
-      ],
-      "matched_path": [
-        "Select Downloads",
-        "Open the menu on a download entry"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.6666666666666666
+      "completion_ratio": 0.0
     },
     {
       "id": "GT006",
       "name": "Review followed channels",
       "status": "partial",
       "test_cases": [
-        "test_015",
-        "test_017",
-        "test_039",
-        "test_041",
-        "test_058"
+        "test_001",
+        "test_006"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -169,39 +117,19 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_003",
-        "test_005",
+        "test_002",
+        "test_004",
+        "test_006",
         "test_007",
         "test_009",
-        "test_011",
+        "test_010",
+        "test_012",
         "test_013",
+        "test_014",
         "test_015",
-        "test_017",
-        "test_019",
-        "test_020",
-        "test_022",
-        "test_023",
-        "test_026",
-        "test_027",
-        "test_029",
-        "test_031",
-        "test_033",
-        "test_035",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_044",
-        "test_046",
-        "test_047",
-        "test_048",
-        "test_050",
-        "test_052",
-        "test_054",
-        "test_056",
-        "test_058",
-        "test_060",
-        "test_062",
-        "test_064"
+        "test_016",
+        "test_018",
+        "test_019"
       ],
       "confidence": 0.6667,
       "evidence": [
@@ -220,7 +148,7 @@
       "name": "Review what was watched",
       "status": "partial",
       "test_cases": [
-        "test_060"
+        "test_006"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -235,39 +163,54 @@
     {
       "id": "GT009",
       "name": "Adjust the app's look",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_002",
+        "test_006",
+        "test_019"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Appearance section: touch TextView \"Appearance\" rid=title activity=SettingsActivity state_changed (tokens=appearance)"
+      ],
+      "matched_path": [
+        "Open the Appearance section"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT010",
       "name": "Tune playback quality",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_006",
+        "test_019"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Select Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT011",
       "name": "Configure download behaviour",
       "status": "partial",
       "test_cases": [
-        "test_007",
-        "test_033"
+        "test_006",
+        "test_019"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open the Downloads section: touch TextView \"Downloads\" activity=DownloadActivity (tokens=downloads)"
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)"
       ],
       "matched_path": [
-        "Open the Downloads section"
+        "Select Settings"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
@@ -286,38 +229,36 @@
     {
       "id": "GT013",
       "name": "Adjust content preferences",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_006",
+        "test_016",
+        "test_019"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Select Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT014",
       "name": "Manage stored history data",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_005",
-        "test_011",
-        "test_015",
-        "test_017",
-        "test_029",
-        "test_031",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_062",
-        "test_064"
+        "test_006",
+        "test_019"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Confirm the action: touch Button \"Search\" rid=action_search activity=MainActivity state_changed (tokens=action)"
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)"
       ],
       "matched_path": [
-        "Confirm the action"
+        "Select Settings"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.25
@@ -325,42 +266,52 @@
     {
       "id": "GT015",
       "name": "Control notification behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_006",
+        "test_019"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Select Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT016",
       "name": "Export or import app data",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_004",
+        "test_006",
+        "test_019"
+      ],
+      "confidence": 0.6667,
+      "evidence": [
+        "Select Settings: touch TextView \"Settings\" activity=SettingsActivity (tokens=settings)",
+        "Open the Backup and restore section: touch TextView \"Backup and restore\" activity=SettingsActivity (tokens=backup,restore)"
+      ],
+      "matched_path": [
+        "Select Settings",
+        "Open the Backup and restore section"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT017",
       "name": "Reset a typed query",
       "status": "partial",
       "test_cases": [
-        "test_003",
-        "test_005",
-        "test_011",
-        "test_015",
-        "test_017",
-        "test_029",
-        "test_031",
-        "test_037",
-        "test_039",
-        "test_041",
-        "test_062",
-        "test_064"
+        "test_001",
+        "test_004",
+        "test_006",
+        "test_010",
+        "test_016"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -395,7 +346,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -434,7 +385,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -485,8 +436,8 @@
       "journal_name": "Change appearance",
       "name_similarity": 0.455,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -498,8 +449,8 @@
       "journal_name": "Video and audio settings",
       "name_similarity": 0.636,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -538,7 +489,7 @@
       "name_similarity": 0.636,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -564,7 +515,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -576,8 +527,8 @@
       "journal_name": "Backup and restore",
       "name_similarity": 0.714,
       "matched_by": "name",
-      "journal_status": "partial",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -615,12 +566,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 241,
-  "actions_with_widget": 161,
+  "total_actions": 333,
+  "actions_with_widget": 278,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 11,
+  "exercised_features": 14,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.24019607843137258,
-  "weighted_coverage_percentage": 24.02,
+  "weighted_coverage": 0.27450980392156865,
+  "weighted_coverage_percentage": 27.45,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

@@ -21,6 +21,11 @@ STOPWORDS = {
 
 HEURISTIC_TRUST = 0.55
 MAX_CATALOG = 36
+# Attach the screenshot when fewer than this share of the controls carry visible
+# text, or when their distinct labels fall below this share of the control count
+# -- a list whose rows all read the same cannot be navigated from the hierarchy.
+VISION_LABEL_SHARE = 0.5
+VISION_DISTINCT_SHARE = 0.34
 
 # Literal placeholders from the JSON skeletons the prompts show the model.
 # A model that echoes the schema instead of filling it would otherwise have
@@ -919,7 +924,7 @@ class FeatureAdvisor(object):
         # faster than 512px. With no image, used_vlm below is False and the
         # model's tap point is ignored, so the choice comes from action_id
         # against the control catalog the prompt already lists.
-        attach_image = bool(use_screenshot) and (_sparse_ui(ui_text) or force_screenshot)
+        attach_image = bool(use_screenshot) and (_sparse_ui(ui_text, events) or force_screenshot)
         if attach_image:
             try:
                 from PIL import Image
@@ -1242,10 +1247,52 @@ def _tokens(text):
     return {word for word in words if word not in STOPWORDS and len(word) > 2}
 
 
-def _sparse_ui(ui_text):
+def _control_labels(events):
+    """Visible text for each control that carries a view, one entry per control.
+
+    Resource ids are deliberately left out, unlike _visible_label: every row of
+    a list shares one id, so counting ids as labels says a grid of identical
+    thumbnails is fully described when nothing distinguishes its rows.
+    """
+    labels = []
+    for event in events or ():
+        view = getattr(event, "view", None)
+        if not view:
+            continue
+        text = _view_text(view.get("text")).strip()
+        description = _view_text(view.get("content_description")).strip()
+        labels.append((text or description).lower())
+    return labels
+
+
+def _sparse_ui(ui_text, events=None):
+    """Whether the hierarchy is too thin to pick a control from, so vision earns its cost.
+
+    The line count alone was the wrong measure. get_text_representation drops
+    every view with no text and no content-description, so ui_text lists the
+    labelled elements and says nothing about the unlabelled controls beside
+    them. A NewPipe feed is the case that matters: ~20 video titles make it
+    look richly described, while the thumbnails, overflow buttons and the
+    player's transport controls carry no text at all, so the line count stayed
+    above the threshold and the screenshot was withheld on exactly the screens
+    that needed it. newpipe lost 6.01pp of code coverage and odyssey 10.40pp of
+    feature coverage that way.
+
+    What decides it instead is whether the controls can be told apart: how many
+    carry visible text, and how many distinct labels there are among them.
+    """
     if not ui_text:
         return True
-    return ui_text.count("\n") < 6
+    if ui_text.count("\n") < 6:
+        return True
+    labels = _control_labels(events)
+    if not labels:
+        # Nothing with a view to describe -- a screenshot would not help either.
+        return False
+    labelled = [label for label in labels if label]
+    if len(labelled) < len(labels) * VISION_LABEL_SHARE:
+        return True
+    return len(set(labelled)) < len(labels) * VISION_DISTINCT_SHARE
 
 
 def _event_fits_step(event, step):

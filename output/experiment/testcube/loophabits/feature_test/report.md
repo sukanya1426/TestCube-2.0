@@ -1,15 +1,15 @@
 # Feature test report: Loop Habit Tracker
 
-- Started: 2026-09-25 00:31:21
-- Finished: 2026-09-25 00:56:59
+- Started: 2026-10-25 17:31:44
+- Finished: 2026-10-25 18:30:10
 - Features: 14
-- Covered: 1
-- Partial: 13
+- Covered: 5
+- Partial: 6
 - Dropped (blocked / stuck): 0
 - Not present in the app: 0
-- Weighted coverage: 53% (mean completion ratio; the headline number)
-- Coverage: 7% (features with every guide step matched)
-- Stop reason: all_features_done
+- Weighted coverage: 75% (mean completion ratio; the headline number)
+- Coverage: 36% (features with every guide step matched)
+- Stop reason: budget_time
 - Scoring: **feature coverage** vs an independent labeled set (ground_truth_source=independent_labeled_set).
 
 ## Attempt summary
@@ -44,33 +44,32 @@
 
 ## Text-field resolution
 
-- Filled via credential.txt: 0
-- Filled via VLM/Gemini: 4
+- Filled via credential.txt: 4
+- Filled via VLM/Gemini: 8
 - Unresolved: 0
-- Online coverage: 7% (1/14) — live journal self-report (covered / extracted features).
-- Offline coverage: 0% (0 covered / 38; 8 partial) — LLM judge vs ground-truth JSON, not the live journal.
-- Offline weighted coverage: 7% (mean completion ratio).
+- Online coverage: 36% (5/14) — live journal self-report (covered / extracted features).
+- Offline coverage: not computed (no ground-truth JSON).
 
 ## Findings
 
 ### G001 Create a yes/no habit
 
 - Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Reason: Hit the per-feature step limit.
 - Feature source: guide
-- Completed steps: Open the app; Tap 'create' to finalize the habit creation
-- Remaining steps: Tap the '+' floating action button; Select 'yes or no' from the options; Enter the name of the habit
-- Completion ratio: 0.40
-- Credited from later features: G002, G007
-- Actions taken: 8
-  - act: CustomTouchEvent(state=177fdc7afe1dec7c3486256be79b8f5b, view=b924ba654f94f334b645265d17ba1ff3(IntroActivity/Button-Got it)) (heuristic)
-  - act: CustomTouchEvent(state=6260a914091f575e85c203ddbdfea418, view=f3f56843e085f4cafbb622958acf8412(IntroActivity/ImageButton-)) (rule)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (nav)
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=72f33801acfb92f965c35782b66fb2bf(MainActivity/TextView-Yes or No)) (heuristic)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (nav)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (nav)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (llm)
+- Completed steps: Open the app; Select 'yes' or 'no' for the habit; Tap the '+' floating action button; Tap 'create'
+- Remaining steps: Select 'yes or no' from the menu; Enter a habit name
+- Completion ratio: 0.67
+- Credited from later features: G002, G003, G006
+- Actions taken: 32
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=56404a350ae7410dd9eaf4ee119a24fb(SettingsActivity/Switch-)) (heuristic)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=27b36884e2e6467518276b9cab1ef95c(SettingsActivity/TextView-Settings)) (heuristic)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=06b160693cdf92f6c10423c62c0c5a43(SettingsActivity/Switch-)) (heuristic)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=493e5d92f7087b5cb0741cf81d73b302(SettingsActivity/LinearLayout-)) (rule)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=27b36884e2e6467518276b9cab1ef95c(SettingsActivity/TextView-Settings)) (rule)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=65ab674d113117f090ebad4edb42a54b(SettingsActivity/TextView-Interface)) (rule)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=65ab674d113117f090ebad4edb42a54b(SettingsActivity/TextView-Interface)) (rule)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=2f0ec387b1cbe562295479b38cb0d4ea(SettingsActivity/TextView-Toggle wit)) (llm)
 
 ### G002 Set a habit frequency
 
@@ -80,221 +79,212 @@
 - Completed steps: Open the habit editor; Tap the save button; Tap the frequency row
 - Remaining steps: Select the desired frequency
 - Completion ratio: 0.75
-- Credited from later features: G001, G003
-- Actions taken: 8
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (heuristic)
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=c74ecdcf285b5bbb7a78397c9a4157f7(MainActivity/LinearLayout-)) (llm)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
-  - act: CustomTouchEvent(state=d8cf92080fcd6153cee0cd0269308b1b, view=4655d7f369cbc1a09d49fb711534f700(MainActivity/CheckBox-)) (rule)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=b920068e3260d965e4b05d1130e7356f(ListHabitsActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=b920068e3260d965e4b05d1130e7356f(ListHabitsActivity/TextView-You have n)) (nav)
+- Credited from later features: G001, G004
+- Actions taken: 29
+  - act: CustomTouchEvent(state=d11e6d2add90502b25177533c45c1763, view=0f5bd7f1d523c5bbdd24b6f701af4bb8(ListHabitsActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=90ef907c08014d07a34d2c34b0e7e75d(SettingsActivity/TextView-Disable an)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=2f0ec387b1cbe562295479b38cb0d4ea(SettingsActivity/TextView-Toggle wit)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=62d3b2c4fabe783bbd891f9b837a7970(SettingsActivity/TextView-Extend day)) (rule)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=62d3b2c4fabe783bbd891f9b837a7970(SettingsActivity/TextView-Extend day)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=0d6c33216cfe01ef8bc6eb421aecd396(SettingsActivity/TextView-Show quest)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=0d6c33216cfe01ef8bc6eb421aecd396(SettingsActivity/TextView-Show quest)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=9d5dd97a7868a95a9d1131df37dec4d7(SettingsActivity/TextView-Reverse or)) (llm)
 
 ### G003 Add notes
 
-- Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Status: **covered**
+- Reason: Listed steps are done.
 - Feature source: guide
-- Completed steps: Open the habit editor; Tap the save button; Tap the notes field
-- Remaining steps: Enter the note text
-- Completion ratio: 0.75
-- Credited from later features: G001
-- Actions taken: 13
-  - act: CustomTouchEvent(state=5c0f2dcb6c2ff8982d9e1a9b6ae13ff3, view=1d6bfd36a2bd7ca9bc81100cef8b2a21(ListHabitsActivity/TextView-Yes or No)) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=b07c0943a6f7c81e55fd95736e7a9116(EditHabitActivity/EditText-(Optional))) (nav)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=b07c0943a6f7c81e55fd95736e7a9116(EditHabitActivity/EditText-(Optional))) (nav)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=f386ee48695614925c0dabaf3fb87ec1(EditHabitActivity/TextView-Frequency)) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=f386ee48695614925c0dabaf3fb87ec1(EditHabitActivity/TextView-Frequency)) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, x=540, y=1800) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, x=540, y=1664) (llm)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (rule)
+- Completed steps: Open the habit editor; Tap the notes field; Enter the note text; Tap the save button
+- Completion ratio: 1.00
+- Actions taken: 9
+  - act: CustomTouchEvent(state=76be00baa046a4f81e67fa69f889e186, view=2e32984a29613ab5eb4c6223bd8631e6(MainActivity/TextView-Habits)) (nav)
+  - act: CustomTouchEvent(state=76be00baa046a4f81e67fa69f889e186, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=d8cf92080fcd6153cee0cd0269308b1b, view=4655d7f369cbc1a09d49fb711534f700(MainActivity/CheckBox-)) (rule)
+  - act: CustomTouchEvent(state=208c54ae66e941f2eefaf63593b649ea, view=49d2b5f2e9ed92cab05e43a5f76b7428(ListHabitsActivity/Button-)) (heuristic)
+  - act: CustomTouchEvent(state=d78a148fd1b9a6a33449addab0a1e21d, view=1d6bfd36a2bd7ca9bc81100cef8b2a21(ListHabitsActivity/TextView-Yes or No)) (llm)
+  - act: CustomTouchEvent(state=eb50c2909d7c962e520fa93417a5c059, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (heuristic)
+  - act: CustomSetTextEvent(state=eb50c2909d7c962e520fa93417a5c059, view=ea6266e53fe46e96fd06981374f34d48(EditHabitActivity/EditText-e.g. Exerc), text=no) (mandatory_fill)
+  - act: CustomTouchEvent(state=a325d80dd607ffccb92dda861da1ac23, view=cd8ef146b98b2518ac0e44ca228ec490(EditHabitActivity/Button-SAVE)) (heuristic)
 
 ### G004 Enter a value
 
-- Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Status: **covered**
+- Reason: Listed steps are done.
 - Feature source: guide
-- Completed steps: Open the habit list; Tap on the measurable habit row
-- Remaining steps: Scroll to the 'Enter a value' section; Tap on the 'Enter a value' field; Enter the desired value; Tap the 'Save' button to confirm the value
-- Completion ratio: 0.33
-- Credited from later features: G002, G007
-- Actions taken: 8
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (rule)
-  - act: CustomTouchEvent(state=765c8dca5b62f093bf403f532c6f5bac, view=4655d7f369cbc1a09d49fb711534f700(MainActivity/CheckBox-)) (heuristic)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (rule)
-  - act: CustomTouchEvent(state=3c3f464abede0baf01c5956bc4634d22, view=9f725c1a64d195beea4cb666180560f8(MainActivity/CheckBox-)) (heuristic)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=66586bddf711e633f06e1dd276786871(MainActivity/View-)) (llm)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=66586bddf711e633f06e1dd276786871(MainActivity/View-)) (llm)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=fc7975cf5d60535de0d9f04837aa3a70(MainActivity/RecyclerView-)) (llm)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
+- Completed steps: Open the habit list; Tap on the habit row for the measurable habit; Tap on the 'Enter a value' option; Enter the value for the habit; Tap the 'Save' button to confirm the value entry
+- Completion ratio: 1.00
+- Actions taken: 5
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (heuristic)
+  - act: CustomTouchEvent(state=a479532c1e93ed50ea941120081f658b, view=5b585e813c4a74cd955dcb950364c79c(MainActivity/TextView-Measurable)) (heuristic)
+  - act: CustomSetTextEvent(state=a94d51032704fb36f22c97cb0f8e0d4f, view=26594f1a25b9e1ded85cfda11ca239f8(EditHabitActivity/EditText-e.g. Run), text=100) (mandatory_fill)
+  - act: CustomSetTextEvent(state=127abecc70e0f2b5b23403c6dcfdc1a2, view=fdac9958ad7817e625c72595e939dc53(EditHabitActivity/EditText-100), text=100) (mandatory_fill)
+  - act: CustomTouchEvent(state=127abecc70e0f2b5b23403c6dcfdc1a2, view=cd8ef146b98b2518ac0e44ca228ec490(EditHabitActivity/Button-SAVE)) (heuristic)
 
 ### G005 Mark a day
 
 - Status: **partial**
 - Reason: Onboarding already finished; main screen is visible.
 - Feature source: guide
-- Completed steps: Tap on the day cell in the habit list.; Long-press (or repeatedly tap, depending on the settings) the day cell.
-- Remaining steps: Select the 'Mark as Skipped' option from the menu.; Confirm the skip action by tapping the 'Confirm' button.; The app updates the day cell to show the skipped state.
-- Completion ratio: 0.40
-- Credited from later features: G006, G009
+- Completed steps: Open the Loop Habit Tracker app; Navigate to the habit list; Navigate back to the habit list; Long-press (or repeatedly tap, depending on the settings) the day cell
+- Remaining steps: Choose the 'skip' state; Confirm the skip action
+- Completion ratio: 0.67
+- Credited from later features: G002, G004, G009
 
 ### G006 View a habit's detailed
 
-- Status: **covered**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink. Later exploration completed remaining steps.
-- Completion source: cross_feature
+- Status: **partial**
+- Reason: Hit the per-feature step limit.
 - Feature source: guide
-- Completed steps: Open the habit list; Tap the habit name; Select the habit's detailed statistics; Tap the habit's detailed statistics; View the habit's detailed statistics
-- Completion ratio: 1.00
-- Credited from later features: G002, G007
-- Actions taken: 13
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=49d2b5f2e9ed92cab05e43a5f76b7428(ListHabitsActivity/Button-)) (heuristic)
-  - act: CustomTouchEvent(state=5c0f2dcb6c2ff8982d9e1a9b6ae13ff3, view=2e2bdc013af549e8230434b3e58c1b08(ListHabitsActivity/LinearLayout-)) (rule)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=0f5bd7f1d523c5bbdd24b6f701af4bb8(ListHabitsActivity/ImageView-)) (heuristic)
-  - act: CustomTouchEvent(state=8c10b4cbeace30870e1a88693405e6c9, view=a816ac152f900595a2f5ab9c48ba88e6(ListHabitsActivity/CheckBox-)) (rule)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=0f5bd7f1d523c5bbdd24b6f701af4bb8(ListHabitsActivity/ImageView-)) (heuristic)
-  - act: CustomTouchEvent(state=416725c266a55b7b9520f3baf779bb92, view=93fc7c80d1188310d78536d51575bf87(ListHabitsActivity/CheckBox-)) (rule)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=f883d59479293121a29722c8afd3641f(ListHabitsActivity/View-)) (heuristic)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=b6c620c82b8a893e6e1c90fbddcd83a6(ListHabitsActivity/Button-)) (rule)
+- Completed steps: Open the habit list; Tap the habit name; Select the habit's detailed statistics; Tap the 'Detailed' option
+- Remaining steps: Scroll to the detailed statistics section; Check the visibly different app state
+- Completion ratio: 0.67
+- Credited from later features: G009, G012
+- Actions taken: 29
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=ba8b36c35b51108bd503e1b971b119b2(SettingsActivity/TextView-Show days )) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=8034ef4485546f3524244301da75449e(SettingsActivity/TextView-Use pure b)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Disable co)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Disable co)) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=152f7016dbbe929505ec714b67e9f51d(SettingsActivity/ImageButton-)) (rule)
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=d8cf92080fcd6153cee0cd0269308b1b, view=8e9327bd5bcd094ea3df30723522314f(MainActivity/TextView-Dark theme)) (rule)
+  - act: CustomTouchEvent(state=bff6a8782d239f6440f8b090cd6f4711, view=08fb153294f1a0f5896ef5ee51114226(ListHabitsActivity/TextView-no)) (llm)
 
 ### G007 View the history calendar
 
-- Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Status: **covered**
+- Reason: Covered by shared-flow reuse of C003.
+- Completion source: shared_flow_reuse
 - Feature source: guide
-- Completed steps: Tap on the habit detail
-- Remaining steps: Scroll to the History card; Tap on the History card; Tap on the Calendar icon; Select the desired date on the calendar
-- Completion ratio: 0.20
-- Actions taken: 9
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=c74ecdcf285b5bbb7a78397c9a4157f7(MainActivity/LinearLayout-)) (rule)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=a639602b2b7ae8b94833b27b17527b34(MainActivity/LinearLayout-)) (rule)
-  - act: CustomSetTextEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=ea6266e53fe46e96fd06981374f34d48(EditHabitActivity/EditText-e.g. Exerc), text=test) (llm)
-  - act: CustomSetTextEvent(state=44f3db739c0f46a03884645f191d1c2c, view=6fcea44b38b114552c9457fab81d2fcf(EditHabitActivity/EditText-test), text=test) (rule)
-  - act: CustomTouchEvent(state=44f3db739c0f46a03884645f191d1c2c, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (llm)
-  - act: CustomTouchEvent(state=44f3db739c0f46a03884645f191d1c2c, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (llm)
-  - act: CustomTouchEvent(state=44f3db739c0f46a03884645f191d1c2c, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (llm)
+- Completed steps: Open the habit detail; Scroll to the History card; Tap on the History card; Select the calendar view; Confirm the calendar view is selected; Check the app state for the history calendar
+- Completion ratio: 1.00
+- Actions taken: 3
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=71178c04f9efaf3ab240753c1ead5210, view=9f725c1a64d195beea4cb666180560f8(MainActivity/CheckBox-)) (rule)
+  - act: CustomTouchEvent(state=bff6a8782d239f6440f8b090cd6f4711, view=49d2b5f2e9ed92cab05e43a5f76b7428(ListHabitsActivity/Button-)) (heuristic)
 
 ### G008 View the frequency chart
 
-- Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Status: **covered**
+- Reason: Covered by shared-flow reuse of C003.
+- Completion source: shared_flow_reuse
 - Feature source: guide
-- Completed steps: Open the habit detail
-- Remaining steps: Scroll to the Frequency card; Select the Frequency chart; Check the displayed frequency data
-- Completion ratio: 0.25
-- Actions taken: 8
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (heuristic)
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=a639602b2b7ae8b94833b27b17527b34(MainActivity/LinearLayout-)) (rule)
-  - act: CustomTouchEvent(state=4c5085db92fa4e2eec38001c1ef3e16e, view=94f5fdddde867c68a28175b7cd9b605d(EditHabitActivity/TextView-Every day)) (heuristic)
-  - act: CustomTouchEvent(state=d6d1cc424096320e83ea6347aafd7160, view=b71868abf48450f305dbc411f275e379(EditHabitActivity/TextView-times in)) (nav)
-  - act: CustomTouchEvent(state=d6d1cc424096320e83ea6347aafd7160, view=b71868abf48450f305dbc411f275e379(EditHabitActivity/TextView-times in)) (nav)
-  - act: CustomTouchEvent(state=d6d1cc424096320e83ea6347aafd7160, view=81acd9ba843ca4713ec6a98199ea9366(EditHabitActivity/TextView-days)) (afford_search)
-  - act: CustomTouchEvent(state=d6d1cc424096320e83ea6347aafd7160, view=ffd4eede60eeaeb8714073862a69f8f2(EditHabitActivity/TextView-times per )) (nav)
-  - act: CustomTouchEvent(state=d6d1cc424096320e83ea6347aafd7160, view=81acd9ba843ca4713ec6a98199ea9366(EditHabitActivity/TextView-days)) (llm)
+- Completed steps: Open the habit detail; Scroll to the Frequency card; Select the Frequency chart; Check the chart for the desired frequency; End the feature interaction
+- Completion ratio: 1.00
+- Actions taken: 3
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=d8cf92080fcd6153cee0cd0269308b1b, view=4655d7f369cbc1a09d49fb711534f700(MainActivity/CheckBox-)) (rule)
+  - act: CustomTouchEvent(state=bff6a8782d239f6440f8b090cd6f4711, view=49d2b5f2e9ed92cab05e43a5f76b7428(ListHabitsActivity/Button-)) (heuristic)
 
 ### G009 Archive a habit
 
 - Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Reason: Hit the per-feature step limit.
 - Feature source: guide
-- Completed steps: Open the habit list; Locate the habit you want to archive; Long-press the habit
-- Remaining steps: Select the 'Archive' option from the menu; Confirm the archive action
+- Completed steps: Tap on the 'Habits' section in the navigation drawer; Select the habit you want to archive; Long-press the habit
+- Remaining steps: Select 'Archive' from the context menu; Confirm the archive action
 - Completion ratio: 0.60
-- Actions taken: 11
-  - act: LongTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
+- Actions taken: 37
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (heuristic)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (heuristic)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (heuristic)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (heuristic)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=7026a0e89ba3e74382f66161421920aa(MainActivity/TextView-no)) (llm)
+  - act: LongTouchEvent(state=dd40287197d595c265537f6a327e7a85, view=2b77c1f7d8099bec932f11436186dadf(MainActivity/TextView-1)) (heuristic)
+  - act: CustomTouchEvent(state=dd40287197d595c265537f6a327e7a85, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
 
 ### G010 Delete a habit
 
 - Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Reason: Retry round 3; budget remains.
 - Feature source: guide
-- Completed steps: Open the habit list; Scroll to find the habit you want to delete; Long-press the habit; Select the delete option
-- Remaining steps: Confirm the deletion
+- Completed steps: Open the habit list; Confirm the deletion; Scroll down to find the habit you want to delete; Long-press the habit you want to delete
+- Remaining steps: Select the delete option
 - Completion ratio: 0.80
-- Credited from later features: G007, G009, G012
-- Actions taken: 9
-  - act: LongTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (heuristic)
-  - act: LongTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (heuristic)
-  - act: LongTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
-  - act: LongTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (heuristic)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=9107902f1e3a521eb2e60dbcdc0230ce(MainActivity/TextView-You have n)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
+- Credited from later features: G002, G004, G006, G009
+- Actions taken: 33
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (rule)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (nav)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (nav)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (nav)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
+  - act: LongTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (nav)
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (llm)
+  - act: LongTouchEvent(state=a479532c1e93ed50ea941120081f658b, view=db267a17579c53282bfe6785142fc587(MainActivity/LinearLayout-)) (rule)
 
 ### G011 Sort the habit list
 
-- Status: **partial**
-- Reason: The current screen is for creating a habit, not for sorting the habit list.
+- Status: **pending**
+- Reason: Retry round 3; budget remains.
 - Feature source: guide
-- Completed steps: Open the habit list; Tap 'Sort the habit list'; Tap the overflow menu
-- Remaining steps: Select 'Sort' from the overflow menu; Select 'Reorder habits manually'; Tap 'Reorder habits manually'
-- Completion ratio: 0.50
-- Credited from later features: G006, G012
-- Actions taken: 2
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=86dda9cf49b1cc84f1157a5c09bd2c02(MainActivity/Button-)) (heuristic)
-  - act: CustomTouchEvent(state=d1dce200cc46c04017ef45da3895c85f, view=72f33801acfb92f965c35782b66fb2bf(MainActivity/TextView-Yes or No)) (llm)
+- Completed steps: Open the habit list; Choose 'Sort by Name'; Select 'Sort'
+- Remaining steps: Tap the overflow menu; Confirm the sort action
+- Completion ratio: 0.60
+- Credited from later features: G002, G006, G009
+- Actions taken: 24
+  - act: CustomTouchEvent(state=a479532c1e93ed50ea941120081f658b, view=db267a17579c53282bfe6785142fc587(MainActivity/LinearLayout-)) (llm)
+  - act: CustomTouchEvent(state=a94d51032704fb36f22c97cb0f8e0d4f, view=667b0a6ac743a1b4d3c6ae175ce13bf9(EditHabitActivity/TextView-Color)) (nav)
+  - act: CustomTouchEvent(state=a94d51032704fb36f22c97cb0f8e0d4f, view=667b0a6ac743a1b4d3c6ae175ce13bf9(EditHabitActivity/TextView-Color)) (nav)
+  - act: CustomTouchEvent(state=a94d51032704fb36f22c97cb0f8e0d4f, view=cd8ef146b98b2518ac0e44ca228ec490(EditHabitActivity/Button-SAVE)) (llm)
+  - act: CustomSetTextEvent(state=a94d51032704fb36f22c97cb0f8e0d4f, view=26594f1a25b9e1ded85cfda11ca239f8(EditHabitActivity/EditText-e.g. Run), text=test) (llm)
+  - act: CustomTouchEvent(state=182ae9b10036622141ba605f4eb5347f, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (nav)
+  - act: CustomTouchEvent(state=182ae9b10036622141ba605f4eb5347f, view=53617e3dd633dfdab80a3ab8f4043cae(EditHabitActivity/TextView-Create hab)) (nav)
+  - act: CustomTouchEvent(state=182ae9b10036622141ba605f4eb5347f, view=884f9034933fbe9841e257de1f185f85(EditHabitActivity/TextView-Notes)) (llm)
 
 ### G012 Change the number of
 
-- Status: **partial**
-- Reason: Stuck in a repeating screen loop.
+- Status: **pending**
+- Reason: Retry round 3; budget remains.
 - Feature source: guide
-- Completed steps: Tap on the 'Appearance' settings option in the app's main menu.; Select the 'Columns' option within the appearance settings.
-- Remaining steps: Enter the desired number of day columns you want to display.; Confirm the changes by tapping the 'Save' button.; Rotate the device or resize the window to see the updated number of day columns.
+- Completed steps: Confirm the changes by tapping the 'Done' or 'Save' button.; Tap on the 'Appearance' settings option in the app.
+- Remaining steps: Scroll down to find the 'Number of Days' setting.; Select the 'Number of Days' setting.; Enter the desired number of days you want to display.
 - Completion ratio: 0.40
-- Actions taken: 9
-  - act: CustomTouchEvent(state=71178c04f9efaf3ab240753c1ead5210, view=fa0979b32c851c95dc3cb65134b17f57(MainActivity/TextView-Settings)) (heuristic)
-  - act: CustomTouchEvent(state=68dad995bf69788300dc3a36ba02f8e7, view=27b36884e2e6467518276b9cab1ef95c(SettingsActivity/TextView-Settings)) (heuristic)
-  - act: CustomTouchEvent(state=68dad995bf69788300dc3a36ba02f8e7, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Differenti)) (heuristic)
-  - act: CustomTouchEvent(state=856122f224d93e0ce98dacb7a625aa4e, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Differenti)) (heuristic)
-  - act: CustomTouchEvent(state=68dad995bf69788300dc3a36ba02f8e7, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Differenti)) (heuristic)
-  - act: CustomTouchEvent(state=856122f224d93e0ce98dacb7a625aa4e, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Wait until)) (rule)
-  - act: CustomTouchEvent(state=856122f224d93e0ce98dacb7a625aa4e, view=62d3b2c4fabe783bbd891f9b837a7970(SettingsActivity/TextView-Extend day)) (rule)
-  - act: CustomTouchEvent(state=856122f224d93e0ce98dacb7a625aa4e, view=de67757e09e313787c1a3f5849ac9452(SettingsActivity/TextView-Replaces g)) (rule)
+- Credited from later features: G003
+- Actions taken: 24
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=ba8b36c35b51108bd503e1b971b119b2(SettingsActivity/TextView-Show days )) (rule)
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=66586bddf711e633f06e1dd276786871(MainActivity/View-)) (rule)
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=fc7975cf5d60535de0d9f04837aa3a70(MainActivity/RecyclerView-)) (rule)
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=fc7975cf5d60535de0d9f04837aa3a70(MainActivity/RecyclerView-)) (rule)
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
+  - act: CustomTouchEvent(state=79f3a193d92fa3ed24146d0d2bba1679, view=9958377056a609aa8129627129fb8100(MainActivity/Button-)) (llm)
+  - act: CustomTouchEvent(state=d11e6d2add90502b25177533c45c1763, view=b6c620c82b8a893e6e1c90fbddcd83a6(ListHabitsActivity/Button-)) (rule)
+  - act: CustomTouchEvent(state=c1c9d962f1374a441f1c673fe5e9d8af, view=a816ac152f900595a2f5ab9c48ba88e6(ListHabitsActivity/CheckBox-)) (heuristic)
 
 ### G013 Enable persistent reminder notifications
 
-- Status: **partial**
-- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Status: **pending**
+- Reason: Retry round 3; budget remains.
 - Feature source: guide
 - Completed steps: Open Settings; Save the settings
-- Remaining steps: Scroll to find the sticky/persistent notification option; Select the sticky/persistent notification option; Toggle the persistent reminder notification setting
+- Remaining steps: Scroll to find the sticky/persistent notification option; Select the sticky/persistent notification option; Enable the sticky/persistent notification
 - Completion ratio: 0.40
-- Credited from later features: G012
-- Actions taken: 10
-  - act: (screen already shows this destination) (rule)
-  - act: CustomTouchEvent(state=71178c04f9efaf3ab240753c1ead5210, view=fa0979b32c851c95dc3cb65134b17f57(MainActivity/TextView-Settings)) (heuristic)
-  - act: CustomTouchEvent(state=0fca48f3d02701870f89cee514b8b148, view=eae15d5f2c95d692c8cd580c8c095beb(MainActivity/Button-Close app)) (llm)
-  - act: CustomTouchEvent(state=71178c04f9efaf3ab240753c1ead5210, view=8e9327bd5bcd094ea3df30723522314f(MainActivity/TextView-Dark theme)) (nav)
-  - act: CustomTouchEvent(state=aa213e9cf6ade7e37dc6f839ea4444b4, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (afford_search)
-  - act: CustomTouchEvent(state=71178c04f9efaf3ab240753c1ead5210, view=8e9327bd5bcd094ea3df30723522314f(MainActivity/TextView-Dark theme)) (nav)
-  - act: CustomTouchEvent(state=765cf14783492b2d2ede396f9bf17799, view=b6c620c82b8a893e6e1c90fbddcd83a6(ListHabitsActivity/Button-)) (rule)
-  - act: CustomTouchEvent(state=10f9118ddefcff969a34cb49e3401dd6, view=93fc7c80d1188310d78536d51575bf87(ListHabitsActivity/CheckBox-)) (heuristic)
+- Credited from later features: G002, G003
+- Actions taken: 24
+  - act: CustomTouchEvent(state=f76bedeec35f6cb3592dd40f42494fc7, view=434ac7c8c71405ad45422218e9a814fe(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=d8cf92080fcd6153cee0cd0269308b1b, view=fa0979b32c851c95dc3cb65134b17f57(MainActivity/TextView-Settings)) (nav)
+  - act: CustomTouchEvent(state=66a1e832b01929ec8292d183fa0a6580, x=54, y=96) (llm)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=493e5d92f7087b5cb0741cf81d73b302(SettingsActivity/LinearLayout-)) (nav)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=90ef907c08014d07a34d2c34b0e7e75d(SettingsActivity/TextView-Disable an)) (nav)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=06b160693cdf92f6c10423c62c0c5a43(SettingsActivity/Switch-)) (afford_search)
+  - act: ScrollEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=e4c2d2c3dd9ba496328c325cfc8d0ded(SettingsActivity/RecyclerView-), direction=up) (afford_search)
+  - act: CustomTouchEvent(state=dea033550c5b4da805d1fe17eb50b9e3, view=b02de247df48695451e28c457dcf203d(SettingsActivity/TextView-Enable ski)) (rule)
 
 ### G014 Check off a habit
 
-- Status: **partial**
-- Reason: Already on the home screen.
+- Status: **covered**
+- Reason: Already on the home screen. Later exploration completed remaining steps.
+- Completion source: cross_feature
 - Feature source: guide
-- Completed steps: Tap the home screen widget for the habit you want to check off.; Tap the checkmark area to record the habit for today without opening the app.
-- Remaining steps: Locate the checkmark area on the widget.
-- Completion ratio: 0.67
-- Credited from later features: G007
-- Actions taken: 1
-  - act: (screen already shows this destination) (rule)
+- Completed steps: Tap the checkmark area on the placed home screen widget; the habit is recorded for today without opening the app
+- Completion ratio: 1.00
+- Credited from later features: G006
 
 ## Shared flows detected
 
-None this run.
+2 reuse(s); 9 action(s) skipped by not re-executing a known terminal flow.
+
+- `G007` reused `C003` (from G003), skipped 5 action(s)
+- `G008` reused `C003` (from G003), skipped 4 action(s)
 
 See `session.json` and `log.md` in this folder for the full trace.

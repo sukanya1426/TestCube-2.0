@@ -8,14 +8,14 @@ Total Actions    : 729
 
 Total Features   : 26
 Covered Features : 0
-Partial          : 15
-Uncovered        : 11
+Partial          : 13
+Uncovered        : 13
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 19.49%  (mean completion ratio; partial steps count)
-Exercised        : 15  (covered 0 + partial 15)
+Weighted Coverage: 16.60%  (mean completion ratio; partial steps count)
+Exercised        : 13  (covered 0 + partial 13)
 
 ground_truth_source: independent_labeled_set
 
@@ -165,13 +165,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT019] Set the time format
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.41
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 50% of gold steps
-Evidence   :
-  - toggle the "Use 24-hour time format" option (or follow the system setting): touch RelativeLayout rid=settings_hour_format_holder activity=SettingsActivity state_changed (tokens=format,hour,setting)
+Completion : 0% of gold steps
 
 [GT020] Set the first day of the week
 Status     : PARTIAL
@@ -198,13 +194,9 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT024] Customise the app colours and theme
-Status     : PARTIAL
-Test Cases : test_002, test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - tap "Customise colours": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)
+Completion : 0% of gold steps
 
 [GT025] Change the app language and font size
 Status     : NOT COVERED
@@ -225,9 +217,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 26 features covered
-15 / 26 features partial
+13 / 26 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 19.49%
+Weighted Feature Coverage = mean(completion_ratio) = 16.60%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -261,11 +253,11 @@ GT GT015 'Create a timer' | journal=missing (no name match) status=missing | off
 GT GT016 'Label a timer and set its sound' | journal=missing (no name match) status=missing | offline=partial
 GT GT017 'Pause, resume, reset or delete a timer' | journal=missing (no name match) status=missing | offline=partial
 GT GT018 'Add the digital clock home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT019 'Set the time format' | journal=missing (no name match) status=missing | offline=partial
+GT GT019 'Set the time format' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT020 'Set the first day of the week' | journal=missing (no name match) status=missing | offline=partial
 GT GT021 'Keep the screen on in the clock tab' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT022 'Choose which tabs are visible' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT023 'Make alarms ignore silent mode' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT024 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=partial
+GT GT024 'Customise the app colours and theme' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT025 'Change the app language and font size' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT026 'View the about screen, FAQ and licences' | journal=missing (no name match) status=missing | offline=partial

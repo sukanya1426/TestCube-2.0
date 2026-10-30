@@ -4,7 +4,7 @@ TestCube Feature Coverage Report
 
 Application: NoNonsense Notes
 
-Total Actions    : 139
+Total Actions    : 388
 
 Total Features   : 34
 Covered Features : 0
@@ -14,7 +14,7 @@ Uncovered        : 12
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 25.34%  (mean completion ratio; partial steps count)
+Weighted Coverage: 20.54%  (mean completion ratio; partial steps count)
 Exercised        : 22  (covered 0 + partial 22)
 
 ground_truth_source: independent_labeled_set
@@ -45,16 +45,16 @@ Completion : 0% of gold steps
 
 [GT004] Set the default list
 Status     : PARTIAL
-Test Cases : test_020, test_028
+Test Cases : test_025, test_026, test_042, test_046
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT005] Create a task
 Status     : PARTIAL
-Test Cases : test_008
+Test Cases : test_009
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
@@ -62,13 +62,9 @@ Evidence   :
   - enter the optional note text: set_text EditText "Note" rid=taskText text=no activity=ActivityMain_ state_changed (tokens=note)
 
 [GT006] Edit a task
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.33
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - tap the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
+Completion : 0% of gold steps
 
 [GT007] Mark a task as completed
 Status     : NOT COVERED
@@ -82,93 +78,90 @@ Completion : 0% of gold steps
 
 [GT009] Delete all completed tasks in a list
 Status     : PARTIAL
-Test Cases : test_008, test_024
-Confidence : 0.45
+Test Cases : test_078
+Confidence : 0.50
 Matcher    : deterministic
 Completion : 50% of gold steps
 Evidence   :
-  - tap "Delete completed tasks": touch CheckBox rid=taskCompleted activity=ActivityMain_ (tokens=completed,tasks)
+  - tap "Delete completed tasks": touch TextView "Delete all completed tasks?" rid=message activity=ActivityMain_ (tokens=completed,delete,tasks)
 
 [GT010] Create sub-tasks by indenting
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003, test_015, test_046, test_052, test_056, test_064
+Confidence : 0.25
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - drag it to the right (or use the indent control) to nest it under the task above: touch View rid=drag_handle activity=ActivityMain_ (tokens=drag)
 
 [GT011] Reorder tasks manually
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_046
+Confidence : 0.23
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 25% of gold steps
+Evidence   :
+  - Set the list sort order to manual: touch TextView "Default sorting order" rid=title activity=PrefsActivity (tokens=order,sort)
 
 [GT012] Set a due date on a task
 Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.67
+Test Cases : test_009, test_013, test_015, test_017, test_019, test_038, test_044, test_052, test_056, test_066, test_068
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 67% of gold steps
+Completion : 33% of gold steps
 Evidence   :
-  - Open the task: touch TextView "Tasks" rid=text1 activity=ActivityMain_ state_changed (tokens=task)
   - tap the due-date field: touch ImageButton "Remove due date" rid=dueCancelButton activity=ActivityMain_ (tokens=date,due)
 
 [GT013] Set a time-based reminder
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-
-[GT014] Set a repeating reminder
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018, test_022
-Confidence : 0.50
-Matcher    : deterministic
-Completion : 50% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" rid=text1 activity=ActivityMain_ (tokens=task)
-  - add a reminder: touch TextView "Add a reminder" rid=notificationAdd activity=ActivityMain_ state_changed (tokens=reminder)
-
-[GT015] Set a location-based reminder
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018, test_020, test_022, test_024
-Confidence : 0.33
-Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-  - search for or pick the place on the map: touch Button "Search" rid=menu_search activity=ActivityMain_ state_changed (tokens=search)
-
-[GT016] Remove a reminder
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.33
-Matcher    : deterministic
-Completion : 33% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-
-[GT017] Move a task to a different list
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-
-[GT018] Delete a task
-Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
-Confidence : 0.50
-Matcher    : deterministic
-Completion : 50% of gold steps
-Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-
-[GT019] Sort a list
 Status     : NOT COVERED
 Matcher    : deterministic
 Completion : 0% of gold steps
+
+[GT014] Set a repeating reminder
+Status     : PARTIAL
+Test Cases : test_009, test_013, test_015, test_036, test_038, test_044, test_058, test_066, test_072
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - add a reminder: touch TextView "Add a reminder" rid=notificationAdd activity=ActivityMain_ (tokens=reminder)
+
+[GT015] Set a location-based reminder
+Status     : PARTIAL
+Test Cases : test_009, test_013, test_015, test_017, test_019, test_021, test_036, test_038, test_044, test_048, test_058, test_066, test_072, test_076, test_078, test_080, test_082
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - tap "Add reminder": touch TextView "Add a reminder" rid=notificationAdd activity=ActivityMain_ (tokens=reminder)
+
+[GT016] Remove a reminder
+Status     : PARTIAL
+Test Cases : test_013, test_015, test_036, test_038, test_044, test_052, test_058, test_066, test_072
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - the reminder is removed: touch ImageButton "Remove reminder" rid=notificationRemove activity=ActivityMain_ state_changed (tokens=reminder,removed)
+
+[GT017] Move a task to a different list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Delete a task
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Sort a list
+Status     : PARTIAL
+Test Cases : test_019, test_044
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "Sort": touch TextView "Sorting" rid=title activity=ActivityMain_ (tokens=sort)
 
 [GT020] Switch between lists by swiping
 Status     : NOT COVERED
@@ -177,7 +170,7 @@ Completion : 0% of gold steps
 
 [GT021] View all tasks from all lists together
 Status     : PARTIAL
-Test Cases : test_001, test_002, test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018, test_020, test_022, test_024
+Test Cases : test_001, test_003, test_005, test_007, test_009, test_011, test_013, test_015, test_017, test_019, test_021, test_025, test_028, test_030, test_031, test_032, test_033, test_034, test_036, test_038, test_040, test_042, test_044, test_046, test_048, test_051, test_052, test_053, test_054, test_055, test_056, test_058, test_060, test_061, test_062, test_064, test_065, test_066, test_068, test_069, test_071, test_072, test_074, test_076, test_078, test_080, test_082
 Confidence : 0.50
 Matcher    : deterministic
 Completion : 50% of gold steps
@@ -185,32 +178,36 @@ Evidence   :
   - the tasks from every list are shown in one screen: touch ImageButton "Open navigation drawer" activity=ActivityMain_ (outcome tokens=tasks)
 
 [GT022] Search tasks
+Status     : PARTIAL
+Test Cases : test_048
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - type the search text: set_text AutoCompleteTextView "Search" rid=search_src_text text=test activity=ActivityMain_ state_changed (tokens=search)
+
+[GT023] Share a task
 Status     : NOT COVERED
 Matcher    : deterministic
 Completion : 0% of gold steps
 
-[GT023] Share a task
+[GT024] Create a task from text shared by another app
 Status     : PARTIAL
-Test Cases : test_004, test_006, test_008, test_010, test_012, test_014, test_016, test_018
+Test Cases : test_042
 Confidence : 0.25
 Matcher    : deterministic
 Completion : 25% of gold steps
 Evidence   :
-  - Open the task: touch TextView "Tasks" activity=ActivityMain_ (tokens=task)
-
-[GT024] Create a task from text shared by another app
-Status     : PARTIAL
-Test Cases : test_008
-Confidence : 0.23
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - choose NoNonsense Notes: set_text EditText "Note" rid=taskText text=no activity=ActivityMain_ state_changed (tokens=no,notes)
+  - choose NoNonsense Notes: long_touch TextView "NoNonsense Notes" activity=PrefsActivity (tokens=no,nonsense,notes)
 
 [GT025] Add the task list home screen widget
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_042
+Confidence : 0.18
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - find NoNonsense Notes: long_touch TextView "NoNonsense Notes" activity=PrefsActivity (tokens=no,nonsense,notes)
 
 [GT026] Configure widget appearance
 Status     : NOT COVERED
@@ -219,78 +216,76 @@ Completion : 0% of gold steps
 
 [GT027] Change the app theme
 Status     : PARTIAL
-Test Cases : test_020, test_028
+Test Cases : test_025, test_026, test_042, test_046
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
 
 [GT028] Change the list and font sizes
 Status     : PARTIAL
-Test Cases : test_020, test_028
-Confidence : 0.67
-Matcher    : deterministic
-Completion : 67% of gold steps
-Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-  - open the appearance section: touch TextView "Appearance" rid=title activity=PrefsActivity state_changed (tokens=appearance)
-
-[GT029] Enable synchronisation with a storage folder (SD card sync)
-Status     : PARTIAL
-Test Cases : test_020, test_028
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-
-[GT030] Configure notification behaviour
-Status     : PARTIAL
-Test Cases : test_016, test_020, test_022, test_028
-Confidence : 0.60
-Matcher    : deterministic
-Completion : 67% of gold steps
-Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-  - set the notification sound, vibration and whether persistent notifications are used for reminders: touch TextView "Add a reminder" rid=notificationAdd activity=ActivityMain_ (tokens=notification,notifications,reminders)
-
-[GT031] Back up the task database
-Status     : PARTIAL
-Test Cases : test_020, test_028
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-
-[GT032] Restore the task database from a backup
-Status     : PARTIAL
-Test Cases : test_020, test_028
-Confidence : 0.25
-Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open Settings: touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-
-[GT033] Configure the swipe gesture on list items
-Status     : PARTIAL
-Test Cases : test_018, test_020, test_024, test_028
+Test Cases : test_025, test_026, test_042, test_046
 Confidence : 0.33
 Matcher    : deterministic
 Completion : 33% of gold steps
 Evidence   :
-  - choose what a horizontal swipe does to a task (for example complete or delete): touch Button "Delete" rid=menu_delete activity=ActivityMain_ state_changed (tokens=delete)
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT029] Enable synchronisation with a storage folder (SD card sync)
+Status     : PARTIAL
+Test Cases : test_025, test_026, test_042, test_046
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT030] Configure notification behaviour
+Status     : PARTIAL
+Test Cases : test_025, test_026, test_042, test_046, test_072
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT031] Back up the task database
+Status     : PARTIAL
+Test Cases : test_025, test_026, test_042, test_046
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT032] Restore the task database from a backup
+Status     : PARTIAL
+Test Cases : test_025, test_026, test_042, test_046
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - Open Settings: touch TextView "Settings" rid=title state_changed (tokens=settings)
+
+[GT033] Configure the swipe gesture on list items
+Status     : PARTIAL
+Test Cases : test_003, test_009, test_017, test_021, test_025, test_026, test_036, test_042, test_046
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - choose what a horizontal swipe does to a task (for example complete or delete): touch Button "Delete" rid=menu_delete activity=ActivityMain_ (tokens=delete)
 
 [GT034] View the about screen and licences
 Status     : PARTIAL
-Test Cases : test_020, test_028
+Test Cases : test_025, test_026, test_042, test_046
 Confidence : 0.67
 Matcher    : deterministic
 Completion : 67% of gold steps
 Evidence   :
-  - Open Settings (or the drawer): touch TextView "Settings" rid=title activity=PrefsActivity state_changed (tokens=settings)
-  - tap "About": touch TextView "About" rid=title activity=PrefsActivity state_changed (tokens=about)
+  - Open Settings (or the drawer): touch TextView "Settings" activity=PrefsActivity (tokens=settings)
+  - tap "About": long_touch TextView "About" activity=PrefsActivity (tokens=about)
 
 ----------------------------------------
 SUMMARY
@@ -299,7 +294,7 @@ SUMMARY
 0 / 34 features covered
 22 / 34 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 25.34%
+Weighted Feature Coverage = mean(completion_ratio) = 20.54%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -315,33 +310,33 @@ Extracted vs ground truth: 14 / 34 (completeness ratio 0.412)
 
 Feature-inference P/R/F1: 1.00 / 0.41 / 0.58 (false not_present=0)
 
-GT GT001 'Create a task list' | journal=G001 'Create a task list' (sim=1.0, name) status=covered | offline=not_covered
-GT GT002 'Rename a task list' | journal=G002 'Delete a task list' (sim=0.5, name) status=partial | offline=not_covered
-GT GT003 'Delete a task list' | journal=G013 'Add the task list' (sim=0.4, name) status=partial | offline=not_covered
+GT GT001 'Create a task list' | journal=G001 'Create a task list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT002 'Rename a task list' | journal=G002 'Delete a task list' (sim=0.5, name) status=covered | offline=not_covered
+GT GT003 'Delete a task list' | journal=G013 'Add the task list' (sim=0.4, name) status=pending | offline=not_covered
 GT GT004 'Set the default list' | journal=missing (no name match) status=missing | offline=partial
 GT GT005 'Create a task' | journal=G003 'Create a task' (sim=1.0, name) status=partial | offline=partial
-GT GT006 'Edit a task' | journal=G004 'Mark a task' (sim=0.333, name) status=partial | offline=partial
+GT GT006 'Edit a task' | journal=G004 'Mark a task' (sim=0.333, name) status=covered | offline=not_covered
 GT GT007 'Mark a task as completed' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT008 'Show or hide completed tasks' | journal=G005 'Delete all completed tasks' (sim=0.333, name) status=partial | offline=not_covered
 GT GT009 'Delete all completed tasks in a list' | journal=G011 'View all tasks' (sim=0.333, name) status=covered | offline=partial
-GT GT010 'Create sub-tasks by indenting' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT011 'Reorder tasks manually' | journal=G006 'Reorder tasks manually' (sim=1.0, name) status=partial | offline=not_covered
+GT GT010 'Create sub-tasks by indenting' | journal=missing (no name match) status=missing | offline=partial
+GT GT011 'Reorder tasks manually' | journal=G006 'Reorder tasks manually' (sim=1.0, name) status=partial | offline=partial
 GT GT012 'Set a due date on a task' | journal=missing (no name match) status=missing | offline=partial
-GT GT013 'Set a time-based reminder' | journal=G007 'Set a time-based reminder' (sim=1.0, name) status=partial | offline=partial
+GT GT013 'Set a time-based reminder' | journal=G007 'Set a time-based reminder' (sim=1.0, name) status=covered | offline=not_covered
 GT GT014 'Set a repeating reminder' | journal=G008 'Set a location-based reminder' (sim=0.4, name) status=partial | offline=partial
 GT GT015 'Set a location-based reminder' | journal=missing (no name match) status=missing | offline=partial
 GT GT016 'Remove a reminder' | journal=missing (no name match) status=missing | offline=partial
-GT GT017 'Move a task to a different list' | journal=G009 'Move a task' (sim=0.5, name) status=partial | offline=partial
-GT GT018 'Delete a task' | journal=G012 'Share a task' (sim=0.333, name) status=partial | offline=partial
-GT GT019 'Sort a list' | journal=G010 'Sort a list' (sim=1.0, name) status=partial | offline=not_covered
+GT GT017 'Move a task to a different list' | journal=G009 'Move a task' (sim=0.5, name) status=pending | offline=not_covered
+GT GT018 'Delete a task' | journal=G012 'Share a task' (sim=0.333, name) status=covered | offline=not_covered
+GT GT019 'Sort a list' | journal=G010 'Sort a list' (sim=1.0, name) status=covered | offline=partial
 GT GT020 'Switch between lists by swiping' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT021 'View all tasks from all lists together' | journal=missing (no name match) status=missing | offline=partial
-GT GT022 'Search tasks' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT023 'Share a task' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Search tasks' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Share a task' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT024 'Create a task from text shared by another app' | journal=missing (no name match) status=missing | offline=partial
-GT GT025 'Add the task list home screen widget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Add the task list home screen widget' | journal=missing (no name match) status=missing | offline=partial
 GT GT026 'Configure widget appearance' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT027 'Change the app theme' | journal=G014 'Change the app theme' (sim=1.0, name) status=partial | offline=partial
+GT GT027 'Change the app theme' | journal=G014 'Change the app theme' (sim=1.0, name) status=pending | offline=partial
 GT GT028 'Change the list and font sizes' | journal=missing (no name match) status=missing | offline=partial
 GT GT029 'Enable synchronisation with a storage folder (SD card sync)' | journal=missing (no name match) status=missing | offline=partial
 GT GT030 'Configure notification behaviour' | journal=missing (no name match) status=missing | offline=partial

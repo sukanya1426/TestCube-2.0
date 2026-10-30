@@ -1,0 +1,852 @@
+{
+  "application": "Wikimedia Commons",
+  "total_features": 30,
+  "covered_features": 0,
+  "uncovered_features": 19,
+  "partial_features": 11,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/wikimediacommons",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/wikimediacommons/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/wikimediacommons/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the explore feed of Commons media",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT002",
+      "name": "Open a media item from the explore feed",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Read a media item's details",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Search Commons for media",
+      "status": "partial",
+      "test_cases": [
+        "test_021"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the search field: touch Button \"Search\" rid=action_search state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "tap the search field"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT005",
+      "name": "Browse nearby places that need photographs",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT006",
+      "name": "View nearby places on a map",
+      "status": "partial",
+      "test_cases": [
+        "test_016",
+        "test_018",
+        "test_021",
+        "test_023"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "switch to the map view: touch ImageView rid=navigation_bar_item_icon_view activity=MainActivity (outcome tokens=map)"
+      ],
+      "matched_path": [
+        "switch to the map view"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.25
+    },
+    {
+      "id": "GT007",
+      "name": "Filter nearby places by whether they need pictures",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT008",
+      "name": "Open a nearby place's details",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Take a photograph to upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Pick an existing image from the device to upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "Enter a title and caption for an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Enter a description for an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Add categories to an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT014",
+      "name": "Add depictions to an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "Choose the licence for an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Submit an upload",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "Review the upload queue and progress",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Retry or cancel a failed upload",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the uploads list: touch TextView \"Uploads\" rid=title activity=SettingsActivity (tokens=uploads)"
+      ],
+      "matched_path": [
+        "Open the uploads list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT019",
+      "name": "View your own contributions",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Open one of your contributions",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Log in with a Wikimedia account",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_005",
+        "test_007",
+        "test_023",
+        "test_025",
+        "test_029",
+        "test_031",
+        "test_033",
+        "test_035",
+        "test_037",
+        "test_039",
+        "test_041",
+        "test_052",
+        "test_054",
+        "test_056",
+        "test_058",
+        "test_062",
+        "test_064"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "enter the username: set_text EditText \"Username\" rid=login_username text=test activity=LoginActivity state_changed (tokens=username)",
+        "enter the password: set_text EditText \"Password\" rid=login_password text=test activity=LoginActivity state_changed (tokens=password)"
+      ],
+      "matched_path": [
+        "enter the username",
+        "enter the password"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT022",
+      "name": "Log out of the account",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap Settings or the account entry: touch TextView \"Settings\" rid=more_settings state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "tap Settings or the account entry"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT023",
+      "name": "Bookmark a media item",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Open the bookmarks list",
+      "status": "partial",
+      "test_cases": [
+        "test_021"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"Bookmarks\": touch FrameLayout \"Bookmarks\" activity=MainActivity (tokens=bookmarks)"
+      ],
+      "matched_path": [
+        "tap \"Bookmarks\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT025",
+      "name": "View achievements and upload statistics",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Open the settings screen",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"Settings\": touch TextView \"Settings\" rid=more_settings state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "tap \"Settings\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT027",
+      "name": "Change the application theme",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=more_settings state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT028",
+      "name": "Enable the limited connection mode",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=more_settings state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT029",
+      "name": "Change the upload licence default",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=more_settings state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT030",
+      "name": "Read the about, privacy policy and version information",
+      "status": "partial",
+      "test_cases": [
+        "test_019",
+        "test_021"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"About\": touch TextView \"About\" rid=more_about state_changed (tokens=about)"
+      ],
+      "matched_path": [
+        "tap \"About\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Browse the explore feed of Commons media",
+      "journal_id": "G001",
+      "journal_name": "Browse the explore feed",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Open a media item from the explore feed",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.375,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Read a media item's details",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Search Commons for media",
+      "journal_id": "G002",
+      "journal_name": "Search Commons",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Browse nearby places that need photographs",
+      "journal_id": "G003",
+      "journal_name": "Browse nearby places",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "View nearby places on a map",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.4,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Filter nearby places by whether they need pictures",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Open a nearby place's details",
+      "journal_id": "G004",
+      "journal_name": "Open a place on the map",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "not_present",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": true,
+      "false_not_present": true
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Take a photograph to upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Pick an existing image from the device to upload",
+      "journal_id": "G005",
+      "journal_name": "Start an upload from the camera",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Enter a title and caption for an upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Enter a description for an upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Add categories to an upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "Add depictions to an upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "Choose the licence for an upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Submit an upload",
+      "journal_id": "G007",
+      "journal_name": "Describe an upload",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "Review the upload queue and progress",
+      "journal_id": "G009",
+      "journal_name": "Review the upload queue",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Retry or cancel a failed upload",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "View your own contributions",
+      "journal_id": "G010",
+      "journal_name": "View contributions",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Open one of your contributions",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Log in with a Wikimedia account",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Log out of the account",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Bookmark a media item",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.077,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Open the bookmarks list",
+      "journal_id": "G012",
+      "journal_name": "Open bookmarks",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "View achievements and upload statistics",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Open the settings screen",
+      "journal_id": "G013",
+      "journal_name": "Open settings",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Change the application theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.154,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Enable the limited connection mode",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.143,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Change the upload licence default",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Read the about, privacy policy and version information",
+      "journal_id": "G014",
+      "journal_name": "Read about",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 10,
+    "false_negatives": 20,
+    "false_positives": 3,
+    "precision": 0.7692307692307693,
+    "recall": 0.3333333333333333,
+    "f1": 0.4651162790697674,
+    "false_not_present": 1,
+    "false_not_present_rate": 0.03333333333333333,
+    "extracted_count": 14,
+    "ground_truth_count": 30,
+    "feature_completeness_ratio": 0.467,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 282,
+  "actions_with_widget": 187,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 11,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.15,
+  "weighted_coverage_percentage": 15.0,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

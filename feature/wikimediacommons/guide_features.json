@@ -1,0 +1,245 @@
+{
+  "app": "Wikimedia Commons",
+  "package": "fr.free.nrw.commons",
+  "source": "feature/wikimediacommons/README.md",
+  "url": "",
+  "note": "Exploration guide derived from the app README, not from ground_truth.json.",
+  "features": [
+    {
+      "id": "G001",
+      "name": "Browse the explore feed",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the Explore tab"
+      ],
+      "keywords": [
+        "explore",
+        "featured",
+        "media"
+      ],
+      "nav_hints": [
+        "explore"
+      ]
+    },
+    {
+      "id": "G002",
+      "name": "Search Commons",
+      "description": "Open the Explore tab",
+      "actions": [
+        "Open the Explore tab",
+        "tap the search field"
+      ],
+      "keywords": [
+        "search",
+        "images"
+      ],
+      "nav_hints": [
+        "search"
+      ]
+    },
+    {
+      "id": "G003",
+      "name": "Browse nearby places",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the Nearby tab"
+      ],
+      "keywords": [
+        "nearby",
+        "places",
+        "map"
+      ],
+      "nav_hints": [
+        "nearby"
+      ]
+    },
+    {
+      "id": "G004",
+      "name": "Open a place on the map",
+      "description": "Open the Nearby tab",
+      "actions": [
+        "Open the Nearby tab",
+        "switch to the map view"
+      ],
+      "keywords": [
+        "map",
+        "marker",
+        "place"
+      ],
+      "nav_hints": [
+        "map"
+      ]
+    },
+    {
+      "id": "G005",
+      "name": "Start an upload from the camera",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the upload action"
+      ],
+      "keywords": [
+        "upload",
+        "camera",
+        "photo"
+      ],
+      "nav_hints": [
+        "upload",
+        "camera"
+      ]
+    },
+    {
+      "id": "G006",
+      "name": "Start an upload from the gallery",
+      "description": "Tap the upload action",
+      "actions": [
+        "Tap the upload action",
+        "choose the gallery option"
+      ],
+      "keywords": [
+        "gallery",
+        "pick",
+        "image"
+      ],
+      "nav_hints": [
+        "gallery"
+      ]
+    },
+    {
+      "id": "G007",
+      "name": "Describe an upload",
+      "description": "Start an upload",
+      "actions": [
+        "Start an upload",
+        "enter the title"
+      ],
+      "keywords": [
+        "title",
+        "caption",
+        "description"
+      ],
+      "nav_hints": [
+        "title",
+        "caption"
+      ]
+    },
+    {
+      "id": "G008",
+      "name": "Categorise an upload",
+      "description": "Start an upload",
+      "actions": [
+        "Start an upload",
+        "continue to the categories step"
+      ],
+      "keywords": [
+        "categories",
+        "depictions"
+      ],
+      "nav_hints": [
+        "categories"
+      ]
+    },
+    {
+      "id": "G009",
+      "name": "Review the upload queue",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap the uploads entry"
+      ],
+      "keywords": [
+        "uploads",
+        "queue",
+        "progress"
+      ],
+      "nav_hints": [
+        "uploads"
+      ]
+    },
+    {
+      "id": "G010",
+      "name": "View contributions",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap Contributions"
+      ],
+      "keywords": [
+        "contributions",
+        "my uploads"
+      ],
+      "nav_hints": [
+        "contributions"
+      ]
+    },
+    {
+      "id": "G011",
+      "name": "Log in",
+      "description": "Open the app",
+      "actions": [
+        "Open the app",
+        "tap the login action"
+      ],
+      "keywords": [
+        "login",
+        "account",
+        "username"
+      ],
+      "nav_hints": [
+        "login"
+      ]
+    },
+    {
+      "id": "G012",
+      "name": "Open bookmarks",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap Bookmarks"
+      ],
+      "keywords": [
+        "bookmarks",
+        "saved"
+      ],
+      "nav_hints": [
+        "bookmarks"
+      ]
+    },
+    {
+      "id": "G013",
+      "name": "Open settings",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap Settings"
+      ],
+      "keywords": [
+        "settings",
+        "theme",
+        "licence"
+      ],
+      "nav_hints": [
+        "settings"
+      ]
+    },
+    {
+      "id": "G014",
+      "name": "Read about",
+      "description": "Open the navigation drawer",
+      "actions": [
+        "Open the navigation drawer",
+        "tap About"
+      ],
+      "keywords": [
+        "about",
+        "version",
+        "privacy"
+      ],
+      "nav_hints": [
+        "about"
+      ]
+    }
+  ]
+}

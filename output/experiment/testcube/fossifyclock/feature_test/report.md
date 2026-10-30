@@ -1,15 +1,15 @@
 # Feature test report: Fossify Clock
 
-- Started: 2026-09-25 04:59:13
-- Finished: 2026-09-25 05:26:30
-- Features: 16
-- Covered: 13
-- Partial: 3
+- Started: 2026-10-12 18:51:24
+- Finished: 2026-10-12 19:49:58
+- Features: 14
+- Covered: 4
+- Partial: 9
 - Dropped (blocked / stuck): 0
 - Not present in the app: 0
-- Weighted coverage: 94% (mean completion ratio; the headline number)
-- Coverage: 81% (features with every guide step matched)
-- Stop reason: all_features_done
+- Weighted coverage: 73% (mean completion ratio; the headline number)
+- Coverage: 29% (features with every guide step matched)
+- Stop reason: budget_time
 - Scoring: **feature coverage** vs an independent labeled set (ground_truth_source=independent_labeled_set).
 
 ## Attempt summary
@@ -48,23 +48,25 @@
 ## Text-field resolution
 
 - Filled via credential.txt: 0
-- Filled via VLM/Gemini: 2
+- Filled via VLM/Gemini: 9
 - Unresolved: 0
-- Online coverage: 81% (13/16) — live journal self-report (covered / extracted features).
-- Offline coverage: 19% (5 covered / 26; 5 partial) — LLM judge vs ground-truth JSON, not the live journal.
-- Offline weighted coverage: 30% (mean completion ratio).
+- Online coverage: 29% (4/14) — live journal self-report (covered / extracted features).
+- Offline coverage: 12% (3 covered / 26; 4 partial) — LLM judge vs ground-truth JSON, not the live journal.
+- Offline weighted coverage: 18% (mean completion ratio).
 
 ## Findings
 
 ### G001 View the current time
 
-- Status: **partial**
-- Reason: The current time and date are already displayed, indicating that the feature to view the current time has been successfully completed.
+- Status: **covered**
+- Reason: The current time and date are displayed, indicating that the feature is complete. Later exploration completed remaining steps.
+- Completion source: cross_feature
 - Feature source: guide
-- Completed steps: Tap on the Clock tab; Open the app
-- Remaining steps: Verify the current time and date are displayed
-- Completion ratio: 0.67
-- Credited from later features: G002, G003
+- Completed steps: Open the app; the Clock tab shows the current time and date for the device time zone
+- Completion ratio: 1.00
+- Credited from later features: G003
+- Actions taken: 1
+  - act: CustomTouchEvent(state=56976e68e9e5be59af34a7f2fda405e7, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
 
 ### G002 Add a time zone
 
@@ -75,236 +77,233 @@
 - Remaining steps: tap the "+" floating action button
 - Completion ratio: 0.50
 - Credited from later features: G003
-- Actions taken: 8
-  - act: CustomTouchEvent(state=612761bcc1a708e5f1b844047e25b1df, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
-  - act: CustomTouchEvent(state=e5eb16c38d1a0e6f9398ce90ad72ab8d, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
-  - act: CustomTouchEvent(state=1e124f4bc56feeb2df042c819aa739c8, x=821, y=1786) (visual_ground)
-  - act: CustomTouchEvent(state=87522b0c688f612702018c63cc6972e6, view=332908b0d475e1adef729c449414baed(MainActivity/Button-)) (llm)
-  - act: CustomTouchEvent(state=2d8e10f3d4580c1c1324da0d023219de, view=bf58c74d9bea16c477b15152543d37dd(MainActivity/RadioButton-Timer dura)) (nav)
-  - act: CustomTouchEvent(state=1b1da5afbc7ff065866e3ef5cc0bfdac, view=9a84ab5926ca74996de79db9ea6b4f9b(MainActivity/RadioButton-Timer dura)) (nav)
-  - act: CustomTouchEvent(state=1b1da5afbc7ff065866e3ef5cc0bfdac, view=9a84ab5926ca74996de79db9ea6b4f9b(MainActivity/RadioButton-Timer dura)) (nav)
-  - act: CustomTouchEvent(state=1b1da5afbc7ff065866e3ef5cc0bfdac, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (rule)
+- Actions taken: 15
+  - act: CustomTouchEvent(state=77c35e78318d0f5bad6a847c4c2696c6, view=aa080e7b0b8dc403ea29a8045ff1697d(ContributorsActivity/TextView-Contributo)) (llm)
+  - act: CustomTouchEvent(state=86c920051d373ef84f86f55d34e64403, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=fc48b00c2f80b45b1d1aebf3d74a7735, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=231f7938dfb2b7283a75d98f2001764e, view=ecb42936b57b9c8feeb73116ec228641(MainActivity/TextView-Clock)) (visual_ground)
+  - act: CustomTouchEvent(state=261020d7beea7c77818c5b3500ab89c9, view=c218252482c6405139d501cb8a08b181(MainActivity/ImageView-)) (llm)
+  - act: CustomTouchEvent(state=ab1470b8003d63706cacc7c8ee3409e0, view=ecb42936b57b9c8feeb73116ec228641(MainActivity/TextView-Clock)) (visual_ground)
+  - act: CustomTouchEvent(state=e839e72fb9a0dbe4af71085f2ccafda4, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (llm)
+  - act: CustomTouchEvent(state=0d7761251b6b33f6de10dabbf7ef4201, view=60c3c22253e848fcd237438bae735d2f(MainActivity/LinearLayout-)) (heuristic)
 
 ### G003 Remove
-
-- Status: **covered**
-- Reason: Listed steps are done.
-- Feature source: guide
-- Completed steps: Open the Clock tab; tap the "+" button and untick a zone to remove it, or open Settings
-- Completion ratio: 1.00
-- Actions taken: 13
-  - act: CustomTouchEvent(state=1c0e2eb573fd3edfb441522532070a34, x=612, y=1795) (llm)
-  - act: CustomTouchEvent(state=fd8281209cf6ab4916cad8519d8a3084, view=c218252482c6405139d501cb8a08b181(MainActivity/ImageView-)) (visual_ground)
-  - act: CustomTouchEvent(state=534855ef1cea6063f7f6635d82735b93, view=a3cb79f6caf1077f593994a021034f30(MainActivity/ImageView-)) (heuristic)
-  - act: CustomTouchEvent(state=cc784a7f13062cc182d3cd06d1f46b49, view=a3cb79f6caf1077f593994a021034f30(MainActivity/ImageView-)) (heuristic)
-  - act: CustomTouchEvent(state=d9301e6060a0707766d3a3b10df8eded, view=a3cb79f6caf1077f593994a021034f30(MainActivity/ImageView-)) (heuristic)
-  - act: CustomTouchEvent(state=91c5b8fe6c7049bd8eca75a623f59b73, view=4ba0a41a3fb049580d8c7fe6d889dbf7(MainActivity/TextView-Stopwatch)) (heuristic)
-  - act: CustomTouchEvent(state=35e53a6f817d4d4fd6079c910f34acfc, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (rule)
-  - act: (screen already shows this destination) (rule)
-
-### G004 Open the full-screen clock
-
-- Status: **covered**
-- Reason: Listed steps are done.
-- Feature source: guide
-- Completed steps: Open the Clock tab; Tap the clock face; Select the full-screen option; Confirm the transition to the full-screen clock
-- Completion ratio: 1.00
-- Actions taken: 9
-  - act: CustomTouchEvent(state=e14f7ae38e014dcefb4e2454bb0afcf8, x=78, y=1097) (visual_ground)
-  - act: CustomTouchEvent(state=f40e46163ae94a41f494750e3cd9a23d, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=6480850a32fb56307b03dd78e40bd839, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=b1da767e1a75595e8cf45e030dc34077, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=f5eb8c0b8874b1cdd614ae1b629de7e2, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=e0c51a766de8c8b9b721f94f6fa283b1, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=9ac815ceabd13f12c6542215062cef76, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
-  - act: CustomTouchEvent(state=101165e6733e0e2eb6e5f3c18df0a909, view=4425087dbe3f5a9552c3749da8d2a869(MainActivity/TextView-Fri, 25 Se)) (heuristic)
-
-### G005 Create an alarm
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Open the Alarm tab; tap the "+" button
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=ace9ba9d6433ab7181388b0c08c7626f, x=255, y=1102) (visual_ground)
-  - act: CustomTouchEvent(state=2f216a45c98ddefdd261b22f214d9a66, x=256, y=1108) (visual_ground)
-  - act: CustomTouchEvent(state=211eae9bea558c1ebaf8efb6af11cc9c, x=255, y=1101) (visual_ground)
-
-### G006 Enable
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Open the Alarm tab; tap the toggle switch beside the alarm row
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=196582e425c7b0690f563ab55374b31c, x=259, y=1112) (visual_ground)
-  - act: CustomTouchEvent(state=bd5cecb40c77d56bbcfe3146e27a42a4, x=256, y=1116) (visual_ground)
-  - act: CustomTouchEvent(state=b1c18345b881cae12608c0eb34f07e39, x=250, y=1097) (visual_ground)
-
-### G007 Edit an alarm
-
-- Status: **covered**
-- Reason: Stuck in a repeating screen loop. Later exploration completed remaining steps.
-- Completion source: cross_feature
-- Feature source: guide
-- Completed steps: Open the Alarm tab; Tap the alarm row; Tap the 'Edit' option; Select the alarm you want to edit; Enter the new time for the alarm; Tap the 'Save' button
-- Completion ratio: 1.00
-- Credited from later features: G002
-- Actions taken: 18
-  - act: CustomSetTextEvent(state=11f931f9193e3444daabba5d9cbb5d01, view=98d66b392be1cfea8d28c1e4bf36adb7(MainActivity/EditText-Label), text=TestCube Label) (mandatory_fill)
-  - act: CustomTouchEvent(state=338fc3eedada97cc1178b9e7e2f9dcee, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (nav)
-  - act: CustomTouchEvent(state=338fc3eedada97cc1178b9e7e2f9dcee, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (nav)
-  - act: CustomTouchEvent(state=338fc3eedada97cc1178b9e7e2f9dcee, view=16417b5afd0cb399f9649cd3d4b7b1ac(MainActivity/ImageView-)) (nav)
-  - act: CustomTouchEvent(state=002525ce9c22275a9e434fa17eaeda0e, view=ee0486985041b70e3a9ad02a6af9b0e6(MainActivity/TextView-Clock isn')) (heuristic)
-  - act: CustomTouchEvent(state=002525ce9c22275a9e434fa17eaeda0e, view=ee0486985041b70e3a9ad02a6af9b0e6(MainActivity/TextView-Clock isn')) (heuristic)
-  - act: CustomTouchEvent(state=002525ce9c22275a9e434fa17eaeda0e, view=6eca7260af81443d8baa2b4d642c45e2(MainActivity/Button-Wait)) (heuristic)
-  - act: CustomTouchEvent(state=338fc3eedada97cc1178b9e7e2f9dcee, view=16417b5afd0cb399f9649cd3d4b7b1ac(MainActivity/ImageView-)) (nav)
-
-### G008 Delete an alarm
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Tap on the 'Alarm' tab in the Clock app.; Long-press the alarm you want to delete.; Select the 'Delete' option from the context menu.; Confirm the deletion of the alarm by tapping 'Delete' again.; The alarm is now removed from the list.
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=c0dd16bdbb40a4a840c3c4325a306166, x=255, y=1110) (visual_ground)
-  - act: CustomTouchEvent(state=a36e59140ccf15c609dc7c3450a93505, x=258, y=1099) (visual_ground)
-  - act: CustomTouchEvent(state=b388770d67f7a40737f5f1a0c6915a2d, x=255, y=1110) (visual_ground)
-
-### G009 Set the alarm sound
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Navigate to the 'Alarm' section; Open the Clock app; Tap on the alarm you want to edit; Tap on the 'Sound' option; Select a tone or file from storage; Confirm the selection and save the changes
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=e00047082696536654bd502880f312f3, x=255, y=1110) (visual_ground)
-  - act: CustomTouchEvent(state=12f6e28fd5bbb2421ce1cf84d769059b, x=261, y=1104) (visual_ground)
-  - act: CustomTouchEvent(state=0eb131bb71ef7355a1fe4d1d4f268fac, x=255, y=1096) (visual_ground)
-
-### G010 Snooze
 
 - Status: **partial**
 - Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
 - Feature source: guide
-- Completed steps: Select the 'Snooze' option from the notification.; Tap on the alarm notification when it rings.; Select the 'Snooze' option again if you wish to extend the snooze duration.; The alarm will sound again after the snooze duration.
-- Remaining steps: Wait for the configured interval to elapse.
-- Completion ratio: 0.80
-- Credited from later features: G004, G007
-- Actions taken: 14
-  - act: CustomTouchEvent(state=fa0b3d5b6783ff141d94a6a26de0d49a, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (heuristic)
-  - act: CustomTouchEvent(state=8ee3b322ee6baaa6196088d56222fbec, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (heuristic)
-  - act: CustomTouchEvent(state=fd7f47ed4a24a73f1c78600611ae3fbd, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (heuristic)
-  - act: CustomTouchEvent(state=caac60772d37a2266ad0ad44345e0af7, view=43c238be0d6f0796162a7ebb114ab433(MainActivity/TextView-Sun, Sat)) (heuristic)
-  - act: CustomTouchEvent(state=afa3afeca60ed711274096327c667d64, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (heuristic)
-  - act: CustomTouchEvent(state=e08263d086997e1fe6527a03ab39aa1c, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (heuristic)
-  - act: CustomTouchEvent(state=e3c8f1f03ada66fe0bbf739ca92b88e0, view=43c238be0d6f0796162a7ebb114ab433(MainActivity/TextView-Sun, Sat)) (heuristic)
-  - act: CustomTouchEvent(state=afa3afeca60ed711274096327c667d64, view=76a984ef8ced554d4a52fd5242198968(MainActivity/TextView-Default (C)) (rule)
+- Completed steps: Open the Clock tab
+- Remaining steps: tap the "+" button and untick a zone to remove it, or open Settings
+- Completion ratio: 0.50
+- Actions taken: 18
+  - act: CustomTouchEvent(state=c57200715848a043d8efda4dcc460b4d, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=134e6ea67f4b8e69e223313dcfef5dc7, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
+  - act: CustomTouchEvent(state=c3b7c06390e6f865a5ed3a3be12a951a, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
+  - act: CustomTouchEvent(state=78349ff05c88bd1bbe81c5aecbfcddf5, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=bab75e5e210371e68bf29220b43e4ff6, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (llm)
+  - act: CustomTouchEvent(state=d6fd94c3417a62de086d835a2b25a51d, view=c218252482c6405139d501cb8a08b181(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=f1bec2aea521a7fa57539775f1c0434d, view=a3cb79f6caf1077f593994a021034f30(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=63d93e4d82f5629fb047e802b32ccfe3, view=332908b0d475e1adef729c449414baed(MainActivity/Button-)) (rule)
 
-### G011 Configure the snooze duration
+### G004 Open the full-screen clock
 
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
+- Status: **partial**
+- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
 - Feature source: guide
-- Completed steps: Tap on the 'Settings' icon in the top right corner of the Clock app.; Scroll down to find the 'Alarms' section and tap on it.; Tap on the 'Snooze' option within the 'Alarms' section.; Select the 'Snooze Duration' option.; Enter the desired snooze duration in the input field.; Tap on the 'Done' or 'Save' button to confirm the snooze duration setting.
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=a1a21e8964c03799bb8b5b8680d9f2f9, x=960, y=1772) (llm)
-  - act: CustomTouchEvent(state=35c00afe2c9bf614ab2cdcb0b67bf96a, x=737, y=1795) (llm)
-  - act: CustomTouchEvent(state=c7d7ef2c50b4a2e0e43f50c416c32119, x=778, y=1843) (visual_ground)
+- Completed steps: Open the Clock tab; Tap the clock face; Select the full-screen option
+- Remaining steps: Confirm the transition to the full-screen clock
+- Completion ratio: 0.75
+- Credited from later features: G010
+- Actions taken: 25
+  - act: CustomTouchEvent(state=2d8e10f3d4580c1c1324da0d023219de, view=bf58c74d9bea16c477b15152543d37dd(MainActivity/RadioButton-Timer dura)) (llm)
+  - act: CustomTouchEvent(state=1b1da5afbc7ff065866e3ef5cc0bfdac, view=65bb7cf0711d37ad306f92585aeed317(MainActivity/RadioButton-Creation o)) (llm)
+  - act: CustomTouchEvent(state=2d8e10f3d4580c1c1324da0d023219de, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (rule)
+  - act: CustomTouchEvent(state=570165d7e3ad2868509fbb10054ed782, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=3adee8fa8d5d50b3b610590fe2d7aca3, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=25186c223da4eb3efad6443056fc6c65, view=ecb42936b57b9c8feeb73116ec228641(MainActivity/TextView-Clock)) (visual_ground)
+  - act: CustomTouchEvent(state=b9cfebd59c73de276204fed5d9a21936, view=9c98f47a0506a0ff2552b84018cca005(MainActivity/TextView-Clock)) (visual_ground)
+  - act: CustomTouchEvent(state=a1316e0df74b252ead0e5d95e462da61, view=7a87e8c5bf0f71881b97a66675ae9853(MainActivity/FloatingActionButton-)) (rule)
 
-### G012 Make the alarm volume
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Open Settings; Select the alarm you want to adjust; Select 'Alarms' from the settings menu; Scroll to the 'Volume' setting; Select 'Increase volume gradually' option; Save the changes
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=1cf68ffb28d968f753228406c03507f3, x=255, y=1114) (visual_ground)
-  - act: CustomTouchEvent(state=229c7c11bb3be3759867ef25f2802eb1, x=262, y=1101) (visual_ground)
-  - act: CustomTouchEvent(state=836e26015b1e381206af98fbc2bcc9ce, x=256, y=1110) (visual_ground)
-
-### G013 Use the stopwatch
-
-- Status: **covered**
-- Reason: Covered by shared-flow reuse of C002.
-- Completion source: shared_flow_reuse
-- Feature source: guide
-- Completed steps: Open the Stopwatch tab; Tap Start; Tap Stop; Tap Reset
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=61db1d91852528c3460874d30f6d0295, x=420, y=1100) (visual_ground)
-  - act: CustomTouchEvent(state=fb7f3c158297e2cd8694bb6f0906119a, x=370, y=1795) (llm)
-  - act: CustomTouchEvent(state=69586f8a90f58499a74b8ae196719850, x=420, y=1095) (visual_ground)
-
-### G014 Sort the recorded stopwatch
-
-- Status: **covered**
-- Reason: Listed steps are done.
-- Feature source: guide
-- Completed steps: tap the sort/overflow control; Open the Stopwatch tab with laps recorded
-- Completion ratio: 1.00
-- Actions taken: 7
-  - act: CustomTouchEvent(state=bb0bcbf91d955ddab9e4455827d0010f, x=480, y=1839) (visual_ground)
-  - act: CustomTouchEvent(state=55c09428bf4237b78cf94c10dca5ea61, view=4ba0a41a3fb049580d8c7fe6d889dbf7(MainActivity/TextView-Stopwatch)) (llm)
-  - act: CustomTouchEvent(state=d7bed2d95afaf8fcf24ed2a93207c2cf, x=419, y=1130) (visual_ground)
-  - act: CustomTouchEvent(state=6b97f0ff53ef522486e44ce6ef67ff5b, x=480, y=1812) (visual_ground)
-  - act: CustomTouchEvent(state=f6b0d7c856c212d9744737f8789af093, view=4ba0a41a3fb049580d8c7fe6d889dbf7(MainActivity/TextView-Stopwatch)) (llm)
-  - act: CustomTouchEvent(state=3d0bbde8e4c65f7687ee31843d2b0941, x=480, y=1812) (visual_ground)
-  - act: CustomTouchEvent(state=b652ce5e4d19572516558bf8e3107b25, view=4ba0a41a3fb049580d8c7fe6d889dbf7(MainActivity/TextView-Stopwatch)) (heuristic)
-
-### F015 Set the timer duration
-
-- Status: **covered**
-- Reason: Listed steps are done.
-- Feature source: action_inferred
-- Completed steps: New Timer timer_add; Timer duration sorting_dialog_radio_timer_duration; OK button1
-- Completion ratio: 1.00
-- Actions taken: 3
-  - act: CustomTouchEvent(state=f551b0c9564714c166b04f3a9979b5dc, x=690, y=1800) (visual_ground)
-  - act: CustomTouchEvent(state=3af22e6178ff7b4052b375d23f5709cd, x=690, y=1813) (visual_ground)
-  - act: CustomTouchEvent(state=ccd1e24ff5c4b562c6e23344cd1ffe2a, view=b6c76dbed698474001fba4398df36138(MainActivity/TextView-Timer)) (visual_ground)
-
-### F016 Custom sort the recorded stopwatch
+### G005 Create an alarm
 
 - Status: **covered**
 - Reason: Stagnation: novelty below threshold and remaining steps did not shrink. Later exploration completed remaining steps.
 - Completion source: cross_feature
-- Feature source: action_inferred
-- Completed steps: OK button1; Sort by sort; Custom sorting_dialog_radio_custom
+- Feature source: guide
+- Completed steps: Open the Alarm tab; tap the "+" button
 - Completion ratio: 1.00
-- Credited from later features: G002, G014, F015
-- Actions taken: 8
-  - act: CustomTouchEvent(state=0afb8e1b9e895c673ce8dbe95f840736, x=975, y=83) (llm)
+- Credited from later features: G003
+- Actions taken: 10
+  - act: CustomTouchEvent(state=dd25c29d030345d3fbb62515f4725fac, view=e2275266a34e514f63dae65dcd82b626(MainActivity/RelativeLayout-)) (llm)
+  - act: CustomTouchEvent(state=dd828cc153a8c73b877fe2306f832cae, view=9cc37bdb808aafbf1cee9878865b9467(MainActivity/RelativeLayout-)) (llm)
+  - act: CustomTouchEvent(state=dd25c29d030345d3fbb62515f4725fac, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (rule)
+  - act: CustomTouchEvent(state=4913a8e1a7b64742e4a8681ac53bc6af, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=085e4ffd2acb92e6e233bd87138a26e1, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=623e3c21f8aa14bab225b0bc3ada9da8, view=2436abd86d9b8c3262b1b5d9334b253e(MainActivity/TextView-Alarm)) (visual_ground)
+  - act: CustomTouchEvent(state=b86aa0b1fc8cda1b99566c65e3008a1a, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=534cfbc46910292c7f65167330f9a87d, view=35af8c0e9d6cd4f41b3fdea7b3c33ca2(MainActivity/ViewGroup-)) (rule)
+
+### G006 Enable
+
+- Status: **covered**
+- Reason: Listed steps are done.
+- Feature source: guide
+- Completed steps: Open the Alarm tab; tap the toggle switch beside the alarm row
+- Completion ratio: 1.00
+- Actions taken: 2
+  - act: CustomTouchEvent(state=8f906d0b66140607af29bf6dcff3aa33, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=8f906d0b66140607af29bf6dcff3aa33, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (heuristic)
+
+### G007 Edit an alarm
+
+- Status: **partial**
+- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Feature source: guide
+- Completed steps: Open the Alarm tab; Tap the alarm row; Tap the edit icon; Select the alarm to edit; Enter the new alarm time
+- Remaining steps: Tap the save icon
+- Completion ratio: 0.83
+- Actions taken: 23
+  - act: CustomTouchEvent(state=dd828cc153a8c73b877fe2306f832cae, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (llm)
+  - act: CustomTouchEvent(state=3d54340744f82bb43a923bb67d48dbbb, view=fd36fb42f3039a362b237f1988383aed(MainActivity/RecyclerView-)) (visual_ground)
+  - act: CustomTouchEvent(state=7434a4e78d201f339a3e3f13f3ab0d75, view=fd36fb42f3039a362b237f1988383aed(MainActivity/RecyclerView-)) (visual_ground)
+  - act: CustomTouchEvent(state=5d211c82a596929ed3cefc9db80d5761, view=fd36fb42f3039a362b237f1988383aed(MainActivity/RecyclerView-)) (visual_ground)
+  - act: CustomTouchEvent(state=cff77552139da9a456c5ead286199461, view=c218252482c6405139d501cb8a08b181(MainActivity/ImageView-)) (visual_ground)
+  - act: CustomTouchEvent(state=f374a44e1832cd2b312eaea091961a6f, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=e29e3ca6d4733fed564daff40393e921, view=a3cb79f6caf1077f593994a021034f30(MainActivity/ImageView-)) (visual_ground)
+  - act: CustomTouchEvent(state=f86caee877af0a4f1ddea2a7039cc615, view=2436abd86d9b8c3262b1b5d9334b253e(MainActivity/TextView-Alarm)) (rule)
+
+### G008 Delete an alarm
+
+- Status: **partial**
+- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Feature source: guide
+- Completed steps: Tap on the 'Alarm' tab; Long-press the alarm you want to delete; Confirm the deletion of the alarm by tapping 'Delete'
+- Remaining steps: Select 'Delete' from the options that appear
+- Completion ratio: 0.75
+- Credited from later features: G007
+- Actions taken: 19
+  - act: CustomTouchEvent(state=6a5d45d0c9ec7d49b07eaf10caf0b76b, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=a9e6defff1b6344a55b34c3a98895471, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=8c7cfd1179042475cec87ee01cf1c99f, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (visual_ground)
+  - act: CustomTouchEvent(state=0d7761251b6b33f6de10dabbf7ef4201, x=526, y=146) (llm)
+  - act: CustomTouchEvent(state=dcfd000a296020071aea80e5399900a5, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (visual_ground)
+  - act: CustomTouchEvent(state=0d7761251b6b33f6de10dabbf7ef4201, view=60c3c22253e848fcd237438bae735d2f(MainActivity/LinearLayout-)) (llm)
+  - act: CustomTouchEvent(state=47233bb584088c26045999f4062e48c6, view=f7ad3cefb7208755007935fb370e6f9d(AboutActivity/TextView-About)) (heuristic)
+  - act: CustomTouchEvent(state=47233bb584088c26045999f4062e48c6, view=f7ad3cefb7208755007935fb370e6f9d(AboutActivity/TextView-About)) (heuristic)
+
+### G009 Set the alarm sound
+
+- Status: **partial**
+- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Feature source: guide
+- Completed steps: Open the Clock app; Navigate to the alarm settings; Tap on the alarm you want to edit; Select the alarm sound entry and choose a tone
+- Remaining steps: Save the changes
+- Completion ratio: 0.80
+- Credited from later features: G003, G007
+- Actions taken: 17
+  - act: CustomTouchEvent(state=c4fef421ea40e6bd45bee9b407ff18cd, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=1e0f69b37dfe97d445f1be4207a7a2ad, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=a6a847c71d24129618fc8fd475ded37c, view=95ca51b068ab8f1cb7da19a6bafe2b94(MainActivity/LinearLayout-)) (llm)
+  - act: CustomTouchEvent(state=5fb7030f5cfd5e0fa1ff63bad4cfd8f1, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=f6b052169f8369a316b1ecdd58ad926a, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (llm)
+  - act: CustomTouchEvent(state=f305a70c4a99028c53db6a57a0785e0b, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=adba01746a78ed2957387c1245c17f9b, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (nav)
+  - act: CustomTouchEvent(state=d06c610158fe6f72d9ec25eec1b20ebf, view=8a2ca2319c05640eeb8393d34d6bef60(MainActivity/ViewGroup-)) (rule)
+
+### G010 Snooze
+
+- Status: **covered**
+- Reason: Listed steps are done.
+- Feature source: guide
+- Completed steps: Tap the alarm notification to open the Clock app; Select the 'Snooze' option to postpone the alarm by the configured interval; Confirm the snooze duration by selecting the desired time; The alarm will now ring again after the configured snooze duration; To stop the alarm, select the 'Dismiss' option
+- Completion ratio: 1.00
+- Actions taken: 10
+  - act: CustomTouchEvent(state=d3f33efdb8ec420d25379ced1e814e33, view=2436abd86d9b8c3262b1b5d9334b253e(MainActivity/TextView-Alarm)) (llm)
+  - act: CustomTouchEvent(state=d9f7cd78fee3c1b302e0ac0fb8011a17, view=b6c76dbed698474001fba4398df36138(MainActivity/TextView-Timer)) (llm)
+  - act: CustomTouchEvent(state=33644aab446d4b435b39c7931a54b150, view=2436abd86d9b8c3262b1b5d9334b253e(MainActivity/TextView-Alarm)) (heuristic)
+  - act: CustomTouchEvent(state=b5e4833c12b48508015b5c3604fe5172, view=dfea5ce9b4721aa554bf8f2c27fdf2b1(MainActivity/TextView-9:00 am)) (heuristic)
+  - act: CustomTouchEvent(state=afa3afeca60ed711274096327c667d64, view=a20062ae7adb810f1fc3b39952341a70(MainActivity/TextView-9:00 am)) (heuristic)
+  - act: CustomTouchEvent(state=bce772a9e7c9e941e15e56141af2663c, view=34d697f8b50243c13440f36f50de6a40(MainActivity/Button-OK)) (heuristic)
+  - act: CustomTouchEvent(state=afa3afeca60ed711274096327c667d64, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=afa3afeca60ed711274096327c667d64, view=cab92d78689ec2ae36df4aed4eed7d3a(MainActivity/ImageView-)) (heuristic)
+
+### G011 Configure the snooze duration
+
+- Status: **partial**
+- Reason: Stagnation: novelty below threshold and remaining steps did not shrink.
+- Feature source: guide
+- Completed steps: Select the specific alarm you want to configure.; Tap on the 'Settings' icon in the app's main menu.; Tap on the 'Snooze' option within the alarm settings.
+- Remaining steps: Scroll down to find the 'Alarms' section and tap on it.; Select the desired snooze duration from the available options.
+- Completion ratio: 0.60
+- Credited from later features: G007, G008
+- Actions taken: 18
+  - act: CustomSetTextEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=8668101ed5d8385b121600e409604750(MainActivity/EditText-TestCube A), text=TestCube Alarm Label) (nav)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=562070ed6fc38f95cfeef98837a8c7f8(MainActivity/TextView-7:00 am)) (rule)
+  - act: CustomTouchEvent(state=3442e9b15ab685ea9d77829be171349f, view=34d697f8b50243c13440f36f50de6a40(MainActivity/Button-OK)) (llm)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=316c3e0f703d350db2840e8961584272(MainActivity/TextView-S)) (rule)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=316c3e0f703d350db2840e8961584272(MainActivity/TextView-S)) (llm)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=4b670f65c586cddfb5e0abc526937514(MainActivity/TextView-M)) (llm)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=4b670f65c586cddfb5e0abc526937514(MainActivity/TextView-M)) (rule)
+  - act: CustomTouchEvent(state=dbc0fdb0926fc0afaa82f8012fb15593, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (rule)
+
+### G012 Make the alarm volume
+
+- Status: **partial**
+- Reason: Hit the per-feature step limit.
+- Feature source: guide
+- Completed steps: Open Settings; Select 'Edit Alarm'; Scroll to 'Alarm Volume' settings
+- Remaining steps: Scroll to 'Alarms' section; Select 'Increase volume gradually' option
+- Completion ratio: 0.60
+- Credited from later features: G003, G007, G008
+- Actions taken: 17
+  - act: CustomTouchEvent(state=f93262f92a13929ccd1f585add74f557, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (llm)
+  - act: CustomTouchEvent(state=b8ca6e785d6c64319610cb729b4e5b5c, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (llm)
+  - act: CustomTouchEvent(state=a24a6759bf132f54872db41bfb826356, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (llm)
+  - act: CustomTouchEvent(state=edfeea3864dbfcbeba6e62ef648939e1, view=95ca51b068ab8f1cb7da19a6bafe2b94(MainActivity/LinearLayout-)) (llm)
+  - act: CustomTouchEvent(state=a51a2c3623d240c9c4c48b3dd7b5f613, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (nav)
+  - act: CustomTouchEvent(state=0c4f4b44eff5b3e15760dfb804f0554c, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (nav)
+  - act: CustomTouchEvent(state=3a058aa240aeda5103aa6015e067d2d3, view=0ea26831962d44ba6b3546dac3e8b893(MainActivity/TextView-Alarm)) (nav)
+  - act: CustomTouchEvent(state=70a3aba1a967820b40b461a09710a040, view=43d47f313fa0b9116c5085cb3b2037b1(MainActivity/TextView-test)) (nav)
+
+### G013 Use the stopwatch
+
+- Status: **partial**
+- Reason: Retry after later features discovered new states.
+- Feature source: guide
+- Completed steps: Open the Stopwatch tab; Tap Start; Tap Stop
+- Remaining steps: Tap Reset
+- Completion ratio: 0.75
+- Credited from later features: G010
+- Actions taken: 17
+  - act: CustomTouchEvent(state=d55fe904918c4c60f1177123978d4f96, view=305f90429aa259791b92f7b9f86f624f(MainActivity/TextView-Stopwatch)) (nav)
+  - act: CustomTouchEvent(state=02a40c1ac8b45559a194972797f1168a, view=305f90429aa259791b92f7b9f86f624f(MainActivity/TextView-Stopwatch)) (nav)
+  - act: CustomTouchEvent(state=1168b1bb4f232ba340fdf1c5e1d4bd13, view=168d0e4555feed92e2809fd64baf90b3(MainActivity/TextView-0.0)) (rule)
+  - act: CustomTouchEvent(state=52649e9a9ea628a724782a972361aa5b, view=d4f2e2e7923ba38f0c040c37a41af3d2(MainActivity/Button-OK)) (llm)
+  - act: CustomTouchEvent(state=dde431a5acf0f41cbc947b415fdc14fc, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=78e6600c257cf451ba5411d0ed878bd8, view=ea0f6ea56bdffbd3fe94ef776feaddc8(MainActivity/j-)) (visual_ground)
+  - act: CustomTouchEvent(state=c51a5358add340e06a1ca56c448d165c, view=4ba0a41a3fb049580d8c7fe6d889dbf7(MainActivity/TextView-Stopwatch)) (visual_ground)
+  - act: CustomTouchEvent(state=83988b1b0df34321e6fee585f4df0830, view=305f90429aa259791b92f7b9f86f624f(MainActivity/TextView-Stopwatch)) (visual_ground)
+
+### G014 Sort the recorded stopwatch
+
+- Status: **pending**
+- Reason: Retry after later features discovered new states.
+- Feature source: guide
+- Completed steps: Tap on the Stopwatch tab with laps recorded
+- Remaining steps: Tap the sort/overflow control; Select the 'Sort' option from the menu; Choose 'Sort by Lap Time' from the sort options; Confirm the sorting of the recorded stopwatch laps
+- Completion ratio: 0.20
+- Actions taken: 13
+  - act: CustomTouchEvent(state=2744fb5472db7e9bb0c552b2f1f6be5e, view=305f90429aa259791b92f7b9f86f624f(MainActivity/TextView-Stopwatch)) (heuristic)
+  - act: CustomTouchEvent(state=bbca243331062aed3a4788b929ab78f0, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (heuristic)
   - act: CustomTouchEvent(state=0d7761251b6b33f6de10dabbf7ef4201, view=ee64280861297de3bbde2eefd32736a7(MainActivity/TextView-Settings)) (heuristic)
-  - act: CustomTouchEvent(state=c1470f0a2abc6837303cb9cfd4a64b6d, view=d9e4619b537ac6ab61d00317a85f748d(SettingsActivity/TextView-Look & fee)) (heuristic)
-  - act: CustomTouchEvent(state=c1470f0a2abc6837303cb9cfd4a64b6d, view=d9e4619b537ac6ab61d00317a85f748d(SettingsActivity/TextView-Look & fee)) (heuristic)
-  - act: CustomTouchEvent(state=c1470f0a2abc6837303cb9cfd4a64b6d, view=f64c9ab28ad9ce26363e600fd1ea0d38(SettingsActivity/TextView-Alarm tab)) (heuristic)
-  - act: CustomTouchEvent(state=c1470f0a2abc6837303cb9cfd4a64b6d, view=f64c9ab28ad9ce26363e600fd1ea0d38(SettingsActivity/TextView-Alarm tab)) (heuristic)
-  - act: CustomTouchEvent(state=c1470f0a2abc6837303cb9cfd4a64b6d, view=a79af8e887dc82e5a451619f29cce92b(SettingsActivity/ImageButton-)) (rule)
-  - act: CustomTouchEvent(state=5f4a9e1b67ed2c8b129420f2ee48dca3, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (rule)
+  - act: CustomTouchEvent(state=96da222815edc1d45e300daf6a214ce4, view=636327018998f4b42fbf8adbcb1f9e77(SettingsActivity/Switch-Always use)) (heuristic)
+  - act: CustomTouchEvent(state=9f7ca7819680fa27d5fe5c17ad0d139e, view=b5a1e7e663bf1689ac9cc12e0c83d348(MainActivity/ImageView-)) (heuristic)
+  - act: CustomTouchEvent(state=0d7761251b6b33f6de10dabbf7ef4201, view=0358e0bf5cf25adc267cbce3aaf591e1(MainActivity/TextView-About)) (heuristic)
+  - act: ScrollEvent(state=47233bb584088c26045999f4062e48c6, view=efe99da9bdeedc29e21f8083cedf0c3a(AboutActivity/ScrollView-), direction=up) (heuristic)
+  - act: CustomTouchEvent(state=77c35e78318d0f5bad6a847c4c2696c6, view=f9ff74eeb7d57d78e329bb357112a456(ContributorsActivity/View-)) (heuristic)
 
 ## Shared flows detected
 
-7 reuse(s); 27 action(s) skipped by not re-executing a known terminal flow.
-
-- `G005` reused `C002` (from G003), skipped 2 action(s)
-- `G006` reused `C002` (from G003), skipped 2 action(s)
-- `G008` reused `C002` (from G003), skipped 4 action(s)
-- `G009` reused `C002` (from G003), skipped 5 action(s)
-- `G011` reused `C002` (from G003), skipped 6 action(s)
-- `G012` reused `C002` (from G003), skipped 4 action(s)
-- `G013` reused `C002` (from G003), skipped 4 action(s)
+None this run.
 
 See `session.json` and `log.md` in this folder for the full trace.

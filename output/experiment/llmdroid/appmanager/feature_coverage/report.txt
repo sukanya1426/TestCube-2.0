@@ -1,0 +1,313 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: App Manager
+
+Total Actions    : 190
+
+Total Features   : 40
+Covered Features : 0
+Partial          : 5
+Uncovered        : 35
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 4.58%  (mean completion ratio; partial steps count)
+Exercised        : 5  (covered 0 + partial 5)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the list of installed applications
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Search for an application by name
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Sort the application list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Filter the application list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Open an application's details screen
+Status     : PARTIAL
+Test Cases : test_003, test_011
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - Open the Apps list: touch RadioButton "User apps first" activity=MainActivity state_changed (tokens=apps)
+
+[GT006] View the App Info tab
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT007] Browse an application's activities
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Launch an exported activity
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Browse an application's services
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Browse an application's broadcast receivers
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Browse an application's content providers
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Review an application's permissions
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Review app operations (App Ops)
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] View an application's signatures
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] View the shared libraries an application uses
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT016] Scan an application for trackers
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT017] View an application's manifest
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Force-stop an application
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Clear an application's data
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Clear an application's cache
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Uninstall an application
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Open an application's system settings page
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Share or export an application's APK
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Select several applications for a batch operation
+Status     : PARTIAL
+Test Cases : test_003, test_011
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the Apps list: touch RadioButton "User apps first" activity=MainActivity state_changed (tokens=apps)
+
+[GT025] Run a batch operation on the selected applications
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Open the running applications screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Inspect a running process
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Open the one-click operations screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Open the profiles screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Create a profile
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT031] View application usage statistics
+Status     : PARTIAL
+Test Cases : test_011
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - tap "App usage": touch RadioButton "Data usage" activity=MainActivity state_changed (tokens=usage)
+
+[GT032] Change the usage statistics time range
+Status     : PARTIAL
+Test Cases : test_011
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - Open the App usage screen: touch RadioButton "Data usage" activity=MainActivity state_changed (tokens=usage)
+
+[GT033] Install an APK from storage
+Status     : PARTIAL
+Test Cases : test_011
+Confidence : 0.33
+Matcher    : deterministic
+Completion : 33% of gold steps
+Evidence   :
+  - confirm the installation: touch RadioButton "Installation date" activity=MainActivity state_changed (tokens=installation)
+
+[GT034] Open the application log viewer
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT035] Open the intent interceptor
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT036] Open the settings screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT037] Change the application theme
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT038] Change the application language
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT039] Enable or disable the screen lock for the app
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT040] Read the about and version information
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 40 features covered
+5 / 40 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 4.58%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 40 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse the list of installed applications' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Search for an application by name' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Sort the application list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Filter the application list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 "Open an application's details screen" | journal=missing (no name match) status=missing | offline=partial
+GT GT006 'View the App Info tab' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 "Browse an application's activities" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Launch an exported activity' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 "Browse an application's services" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 "Browse an application's broadcast receivers" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 "Browse an application's content providers" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 "Review an application's permissions" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Review app operations (App Ops)' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 "View an application's signatures" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'View the shared libraries an application uses' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Scan an application for trackers' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 "View an application's manifest" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Force-stop an application' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 "Clear an application's data" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 "Clear an application's cache" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Uninstall an application' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 "Open an application's system settings page" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 "Share or export an application's APK" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Select several applications for a batch operation' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Run a batch operation on the selected applications' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Open the running applications screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Inspect a running process' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Open the one-click operations screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Open the profiles screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Create a profile' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT031 'View application usage statistics' | journal=missing (no name match) status=missing | offline=partial
+GT GT032 'Change the usage statistics time range' | journal=missing (no name match) status=missing | offline=partial
+GT GT033 'Install an APK from storage' | journal=missing (no name match) status=missing | offline=partial
+GT GT034 'Open the application log viewer' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT035 'Open the intent interceptor' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Open the settings screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT037 'Change the application theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT038 'Change the application language' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT039 'Enable or disable the screen lock for the app' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT040 'Read the about and version information' | journal=missing (no name match) status=missing | offline=not_covered

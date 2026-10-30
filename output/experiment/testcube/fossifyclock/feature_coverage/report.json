@@ -2,8 +2,8 @@
   "application": "Fossify Clock",
   "total_features": 26,
   "covered_features": 0,
-  "uncovered_features": 21,
-  "partial_features": 5,
+  "uncovered_features": 18,
+  "partial_features": 8,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/fossifyclock",
@@ -24,48 +24,71 @@
     {
       "id": "GT002",
       "name": "Add a time zone to the clock",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_010",
+        "test_012"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)",
+        "tick the time zones to display: touch RelativeLayout rid=add_time_zone_holder activity=MainActivity state_changed (outcome tokens=time,zones)"
+      ],
+      "matched_path": [
+        "Open the Clock tab",
+        "tick the time zones to display"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT003",
       "name": "Remove or reorder time zones",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_010"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)"
+      ],
+      "matched_path": [
+        "Open the Clock tab"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT004",
       "name": "Open the full-screen (screensaver) clock",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_010"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open the Clock tab: touch FloatingActionButton rid=clock_fab activity=MainActivity state_changed (tokens=clock)"
+      ],
+      "matched_path": [
+        "Open the Clock tab"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT005",
       "name": "Create an alarm",
       "status": "partial",
       "test_cases": [
-        "test_012",
-        "test_018",
-        "test_030"
+        "test_003",
+        "test_012"
       ],
       "confidence": 0.1667,
       "evidence": [
-        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
+        "Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)"
       ],
       "matched_path": [
         "Open the Alarm tab"
@@ -78,12 +101,12 @@
       "name": "Enable or disable an alarm",
       "status": "partial",
       "test_cases": [
-        "test_012",
-        "test_030"
+        "test_003",
+        "test_012"
       ],
       "confidence": 0.5,
       "evidence": [
-        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
+        "Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)"
       ],
       "matched_path": [
         "Open the Alarm tab"
@@ -96,32 +119,30 @@
       "name": "Edit an alarm",
       "status": "partial",
       "test_cases": [
-        "test_012",
-        "test_030"
+        "test_003",
+        "test_012"
       ],
-      "confidence": 0.5,
+      "confidence": 0.25,
       "evidence": [
-        "Open the Alarm tab: touch TextView \"Alarm tab\" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)",
-        "tap the alarm row: touch TextView \"Alarm tab\" rid=settings_alarm_tab_label activity=SettingsActivity (tokens=alarm)"
+        "Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)"
       ],
       "matched_path": [
-        "Open the Alarm tab",
-        "tap the alarm row"
+        "Open the Alarm tab"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.25
     },
     {
       "id": "GT008",
       "name": "Delete an alarm",
       "status": "partial",
       "test_cases": [
-        "test_012",
-        "test_030"
+        "test_003",
+        "test_012"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open the Alarm tab: touch FloatingActionButton rid=alarm_fab state_changed (tokens=alarm)"
+        "Open the Alarm tab: touch ViewGroup rid=alarm_holder activity=MainActivity state_changed (tokens=alarm)"
       ],
       "matched_path": [
         "Open the Alarm tab"
@@ -132,19 +153,13 @@
     {
       "id": "GT009",
       "name": "Set the alarm sound and vibration",
-      "status": "partial",
-      "test_cases": [
-        "test_018"
-      ],
-      "confidence": 0.225,
-      "evidence": [
-        "tap the alarm sound entry and select a tone (or a file from storage): touch TextView \"Default (Cesium)\" rid=edit_alarm_sound activity=MainActivity (tokens=alarm,sound)"
-      ],
-      "matched_path": [
-        "tap the alarm sound entry and select a tone (or a file from storage)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT010",
@@ -325,13 +340,21 @@
     {
       "id": "GT026",
       "name": "View the about screen, FAQ and licences",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_006",
+        "test_010"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"About\": touch TextView \"About\" rid=title activity=AboutActivity state_changed (tokens=about)"
+      ],
+      "matched_path": [
+        "tap \"About\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     }
   ],
   "confusion": [
@@ -342,7 +365,7 @@
       "journal_name": "View the current time",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -356,7 +379,7 @@
       "name_similarity": 0.6,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -368,8 +391,8 @@
       "journal_name": "Remove",
       "name_similarity": 0.545,
       "matched_by": "name",
-      "journal_status": "covered",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -381,8 +404,8 @@
       "journal_name": "Open the full-screen clock",
       "name_similarity": 0.833,
       "matched_by": "name",
-      "journal_status": "covered",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -420,7 +443,7 @@
       "journal_name": "Edit an alarm",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -433,7 +456,7 @@
       "journal_name": "Delete an alarm",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -446,8 +469,8 @@
       "journal_name": "Set the alarm sound",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "covered",
-      "offline_status": "partial",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -459,7 +482,7 @@
       "journal_name": "Snooze",
       "name_similarity": 0.417,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -472,7 +495,7 @@
       "journal_name": "Configure the snooze duration",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -485,7 +508,7 @@
       "journal_name": "Make the alarm volume",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -498,7 +521,7 @@
       "journal_name": "Use the stopwatch",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -511,7 +534,7 @@
       "journal_name": "Sort the recorded stopwatch",
       "name_similarity": 0.8,
       "matched_by": "name",
-      "journal_status": "covered",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -572,11 +595,11 @@
     {
       "ground_truth_id": "GT019",
       "ground_truth_name": "Set the time format",
-      "journal_id": "F015",
-      "journal_name": "Set the timer duration",
+      "journal_id": null,
+      "journal_name": null,
       "name_similarity": 0.333,
-      "matched_by": "name",
-      "journal_status": "covered",
+      "matched_by": "none",
+      "journal_status": "missing",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -668,24 +691,24 @@
       "name_similarity": 0.222,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
     }
   ],
   "feature_inference": {
-    "true_positives": 15,
-    "false_negatives": 11,
-    "false_positives": 2,
-    "precision": 0.8823529411764706,
-    "recall": 0.5769230769230769,
-    "f1": 0.6976744186046512,
+    "true_positives": 14,
+    "false_negatives": 12,
+    "false_positives": 0,
+    "precision": 1.0,
+    "recall": 0.5384615384615384,
+    "f1": 0.7000000000000001,
     "false_not_present": 0,
     "false_not_present_rate": 0.0,
-    "extracted_count": 16,
+    "extracted_count": 14,
     "ground_truth_count": 26,
-    "feature_completeness_ratio": 0.615,
+    "feature_completeness_ratio": 0.538,
     "id_collisions": [],
     "id_collisions_loud": false,
     "prf1_withheld": false
@@ -693,12 +716,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 143,
-  "actions_with_widget": 71,
+  "total_actions": 216,
+  "actions_with_widget": 197,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 5,
+  "exercised_features": 8,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.0673076923076923,
-  "weighted_coverage_percentage": 6.73,
+  "weighted_coverage": 0.09935897435897437,
+  "weighted_coverage_percentage": 9.94,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

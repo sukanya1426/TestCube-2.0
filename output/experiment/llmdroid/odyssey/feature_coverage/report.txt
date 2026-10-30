@@ -8,14 +8,14 @@ Total Actions    : 766
 
 Total Features   : 33
 Covered Features : 0
-Partial          : 20
-Uncovered        : 13
+Partial          : 18
+Uncovered        : 15
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 22.42%  (mean completion ratio; partial steps count)
-Exercised        : 20  (covered 0 + partial 20)
+Weighted Coverage: 19.04%  (mean completion ratio; partial steps count)
+Exercised        : 18  (covered 0 + partial 18)
 
 ground_truth_source: independent_labeled_set
 
@@ -38,27 +38,22 @@ Evidence   :
   - tap the "Albums" tab in My Music: touch LinearLayoutCompat rid=nav_my_music activity=OdysseyMainActivity state_changed (tokens=music,my)
 
 [GT002] Browse the music library by artist
-Status     : PARTIAL
-Test Cases : test_008
-Confidence : 0.25
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 25% of gold steps
-Evidence   :
-  - Open the "Artists" tab: touch TextView "Show artist" rid=title activity=OdysseyMainActivity state_changed (tokens=artists)
+Completion : 0% of gold steps
 
 [GT003] Browse all tracks
 Status     : PARTIAL
-Test Cases : test_002, test_004, test_006, test_007, test_008, test_010, test_011, test_013, test_015, test_081
-Confidence : 0.67
+Test Cases : test_004
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 67% of gold steps
+Completion : 33% of gold steps
 Evidence   :
-  - Open the "All tracks"/Tracks tab: touch TextView "Music" activity=OdysseyMainActivity (tokens=tracks)
-  - tap a track to play it: touch TextView "SoundHelix - Music" rid=now_playing_track_subtitle activity=OdysseyMainActivity (tokens=play,track)
+  - tap a track to play it: touch TextView "Play song" rid=title activity=OdysseyMainActivity state_changed (tokens=play,track)
 
 [GT004] Browse recently added albums
 Status     : PARTIAL
-Test Cases : test_006, test_011
+Test Cases : test_006
 Confidence : 0.50
 Matcher    : deterministic
 Completion : 50% of gold steps
@@ -67,7 +62,7 @@ Evidence   :
 
 [GT005] Browse the file system with the file browser
 Status     : PARTIAL
-Test Cases : test_004, test_006, test_007, test_008, test_010, test_013, test_015, test_081
+Test Cases : test_004
 Confidence : 0.30
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -133,13 +128,12 @@ Evidence   :
 
 [GT013] Browse and play saved playlists
 Status     : PARTIAL
-Test Cases : test_004, test_006, test_007, test_008, test_010, test_013, test_015, test_081
-Confidence : 0.63
+Test Cases : test_004, test_007
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 67% of gold steps
+Completion : 33% of gold steps
 Evidence   :
   - Open the "Playlists" tab: touch TextView "Playlists" activity=OdysseyMainActivity (tokens=playlists)
-  - tap a track to play from that playlist, or use the overflow menu to play or enqueue the whole playlist: touch TextView "SoundHelix - Music" rid=now_playing_track_subtitle activity=OdysseyMainActivity (tokens=play,track)
 
 [GT014] Delete a playlist
 Status     : PARTIAL
@@ -151,13 +145,9 @@ Evidence   :
   - Open the Playlists tab: touch TextView "Playlists" activity=OdysseyMainActivity (tokens=playlists)
 
 [GT015] Create a bookmark to resume an audiobook or podcast
-Status     : PARTIAL
-Test Cases : test_008
-Confidence : 0.20
+Status     : NOT COVERED
 Matcher    : deterministic
-Completion : 20% of gold steps
-Evidence   :
-  - tap "Create bookmark": touch LinearLayoutCompat rid=nav_bookmarks activity=OdysseyMainActivity state_changed (tokens=bookmark)
+Completion : 0% of gold steps
 
 [GT016] Resume from a bookmark
 Status     : PARTIAL
@@ -227,7 +217,7 @@ Completion : 0% of gold steps
 
 [GT026] Scrobble to Last.fm through a scrobbler app
 Status     : PARTIAL
-Test Cases : test_004, test_006, test_007, test_008, test_010, test_013, test_015, test_081
+Test Cases : test_004
 Confidence : 0.27
 Matcher    : deterministic
 Completion : 33% of gold steps
@@ -282,9 +272,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 33 features covered
-20 / 33 features partial
+18 / 33 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 22.42%
+Weighted Feature Coverage = mean(completion_ratio) = 19.04%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -301,7 +291,7 @@ Extracted vs ground truth: 0 / 33 (completeness ratio 0.0)
 Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
 
 GT GT001 'Browse the music library by album' | journal=missing (no name match) status=missing | offline=partial
-GT GT002 'Browse the music library by artist' | journal=missing (no name match) status=missing | offline=partial
+GT GT002 'Browse the music library by artist' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT003 'Browse all tracks' | journal=missing (no name match) status=missing | offline=partial
 GT GT004 'Browse recently added albums' | journal=missing (no name match) status=missing | offline=partial
 GT GT005 'Browse the file system with the file browser' | journal=missing (no name match) status=missing | offline=partial
@@ -314,7 +304,7 @@ GT GT011 'Clear the play queue' | journal=missing (no name match) status=missing
 GT GT012 'Save the current queue as a playlist' | journal=missing (no name match) status=missing | offline=partial
 GT GT013 'Browse and play saved playlists' | journal=missing (no name match) status=missing | offline=partial
 GT GT014 'Delete a playlist' | journal=missing (no name match) status=missing | offline=partial
-GT GT015 'Create a bookmark to resume an audiobook or podcast' | journal=missing (no name match) status=missing | offline=partial
+GT GT015 'Create a bookmark to resume an audiobook or podcast' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT016 'Resume from a bookmark' | journal=missing (no name match) status=missing | offline=partial
 GT GT017 'Delete a bookmark' | journal=missing (no name match) status=missing | offline=partial
 GT GT018 'Search the library' | journal=missing (no name match) status=missing | offline=not_covered

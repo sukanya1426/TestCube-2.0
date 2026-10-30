@@ -2,8 +2,8 @@
   "application": "Material Files",
   "total_features": 42,
   "covered_features": 0,
-  "uncovered_features": 39,
-  "partial_features": 3,
+  "uncovered_features": 22,
+  "partial_features": 20,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/materialfiles",
@@ -24,13 +24,22 @@
     {
       "id": "GT002",
       "name": "Create a new folder",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_006",
+        "test_008",
+        "test_010",
+        "test_014"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "enter the name: set_text EditText rid=nameEdit text=test activity=FileListActivity state_changed (tokens=name)"
+      ],
+      "matched_path": [
+        "enter the name"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT003",
@@ -101,13 +110,20 @@
     {
       "id": "GT009",
       "name": "Search for files",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_008",
+        "test_010"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open a folder: touch TextView \"1 folder\" activity=FileListActivity (tokens=folder)"
+      ],
+      "matched_path": [
+        "Open a folder"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT010",
@@ -145,13 +161,19 @@
     {
       "id": "GT013",
       "name": "Show or hide hidden files",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_004"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "toggle \"Show hidden files\": touch TextView \"Show hidden files\" rid=title activity=FileListActivity state_changed (tokens=files,hidden)"
+      ],
+      "matched_path": [
+        "toggle \"Show hidden files\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT014",
@@ -277,79 +299,123 @@
     {
       "id": "GT025",
       "name": "Bookmark a directory",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_008",
+        "test_010"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Navigate to the folder: touch TextView \"1 folder\" activity=FileListActivity (tokens=folder)"
+      ],
+      "matched_path": [
+        "Navigate to the folder"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT026",
       "name": "Manage bookmark directories",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT027",
       "name": "Add a shortcut to a folder on the home screen",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_008",
+        "test_010"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Navigate to the folder: touch TextView \"1 folder\" activity=FileListActivity (tokens=folder)"
+      ],
+      "matched_path": [
+        "Navigate to the folder"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT028",
       "name": "Connect to an FTP or FTPS server",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_010"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "choose FTP or FTPS: touch TextView \"FTP server\" activity=FtpServerActivity (tokens=ftp)"
+      ],
+      "matched_path": [
+        "choose FTP or FTPS"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT029",
       "name": "Connect to an SFTP server",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_010"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap \"Add server\": touch TextView \"FTP server\" activity=FtpServerActivity (tokens=server)"
+      ],
+      "matched_path": [
+        "tap \"Add server\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT030",
       "name": "Connect to an SMB share",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_010"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap \"Add server\": touch TextView \"FTP server\" activity=FtpServerActivity (tokens=server)"
+      ],
+      "matched_path": [
+        "tap \"Add server\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT031",
       "name": "Connect to a WebDAV server",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_010"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap \"Add server\": touch TextView \"FTP server\" activity=FtpServerActivity (tokens=server)"
+      ],
+      "matched_path": [
+        "tap \"Add server\""
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT032",
@@ -365,35 +431,67 @@
     {
       "id": "GT033",
       "name": "Start the built-in FTP server to share files with a computer",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_009",
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_016",
+        "test_017",
+        "test_018",
+        "test_019"
+      ],
+      "confidence": 0.3733,
+      "evidence": [
+        "tap \"FTP server\": touch TextView \"FTP server\" rid=titleText state_changed (tokens=ftp,server)",
+        "note the ftp:// URL shown: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (outcome tokens=note,url)"
+      ],
+      "matched_path": [
+        "tap \"FTP server\"",
+        "note the ftp:// URL shown"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.4
     },
     {
       "id": "GT034",
       "name": "Configure the FTP server settings",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_010",
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the FTP server section: touch TextView \"FTP server\" rid=titleText state_changed (tokens=ftp,server)"
+      ],
+      "matched_path": [
+        "tap the FTP server section"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT035",
       "name": "Enable root access",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT036",
@@ -401,46 +499,62 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_003",
+        "test_002",
         "test_004",
-        "test_005",
         "test_006",
-        "test_007",
         "test_008",
-        "test_009",
-        "test_010"
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_016",
+        "test_018",
+        "test_019"
+      ],
+      "confidence": 0.6667,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)",
+        "return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)"
+      ],
+      "matched_path": [
+        "Open Settings",
+        "return to the file list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.6666666666666666
+    },
+    {
+      "id": "GT037",
+      "name": "Change the theme and colours",
+      "status": "partial",
+      "test_cases": [
+        "test_016"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)"
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
       ],
       "matched_path": [
-        "return to the file list"
+        "Open Settings"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
     },
     {
-      "id": "GT037",
-      "name": "Change the theme and colours",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
-      "matcher": "deterministic",
-      "completion_ratio": 0.0
-    },
-    {
       "id": "GT038",
       "name": "Change the app language",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT039",
@@ -448,46 +562,62 @@
       "status": "partial",
       "test_cases": [
         "test_001",
-        "test_003",
+        "test_002",
         "test_004",
-        "test_005",
         "test_006",
-        "test_007",
         "test_008",
-        "test_009",
-        "test_010"
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_016",
+        "test_018",
+        "test_019"
       ],
-      "confidence": 0.3333,
+      "confidence": 0.6667,
       "evidence": [
-        "open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... state_changed (tokens=file)"
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)",
+        "open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)"
       ],
       "matched_path": [
+        "Open Settings",
         "open the file list section"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.6666666666666666
     },
     {
       "id": "GT040",
       "name": "Configure the standard directories shown in the navigation drawer",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT041",
       "name": "Configure the storage volumes shown",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_016"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT042",
@@ -496,18 +626,21 @@
       "test_cases": [
         "test_001",
         "test_002",
-        "test_003",
         "test_004",
-        "test_005",
         "test_006",
-        "test_007",
         "test_008",
         "test_009",
-        "test_010"
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_016",
+        "test_017",
+        "test_018",
+        "test_019"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "Open the navigation drawer or Settings: touch TextView \"Allow this app to read, modify and delete all files on th...\" activity=SpaActivity (outcome tokens=settings)"
+        "Open the navigation drawer or Settings: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (outcome tokens=settings)"
       ],
       "matched_path": [
         "Open the navigation drawer or Settings"
@@ -524,7 +657,7 @@
       "journal_name": "Browse local storage",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "dropped",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -538,7 +671,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -563,7 +696,7 @@
       "journal_name": "Copy files",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "dropped",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -602,7 +735,7 @@
       "journal_name": "Delete items",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -629,7 +762,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -641,7 +774,7 @@
       "journal_name": "Sort the file list",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -680,8 +813,8 @@
       "journal_name": "Show",
       "name_similarity": 0.417,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -706,7 +839,7 @@
       "journal_name": "Create an archive",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -758,7 +891,7 @@
       "journal_name": "Copy the path of",
       "name_similarity": 0.75,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -797,7 +930,7 @@
       "journal_name": "View an image",
       "name_similarity": 0.417,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -836,8 +969,8 @@
       "journal_name": "Bookmark a directory",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -850,7 +983,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -863,7 +996,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -875,8 +1008,8 @@
       "journal_name": "Connect",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -888,8 +1021,8 @@
       "journal_name": "Connect",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -902,7 +1035,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -915,7 +1048,7 @@
       "name_similarity": 0.364,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -940,8 +1073,8 @@
       "journal_name": "Configure the FTP server",
       "name_similarity": 0.3,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -954,7 +1087,7 @@
       "name_similarity": 0.8,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -967,7 +1100,7 @@
       "name_similarity": 0.071,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -992,8 +1125,8 @@
       "journal_name": "Change the theme",
       "name_similarity": 0.6,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1006,7 +1139,7 @@
       "name_similarity": 0.4,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1031,8 +1164,8 @@
       "journal_name": "Configure the standard directories",
       "name_similarity": 0.571,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1045,7 +1178,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1083,12 +1216,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 16,
-  "actions_with_widget": 3,
+  "total_actions": 225,
+  "actions_with_widget": 195,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 3,
+  "exercised_features": 20,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.023809523809523808,
-  "weighted_coverage_percentage": 2.38,
+  "weighted_coverage": 0.15436507936507934,
+  "weighted_coverage_percentage": 15.44,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

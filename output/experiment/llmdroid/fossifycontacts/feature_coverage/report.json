@@ -1,11 +1,11 @@
 {
   "application": "Fossify Contacts",
   "total_features": 38,
-  "covered_features": 1,
-  "uncovered_features": 16,
-  "partial_features": 21,
-  "coverage": 0.02631578947368421,
-  "coverage_percentage": 2.63,
+  "covered_features": 0,
+  "uncovered_features": 20,
+  "partial_features": 18,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/fossifycontacts",
   "readme_path": "/Users/mahdiya/TestCube-2.0/feature/fossifycontacts/README.md",
   "features_path": "/Users/mahdiya/TestCube-2.0/feature/fossifycontacts/ground_truth.json",
@@ -13,19 +13,13 @@
     {
       "id": "GT001",
       "name": "Create a contact",
-      "status": "partial",
-      "test_cases": [
-        "test_053"
-      ],
-      "confidence": 0.2,
-      "evidence": [
-        "add the phone number: touch CheckBox \"Phone numbers\" rid=manage_visible_fields_phone_numbers activity=SettingsActivity state_changed (tokens=number,phone)"
-      ],
-      "matched_path": [
-        "add the phone number"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
@@ -146,19 +140,13 @@
     {
       "id": "GT012",
       "name": "Delete a contact",
-      "status": "partial",
-      "test_cases": [
-        "test_002"
-      ],
-      "confidence": 0.225,
-      "evidence": [
-        "tap the overflow menu (three dots): touch ImageView \"Options\" rid=three_dots activity=CaptureActivity (tokens=dots,three)"
-      ],
-      "matched_path": [
-        "tap the overflow menu (three dots)"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT013",
@@ -185,19 +173,13 @@
     {
       "id": "GT015",
       "name": "Call a contact",
-      "status": "partial",
-      "test_cases": [
-        "test_053"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "tap the phone number (or the call icon beside it); the dialler is opened with the number: touch CheckBox \"Phone numbers\" rid=manage_visible_fields_phone_numbers activity=SettingsActivity state_changed (tokens=number,phone)"
-      ],
-      "matched_path": [
-        "tap the phone number (or the call icon beside it); the dialler is opened with the number"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT016",
@@ -224,23 +206,20 @@
     {
       "id": "GT018",
       "name": "Create a contact group",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_009"
+        "test_009",
+        "test_010"
       ],
-      "confidence": 1.0,
+      "confidence": 0.5,
       "evidence": [
-        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)",
-        "enter the group name: set_text EditText \"Title\" rid=group_name text=Hello World activity=MainActivity state_changed (tokens=group,name)"
+        "Open the Groups tab: touch TextView \"Groups\" rid=tab_item_label activity=MainActivity state_changed (tokens=groups)"
       ],
       "matched_path": [
-        "Open the Groups tab",
-        "tap the \"+\" button",
-        "enter the group name",
-        "tap OK"
+        "Open the Groups tab"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 1.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT019",
@@ -299,26 +278,13 @@
     {
       "id": "GT022",
       "name": "Search contacts",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_006",
-        "test_009",
-        "test_010",
-        "test_011",
-        "test_014",
-        "test_016",
-        "test_053"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "Tap the search icon in the toolbar: touch ImageView \"Search\" rid=top_toolbar_search_icon activity=MainActivity (tokens=search,toolbar)"
-      ],
-      "matched_path": [
-        "Tap the search icon in the toolbar"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT023",
@@ -351,13 +317,8 @@
       "name": "Filter which contact sources are shown",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_014",
         "test_019",
-        "test_031",
-        "test_051",
-        "test_053",
-        "test_055"
+        "test_031"
       ],
       "confidence": 0.3333,
       "evidence": [
@@ -562,19 +523,17 @@
         "test_053",
         "test_055"
       ],
-      "confidence": 0.75,
+      "confidence": 0.5,
       "evidence": [
         "Open Settings: touch TextView \"Settings\" rid=title activity=SettingsActivity state_changed (tokens=settings)",
-        "tap \"Customise colours\": touch ViewGroup rid=settings_color_customization_holder activity=CustomizationActivity state_changed (tokens=colours,customise)",
         "tap the tick to save: touch Button \"Save\" rid=save activity=SettingsActivity state_changed (tokens=save)"
       ],
       "matched_path": [
         "Open Settings",
-        "tap \"Customise colours\"",
         "tap the tick to save"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.75
+      "completion_ratio": 0.5
     },
     {
       "id": "GT035",
@@ -676,7 +635,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -819,7 +778,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -858,7 +817,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -897,7 +856,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -949,7 +908,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1185,9 +1144,9 @@
   "total_actions": 762,
   "actions_with_widget": 622,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 22,
+  "exercised_features": 18,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.2526315789473685,
-  "weighted_coverage_percentage": 25.26,
+  "weighted_coverage": 0.19912280701754384,
+  "weighted_coverage_percentage": 19.91,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

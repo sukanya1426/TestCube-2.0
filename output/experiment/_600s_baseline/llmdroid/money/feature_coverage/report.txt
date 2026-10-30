@@ -1,0 +1,233 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Money Manager Ex
+
+Total Actions    : 138
+
+Total Features   : 28
+Covered Features : 0
+Partial          : 3
+Uncovered        : 25
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 2.08%  (mean completion ratio; partial steps count)
+Exercised        : 3  (covered 0 + partial 3)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Create a New Database
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Tap Create Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
+
+[GT002] Create First/New Account
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Add a Transaction
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Edit / Delete / Modify a Transaction
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Filter Transactions by Date Range
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] Search/Sort Transactions
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT007] Mark Account as Favorite
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Manage Accounts
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Set Up a Budget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Set/Edit a Category Budget Amount
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] View Budget Details / Transactions
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Delete a Budget
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Configure Budget View Options
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] Create a Recurring/Scheduled Transaction
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Respond to a Recurring Transaction Prompt
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT016] Manage Payees
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT017] Manage Categories
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] View a Built-In Report
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] Run a General Report
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Track Stock/Mutual Fund Investments
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Add a Stock Transaction
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT022] Track Fixed Assets
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT023] Manage Currencies & Exchange Rates
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Set Up Data Sync
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - On the create or open screen, tap Open Database: touch Button "CREATE DATABASE" rid=createDatabaseButton activity=PickActivity state_changed (tokens=database)
+
+[GT025] Set/Change Database Password
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.17
+Matcher    : deterministic
+Completion : 17% of gold steps
+Evidence   :
+  - Tap Set Password or Change Password: touch EditText "•••••••••••" rid=txtPassword activity=PasswordActivity (tokens=password)
+
+[GT026] Enable Fingerprint/Biometric Lock
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Import/Export via QIF or CSV
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Configure App Settings
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 28 features covered
+3 / 28 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 2.08%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 28 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Create a New Database' | journal=missing (no name match) status=missing | offline=partial
+GT GT002 'Create First/New Account' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 'Add a Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Edit / Delete / Modify a Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Filter Transactions by Date Range' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'Search/Sort Transactions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT007 'Mark Account as Favorite' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 'Manage Accounts' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Set Up a Budget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Set/Edit a Category Budget Amount' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'View Budget Details / Transactions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Delete a Budget' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Configure Budget View Options' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Create a Recurring/Scheduled Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Respond to a Recurring Transaction Prompt' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Manage Payees' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Manage Categories' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'View a Built-In Report' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'Run a General Report' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Track Stock/Mutual Fund Investments' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Add a Stock Transaction' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT022 'Track Fixed Assets' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT023 'Manage Currencies & Exchange Rates' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Set Up Data Sync' | journal=missing (no name match) status=missing | offline=partial
+GT GT025 'Set/Change Database Password' | journal=missing (no name match) status=missing | offline=partial
+GT GT026 'Enable Fingerprint/Biometric Lock' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Import/Export via QIF or CSV' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Configure App Settings' | journal=missing (no name match) status=missing | offline=not_covered

@@ -1,0 +1,245 @@
+========================================
+TestCube Feature Coverage Report
+========================================
+
+Application: Wikimedia Commons
+
+Total Actions    : 520
+
+Total Features   : 30
+Covered Features : 0
+Partial          : 3
+Uncovered        : 27
+
+Feature Coverage : 0.00%
+
+Coverage formula : COVERED / Total
+Weighted Coverage: 3.33%  (mean completion ratio; partial steps count)
+Exercised        : 3  (covered 0 + partial 3)
+
+ground_truth_source: independent_labeled_set
+
+Evidence: observed trace only (TestCube's journal excluded, so both tools are judged on the same basis)
+Matcher: deterministic
+
+Matcher min-confidence: 0.50
+
+----------------------------------------
+FEATURE DETAILS
+----------------------------------------
+
+[GT001] Browse the explore feed of Commons media
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT002] Open a media item from the explore feed
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT003] Read a media item's details
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT004] Search Commons for media
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT005] Browse nearby places that need photographs
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT006] View nearby places on a map
+Status     : PARTIAL
+Test Cases : test_010
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - switch to the map view: touch View rid=main-menu-input activity=SignupActivity state_changed (outcome tokens=map)
+
+[GT007] Filter nearby places by whether they need pictures
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT008] Open a nearby place's details
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT009] Take a photograph to upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT010] Pick an existing image from the device to upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT011] Enter a title and caption for an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT012] Enter a description for an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT013] Add categories to an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT014] Add depictions to an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT015] Choose the licence for an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT016] Submit an upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT017] Review the upload queue and progress
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT018] Retry or cancel a failed upload
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT019] View your own contributions
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT020] Open one of your contributions
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT021] Log in with a Wikimedia account
+Status     : PARTIAL
+Test Cases : test_004
+Confidence : 0.25
+Matcher    : deterministic
+Completion : 25% of gold steps
+Evidence   :
+  - enter the username: set_text EditText "Username" rid=login_username text=Hello World activity=LoginActivity state_changed (tokens=username)
+
+[GT022] Log out of the account
+Status     : PARTIAL
+Test Cases : test_002
+Confidence : 0.50
+Matcher    : deterministic
+Completion : 50% of gold steps
+Evidence   :
+  - tap Settings or the account entry: touch View "creating an account" activity=SignupActivity (tokens=account)
+
+[GT023] Bookmark a media item
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT024] Open the bookmarks list
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT025] View achievements and upload statistics
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT026] Open the settings screen
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT027] Change the application theme
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT028] Enable the limited connection mode
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT029] Change the upload licence default
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+[GT030] Read the about, privacy policy and version information
+Status     : NOT COVERED
+Matcher    : deterministic
+Completion : 0% of gold steps
+
+----------------------------------------
+SUMMARY
+----------------------------------------
+
+0 / 30 features covered
+3 / 30 features partial
+Feature Coverage = COVERED / Total = 0.00%
+Weighted Feature Coverage = mean(completion_ratio) = 3.33%
+
+Only fully COVERED features count toward Feature Coverage.
+Weighted coverage also credits PARTIAL gold-step fractions.
+Gold steps need not occur in listed order. Later exploration can
+complete an earlier partial feature. The coverage judge is an
+LLM/VLM semantic verdict, not string or token overlap.
+
+----------------------------------------
+JOURNAL VS GROUND TRUTH
+----------------------------------------
+
+Extracted vs ground truth: 0 / 30 (completeness ratio 0.0)
+
+Feature-inference P/R/F1: 0.00 / 0.00 / 0.00 (false not_present=0)
+
+GT GT001 'Browse the explore feed of Commons media' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT002 'Open a media item from the explore feed' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT003 "Read a media item's details" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT004 'Search Commons for media' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT005 'Browse nearby places that need photographs' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT006 'View nearby places on a map' | journal=missing (no name match) status=missing | offline=partial
+GT GT007 'Filter nearby places by whether they need pictures' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT008 "Open a nearby place's details" | journal=missing (no name match) status=missing | offline=not_covered
+GT GT009 'Take a photograph to upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT010 'Pick an existing image from the device to upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT011 'Enter a title and caption for an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT012 'Enter a description for an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT013 'Add categories to an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT014 'Add depictions to an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT015 'Choose the licence for an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT016 'Submit an upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT017 'Review the upload queue and progress' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT018 'Retry or cancel a failed upload' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT019 'View your own contributions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT020 'Open one of your contributions' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT021 'Log in with a Wikimedia account' | journal=missing (no name match) status=missing | offline=partial
+GT GT022 'Log out of the account' | journal=missing (no name match) status=missing | offline=partial
+GT GT023 'Bookmark a media item' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT024 'Open the bookmarks list' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'View achievements and upload statistics' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT026 'Open the settings screen' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT027 'Change the application theme' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT028 'Enable the limited connection mode' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT029 'Change the upload licence default' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT030 'Read the about, privacy policy and version information' | journal=missing (no name match) status=missing | offline=not_covered

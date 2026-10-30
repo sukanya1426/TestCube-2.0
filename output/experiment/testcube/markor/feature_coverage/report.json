@@ -2,8 +2,8 @@
   "application": "Markor",
   "total_features": 46,
   "covered_features": 0,
-  "uncovered_features": 45,
-  "partial_features": 1,
+  "uncovered_features": 28,
+  "partial_features": 18,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/markor",
@@ -101,13 +101,19 @@
     {
       "id": "GT009",
       "name": "Insert a link",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "select the text to link (optional): touch ImageView \"Insert link\" activity=DocumentActivity (tokens=link)"
+      ],
+      "matched_path": [
+        "select the text to link (optional)"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT010",
@@ -178,24 +184,36 @@
     {
       "id": "GT016",
       "name": "Search across all files in the notebook",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_005"
+      ],
+      "confidence": 0.1667,
+      "evidence": [
+        "type the query: set_text EditText \"Search\" text=test activity=MainActivity (tokens=query)"
+      ],
+      "matched_path": [
+        "type the query"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.16666666666666666
     },
     {
       "id": "GT017",
       "name": "Open the QuickNote file",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.45,
+      "evidence": [
+        "Tap the QuickNote tab in the bottom navigation bar (or open it from the drawer): touch TextView \"QuickNote\" rid=title activity=StoragePermissionActivity (tokens=note,quick)"
+      ],
+      "matched_path": [
+        "Tap the QuickNote tab in the bottom navigation bar (or open it from the drawer)"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT018",
@@ -213,17 +231,22 @@
       "name": "Manage a todo.txt file",
       "status": "partial",
       "test_cases": [
-        "test_001"
+        "test_001",
+        "test_003",
+        "test_005",
+        "test_007"
       ],
-      "confidence": 0.25,
+      "confidence": 0.475,
       "evidence": [
-        "the todo.txt action bar appears: touch ImageButton \"NEXT\" rid=next activity=IntroActivity state_changed (outcome tokens=todo,txt)"
+        "Open or create a .txt file in todo.txt format: touch TextView \"todo.txt\" rid=title state_changed (tokens=todo,txt)",
+        "the todo.txt action bar appears: touch TextView \"/storage/emulated/0/Documents\" rid=opoc_filesystem_item__description activity=MainActivity (outcome tokens=todo,txt)"
       ],
       "matched_path": [
+        "Open or create a .txt file in todo.txt format",
         "the todo.txt action bar appears"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.5
     },
     {
       "id": "GT020",
@@ -272,24 +295,36 @@
     {
       "id": "GT024",
       "name": "Export the document as a PDF or print it",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap \"Share\" or the print/PDF option: touch TextView \"Share\" rid=title activity=DocumentActivity (tokens=share)"
+      ],
+      "matched_path": [
+        "tap \"Share\" or the print/PDF option"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT025",
       "name": "Share the document as plain text or rendered HTML",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap Share: touch TextView \"Share\" rid=title activity=DocumentActivity (tokens=share)"
+      ],
+      "matched_path": [
+        "tap Share"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT026",
@@ -305,13 +340,20 @@
     {
       "id": "GT027",
       "name": "Move or copy files and folders",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "long-press one or more items: touch ImageView \"More options\" activity=DocumentActivity (tokens=more)"
+      ],
+      "matched_path": [
+        "long-press one or more items"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT028",
@@ -338,24 +380,38 @@
     {
       "id": "GT030",
       "name": "Mark a file or folder as a favourite",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "open the favourites view from the drawer or the folder shortcuts to reach it quickly: touch CheckBox \"List in recent files\" rid=ui__fileinfodialog__recents activity=DocumentActivity state_changed (outcome tokens=favourites)"
+      ],
+      "matched_path": [
+        "open the favourites view from the drawer or the folder shortcuts to reach it quickly"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT031",
       "name": "Sort the file list",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the sort icon (or the overflow menu: long_touch ImageView \"Sort by\" activity=DocumentActivity (tokens=sort)",
+        "Sort): long_touch ImageView \"Sort by\" activity=DocumentActivity (tokens=sort)"
+      ],
+      "matched_path": [
+        "tap the sort icon (or the overflow menu",
+        "Sort)"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT032",
@@ -393,24 +449,36 @@
     {
       "id": "GT035",
       "name": "View file information",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "tap the info action: touch TextView \"Info\" rid=title activity=DocumentActivity (tokens=info)"
+      ],
+      "matched_path": [
+        "tap the info action"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT036",
       "name": "Encrypt and open password-protected notes",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT037",
@@ -448,79 +516,121 @@
     {
       "id": "GT040",
       "name": "Change the notebook (root) directory",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT041",
       "name": "Change the theme and colours",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT042",
       "name": "Change the editor font family and size",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT043",
       "name": "Configure editor behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT044",
       "name": "Configure the format action bar buttons",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT045",
       "name": "Change the app language",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.25,
+      "evidence": [
+        "Open Settings: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.25
     },
     {
       "id": "GT046",
       "name": "Review the changelog, help and licences",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings or the overflow menu: touch TextView \"File Settings\" rid=title activity=DocumentActivity (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings or the overflow menu"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     }
   ],
   "confusion": [
@@ -583,7 +693,7 @@
       "journal_name": "Share the document",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -609,7 +719,7 @@
       "journal_name": "Apply Markdown formatting",
       "name_similarity": 0.429,
       "matched_by": "name",
-      "journal_status": "dropped",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -635,8 +745,8 @@
       "journal_name": "Insert an image",
       "name_similarity": 0.333,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "partial",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -687,7 +797,7 @@
       "journal_name": "Insert a table",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -726,8 +836,8 @@
       "journal_name": "Search across all files",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "pending",
-      "offline_status": "not_covered",
+      "journal_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -740,7 +850,7 @@
       "name_similarity": 0.5,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -752,7 +862,7 @@
       "journal_name": "Sort the file list",
       "name_similarity": 0.4,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -765,7 +875,7 @@
       "journal_name": "Manage a todo.txt file",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -804,7 +914,7 @@
       "journal_name": "Preview a CSV file",
       "name_similarity": 0.75,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -831,7 +941,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -844,7 +954,7 @@
       "name_similarity": 0.455,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -870,7 +980,7 @@
       "name_similarity": 0.214,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -882,7 +992,7 @@
       "journal_name": "Delete files",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -909,7 +1019,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -922,7 +1032,7 @@
       "name_similarity": 1.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -960,7 +1070,7 @@
       "journal_name": "View recent",
       "name_similarity": 0.5,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -974,7 +1084,7 @@
       "name_similarity": 0.25,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -987,7 +1097,7 @@
       "name_similarity": 0.143,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1039,7 +1149,7 @@
       "name_similarity": 0.8,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1052,7 +1162,7 @@
       "name_similarity": 0.286,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1065,7 +1175,7 @@
       "name_similarity": 0.222,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1078,7 +1188,7 @@
       "name_similarity": 0.071,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1091,7 +1201,7 @@
       "name_similarity": 0.133,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1104,7 +1214,7 @@
       "name_similarity": 0.333,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1117,7 +1227,7 @@
       "name_similarity": 0.125,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1142,12 +1252,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 41,
-  "actions_with_widget": 20,
+  "total_actions": 212,
+  "actions_with_widget": 196,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 1,
+  "exercised_features": 18,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.005434782608695652,
-  "weighted_coverage_percentage": 0.54,
+  "weighted_coverage": 0.11340579710144928,
+  "weighted_coverage_percentage": 11.34,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

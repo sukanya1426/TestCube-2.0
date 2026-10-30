@@ -2,8 +2,8 @@
   "application": "KeePassDX",
   "total_features": 47,
   "covered_features": 0,
-  "uncovered_features": 45,
-  "partial_features": 2,
+  "uncovered_features": 41,
+  "partial_features": 6,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/keepassdx",
@@ -35,13 +35,19 @@
     {
       "id": "GT003",
       "name": "Unlock a database with a key file",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.18,
+      "evidence": [
+        "tap the key file selector: touch FrameLayout \"Preview the file keyfile.key\" rid=preview_icon state_changed (tokens=file,key)"
+      ],
+      "matched_path": [
+        "tap the key file selector"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT004",
@@ -70,18 +76,56 @@
       "name": "Create an entry",
       "status": "partial",
       "test_cases": [
+        "test_002",
+        "test_003",
+        "test_005",
+        "test_006",
+        "test_007",
+        "test_008",
+        "test_009",
+        "test_010",
+        "test_011",
+        "test_012",
+        "test_013",
+        "test_014",
+        "test_015",
+        "test_016",
+        "test_018",
+        "test_019",
+        "test_020",
+        "test_021",
+        "test_022",
+        "test_023",
+        "test_024",
+        "test_025",
+        "test_027",
+        "test_028",
         "test_029",
         "test_030",
         "test_031",
         "test_032",
         "test_033",
         "test_034",
-        "test_035",
-        "test_036"
+        "test_036",
+        "test_037",
+        "test_038",
+        "test_039",
+        "test_040",
+        "test_041",
+        "test_042",
+        "test_043",
+        "test_045",
+        "test_046",
+        "test_047",
+        "test_048",
+        "test_049",
+        "test_050",
+        "test_051",
+        "test_052"
       ],
       "confidence": 0.1667,
       "evidence": [
-        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)"
+        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=FileDatabaseSelectActivity state_changed (tokens=database)"
       ],
       "matched_path": [
         "Open the database"
@@ -158,13 +202,19 @@
     {
       "id": "GT013",
       "name": "Copy a username or password to the clipboard",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap the copy icon beside the username or password field: touch Switch \"Password\" rid=password_checkbox activity=FileDatabaseSelectActivity state_changed (tokens=password)"
+      ],
+      "matched_path": [
+        "tap the copy icon beside the username or password field"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.5
     },
     {
       "id": "GT014",
@@ -248,18 +298,56 @@
       "name": "Create a group",
       "status": "partial",
       "test_cases": [
+        "test_002",
+        "test_003",
+        "test_005",
+        "test_006",
+        "test_007",
+        "test_008",
+        "test_009",
+        "test_010",
+        "test_011",
+        "test_012",
+        "test_013",
+        "test_014",
+        "test_015",
+        "test_016",
+        "test_018",
+        "test_019",
+        "test_020",
+        "test_021",
+        "test_022",
+        "test_023",
+        "test_024",
+        "test_025",
+        "test_027",
+        "test_028",
         "test_029",
         "test_030",
         "test_031",
         "test_032",
         "test_033",
         "test_034",
-        "test_035",
-        "test_036"
+        "test_036",
+        "test_037",
+        "test_038",
+        "test_039",
+        "test_040",
+        "test_041",
+        "test_042",
+        "test_043",
+        "test_045",
+        "test_046",
+        "test_047",
+        "test_048",
+        "test_049",
+        "test_050",
+        "test_051",
+        "test_052"
       ],
       "confidence": 0.2,
       "evidence": [
-        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)"
+        "Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=FileDatabaseSelectActivity state_changed (tokens=database)"
       ],
       "matched_path": [
         "Open the database"
@@ -314,13 +402,19 @@
     {
       "id": "GT026",
       "name": "Configure search behaviour",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_003"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "the search section: touch ImageView \"Clear query\" rid=search_close_btn activity=PickActivity state_changed (tokens=search)"
+      ],
+      "matched_path": [
+        "the search section"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT027",
@@ -424,13 +518,20 @@
     {
       "id": "GT036",
       "name": "Change the master key of a database",
-      "status": "not_covered",
-      "test_cases": [],
-      "confidence": 0.0,
-      "evidence": [],
-      "matched_path": null,
+      "status": "partial",
+      "test_cases": [
+        "test_001",
+        "test_003"
+      ],
+      "confidence": 0.2,
+      "evidence": [
+        "tap the master key entry: touch TextView \"Assign a master key\" activity=FileDatabaseSelectActivity (tokens=key,master)"
+      ],
+      "matched_path": [
+        "tap the master key entry"
+      ],
       "matcher": "deterministic",
-      "completion_ratio": 0.0
+      "completion_ratio": 0.2
     },
     {
       "id": "GT037",
@@ -562,7 +663,7 @@
       "journal_name": "Create a database",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "dropped",
+      "journal_status": "partial",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -575,7 +676,7 @@
       "journal_name": "Open a database",
       "name_similarity": 0.667,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -589,7 +690,7 @@
       "name_similarity": 0.4,
       "matched_by": "name",
       "journal_status": "partial",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -640,7 +741,7 @@
       "journal_name": "Generate a password",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -719,7 +820,7 @@
       "name_similarity": 0.545,
       "matched_by": "name",
       "journal_status": "pending",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -874,7 +975,7 @@
       "journal_name": "Search the database",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "pending",
+      "journal_status": "covered",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -888,7 +989,7 @@
       "name_similarity": 0.2,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -991,7 +1092,7 @@
       "journal_name": "Configure clipboard timeout",
       "name_similarity": 1.0,
       "matched_by": "name",
-      "journal_status": "partial",
+      "journal_status": "pending",
       "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
@@ -1018,7 +1119,7 @@
       "name_similarity": 0.5,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "not_covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1186,12 +1287,12 @@
   "matcher_min_confidence": 0.5,
   "matcher_mode": "deterministic",
   "trace_only": true,
-  "total_actions": 136,
-  "actions_with_widget": 91,
+  "total_actions": 182,
+  "actions_with_widget": 121,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 2,
+  "exercised_features": 6,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.007801418439716313,
-  "weighted_coverage_percentage": 0.78,
+  "weighted_coverage": 0.03404255319148936,
+  "weighted_coverage_percentage": 3.4,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

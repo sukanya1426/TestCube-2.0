@@ -18,7 +18,7 @@
       "dataset_features": 39,
       "coverage_tag": "MONEY_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "verified_ok",
       "reason": "Already instruments cleanly (147,371 methods / 51 activities) and is the app the one existing comparison was run on. Open source, fully offline, no account."
     },
     {
@@ -196,8 +196,9 @@
       "dataset_features": 46,
       "coverage_tag": "VLC_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
-      "reason": "Open source. Local media library browsing, playback and the large settings tree all work offline; network shares are optional. 46 features."
+      "instrumentation_status": "verified_ok",
+      "reason": "Open source. Local media library browsing, playback and the large settings tree all work offline; network shares are optional. 46 features.",
+      "note": "arm64-v8a build (versionCode 13070106); Soot succeeded on retry, first attempt failed nondeterministically"
     },
     {
       "stem": "auxio",
@@ -310,7 +311,7 @@
       "dataset_features": 29,
       "coverage_tag": "FOSSIFYNOTES_SUPER_LOG",
       "pool": "selected",
-      "instrumentation_status": "fail_instrument",
+      "instrumentation_status": "verified_ok",
       "reason": "Open source, fully offline, no account. 29 features, small and fast to explore end to end."
     },
     {
@@ -429,10 +430,11 @@
       "package": "fr.free.nrw.commons",
       "dataset_version": "F-Droid build 1066",
       "dataset_features": 32,
-      "coverage_tag": "WIKIMEDIACOM_SUPER_LOG",
+      "coverage_tag": "WIKIMEDIACOMMONS_SUPER_LOG",
       "pool": "reserve",
-      "instrumentation_status": "untested",
-      "reason": "Requires a Wikimedia account before the upload and review flows, which are most of the app."
+      "instrumentation_status": "verified_ok",
+      "reason": "Requires a Wikimedia account before the upload and review flows, which are most of the app.",
+      "note": "Instrumented 2026-10-18; ground truth authored from official docs, not from the APK_DATASET inventory."
     },
     {
       "stem": "appmanager",
@@ -442,8 +444,9 @@
       "dataset_features": 46,
       "coverage_tag": "APPMANAGER_SUPER_LOG",
       "pool": "reserve",
-      "instrumentation_status": "untested",
-      "reason": "Most operations require root or an ADB/wireless-debugging connection."
+      "instrumentation_status": "verified_ok",
+      "reason": "Most operations require root or an ADB/wireless-debugging connection.",
+      "note": "Instrumented 2026-10-18; ground truth authored from official docs, not from the APK_DATASET inventory."
     },
     {
       "stem": "fing",

@@ -1,11 +1,11 @@
 {
   "application": "NoNonsense Notes",
   "total_features": 34,
-  "covered_features": 1,
-  "uncovered_features": 21,
-  "partial_features": 12,
-  "coverage": 0.029411764705882353,
-  "coverage_percentage": 2.94,
+  "covered_features": 0,
+  "uncovered_features": 29,
+  "partial_features": 5,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/nononsensenotes",
   "readme_path": "/Users/mahdiya/TestCube-2.0/feature/nononsensenotes/README.md",
   "features_path": "/Users/mahdiya/TestCube-2.0/feature/nononsensenotes/ground_truth.json",
@@ -68,20 +68,13 @@
     {
       "id": "GT006",
       "name": "Edit a task",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "tap the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "tap the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT007",
@@ -108,22 +101,13 @@
     {
       "id": "GT009",
       "name": "Delete all completed tasks in a list",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_006",
-        "test_008",
-        "test_015"
-      ],
-      "confidence": 0.45,
-      "evidence": [
-        "tap \"Delete completed tasks\": touch CheckBox rid=taskCompleted activity=ActivityMain_ state_changed (tokens=completed,tasks)"
-      ],
-      "matched_path": [
-        "tap \"Delete completed tasks\""
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT010",
@@ -150,58 +134,52 @@
     {
       "id": "GT012",
       "name": "Set a due date on a task",
-      "status": "covered",
+      "status": "partial",
       "test_cases": [
-        "test_006"
+        "test_002",
+        "test_004",
+        "test_006",
+        "test_008",
+        "test_010",
+        "test_012",
+        "test_014",
+        "test_015"
       ],
-      "confidence": 1.0,
+      "confidence": 0.3333,
       "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)",
-        "tap the due-date field: touch Button \"Due date\" rid=dueDateBox activity=ActivityMain_ state_changed (tokens=date,due)",
-        "select the date in the picker: touch TextView \"2026\" rid=date_picker_header_year activity=ActivityMain_ state_changed (tokens=date)"
+        "tap the due-date field: touch Button \"Due date\" rid=dueDateBox activity=ActivityMain_ state_changed (tokens=date,due)"
       ],
       "matched_path": [
-        "Open the task",
-        "tap the due-date field",
-        "select the date in the picker",
-        "tap OK"
+        "tap the due-date field"
       ],
       "matcher": "deterministic",
-      "completion_ratio": 1.0
+      "completion_ratio": 0.3333333333333333
     },
     {
       "id": "GT013",
       "name": "Set a time-based reminder",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT014",
       "name": "Set a repeating reminder",
       "status": "partial",
       "test_cases": [
-        "test_006",
         "test_008",
         "test_014"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
+        "add a reminder: touch TextView \"Add a reminder\" rid=notificationAdd state_changed (tokens=reminder)"
       ],
       "matched_path": [
-        "Open the task"
+        "add a reminder"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.25
@@ -211,74 +189,54 @@
       "name": "Set a location-based reminder",
       "status": "partial",
       "test_cases": [
-        "test_006",
         "test_008",
         "test_014",
         "test_015"
       ],
-      "confidence": 0.1667,
-      "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
-      "matcher": "deterministic",
-      "completion_ratio": 0.16666666666666666
-    },
-    {
-      "id": "GT016",
-      "name": "Remove a reminder",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
       "confidence": 0.3333,
       "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
+        "tap \"Add reminder\": touch TextView \"Add a reminder\" rid=notificationAdd activity=ActivityMain_ (tokens=reminder)",
+        "search for or pick the place on the map: touch Button \"Search\" rid=menu_search activity=ActivityMain_ state_changed (tokens=search)"
       ],
       "matched_path": [
-        "Open the task"
+        "tap \"Add reminder\"",
+        "search for or pick the place on the map"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.3333333333333333
     },
     {
+      "id": "GT016",
+      "name": "Remove a reminder",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
       "id": "GT017",
       "name": "Move a task to a different list",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT018",
       "name": "Delete a task",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
-      "confidence": 0.5,
-      "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.5
+      "completion_ratio": 0.0
     },
     {
       "id": "GT019",
@@ -341,20 +299,13 @@
     {
       "id": "GT023",
       "name": "Share a task",
-      "status": "partial",
-      "test_cases": [
-        "test_006",
-        "test_014"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the task: touch TextView \"TASKS\" rid=text1 activity=ActivityMain_ state_changed (tokens=task)"
-      ],
-      "matched_path": [
-        "Open the task"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT024",
@@ -425,20 +376,13 @@
     {
       "id": "GT030",
       "name": "Configure notification behaviour",
-      "status": "partial",
-      "test_cases": [
-        "test_008",
-        "test_014"
-      ],
-      "confidence": 0.2708,
-      "evidence": [
-        "set the notification sound, vibration and whether persistent notifications are used for reminders: touch TextView \"Add a reminder\" rid=notificationAdd state_changed (tokens=notification,notifications,reminders)"
-      ],
-      "matched_path": [
-        "set the notification sound, vibration and whether persistent notifications are used for reminders"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT031",
@@ -566,7 +510,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -605,7 +549,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -644,7 +588,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "covered",
+      "offline_status": "partial",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -657,7 +601,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -696,7 +640,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -709,7 +653,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -722,7 +666,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -787,7 +731,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -878,7 +822,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -958,9 +902,9 @@
   "total_actions": 675,
   "actions_with_widget": 596,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 13,
+  "exercised_features": 5,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.14705882352941174,
-  "weighted_coverage_percentage": 14.71,
+  "weighted_coverage": 0.05147058823529411,
+  "weighted_coverage_percentage": 5.15,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

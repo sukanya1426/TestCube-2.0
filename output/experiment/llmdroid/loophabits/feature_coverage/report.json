@@ -2,8 +2,8 @@
   "application": "Loop Habit Tracker",
   "total_features": 38,
   "covered_features": 1,
-  "uncovered_features": 8,
-  "partial_features": 29,
+  "uncovered_features": 15,
+  "partial_features": 22,
   "coverage": 0.02631578947368421,
   "coverage_percentage": 2.63,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/loophabits",
@@ -13,23 +13,13 @@
     {
       "id": "GT001",
       "name": "Create a yes/no habit",
-      "status": "partial",
-      "test_cases": [
-        "test_011",
-        "test_046",
-        "test_136"
-      ],
-      "confidence": 0.2857,
-      "evidence": [
-        "enter the habit name: set_text EditText \"e.g. Exercise\" rid=nameInput text=Exercise activity=EditHabitActivity state_changed (tokens=name)",
-        "tap Save: touch Button \"SAVE\" rid=buttonSave activity=MainActivity state_changed (tokens=save)"
-      ],
-      "matched_path": [
-        "enter the habit name",
-        "tap Save"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2857142857142857
+      "completion_ratio": 0.0
     },
     {
       "id": "GT002",
@@ -239,30 +229,19 @@
     {
       "id": "GT007",
       "name": "Enter a value for a measurable habit",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT008",
       "name": "Check off a habit for an earlier day",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_003",
         "test_011",
         "test_012",
         "test_013",
@@ -271,12 +250,12 @@
       ],
       "confidence": 0.4,
       "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)",
-        "open the calendar/history view: touch View activity=ShowHabitActivity state_changed (outcome tokens=calendar,history)"
+        "open the calendar/history view: intent intent=am start org.isoron.uhabits/org.isoron.uhabits.MainActivity activity=ShowHabitActivity state_changed (outcome tokens=calendar,history)",
+        "tap the day: touch TextView \"Day\" rid=text1 activity=ShowHabitActivity state_changed (tokens=day)"
       ],
       "matched_path": [
-        "Open the habit list",
-        "open the calendar/history view"
+        "open the calendar/history view",
+        "tap the day"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.4
@@ -318,22 +297,13 @@
     {
       "id": "GT011",
       "name": "View a habit's detailed statistics",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT012",
@@ -401,100 +371,60 @@
     {
       "id": "GT017",
       "name": "Archive a habit",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.3333,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.3333333333333333
+      "completion_ratio": 0.0
     },
     {
       "id": "GT018",
       "name": "Unarchive a habit",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.2,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.0
     },
     {
       "id": "GT019",
       "name": "Delete a habit",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.25,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.25
+      "completion_ratio": 0.0
     },
     {
       "id": "GT020",
       "name": "Reorder habits manually",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_003",
-        "test_011",
-        "test_012"
-      ],
-      "confidence": 0.1667,
-      "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
-      ],
-      "matched_path": [
-        "Open the habit list"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.16666666666666666
+      "completion_ratio": 0.0
     },
     {
       "id": "GT021",
       "name": "Sort the habit list",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_003",
-        "test_004",
-        "test_011",
-        "test_012"
+        "test_004"
       ],
       "confidence": 0.25,
       "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)"
+        "tap \"Sort\": touch TextView \"Sort\" rid=title activity=MainActivity state_changed (tokens=sort)"
       ],
       "matched_path": [
-        "Open the habit list"
+        "tap \"Sort\""
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.25
@@ -512,14 +442,14 @@
         "test_084",
         "test_105"
       ],
-      "confidence": 0.5,
+      "confidence": 0.475,
       "evidence": [
-        "Open the habit list: touch TextView \"Habits\" activity=ListHabitsActivity (tokens=habit)",
-        "tap \"Filter\": long_touch Button \"Filter\" rid=action_filter activity=MainActivity (tokens=filter)"
+        "tap \"Filter\": touch Button \"Filter\" rid=action_filter activity=MainActivity state_changed (tokens=filter)",
+        "toggle whether archived habits and completed habits are shown: touch Button \"Filter\" rid=action_filter activity=ListHabitsActivity state_changed (outcome tokens=archived,completed,habits)"
       ],
       "matched_path": [
-        "Open the habit list",
-        "tap \"Filter\""
+        "tap \"Filter\"",
+        "toggle whether archived habits and completed habits are shown"
       ],
       "matcher": "deterministic",
       "completion_ratio": 0.5
@@ -732,8 +662,7 @@
       "status": "partial",
       "test_cases": [
         "test_017",
-        "test_023",
-        "test_046"
+        "test_023"
       ],
       "confidence": 0.25,
       "evidence": [
@@ -926,7 +855,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1004,7 +933,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1056,7 +985,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1134,7 +1063,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1147,7 +1076,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1160,7 +1089,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1173,7 +1102,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1435,9 +1364,9 @@
   "total_actions": 747,
   "actions_with_widget": 352,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 30,
+  "exercised_features": 23,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.28126566416040094,
-  "weighted_coverage_percentage": 28.13,
+  "weighted_coverage": 0.2312030075187969,
+  "weighted_coverage_percentage": 23.12,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }

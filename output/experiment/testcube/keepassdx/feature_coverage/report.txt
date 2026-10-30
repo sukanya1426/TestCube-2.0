@@ -4,18 +4,18 @@ TestCube Feature Coverage Report
 
 Application: KeePassDX
 
-Total Actions    : 136
+Total Actions    : 182
 
 Total Features   : 47
 Covered Features : 0
-Partial          : 2
-Uncovered        : 45
+Partial          : 6
+Uncovered        : 41
 
 Feature Coverage : 0.00%
 
 Coverage formula : COVERED / Total
-Weighted Coverage: 0.78%  (mean completion ratio; partial steps count)
-Exercised        : 2  (covered 0 + partial 2)
+Weighted Coverage: 3.40%  (mean completion ratio; partial steps count)
+Exercised        : 6  (covered 0 + partial 6)
 
 ground_truth_source: independent_labeled_set
 
@@ -39,9 +39,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT003] Unlock a database with a key file
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.18
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - tap the key file selector: touch FrameLayout "Preview the file keyfile.key" rid=preview_icon state_changed (tokens=file,key)
 
 [GT004] Unlock a database with a hardware key (challenge-response)
 Status     : NOT COVERED
@@ -55,12 +59,12 @@ Completion : 0% of gold steps
 
 [GT006] Create an entry
 Status     : PARTIAL
-Test Cases : test_029, test_030, test_031, test_032, test_033, test_034, test_035, test_036
+Test Cases : test_002, test_003, test_005, test_006, test_007, test_008, test_009, test_010, test_011, test_012, test_013, test_014, test_015, test_016, test_018, test_019, test_020, test_021, test_022, test_023, test_024, test_025, test_027, test_028, test_029, test_030, test_031, test_032, test_033, test_034, test_036, test_037, test_038, test_039, test_040, test_041, test_042, test_043, test_045, test_046, test_047, test_048, test_049, test_050, test_051, test_052
 Confidence : 0.17
 Matcher    : deterministic
 Completion : 17% of gold steps
 Evidence   :
-  - Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)
+  - Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=FileDatabaseSelectActivity state_changed (tokens=database)
 
 [GT007] Generate a password
 Status     : NOT COVERED
@@ -93,9 +97,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT013] Copy a username or password to the clipboard
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001
+Confidence : 0.50
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 50% of gold steps
+Evidence   :
+  - tap the copy icon beside the username or password field: touch Switch "Password" rid=password_checkbox activity=FileDatabaseSelectActivity state_changed (tokens=password)
 
 [GT014] Reveal a hidden password
 Status     : NOT COVERED
@@ -134,12 +142,12 @@ Completion : 0% of gold steps
 
 [GT021] Create a group
 Status     : PARTIAL
-Test Cases : test_029, test_030, test_031, test_032, test_033, test_034, test_035, test_036
+Test Cases : test_002, test_003, test_005, test_006, test_007, test_008, test_009, test_010, test_011, test_012, test_013, test_014, test_015, test_016, test_018, test_019, test_020, test_021, test_022, test_023, test_024, test_025, test_027, test_028, test_029, test_030, test_031, test_032, test_033, test_034, test_036, test_037, test_038, test_039, test_040, test_041, test_042, test_043, test_045, test_046, test_047, test_048, test_049, test_050, test_051, test_052
 Confidence : 0.20
 Matcher    : deterministic
 Completion : 20% of gold steps
 Evidence   :
-  - Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=PickActivity (tokens=database)
+  - Open the database: intent intent=am start com.kunzisoft.keepass.libre/com.kunzisoft.keepass.activities.FileDat... activity=FileDatabaseSelectActivity state_changed (tokens=database)
 
 [GT022] Edit, move or delete a group
 Status     : NOT COVERED
@@ -162,9 +170,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT026] Configure search behaviour
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_003
+Confidence : 0.33
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 33% of gold steps
+Evidence   :
+  - the search section: touch ImageView "Clear query" rid=search_close_btn activity=PickActivity state_changed (tokens=search)
 
 [GT027] Sort the entry list
 Status     : NOT COVERED
@@ -212,9 +224,13 @@ Matcher    : deterministic
 Completion : 0% of gold steps
 
 [GT036] Change the master key of a database
-Status     : NOT COVERED
+Status     : PARTIAL
+Test Cases : test_001, test_003
+Confidence : 0.20
 Matcher    : deterministic
-Completion : 0% of gold steps
+Completion : 20% of gold steps
+Evidence   :
+  - tap the master key entry: touch TextView "Assign a master key" activity=FileDatabaseSelectActivity (tokens=key,master)
 
 [GT037] Change the database encryption settings
 Status     : NOT COVERED
@@ -276,9 +292,9 @@ SUMMARY
 ----------------------------------------
 
 0 / 47 features covered
-2 / 47 features partial
+6 / 47 features partial
 Feature Coverage = COVERED / Total = 0.00%
-Weighted Feature Coverage = mean(completion_ratio) = 0.78%
+Weighted Feature Coverage = mean(completion_ratio) = 3.40%
 
 Only fully COVERED features count toward Feature Coverage.
 Weighted coverage also credits PARTIAL gold-step fractions.
@@ -294,19 +310,19 @@ Extracted vs ground truth: 14 / 47 (completeness ratio 0.298)
 
 Feature-inference P/R/F1: 1.00 / 0.30 / 0.46 (false not_present=0)
 
-GT GT001 'Create a database' | journal=G001 'Create a database' (sim=1.0, name) status=dropped | offline=not_covered
-GT GT002 'Open an existing database' | journal=G011 'Open a database' (sim=0.667, name) status=pending | offline=not_covered
-GT GT003 'Unlock a database with a key file' | journal=G002 'Unlock a database' (sim=0.4, name) status=partial | offline=not_covered
+GT GT001 'Create a database' | journal=G001 'Create a database' (sim=1.0, name) status=partial | offline=not_covered
+GT GT002 'Open an existing database' | journal=G011 'Open a database' (sim=0.667, name) status=covered | offline=not_covered
+GT GT003 'Unlock a database with a key file' | journal=G002 'Unlock a database' (sim=0.4, name) status=partial | offline=partial
 GT GT004 'Unlock a database with a hardware key (challenge-response)' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT005 'Unlock with biometrics or the device credential' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT006 'Create an entry' | journal=G006 'Edit an entry' (sim=0.333, name) status=pending | offline=partial
-GT GT007 'Generate a password' | journal=G003 'Generate a password' (sim=1.0, name) status=pending | offline=not_covered
+GT GT007 'Generate a password' | journal=G003 'Generate a password' (sim=1.0, name) status=covered | offline=not_covered
 GT GT008 'Add custom fields to an entry' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT009 'Add an attachment to an entry' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT010 'Download or open an attachment' | journal=G004 'Download' (sim=0.556, name) status=partial | offline=not_covered
 GT GT011 'Set an expiration date on an entry' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT012 'Configure a one-time password (OTP) token for an entry' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT013 'Copy a username or password to the clipboard' | journal=G005 'Copy a username' (sim=0.545, name) status=pending | offline=not_covered
+GT GT013 'Copy a username or password to the clipboard' | journal=G005 'Copy a username' (sim=0.545, name) status=pending | offline=partial
 GT GT014 'Reveal a hidden password' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT015 'Open the entry URL in the browser' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT016 'Edit an entry' | journal=G007 'Move an entry' (sim=0.333, name) status=pending | offline=not_covered
@@ -318,8 +334,8 @@ GT GT021 'Create a group' | journal=missing (no name match) status=missing | off
 GT GT022 'Edit, move or delete a group' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT023 'Use the recycle bin' | journal=G010 'Use the KeePassDX autofill' (sim=0.333, name) status=pending | offline=not_covered
 GT GT024 'Change an entry or group icon' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT025 'Search the database' | journal=G009 'Search the database' (sim=1.0, name) status=pending | offline=not_covered
-GT GT026 'Configure search behaviour' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT025 'Search the database' | journal=G009 'Search the database' (sim=1.0, name) status=covered | offline=not_covered
+GT GT026 'Configure search behaviour' | journal=missing (no name match) status=missing | offline=partial
 GT GT027 'Sort the entry list' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT028 'Use the KeePassDX autofill service' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT029 'Use the Magikeyboard to type credentials' | journal=missing (no name match) status=missing | offline=not_covered
@@ -327,9 +343,9 @@ GT GT030 'Save changes to the database' | journal=G013 'Change the database encr
 GT GT031 'Open a database in read-only mode' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT032 'Lock the database manually' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT033 'Configure automatic locking' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT034 'Configure clipboard timeout' | journal=G012 'Configure clipboard timeout' (sim=1.0, name) status=partial | offline=not_covered
+GT GT034 'Configure clipboard timeout' | journal=G012 'Configure clipboard timeout' (sim=1.0, name) status=pending | offline=not_covered
 GT GT035 'Block screenshots' | journal=missing (no name match) status=missing | offline=not_covered
-GT GT036 'Change the master key of a database' | journal=missing (no name match) status=missing | offline=not_covered
+GT GT036 'Change the master key of a database' | journal=missing (no name match) status=missing | offline=partial
 GT GT037 'Change the database encryption settings' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT038 'Edit the database name, description and default username' | journal=missing (no name match) status=missing | offline=not_covered
 GT GT039 'Configure history and compression settings' | journal=missing (no name match) status=missing | offline=not_covered

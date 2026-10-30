@@ -1,0 +1,1091 @@
+{
+  "application": "App Manager",
+  "total_features": 40,
+  "covered_features": 0,
+  "uncovered_features": 27,
+  "partial_features": 13,
+  "coverage": 0.0,
+  "coverage_percentage": 0.0,
+  "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/testcube/appmanager",
+  "readme_path": "/Users/mahdiya/TestCube-2.0/feature/appmanager/README.md",
+  "features_path": "/Users/mahdiya/TestCube-2.0/feature/appmanager/ground_truth.json",
+  "features": [
+    {
+      "id": "GT001",
+      "name": "Browse the list of installed applications",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT002",
+      "name": "Search for an application by name",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT003",
+      "name": "Sort the application list",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT004",
+      "name": "Filter the application list",
+      "status": "partial",
+      "test_cases": [
+        "test_023"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap the filter icon: touch TextView \"Filter\" rid=filter_text activity=MainActivity state_changed (tokens=filter)"
+      ],
+      "matched_path": [
+        "tap the filter icon"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT005",
+      "name": "Open an application's details screen",
+      "status": "partial",
+      "test_cases": [
+        "test_023"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open the Apps list: touch Button \"Installed apps\" activity=MainActivity state_changed (tokens=apps)"
+      ],
+      "matched_path": [
+        "Open the Apps list"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT006",
+      "name": "View the App Info tab",
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "the App Info tab is selected: touch TextView \"App info\" activity=AppDetailsActivity (tokens=info)"
+      ],
+      "matched_path": [
+        "the App Info tab is selected"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT007",
+      "name": "Browse an application's activities",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT008",
+      "name": "Launch an exported activity",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT009",
+      "name": "Browse an application's services",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT010",
+      "name": "Browse an application's broadcast receivers",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT011",
+      "name": "Browse an application's content providers",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT012",
+      "name": "Review an application's permissions",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT013",
+      "name": "Review app operations (App Ops)",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT014",
+      "name": "View an application's signatures",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT015",
+      "name": "View the shared libraries an application uses",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT016",
+      "name": "Scan an application for trackers",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT017",
+      "name": "View an application's manifest",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT018",
+      "name": "Force-stop an application",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT019",
+      "name": "Clear an application's data",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT020",
+      "name": "Clear an application's cache",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT021",
+      "name": "Uninstall an application",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_007"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "confirm the system dialog: touch TextView \"System\" rid=isSystem activity=AppDetailsActivity state_changed (tokens=system)"
+      ],
+      "matched_path": [
+        "confirm the system dialog"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT022",
+      "name": "Open an application's system settings page",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT023",
+      "name": "Share or export an application's APK",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT024",
+      "name": "Select several applications for a batch operation",
+      "status": "partial",
+      "test_cases": [
+        "test_003",
+        "test_023"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "the batch action bar appears: touch TextView \"App Manager debug builds have been discontinued until fur...\" rid=item_subtitle activity=MainActivity (outcome tokens=action,batch)"
+      ],
+      "matched_path": [
+        "the batch action bar appears"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT025",
+      "name": "Run a batch operation on the selected applications",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT026",
+      "name": "Open the running applications screen",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT027",
+      "name": "Inspect a running process",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT028",
+      "name": "Open the one-click operations screen",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT029",
+      "name": "Open the profiles screen",
+      "status": "partial",
+      "test_cases": [
+        "test_023"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"Profiles\": touch Spinner \"No profiles\" activity=MainActivity (tokens=profiles)"
+      ],
+      "matched_path": [
+        "tap \"Profiles\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT030",
+      "name": "Create a profile",
+      "status": "partial",
+      "test_cases": [
+        "test_005",
+        "test_023"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "enter a profile name: set_text EditText \"Profile name\" rid=input text=test activity=AppDetailsActivity state_changed (tokens=name,profile)"
+      ],
+      "matched_path": [
+        "enter a profile name"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT031",
+      "name": "View application usage statistics",
+      "status": "partial",
+      "test_cases": [
+        "test_015",
+        "test_023"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "tap \"App usage\": touch TextView \"App usage\" rid=title state_changed (tokens=usage)"
+      ],
+      "matched_path": [
+        "tap \"App usage\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT032",
+      "name": "Change the usage statistics time range",
+      "status": "partial",
+      "test_cases": [
+        "test_015",
+        "test_023"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open the App usage screen: touch TextView \"App usage\" rid=title state_changed (tokens=usage)"
+      ],
+      "matched_path": [
+        "Open the App usage screen"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT033",
+      "name": "Install an APK from storage",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT034",
+      "name": "Open the application log viewer",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT035",
+      "name": "Open the intent interceptor",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    },
+    {
+      "id": "GT036",
+      "name": "Open the settings screen",
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "tap \"Settings\": touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "tap \"Settings\""
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT037",
+      "name": "Change the application theme",
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT038",
+      "name": "Change the application language",
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
+      ],
+      "confidence": 0.3333,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.3333333333333333
+    },
+    {
+      "id": "GT039",
+      "name": "Enable or disable the screen lock for the app",
+      "status": "partial",
+      "test_cases": [
+        "test_017",
+        "test_019"
+      ],
+      "confidence": 0.5,
+      "evidence": [
+        "Open Settings: touch TextView \"Settings\" rid=title state_changed (tokens=settings)"
+      ],
+      "matched_path": [
+        "Open Settings"
+      ],
+      "matcher": "deterministic",
+      "completion_ratio": 0.5
+    },
+    {
+      "id": "GT040",
+      "name": "Read the about and version information",
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
+      "matcher": "deterministic",
+      "completion_ratio": 0.0
+    }
+  ],
+  "confusion": [
+    {
+      "ground_truth_id": "GT001",
+      "ground_truth_name": "Browse the list of installed applications",
+      "journal_id": "G001",
+      "journal_name": "Browse installed apps",
+      "name_similarity": 0.417,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT002",
+      "ground_truth_name": "Search for an application by name",
+      "journal_id": "G006",
+      "journal_name": "Search for an app",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT003",
+      "ground_truth_name": "Sort the application list",
+      "journal_id": "G007",
+      "journal_name": "Sort or filter the list",
+      "name_similarity": 0.6,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT004",
+      "ground_truth_name": "Filter the application list",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.6,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT005",
+      "ground_truth_name": "Open an application's details screen",
+      "journal_id": "G002",
+      "journal_name": "Open an app's details",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT006",
+      "ground_truth_name": "View the App Info tab",
+      "journal_id": "G010",
+      "journal_name": "View app usage",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT007",
+      "ground_truth_name": "Browse an application's activities",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT008",
+      "ground_truth_name": "Launch an exported activity",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.182,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT009",
+      "ground_truth_name": "Browse an application's services",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT010",
+      "ground_truth_name": "Browse an application's broadcast receivers",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT011",
+      "ground_truth_name": "Browse an application's content providers",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT012",
+      "ground_truth_name": "Review an application's permissions",
+      "journal_id": "G004",
+      "journal_name": "Review permissions",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT013",
+      "ground_truth_name": "Review app operations (App Ops)",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.3,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT014",
+      "ground_truth_name": "View an application's signatures",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT015",
+      "ground_truth_name": "View the shared libraries an application uses",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.231,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT016",
+      "ground_truth_name": "Scan an application for trackers",
+      "journal_id": "G005",
+      "journal_name": "Scan for trackers",
+      "name_similarity": 0.75,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT017",
+      "ground_truth_name": "View an application's manifest",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT018",
+      "ground_truth_name": "Force-stop an application",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.182,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT019",
+      "ground_truth_name": "Clear an application's data",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.182,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT020",
+      "ground_truth_name": "Clear an application's cache",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.182,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT021",
+      "ground_truth_name": "Uninstall an application",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT022",
+      "ground_truth_name": "Open an application's system settings page",
+      "journal_id": "G012",
+      "journal_name": "Open settings",
+      "name_similarity": 0.4,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT023",
+      "ground_truth_name": "Share or export an application's APK",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT024",
+      "ground_truth_name": "Select several applications for a batch operation",
+      "journal_id": "G008",
+      "journal_name": "Run a batch operation",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT025",
+      "ground_truth_name": "Run a batch operation on the selected applications",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT026",
+      "ground_truth_name": "Open the running applications screen",
+      "journal_id": "G009",
+      "journal_name": "Open running apps",
+      "name_similarity": 0.333,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT027",
+      "ground_truth_name": "Inspect a running process",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT028",
+      "ground_truth_name": "Open the one-click operations screen",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.333,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT029",
+      "ground_truth_name": "Open the profiles screen",
+      "journal_id": "G011",
+      "journal_name": "Open profiles",
+      "name_similarity": 0.5,
+      "matched_by": "name",
+      "journal_status": "covered",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT030",
+      "ground_truth_name": "Create a profile",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.2,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT031",
+      "ground_truth_name": "View application usage statistics",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.4,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT032",
+      "ground_truth_name": "Change the usage statistics time range",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.286,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT033",
+      "ground_truth_name": "Install an APK from storage",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.167,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT034",
+      "ground_truth_name": "Open the application log viewer",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.364,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT035",
+      "ground_truth_name": "Open the intent interceptor",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.4,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT036",
+      "ground_truth_name": "Open the settings screen",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.5,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT037",
+      "ground_truth_name": "Change the application theme",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.273,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT038",
+      "ground_truth_name": "Change the application language",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.273,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT039",
+      "ground_truth_name": "Enable or disable the screen lock for the app",
+      "journal_id": null,
+      "journal_name": null,
+      "name_similarity": 0.25,
+      "matched_by": "none",
+      "journal_status": "missing",
+      "offline_status": "partial",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    },
+    {
+      "ground_truth_id": "GT040",
+      "ground_truth_name": "Read the about and version information",
+      "journal_id": "G013",
+      "journal_name": "Read about and version",
+      "name_similarity": 0.667,
+      "matched_by": "name",
+      "journal_status": "partial",
+      "offline_status": "not_covered",
+      "exists_in_gt": true,
+      "predicted_not_present": false,
+      "false_not_present": false
+    }
+  ],
+  "feature_inference": {
+    "true_positives": 12,
+    "false_negatives": 28,
+    "false_positives": 2,
+    "precision": 0.8571428571428571,
+    "recall": 0.3,
+    "f1": 0.4444444444444444,
+    "false_not_present": 0,
+    "false_not_present_rate": 0.0,
+    "extracted_count": 13,
+    "ground_truth_count": 40,
+    "feature_completeness_ratio": 0.325,
+    "id_collisions": [],
+    "id_collisions_loud": false,
+    "prf1_withheld": false
+  },
+  "matcher_min_confidence": 0.5,
+  "matcher_mode": "deterministic",
+  "trace_only": true,
+  "total_actions": 309,
+  "actions_with_widget": 281,
+  "ground_truth_source": "independent_labeled_set",
+  "exercised_features": 13,
+  "coverage_formula": "covered / total",
+  "weighted_coverage": 0.125,
+  "weighted_coverage_percentage": 12.5,
+  "weighted_coverage_formula": "mean(completion_ratio)"
+}

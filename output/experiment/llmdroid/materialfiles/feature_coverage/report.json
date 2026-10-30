@@ -2,8 +2,8 @@
   "application": "Material Files",
   "total_features": 42,
   "covered_features": 0,
-  "uncovered_features": 30,
-  "partial_features": 12,
+  "uncovered_features": 31,
+  "partial_features": 11,
   "coverage": 0.0,
   "coverage_percentage": 0.0,
   "results_dir": "/Users/mahdiya/TestCube-2.0/output/experiment/llmdroid/materialfiles",
@@ -48,17 +48,14 @@
       "name": "Create a new empty file",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_012",
         "test_019",
         "test_024",
         "test_026",
-        "test_028",
         "test_034"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "tap \"Create file\": touch TextView \"Files\" activity=FileListActivity (tokens=file)"
+        "tap \"Create file\": touch LinearLayout rid=action_create_file activity=FileListActivity state_changed (tokens=file)"
       ],
       "matched_path": [
         "tap \"Create file\""
@@ -305,22 +302,13 @@
     {
       "id": "GT023",
       "name": "Edit a text file in the built-in editor",
-      "status": "partial",
-      "test_cases": [
-        "test_002",
-        "test_012",
-        "test_024",
-        "test_028"
-      ],
-      "confidence": 0.2,
-      "evidence": [
-        "Tap a text file: touch TextView \"Files\" activity=FileListActivity (tokens=file)"
-      ],
-      "matched_path": [
-        "Tap a text file"
-      ],
+      "status": "not_covered",
+      "test_cases": [],
+      "confidence": 0.0,
+      "evidence": [],
+      "matched_path": null,
       "matcher": "deterministic",
-      "completion_ratio": 0.2
+      "completion_ratio": 0.0
     },
     {
       "id": "GT024",
@@ -473,15 +461,11 @@
       "name": "Show a \"root directory\" entry in the navigation",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_011",
-        "test_012",
-        "test_024",
-        "test_028"
+        "test_011"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "return to the file list: touch TextView \"Files\" activity=FileListActivity (tokens=file)"
+        "return to the file list: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)"
       ],
       "matched_path": [
         "return to the file list"
@@ -516,16 +500,11 @@
       "name": "Configure the file list behaviour",
       "status": "partial",
       "test_cases": [
-        "test_002",
-        "test_010",
-        "test_011",
-        "test_012",
-        "test_024",
-        "test_028"
+        "test_011"
       ],
       "confidence": 0.3333,
       "evidence": [
-        "open the file list section: touch TextView \"Files\" activity=FileListActivity (tokens=file)"
+        "open the file list section: intent intent=am start me.zhanghai.android.files/me.zhanghai.android.files.filelist.FileLis... activity=FileListActivity state_changed (tokens=file)"
       ],
       "matched_path": [
         "open the file list section"
@@ -883,7 +862,7 @@
       "name_similarity": 0.0,
       "matched_by": "none",
       "journal_status": "missing",
-      "offline_status": "partial",
+      "offline_status": "not_covered",
       "exists_in_gt": true,
       "predicted_not_present": false,
       "false_not_present": false
@@ -1158,9 +1137,9 @@
   "total_actions": 731,
   "actions_with_widget": 530,
   "ground_truth_source": "independent_labeled_set",
-  "exercised_features": 12,
+  "exercised_features": 11,
   "coverage_formula": "covered / total",
-  "weighted_coverage": 0.09642857142857145,
-  "weighted_coverage_percentage": 9.64,
+  "weighted_coverage": 0.09166666666666667,
+  "weighted_coverage_percentage": 9.17,
   "weighted_coverage_formula": "mean(completion_ratio)"
 }
